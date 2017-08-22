@@ -1,0 +1,490 @@
+<ARG>
+<NAME>GstVaapiSink::brightness</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[-1,1]</RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>brightness</NICK>
+<BLURB>The display brightness value.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::contrast</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[0,2]</RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>contrast</NICK>
+<BLURB>The display contrast value.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::display</NAME>
+<TYPE>GstVaapiDisplayType</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>display type</NICK>
+<BLURB>display type to use.</BLURB>
+<DEFAULT>Auto detection</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::display-name</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>display name</NICK>
+<BLURB>display name to use.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::force-aspect-ratio</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Force aspect ratio</NICK>
+<BLURB>When enabled, scaling will respect original aspect ratio.</BLURB>
+<DEFAULT>TRUE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::fullscreen</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Fullscreen</NICK>
+<BLURB>Requests window in fullscreen state.</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::hue</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[-180,180]</RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>hue</NICK>
+<BLURB>The display hue value.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::rotation</NAME>
+<TYPE>GstVaapiRotation</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>rotation</NICK>
+<BLURB>The display rotation mode.</BLURB>
+<DEFAULT>Unrotated mode</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::saturation</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[0,2]</RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>saturation</NICK>
+<BLURB>The display saturation value.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::signal-handoffs</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Signal handoffs</NICK>
+<BLURB>Send a signal after rendering the buffer.</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiSink::view-id</NAME>
+<TYPE>gint</TYPE>
+<RANGE>>= G_MAXULONG</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>View ID</NICK>
+<BLURB>ID of the view component of interest to display.</BLURB>
+<DEFAULT>-1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::brightness</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[-1,1]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Brightness</NICK>
+<BLURB>The color brightness value.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::contrast</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[0,2]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Contrast</NICK>
+<BLURB>The color contrast value.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::deinterlace-method</NAME>
+<TYPE>GstVaapiDeinterlaceMethod</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Deinterlace method</NICK>
+<BLURB>Deinterlace method to use.</BLURB>
+<DEFAULT>Bob deinterlacing</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::deinterlace-mode</NAME>
+<TYPE>GstVaapiDeinterlaceMode</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Deinterlace mode</NICK>
+<BLURB>Deinterlace mode to use.</BLURB>
+<DEFAULT>Auto detection</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::denoise</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[0,1]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Denoising Level</NICK>
+<BLURB>The level of denoising to apply.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::force-aspect-ratio</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Force aspect ratio</NICK>
+<BLURB>When enabled, scaling will respect original aspect ratio.</BLURB>
+<DEFAULT>TRUE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::format</NAME>
+<TYPE>GstVideoFormat</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Format</NICK>
+<BLURB>The forced output pixel format.</BLURB>
+<DEFAULT>GST_VIDEO_FORMAT_UNKNOWN</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::height</NAME>
+<TYPE>guint</TYPE>
+<RANGE><= G_MAXINT</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Height</NICK>
+<BLURB>Forced output height.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::hue</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[-180,180]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Hue</NICK>
+<BLURB>The color hue value.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::saturation</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[0,2]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Saturation</NICK>
+<BLURB>The color saturation value.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::scale-method</NAME>
+<TYPE>GstVaapiScaleMethod</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Scaling Method</NICK>
+<BLURB>Scaling method to use.</BLURB>
+<DEFAULT>Default scaling mode</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::sharpen</NAME>
+<TYPE>gfloat</TYPE>
+<RANGE>[-1,1]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Sharpening Level</NICK>
+<BLURB>The level of sharpening/blurring to apply.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::skin-tone-enhancement</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Skin tone enhancement</NICK>
+<BLURB>Apply the skin tone enhancement algorithm.</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiPostproc::width</NAME>
+<TYPE>guint</TYPE>
+<RANGE><= G_MAXINT</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Width</NICK>
+<BLURB>Forced output width.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeMpeg2::bitrate</NAME>
+<TYPE>guint</TYPE>
+<RANGE><= 102400</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Bitrate (kbps)</NICK>
+<BLURB>The desired bitrate expressed in kbps (0: auto-calculate).</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeMpeg2::keyframe-period</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[1,300]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Keyframe Period</NICK>
+<BLURB>Maximal distance between two keyframes (0: auto-calculate).</BLURB>
+<DEFAULT>30</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeMpeg2::max-bframes</NAME>
+<TYPE>guint</TYPE>
+<RANGE><= 16</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Max B-Frames</NICK>
+<BLURB>Number of B-frames between I and P.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeMpeg2::quantizer</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[2,62]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Constant Quantizer</NICK>
+<BLURB>Constant quantizer (if rate-control mode is CQP).</BLURB>
+<DEFAULT>8</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeMpeg2::rate-control</NAME>
+<TYPE>GstVaapiRateControlMPEG2</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Rate Control</NICK>
+<BLURB>Rate control mode.</BLURB>
+<DEFAULT>Constant QP</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeMpeg2::tune</NAME>
+<TYPE>GstVaapiEncoderTuneMPEG2</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Encoder Tuning</NICK>
+<BLURB>Encoder tuning option.</BLURB>
+<DEFAULT>None</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::bitrate</NAME>
+<TYPE>guint</TYPE>
+<RANGE><= 102400</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Bitrate (kbps)</NICK>
+<BLURB>The desired bitrate expressed in kbps (0: auto-calculate).</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::cabac</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Enable CABAC</NICK>
+<BLURB>Enable CABAC entropy coding mode.</BLURB>
+<DEFAULT>TRUE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::cpb-length</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[1,10000]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>CPB Length</NICK>
+<BLURB>Length of the CPB buffer in milliseconds.</BLURB>
+<DEFAULT>1500</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::dct8x8</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Enable 8x8 DCT</NICK>
+<BLURB>Enable adaptive use of 8x8 transforms in I-frames.</BLURB>
+<DEFAULT>TRUE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::init-qp</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[1,51]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Initial QP</NICK>
+<BLURB>Initial quantizer value.</BLURB>
+<DEFAULT>26</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::keyframe-period</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[1,300]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Keyframe Period</NICK>
+<BLURB>Maximal distance between two keyframes (0: auto-calculate).</BLURB>
+<DEFAULT>30</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::max-bframes</NAME>
+<TYPE>guint</TYPE>
+<RANGE><= 10</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Max B-Frames</NICK>
+<BLURB>Number of B-frames between I and P.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::min-qp</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[1,51]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Minimum QP</NICK>
+<BLURB>Minimum quantizer value.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::num-slices</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[1,200]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Number of Slices</NICK>
+<BLURB>Number of slices per frame.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::num-views</NAME>
+<TYPE>guint</TYPE>
+<RANGE>[1,10]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Number of Views</NICK>
+<BLURB>Number of Views for MVC encoding.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::rate-control</NAME>
+<TYPE>GstVaapiRateControlH264</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Rate Control</NICK>
+<BLURB>Rate control mode.</BLURB>
+<DEFAULT>Constant QP</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::tune</NAME>
+<TYPE>GstVaapiEncoderTuneH264</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Encoder Tuning</NICK>
+<BLURB>Encoder tuning option.</BLURB>
+<DEFAULT>None</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiEncodeH264::view-ids</NAME>
+<TYPE>GValueArray*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>View IDs</NICK>
+<BLURB>Set of View Ids used for MVC encoding.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiDecodeBin::deinterlace-method</NAME>
+<TYPE>GstVaapiDeinterlaceMethod</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Deinterlace method</NICK>
+<BLURB>Deinterlace method to use.</BLURB>
+<DEFAULT>Bob deinterlacing</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiDecodeBin::disable-vpp</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Disable VPP</NICK>
+<BLURB>Disable Video Post Processing (No support for run time disabling).</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiDecodeBin::max-size-buffers</NAME>
+<TYPE>guint</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Max. size (buffers)</NICK>
+<BLURB>Max. number of buffers in the queue (0=disable).</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiDecodeBin::max-size-bytes</NAME>
+<TYPE>guint</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Max. size (kB)</NICK>
+<BLURB>Max. amount of data in the queue (bytes, 0=disable).</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVaapiDecodeBin::max-size-time</NAME>
+<TYPE>guint64</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Max. size (ns)</NICK>
+<BLURB>Max. amount of data in the queue (in ns, 0=disable).</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+

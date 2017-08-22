@@ -1,0 +1,8 @@
+<SIGNAL>
+<NAME>GstVaapiSink::handoff</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+GstVaapiSink *gstvaapisink
+GstBuffer *arg1
+</SIGNAL>
+

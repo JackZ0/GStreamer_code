@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<book xmlns="http://www.devhelp.net/book" title="GStreamer VA-API Plugins 1.0 Plugins Reference Manual" link="index.html" author="" name="gstreamer-vaapi-plugins-1.0" version="2" language="c">
+  <chapters>
+    <sub name="gstremaer-vaapi Overview" link="ch01.html">
+      <sub name="Running GStreamer VAAPI Applications" link="gstreamer-vaapi-running.html"/>
+    </sub>
+    <sub name="gstreamer-vaapi Elements" link="ch02.html">
+      <sub name="vaapijpegdec" link="gstreamer-vaapi-plugins-vaapijpegdec.html"/>
+      <sub name="vaapimpeg2dec" link="gstreamer-vaapi-plugins-vaapimpeg2dec.html"/>
+      <sub name="vaapimpeg4dec" link="gstreamer-vaapi-plugins-vaapimpeg4dec.html"/>
+      <sub name="vaapih263dec" link="gstreamer-vaapi-plugins-vaapih263dec.html"/>
+      <sub name="vaapih264dec" link="gstreamer-vaapi-plugins-vaapih264dec.html"/>
+      <sub name="vaapih265dec" link="gstreamer-vaapi-plugins-vaapih265dec.html"/>
+      <sub name="vaapivc1dec" link="gstreamer-vaapi-plugins-vaapivc1dec.html"/>
+      <sub name="vaapivp8dec" link="gstreamer-vaapi-plugins-vaapivp8dec.html"/>
+      <sub name="vaapivp9dec" link="gstreamer-vaapi-plugins-vaapivp9dec.html"/>
+      <sub name="vaapidecodebin" link="gstreamer-vaapi-plugins-vaapidecodebin.html"/>
+      <sub name="vaapipostproc" link="gstreamer-vaapi-plugins-vaapipostproc.html"/>
+      <sub name="vaapisink" link="gstreamer-vaapi-plugins-vaapisink.html"/>
+      <sub name="vaapih264enc" link="gstreamer-vaapi-plugins-vaapih264enc.html"/>
+      <sub name="vaapih265enc" link="gstreamer-vaapi-plugins-vaapih265enc.html"/>
+      <sub name="vaapijpegenc" link="gstreamer-vaapi-plugins-vaapijpegenc.html"/>
+      <sub name="vaapimpeg2enc" link="gstreamer-vaapi-plugins-vaapimpeg2enc.html"/>
+      <sub name="vaapivp8enc" link="gstreamer-vaapi-plugins-vaapivp8enc.html"/>
+      <sub name="vaapivp9enc" link="gstreamer-vaapi-plugins-vaapivp9enc.html"/>
+    </sub>
+    <sub name="gstreamer-vaapi Plugins" link="ch03.html">
+      <sub name="vaapi" link="gstreamer-vaapi-plugins-plugin-vaapi.html"/>
+    </sub>
+    <sub name="Object Hierarchy" link="object-tree.html"/>
+    <sub name="API Index" link="api-index-full.html"/>
+  </chapters>
+  <functions>
+    <keyword type="property" name="The “deinterlace-method” property" link="gstreamer-vaapi-plugins-vaapidecodebin.html#GstVaapiDecodeBin--deinterlace-method"/>
+    <keyword type="property" name="The “disable-vpp” property" link="gstreamer-vaapi-plugins-vaapidecodebin.html#GstVaapiDecodeBin--disable-vpp"/>
+    <keyword type="property" name="The “max-size-buffers” property" link="gstreamer-vaapi-plugins-vaapidecodebin.html#GstVaapiDecodeBin--max-size-buffers"/>
+    <keyword type="property" name="The “max-size-bytes” property" link="gstreamer-vaapi-plugins-vaapidecodebin.html#GstVaapiDecodeBin--max-size-bytes"/>
+    <keyword type="property" name="The “max-size-time” property" link="gstreamer-vaapi-plugins-vaapidecodebin.html#GstVaapiDecodeBin--max-size-time"/>
+    <keyword type="enum" name="enum GstVaapiDeinterlaceMode" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiDeinterlaceMode"/>
+    <keyword type="property" name="The “brightness” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--brightness"/>
+    <keyword type="property" name="The “contrast” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--contrast"/>
+    <keyword type="property" name="The “deinterlace-method” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--deinterlace-method"/>
+    <keyword type="property" name="The “deinterlace-mode” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--deinterlace-mode"/>
+    <keyword type="property" name="The “denoise” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--denoise"/>
+    <keyword type="property" name="The “force-aspect-ratio” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--force-aspect-ratio"/>
+    <keyword type="property" name="The “format” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--format"/>
+    <keyword type="property" name="The “height” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--height"/>
+    <keyword type="property" name="The “hue” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--hue"/>
+    <keyword type="property" name="The “saturation” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--saturation"/>
+    <keyword type="property" name="The “scale-method” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--scale-method"/>
+    <keyword type="property" name="The “sharpen” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--sharpen"/>
+    <keyword type="property" name="The “skin-tone-enhancement” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--skin-tone-enhancement"/>
+    <keyword type="property" name="The “width” property" link="gstreamer-vaapi-plugins-vaapipostproc.html#GstVaapiPostproc--width"/>
+    <keyword type="property" name="The “brightness” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--brightness"/>
+    <keyword type="property" name="The “contrast” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--contrast"/>
+    <keyword type="property" name="The “display” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--display"/>
+    <keyword type="property" name="The “display-name” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--display-name"/>
+    <keyword type="property" name="The “force-aspect-ratio” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--force-aspect-ratio"/>
+    <keyword type="property" name="The “fullscreen” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--fullscreen"/>
+    <keyword type="property" name="The “hue” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--hue"/>
+    <keyword type="property" name="The “rotation” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--rotation"/>
+    <keyword type="property" name="The “saturation” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--saturation"/>
+    <keyword type="property" name="The “signal-handoffs” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--signal-handoffs"/>
+    <keyword type="property" name="The “view-id” property" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink--view-id"/>
+    <keyword type="signal" name="The “handoff” signal" link="gstreamer-vaapi-plugins-vaapisink.html#GstVaapiSink-handoff"/>
+    <keyword type="property" name="The “bitrate” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--bitrate"/>
+    <keyword type="property" name="The “cabac” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--cabac"/>
+    <keyword type="property" name="The “cpb-length” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--cpb-length"/>
+    <keyword type="property" name="The “dct8x8” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--dct8x8"/>
+    <keyword type="property" name="The “init-qp” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--init-qp"/>
+    <keyword type="property" name="The “keyframe-period” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--keyframe-period"/>
+    <keyword type="property" name="The “max-bframes” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--max-bframes"/>
+    <keyword type="property" name="The “min-qp” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--min-qp"/>
+    <keyword type="property" name="The “num-slices” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--num-slices"/>
+    <keyword type="property" name="The “num-views” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--num-views"/>
+    <keyword type="property" name="The “rate-control” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--rate-control"/>
+    <keyword type="property" name="The “tune” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--tune"/>
+    <keyword type="property" name="The “view-ids” property" link="gstreamer-vaapi-plugins-vaapih264enc.html#GstVaapiEncodeH264--view-ids"/>
+    <keyword type="property" name="The “bitrate” property" link="gstreamer-vaapi-plugins-vaapimpeg2enc.html#GstVaapiEncodeMpeg2--bitrate"/>
+    <keyword type="property" name="The “keyframe-period” property" link="gstreamer-vaapi-plugins-vaapimpeg2enc.html#GstVaapiEncodeMpeg2--keyframe-period"/>
+    <keyword type="property" name="The “max-bframes” property" link="gstreamer-vaapi-plugins-vaapimpeg2enc.html#GstVaapiEncodeMpeg2--max-bframes"/>
+    <keyword type="property" name="The “quantizer” property" link="gstreamer-vaapi-plugins-vaapimpeg2enc.html#GstVaapiEncodeMpeg2--quantizer"/>
+    <keyword type="property" name="The “rate-control” property" link="gstreamer-vaapi-plugins-vaapimpeg2enc.html#GstVaapiEncodeMpeg2--rate-control"/>
+    <keyword type="property" name="The “tune” property" link="gstreamer-vaapi-plugins-vaapimpeg2enc.html#GstVaapiEncodeMpeg2--tune"/>
+    <keyword type="constant" name="GST_VAAPI_DEINTERLACE_MODE_AUTO" link="gstreamer-vaapi-plugins-vaapipostproc.html#GST-VAAPI-DEINTERLACE-MODE-AUTO:CAPS"/>
+    <keyword type="constant" name="GST_VAAPI_DEINTERLACE_MODE_INTERLACED" link="gstreamer-vaapi-plugins-vaapipostproc.html#GST-VAAPI-DEINTERLACE-MODE-INTERLACED:CAPS"/>
+    <keyword type="constant" name="GST_VAAPI_DEINTERLACE_MODE_DISABLED" link="gstreamer-vaapi-plugins-vaapipostproc.html#GST-VAAPI-DEINTERLACE-MODE-DISABLED:CAPS"/>
+  </functions>
+</book>
