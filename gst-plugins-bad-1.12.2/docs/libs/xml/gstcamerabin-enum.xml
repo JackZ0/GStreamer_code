@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-gstcamerabin-enum">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-gstcamerabin-enum.top_of_page">gstcamerabin-enum</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gstcamerabin-enum</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-gstcamerabin-enum.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GType"><returnvalue>GType</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-camerabin-mode-get-type">gst_camerabin_mode_get_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstcamerabin-enum.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="DEFAULT-WIDTH:CAPS">DEFAULT_WIDTH</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="DEFAULT-HEIGHT:CAPS">DEFAULT_HEIGHT</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="DEFAULT-CAPTURE-WIDTH:CAPS">DEFAULT_CAPTURE_WIDTH</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="DEFAULT-CAPTURE-HEIGHT:CAPS">DEFAULT_CAPTURE_HEIGHT</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="DEFAULT-FPS-N:CAPS">DEFAULT_FPS_N</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="DEFAULT-FPS-D:CAPS">DEFAULT_FPS_D</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="DEFAULT-ZOOM:CAPS">DEFAULT_ZOOM</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstCameraBinMode">GstCameraBinMode</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-TYPE-CAMERABIN-MODE:CAPS">GST_TYPE_CAMERABIN_MODE</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-gstcamerabin-enum.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstcamerabin-enum.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-camerabin-mode-get-type" role="function">
+<title>gst_camerabin_mode_get_type&#160;()</title>
+<indexterm zone="gst-camerabin-mode-get-type"><primary>gst_camerabin_mode_get_type</primary></indexterm>
+<programlisting language="C"><link linkend="GType"><returnvalue>GType</returnvalue></link>
+gst_camerabin_mode_get_type (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstcamerabin-enum.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="DEFAULT-WIDTH:CAPS" role="macro">
+<title>DEFAULT_WIDTH</title>
+<indexterm zone="DEFAULT-WIDTH:CAPS"><primary>DEFAULT_WIDTH</primary></indexterm>
+<programlisting language="C">#define DEFAULT_WIDTH 640
+</programlisting>
+</refsect2>
+<refsect2 id="DEFAULT-HEIGHT:CAPS" role="macro">
+<title>DEFAULT_HEIGHT</title>
+<indexterm zone="DEFAULT-HEIGHT:CAPS"><primary>DEFAULT_HEIGHT</primary></indexterm>
+<programlisting language="C">#define DEFAULT_HEIGHT 480
+</programlisting>
+</refsect2>
+<refsect2 id="DEFAULT-CAPTURE-WIDTH:CAPS" role="macro">
+<title>DEFAULT_CAPTURE_WIDTH</title>
+<indexterm zone="DEFAULT-CAPTURE-WIDTH:CAPS"><primary>DEFAULT_CAPTURE_WIDTH</primary></indexterm>
+<programlisting language="C">#define DEFAULT_CAPTURE_WIDTH 800
+</programlisting>
+</refsect2>
+<refsect2 id="DEFAULT-CAPTURE-HEIGHT:CAPS" role="macro">
+<title>DEFAULT_CAPTURE_HEIGHT</title>
+<indexterm zone="DEFAULT-CAPTURE-HEIGHT:CAPS"><primary>DEFAULT_CAPTURE_HEIGHT</primary></indexterm>
+<programlisting language="C">#define DEFAULT_CAPTURE_HEIGHT 600
+</programlisting>
+</refsect2>
+<refsect2 id="DEFAULT-FPS-N:CAPS" role="macro">
+<title>DEFAULT_FPS_N</title>
+<indexterm zone="DEFAULT-FPS-N:CAPS"><primary>DEFAULT_FPS_N</primary></indexterm>
+<programlisting language="C">#define DEFAULT_FPS_N 0         /* makes it use the default */
+</programlisting>
+</refsect2>
+<refsect2 id="DEFAULT-FPS-D:CAPS" role="macro">
+<title>DEFAULT_FPS_D</title>
+<indexterm zone="DEFAULT-FPS-D:CAPS"><primary>DEFAULT_FPS_D</primary></indexterm>
+<programlisting language="C">#define DEFAULT_FPS_D 1
+</programlisting>
+</refsect2>
+<refsect2 id="DEFAULT-ZOOM:CAPS" role="macro">
+<title>DEFAULT_ZOOM</title>
+<indexterm zone="DEFAULT-ZOOM:CAPS"><primary>DEFAULT_ZOOM</primary></indexterm>
+<programlisting language="C">#define DEFAULT_ZOOM MIN_ZOOM
+</programlisting>
+</refsect2>
+<refsect2 id="GstCameraBinMode" role="enum">
+<title>enum GstCameraBinMode</title>
+<indexterm zone="GstCameraBinMode"><primary>GstCameraBinMode</primary></indexterm>
+<para>Capture mode to use.</para>
+<refsect3 id="GstCameraBinMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="MODE-IMAGE:CAPS">MODE_IMAGE</para></entry>
+<entry role="enum_member_description"><para>image capture</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="MODE-VIDEO:CAPS">MODE_VIDEO</para></entry>
+<entry role="enum_member_description"><para>video capture</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GST-TYPE-CAMERABIN-MODE:CAPS" role="macro">
+<title>GST_TYPE_CAMERABIN_MODE</title>
+<indexterm zone="GST-TYPE-CAMERABIN-MODE:CAPS"><primary>GST_TYPE_CAMERABIN_MODE</primary></indexterm>
+<programlisting language="C">#define GST_TYPE_CAMERABIN_MODE (gst_camerabin_mode_get_type ())
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

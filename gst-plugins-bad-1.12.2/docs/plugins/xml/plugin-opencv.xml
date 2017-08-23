@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-opencv">
+  <refmeta>
+    <refentrytitle>opencv</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>opencv</refname>
+    <refpurpose><anchor id="plugin-opencv"/>GStreamer OpenCV Plugins</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstopencv.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.12.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>LGPL</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-cvdilate">cvdilate</link></term><listitem><simpara>Applies cvDilate OpenCV function to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-cvequalizehist">cvequalizehist</link></term><listitem><simpara>Applies cvEqualizeHist OpenCV function to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-cverode">cverode</link></term><listitem><simpara>Applies cvErode OpenCV function to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-cvlaplace">cvlaplace</link></term><listitem><simpara>Applies cvLaplace OpenCV function to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-cvsmooth">cvsmooth</link></term><listitem><simpara>Applies cvSmooth OpenCV function to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-cvsobel">cvsobel</link></term><listitem><simpara>Applies cvSobel OpenCV function to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-dewarp">dewarp</link></term><listitem><simpara>Dewarp fisheye images</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-disparity">disparity</link></term><listitem><simpara>Calculates the stereo disparity map from two (sequences of) rectified and aligned stereo images</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-edgedetect">edgedetect</link></term><listitem><simpara>Performs canny edge detection on videos and images.</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-faceblur">faceblur</link></term><listitem><simpara>Blurs faces in images and videos</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-facedetect">facedetect</link></term><listitem><simpara>Performs face detection on videos and images, providing detected positions via bus messages</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-grabcut">grabcut</link></term><listitem><simpara>Runs Grabcut algorithm on input alpha. Values: BG=0, FG=1, PR_BG=2, PR_FGD=3; NOTE: larger values of alpha (notably 255) are interpreted as PR_FGD too. 
+IN CASE OF no alpha mask input (all 0's or all 1's), the 'face' downstream event is used to create a bbox of PR_FG elements.
+IF nothing is present, then nothing is done.</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-handdetect">handdetect</link></term><listitem><simpara>Performs hand gesture detection on videos, providing detected hand positions via bus message and navigation event, and deals with hand gesture events</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-motioncells">motioncells</link></term><listitem><simpara>Performs motion detection on videos and images, providing detected motion cells index via bus messages</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-opencvtextoverlay">opencvtextoverlay</link></term><listitem><simpara>Write text on the top of video</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-retinex">retinex</link></term><listitem><simpara>Multiscale retinex for colour image enhancement</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-segmentation">segmentation</link></term><listitem><simpara>Create a Foregound/Background mask applying a particular algorithm</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-skindetect">skindetect</link></term><listitem><simpara>Performs non-parametric skin detection on input</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-templatematch">templatematch</link></term><listitem><simpara>Performs template matching on videos and images, providing detected positions via bus messages.</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

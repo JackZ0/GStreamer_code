@@ -1,0 +1,137 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-handdetect">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-handdetect.top_of_page" role="top_of_page">handdetect</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>handdetect</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-handdetect.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstHanddetect--ROI-HEIGHT">ROI-HEIGHT</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstHanddetect--ROI-WIDTH">ROI-WIDTH</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstHanddetect--ROI-X">ROI-X</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstHanddetect--ROI-Y">ROI-Y</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstHanddetect--display">display</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstHanddetect--profile-fist">profile-fist</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstHanddetect--profile-palm">profile-palm</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstHanddetect"/><refsect1 id="gst-plugins-bad-plugins-handdetect.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstHanddetect-struct">GstHanddetect</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-handdetect.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstHanddetect
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-handdetect.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstHanddetect implements
+ <link linkend="GstNavigation">GstNavigation</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-handdetect.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-handdetect-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-handdetect.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-handdetect.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstHanddetect-struct" role="struct">
+<title>struct GstHanddetect</title>
+<indexterm zone="GstHanddetect-struct"><primary>GstHanddetect</primary></indexterm>
+<programlisting language="C">struct GstHanddetect;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-handdetect.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstHanddetect--ROI-HEIGHT" role="property"><title>The <literal>“ROI-HEIGHT”</literal> property</title>
+<indexterm zone="GstHanddetect--ROI-HEIGHT"><primary>GstHanddetect:ROI-HEIGHT</primary></indexterm>
+<programlisting>  “ROI-HEIGHT”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstHanddetect--ROI-WIDTH" role="property"><title>The <literal>“ROI-WIDTH”</literal> property</title>
+<indexterm zone="GstHanddetect--ROI-WIDTH"><primary>GstHanddetect:ROI-WIDTH</primary></indexterm>
+<programlisting>  “ROI-WIDTH”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstHanddetect--ROI-X" role="property"><title>The <literal>“ROI-X”</literal> property</title>
+<indexterm zone="GstHanddetect--ROI-X"><primary>GstHanddetect:ROI-X</primary></indexterm>
+<programlisting>  “ROI-X”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstHanddetect--ROI-Y" role="property"><title>The <literal>“ROI-Y”</literal> property</title>
+<indexterm zone="GstHanddetect--ROI-Y"><primary>GstHanddetect:ROI-Y</primary></indexterm>
+<programlisting>  “ROI-Y”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstHanddetect--display" role="property"><title>The <literal>“display”</literal> property</title>
+<indexterm zone="GstHanddetect--display"><primary>GstHanddetect:display</primary></indexterm>
+<programlisting>  “display”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether the detected hands are highlighted in output frame.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstHanddetect--profile-fist" role="property"><title>The <literal>“profile-fist”</literal> property</title>
+<indexterm zone="GstHanddetect--profile-fist"><primary>GstHanddetect:profile-fist</primary></indexterm>
+<programlisting>  “profile-fist”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of HAAR cascade file (fist gesture).</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;/usr/local/share/gst-plugins-bad/1.0/opencv_haarcascades/fist.xml&quot;</para>
+</refsect2>
+<refsect2 id="GstHanddetect--profile-palm" role="property"><title>The <literal>“profile-palm”</literal> property</title>
+<indexterm zone="GstHanddetect--profile-palm"><primary>GstHanddetect:profile-palm</primary></indexterm>
+<programlisting>  “profile-palm”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of HAAR cascade file (palm gesture).</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;/usr/local/share/gst-plugins-bad/1.0/opencv_haarcascades/palm.xml&quot;</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

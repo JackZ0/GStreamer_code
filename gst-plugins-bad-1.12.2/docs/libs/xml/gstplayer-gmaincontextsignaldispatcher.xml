@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstPlayerGMainContextSignalDispatcher">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstPlayerGMainContextSignalDispatcher.top_of_page">GstPlayerGMainContextSignalDispatcher</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstPlayerGMainContextSignalDispatcher</refname>
+<refpurpose>Player GLib MainContext dispatcher</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstPlayerGMainContextSignalDispatcher.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstPlayerSignalDispatcher"><returnvalue>GstPlayerSignalDispatcher</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-g-main-context-signal-dispatcher-new">gst_player_g_main_context_signal_dispatcher_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstPlayerGMainContextSignalDispatcher.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstPlayerGMainContextSignalDispatcher.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-player-g-main-context-signal-dispatcher-new" role="function">
+<title>gst_player_g_main_context_signal_dispatcher_new&#160;()</title>
+<indexterm zone="gst-player-g-main-context-signal-dispatcher-new"><primary>gst_player_g_main_context_signal_dispatcher_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayerSignalDispatcher"><returnvalue>GstPlayerSignalDispatcher</returnvalue></link>&#160;*
+gst_player_g_main_context_signal_dispatcher_new
+                               (<parameter><link linkend="GMainContext"><type>GMainContext</type></link> *application_context</parameter>);</programlisting>
+<para>Creates a new GstPlayerSignalDispatcher that uses <parameter>application_context</parameter>
+,
+or the thread default one if <link linkend="NULL:CAPS"><literal>NULL</literal></link> is used. See <link linkend="gst-player-new-full"><function>gst_player_new_full()</function></link>.</para>
+<refsect3 id="gst-player-g-main-context-signal-dispatcher-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>application_context</para></entry>
+<entry role="parameter_description"><para> GMainContext to use or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-g-main-context-signal-dispatcher-new.returns" role="returns">
+<title>Returns</title>
+<para> the new GstPlayerSignalDispatcher. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstPlayerGMainContextSignalDispatcher.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

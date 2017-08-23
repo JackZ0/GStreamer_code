@@ -49,11 +49,11 @@
 <a name="gst-plugins-bad-plugins-glcolorscale.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLBaseFilter.html#GstGLBaseFilter-struct">GstGLBaseFilter</a>
-                        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLFilter.html#GstGLFilter-struct">GstGLFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> GstGLBaseFilter
+                        <span class="lineart">╰──</span> GstGLFilter
                             <span class="lineart">╰──</span> GstGLColorscale
 </pre>
 </div>
@@ -66,32 +66,15 @@
 </div>
 <div class="refsect3">
 <a name="id-1.2.43.6.4"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v videotestsrc <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw <span class="gtkdoc opt">!</span> glcolorscale <span class="gtkdoc opt">!</span> ximagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v videotestsrc ! video/x-raw ! glcolorscale ! ximagesink
+</pre></div>
 <p> A pipeline to test colorspace conversion.
 FBO is required.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v videotestsrc <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> width<span class="gtkdoc opt">=</span><span class="number">640</span><span class="gtkdoc opt">,</span> height<span class="gtkdoc opt">=</span><span class="number">480</span><span class="gtkdoc opt">,</span> format<span class="gtkdoc opt">=</span>AYUV <span class="gtkdoc opt">!</span> glcolorscale <span class="gtkdoc opt">!</span> \
-  video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> width<span class="gtkdoc opt">=</span><span class="number">320</span><span class="gtkdoc opt">,</span> height<span class="gtkdoc opt">=</span><span class="number">240</span><span class="gtkdoc opt">,</span> format<span class="gtkdoc opt">=</span>YV12 <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> autovideosink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v videotestsrc ! video/x-raw, width=640, height=480, format=AYUV ! glcolorscale ! \
+  video/x-raw, width=320, height=240, format=YV12 ! videoconvert ! autovideosink
+</pre></div>
 <p> A pipeline to test hardware scaling and colorspace conversion.
 FBO and GLSL are required.</p>
 </div>

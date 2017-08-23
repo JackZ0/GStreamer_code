@@ -1,0 +1,180 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-compositor">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-compositor.top_of_page" role="top_of_page">compositor</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>compositor</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-compositor.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstCompositorBackground"><type>GstCompositorBackground</type></link></entry><entry role="property_name"><link linkend="GstCompositor--background">background</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCompositor"/><refsect1 id="gst-plugins-bad-plugins-compositor.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCompositor-struct">GstCompositor</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstCompositorBackground">GstCompositorBackground</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compositor.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAggregator">GstAggregator</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoAggregator">GstVideoAggregator</link>
+                        <phrase role="lineart">╰──</phrase> GstCompositor
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compositor.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstCompositor implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-compositor.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Compositor can accept AYUV, ARGB and BGRA video streams. For each of the requested
+sink pads it will compare the incoming geometry and framerate to define the
+output parameters. Indeed output video frames will have the geometry of the
+biggest incoming video stream and the framerate of the fastest incoming one.</para>
+<para>Compositor will do colorspace conversion.</para>
+<para>Individual parameters for each input stream can be configured on the
+<link linkend="GstCompositorPad"><type>GstCompositorPad</type></link>:</para>
+<itemizedlist>
+<listitem><para>&quot;xpos&quot;: The x-coordinate position of the top-left corner of the picture (<link linkend="gint"><type>gint</type></link>)</para></listitem>
+<listitem><para>&quot;ypos&quot;: The y-coordinate position of the top-left corner of the picture (<link linkend="gint"><type>gint</type></link>)</para></listitem>
+<listitem><para>&quot;width&quot;: The width of the picture; the input will be scaled if necessary (<link linkend="gint"><type>gint</type></link>)</para></listitem>
+<listitem><para>&quot;height&quot;: The height of the picture; the input will be scaled if necessary (<link linkend="gint"><type>gint</type></link>)</para></listitem>
+<listitem><para>&quot;alpha&quot;: The transparency of the picture; between 0.0 and 1.0. The blending
+is a simple copy when fully-transparent (0.0) and fully-opaque (1.0). (<link linkend="gdouble"><type>gdouble</type></link>)</para></listitem>
+<listitem>
+<para>&quot;zorder&quot;: The z-order position of the picture in the composition (<link linkend="guint"><type>guint</type></link>)</para>
+</listitem>
+</itemizedlist>
+<refsect3><title>Sample pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 \
+  videotestsrc pattern=1 ! \
+  video/x-raw,format=AYUV,framerate=\(fraction\)10/1,width=100,height=100 ! \
+  videobox border-alpha=0 top=-70 bottom=-70 right=-220 ! \
+  compositor name=comp sink_0::alpha=0.7 sink_1::alpha=0.5 ! \
+  videoconvert ! xvimagesink \
+  videotestsrc ! \
+  video/x-raw,format=AYUV,framerate=\(fraction\)5/1,width=320,height=240 ! comp.
+]]></programlisting></informalexample>
+<para> A pipeline to demonstrate compositor used together with videobox.
+This should show a 320x240 pixels video test source with some transparency
+showing the background checker pattern. Another video test source with just
+the snow pattern of 100x100 pixels is overlaid on top of the first one on
+the left vertically centered with a small transparency showing the first
+video test source behind and the checker pattern under it. Note that the
+framerate of the output video is 10 frames per second.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc pattern=1 ! \
+  video/x-raw, framerate=\(fraction\)10/1, width=100, height=100 ! \
+  compositor name=comp ! videoconvert ! ximagesink \
+  videotestsrc !  \
+  video/x-raw, framerate=\(fraction\)5/1, width=320, height=240 ! comp.
+]]></programlisting></informalexample>
+<para> A pipeline to demostrate bgra comping. (This does not demonstrate alpha blending).</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc pattern=1 ! \
+  video/x-raw,format =I420, framerate=\(fraction\)10/1, width=100, height=100 ! \
+  compositor name=comp ! videoconvert ! ximagesink \
+  videotestsrc ! \
+  video/x-raw,format=I420, framerate=\(fraction\)5/1, width=320, height=240 ! comp.
+]]></programlisting></informalexample>
+<para> A pipeline to test I420</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 compositor name=comp sink_1::alpha=0.5 sink_1::xpos=50 sink_1::ypos=50 ! \
+  videoconvert ! ximagesink \
+  videotestsrc pattern=snow timestamp-offset=3000000000 ! \
+  "video/x-raw,format=AYUV,width=640,height=480,framerate=(fraction)30/1" ! \
+  timeoverlay ! queue2 ! comp. \
+  videotestsrc pattern=smpte ! \
+  "video/x-raw,format=AYUV,width=800,height=600,framerate=(fraction)10/1" ! \
+  timeoverlay ! queue2 ! comp.
+]]></programlisting></informalexample>
+<para> A pipeline to demonstrate synchronized compositing (the second stream starts after 3 seconds)</para>
+</refsect3>
+
+<include href="element-compositor-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compositor.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compositor.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCompositor-struct" role="struct">
+<title>struct GstCompositor</title>
+<indexterm zone="GstCompositor-struct"><primary>GstCompositor</primary></indexterm>
+<programlisting language="C">struct GstCompositor;</programlisting>
+<para>The opaque <link linkend="GstCompositor"><type>GstCompositor</type></link> structure.</para>
+</refsect2>
+<refsect2 id="GstCompositorBackground" role="enum">
+<title>enum GstCompositorBackground</title>
+<indexterm zone="GstCompositorBackground"><primary>GstCompositorBackground</primary></indexterm>
+<refsect3 id="GstCompositorBackground.members" role="enum_members">
+<title>Members</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="COMPOSITOR-BACKGROUND-CHECKER:CAPS">COMPOSITOR_BACKGROUND_CHECKER</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="COMPOSITOR-BACKGROUND-BLACK:CAPS">COMPOSITOR_BACKGROUND_BLACK</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="COMPOSITOR-BACKGROUND-WHITE:CAPS">COMPOSITOR_BACKGROUND_WHITE</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="COMPOSITOR-BACKGROUND-TRANSPARENT:CAPS">COMPOSITOR_BACKGROUND_TRANSPARENT</para></entry>
+<entry/><entry/>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compositor.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCompositor--background" role="property"><title>The <literal>“background”</literal> property</title>
+<indexterm zone="GstCompositor--background"><primary>GstCompositor:background</primary></indexterm>
+<programlisting>  “background”               <link linkend="GstCompositorBackground"><type>GstCompositorBackground</type></link></programlisting>
+<para>Background type.</para><para>Flags: Read / Write</para>
+<para>Default value: Checker pattern</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

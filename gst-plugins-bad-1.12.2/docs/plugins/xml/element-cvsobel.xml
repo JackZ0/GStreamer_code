@@ -1,0 +1,115 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-cvsobel">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-cvsobel.top_of_page" role="top_of_page">cvsobel</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>cvsobel</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-cvsobel.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvSobel--aperture-size">aperture-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvSobel--x-order">x-order</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvSobel--y-order">y-order</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCvSobel--mask">mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCvSobel"/><refsect1 id="gst-plugins-bad-plugins-cvsobel.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCvSobel-struct">GstCvSobel</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsobel.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstCvSobel
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-cvsobel.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Applies the cvSobel OpenCV function to the image.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! cvsobel ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-cvsobel-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsobel.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsobel.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCvSobel-struct" role="struct">
+<title>struct GstCvSobel</title>
+<indexterm zone="GstCvSobel-struct"><primary>GstCvSobel</primary></indexterm>
+<programlisting language="C">struct GstCvSobel;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsobel.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCvSobel--aperture-size" role="property"><title>The <literal>“aperture-size”</literal> property</title>
+<indexterm zone="GstCvSobel--aperture-size"><primary>GstCvSobel:aperture-size</primary></indexterm>
+<programlisting>  “aperture-size”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Size of the extended Sobel Kernel (1, 3, 5 or 7).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,7]</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstCvSobel--x-order" role="property"><title>The <literal>“x-order”</literal> property</title>
+<indexterm zone="GstCvSobel--x-order"><primary>GstCvSobel:x-order</primary></indexterm>
+<programlisting>  “x-order”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Order of the derivative x.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstCvSobel--y-order" role="property"><title>The <literal>“y-order”</literal> property</title>
+<indexterm zone="GstCvSobel--y-order"><primary>GstCvSobel:y-order</primary></indexterm>
+<programlisting>  “y-order”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Order of the derivative y.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCvSobel--mask" role="property"><title>The <literal>“mask”</literal> property</title>
+<indexterm zone="GstCvSobel--mask"><primary>GstCvSobel:mask</primary></indexterm>
+<programlisting>  “mask”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sets whether the detected derivative edges should be used as a mask on the original input or not.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,115 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-edgedetect">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-edgedetect.top_of_page" role="top_of_page">edgedetect</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>edgedetect</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-edgedetect.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstEdgeDetect--aperture">aperture</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstEdgeDetect--mask">mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstEdgeDetect--threshold1">threshold1</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstEdgeDetect--threshold2">threshold2</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstEdgeDetect"/><refsect1 id="gst-plugins-bad-plugins-edgedetect.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstEdgeDetect-struct">GstEdgeDetect</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-edgedetect.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstEdgeDetect
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-edgedetect.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Performs canny edge detection on videos and images</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! decodebin ! videoconvert ! edgedetect ! videoconvert ! xvimagesink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-edgedetect-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-edgedetect.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-edgedetect.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstEdgeDetect-struct" role="struct">
+<title>struct GstEdgeDetect</title>
+<indexterm zone="GstEdgeDetect-struct"><primary>GstEdgeDetect</primary></indexterm>
+<programlisting language="C">struct GstEdgeDetect;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-edgedetect.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstEdgeDetect--aperture" role="property"><title>The <literal>“aperture”</literal> property</title>
+<indexterm zone="GstEdgeDetect--aperture"><primary>GstEdgeDetect:aperture</primary></indexterm>
+<programlisting>  “aperture”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Aperture size for Sobel operator (Must be either 3, 5 or 7.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [3,7]</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstEdgeDetect--mask" role="property"><title>The <literal>“mask”</literal> property</title>
+<indexterm zone="GstEdgeDetect--mask"><primary>GstEdgeDetect:mask</primary></indexterm>
+<programlisting>  “mask”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sets whether the detected edges should be used as a mask on the original input or not.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstEdgeDetect--threshold1" role="property"><title>The <literal>“threshold1”</literal> property</title>
+<indexterm zone="GstEdgeDetect--threshold1"><primary>GstEdgeDetect:threshold1</primary></indexterm>
+<programlisting>  “threshold1”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Threshold value for canny edge detection.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1000]</para>
+<para>Default value: 50</para>
+</refsect2>
+<refsect2 id="GstEdgeDetect--threshold2" role="property"><title>The <literal>“threshold2”</literal> property</title>
+<indexterm zone="GstEdgeDetect--threshold2"><primary>GstEdgeDetect:threshold2</primary></indexterm>
+<programlisting>  “threshold2”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Second threshold value for canny edge detection.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1000]</para>
+<para>Default value: 150</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

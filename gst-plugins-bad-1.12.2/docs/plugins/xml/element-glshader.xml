@@ -1,0 +1,182 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glshader">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glshader.top_of_page" role="top_of_page">glshader</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glshader</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glshader.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterShader--location">location</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterShader--preset">preset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterShader--vars">vars</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterShader--fragment">fragment</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstGLShader"><type>GstGLShader</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterShader--shader">shader</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstStructure"><type>GstStructure</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterShader--uniforms">uniforms</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLFilterShader--update-shader">update-shader</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterShader--vertex">vertex</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glshader.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstGLFilterShader-create-shader">create-shader</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLFilterShader"/><refsect1 id="gst-plugins-bad-plugins-glshader.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLFilterShader-struct">GstGLFilterShader</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glshader.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGLFilterShader
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glshader.description" role="desc">
+<title role="desc.title">Description</title>
+<para>OpenGL fragment shader filter</para>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! glupload ! glshader fragment="\"`cat myshader.frag`\"" ! glimagesink
+]]></programlisting></informalexample>
+<para>
+FBO (Frame Buffer Object) and GLSL (OpenGL Shading Language) are required.
+Depending on the exact OpenGL version chosen and the exact requirements of
+the OpenGL implementation, a <link linkend="version"><type>version</type></link> header may be required.</para>
+<para>The following is a simple OpenGL ES (also usable with OpenGL 3 core contexts)
+passthrough shader with the required inputs.</para>
+<informalexample><programlisting><![CDATA[
+#version 100
+#ifdef GL_ES
+precision mediump float;
+#endif
+varying vec2 v_texcoord;
+uniform sampler2D tex;
+uniform float time;
+uniform float width;
+uniform float height;
+
+void main () {
+  gl_FragColor = texture2D( tex, v_texcoord );
+}
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-glshader-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glshader.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glshader.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLFilterShader-struct" role="struct">
+<title>struct GstGLFilterShader</title>
+<indexterm zone="GstGLFilterShader-struct"><primary>GstGLFilterShader</primary></indexterm>
+<programlisting language="C">struct GstGLFilterShader;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glshader.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLFilterShader--location" role="property"><title>The <literal>“location”</literal> property</title>
+<indexterm zone="GstGLFilterShader--location"><primary>GstGLFilterShader:location</primary></indexterm>
+<programlisting>  “location”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of the GLSL file to load.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstGLFilterShader--preset" role="property"><title>The <literal>“preset”</literal> property</title>
+<indexterm zone="GstGLFilterShader--preset"><primary>GstGLFilterShader:preset</primary></indexterm>
+<programlisting>  “preset”                   <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of the shader uniform variables preset file.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstGLFilterShader--vars" role="property"><title>The <literal>“vars”</literal> property</title>
+<indexterm zone="GstGLFilterShader--vars"><primary>GstGLFilterShader:vars</primary></indexterm>
+<programlisting>  “vars”                     <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Set the shader uniform variables.</para><para>Flags: Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstGLFilterShader--fragment" role="property"><title>The <literal>“fragment”</literal> property</title>
+<indexterm zone="GstGLFilterShader--fragment"><primary>GstGLFilterShader:fragment</primary></indexterm>
+<programlisting>  “fragment”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>GLSL fragment source.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstGLFilterShader--shader" role="property"><title>The <literal>“shader”</literal> property</title>
+<indexterm zone="GstGLFilterShader--shader"><primary>GstGLFilterShader:shader</primary></indexterm>
+<programlisting>  “shader”                   <link linkend="GstGLShader"><type>GstGLShader</type></link> *</programlisting>
+<para>GstGLShader to use.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLFilterShader--uniforms" role="property"><title>The <literal>“uniforms”</literal> property</title>
+<indexterm zone="GstGLFilterShader--uniforms"><primary>GstGLFilterShader:uniforms</primary></indexterm>
+<programlisting>  “uniforms”                 <link linkend="GstStructure"><type>GstStructure</type></link> *</programlisting>
+<para>GLSL Uniforms.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLFilterShader--update-shader" role="property"><title>The <literal>“update-shader”</literal> property</title>
+<indexterm zone="GstGLFilterShader--update-shader"><primary>GstGLFilterShader:update-shader</primary></indexterm>
+<programlisting>  “update-shader”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Emit the 'create-shader' signal for the next frame.</para><para>Flags: Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstGLFilterShader--vertex" role="property"><title>The <literal>“vertex”</literal> property</title>
+<indexterm zone="GstGLFilterShader--vertex"><primary>GstGLFilterShader:vertex</primary></indexterm>
+<programlisting>  “vertex”                   <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>GLSL vertex source.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glshader.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLFilterShader-create-shader" role="signal"><title>The <literal>“create-shader”</literal> signal</title>
+<indexterm zone="GstGLFilterShader-create-shader"><primary>GstGLFilterShader::create-shader</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>*
+user_function (<link linkend="GstGLFilterShader"><type>GstGLFilterShader</type></link> *gstglfiltershader,
+               <link linkend="gpointer"><type>gpointer</type></link>           user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

@@ -108,19 +108,19 @@
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstGLBuffer.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html">GBoxed</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> GstGLBufferAllocationParams
     <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct">GstAllocator</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct">GstAllocator</a>
                 <span class="lineart">╰──</span> <a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</a>
                     <span class="lineart">╰──</span> GstGLBufferAllocator
 </pre>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstGLBuffer.description"></a><h2>Description</h2>
-<p>GstGLBuffer is a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> subclass providing support for the mapping of
+<p>GstGLBuffer is a <a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> subclass providing support for the mapping of
 GL buffers.</p>
 <p>Data is uploaded or downloaded from the GPU as is necessary.</p>
 </div>
@@ -138,7 +138,7 @@ multiple times.  This must be called before any other <a class="link" href="gst-
 <div class="refsect2">
 <a name="gst-is-gl-buffer"></a><h3>gst_is_gl_buffer ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gst_is_gl_buffer (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *mem</code></em>);</pre>
+gst_is_gl_buffer (<em class="parameter"><code><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *mem</code></em>);</pre>
 <div class="refsect3">
 <a name="gst-is-gl-buffer.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -149,7 +149,7 @@ gst_is_gl_buffer (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/g
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>mem</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -167,7 +167,7 @@ is a <a class="link" href="gst-plugins-bad-libs-GstGLBuffer.html#GstGLBuffer" ti
 <pre class="programlisting"><a class="link" href="gst-plugins-bad-libs-GstGLBuffer.html#GstGLBufferAllocationParams"><span class="returnvalue">GstGLBufferAllocationParams</span></a> *
 gst_gl_buffer_allocation_params_new (<em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> *context</code></em>,
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gsize"><span class="type">gsize</span></a> alloc_size</code></em>,
-                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
+                                     <em class="parameter"><code><a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> gl_target</code></em>,
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> gl_usage</code></em>);</pre>
 <div class="refsect3">
@@ -191,7 +191,7 @@ gst_gl_buffer_allocation_params_new (<em class="parameter"><code><a class="link"
 </tr>
 <tr>
 <td class="parameter_name"><p>alloc_params</p></td>
-<td class="parameter_description"><p> the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> for <em class="parameter"><code>tex_id</code></em>
+<td class="parameter_description"><p> the <a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> for <em class="parameter"><code>tex_id</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
@@ -337,7 +337,7 @@ objects</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstGLBuffer.see-also"></a><h2>See Also</h2>
-<p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a>, <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a></p>
+<p><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a>, <a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a></p>
 </div>
 </div>
 <div class="footer">

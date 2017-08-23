@@ -1,0 +1,350 @@
+<ARG>
+<NAME>GstAggregator::latency</NAME>
+<TYPE>gint64</TYPE>
+<RANGE>>= 0</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Buffer latency</NICK>
+<BLURB>Additional latency in live mode to allow upstream to take longer to produce buffers for the current position (in nanoseconds).</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstAggregator::start-time</NAME>
+<TYPE>guint64</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Start Time</NICK>
+<BLURB>Start time to use if start-time-selection=set.</BLURB>
+<DEFAULT>18446744073709551615</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstAggregator::start-time-selection</NAME>
+<TYPE>GstAggregatorStartTimeSelection</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Start Time Selection</NICK>
+<BLURB>Decides which start time is output.</BLURB>
+<DEFAULT>Start at 0 running time (default)</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstAudioAggregator::alignment-threshold</NAME>
+<TYPE>guint64</TYPE>
+<RANGE><= 18446744073709551614</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Alignment Threshold</NICK>
+<BLURB>Timestamp alignment threshold in nanoseconds.</BLURB>
+<DEFAULT>40000000</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstAudioAggregator::discont-wait</NAME>
+<TYPE>guint64</TYPE>
+<RANGE><= 18446744073709551614</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Discont Wait</NICK>
+<BLURB>Window of time in nanoseconds to wait before creating a discontinuity.</BLURB>
+<DEFAULT>1000000000</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstAudioAggregator::output-buffer-duration</NAME>
+<TYPE>guint64</TYPE>
+<RANGE>>= 1</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Output Buffer Duration</NICK>
+<BLURB>Output block size in nanoseconds.</BLURB>
+<DEFAULT>10000000</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVideoAggregatorPad::ignore-eos</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Ignore EOS</NICK>
+<BLURB>Aggregate the last frame on pads that are EOS till they are released.</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstVideoAggregatorPad::zorder</NAME>
+<TYPE>guint</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Z-Order</NICK>
+<BLURB>Z Order of the picture.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstGLBaseFilter::context</NAME>
+<TYPE>GstGLContext*</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>OpenGL context</NICK>
+<BLURB>Get OpenGL context.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstGLShader::linked</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Linked</NICK>
+<BLURB>Shader link status.</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstGLViewConvert::downmix-mode</NAME>
+<TYPE>GstGLStereoDownmix</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Mode for mono downmixed output</NICK>
+<BLURB>Output anaglyph type to generate when downmixing to mono.</BLURB>
+<DEFAULT>Dubois optimised Green-Magenta anaglyph</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstGLViewConvert::input-flags-override</NAME>
+<TYPE>GstVideoMultiviewFlags</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Input Multiview Flags Override</NICK>
+<BLURB>Override any input information about multiview layout flags.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstGLViewConvert::input-mode-override</NAME>
+<TYPE>GstVideoMultiviewMode</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Input Multiview Mode Override</NICK>
+<BLURB>Override any input information about multiview layout.</BLURB>
+<DEFAULT>GST_VIDEO_MULTIVIEW_MODE_NONE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstGLViewConvert::output-flags-override</NAME>
+<TYPE>GstVideoMultiviewFlags</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Output Multiview Flags Override</NICK>
+<BLURB>Override automatic negotiation for output multiview layout flags.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstGLViewConvert::output-mode-override</NAME>
+<TYPE>GstVideoMultiviewMode</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Output Multiview Mode Override</NICK>
+<BLURB>Override automatic output mode selection for multiview layout.</BLURB>
+<DEFAULT>GST_VIDEO_MULTIVIEW_MODE_NONE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayerGMainContextSignalDispatcher::application-context</NAME>
+<TYPE>GMainContext*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwX</FLAGS>
+<NICK>Application Context</NICK>
+<BLURB>Application GMainContext to dispatch signals to.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::audio-video-offset</NAME>
+<TYPE>gint64</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Audio Video Offset</NICK>
+<BLURB>The synchronisation offset between audio and video in nanoseconds.</BLURB>
+<DEFAULT>0</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::current-audio-track</NAME>
+<TYPE>GstPlayerAudioInfo*</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Current Audio Track</NICK>
+<BLURB>Current audio track information.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::current-subtitle-track</NAME>
+<TYPE>GstPlayerSubtitleInfo*</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Current Subtitle Track</NICK>
+<BLURB>Current audio subtitle information.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::current-video-track</NAME>
+<TYPE>GstPlayerVideoInfo*</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Current Video Track</NICK>
+<BLURB>Current video track information.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::duration</NAME>
+<TYPE>guint64</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Duration</NICK>
+<BLURB>Duration.</BLURB>
+<DEFAULT>18446744073709551615</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::media-info</NAME>
+<TYPE>GstPlayerMediaInfo*</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Media Info</NICK>
+<BLURB>Current media information.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::mute</NAME>
+<TYPE>gboolean</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Mute</NICK>
+<BLURB>Mute.</BLURB>
+<DEFAULT>FALSE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::pipeline</NAME>
+<TYPE>GstElement*</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Pipeline</NICK>
+<BLURB>GStreamer pipeline that is used.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::position</NAME>
+<TYPE>guint64</TYPE>
+<RANGE></RANGE>
+<FLAGS>r</FLAGS>
+<NICK>Position</NICK>
+<BLURB>Current Position.</BLURB>
+<DEFAULT>18446744073709551615</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::rate</NAME>
+<TYPE>gdouble</TYPE>
+<RANGE>[-64,64]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>rate</NICK>
+<BLURB>Playback rate.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::signal-dispatcher</NAME>
+<TYPE>GstPlayerSignalDispatcher*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Signal Dispatcher</NICK>
+<BLURB>Dispatcher for the signals to e.g. event loops.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::suburi</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Subtitle URI</NICK>
+<BLURB>Current Subtitle URI.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::uri</NAME>
+<TYPE>gchar*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>URI</NICK>
+<BLURB>Current URI.</BLURB>
+<DEFAULT>NULL</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::video-multiview-flags</NAME>
+<TYPE>GstVideoMultiviewFlags</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Multiview Flags Override</NICK>
+<BLURB>Override details of the multiview frame layout.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::video-multiview-mode</NAME>
+<TYPE>GstVideoMultiviewFramePacking</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Multiview Mode Override</NICK>
+<BLURB>Re-interpret a video stream as one of several frame-packed stereoscopic modes.</BLURB>
+<DEFAULT>GST_VIDEO_MULTIVIEW_FRAME_PACKING_NONE</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::video-renderer</NAME>
+<TYPE>GstPlayerVideoRenderer*</TYPE>
+<RANGE></RANGE>
+<FLAGS>wX</FLAGS>
+<NICK>Video Renderer</NICK>
+<BLURB>Video renderer to use for rendering videos.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayer::volume</NAME>
+<TYPE>gdouble</TYPE>
+<RANGE>[0,10]</RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Volume</NICK>
+<BLURB>Volume.</BLURB>
+<DEFAULT>1</DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayerVideoOverlayVideoRenderer::video-sink</NAME>
+<TYPE>GstElement*</TYPE>
+<RANGE></RANGE>
+<FLAGS>rw</FLAGS>
+<NICK>Video Sink</NICK>
+<BLURB>the video output element to use (NULL = default sink).</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+
+<ARG>
+<NAME>GstPlayerVideoOverlayVideoRenderer::window-handle</NAME>
+<TYPE>gpointer</TYPE>
+<RANGE></RANGE>
+<FLAGS>rwx</FLAGS>
+<NICK>Window Handle</NICK>
+<BLURB>Window handle to embed the video into.</BLURB>
+<DEFAULT></DEFAULT>
+</ARG>
+

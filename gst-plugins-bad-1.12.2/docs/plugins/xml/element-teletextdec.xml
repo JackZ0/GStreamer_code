@@ -1,0 +1,118 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-teletextdec">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-teletextdec.top_of_page" role="top_of_page">teletextdec</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>teletextdec</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-teletextdec.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstTeletextDec--font-description">font-description</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstTeletextDec--page">page</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstTeletextDec--subpage">subpage</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstTeletextDec--subtitles-mode">subtitles-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstTeletextDec--subtitles-template">subtitles-template</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstTeletextDec"/><refsect1 id="gst-plugins-bad-plugins-teletextdec.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstTeletextDec-struct">GstTeletextDec</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-teletextdec.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstTeletextDec
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-teletextdec.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Decode a stream of raw VBI packets containing teletext information to a RGBA
+stream.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v -m filesrc location=recording.mpeg ! tsdemux ! teletextdec ! videoconvert ! ximagesink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-teletextdec-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-teletextdec.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-teletextdec.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTeletextDec-struct" role="struct">
+<title>struct GstTeletextDec</title>
+<indexterm zone="GstTeletextDec-struct"><primary>GstTeletextDec</primary></indexterm>
+<programlisting language="C">struct GstTeletextDec;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-teletextdec.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstTeletextDec--font-description" role="property"><title>The <literal>“font-description”</literal> property</title>
+<indexterm zone="GstTeletextDec--font-description"><primary>GstTeletextDec:font-description</primary></indexterm>
+<programlisting>  “font-description”         <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Font description used for the pango output.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;verdana 12&quot;</para>
+</refsect2>
+<refsect2 id="GstTeletextDec--page" role="property"><title>The <literal>“page”</literal> property</title>
+<indexterm zone="GstTeletextDec--page"><primary>GstTeletextDec:page</primary></indexterm>
+<programlisting>  “page”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of page that should displayed.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [100,999]</para>
+<para>Default value: 100</para>
+</refsect2>
+<refsect2 id="GstTeletextDec--subpage" role="property"><title>The <literal>“subpage”</literal> property</title>
+<indexterm zone="GstTeletextDec--subpage"><primary>GstTeletextDec:subpage</primary></indexterm>
+<programlisting>  “subpage”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of sub-page that should displayed (-1 for all).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,153]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstTeletextDec--subtitles-mode" role="property"><title>The <literal>“subtitles-mode”</literal> property</title>
+<indexterm zone="GstTeletextDec--subtitles-mode"><primary>GstTeletextDec:subtitles-mode</primary></indexterm>
+<programlisting>  “subtitles-mode”           <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enables subtitles mode for text output stripping the blank lines and the teletext state lines.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstTeletextDec--subtitles-template" role="property"><title>The <literal>“subtitles-template”</literal> property</title>
+<indexterm zone="GstTeletextDec--subtitles-template"><primary>GstTeletextDec:subtitles-template</primary></indexterm>
+<programlisting>  “subtitles-template”       <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Output template used to print each one of the subtitles lines.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;%s\\n&quot;</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

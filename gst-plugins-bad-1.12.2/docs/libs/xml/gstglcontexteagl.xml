@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLContextEagl">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLContextEagl.top_of_page">GstGLContextEagl</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLContextEagl</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLContextEagl.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLContextEagl"><returnvalue>GstGLContextEagl</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-context-eagl-new">gst_gl_context_eagl_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-eagl-get-current-context">gst_gl_context_eagl_get_current_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLContextEagl.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLContextEagl">GstGLContextEagl</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLContextEagl.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLContextEagl.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-context-eagl-new" role="function">
+<title>gst_gl_context_eagl_new&#160;()</title>
+<indexterm zone="gst-gl-context-eagl-new"><primary>gst_gl_context_eagl_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLContextEagl"><returnvalue>GstGLContextEagl</returnvalue></link>&#160;*
+gst_gl_context_eagl_new (<parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-context-eagl-get-current-context" role="function">
+<title>gst_gl_context_eagl_get_current_context&#160;()</title>
+<indexterm zone="gst-gl-context-eagl-get-current-context"><primary>gst_gl_context_eagl_get_current_context</primary></indexterm>
+<programlisting language="C"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+gst_gl_context_eagl_get_current_context
+                               (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLContextEagl.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLContextEagl" role="struct">
+<title>struct GstGLContextEagl</title>
+<indexterm zone="GstGLContextEagl"><primary>GstGLContextEagl</primary></indexterm>
+<programlisting language="C">struct GstGLContextEagl {
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

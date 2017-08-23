@@ -1,0 +1,163 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-asfmux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-asfmux.top_of_page" role="top_of_page">asfmux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>asfmux</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-asfmux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAsfMux--is-live">is-live</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAsfMux--merge-stream-tags">merge-stream-tags</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstAsfMux--packet-size">packet-size</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstAsfMux--padding">padding</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstAsfMux--preroll">preroll</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAsfMux--streamable">streamable</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstAsfMux"/><refsect1 id="gst-plugins-bad-plugins-asfmux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAsfMux-struct">GstAsfMux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-asfmux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstAsfMux
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-asfmux.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstAsfMux implements
+ <link linkend="GstTagSetter">GstTagSetter</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-asfmux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Muxes media into an ASF file/stream.</para>
+<para>Pad names are either video_xx or audio_xx, where 'xx' is the
+stream number of the stream that goes through that pad. Stream numbers
+are assigned sequentially, starting from 1.</para>
+<refsect3><title>Example launch lines</title><para>(write everything in one line, without the backslash characters)</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc num-buffers=250 \
+! "video/x-raw,format=(string)I420,framerate=(fraction)25/1" ! avenc_wmv2 \
+! asfmux name=mux ! filesink location=test.asf \
+audiotestsrc num-buffers=440 ! audioconvert \
+! "audio/x-raw,rate=44100" ! avenc_wmav2 ! mux.
+]]></programlisting></informalexample>
+<para> This creates an ASF file containing an WMV video stream
+with a test picture and WMA audio stream of a test sound.</para>
+</refsect3>
+<refsect3><title>Live streaming</title><para>asfmux and rtpasfpay are capable of generating a live asf stream.
+asfmux has to set its 'streamable' property to true, because in this
+mode it won't try to seek back to the start of the file to replace
+some fields that couldn't be known at the file start. In this mode,
+it won't also send indexes at the end of the data packets (the actual
+media content)
+the following pipelines are an example of this usage.
+(write everything in one line, without the backslash characters)
+Server (sender)</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -ve videotestsrc ! avenc_wmv2 ! asfmux name=mux streamable=true \
+! rtpasfpay ! udpsink host=127.0.0.1 port=3333 \
+audiotestsrc ! avenc_wmav2 ! mux.
+]]></programlisting></informalexample>
+<para>
+Client (receiver)</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 udpsrc port=3333 ! "caps_from_rtpasfpay_at_sender" \
+! rtpasfdepay ! decodebin name=d ! queue \
+! videoconvert ! autovideosink \
+d. ! queue ! audioconvert ! autoaudiosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-asfmux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-asfmux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-asfmux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAsfMux-struct" role="struct">
+<title>struct GstAsfMux</title>
+<indexterm zone="GstAsfMux-struct"><primary>GstAsfMux</primary></indexterm>
+<programlisting language="C">struct GstAsfMux;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-asfmux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstAsfMux--is-live" role="property"><title>The <literal>“is-live”</literal> property</title>
+<indexterm zone="GstAsfMux--is-live"><primary>GstAsfMux:is-live</primary></indexterm>
+<programlisting>  “is-live”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Deprecated in 0.10.20, use 'streamable' instead.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstAsfMux--merge-stream-tags" role="property"><title>The <literal>“merge-stream-tags”</literal> property</title>
+<indexterm zone="GstAsfMux--merge-stream-tags"><primary>GstAsfMux:merge-stream-tags</primary></indexterm>
+<programlisting>  “merge-stream-tags”        <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If the stream metadata (received as events in the sink) should be merged to the main file metadata.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstAsfMux--packet-size" role="property"><title>The <literal>“packet-size”</literal> property</title>
+<indexterm zone="GstAsfMux--packet-size"><primary>GstAsfMux:packet-size</primary></indexterm>
+<programlisting>  “packet-size”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>The ASF packets size (bytes).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 18</para>
+<para>Default value: 4800</para>
+</refsect2>
+<refsect2 id="GstAsfMux--padding" role="property"><title>The <literal>“padding”</literal> property</title>
+<indexterm zone="GstAsfMux--padding"><primary>GstAsfMux:padding</primary></indexterm>
+<programlisting>  “padding”                  <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Size of the padding object to be added to the end of the header. If this less than 24 (the smaller size of an ASF object), no padding is added.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstAsfMux--preroll" role="property"><title>The <literal>“preroll”</literal> property</title>
+<indexterm zone="GstAsfMux--preroll"><primary>GstAsfMux:preroll</primary></indexterm>
+<programlisting>  “preroll”                  <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>The preroll time (milisecs).</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 5000</para>
+</refsect2>
+<refsect2 id="GstAsfMux--streamable" role="property"><title>The <literal>“streamable”</literal> property</title>
+<indexterm zone="GstAsfMux--streamable"><primary>GstAsfMux:streamable</primary></indexterm>
+<programlisting>  “streamable”               <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If set to true, the output should be as if it is to be streamed and hence no indexes written or duration written.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

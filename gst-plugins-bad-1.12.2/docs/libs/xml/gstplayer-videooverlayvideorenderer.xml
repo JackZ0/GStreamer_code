@@ -1,0 +1,262 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstPlayerVideoOverlayVideoRenderer">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstPlayerVideoOverlayVideoRenderer.top_of_page">GstPlayerVideoOverlayVideoRenderer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstPlayerVideoOverlayVideoRenderer</refname>
+<refpurpose>Player Video Overlay Video Renderer</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstPlayerVideoOverlayVideoRenderer.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstPlayerVideoRenderer"><returnvalue>GstPlayerVideoRenderer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-video-overlay-video-renderer-new">gst_player_video_overlay_video_renderer_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPlayerVideoRenderer"><returnvalue>GstPlayerVideoRenderer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-video-overlay-video-renderer-new-with-sink">gst_player_video_overlay_video_renderer_new_with_sink</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-video-overlay-video-renderer-get-window-handle">gst_player_video_overlay_video_renderer_get_window_handle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-video-overlay-video-renderer-set-window-handle">gst_player_video_overlay_video_renderer_set_window_handle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-video-overlay-video-renderer-expose">gst_player_video_overlay_video_renderer_expose</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-video-overlay-video-renderer-get-render-rectangle">gst_player_video_overlay_video_renderer_get_render_rectangle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-video-overlay-video-renderer-set-render-rectangle">gst_player_video_overlay_video_renderer_set_render_rectangle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="GstPlayerVideoOverlayVideoRenderer.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="GstPlayerVideoOverlayVideoRenderer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-player-video-overlay-video-renderer-new" role="function">
+<title>gst_player_video_overlay_video_renderer_new&#160;()</title>
+<indexterm zone="gst-player-video-overlay-video-renderer-new"><primary>gst_player_video_overlay_video_renderer_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayerVideoRenderer"><returnvalue>GstPlayerVideoRenderer</returnvalue></link>&#160;*
+gst_player_video_overlay_video_renderer_new
+                               (<parameter><link linkend="gpointer"><type>gpointer</type></link> window_handle</parameter>);</programlisting>
+<refsect3 id="gst-player-video-overlay-video-renderer-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window_handle</para></entry>
+<entry role="parameter_description"><para> Window handle to use or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-video-overlay-video-renderer-new.returns" role="returns">
+<title>Returns</title>
+<para>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-video-overlay-video-renderer-new-with-sink" role="function">
+<title>gst_player_video_overlay_video_renderer_new_with_sink&#160;()</title>
+<indexterm zone="gst-player-video-overlay-video-renderer-new-with-sink"><primary>gst_player_video_overlay_video_renderer_new_with_sink</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayerVideoRenderer"><returnvalue>GstPlayerVideoRenderer</returnvalue></link>&#160;*
+gst_player_video_overlay_video_renderer_new_with_sink
+                               (<parameter><link linkend="gpointer"><type>gpointer</type></link> window_handle</parameter>,
+                                <parameter><link linkend="GstElement"><type>GstElement</type></link> *video_sink</parameter>);</programlisting>
+<refsect3 id="gst-player-video-overlay-video-renderer-new-with-sink.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window_handle</para></entry>
+<entry role="parameter_description"><para> Window handle to use or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>video_sink</para></entry>
+<entry role="parameter_description"><para> the custom video_sink element to be set for the video renderer. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer floating</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-video-overlay-video-renderer-new-with-sink.returns" role="returns">
+<title>Returns</title>
+<para>Since 1.12. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-video-overlay-video-renderer-get-window-handle" role="function">
+<title>gst_player_video_overlay_video_renderer_get_window_handle&#160;()</title>
+<indexterm zone="gst-player-video-overlay-video-renderer-get-window-handle"><primary>gst_player_video_overlay_video_renderer_get_window_handle</primary></indexterm>
+<programlisting language="C"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+gst_player_video_overlay_video_renderer_get_window_handle
+                               (<parameter><link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> *self</parameter>);</programlisting>
+<refsect3 id="gst-player-video-overlay-video-renderer-get-window-handle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayerVideoRenderer"><type>GstPlayerVideoRenderer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-video-overlay-video-renderer-get-window-handle.returns" role="returns">
+<title>Returns</title>
+<para> The currently set, platform specific window
+handle. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-video-overlay-video-renderer-set-window-handle" role="function">
+<title>gst_player_video_overlay_video_renderer_set_window_handle&#160;()</title>
+<indexterm zone="gst-player-video-overlay-video-renderer-set-window-handle"><primary>gst_player_video_overlay_video_renderer_set_window_handle</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_video_overlay_video_renderer_set_window_handle
+                               (<parameter><link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> *self</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> window_handle</parameter>);</programlisting>
+<para>Sets the platform specific window handle into which the video
+should be rendered</para>
+<refsect3 id="gst-player-video-overlay-video-renderer-set-window-handle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayerVideoRenderer"><type>GstPlayerVideoRenderer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>window_handle</para></entry>
+<entry role="parameter_description"><para>handle referencing to the platform specific window</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-video-overlay-video-renderer-expose" role="function">
+<title>gst_player_video_overlay_video_renderer_expose&#160;()</title>
+<indexterm zone="gst-player-video-overlay-video-renderer-expose"><primary>gst_player_video_overlay_video_renderer_expose</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_video_overlay_video_renderer_expose
+                               (<parameter><link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> *self</parameter>);</programlisting>
+<para>Tell an overlay that it has been exposed. This will redraw the current frame
+in the drawable even if the pipeline is PAUSED.</para>
+<refsect3 id="gst-player-video-overlay-video-renderer-expose.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> instance.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-video-overlay-video-renderer-get-render-rectangle" role="function">
+<title>gst_player_video_overlay_video_renderer_get_render_rectangle&#160;()</title>
+<indexterm zone="gst-player-video-overlay-video-renderer-get-render-rectangle"><primary>gst_player_video_overlay_video_renderer_get_render_rectangle</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_video_overlay_video_renderer_get_render_rectangle
+                               (<parameter><link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> *self</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *x</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *y</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *width</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *height</parameter>);</programlisting>
+<para>Return the currently configured render rectangle. See <link linkend="gst-player-video-overlay-video-renderer-set-render-rectangle"><function>gst_player_video_overlay_video_renderer_set_render_rectangle()</function></link>
+for details.</para>
+<refsect3 id="gst-player-video-overlay-video-renderer-get-render-rectangle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>x</para></entry>
+<entry role="parameter_description"><para> the horizontal offset of the render area inside the window. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>y</para></entry>
+<entry role="parameter_description"><para> the vertical offset of the render area inside the window. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para> the width of the render area inside the window. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para> the height of the render area inside the window. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-video-overlay-video-renderer-set-render-rectangle" role="function">
+<title>gst_player_video_overlay_video_renderer_set_render_rectangle&#160;()</title>
+<indexterm zone="gst-player-video-overlay-video-renderer-set-render-rectangle"><primary>gst_player_video_overlay_video_renderer_set_render_rectangle</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_video_overlay_video_renderer_set_render_rectangle
+                               (<parameter><link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> *self</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> x</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> y</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> width</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> height</parameter>);</programlisting>
+<para>Configure a subregion as a video target within the window set by
+<link linkend="gst-player-video-overlay-video-renderer-set-window-handle"><function>gst_player_video_overlay_video_renderer_set_window_handle()</function></link>. If this is not
+used or not supported the video will fill the area of the window set as the
+overlay to 100%. By specifying the rectangle, the video can be overlaid to
+a specific region of that window only. After setting the new rectangle one
+should call <link linkend="gst-player-video-overlay-video-renderer-expose"><function>gst_player_video_overlay_video_renderer_expose()</function></link> to force a
+redraw. To unset the region pass -1 for the <parameter>width</parameter>
+ and <parameter>height</parameter>
+ parameters.</para>
+<para>This method is needed for non fullscreen video overlay in UI toolkits that
+do not support subwindows.</para>
+<refsect3 id="gst-player-video-overlay-video-renderer-set-render-rectangle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayerVideoOverlayVideoRenderer"><type>GstPlayerVideoOverlayVideoRenderer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>x</para></entry>
+<entry role="parameter_description"><para>the horizontal offset of the render area inside the window</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>y</para></entry>
+<entry role="parameter_description"><para>the vertical offset of the render area inside the window</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>the width of the render area inside the window</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>the height of the render area inside the window</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="GstPlayerVideoOverlayVideoRenderer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

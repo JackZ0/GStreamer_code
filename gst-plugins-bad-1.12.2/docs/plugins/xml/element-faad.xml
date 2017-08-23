@@ -1,0 +1,68 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-faad">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-faad.top_of_page" role="top_of_page">faad</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>faad</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstFaad"/><refsect1 id="gst-plugins-bad-plugins-faad.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstFaad-struct">GstFaad</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faad.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAudioDecoder">GstAudioDecoder</link>
+                    <phrase role="lineart">╰──</phrase> GstFaad
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-faad.description" role="desc">
+<title role="desc.title">Description</title>
+<para>faad decodes AAC (MPEG-4 part 3) stream.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=example.mp4 ! qtdemux ! faad ! audioconvert ! audioresample ! autoaudiosink
+]]></programlisting></informalexample>
+<para> Play aac from mp4 file.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=example.adts ! faad ! audioconvert ! audioresample ! autoaudiosink
+]]></programlisting></informalexample>
+<para> Play standalone aac bitstream.</para>
+</refsect3>
+
+<include href="element-faad-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faad.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faad.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFaad-struct" role="struct">
+<title>GstFaad</title>
+<indexterm zone="GstFaad-struct"><primary>GstFaad</primary></indexterm>
+<programlisting language="C">typedef struct _GstFaad GstFaad;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

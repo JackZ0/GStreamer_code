@@ -1,0 +1,265 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLBuffer">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLBuffer.top_of_page">GstGlBuffer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGlBuffer</refname>
+<refpurpose>memory subclass for GL buffers</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLBuffer.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-buffer-init-once">gst_gl_buffer_init_once</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-is-gl-buffer">gst_is_gl_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLBufferAllocationParams"><returnvalue>GstGLBufferAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-buffer-allocation-params-new">gst_gl_buffer_allocation_params_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLBufferAllocationParams"/><anchor id="GstGLBufferAllocator"/><refsect1 id="gst-plugins-bad-libs-GstGLBuffer.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBuffer">GstGLBuffer</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLBufferAllocationParams-struct">GstGLBufferAllocationParams</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-BUFFER:CAPS">GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_BUFFER</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBufferAllocator-struct">GstGLBufferAllocator</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBufferAllocatorClass">GstGLBufferAllocatorClass</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-BUFFER-ALLOCATOR-NAME:CAPS">GST_GL_BUFFER_ALLOCATOR_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-CAPS-FEATURE-MEMORY-GL-BUFFER:CAPS">GST_CAPS_FEATURE_MEMORY_GL_BUFFER</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLBuffer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLBufferAllocationParams
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAllocator">GstAllocator</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLBufferAllocator
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLBuffer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>GstGLBuffer is a <link linkend="GstMemory"><type>GstMemory</type></link> subclass providing support for the mapping of
+GL buffers.</para>
+<para>Data is uploaded or downloaded from the GPU as is necessary.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLBuffer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-buffer-init-once" role="function" condition="since:1.8">
+<title>gst_gl_buffer_init_once&#160;()</title>
+<indexterm zone="gst-gl-buffer-init-once" role="1.8"><primary>gst_gl_buffer_init_once</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_buffer_init_once (<parameter><type>void</type></parameter>);</programlisting>
+<para>Initializes the GL Buffer allocator. It is safe to call this function
+multiple times.  This must be called before any other <link linkend="GstGLBuffer"><type>GstGLBuffer</type></link> operation.</para>
+<para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-is-gl-buffer" role="function" condition="since:1.8">
+<title>gst_is_gl_buffer&#160;()</title>
+<indexterm zone="gst-is-gl-buffer" role="1.8"><primary>gst_is_gl_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_is_gl_buffer (<parameter><link linkend="GstMemory"><type>GstMemory</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-is-gl-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMemory"><type>GstMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-is-gl-buffer.returns" role="returns">
+<title>Returns</title>
+<para> whether the memory at <parameter>mem</parameter>
+is a <link linkend="GstGLBuffer"><type>GstGLBuffer</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-buffer-allocation-params-new" role="function" condition="since:1.8">
+<title>gst_gl_buffer_allocation_params_new&#160;()</title>
+<indexterm zone="gst-gl-buffer-allocation-params-new" role="1.8"><primary>gst_gl_buffer_allocation_params_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLBufferAllocationParams"><returnvalue>GstGLBufferAllocationParams</returnvalue></link>&#160;*
+gst_gl_buffer_allocation_params_new (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                     <parameter><link linkend="gsize"><type>gsize</type></link> alloc_size</parameter>,
+                                     <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> gl_target</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> gl_usage</parameter>);</programlisting>
+<refsect3 id="gst-gl-buffer-allocation-params-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_size</para></entry>
+<entry role="parameter_description"><para>the size in bytes to allocate</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for <parameter>tex_id</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>gl_target</para></entry>
+<entry role="parameter_description"><para>the OpenGL target to allocate</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>gl_usage</para></entry>
+<entry role="parameter_description"><para>the OpenGL usage hint to allocate with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-buffer-allocation-params-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLBufferAllocationParams"><type>GstGLBufferAllocationParams</type></link> for allocating OpenGL buffer
+objects</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLBuffer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLBuffer" role="struct">
+<title>GstGLBuffer</title>
+<indexterm zone="GstGLBuffer"><primary>GstGLBuffer</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLBaseMemory       mem;
+
+  guint                 id;
+  guint                 target;         /* XXX: put this in the allocator? */
+  guint                 usage_hints;     /* XXX: put this in the allocator? */
+} GstGLBuffer;
+</programlisting>
+<para>Represents information about a GL buffer</para>
+<refsect3 id="GstGLBuffer.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link>&#160;<structfield id="GstGLBuffer.mem">mem</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLBuffer.id">id</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the buffer id for this memory</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLBuffer.target">target</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the OpenGL target of this texture for binding purposes</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLBuffer.usage-hints">usage_hints</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the OpenGL usage hints this buffer was created with</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstGLBufferAllocationParams-struct" role="struct">
+<title>struct GstGLBufferAllocationParams</title>
+<indexterm zone="GstGLBufferAllocationParams-struct"><primary>GstGLBufferAllocationParams</primary></indexterm>
+<programlisting language="C">struct GstGLBufferAllocationParams {
+  GstGLAllocationParams     parent;
+
+  guint                     gl_target;
+  guint                     gl_usage;
+};
+</programlisting>
+<refsect3 id="GstGLBufferAllocationParams.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link>&#160;<structfield id="GstGLBufferAllocationParams-struct.parent">parent</structfield>;</para></entry>
+<entry role="struct_member_description"><para>parent object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLBufferAllocationParams-struct.gl-target">gl_target</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the OpenGL target to bind the buffer to</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLBufferAllocationParams-struct.gl-usage">gl_usage</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the OpenGL usage hint to create the buffer with</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-BUFFER:CAPS" role="macro">
+<title>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_BUFFER</title>
+<indexterm zone="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-BUFFER:CAPS"><primary>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_BUFFER</primary></indexterm>
+<programlisting language="C">#define GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_BUFFER (1 &lt;&lt; 4)
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLBufferAllocator-struct" role="struct">
+<title>GstGLBufferAllocator</title>
+<indexterm zone="GstGLBufferAllocator-struct"><primary>GstGLBufferAllocator</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLBufferAllocator GstGLBufferAllocator;</programlisting>
+<para>Opaque <link linkend="GstGLAllocator"><type>GstGLAllocator</type></link> struct</para>
+</refsect2>
+<refsect2 id="GstGLBufferAllocatorClass" role="struct">
+<title>GstGLBufferAllocatorClass</title>
+<indexterm zone="GstGLBufferAllocatorClass"><primary>GstGLBufferAllocatorClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLBaseMemoryAllocatorClass parent_class;
+} GstGLBufferAllocatorClass;
+</programlisting>
+<para>The <link linkend="GstGLBufferAllocatorClass"><type>GstGLBufferAllocatorClass</type></link> only contains private data</para>
+</refsect2>
+<refsect2 id="GST-GL-BUFFER-ALLOCATOR-NAME:CAPS" role="macro">
+<title>GST_GL_BUFFER_ALLOCATOR_NAME</title>
+<indexterm zone="GST-GL-BUFFER-ALLOCATOR-NAME:CAPS"><primary>GST_GL_BUFFER_ALLOCATOR_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_BUFFER_ALLOCATOR_NAME   "GLBuffer"
+</programlisting>
+<para>The name of the GL buffer allocator</para>
+</refsect2>
+<refsect2 id="GST-CAPS-FEATURE-MEMORY-GL-BUFFER:CAPS" role="macro">
+<title>GST_CAPS_FEATURE_MEMORY_GL_BUFFER</title>
+<indexterm zone="GST-CAPS-FEATURE-MEMORY-GL-BUFFER:CAPS"><primary>GST_CAPS_FEATURE_MEMORY_GL_BUFFER</primary></indexterm>
+<programlisting language="C">#define GST_CAPS_FEATURE_MEMORY_GL_BUFFER "memory:GLBuffer"
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLBuffer.see-also">
+<title>See Also</title>
+<para><link linkend="GstMemory"><type>GstMemory</type></link>, <link linkend="GstAllocator"><type>GstAllocator</type></link></para>
+
+</refsect1>
+
+</refentry>

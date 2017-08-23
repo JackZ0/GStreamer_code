@@ -1,0 +1,273 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glimagesinkelement">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glimagesinkelement.top_of_page" role="top_of_page">glimagesinkelement</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glimagesinkelement</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstGLImageSink--display">display</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--client-data">client-data</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--client-draw-callback">client-draw-callback</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--client-reshape-callback">client-reshape-callback</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--force-aspect-ratio">force-aspect-ratio</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstGLContext"><type>GstGLContext</type></link> *</entry><entry role="property_name"><link linkend="GstGLImageSink--other-context">other-context</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFraction"><type>GstFraction</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--pixel-aspect-ratio">pixel-aspect-ratio</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstGLContext"><type>GstGLContext</type></link> *</entry><entry role="property_name"><link linkend="GstGLImageSink--context">context</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--handle-events">handle-events</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--ignore-alpha">ignore-alpha</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstGLStereoDownmix"><type>GstGLStereoDownmix</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--output-multiview-downmix-mode">output-multiview-downmix-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--output-multiview-flags">output-multiview-flags</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewMode"><type>GstVideoMultiviewMode</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--output-multiview-mode">output-multiview-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstGLRotateMethod"><type>GstGLRotateMethod</type></link></entry><entry role="property_name"><link linkend="GstGLImageSink--rotate-method">rotate-method</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link></entry><entry role="signal_name"><link linkend="GstGLImageSink-client-draw">client-draw</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link></entry><entry role="signal_name"><link linkend="GstGLImageSink-client-reshape">client-reshape</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLImageSink"/><refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLImageSink-struct">GstGLImageSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoSink">GstVideoSink</link>
+                        <phrase role="lineart">╰──</phrase> GstGLImageSink
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLImageSink implements
+ <link linkend="GstVideoOverlay">GstVideoOverlay</link> and  <link linkend="GstNavigation">GstNavigation</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-glimagesinkelement-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLImageSink-struct" role="struct">
+<title>struct GstGLImageSink</title>
+<indexterm zone="GstGLImageSink-struct"><primary>GstGLImageSink</primary></indexterm>
+<programlisting language="C">struct GstGLImageSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLImageSink--display" role="property"><title>The <literal>“display”</literal> property</title>
+<indexterm zone="GstGLImageSink--display"><primary>GstGLImageSink:display</primary></indexterm>
+<programlisting>  “display”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Display name.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--client-data" role="property"><title>The <literal>“client-data”</literal> property</title>
+<indexterm zone="GstGLImageSink--client-data"><primary>GstGLImageSink:client-data</primary></indexterm>
+<programlisting>  “client-data”              <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Pass data to the draw and reshape callbacks.</para><para>Flags: Write</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--client-draw-callback" role="property"><title>The <literal>“client-draw-callback”</literal> property</title>
+<indexterm zone="GstGLImageSink--client-draw-callback"><primary>GstGLImageSink:client-draw-callback</primary></indexterm>
+<programlisting>  “client-draw-callback”     <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Define a custom draw callback in a client code.</para><para>Flags: Write</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--client-reshape-callback" role="property"><title>The <literal>“client-reshape-callback”</literal> property</title>
+<indexterm zone="GstGLImageSink--client-reshape-callback"><primary>GstGLImageSink:client-reshape-callback</primary></indexterm>
+<programlisting>  “client-reshape-callback”  <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Define a custom reshape callback in a client code.</para><para>Flags: Write</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--force-aspect-ratio" role="property"><title>The <literal>“force-aspect-ratio”</literal> property</title>
+<indexterm zone="GstGLImageSink--force-aspect-ratio"><primary>GstGLImageSink:force-aspect-ratio</primary></indexterm>
+<programlisting>  “force-aspect-ratio”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, scaling will respect original aspect ratio.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--other-context" role="property"><title>The <literal>“other-context”</literal> property</title>
+<indexterm zone="GstGLImageSink--other-context"><primary>GstGLImageSink:other-context</primary></indexterm>
+<programlisting>  “other-context”            <link linkend="GstGLContext"><type>GstGLContext</type></link> *</programlisting>
+<para>Give an external OpenGL context with which to share textures.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--pixel-aspect-ratio" role="property"><title>The <literal>“pixel-aspect-ratio”</literal> property</title>
+<indexterm zone="GstGLImageSink--pixel-aspect-ratio"><primary>GstGLImageSink:pixel-aspect-ratio</primary></indexterm>
+<programlisting>  “pixel-aspect-ratio”       <link linkend="GstFraction"><type>GstFraction</type></link></programlisting>
+<para>The pixel aspect ratio of the device.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--context" role="property"><title>The <literal>“context”</literal> property</title>
+<indexterm zone="GstGLImageSink--context"><primary>GstGLImageSink:context</primary></indexterm>
+<programlisting>  “context”                  <link linkend="GstGLContext"><type>GstGLContext</type></link> *</programlisting>
+<para>Get OpenGL context.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--handle-events" role="property"><title>The <literal>“handle-events”</literal> property</title>
+<indexterm zone="GstGLImageSink--handle-events"><primary>GstGLImageSink:handle-events</primary></indexterm>
+<programlisting>  “handle-events”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, XEvents will be selected and handled.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--ignore-alpha" role="property"><title>The <literal>“ignore-alpha”</literal> property</title>
+<indexterm zone="GstGLImageSink--ignore-alpha"><primary>GstGLImageSink:ignore-alpha</primary></indexterm>
+<programlisting>  “ignore-alpha”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, alpha will be ignored and converted to black.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--output-multiview-downmix-mode" role="property"><title>The <literal>“output-multiview-downmix-mode”</literal> property</title>
+<indexterm zone="GstGLImageSink--output-multiview-downmix-mode"><primary>GstGLImageSink:output-multiview-downmix-mode</primary></indexterm>
+<programlisting>  “output-multiview-downmix-mode” <link linkend="GstGLStereoDownmix"><type>GstGLStereoDownmix</type></link></programlisting>
+<para>Output anaglyph type to generate when downmixing to mono.</para><para>Flags: Read / Write</para>
+<para>Default value: Dubois optimised Green-Magenta anaglyph</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--output-multiview-flags" role="property"><title>The <literal>“output-multiview-flags”</literal> property</title>
+<indexterm zone="GstGLImageSink--output-multiview-flags"><primary>GstGLImageSink:output-multiview-flags</primary></indexterm>
+<programlisting>  “output-multiview-flags”   <link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></programlisting>
+<para>Output multiview layout modifier flags.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--output-multiview-mode" role="property"><title>The <literal>“output-multiview-mode”</literal> property</title>
+<indexterm zone="GstGLImageSink--output-multiview-mode"><primary>GstGLImageSink:output-multiview-mode</primary></indexterm>
+<programlisting>  “output-multiview-mode”    <link linkend="GstVideoMultiviewMode"><type>GstVideoMultiviewMode</type></link></programlisting>
+<para>Choose output mode for multiview/3D video.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_VIDEO_MULTIVIEW_MODE_MONO</para>
+</refsect2>
+<refsect2 id="GstGLImageSink--rotate-method" role="property"><title>The <literal>“rotate-method”</literal> property</title>
+<indexterm zone="GstGLImageSink--rotate-method"><primary>GstGLImageSink:rotate-method</primary></indexterm>
+<programlisting>  “rotate-method”            <link linkend="GstGLRotateMethod"><type>GstGLRotateMethod</type></link></programlisting>
+<para>rotate method.</para><para>Flags: Read / Write</para>
+<para>Default value: Identity (no rotation)</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glimagesinkelement.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLImageSink-client-draw" role="signal"><title>The <literal>“client-draw”</literal> signal</title>
+<indexterm zone="GstGLImageSink-client-draw"><primary>GstGLImageSink::client-draw</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+user_function (<link linkend="GstGLImageSink"><type>GstGLImageSink</type></link> *object,
+               <link linkend="GstGLContext"><type>GstGLContext</type></link>   *texture,
+               <link linkend="GstSample"><type>GstSample</type></link>      *width,
+               <link linkend="gpointer"><type>gpointer</type></link>        user_data)</programlisting>
+<para>Will be emitted before actually drawing the texture.  The client should
+redraw the surface/contents with the <parameter>texture</parameter>
+, <parameter>width</parameter>
+ and <parameter>height</parameter>
+ and
+and return <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>.</para>
+<refsect3 id="GstGLImageSink-client-draw.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLImageSink"><type>GstGLImageSink</type></link></para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>texture</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> id of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> width of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> height of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLImageSink-client-draw.returns" role="returns">
+<title>Returns</title>
+<para> whether the texture was redrawn by the signal.  If not, a
+default redraw will occur.</para>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstGLImageSink-client-reshape" role="signal"><title>The <literal>“client-reshape”</literal> signal</title>
+<indexterm zone="GstGLImageSink-client-reshape"><primary>GstGLImageSink::client-reshape</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+user_function (<link linkend="GstGLImageSink"><type>GstGLImageSink</type></link> *object,
+               <link linkend="GstGLContext"><type>GstGLContext</type></link>   *width,
+               <link linkend="guint"><type>guint</type></link>           height,
+               <link linkend="guint"><type>guint</type></link>           Returns,
+               <link linkend="gpointer"><type>gpointer</type></link>        user_data)</programlisting>
+<para>The client should resize the surface/window/viewport with the <parameter>width</parameter>
+ and
+<parameter>height</parameter>
+ and return <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>.</para>
+<refsect3 id="GstGLImageSink-client-reshape.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLImageSink"><type>GstGLImageSink</type></link></para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> width of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> height of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLImageSink-client-reshape.returns" role="returns">
+<title>Returns</title>
+<para> whether the content area was resized by the signal.  If not, a
+default viewport resize will occur.</para>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

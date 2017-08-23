@@ -53,19 +53,10 @@ sink_2\=(double)0.0082939683976297474\;",
 time=(guint64)0;</p>
 <div class="refsect3">
 <a name="id-1.2.87.3.11"></a><h4>Example launch line</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>m uridecodebin uri<span class="gtkdoc opt">=</span>file<span class="gtkdoc opt">:</span><span class="gtkdoc slc">///test/file/1 ! iqa name=iqa do-dssim=true \</span>
-<span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> autovideosink uridecodebin uri<span class="gtkdoc opt">=</span>file<span class="gtkdoc opt">:</span><span class="gtkdoc slc">///test/file/2 ! iqa.</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -m uridecodebin uri=file:///test/file/1 ! iqa name=iqa do-dssim=true \
+! videoconvert ! autovideosink uridecodebin uri=file:///test/file/2 ! iqa.
+</pre></div>
 <p> This pipeline will output messages to the console for each set of compared frames.</p>
 </div>
 </div>

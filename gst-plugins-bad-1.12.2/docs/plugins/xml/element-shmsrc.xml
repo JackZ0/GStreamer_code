@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-shmsrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-shmsrc.top_of_page" role="top_of_page">shmsrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>shmsrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-shmsrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstShmSrc--is-live">is-live</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstShmSrc--socket-path">socket-path</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstShmSrc--shm-area-name">shm-area-name</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstShmSrc"/><refsect1 id="gst-plugins-bad-plugins-shmsrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstShmSrc-struct">GstShmSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> GstShmSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-shmsrc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Receive data from the shared memory sink.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 shmsrc socket-path=/tmp/blah ! \
+"video/x-raw, format=YUY2, color-matrix=sdtv, \
+chroma-site=mpeg2, width=(int)320, height=(int)240, framerate=(fraction)30/1" \
+! queue ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> Render video from shm buffers.</para>
+</refsect3>
+
+<include href="element-shmsrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstShmSrc-struct" role="struct">
+<title>struct GstShmSrc</title>
+<indexterm zone="GstShmSrc-struct"><primary>GstShmSrc</primary></indexterm>
+<programlisting language="C">struct GstShmSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstShmSrc--is-live" role="property"><title>The <literal>“is-live”</literal> property</title>
+<indexterm zone="GstShmSrc--is-live"><primary>GstShmSrc:is-live</primary></indexterm>
+<programlisting>  “is-live”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>True if the element cannot produce data in PAUSED.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstShmSrc--socket-path" role="property"><title>The <literal>“socket-path”</literal> property</title>
+<indexterm zone="GstShmSrc--socket-path"><primary>GstShmSrc:socket-path</primary></indexterm>
+<programlisting>  “socket-path”              <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The path to the control socket used to control the shared memory.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstShmSrc--shm-area-name" role="property"><title>The <literal>“shm-area-name”</literal> property</title>
+<indexterm zone="GstShmSrc--shm-area-name"><primary>GstShmSrc:shm-area-name</primary></indexterm>
+<programlisting>  “shm-area-name”            <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The name of the shared memory area used to get buffers.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

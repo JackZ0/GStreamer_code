@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glmosaic">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glmosaic.top_of_page" role="top_of_page">glmosaic</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glmosaic</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstGLMosaic"/><refsect1 id="gst-plugins-bad-plugins-glmosaic.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLMosaic-struct">GstGLMosaic</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmosaic.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAggregator">GstAggregator</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoAggregator">GstVideoAggregator</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseMixer">GstGLBaseMixer</link>
+                            <phrase role="lineart">╰──</phrase> <link linkend="GstGLMixer">GstGLMixer</link>
+                                <phrase role="lineart">╰──</phrase> GstGLMosaic
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmosaic.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLMosaic implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glmosaic.description" role="desc">
+<title role="desc.title">Description</title>
+<para>glmixer sub element. N gl sink pads to 1 source pad.
+N + 1 OpenGL contexts shared together.
+N &lt;= 6 because the rendering is more a like a cube than a mosaic
+Each opengl input stream is rendered on a cube face</para>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! video/x-raw, format=YUY2 ! queue ! glmosaic name=m ! glimagesink \
+    videotestsrc pattern=12 ! video/x-raw, format=I420, framerate=5/1, width=100, height=200 ! queue ! m. \
+    videotestsrc ! video/x-raw, framerate=15/1, width=1500, height=1500 ! gleffects effect=3 ! queue ! m. \
+    videotestsrc ! gleffects effect=2 ! queue ! m.  \
+    videotestsrc ! glfiltercube ! queue ! m. \
+    videotestsrc ! gleffects effect=6 ! queue ! m.
+]]></programlisting></informalexample>
+<para>
+FBO (Frame Buffer Object) is required.</para>
+</refsect3>
+
+<include href="element-glmosaic-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmosaic.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmosaic.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLMosaic-struct" role="struct">
+<title>struct GstGLMosaic</title>
+<indexterm zone="GstGLMosaic-struct"><primary>GstGLMosaic</primary></indexterm>
+<programlisting language="C">struct GstGLMosaic;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

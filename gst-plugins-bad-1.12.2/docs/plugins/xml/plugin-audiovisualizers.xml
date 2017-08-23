@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-audiovisualizers">
+  <refmeta>
+    <refentrytitle>audiovisualizers</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>audiovisualizers</refname>
+    <refpurpose><anchor id="plugin-audiovisualizers"/>Creates video visualizations of audio input</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstaudiovisualizers.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.12.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>LGPL</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-spacescope">spacescope</link></term><listitem><simpara>Simple stereo visualizer</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-spectrascope">spectrascope</link></term><listitem><simpara>Simple frequency spectrum scope</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-synaescope">synaescope</link></term><listitem><simpara>Creates video visualizations of audio input, using stereo and pitch information</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-wavescope">wavescope</link></term><listitem><simpara>Simple waveform oscilloscope</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

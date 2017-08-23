@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+
+<refentry id="gst-plugins-bad-plugins-mimenc">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-plugins-mimenc.top_of_page">mimenc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>mimenc</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+
+
+<refsect1 id="gst-plugins-bad-plugins-mimenc.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mimenc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mimenc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

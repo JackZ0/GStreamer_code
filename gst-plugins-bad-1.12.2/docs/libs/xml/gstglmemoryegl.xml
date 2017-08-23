@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-gstglmemoryegl">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-gstglmemoryegl.top_of_page">GstGLMemoryEGL</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLMemoryEGL</refname>
+<refpurpose>memory subclass for EGLImage's</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-gstglmemoryegl.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-egl-init-once">gst_gl_memory_egl_init_once</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="EGLDisplay"><returnvalue>EGLDisplay</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-egl-get-display">gst_gl_memory_egl_get_display</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="EGLImageKHR"><returnvalue>EGLImageKHR</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-egl-get-image">gst_gl_memory_egl_get_image</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-is-gl-memory-egl">gst_is_gl_memory_egl</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstglmemoryegl.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryEGLAllocator">GstGLMemoryEGLAllocator</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryEGLAllocatorClass">GstGLMemoryEGLAllocatorClass</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-MEMORY-EGL-ALLOCATOR-NAME:CAPS">GST_GL_MEMORY_EGL_ALLOCATOR_NAME</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryEGL">GstGLMemoryEGL</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-gstglmemoryegl.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="GstGLMemoryEGL"><type>GstGLMemoryEGL</type></link> is created or wrapped through <link linkend="gst-gl-base-memory-alloc"><function>gst_gl_base_memory_alloc()</function></link>
+with <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link>.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstglmemoryegl.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-memory-egl-init-once" role="function" condition="since:1.10">
+<title>gst_gl_memory_egl_init_once&#160;()</title>
+<indexterm zone="gst-gl-memory-egl-init-once" role="1.10"><primary>gst_gl_memory_egl_init_once</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_memory_egl_init_once (<parameter><type>void</type></parameter>);</programlisting>
+<para>Initializes the GL Memory allocator. It is safe to call this function
+multiple times.  This must be called before any other GstGLMemoryEGL operation.</para>
+<para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-memory-egl-get-display" role="function" condition="since:1.10">
+<title>gst_gl_memory_egl_get_display&#160;()</title>
+<indexterm zone="gst-gl-memory-egl-get-display" role="1.10"><primary>gst_gl_memory_egl_get_display</primary></indexterm>
+<programlisting language="C"><link linkend="EGLDisplay"><returnvalue>EGLDisplay</returnvalue></link>
+gst_gl_memory_egl_get_display (<parameter><link linkend="GstGLMemoryEGL"><type>GstGLMemoryEGL</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-egl-get-display.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemoryEGL"><type>GstGLMemoryEGL</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-egl-get-display.returns" role="returns">
+<title>Returns</title>
+<para> The EGLDisplay <parameter>mem</parameter>
+is associated with</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-memory-egl-get-image" role="function" condition="since:1.10">
+<title>gst_gl_memory_egl_get_image&#160;()</title>
+<indexterm zone="gst-gl-memory-egl-get-image" role="1.10"><primary>gst_gl_memory_egl_get_image</primary></indexterm>
+<programlisting language="C"><link linkend="EGLImageKHR"><returnvalue>EGLImageKHR</returnvalue></link>
+gst_gl_memory_egl_get_image (<parameter><link linkend="GstGLMemoryEGL"><type>GstGLMemoryEGL</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-egl-get-image.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemoryEGL"><type>GstGLMemoryEGL</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-egl-get-image.returns" role="returns">
+<title>Returns</title>
+<para> The EGLImage held by <parameter>mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-is-gl-memory-egl" role="function" condition="since:1.10">
+<title>gst_is_gl_memory_egl&#160;()</title>
+<indexterm zone="gst-is-gl-memory-egl" role="1.10"><primary>gst_is_gl_memory_egl</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_is_gl_memory_egl (<parameter><link linkend="GstMemory"><type>GstMemory</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-is-gl-memory-egl.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMemory"><type>GstMemory</type></link> to test</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-is-gl-memory-egl.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>mem</parameter>
+is a <link linkend="GstGLMemoryEGL"><type>GstGLMemoryEGL</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstglmemoryegl.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLMemoryEGLAllocator" role="struct">
+<title>GstGLMemoryEGLAllocator</title>
+<indexterm zone="GstGLMemoryEGLAllocator"><primary>GstGLMemoryEGLAllocator</primary></indexterm>
+<programlisting language="C">typedef struct {
+} GstGLMemoryEGLAllocator;
+</programlisting>
+<para>Opaque <link linkend="GstGLMemoryEGLAllocator"><type>GstGLMemoryEGLAllocator</type></link> struct</para>
+</refsect2>
+<refsect2 id="GstGLMemoryEGLAllocatorClass" role="struct">
+<title>GstGLMemoryEGLAllocatorClass</title>
+<indexterm zone="GstGLMemoryEGLAllocatorClass"><primary>GstGLMemoryEGLAllocatorClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+} GstGLMemoryEGLAllocatorClass;
+</programlisting>
+<para>The <link linkend="GstGLMemoryEGLAllocatorClass"><type>GstGLMemoryEGLAllocatorClass</type></link> only contains private data</para>
+</refsect2>
+<refsect2 id="GST-GL-MEMORY-EGL-ALLOCATOR-NAME:CAPS" role="macro">
+<title>GST_GL_MEMORY_EGL_ALLOCATOR_NAME</title>
+<indexterm zone="GST-GL-MEMORY-EGL-ALLOCATOR-NAME:CAPS"><primary>GST_GL_MEMORY_EGL_ALLOCATOR_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_MEMORY_EGL_ALLOCATOR_NAME "GLMemoryEGL"
+</programlisting>
+<para>The name of the GL Memory EGL allocator</para>
+</refsect2>
+<refsect2 id="GstGLMemoryEGL" role="struct">
+<title>GstGLMemoryEGL</title>
+<indexterm zone="GstGLMemoryEGL"><primary>GstGLMemoryEGL</primary></indexterm>
+<programlisting language="C">typedef struct {
+} GstGLMemoryEGL;
+</programlisting>
+<para>Private instance</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstglmemoryegl.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLMemory"><type>GstGLMemory</type></link>, <link linkend="GstGLAllocator"><type>GstGLAllocator</type></link>, <link linkend="GstGLBufferPool"><type>GstGLBufferPool</type></link></para>
+
+</refsect1>
+
+</refentry>

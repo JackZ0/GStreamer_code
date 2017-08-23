@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstAggregatorPad">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstAggregatorPad.top_of_page">GstAggregatorPad</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstAggregatorPad</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="GstAggregatorPad.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstBuffer"><returnvalue>GstBuffer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-aggregator-pad-steal-buffer">gst_aggregator_pad_steal_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstBuffer"><returnvalue>GstBuffer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-aggregator-pad-get-buffer">gst_aggregator_pad_get_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-aggregator-pad-drop-buffer">gst_aggregator_pad_drop_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-aggregator-pad-is-eos">gst_aggregator_pad_is_eos</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstAggregatorPad.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAggregatorPad-struct">GstAggregatorPad</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAggregatorPadClass">GstAggregatorPadClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstAggregatorPad.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPad">GstPad</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstAggregatorPad
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstVideoAggregatorPad">GstVideoAggregatorPad</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstAggregatorPad.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="GstAggregatorPad.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-aggregator-pad-steal-buffer" role="function">
+<title>gst_aggregator_pad_steal_buffer&#160;()</title>
+<indexterm zone="gst-aggregator-pad-steal-buffer"><primary>gst_aggregator_pad_steal_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="GstBuffer"><returnvalue>GstBuffer</returnvalue></link>&#160;*
+gst_aggregator_pad_steal_buffer (<parameter><link linkend="GstAggregatorPad"><type>GstAggregatorPad</type></link> *pad</parameter>);</programlisting>
+<para>Steal the ref to the buffer currently queued in <parameter>pad</parameter>
+.</para>
+<refsect3 id="gst-aggregator-pad-steal-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad to get buffer from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-aggregator-pad-steal-buffer.returns" role="returns">
+<title>Returns</title>
+<para> The buffer in <parameter>pad</parameter>
+or NULL if no buffer was
+queued. You should unref the buffer after usage. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-aggregator-pad-get-buffer" role="function">
+<title>gst_aggregator_pad_get_buffer&#160;()</title>
+<indexterm zone="gst-aggregator-pad-get-buffer"><primary>gst_aggregator_pad_get_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="GstBuffer"><returnvalue>GstBuffer</returnvalue></link>&#160;*
+gst_aggregator_pad_get_buffer (<parameter><link linkend="GstAggregatorPad"><type>GstAggregatorPad</type></link> *pad</parameter>);</programlisting>
+<refsect3 id="gst-aggregator-pad-get-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad to get buffer from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-aggregator-pad-get-buffer.returns" role="returns">
+<title>Returns</title>
+<para> A reference to the buffer in <parameter>pad</parameter>
+or
+NULL if no buffer was queued. You should unref the buffer after
+usage. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-aggregator-pad-drop-buffer" role="function">
+<title>gst_aggregator_pad_drop_buffer&#160;()</title>
+<indexterm zone="gst-aggregator-pad-drop-buffer"><primary>gst_aggregator_pad_drop_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_aggregator_pad_drop_buffer (<parameter><link linkend="GstAggregatorPad"><type>GstAggregatorPad</type></link> *pad</parameter>);</programlisting>
+<para>Drop the buffer currently queued in <parameter>pad</parameter>
+.</para>
+<refsect3 id="gst-aggregator-pad-drop-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>pad</para></entry>
+<entry role="parameter_description"><para>the pad where to drop any pending buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-aggregator-pad-drop-buffer.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if there was a buffer queued in <parameter>pad</parameter>
+, or FALSE if not.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-aggregator-pad-is-eos" role="function">
+<title>gst_aggregator_pad_is_eos&#160;()</title>
+<indexterm zone="gst-aggregator-pad-is-eos"><primary>gst_aggregator_pad_is_eos</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_aggregator_pad_is_eos (<parameter><link linkend="GstAggregatorPad"><type>GstAggregatorPad</type></link> *pad</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstAggregatorPad.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAggregatorPad-struct" role="struct">
+<title>struct GstAggregatorPad</title>
+<indexterm zone="GstAggregatorPad-struct"><primary>GstAggregatorPad</primary></indexterm>
+<programlisting language="C">struct GstAggregatorPad;</programlisting>
+<para>The implementation the GstPad to use with <link linkend="GstAggregator"><type>GstAggregator</type></link></para>
+<refsect3 id="GstAggregatorPad.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstAggregatorPadClass" role="struct">
+<title>struct GstAggregatorPadClass</title>
+<indexterm zone="GstAggregatorPadClass"><primary>GstAggregatorPadClass</primary></indexterm>
+<programlisting language="C">struct GstAggregatorPadClass {
+  GstPadClass   parent_class;
+
+  GstFlowReturn (*flush)     (GstAggregatorPad * aggpad, GstAggregator * aggregator);
+};
+</programlisting>
+<refsect3 id="GstAggregatorPadClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorPadClass.flush">flush</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional
+Called when the pad has received a flush stop, this is the place
+to flush any information specific to the pad, it allows for individual
+pads to be flushed while others might not be.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,107 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-openalsrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-openalsrc.top_of_page" role="top_of_page">openalsrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>openalsrc</refname>
+<refpurpose>capture raw audio samples through OpenAL</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-openalsrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstOpenalSrc--device">device</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstOpenalSrc--device-name">device-name</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstOpenalSrc"/><refsect1 id="gst-plugins-bad-plugins-openalsrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstOpenalSrc-struct">GstOpenalSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstAudioBaseSrc">GstAudioBaseSrc</link>
+                            <phrase role="lineart">╰──</phrase> <link linkend="GstAudioSrc">GstAudioSrc</link>
+                                <phrase role="lineart">╰──</phrase> GstOpenalSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-openalsrc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element captures raw audio samples through OpenAL.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v openalsrc ! audioconvert ! wavenc ! filesink location=stream.wav
+]]></programlisting></informalexample>
+<para> * will capture sound through OpenAL and encode it to a wav file.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 openalsrc ! "audio/x-raw,format=S16LE,rate=44100" ! audioconvert ! volume volume=0.25 ! openalsink
+]]></programlisting></informalexample>
+<para> will capture and play audio through OpenAL.</para>
+</refsect3>
+
+<include href="element-openalsrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstOpenalSrc-struct" role="struct">
+<title>struct GstOpenalSrc</title>
+<indexterm zone="GstOpenalSrc-struct"><primary>GstOpenalSrc</primary></indexterm>
+<programlisting language="C">struct GstOpenalSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstOpenalSrc--device" role="property"><title>The <literal>“device”</literal> property</title>
+<indexterm zone="GstOpenalSrc--device"><primary>GstOpenalSrc:device</primary></indexterm>
+<programlisting>  “device”                   <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>User device, default device if NULL.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstOpenalSrc--device-name" role="property"><title>The <literal>“device-name”</literal> property</title>
+<indexterm zone="GstOpenalSrc--device-name"><primary>GstOpenalSrc:device-name</primary></indexterm>
+<programlisting>  “device-name”              <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Human-readable name of the device.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsrc.see-also">
+<title>See Also</title>
+<para>openalsink</para>
+
+</refsect1>
+
+</refentry>

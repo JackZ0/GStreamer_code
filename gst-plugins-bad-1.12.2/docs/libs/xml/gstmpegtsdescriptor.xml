@@ -1,0 +1,654 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.top_of_page">Base MPEG-TS descriptors</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>Base MPEG-TS descriptors</refname>
+<refpurpose>Descriptors for ITU H.222.0 | ISO/IEC 13818-1</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="GstMpegtsDescriptor"><returnvalue>GstMpegtsDescriptor</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-find-descriptor">gst_mpegts_find_descriptor</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-parse-descriptors">gst_mpegts_parse_descriptors</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsDescriptor"><returnvalue>GstMpegtsDescriptor</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-descriptor-from-custom">gst_mpegts_descriptor_from_custom</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type"><link linkend="GstMpegtsDescriptor"><returnvalue>GstMpegtsDescriptor</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-descriptor-from-registration">gst_mpegts_descriptor_from_registration</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpegts-descriptor-parse-iso-639-language">gst_mpegts_descriptor_parse_iso_639_language</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpegts-descriptor-parse-iso-639-language-idx">gst_mpegts_descriptor_parse_iso_639_language_idx</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpegts-descriptor-parse-iso-639-language-nb">gst_mpegts_descriptor_parse_iso_639_language_nb</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpegts-iso-639-language-descriptor-free">gst_mpegts_iso_639_language_descriptor_free</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpegts-descriptor-parse-logical-channel">gst_mpegts_descriptor_parse_logical_channel</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMpegtsDescriptor"/><refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsDescriptor-struct">GstMpegtsDescriptor</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsDescriptorType">GstMpegtsDescriptorType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsMiscDescriptorType">GstMpegtsMiscDescriptorType</link></entry></row>
+
+
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsISO639LanguageDescriptor">GstMpegtsISO639LanguageDescriptor</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsIso639AudioType">GstMpegtsIso639AudioType</link></entry></row>
+
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsLogicalChannel">GstMpegtsLogicalChannel</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsLogicalChannelDescriptor">GstMpegtsLogicalChannelDescriptor</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstMpegtsDescriptor
+    <link linkend="GEnum">GEnum</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> GstMpegtsDescriptorType
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstMpegtsIso639AudioType
+</screen>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.includes"><title>Includes</title><synopsis>#include &lt;gst/mpegts/mpegts.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.description" role="desc">
+<title role="desc.title">Description</title>
+<para>These are the base descriptor types and methods.</para>
+<para>For more details, refer to the ITU H.222.0 or ISO/IEC 13818-1 specifications
+and other specifications mentionned in the documentation.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-mpegts-find-descriptor" role="function">
+<title>gst_mpegts_find_descriptor&#160;()</title>
+<indexterm zone="gst-mpegts-find-descriptor"><primary>gst_mpegts_find_descriptor</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsDescriptor"><returnvalue>GstMpegtsDescriptor</returnvalue></link>&#160;*
+gst_mpegts_find_descriptor (<parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *descriptors</parameter>,
+                            <parameter><link linkend="guint8"><type>guint8</type></link> tag</parameter>);</programlisting>
+<para>Finds the first descriptor of type <parameter>tag</parameter>
+ in the array.</para>
+<para>Note: To look for descriptors that can be present more than once in an
+array of descriptors, iterate the <link linkend="GArray"><type>GArray</type></link> manually.</para>
+<refsect3 id="gst-mpegts-find-descriptor.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>descriptors</para></entry>
+<entry role="parameter_description"><para> an array
+of <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor][<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>tag</para></entry>
+<entry role="parameter_description"><para>the tag to look for</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-find-descriptor.returns" role="returns">
+<title>Returns</title>
+<para> the first descriptor matchin <parameter>tag</parameter>
+, else <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-parse-descriptors" role="function">
+<title>gst_mpegts_parse_descriptors&#160;()</title>
+<indexterm zone="gst-mpegts-parse-descriptors"><primary>gst_mpegts_parse_descriptors</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+gst_mpegts_parse_descriptors (<parameter><link linkend="guint8"><type>guint8</type></link> *buffer</parameter>,
+                              <parameter><link linkend="gsize"><type>gsize</type></link> buf_len</parameter>);</programlisting>
+<para>Parses the descriptors present in <parameter>buffer</parameter>
+ and returns them as an
+array.</para>
+<para>Note: The data provided in <parameter>buffer</parameter>
+ will not be copied.</para>
+<refsect3 id="gst-mpegts-parse-descriptors.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para> descriptors to parse. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>buf_len</para></entry>
+<entry role="parameter_description"><para>Size of <parameter>buffer</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-parse-descriptors.returns" role="returns">
+<title>Returns</title>
+<para> an
+array of the parsed descriptors or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if there was an error.
+Release with <link linkend="g-array-unref"><type>g_array_unref</type></link> when done with it. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-descriptor-from-custom" role="function">
+<title>gst_mpegts_descriptor_from_custom&#160;()</title>
+<indexterm zone="gst-mpegts-descriptor-from-custom"><primary>gst_mpegts_descriptor_from_custom</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsDescriptor"><returnvalue>GstMpegtsDescriptor</returnvalue></link>&#160;*
+gst_mpegts_descriptor_from_custom (<parameter><link linkend="guint8"><type>guint8</type></link> tag</parameter>,
+                                   <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                   <parameter><link linkend="gsize"><type>gsize</type></link> length</parameter>);</programlisting>
+<para>Creates a <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> with custom <parameter>tag</parameter>
+ and <parameter>data</parameter>
+</para>
+<refsect3 id="gst-mpegts-descriptor-from-custom.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>tag</para></entry>
+<entry role="parameter_description"><para>descriptor tag</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> descriptor data (after tag and length field). </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>length</para></entry>
+<entry role="parameter_description"><para>length of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-descriptor-from-custom.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-descriptor-from-registration" role="function">
+<title>gst_mpegts_descriptor_from_registration&#160;()</title>
+<indexterm zone="gst-mpegts-descriptor-from-registration"><primary>gst_mpegts_descriptor_from_registration</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsDescriptor"><returnvalue>GstMpegtsDescriptor</returnvalue></link>&#160;*
+gst_mpegts_descriptor_from_registration
+                               (<parameter>const <link linkend="gchar"><type>gchar</type></link> *format_identifier</parameter>,
+                                <parameter><link linkend="guint8"><type>guint8</type></link> *additional_info</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> additional_info_length</parameter>);</programlisting>
+<para>Creates a <link linkend="GST-MTS-DESC-REGISTRATION:CAPS"><literal>GST_MTS_DESC_REGISTRATION</literal></link> <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para>
+<para>Return: <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link>, <link linkend="NULL:CAPS"><literal>NULL</literal></link> on failure</para>
+<refsect3 id="gst-mpegts-descriptor-from-registration.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>format_identifier</para></entry>
+<entry role="parameter_description"><para> a 4 character format identifier string. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>additional_info</para></entry>
+<entry role="parameter_description"><para> pointer to optional additional info. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>additional_info_length</para></entry>
+<entry role="parameter_description"><para>length of the optional <parameter>additional_info</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-descriptor-parse-iso-639-language" role="function">
+<title>gst_mpegts_descriptor_parse_iso_639_language&#160;()</title>
+<indexterm zone="gst-mpegts-descriptor-parse-iso-639-language"><primary>gst_mpegts_descriptor_parse_iso_639_language</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpegts_descriptor_parse_iso_639_language
+                               (<parameter>const <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> *descriptor</parameter>,
+                                <parameter><link linkend="GstMpegtsISO639LanguageDescriptor"><type>GstMpegtsISO639LanguageDescriptor</type></link> **res</parameter>);</programlisting>
+<para>Extracts the iso 639-2 language information from <parameter>descriptor</parameter>
+.</para>
+<para>Note: Use <link linkend="gst-tag-get-language-code"><type>gst_tag_get_language_code</type></link> if you want to get the the
+ISO 639-1 language code from the returned ISO 639-2 one.</para>
+<refsect3 id="gst-mpegts-descriptor-parse-iso-639-language.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>descriptor</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GST-MTS-DESC-ISO-639-LANGUAGE:CAPS"><literal>GST_MTS_DESC_ISO_639_LANGUAGE</literal></link> <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstMpegtsISO639LanguageDescriptor"><type>GstMpegtsISO639LanguageDescriptor</type></link> to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-descriptor-parse-iso-639-language.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if parsing succeeded, else <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-descriptor-parse-iso-639-language-idx" role="function">
+<title>gst_mpegts_descriptor_parse_iso_639_language_idx&#160;()</title>
+<indexterm zone="gst-mpegts-descriptor-parse-iso-639-language-idx"><primary>gst_mpegts_descriptor_parse_iso_639_language_idx</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpegts_descriptor_parse_iso_639_language_idx
+                               (<parameter>const <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> *descriptor</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> idx</parameter>,
+                                <parameter><link linkend="gchar"><type>gchar</type></link> **lang</parameter>,
+                                <parameter><link linkend="GstMpegtsIso639AudioType"><type>GstMpegtsIso639AudioType</type></link> *audio_type</parameter>);</programlisting>
+<para>Extracts the iso 639-2 language information from specific table id in <parameter>descriptor</parameter>
+.</para>
+<para>Note: Use <link linkend="gst-tag-get-language-code"><type>gst_tag_get_language_code</type></link> if you want to get the the
+ISO 639-1 language code from the returned ISO 639-2 one.</para>
+<refsect3 id="gst-mpegts-descriptor-parse-iso-639-language-idx.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>descriptor</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GST-MTS-DESC-ISO-639-LANGUAGE:CAPS"><literal>GST_MTS_DESC_ISO_639_LANGUAGE</literal></link> <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>idx</para></entry>
+<entry role="parameter_description"><para>Table id of the language to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>lang</para></entry>
+<entry role="parameter_description"><para> 4-byte gchar array to hold the language code. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>audio_type</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstMpegtsIso639AudioType"><type>GstMpegtsIso639AudioType</type></link> to set. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>transfer none</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-descriptor-parse-iso-639-language-idx.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if parsing succeeded, else <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-descriptor-parse-iso-639-language-nb" role="function">
+<title>gst_mpegts_descriptor_parse_iso_639_language_nb&#160;()</title>
+<indexterm zone="gst-mpegts-descriptor-parse-iso-639-language-nb"><primary>gst_mpegts_descriptor_parse_iso_639_language_nb</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_mpegts_descriptor_parse_iso_639_language_nb
+                               (<parameter>const <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> *descriptor</parameter>);</programlisting>
+<refsect3 id="gst-mpegts-descriptor-parse-iso-639-language-nb.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>descriptor</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GST-MTS-DESC-ISO-639-LANGUAGE:CAPS"><literal>GST_MTS_DESC_ISO_639_LANGUAGE</literal></link> <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-descriptor-parse-iso-639-language-nb.returns" role="returns">
+<title>Returns</title>
+<para> The number of languages in <parameter>descriptor</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-iso-639-language-descriptor-free" role="function">
+<title>gst_mpegts_iso_639_language_descriptor_free&#160;()</title>
+<indexterm zone="gst-mpegts-iso-639-language-descriptor-free"><primary>gst_mpegts_iso_639_language_descriptor_free</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_mpegts_iso_639_language_descriptor_free
+                               (<parameter><link linkend="GstMpegtsISO639LanguageDescriptor"><type>GstMpegtsISO639LanguageDescriptor</type></link> *desc</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-mpegts-descriptor-parse-logical-channel" role="function">
+<title>gst_mpegts_descriptor_parse_logical_channel&#160;()</title>
+<indexterm zone="gst-mpegts-descriptor-parse-logical-channel"><primary>gst_mpegts_descriptor_parse_logical_channel</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpegts_descriptor_parse_logical_channel
+                               (<parameter>const <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> *descriptor</parameter>,
+                                <parameter><link linkend="GstMpegtsLogicalChannelDescriptor"><type>GstMpegtsLogicalChannelDescriptor</type></link> *res</parameter>);</programlisting>
+<para>Extracts the logical channels from <parameter>descriptor</parameter>
+.</para>
+<refsect3 id="gst-mpegts-descriptor-parse-logical-channel.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>descriptor</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GST-MTS-DESC-DTG-LOGICAL-CHANNEL:CAPS"><literal>GST_MTS_DESC_DTG_LOGICAL_CHANNEL</literal></link> <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>res</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstMpegtsLogicalChannelDescriptor"><type>GstMpegtsLogicalChannelDescriptor</type></link> to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-descriptor-parse-logical-channel.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if parsing succeeded, else <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>.</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-descriptors.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpegtsDescriptor-struct" role="struct">
+<title>struct GstMpegtsDescriptor</title>
+<indexterm zone="GstMpegtsDescriptor-struct"><primary>GstMpegtsDescriptor</primary></indexterm>
+<programlisting language="C">struct GstMpegtsDescriptor {
+  guint8 tag;
+  guint8 tag_extension;
+  guint8 length;
+  guint8 *data;
+};
+</programlisting>
+<para>Mpeg-TS descriptor (ISO/IEC 13818-1).</para>
+<refsect3 id="GstMpegtsDescriptor.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsDescriptor-struct.tag">tag</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the type of descriptor</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsDescriptor-struct.tag-extension">tag_extension</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the extended type (if <parameter>descriptor_tag</parameter>
+is 0x7f)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsDescriptor-struct.length">length</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the length of the descriptor content (excluding tag/length field)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;*<structfield id="GstMpegtsDescriptor-struct.data">data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the full descriptor data (including tag, extension, length). The first
+two bytes are the <parameter>tag</parameter>
+and <parameter>length</parameter>
+.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsDescriptorType" role="enum">
+<title>enum GstMpegtsDescriptorType</title>
+<indexterm zone="GstMpegtsDescriptorType"><primary>GstMpegtsDescriptorType</primary></indexterm>
+<para>The type of <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para>
+<para>These values correspond to the registered descriptor type from
+the base MPEG-TS specifications (ITU H.222.0 | ISO/IEC 13818-1).</para>
+<para>Consult the relevant specifications for more details.</para>
+<refsect3 id="GstMpegtsDescriptorType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-RESERVED-00:CAPS">GST_MTS_DESC_RESERVED_00</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-RESERVED-01:CAPS">GST_MTS_DESC_RESERVED_01</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-VIDEO-STREAM:CAPS">GST_MTS_DESC_VIDEO_STREAM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-AUDIO-STREAM:CAPS">GST_MTS_DESC_AUDIO_STREAM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-HIERARCHY:CAPS">GST_MTS_DESC_HIERARCHY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-REGISTRATION:CAPS">GST_MTS_DESC_REGISTRATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DATA-STREAM-ALIGNMENT:CAPS">GST_MTS_DESC_DATA_STREAM_ALIGNMENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-TARGET-BACKGROUND-GRID:CAPS">GST_MTS_DESC_TARGET_BACKGROUND_GRID</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-VIDEO-WINDOW:CAPS">GST_MTS_DESC_VIDEO_WINDOW</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-CA:CAPS">GST_MTS_DESC_CA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISO-639-LANGUAGE:CAPS">GST_MTS_DESC_ISO_639_LANGUAGE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-SYSTEM-CLOCK:CAPS">GST_MTS_DESC_SYSTEM_CLOCK</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MULTIPLEX-BUFFER-UTILISATION:CAPS">GST_MTS_DESC_MULTIPLEX_BUFFER_UTILISATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-COPYRIGHT:CAPS">GST_MTS_DESC_COPYRIGHT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MAXIMUM-BITRATE:CAPS">GST_MTS_DESC_MAXIMUM_BITRATE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-PRIVATE-DATA-INDICATOR:CAPS">GST_MTS_DESC_PRIVATE_DATA_INDICATOR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-SMOOTHING-BUFFER:CAPS">GST_MTS_DESC_SMOOTHING_BUFFER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-STD:CAPS">GST_MTS_DESC_STD</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-IBP:CAPS">GST_MTS_DESC_IBP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DSMCC-CAROUSEL-IDENTIFIER:CAPS">GST_MTS_DESC_DSMCC_CAROUSEL_IDENTIFIER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DSMCC-ASSOCIATION-TAG:CAPS">GST_MTS_DESC_DSMCC_ASSOCIATION_TAG</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DSMCC-DEFERRED-ASSOCIATION-TAG:CAPS">GST_MTS_DESC_DSMCC_DEFERRED_ASSOCIATION_TAG</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DSMCC-NPT-REFERENCE:CAPS">GST_MTS_DESC_DSMCC_NPT_REFERENCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DSMCC-NPT-ENDPOINT:CAPS">GST_MTS_DESC_DSMCC_NPT_ENDPOINT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DSMCC-STREAM-MODE:CAPS">GST_MTS_DESC_DSMCC_STREAM_MODE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DSMCC-STREAM-EVENT:CAPS">GST_MTS_DESC_DSMCC_STREAM_EVENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MPEG4-VIDEO:CAPS">GST_MTS_DESC_MPEG4_VIDEO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MPEG4-AUDIO:CAPS">GST_MTS_DESC_MPEG4_AUDIO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-IOD:CAPS">GST_MTS_DESC_IOD</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-SL:CAPS">GST_MTS_DESC_SL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-FMC:CAPS">GST_MTS_DESC_FMC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-EXTERNAL-ES-ID:CAPS">GST_MTS_DESC_EXTERNAL_ES_ID</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MUX-CODE:CAPS">GST_MTS_DESC_MUX_CODE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-FMX-BUFFER-SIZE:CAPS">GST_MTS_DESC_FMX_BUFFER_SIZE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MULTIPLEX-BUFFER:CAPS">GST_MTS_DESC_MULTIPLEX_BUFFER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-CONTENT-LABELING:CAPS">GST_MTS_DESC_CONTENT_LABELING</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-METADATA-POINTER:CAPS">GST_MTS_DESC_METADATA_POINTER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-METADATA:CAPS">GST_MTS_DESC_METADATA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-METADATA-STD:CAPS">GST_MTS_DESC_METADATA_STD</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-AVC-VIDEO:CAPS">GST_MTS_DESC_AVC_VIDEO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-IPMP:CAPS">GST_MTS_DESC_IPMP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-AVC-TIMING-AND-HRD:CAPS">GST_MTS_DESC_AVC_TIMING_AND_HRD</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MPEG2-AAC-AUDIO:CAPS">GST_MTS_DESC_MPEG2_AAC_AUDIO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-FLEX-MUX-TIMING:CAPS">GST_MTS_DESC_FLEX_MUX_TIMING</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MPEG4-TEXT:CAPS">GST_MTS_DESC_MPEG4_TEXT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MPEG4-AUDIO-EXTENSION:CAPS">GST_MTS_DESC_MPEG4_AUDIO_EXTENSION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-AUXILIARY-VIDEO-STREAM:CAPS">GST_MTS_DESC_AUXILIARY_VIDEO_STREAM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-SVC-EXTENSION:CAPS">GST_MTS_DESC_SVC_EXTENSION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MVC-EXTENSION:CAPS">GST_MTS_DESC_MVC_EXTENSION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-J2K-VIDEO:CAPS">GST_MTS_DESC_J2K_VIDEO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MVC-OPERATION-POINT:CAPS">GST_MTS_DESC_MVC_OPERATION_POINT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-MPEG2-STEREOSCOPIC-VIDEO-FORMAT:CAPS">GST_MTS_DESC_MPEG2_STEREOSCOPIC_VIDEO_FORMAT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-STEREOSCOPIC-PROGRAM-INFO:CAPS">GST_MTS_DESC_STEREOSCOPIC_PROGRAM_INFO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-STEREOSCOPIC-VIDEO-INFO:CAPS">GST_MTS_DESC_STEREOSCOPIC_VIDEO_INFO</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegtsMiscDescriptorType" role="enum">
+<title>enum GstMpegtsMiscDescriptorType</title>
+<indexterm zone="GstMpegtsMiscDescriptorType"><primary>GstMpegtsMiscDescriptorType</primary></indexterm>
+<para>The type of <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link></para>
+<para>These values correspond to miscellaneous descriptor types that are
+not yet identified from known specifications.</para>
+<refsect3 id="GstMpegtsMiscDescriptorType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-AC3-AUDIO-STREAM:CAPS">GST_MTS_DESC_AC3_AUDIO_STREAM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-DTG-LOGICAL-CHANNEL:CAPS">GST_MTS_DESC_DTG_LOGICAL_CHANNEL</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegtsISO639LanguageDescriptor" role="struct">
+<title>struct GstMpegtsISO639LanguageDescriptor</title>
+<indexterm zone="GstMpegtsISO639LanguageDescriptor"><primary>GstMpegtsISO639LanguageDescriptor</primary></indexterm>
+<programlisting language="C">struct GstMpegtsISO639LanguageDescriptor {
+  guint                    nb_language;
+  gchar                    *language[64];
+  GstMpegtsIso639AudioType audio_type[64];
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstMpegtsIso639AudioType" role="enum">
+<title>enum GstMpegtsIso639AudioType</title>
+<indexterm zone="GstMpegtsIso639AudioType"><primary>GstMpegtsIso639AudioType</primary></indexterm>
+<refsect3 id="GstMpegtsIso639AudioType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-AUDIO-TYPE-UNDEFINED:CAPS">GST_MPEGTS_AUDIO_TYPE_UNDEFINED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-AUDIO-TYPE-CLEAN-EFFECTS:CAPS">GST_MPEGTS_AUDIO_TYPE_CLEAN_EFFECTS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-AUDIO-TYPE-HEARING-IMPAIRED:CAPS">GST_MPEGTS_AUDIO_TYPE_HEARING_IMPAIRED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-AUDIO-TYPE-VISUAL-IMPAIRED-COMMENTARY:CAPS">GST_MPEGTS_AUDIO_TYPE_VISUAL_IMPAIRED_COMMENTARY</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegtsLogicalChannel" role="struct">
+<title>struct GstMpegtsLogicalChannel</title>
+<indexterm zone="GstMpegtsLogicalChannel"><primary>GstMpegtsLogicalChannel</primary></indexterm>
+<programlisting language="C">struct GstMpegtsLogicalChannel {
+  guint16   service_id;
+  gboolean  visible_service;
+  guint16   logical_channel_number;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstMpegtsLogicalChannelDescriptor" role="struct">
+<title>struct GstMpegtsLogicalChannelDescriptor</title>
+<indexterm zone="GstMpegtsLogicalChannelDescriptor"><primary>GstMpegtsLogicalChannelDescriptor</primary></indexterm>
+<programlisting language="C">struct GstMpegtsLogicalChannelDescriptor {
+  guint                   nb_channels;
+  GstMpegtsLogicalChannel channels[64];
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

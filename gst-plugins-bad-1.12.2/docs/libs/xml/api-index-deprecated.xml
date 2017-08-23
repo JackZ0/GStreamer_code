@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<indexdiv id="api-index-deprecated">
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="gst-mpeg-video-parse-gop"><link linkend="gst-mpeg-video-parse-gop">gst_mpeg_video_parse_gop</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-parse-picture-extension"><link linkend="gst-mpeg-video-parse-picture-extension">gst_mpeg_video_parse_picture_extension</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-parse-picture-header"><link linkend="gst-mpeg-video-parse-picture-header">gst_mpeg_video_parse_picture_header</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-parse-quant-matrix-extension"><link linkend="gst-mpeg-video-parse-quant-matrix-extension">gst_mpeg_video_parse_quant_matrix_extension</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-parse-sequence-display-extension"><link linkend="gst-mpeg-video-parse-sequence-display-extension">gst_mpeg_video_parse_sequence_display_extension</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-parse-sequence-extension"><link linkend="gst-mpeg-video-parse-sequence-extension">gst_mpeg_video_parse_sequence_extension</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-parse-sequence-header"><link linkend="gst-mpeg-video-parse-sequence-header">gst_mpeg_video_parse_sequence_header</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

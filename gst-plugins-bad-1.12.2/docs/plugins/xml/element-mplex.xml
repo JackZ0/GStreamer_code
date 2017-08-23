@@ -1,0 +1,152 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-mplex">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-mplex.top_of_page" role="top_of_page">mplex</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>mplex</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-mplex.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMplex--bufsize">bufsize</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMplexFormat"><type>GstMplexFormat</type></link></entry><entry role="property_name"><link linkend="GstMplex--format">format</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMplex--mux-bitrate">mux-bitrate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMplex--packets-per-pack">packets-per-pack</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMplex--sector-size">sector-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMplex--system-headers">system-headers</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMplex--vbr">vbr</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMplex"/><refsect1 id="gst-plugins-bad-plugins-mplex.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstMplex-struct">GstMplex</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mplex.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstMplex
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-mplex.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element is an audio/video multiplexer for MPEG-1/2 video streams
+and (un)compressed audio streams such as AC3, MPEG layer I/II/III.
+It is based on the <ulink url="http://mjpeg.sourceforge.net/">mjpegtools</ulink> library.
+Documentation on creating MPEG videos in general can be found in the</para>
+<ulink url="https://sourceforge.net/docman/display_doc.php?docid=3456&amp;group_id=5776">MJPEG Howto</ulink>
+<para>and the man-page of the mplex tool documents the properties of this element,
+which are shared with the mplex tool.</para>
+<refsect2>
+<title>Example pipeline</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc num-buffers=1000 ! mpeg2enc ! mplex ! filesink location=videotestsrc.mpg
+]]></programlisting></informalexample> This example pipeline will encode a test video source to an
+MPEG1 elementary stream and multiplexes this to an MPEG system stream.
+<para>
+If several streams are being multiplexed, there should (as usual) be
+a queue in each stream, and due to mplex' buffering the capacities of these
+may have to be set to a few times the default settings to prevent the
+pipeline stalling.
+</para>
+</refsect2>
+
+<include href="element-mplex-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mplex.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mplex.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMplex-struct" role="struct">
+<title>GstMplex</title>
+<indexterm zone="GstMplex-struct"><primary>GstMplex</primary></indexterm>
+<programlisting language="C">typedef struct _GstMplex GstMplex;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mplex.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstMplex--bufsize" role="property"><title>The <literal>“bufsize”</literal> property</title>
+<indexterm zone="GstMplex--bufsize"><primary>GstMplex:bufsize</primary></indexterm>
+<programlisting>  “bufsize”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Target decoders video buffer size (kB) [default determined by format if not explicitly set].</para><para>Flags: Read / Write</para>
+<para>Allowed values: [20,4000]</para>
+<para>Default value: 46</para>
+</refsect2>
+<refsect2 id="GstMplex--format" role="property"><title>The <literal>“format”</literal> property</title>
+<indexterm zone="GstMplex--format"><primary>GstMplex:format</primary></indexterm>
+<programlisting>  “format”                   <link linkend="GstMplexFormat"><type>GstMplexFormat</type></link></programlisting>
+<para>Encoding profile format.</para><para>Flags: Read / Write</para>
+<para>Default value: DVD MPEG-2</para>
+</refsect2>
+<refsect2 id="GstMplex--mux-bitrate" role="property"><title>The <literal>“mux-bitrate”</literal> property</title>
+<indexterm zone="GstMplex--mux-bitrate"><primary>GstMplex:mux-bitrate</primary></indexterm>
+<programlisting>  “mux-bitrate”              <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Bitrate of output stream in kbps (0 = autodetect).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,15360]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMplex--packets-per-pack" role="property"><title>The <literal>“packets-per-pack”</literal> property</title>
+<indexterm zone="GstMplex--packets-per-pack"><primary>GstMplex:packets-per-pack</primary></indexterm>
+<programlisting>  “packets-per-pack”         <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of packets per pack for generic formats.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,100]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstMplex--sector-size" role="property"><title>The <literal>“sector-size”</literal> property</title>
+<indexterm zone="GstMplex--sector-size"><primary>GstMplex:sector-size</primary></indexterm>
+<programlisting>  “sector-size”              <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Specify sector size in bytes for generic formats.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [256,16384]</para>
+<para>Default value: 2048</para>
+</refsect2>
+<refsect2 id="GstMplex--system-headers" role="property"><title>The <literal>“system-headers”</literal> property</title>
+<indexterm zone="GstMplex--system-headers"><primary>GstMplex:system-headers</primary></indexterm>
+<programlisting>  “system-headers”           <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Create system header in every pack for generic formats.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMplex--vbr" role="property"><title>The <literal>“vbr”</literal> property</title>
+<indexterm zone="GstMplex--vbr"><primary>GstMplex:vbr</primary></indexterm>
+<programlisting>  “vbr”                      <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether the input video stream is variable bitrate.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mplex.see-also">
+<title>See Also</title>
+<para>mpeg2enc</para>
+
+</refsect1>
+
+</refentry>

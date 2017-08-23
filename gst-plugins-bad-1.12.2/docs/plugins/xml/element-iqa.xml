@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+
+<refentry id="gst-plugins-bad-plugins-IQA">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-plugins-IQA.top_of_page">iqa</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>iqa</refname>
+<refpurpose>Image Quality Assessment plugin.</refpurpose>
+</refnamediv>
+
+
+
+<refsect1 id="gst-plugins-bad-plugins-IQA.description" role="desc">
+<title role="desc.title">Description</title>
+<para>IQA will perform full reference image quality assessment, with the
+first added pad being the reference.</para>
+<para>It will perform comparisons on video streams with the same geometry.</para>
+<para>The image output will be the heat map of differences, between
+the two pads with the highest measured difference.</para>
+<para>For each reference frame, IQA will post a message containing
+a structure named IQA.</para>
+<para>The only metric supported for now is "dssim", which will be available
+if https://github.com/pornel/dssim was installed on the system
+at the time that plugin was compiled.</para>
+<para>For each metric activated, this structure will contain another
+structure, named after the metric.</para>
+<para>The message will also contain a "time" field.</para>
+<para>For example, if do-dssim is set to true, and there are
+two compared streams, the emitted structure will look like this:</para>
+<para>IQA, dssim=(structure)"dssim\,\ sink_1\=(double)0.053621271267184856\,\
+sink_2\=(double)0.0082939683976297474\;",
+time=(guint64)0;</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -m uridecodebin uri=file:///test/file/1 ! iqa name=iqa do-dssim=true \
+! videoconvert ! autovideosink uridecodebin uri=file:///test/file/2 ! iqa.
+]]></programlisting></informalexample>
+<para> This pipeline will output messages to the console for each set of compared frames.</para>
+</refsect3>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-IQA.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-IQA.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

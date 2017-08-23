@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLOverlayCompositor">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLOverlayCompositor.top_of_page">GstGLOverlayCompositor</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLOverlayCompositor</refname>
+<refpurpose>Composite multiple overlays using OpenGL</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLOverlayCompositor.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLOverlayCompositor"><returnvalue>GstGLOverlayCompositor</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-overlay-compositor-new">gst_gl_overlay_compositor_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-overlay-compositor-add-caps">gst_gl_overlay_compositor_add_caps</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-overlay-compositor-draw-overlays">gst_gl_overlay_compositor_draw_overlays</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-overlay-compositor-upload-overlays">gst_gl_overlay_compositor_upload_overlays</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-overlay-compositor-free-overlays">gst_gl_overlay_compositor_free_overlays</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLOverlayCompositor.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLOverlayCompositor.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-overlay-compositor-new" role="function">
+<title>gst_gl_overlay_compositor_new&#160;()</title>
+<indexterm zone="gst-gl-overlay-compositor-new"><primary>gst_gl_overlay_compositor_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLOverlayCompositor"><returnvalue>GstGLOverlayCompositor</returnvalue></link>&#160;*
+gst_gl_overlay_compositor_new (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-overlay-compositor-add-caps" role="function">
+<title>gst_gl_overlay_compositor_add_caps&#160;()</title>
+<indexterm zone="gst-gl-overlay-compositor-add-caps"><primary>gst_gl_overlay_compositor_add_caps</primary></indexterm>
+<programlisting language="C"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>&#160;*
+gst_gl_overlay_compositor_add_caps (<parameter><link linkend="GstCaps"><type>GstCaps</type></link> *caps</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-overlay-compositor-draw-overlays" role="function">
+<title>gst_gl_overlay_compositor_draw_overlays&#160;()</title>
+<indexterm zone="gst-gl-overlay-compositor-draw-overlays"><primary>gst_gl_overlay_compositor_draw_overlays</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_overlay_compositor_draw_overlays
+                               (<parameter><link linkend="GstGLOverlayCompositor"><type>GstGLOverlayCompositor</type></link> *compositor</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-overlay-compositor-upload-overlays" role="function">
+<title>gst_gl_overlay_compositor_upload_overlays&#160;()</title>
+<indexterm zone="gst-gl-overlay-compositor-upload-overlays"><primary>gst_gl_overlay_compositor_upload_overlays</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_overlay_compositor_upload_overlays
+                               (<parameter><link linkend="GstGLOverlayCompositor"><type>GstGLOverlayCompositor</type></link> *compositor</parameter>,
+                                <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buf</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-overlay-compositor-free-overlays" role="function">
+<title>gst_gl_overlay_compositor_free_overlays&#160;()</title>
+<indexterm zone="gst-gl-overlay-compositor-free-overlays"><primary>gst_gl_overlay_compositor_free_overlays</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_overlay_compositor_free_overlays
+                               (<parameter><link linkend="GstGLOverlayCompositor"><type>GstGLOverlayCompositor</type></link> *compositor</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLOverlayCompositor.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLOverlayCompositor.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLMemory"><type>GstGLMemory</type></link>, <link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-ISDB-variants-of-MPEG-TS-descriptors">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-ISDB-variants-of-MPEG-TS-descriptors.top_of_page">ISDB variants of MPEG-TS descriptors</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ISDB variants of MPEG-TS descriptors</refname>
+<refpurpose>Descriptors for the various ISDB specifications</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-ISDB-variants-of-MPEG-TS-descriptors.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsISDBDescriptorType">GstMpegtsISDBDescriptorType</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-ISDB-variants-of-MPEG-TS-descriptors.includes"><title>Includes</title><synopsis>#include &lt;gst/mpegts/mpegts.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-ISDB-variants-of-MPEG-TS-descriptors.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-ISDB-variants-of-MPEG-TS-descriptors.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-ISDB-variants-of-MPEG-TS-descriptors.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpegtsISDBDescriptorType" role="enum">
+<title>enum GstMpegtsISDBDescriptorType</title>
+<indexterm zone="GstMpegtsISDBDescriptorType"><primary>GstMpegtsISDBDescriptorType</primary></indexterm>
+<para>These values correspond to the registered descriptor type from
+the various ISDB specifications.</para>
+<para>Consult the relevant specifications for more details.</para>
+<refsect3 id="GstMpegtsISDBDescriptorType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-HIERARCHICAL-TRANSMISSION:CAPS">GST_MTS_DESC_ISDB_HIERARCHICAL_TRANSMISSION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-DIGITAL-COPY-CONTROL:CAPS">GST_MTS_DESC_ISDB_DIGITAL_COPY_CONTROL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-NETWORK-IDENTIFICATION:CAPS">GST_MTS_DESC_ISDB_NETWORK_IDENTIFICATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-PARTIAL-TS-TIME:CAPS">GST_MTS_DESC_ISDB_PARTIAL_TS_TIME</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-AUDIO-COMPONENT:CAPS">GST_MTS_DESC_ISDB_AUDIO_COMPONENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-HYPERLINK:CAPS">GST_MTS_DESC_ISDB_HYPERLINK</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-TARGET-REGION:CAPS">GST_MTS_DESC_ISDB_TARGET_REGION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-DATA-CONTENT:CAPS">GST_MTS_DESC_ISDB_DATA_CONTENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-VIDEO-DECODE-CONTROL:CAPS">GST_MTS_DESC_ISDB_VIDEO_DECODE_CONTROL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-DOWNLOAD-CONTENT:CAPS">GST_MTS_DESC_ISDB_DOWNLOAD_CONTENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-CA-EMM-TS:CAPS">GST_MTS_DESC_ISDB_CA_EMM_TS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-CA-CONTRACT-INFORMATION:CAPS">GST_MTS_DESC_ISDB_CA_CONTRACT_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-CA-SERVICE:CAPS">GST_MTS_DESC_ISDB_CA_SERVICE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-TS-INFORMATION:CAPS">GST_MTS_DESC_ISDB_TS_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-EXTENDED-BROADCASTER:CAPS">GST_MTS_DESC_ISDB_EXTENDED_BROADCASTER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-LOGO-TRANSMISSION:CAPS">GST_MTS_DESC_ISDB_LOGO_TRANSMISSION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-BASIC-LOCAL-EVENT:CAPS">GST_MTS_DESC_ISDB_BASIC_LOCAL_EVENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-REFERENCE:CAPS">GST_MTS_DESC_ISDB_REFERENCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-NODE-RELATION:CAPS">GST_MTS_DESC_ISDB_NODE_RELATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-SHORT-NODE-INFORMATION:CAPS">GST_MTS_DESC_ISDB_SHORT_NODE_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-STC-REFERENCE:CAPS">GST_MTS_DESC_ISDB_STC_REFERENCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-SERIES:CAPS">GST_MTS_DESC_ISDB_SERIES</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-EVENT-GROUP:CAPS">GST_MTS_DESC_ISDB_EVENT_GROUP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-SI-PARAMETER:CAPS">GST_MTS_DESC_ISDB_SI_PARAMETER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-BROADCASTER-NAME:CAPS">GST_MTS_DESC_ISDB_BROADCASTER_NAME</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-COMPONENT-GROUP:CAPS">GST_MTS_DESC_ISDB_COMPONENT_GROUP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-SI-PRIME-TS:CAPS">GST_MTS_DESC_ISDB_SI_PRIME_TS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-BOARD-INFORMATION:CAPS">GST_MTS_DESC_ISDB_BOARD_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-LDT-LINKAGE:CAPS">GST_MTS_DESC_ISDB_LDT_LINKAGE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-CONNECTED-TRANSMISSION:CAPS">GST_MTS_DESC_ISDB_CONNECTED_TRANSMISSION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-CONTENT-AVAILABILITY:CAPS">GST_MTS_DESC_ISDB_CONTENT_AVAILABILITY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ISDB-SERVICE-GROUP:CAPS">GST_MTS_DESC_ISDB_SERVICE_GROUP</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

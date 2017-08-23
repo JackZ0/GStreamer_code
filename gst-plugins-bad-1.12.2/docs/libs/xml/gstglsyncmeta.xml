@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLSyncMeta">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLSyncMeta.top_of_page">GstGLSyncMeta</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLSyncMeta</refname>
+<refpurpose>synchronization primitives</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLSyncMeta.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="GstMetaInfo"><returnvalue>GstMetaInfo</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-sync-meta-get-info">gst_gl_sync_meta_get_info</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSyncMeta"><returnvalue>GstGLSyncMeta</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-buffer-add-gl-sync-meta">gst_buffer_add_gl_sync_meta</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSyncMeta"><returnvalue>GstGLSyncMeta</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-buffer-add-gl-sync-meta-full">gst_buffer_add_gl_sync_meta_full</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-buffer-get-gl-sync-meta">gst_buffer_get_gl_sync_meta</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-sync-meta-set-sync-point">gst_gl_sync_meta_set_sync_point</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-sync-meta-wait">gst_gl_sync_meta_wait</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-sync-meta-wait-cpu">gst_gl_sync_meta_wait_cpu</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSyncMeta.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLSyncMeta">GstGLSyncMeta</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BUFFER-POOL-OPTION-GL-SYNC-META:CAPS">GST_BUFFER_POOL_OPTION_GL_SYNC_META</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLSyncMeta.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link> provides the ability to synchronize the OpenGL command stream
+with the CPU or with other OpenGL contexts.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSyncMeta.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-sync-meta-get-info" role="function">
+<title>gst_gl_sync_meta_get_info&#160;()</title>
+<indexterm zone="gst-gl-sync-meta-get-info"><primary>gst_gl_sync_meta_get_info</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMetaInfo"><returnvalue>GstMetaInfo</returnvalue></link>&#160;*
+gst_gl_sync_meta_get_info (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-buffer-add-gl-sync-meta" role="function" condition="since:1.6">
+<title>gst_buffer_add_gl_sync_meta&#160;()</title>
+<indexterm zone="gst-buffer-add-gl-sync-meta" role="1.6"><primary>gst_buffer_add_gl_sync_meta</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSyncMeta"><returnvalue>GstGLSyncMeta</returnvalue></link>&#160;*
+gst_buffer_add_gl_sync_meta (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                             <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buffer</parameter>);</programlisting>
+<refsect3 id="gst-buffer-add-gl-sync-meta.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstBuffer"><type>GstBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-buffer-add-gl-sync-meta.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link> added to <link linkend="GstBuffer"><type>GstBuffer</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-buffer-add-gl-sync-meta-full" role="function" condition="since:1.8">
+<title>gst_buffer_add_gl_sync_meta_full&#160;()</title>
+<indexterm zone="gst-buffer-add-gl-sync-meta-full" role="1.8"><primary>gst_buffer_add_gl_sync_meta_full</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSyncMeta"><returnvalue>GstGLSyncMeta</returnvalue></link>&#160;*
+gst_buffer_add_gl_sync_meta_full (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                  <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buffer</parameter>,
+                                  <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>);</programlisting>
+<refsect3 id="gst-buffer-add-gl-sync-meta-full.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstBuffer"><type>GstBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>sync data to hold</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-buffer-add-gl-sync-meta-full.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link> added to <link linkend="GstBuffer"><type>GstBuffer</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-buffer-get-gl-sync-meta" role="macro">
+<title>gst_buffer_get_gl_sync_meta()</title>
+<indexterm zone="gst-buffer-get-gl-sync-meta"><primary>gst_buffer_get_gl_sync_meta</primary></indexterm>
+<programlisting language="C">#define gst_buffer_get_gl_sync_meta(b) ((GstGLSyncMeta*)gst_buffer_get_meta((b),GST_GL_SYNC_META_API_TYPE))
+</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-sync-meta-set-sync-point" role="function" condition="since:1.6">
+<title>gst_gl_sync_meta_set_sync_point&#160;()</title>
+<indexterm zone="gst-gl-sync-meta-set-sync-point" role="1.6"><primary>gst_gl_sync_meta_set_sync_point</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_sync_meta_set_sync_point (<parameter><link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link> *sync_meta</parameter>,
+                                 <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Set a sync point to possibly wait on at a later time.</para>
+<refsect3 id="gst-gl-sync-meta-set-sync-point.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>sync_meta</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-sync-meta-wait" role="function" condition="since:1.6">
+<title>gst_gl_sync_meta_wait&#160;()</title>
+<indexterm zone="gst-gl-sync-meta-wait" role="1.6"><primary>gst_gl_sync_meta_wait</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_sync_meta_wait (<parameter><link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link> *sync_meta</parameter>,
+                       <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Insert a wait into <parameter>context</parameter>
+'s command stream ensuring all previous OpenGL
+commands before <parameter>sync_meta</parameter>
+ have completed.</para>
+<refsect3 id="gst-gl-sync-meta-wait.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>sync_meta</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-sync-meta-wait-cpu" role="function" condition="since:1.8">
+<title>gst_gl_sync_meta_wait_cpu&#160;()</title>
+<indexterm zone="gst-gl-sync-meta-wait-cpu" role="1.8"><primary>gst_gl_sync_meta_wait_cpu</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_sync_meta_wait_cpu (<parameter><link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link> *sync_meta</parameter>,
+                           <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Perform a wait so that the sync point has passed from the CPU's perspective
+What that means, is that all GL operations changing CPU-visible data before
+the sync point are now visible.</para>
+<refsect3 id="gst-gl-sync-meta-wait-cpu.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>sync_meta</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSyncMeta.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLSyncMeta" role="struct">
+<title>struct GstGLSyncMeta</title>
+<indexterm zone="GstGLSyncMeta"><primary>GstGLSyncMeta</primary></indexterm>
+<programlisting language="C">struct GstGLSyncMeta {
+  GstMeta parent;
+
+  GstGLContext *context;
+
+  gpointer      data;
+
+  void (*set_sync) (GstGLSyncMeta * sync, GstGLContext * context);
+  void (*set_sync_gl) (GstGLSyncMeta * sync, GstGLContext * context);
+  void (*wait) (GstGLSyncMeta * sync, GstGLContext * context);
+  void (*wait_gl) (GstGLSyncMeta * sync, GstGLContext * context);
+  void (*wait_cpu) (GstGLSyncMeta * sync, GstGLContext * context);
+  void (*wait_cpu_gl) (GstGLSyncMeta * sync, GstGLContext * context);
+  void (*copy) (GstGLSyncMeta * src, GstBuffer * sbuffer, GstGLSyncMeta * dest, GstBuffer * dbuffer);
+  void (*free) (GstGLSyncMeta * sync, GstGLContext * context);
+  void (*free_gl) (GstGLSyncMeta * sync, GstGLContext * context);
+};
+</programlisting>
+<refsect3 id="GstGLSyncMeta.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMeta"><type>GstMeta</type></link>&#160;<structfield id="GstGLSyncMeta.parent">parent</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent <link linkend="GstMeta"><type>GstMeta</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLContext"><type>GstGLContext</type></link>&#160;*<structfield id="GstGLSyncMeta.context">context</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstGLContext"><type>GstGLContext</type></link> used to allocate the meta</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gpointer"><type>gpointer</type></link>&#160;<structfield id="GstGLSyncMeta.data">data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a custom data pointer for the implementation</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.set-sync">set_sync</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>set a sync point in the OpenGL command stream</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.set-sync-gl">set_sync_gl</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>the same as <parameter>set_sync</parameter>
+but called from <parameter>context</parameter>
+'s thread</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.wait">wait</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>execute a wait on the previously set sync point into the OpenGL command stream</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.wait-gl">wait_gl</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>the same as <parameter>wait</parameter>
+but called from <parameter>context</parameter>
+'s thread</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.wait-cpu">wait_cpu</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>wait for the previously set sync point to pass from the CPU</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.wait-cpu-gl">wait_cpu_gl</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>the same as <parameter>wait_cpu</parameter>
+but called from <parameter>context</parameter>
+'s thread</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.copy">copy</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>copy <parameter>data</parameter>
+into a new <link linkend="GstGLSyncMeta"><type>GstGLSyncMeta</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.free">free</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>free <parameter>data</parameter>
+</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLSyncMeta.free-gl">free_gl</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>free <parameter>data</parameter>
+in <parameter>context</parameter>
+'s thread</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GST-BUFFER-POOL-OPTION-GL-SYNC-META:CAPS" role="macro">
+<title>GST_BUFFER_POOL_OPTION_GL_SYNC_META</title>
+<indexterm zone="GST-BUFFER-POOL-OPTION-GL-SYNC-META:CAPS"><primary>GST_BUFFER_POOL_OPTION_GL_SYNC_META</primary></indexterm>
+<programlisting language="C">#define GST_BUFFER_POOL_OPTION_GL_SYNC_META "GstBufferPoolOptionGLSyncMeta"
+</programlisting>
+<para>An option that can be activated on bufferpools to request OpenGL
+synchronization metadata on buffers from the pool.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSyncMeta.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link>, <link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+
+</refsect1>
+
+</refentry>

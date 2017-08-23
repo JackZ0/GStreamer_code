@@ -1,0 +1,69 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-dtmfdetect">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-dtmfdetect.top_of_page" role="top_of_page">dtmfdetect</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dtmfdetect</refname>
+<refpurpose>Detects DTMF tones</refpurpose>
+</refnamediv>
+
+<anchor id="GstDtmfDetect"/><refsect1 id="gst-plugins-bad-plugins-dtmfdetect.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDtmfDetect-struct">GstDtmfDetect</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtmfdetect.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> GstDtmfDetect
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-dtmfdetect.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element will detect DTMF tones and emit messages.</para>
+<para>The message is called <literal>dtmf-event</literal> and has the following fields:</para>
+<itemizedlist>
+<listitem><para>gint <literal>type</literal> (0-1): The application uses this field to specify which of the two methods
+specified in RFC 2833 to use. The value should be 0 for tones and 1 for
+named events. Tones are specified by their frequencies and events are
+specfied by their number. This element can only take events as input.
+Do not confuse with &quot;method&quot; which specified the output.</para></listitem>
+<listitem><para>gint <literal>number</literal> (0-16): The event number.</para></listitem>
+<listitem><para>gint <literal>method</literal> (2): This field will always been 2 (ie sound) from this element.</para></listitem>
+</itemizedlist>
+
+<include href="element-dtmfdetect-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtmfdetect.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtmfdetect.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDtmfDetect-struct" role="struct">
+<title>struct GstDtmfDetect</title>
+<indexterm zone="GstDtmfDetect-struct"><primary>GstDtmfDetect</primary></indexterm>
+<programlisting language="C">struct GstDtmfDetect;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

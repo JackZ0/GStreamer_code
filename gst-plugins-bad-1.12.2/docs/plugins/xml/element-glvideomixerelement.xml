@@ -1,0 +1,127 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glvideomixerelement">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glvideomixerelement.top_of_page" role="top_of_page">glvideomixerelement</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glvideomixerelement</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstGLVideoMixerBackground"><type>GstGLVideoMixerBackground</type></link></entry><entry role="property_name"><link linkend="GstGLVideoMixer--background">background</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLVideoMixer"/><refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLVideoMixer-struct">GstGLVideoMixer</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLVideoMixerBackground">GstGLVideoMixerBackground</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAggregator">GstAggregator</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoAggregator">GstVideoAggregator</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseMixer">GstGLBaseMixer</link>
+                            <phrase role="lineart">╰──</phrase> <link linkend="GstGLMixer">GstGLMixer</link>
+                                <phrase role="lineart">╰──</phrase> GstGLVideoMixer
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLVideoMixer implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-glvideomixerelement-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLVideoMixer-struct" role="struct">
+<title>struct GstGLVideoMixer</title>
+<indexterm zone="GstGLVideoMixer-struct"><primary>GstGLVideoMixer</primary></indexterm>
+<programlisting language="C">struct GstGLVideoMixer;</programlisting>
+</refsect2>
+<refsect2 id="GstGLVideoMixerBackground" role="enum">
+<title>enum GstGLVideoMixerBackground</title>
+<indexterm zone="GstGLVideoMixerBackground"><primary>GstGLVideoMixerBackground</primary></indexterm>
+<para>The different backgrounds compositor can blend over.</para>
+<refsect3 id="GstGLVideoMixerBackground.members" role="enum_members">
+<title>Members</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-VIDEO-MIXER-BACKGROUND-CHECKER:CAPS">GST_GL_VIDEO_MIXER_BACKGROUND_CHECKER</para></entry>
+<entry role="enum_member_description"><para>checker pattern background</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-VIDEO-MIXER-BACKGROUND-BLACK:CAPS">GST_GL_VIDEO_MIXER_BACKGROUND_BLACK</para></entry>
+<entry role="enum_member_description"><para>solid color black background</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-VIDEO-MIXER-BACKGROUND-WHITE:CAPS">GST_GL_VIDEO_MIXER_BACKGROUND_WHITE</para></entry>
+<entry role="enum_member_description"><para>solid color white background</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-VIDEO-MIXER-BACKGROUND-TRANSPARENT:CAPS">GST_GL_VIDEO_MIXER_BACKGROUND_TRANSPARENT</para></entry>
+<entry role="enum_member_description"><para>background is left transparent and layers are composited using &quot;A OVER B&quot; composition rules. This is only applicable to AYUV and ARGB (and variants) as it preserves the alpha channel and allows for further mixing.</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glvideomixerelement.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLVideoMixer--background" role="property"><title>The <literal>“background”</literal> property</title>
+<indexterm zone="GstGLVideoMixer--background"><primary>GstGLVideoMixer:background</primary></indexterm>
+<programlisting>  “background”               <link linkend="GstGLVideoMixerBackground"><type>GstGLVideoMixerBackground</type></link></programlisting>
+<para>Background type.</para><para>Flags: Read / Write</para>
+<para>Default value: Checker pattern</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

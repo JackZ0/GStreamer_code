@@ -1,0 +1,121 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glstereomix">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glstereomix.top_of_page" role="top_of_page">glstereomix</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glstereomix</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glstereomix.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstGLStereoDownmix"><type>GstGLStereoDownmix</type></link></entry><entry role="property_name"><link linkend="GstGLStereoMix--downmix-mode">downmix-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLStereoMix"/><refsect1 id="gst-plugins-bad-plugins-glstereomix.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLStereoMix-struct">GstGLStereoMix</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glstereomix.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAggregator">GstAggregator</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoAggregator">GstVideoAggregator</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseMixer">GstGLBaseMixer</link>
+                            <phrase role="lineart">╰──</phrase> <link linkend="GstGLMixer">GstGLMixer</link>
+                                <phrase role="lineart">╰──</phrase> GstGLStereoMix
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glstereomix.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLStereoMix implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glstereomix.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Combine 2 input streams to produce a stereoscopic output
+stream. Input views are taken from the left pad and right pad
+respectively, and mixed according to their timelines.</para>
+<para>If either input stream is stereoscopic, the approproriate view
+(left or right) is taken from each stream and placed into the output.</para>
+<para>The multiview representation on the output is chosen according to
+the downstream caps.</para>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc pattern=ball name=left \
+    videotestsrc name=right glstereomix name=mix \
+    left. ! vid/x-raw,width=640,height=480! glupload ! mix.  \
+    right. ! video/x-raw,width=640,height=480! glupload ! mix.  \
+    mix. ! video/x-raw'(memory:GLMemory)',multiview-mode=side-by-side ! \
+    queue ! glimagesink output-multiview-mode=side-by-side
+]]></programlisting></informalexample>
+<para> Mix 2 different videotestsrc patterns into a side-by-side stereo image and display it.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -ev v4l2src name=left \
+    videotestsrc name=right \
+    glstereomix name=mix \
+    left. ! video/x-raw,width=640,height=480 ! glupload ! glcolorconvert ! mix.  \
+    right. ! video/x-raw,width=640,height=480 ! glupload ! mix.  \
+    mix. ! video/x-raw'(memory:GLMemory)',multiview-mode=top-bottom ! \
+    glcolorconvert ! gldownload ! queue ! x264enc ! h264parse ! \
+    mp4mux ! progressreport ! filesink location=output.mp4
+]]></programlisting></informalexample>
+<para> Mix the input from a camera to the left view, and videotestsrc to the right view,
+   and encode as a top-bottom frame packed H.264 video.</para>
+</refsect3>
+
+<include href="element-glstereomix-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glstereomix.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glstereomix.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLStereoMix-struct" role="struct">
+<title>struct GstGLStereoMix</title>
+<indexterm zone="GstGLStereoMix-struct"><primary>GstGLStereoMix</primary></indexterm>
+<programlisting language="C">struct GstGLStereoMix;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glstereomix.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLStereoMix--downmix-mode" role="property"><title>The <literal>“downmix-mode”</literal> property</title>
+<indexterm zone="GstGLStereoMix--downmix-mode"><primary>GstGLStereoMix:downmix-mode</primary></indexterm>
+<programlisting>  “downmix-mode”             <link linkend="GstGLStereoDownmix"><type>GstGLStereoDownmix</type></link></programlisting>
+<para>Output anaglyph type to generate when downmixing to mono.</para><para>Flags: Read / Write</para>
+<para>Default value: Dubois optimised Green-Magenta anaglyph</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

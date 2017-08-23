@@ -1,0 +1,94 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-gdpdepay">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-gdpdepay.top_of_page" role="top_of_page">gdpdepay</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gdpdepay</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-gdpdepay.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstGDPDepay--ts-offset">ts-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGDPDepay"/><refsect1 id="gst-plugins-bad-plugins-gdpdepay.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGDPDepay-struct">GstGDPDepay</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gdpdepay.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstGDPDepay
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-gdpdepay.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element depayloads GStreamer Data Protocol buffers back to deserialized
+buffers and events.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v -m filesrc location=test.gdp ! gdpdepay ! xvimagesink
+]]></programlisting></informalexample>
+<para> This pipeline plays back a serialized video stream as created in the
+example for gdppay.</para>
+
+<include href="element-gdpdepay-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gdpdepay.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gdpdepay.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGDPDepay-struct" role="struct">
+<title>struct GstGDPDepay</title>
+<indexterm zone="GstGDPDepay-struct"><primary>GstGDPDepay</primary></indexterm>
+<programlisting language="C">struct GstGDPDepay;</programlisting>
+<para>Private gdpdepay element structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gdpdepay.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGDPDepay--ts-offset" role="property"><title>The <literal>“ts-offset”</literal> property</title>
+<indexterm zone="GstGDPDepay--ts-offset"><primary>GstGDPDepay:ts-offset</primary></indexterm>
+<programlisting>  “ts-offset”                <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Timestamp Offset.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gdpdepay.see-also">
+<title>See Also</title>
+<para>gdppay</para>
+
+</refsect1>
+
+</refentry>

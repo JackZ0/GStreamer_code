@@ -50,7 +50,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *</td>
+<a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *</td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-audiomixer.html#GstAudioMixer--caps" title="The “caps” property">caps</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -89,9 +89,9 @@
 <a name="gst-plugins-bad-plugins-audiomixer.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstAggregator.html#GstAggregator-struct">GstAggregator</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> GstAggregator
                     <span class="lineart">╰──</span> GstAudioAggregator
                         <span class="lineart">╰──</span> GstAudioMixer
                             <span class="lineart">╰──</span> GstLiveAdder
@@ -101,7 +101,7 @@
 <a name="gst-plugins-bad-plugins-audiomixer.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstAudioMixer implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
+ <a href="../gstreamer-1.0/GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-audiomixer.description"></a><h2>Description</h2>
@@ -116,17 +116,9 @@ properties to mute each pad individually and set the volume:</p>
 </ul></div>
 <div class="refsect3">
 <a name="id-1.2.7.8.6"></a><h4>Example launch line</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> audiotestsrc freq<span class="gtkdoc opt">=</span><span class="number">100</span> <span class="gtkdoc opt">!</span> audiomixer name<span class="gtkdoc opt">=</span>mix <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> alsasink audiotestsrc freq<span class="gtkdoc opt">=</span><span class="number">500</span> <span class="gtkdoc opt">!</span> mix<span class="gtkdoc opt">.</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 audiotestsrc freq=100 ! audiomixer name=mix ! audioconvert ! alsasink audiotestsrc freq=500 ! mix.
+</pre></div>
 <p> This pipeline produces two sine waves mixed together.</p>
 </div>
 <div class="refsynopsisdiv">
@@ -235,7 +227,7 @@ properties to mute each pad individually and set the volume:</p>
 <hr>
 <div class="refsect2">
 <a name="GstAudioMixer--caps"></a><h3>The <code class="literal">“caps”</code> property</h3>
-<pre class="programlisting">  “caps”                     <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *</pre>
+<pre class="programlisting">  “caps”                     <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *</pre>
 <p>Set target format for mixing (NULL means ANY). Setting this property takes a reference to the supplied GstCaps object.</p>
 <p>Flags: Read / Write</p>
 </div>

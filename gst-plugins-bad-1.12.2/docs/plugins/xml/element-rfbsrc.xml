@@ -1,0 +1,165 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-rfbsrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-rfbsrc.top_of_page" role="top_of_page">rfbsrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>rfbsrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-rfbsrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstRfbSrc--host">host</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--port">port</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstRfbSrc--password">password</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstRfbSrc--version">version</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--height">height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--incremental">incremental</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--offset-x">offset-x</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--offset-y">offset-y</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--width">width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--use-copyrect">use-copyrect</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--shared">shared</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstRfbSrc--view-only">view-only</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstRfbSrc"/><refsect1 id="gst-plugins-bad-plugins-rfbsrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstRfbSrc-struct">GstRfbSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rfbsrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> GstRfbSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-rfbsrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-rfbsrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rfbsrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rfbsrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstRfbSrc-struct" role="struct">
+<title>struct GstRfbSrc</title>
+<indexterm zone="GstRfbSrc-struct"><primary>GstRfbSrc</primary></indexterm>
+<programlisting language="C">struct GstRfbSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rfbsrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstRfbSrc--host" role="property"><title>The <literal>“host”</literal> property</title>
+<indexterm zone="GstRfbSrc--host"><primary>GstRfbSrc:host</primary></indexterm>
+<programlisting>  “host”                     <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Host to connect to.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;127.0.0.1&quot;</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--port" role="property"><title>The <literal>“port”</literal> property</title>
+<indexterm zone="GstRfbSrc--port"><primary>GstRfbSrc:port</primary></indexterm>
+<programlisting>  “port”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Port.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,65535]</para>
+<para>Default value: 5900</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--password" role="property"><title>The <literal>“password”</literal> property</title>
+<indexterm zone="GstRfbSrc--password"><primary>GstRfbSrc:password</primary></indexterm>
+<programlisting>  “password”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Password for authentication.</para><para>Flags: Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--version" role="property"><title>The <literal>“version”</literal> property</title>
+<indexterm zone="GstRfbSrc--version"><primary>GstRfbSrc:version</primary></indexterm>
+<programlisting>  “version”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>RFB protocol version.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;3.3&quot;</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--height" role="property"><title>The <literal>“height”</literal> property</title>
+<indexterm zone="GstRfbSrc--height"><primary>GstRfbSrc:height</primary></indexterm>
+<programlisting>  “height”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>height of screen.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--incremental" role="property"><title>The <literal>“incremental”</literal> property</title>
+<indexterm zone="GstRfbSrc--incremental"><primary>GstRfbSrc:incremental</primary></indexterm>
+<programlisting>  “incremental”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Incremental updates.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--offset-x" role="property"><title>The <literal>“offset-x”</literal> property</title>
+<indexterm zone="GstRfbSrc--offset-x"><primary>GstRfbSrc:offset-x</primary></indexterm>
+<programlisting>  “offset-x”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>x offset for screen scrapping.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--offset-y" role="property"><title>The <literal>“offset-y”</literal> property</title>
+<indexterm zone="GstRfbSrc--offset-y"><primary>GstRfbSrc:offset-y</primary></indexterm>
+<programlisting>  “offset-y”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>y offset for screen scrapping.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstRfbSrc--width"><primary>GstRfbSrc:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>width of screen.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--use-copyrect" role="property"><title>The <literal>“use-copyrect”</literal> property</title>
+<indexterm zone="GstRfbSrc--use-copyrect"><primary>GstRfbSrc:use-copyrect</primary></indexterm>
+<programlisting>  “use-copyrect”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Use copyrect encoding.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--shared" role="property"><title>The <literal>“shared”</literal> property</title>
+<indexterm zone="GstRfbSrc--shared"><primary>GstRfbSrc:shared</primary></indexterm>
+<programlisting>  “shared”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Share desktop with other clients.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstRfbSrc--view-only" role="property"><title>The <literal>“view-only”</literal> property</title>
+<indexterm zone="GstRfbSrc--view-only"><primary>GstRfbSrc:view-only</primary></indexterm>
+<programlisting>  “view-only”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>only view the desktop.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

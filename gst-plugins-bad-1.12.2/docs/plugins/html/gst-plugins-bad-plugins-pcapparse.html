@@ -66,7 +66,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *</td>
+<a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *</td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-pcapparse.html#GstPcapParse--caps" title="The “caps” property">caps</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -95,8 +95,8 @@
 <a name="gst-plugins-bad-plugins-pcapparse.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
                 <span class="lineart">╰──</span> GstPcapParse
 </pre>
 </div>
@@ -108,19 +108,10 @@ Use <a class="link" href="gst-plugins-bad-plugins-pcapparse.html#GstPcapParse--s
 should be included.</p>
 <div class="refsect3">
 <a name="id-1.2.104.7.3"></a><h4>Example pipelines</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> filesrc location<span class="gtkdoc opt">=</span>h264crasher<span class="gtkdoc opt">.</span>pcap <span class="gtkdoc opt">!</span> pcapparse <span class="gtkdoc opt">!</span> rtph264depay
-<span class="gtkdoc opt">!</span> ffdec_h264 <span class="gtkdoc opt">!</span> fakesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 filesrc location=h264crasher.pcap ! pcapparse ! rtph264depay
+! ffdec_h264 ! fakesink
+</pre></div>
 <p> Read from a pcap dump file using filesrc, extract the raw UDP packets,
 depayload and decode them.</p>
 </div>
@@ -255,7 +246,7 @@ depayload and decode them.</p>
 <hr>
 <div class="refsect2">
 <a name="GstPcapParse--caps"></a><h3>The <code class="literal">“caps”</code> property</h3>
-<pre class="programlisting">  “caps”                     <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *</pre>
+<pre class="programlisting">  “caps”                     <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *</pre>
 <p>The caps of the source pad.</p>
 <p>Flags: Read / Write</p>
 </div>

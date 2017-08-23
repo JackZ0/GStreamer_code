@@ -1,0 +1,110 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-waterripple">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-waterripple.top_of_page" role="top_of_page">waterripple</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>waterripple</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-waterripple.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstWaterRipple--amplitude">amplitude</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstWaterRipple--phase">phase</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstWaterRipple--wavelength">wavelength</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstWaterRipple"/><refsect1 id="gst-plugins-bad-plugins-waterripple.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstWaterRipple-struct">GstWaterRipple</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waterripple.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGeometricTransform">GstGeometricTransform</link>
+                            <phrase role="lineart">╰──</phrase> <link linkend="GstCircleGeometricTransform">GstCircleGeometricTransform</link>
+                                <phrase role="lineart">╰──</phrase> GstWaterRipple
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-waterripple.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The waterripple element creates a water ripple effect on the image.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! waterripple ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-waterripple-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waterripple.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waterripple.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstWaterRipple-struct" role="struct">
+<title>struct GstWaterRipple</title>
+<indexterm zone="GstWaterRipple-struct"><primary>GstWaterRipple</primary></indexterm>
+<programlisting language="C">struct GstWaterRipple;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waterripple.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstWaterRipple--amplitude" role="property"><title>The <literal>“amplitude”</literal> property</title>
+<indexterm zone="GstWaterRipple--amplitude"><primary>GstWaterRipple:amplitude</primary></indexterm>
+<programlisting>  “amplitude”                <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>amplitude.</para><para>Flags: Read / Write</para>
+<para>Default value: 10</para>
+</refsect2>
+<refsect2 id="GstWaterRipple--phase" role="property"><title>The <literal>“phase”</literal> property</title>
+<indexterm zone="GstWaterRipple--phase"><primary>GstWaterRipple:phase</primary></indexterm>
+<programlisting>  “phase”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>phase.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstWaterRipple--wavelength" role="property"><title>The <literal>“wavelength”</literal> property</title>
+<indexterm zone="GstWaterRipple--wavelength"><primary>GstWaterRipple:wavelength</primary></indexterm>
+<programlisting>  “wavelength”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>wavelength.</para><para>Flags: Read / Write</para>
+<para>Default value: 16</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waterripple.see-also">
+<title>See Also</title>
+<para>geometrictransform</para>
+
+</refsect1>
+
+</refentry>

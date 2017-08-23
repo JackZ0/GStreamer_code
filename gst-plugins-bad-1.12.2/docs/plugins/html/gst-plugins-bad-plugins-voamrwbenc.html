@@ -66,9 +66,9 @@
 <a name="gst-plugins-bad-plugins-voamrwbenc.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0GstAudioEncoder.html#GstAudioEncoder-struct">GstAudioEncoder</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gst-plugins-base-libs-1.0/GstAudioEncoder.html#GstAudioEncoder-struct">GstAudioEncoder</a>
                     <span class="lineart">╰──</span> GstVoAmrWbEnc
 </pre>
 </div>
@@ -76,7 +76,7 @@
 <a name="gst-plugins-bad-plugins-voamrwbenc.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstVoAmrWbEnc implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
+ <a href="../gstreamer-1.0/GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-voamrwbenc.description"></a><h2>Description</h2>
@@ -84,17 +84,9 @@ GstVoAmrWbEnc implements
 <a class="ulink" href="http://www.penguin.cz/~utx/amr" target="_top">reference codec implementation</a>.
 <div class="refsect3">
 <a name="id-1.2.132.8.4"></a><h4>Example launch line</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch filesrc location<span class="gtkdoc opt">=</span>abc<span class="gtkdoc opt">.</span>wav <span class="gtkdoc opt">!</span> wavparse <span class="gtkdoc opt">!</span> audioresample <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> voamrwbenc <span class="gtkdoc opt">!</span> filesink location<span class="gtkdoc opt">=</span>abc<span class="gtkdoc opt">.</span>amr</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch filesrc location=abc.wav ! wavparse ! audioresample ! audioconvert ! voamrwbenc ! filesink location=abc.amr
+</pre></div>
 <p>
 Please note that the above stream misses the header, that is needed to play
 the stream.</p>

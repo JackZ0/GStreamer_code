@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-camerabin">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-camerabin.top_of_page" role="top_of_page">camerabin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>camerabin</refname>
+<refpurpose/>
+</refnamediv>
+
+
+
+<refsect1 id="gst-plugins-bad-plugins-camerabin.description" role="desc">
+<title role="desc.title">Description</title>
+<para>CameraBin is a high-level camera object that encapsulates gstreamer
+elements, providing an API for controlling a digital camera.</para>
+<blockquote>
+<para>Note that camerabin is still UNSTABLE and under development.</para>
+</blockquote>
+<para>CameraBin has the following main features:</para>
+<itemizedlist>
+<listitem><para>Record videos</para></listitem>
+<listitem><para>Capture pictures</para></listitem>
+<listitem><para>Display a viewfinder</para></listitem>
+<listitem>
+<para>Post preview images for each capture (video and image)</para>
+</listitem>
+</itemizedlist>
+<refsect3><title>Usage</title><para>Camerabin can be created using <link linkend="gst-element-factory-make"><function>gst_element_factory_make()</function></link> just like
+any other element. Video or image capture mode can be selected using
+the <link linkend="GstCameraBin--mode"><type>“mode”</type></link> property and the file to save the capture is
+selected using <link linkend="GstCameraBin--location"><type>“location”</type></link> property.</para>
+<para>After creating camerabin, applications might want to do some
+customization (there's a section about this below), then select
+the desired mode and start capturing.</para>
+<para>In image capture mode, just send a <link linkend="GstCameraBin--start-capture"><type>“start-capture”</type></link> and a
+picture will be captured. When the picture is stored on the selected
+location, a <link linkend="GST-MESSAGE-ELEMENT:CAPS"><literal>GST_MESSAGE_ELEMENT</literal></link> named 'image-done' will be posted on
+the <link linkend="GstBus"><type>GstBus</type></link>.</para>
+<para>In video capture mode, send a <link linkend="GstCameraBin--start-capture"><type>“start-capture”</type></link> to start
+recording, then send a <link linkend="GstCameraBin--stop-capture"><type>“stop-capture”</type></link> to stop recording.
+Note that both signals are asynchronous, so, calling
+<link linkend="GstCameraBin--stop-capture"><type>“stop-capture”</type></link> doesn't guarantee that the video has been
+properly finished yet. Applications should wait for the 'video-done'
+message to be posted on the bus.</para>
+<para>In both modes, if <link linkend="GstCameraBin--post-previews"><type>“post-previews”</type></link> is <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>, a <link linkend="GstBuffer"><type>GstBuffer</type></link>
+will be post to the <link linkend="GstBus"><type>GstBus</type></link> in a field named 'buffer', in a
+'preview-image' message of type <link linkend="GST-MESSAGE-ELEMENT:CAPS"><literal>GST_MESSAGE_ELEMENT</literal></link>.</para>
+</refsect3>
+<refsect3><title>Customization</title><para>Camerabin provides various customization properties, allowing the user
+to set custom filters, selecting the viewfinder sink and formats to
+use to encode the captured images/videos.</para>
+<para><link linkend="GstEncodingProfile"><type>GstEncodingProfile</type></link><!-- -->s are used to tell camerabin which formats it
+should encode the captures to, those should be set to
+<link linkend="GstCameraBin--image-profile"><type>“image-profile”</type></link> and <link linkend="GstCameraBin--video-profile"><type>“video-profile”</type></link>. Default is
+jpeg for images, and ogg (theora and vorbis) for video. If a profile without
+an audio stream is set for video, audio will be disabled on recordings.</para>
+<para><link linkend="GstCameraBin--preview-caps"><type>“preview-caps”</type></link> can be used to select which format preview
+images should be posted on the <link linkend="GstBus"><type>GstBus</type></link>. It has to be a raw video format.</para>
+<para>Camerabin has a <link linkend="GstCameraBin--camera-source"><type>“camera-source”</type></link> property so applications can
+set their source that will provide buffers for the viewfinder and for
+captures. This camera source is a special type of source that has 3 pads.
+To use a 'regular' source with a single pad you should use
+<link linkend="GstWrapperCameraBinSource"><type>GstWrapperCameraBinSource</type></link>, it will adapt your source and provide 3 pads.</para>
+<para>Applications can also select the desired viewfinder sink using
+<link linkend="GstCameraBin--viewfinder-sink"><type>“viewfinder-sink”</type></link>, it is also possible to select the audio
+source using <link linkend="GstCameraBin--audio-source"><type>“audio-source”</type></link>.</para>
+<para>The viewfinder resolution can be configured using
+<link linkend="GstCameraBin--viewfinder-caps"><type>“viewfinder-caps”</type></link>, these <link linkend="GstCaps"><type>GstCaps</type></link> should be a subset of
+<link linkend="GstCameraBin--viewfinder-supported-caps"><type>“viewfinder-supported-caps”</type></link>.</para>
+<para>To select the desired resolution for captures, camerabin provides
+<link linkend="GstCameraBin--image-capture-caps"><type>“image-capture-caps”</type></link> and <link linkend="GstCameraBin--video-capture-caps"><type>“video-capture-caps”</type></link>,
+these caps must be a subset of what the source can produce. The allowed
+caps can be probed using <link linkend="GstCameraBin--image-capture-supported-caps"><type>“image-capture-supported-caps”</type></link> and
+<link linkend="GstCameraBin--video-capture-supported-caps"><type>“video-capture-supported-caps”</type></link>. In an analogous way, there
+are <link linkend="GstCameraBin--audio-capture-caps"><type>“audio-capture-caps”</type></link> and
+<link linkend="GstCameraBin--audio-capture-supported-caps"><type>“audio-capture-supported-caps”</type></link>.</para>
+<para>Camerabin also allows applications to insert custom <link linkend="GstElements"><type>GstElements</type></link> on any
+of its branches: video capture, image capture, viewfinder and preview.
+Check <link linkend="GstCameraBin--video-filter"><type>“video-filter”</type></link>, <link linkend="GstCameraBin--image-filter"><type>“image-filter”</type></link>,
+<link linkend="GstCameraBin--viewfinder-filter"><type>“viewfinder-filter”</type></link> and <link linkend="GstCameraBin--preview-filter"><type>“preview-filter”</type></link>.</para>
+</refsect3>
+<refsect3><title>Example launch line</title><para>Unfortunately, camerabin can't be really used from gst-launch-1.0, as you
+need to send signals to control it. The following pipeline might be able
+to show the viewfinder using all the default elements.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v -m camerabin
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-camerabin-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-camerabin.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-camerabin.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

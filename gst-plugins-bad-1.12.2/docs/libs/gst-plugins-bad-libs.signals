@@ -1,0 +1,182 @@
+<SIGNAL>
+<NAME>GstInsertBin::append</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>la</FLAGS>
+GstInsertBin *gstinsertbin
+GstElement *arg1
+gpointer  arg2
+gpointer  arg3
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstInsertBin::insert-after</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>la</FLAGS>
+GstInsertBin *gstinsertbin
+GstElement *arg1
+GstElement *arg2
+gpointer  arg3
+gpointer  arg4
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstInsertBin::insert-before</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>la</FLAGS>
+GstInsertBin *gstinsertbin
+GstElement *arg1
+GstElement *arg2
+gpointer  arg3
+gpointer  arg4
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstInsertBin::prepend</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>la</FLAGS>
+GstInsertBin *gstinsertbin
+GstElement *arg1
+gpointer  arg2
+gpointer  arg3
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstInsertBin::remove</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>la</FLAGS>
+GstInsertBin *gstinsertbin
+GstElement *arg1
+gpointer  arg2
+gpointer  arg3
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstGLDisplay::create-context</NAME>
+<RETURNS>GstGLContext*</RETURNS>
+<FLAGS>l</FLAGS>
+GstGLDisplay *gstgldisplay
+GstGLContext *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstGLWindow::key-event</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+GstGLWindow *gstglwindow
+gchar *arg1
+gchar *arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstGLWindow::mouse-event</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>l</FLAGS>
+GstGLWindow *gstglwindow
+gchar *arg1
+gint  arg2
+gdouble  arg3
+gdouble  arg4
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::buffering</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+gint  arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::duration-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+guint64  arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::end-of-stream</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::error</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+GError *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::media-info-updated</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+GstPlayerMediaInfo *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::mute-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::position-updated</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+guint64  arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::seek-done</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+guint64  arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::state-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+GstPlayerState  arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::uri-loaded</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+gchar *arg1
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::video-dimensions-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+gint  arg1
+gint  arg2
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::volume-changed</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+</SIGNAL>
+
+<SIGNAL>
+<NAME>GstPlayer::warning</NAME>
+<RETURNS>void</RETURNS>
+<FLAGS>lrh</FLAGS>
+GstPlayer *gstplayer
+GError *arg1
+</SIGNAL>
+

@@ -1,0 +1,87 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-kateparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-kateparse.top_of_page" role="top_of_page">kateparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>kateparse</refname>
+<refpurpose>parses kate streams</refpurpose>
+</refnamediv>
+
+<anchor id="GstKateParse"/><refsect1 id="gst-plugins-bad-plugins-kateparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstKateParse-struct">GstKateParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstKateParse
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstKateTag">GstKateTag</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-kateparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The kateparse element will parse the header packets of the Kate
+stream and put them as the streamheader in the caps. This is used in the
+multifdsink case where you want to stream live kate streams to multiple
+clients, each client has to receive the streamheaders first before they can
+consume the kate packets.</para>
+<para>This element also makes sure that the buffers that it pushes out are properly
+timestamped and that their offset and offset_end are set. The buffers that
+kateparse outputs have all of the metadata that oggmux expects to receive,
+which allows you to (for example) remux an ogg/kate file.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=kate.ogg ! oggdemux ! kateparse ! fakesink
+]]></programlisting></informalexample>
+<para>
+This pipeline shows that the streamheader is set in the caps, and that each
+buffer has the timestamp, duration, offset, and offset_end set.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=kate.ogg ! oggdemux ! kateparse \
+           ! oggmux ! filesink location=kate-remuxed.ogg
+]]></programlisting></informalexample>
+<para>
+This pipeline shows remuxing. kate-remuxed.ogg might not be exactly the same
+as kate.ogg, but they should produce exactly the same decoded data.</para>
+</refsect3>
+
+<include href="element-kateparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstKateParse-struct" role="struct">
+<title>struct GstKateParse</title>
+<indexterm zone="GstKateParse-struct"><primary>GstKateParse</primary></indexterm>
+<programlisting language="C">struct GstKateParse;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateparse.see-also">
+<title>See Also</title>
+<para>katedec, vorbisparse, oggdemux, theoraparse</para>
+
+</refsect1>
+
+</refentry>

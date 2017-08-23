@@ -69,13 +69,13 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLShader.html#GstGLShader-struct"><span class="type">GstGLShader</span></a> *</td>
+<span class="type">GstGLShader</span> *</td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-glshader.html#GstGLFilterShader--shader" title="The “shader” property">shader</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstStructure.html#GstStructure-struct"><span class="type">GstStructure</span></a> *</td>
+<a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstStructure.html#GstStructure"><span class="type">GstStructure</span></a> *</td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-glshader.html#GstGLFilterShader--uniforms" title="The “uniforms” property">uniforms</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -103,7 +103,7 @@
 </colgroup>
 <tbody><tr>
 <td class="signal_type">
-<a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLShader.html#GstGLShader-struct"><span class="returnvalue">GstGLShader</span></a>*</td>
+<span class="returnvalue">GstGLShader</span>*</td>
 <td class="signal_name"><a class="link" href="gst-plugins-bad-plugins-glshader.html#GstGLFilterShader-create-shader" title="The “create-shader” signal">create-shader</a></td>
 <td class="signal_flags"><a href="/usr/share/gtk-doc/html/gobjectgobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></td>
 </tr></tbody>
@@ -126,11 +126,11 @@
 <a name="gst-plugins-bad-plugins-glshader.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLBaseFilter.html#GstGLBaseFilter-struct">GstGLBaseFilter</a>
-                        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLFilter.html#GstGLFilter-struct">GstGLFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> GstGLBaseFilter
+                        <span class="lineart">╰──</span> GstGLFilter
                             <span class="lineart">╰──</span> GstGLFilterShader
 </pre>
 </div>
@@ -139,58 +139,30 @@
 <p>OpenGL fragment shader filter</p>
 <div class="refsect3">
 <a name="id-1.2.76.8.3"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc <span class="gtkdoc opt">!</span> glupload <span class="gtkdoc opt">!</span> glshader fragment<span class="gtkdoc opt">=</span><span class="string">&quot;</span><span class="gtkdoc esc">\&quot;</span><span class="string">`cat myshader.frag`</span><span class="gtkdoc esc">\&quot;</span><span class="string">&quot;</span> <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc ! glupload ! glshader fragment="\"`cat myshader.frag`\"" ! glimagesink
+</pre></div>
 <p>
 FBO (Frame Buffer Object) and GLSL (OpenGL Shading Language) are required.
 Depending on the exact OpenGL version chosen and the exact requirements of
 the OpenGL implementation, a <span class="type">version</span> header may be required.</p>
 <p>The following is a simple OpenGL ES (also usable with OpenGL 3 core contexts)
 passthrough shader with the required inputs.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13</pre></td>
-        <td class="listing_code"><pre class="programlisting"><span class="gtkdoc ppc">#version 100</span>
-<span class="gtkdoc ppc">#ifdef GL_ES</span>
-precision mediump <span class="gtkdoc kwb">float</span><span class="gtkdoc opt">;</span>
-<span class="gtkdoc ppc">#endif</span>
-varying vec2 v_texcoord<span class="gtkdoc opt">;</span>
-uniform sampler2D tex<span class="gtkdoc opt">;</span>
-uniform <span class="gtkdoc kwb">float</span> time<span class="gtkdoc opt">;</span>
-uniform <span class="gtkdoc kwb">float</span> width<span class="gtkdoc opt">;</span>
-uniform <span class="gtkdoc kwb">float</span> height<span class="gtkdoc opt">;</span>
+<div class="informalexample"><pre class="programlisting">
+#version 100
+#ifdef GL_ES
+precision mediump float;
+#endif
+varying vec2 v_texcoord;
+uniform sampler2D tex;
+uniform float time;
+uniform float width;
+uniform float height;
 
-<span class="gtkdoc kwb">void</span> <span class="function">main</span> <span class="gtkdoc opt">() {</span>
-  gl_FragColor <span class="gtkdoc opt">=</span> <span class="function">texture2D</span><span class="gtkdoc opt">(</span> tex<span class="gtkdoc opt">,</span> v_texcoord <span class="gtkdoc opt">);</span>
-<span class="gtkdoc opt">}</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+void main () {
+  gl_FragColor = texture2D( tex, v_texcoord );
+}
+</pre></div>
 <p></p>
 </div>
 <div class="refsynopsisdiv">
@@ -329,14 +301,14 @@ uniform <span class="gtkdoc kwb">float</span> height<span class="gtkdoc opt">;</
 <hr>
 <div class="refsect2">
 <a name="GstGLFilterShader--shader"></a><h3>The <code class="literal">“shader”</code> property</h3>
-<pre class="programlisting">  “shader”                   <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLShader.html#GstGLShader-struct"><span class="type">GstGLShader</span></a> *</pre>
+<pre class="programlisting">  “shader”                   <span class="type">GstGLShader</span> *</pre>
 <p>GstGLShader to use.</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="GstGLFilterShader--uniforms"></a><h3>The <code class="literal">“uniforms”</code> property</h3>
-<pre class="programlisting">  “uniforms”                 <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstStructure.html#GstStructure-struct"><span class="type">GstStructure</span></a> *</pre>
+<pre class="programlisting">  “uniforms”                 <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstStructure.html#GstStructure"><span class="type">GstStructure</span></a> *</pre>
 <p>GLSL Uniforms.</p>
 <p>Flags: Read / Write</p>
 </div>
@@ -361,7 +333,7 @@ uniform <span class="gtkdoc kwb">float</span> height<span class="gtkdoc opt">;</
 <a name="gst-plugins-bad-plugins-glshader.signal-details"></a><h2>Signal Details</h2>
 <div class="refsect2">
 <a name="GstGLFilterShader-create-shader"></a><h3>The <code class="literal">“create-shader”</code> signal</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLShader.html#GstGLShader-struct"><span class="returnvalue">GstGLShader</span></a>*
+<pre class="programlisting"><span class="returnvalue">GstGLShader</span>*
 user_function (<a class="link" href="gst-plugins-bad-plugins-glshader.html#GstGLFilterShader"><span class="type">GstGLFilterShader</span></a> *gstglfiltershader,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>           user_data)</pre>
 <p>Flags: <a href="/usr/share/gtk-doc/html/gobjectgobject-Signals.html#G-SIGNAL-RUN-LAST:CAPS">Run Last</a></p>

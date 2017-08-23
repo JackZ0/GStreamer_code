@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<refsynopsisdiv>
+  <refsect2>
+    <title>Element Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>plugin</term>
+        <listitem>
+          <simpara>
+            <link linkend="plugin-videoparsersbad">videoparsersbad</link>
+          </simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>author</term>
+        <listitem>
+          <simpara>Julien Moutte &lt;julien@fluendo.com&gt;</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>class</term>
+        <listitem>
+          <simpara>Codec/Parser/Video</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect2>
+  <refsect2>
+    <title>Element Pads</title>
+    <variablelist>
+      <varlistentry>
+        <term>name</term>
+        <listitem>
+          <simpara>sink</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>direction</term>
+        <listitem>
+          <simpara>sink</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>presence</term>
+        <listitem>
+          <simpara>always</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>details</term>
+        <listitem>
+          <simpara>video/mpeg, mpegversion=(int)4, systemstream=(boolean)false</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term/>
+        <listitem>
+          <simpara> video/x-divx, divxversion=(int)[ 4, 5 ]</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+    <variablelist>
+      <varlistentry>
+        <term>name</term>
+        <listitem>
+          <simpara>src</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>direction</term>
+        <listitem>
+          <simpara>source</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>presence</term>
+        <listitem>
+          <simpara>always</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>details</term>
+        <listitem>
+          <simpara>video/mpeg, mpegversion=(int)4, width=(int)[ 0, 2147483647 ], height=(int)[ 0, 2147483647 ], framerate=(fraction)[ 0/1, 2147483647/1 ], parsed=(boolean)true, systemstream=(boolean)false</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term/>
+        <listitem>
+          <simpara> video/x-divx, divxversion=(int)[ 4, 5 ]</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect2>
+</refsynopsisdiv>

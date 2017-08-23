@@ -1,0 +1,89 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-mpegvideoparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-mpegvideoparse.top_of_page" role="top_of_page">mpegvideoparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>mpegvideoparse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-mpegvideoparse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpegvParse--drop">drop</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpegvParse--gop-split">gop-split</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMpegvParse"/><refsect1 id="gst-plugins-bad-plugins-mpegvideoparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegvParse-struct">GstMpegvParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpegvideoparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseParse">GstBaseParse</link>
+                    <phrase role="lineart">╰──</phrase> GstMpegvParse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-mpegvideoparse.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-mpegvideoparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpegvideoparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpegvideoparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpegvParse-struct" role="struct">
+<title>struct GstMpegvParse</title>
+<indexterm zone="GstMpegvParse-struct"><primary>GstMpegvParse</primary></indexterm>
+<programlisting language="C">struct GstMpegvParse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpegvideoparse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstMpegvParse--drop" role="property"><title>The <literal>“drop”</literal> property</title>
+<indexterm zone="GstMpegvParse--drop"><primary>GstMpegvParse:drop</primary></indexterm>
+<programlisting>  “drop”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Drop data untill valid configuration data is received either in the stream or through caps.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstMpegvParse--gop-split" role="property"><title>The <literal>“gop-split”</literal> property</title>
+<indexterm zone="GstMpegvParse--gop-split"><primary>GstMpegvParse:gop-split</primary></indexterm>
+<programlisting>  “gop-split”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Split frame when encountering GOP.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

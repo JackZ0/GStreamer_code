@@ -1,0 +1,115 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-cvlaplace">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-cvlaplace.top_of_page" role="top_of_page">cvlaplace</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>cvlaplace</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-cvlaplace.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvLaplace--aperture-size">aperture-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstCvLaplace--scale">scale</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstCvLaplace--shift">shift</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCvLaplace--mask">mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCvLaplace"/><refsect1 id="gst-plugins-bad-plugins-cvlaplace.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCvLaplace-struct">GstCvLaplace</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvlaplace.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstCvLaplace
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-cvlaplace.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Applies cvLaplace OpenCV function to the image.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! cvlaplace ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-cvlaplace-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvlaplace.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvlaplace.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCvLaplace-struct" role="struct">
+<title>struct GstCvLaplace</title>
+<indexterm zone="GstCvLaplace-struct"><primary>GstCvLaplace</primary></indexterm>
+<programlisting language="C">struct GstCvLaplace;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvlaplace.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCvLaplace--aperture-size" role="property"><title>The <literal>“aperture-size”</literal> property</title>
+<indexterm zone="GstCvLaplace--aperture-size"><primary>GstCvLaplace:aperture-size</primary></indexterm>
+<programlisting>  “aperture-size”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Size of the extended Laplace Kernel (1, 3, 5 or 7).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,7]</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstCvLaplace--scale" role="property"><title>The <literal>“scale”</literal> property</title>
+<indexterm zone="GstCvLaplace--scale"><primary>GstCvLaplace:scale</primary></indexterm>
+<programlisting>  “scale”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Scale factor.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstCvLaplace--shift" role="property"><title>The <literal>“shift”</literal> property</title>
+<indexterm zone="GstCvLaplace--shift"><primary>GstCvLaplace:shift</primary></indexterm>
+<programlisting>  “shift”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Value added to the scaled source array elements.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCvLaplace--mask" role="property"><title>The <literal>“mask”</literal> property</title>
+<indexterm zone="GstCvLaplace--mask"><primary>GstCvLaplace:mask</primary></indexterm>
+<programlisting>  “mask”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sets whether the detected edges should be used as a mask on the original input or not.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

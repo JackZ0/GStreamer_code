@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-descriptors">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-descriptors.top_of_page">ATSC variants of MPEG-TS descriptors</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ATSC variants of MPEG-TS descriptors</refname>
+<refpurpose>Descriptors for the various ATSC specifications</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-descriptors.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsATSCDescriptorType">GstMpegtsATSCDescriptorType</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-descriptors.includes"><title>Includes</title><synopsis>#include &lt;gst/mpegts/mpegts.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-descriptors.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-descriptors.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-descriptors.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpegtsATSCDescriptorType" role="enum">
+<title>enum GstMpegtsATSCDescriptorType</title>
+<indexterm zone="GstMpegtsATSCDescriptorType"><primary>GstMpegtsATSCDescriptorType</primary></indexterm>
+<para>These values correspond to the registered descriptor type from
+the various ATSC specifications.</para>
+<para>Consult the relevant specifications for more details.</para>
+<refsect3 id="GstMpegtsATSCDescriptorType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-STUFFING:CAPS">GST_MTS_DESC_ATSC_STUFFING</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-AC3:CAPS">GST_MTS_DESC_ATSC_AC3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-CAPTION-SERVICE:CAPS">GST_MTS_DESC_ATSC_CAPTION_SERVICE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-CONTENT-ADVISORY:CAPS">GST_MTS_DESC_ATSC_CONTENT_ADVISORY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-EXTENDED-CHANNEL-NAME:CAPS">GST_MTS_DESC_ATSC_EXTENDED_CHANNEL_NAME</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-SERVICE-LOCATION:CAPS">GST_MTS_DESC_ATSC_SERVICE_LOCATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-TIME-SHIFTED-SERVICE:CAPS">GST_MTS_DESC_ATSC_TIME_SHIFTED_SERVICE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-COMPONENT-NAME:CAPS">GST_MTS_DESC_ATSC_COMPONENT_NAME</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-DCC-DEPARTING-REQUEST:CAPS">GST_MTS_DESC_ATSC_DCC_DEPARTING_REQUEST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-DCC-ARRIVING-REQUEST:CAPS">GST_MTS_DESC_ATSC_DCC_ARRIVING_REQUEST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-REDISTRIBUTION-CONTROL:CAPS">GST_MTS_DESC_ATSC_REDISTRIBUTION_CONTROL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-GENRE:CAPS">GST_MTS_DESC_ATSC_GENRE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-PRIVATE-INFORMATION:CAPS">GST_MTS_DESC_ATSC_PRIVATE_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-EAC3:CAPS">GST_MTS_DESC_ATSC_EAC3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-ENHANCED-SIGNALING:CAPS">GST_MTS_DESC_ATSC_ENHANCED_SIGNALING</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-DATA-SERVICE:CAPS">GST_MTS_DESC_ATSC_DATA_SERVICE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-PID-COUNT:CAPS">GST_MTS_DESC_ATSC_PID_COUNT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-DOWNLOAD-DESCRIPTOR:CAPS">GST_MTS_DESC_ATSC_DOWNLOAD_DESCRIPTOR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-MULTIPROTOCOL-ENCAPSULATION:CAPS">GST_MTS_DESC_ATSC_MULTIPROTOCOL_ENCAPSULATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-MODULE-LINK:CAPS">GST_MTS_DESC_ATSC_MODULE_LINK</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-CRC32:CAPS">GST_MTS_DESC_ATSC_CRC32</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-DESC-ATSC-GROUP-LINK:CAPS">GST_MTS_DESC_ATSC_GROUP_LINK</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

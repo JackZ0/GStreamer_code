@@ -1,0 +1,73 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-aiffparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-aiffparse.top_of_page" role="top_of_page">aiffparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>aiffparse</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstAiffParse"/><refsect1 id="gst-plugins-bad-plugins-aiffparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAiffParse-struct">GstAiffParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-aiffparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstAiffParse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-aiffparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Parse a .aiff file into raw or compressed audio.</para>
+<para>The aiffparse element supports both push and pull mode operations, making it
+possible to stream from a network source.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=sine.aiff ! aiffparse ! audioconvert ! alsasink
+]]></programlisting></informalexample>
+<para>
+Read a aiff file and output to the soundcard using the ALSA element. The
+aiff file is assumed to contain raw uncompressed samples.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 souphttpsrc location=http://www.example.org/sine.aiff ! queue ! aiffparse ! audioconvert ! alsasink
+]]></programlisting></informalexample>
+<para>
+Stream data from a network url.</para>
+</refsect3>
+
+<include href="element-aiffparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-aiffparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-aiffparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAiffParse-struct" role="struct">
+<title>struct GstAiffParse</title>
+<indexterm zone="GstAiffParse-struct"><primary>GstAiffParse</primary></indexterm>
+<programlisting language="C">struct GstAiffParse;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glupload">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glupload.top_of_page" role="top_of_page">glupload</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glupload</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstGLUploadElement"/><refsect1 id="gst-plugins-bad-plugins-glupload.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLUploadElement-struct">GstGLUploadElement</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glupload.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstGLUploadElement
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glupload.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-glupload-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glupload.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glupload.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLUploadElement-struct" role="struct">
+<title>struct GstGLUploadElement</title>
+<indexterm zone="GstGLUploadElement-struct"><primary>GstGLUploadElement</primary></indexterm>
+<programlisting language="C">struct GstGLUploadElement;</programlisting>
+<para>Opaque <link linkend="GstGLUploadElement"><type>GstGLUploadElement</type></link> object</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

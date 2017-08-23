@@ -1,0 +1,30 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-gleffects-laplacian">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-gleffects-laplacian.top_of_page" role="top_of_page">gleffects_laplacian</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gleffects_laplacian</refname>
+<refpurpose/>
+</refnamediv>
+
+
+
+<refsect1 id="gst-plugins-bad-plugins-gleffects-laplacian.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-gleffects_laplacian-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gleffects-laplacian.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gleffects-laplacian.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

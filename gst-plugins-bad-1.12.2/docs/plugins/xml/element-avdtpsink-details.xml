@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<refsynopsisdiv>
+  <refsect2>
+    <title>Element Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>plugin</term>
+        <listitem>
+          <simpara>
+            <link linkend="plugin-bluez">bluez</link>
+          </simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>author</term>
+        <listitem>
+          <simpara>Marcel Holtmann &lt;marcel@holtmann.org&gt;</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>class</term>
+        <listitem>
+          <simpara>Sink/Audio</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect2>
+  <refsect2>
+    <title>Element Pads</title>
+    <variablelist>
+      <varlistentry>
+        <term>name</term>
+        <listitem>
+          <simpara>sink</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>direction</term>
+        <listitem>
+          <simpara>sink</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>presence</term>
+        <listitem>
+          <simpara>always</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>details</term>
+        <listitem>
+          <simpara>application/x-rtp, media=(string)audio, payload=(int)[ 96, 127 ], clock-rate=(int){ 16000, 32000, 44100, 48000 }, encoding-name=(string)SBC</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term/>
+        <listitem>
+          <simpara> application/x-rtp, media=(string)audio, payload=(int)14, clock-rate=(int)90000</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term/>
+        <listitem>
+          <simpara> application/x-rtp, media=(string)audio, payload=(int)[ 96, 127 ], clock-rate=(int)90000, encoding-name=(string)MPA</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect2>
+</refsynopsisdiv>

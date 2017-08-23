@@ -1,0 +1,726 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections.top_of_page">ATSC variants of MPEG-TS sections</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ATSC variants of MPEG-TS sections</refname>
+<refpurpose>Sections for the various ATSC specifications</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type">const <link linkend="GstMpegtsAtscVCT"><returnvalue>GstMpegtsAtscVCT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-atsc-tvct">gst_mpegts_section_get_atsc_tvct</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GstMpegtsAtscVCT"><returnvalue>GstMpegtsAtscVCT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-atsc-cvct">gst_mpegts_section_get_atsc_cvct</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GstMpegtsAtscMGT"><returnvalue>GstMpegtsAtscMGT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-atsc-mgt">gst_mpegts_section_get_atsc_mgt</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-atsc-string-segment-get-string">gst_mpegts_atsc_string_segment_get_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GstMpegtsAtscEIT"><returnvalue>GstMpegtsAtscEIT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-atsc-eit">gst_mpegts_section_get_atsc_eit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GstMpegtsAtscETT"><returnvalue>GstMpegtsAtscETT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-atsc-ett">gst_mpegts_section_get_atsc_ett</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GstMpegtsAtscSTT"><returnvalue>GstMpegtsAtscSTT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-atsc-stt">gst_mpegts_section_get_atsc_stt</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstDateTime"><returnvalue>GstDateTime</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-atsc-stt-get-datetime-utc">gst_mpegts_atsc_stt_get_datetime_utc</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsSectionATSCTableID">GstMpegtsSectionATSCTableID</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscVCTSource">GstMpegtsAtscVCTSource</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscVCT">GstMpegtsAtscVCT</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsAtscMGTTableType">GstMpegtsAtscMGTTableType</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscMGTTable">GstMpegtsAtscMGTTable</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscMGT">GstMpegtsAtscMGT</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscMultString">GstMpegtsAtscMultString</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscEITEvent">GstMpegtsAtscEITEvent</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscEIT">GstMpegtsAtscEIT</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscETT">GstMpegtsAtscETT</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsAtscSTT">GstMpegtsAtscSTT</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections.includes"><title>Includes</title><synopsis>#include &lt;gst/mpegts/mpegts.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-mpegts-section-get-atsc-tvct" role="function">
+<title>gst_mpegts_section_get_atsc_tvct&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-atsc-tvct"><primary>gst_mpegts_section_get_atsc_tvct</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsAtscVCT"><returnvalue>GstMpegtsAtscVCT</returnvalue></link>&#160;*
+gst_mpegts_section_get_atsc_tvct (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsAtscVCT"><type>GstMpegtsAtscVCT</type></link> contained in the <parameter>section</parameter>
+</para>
+<refsect3 id="gst-mpegts-section-get-atsc-tvct.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-ATSC-TVCT:CAPS"><literal>GST_MPEGTS_SECTION_ATSC_TVCT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-atsc-tvct.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstMpegtsAtscVCT"><type>GstMpegtsAtscVCT</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-get-atsc-cvct" role="function">
+<title>gst_mpegts_section_get_atsc_cvct&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-atsc-cvct"><primary>gst_mpegts_section_get_atsc_cvct</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsAtscVCT"><returnvalue>GstMpegtsAtscVCT</returnvalue></link>&#160;*
+gst_mpegts_section_get_atsc_cvct (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsAtscVCT"><type>GstMpegtsAtscVCT</type></link> contained in the <parameter>section</parameter>
+</para>
+<refsect3 id="gst-mpegts-section-get-atsc-cvct.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-ATSC-CVCT:CAPS"><literal>GST_MPEGTS_SECTION_ATSC_CVCT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-atsc-cvct.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstMpegtsAtscVCT"><type>GstMpegtsAtscVCT</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-get-atsc-mgt" role="function">
+<title>gst_mpegts_section_get_atsc_mgt&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-atsc-mgt"><primary>gst_mpegts_section_get_atsc_mgt</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsAtscMGT"><returnvalue>GstMpegtsAtscMGT</returnvalue></link>&#160;*
+gst_mpegts_section_get_atsc_mgt (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsAtscMGT"><type>GstMpegtsAtscMGT</type></link> contained in the <parameter>section</parameter>
+.</para>
+<refsect3 id="gst-mpegts-section-get-atsc-mgt.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-ATSC-MGT:CAPS"><literal>GST_MPEGTS_SECTION_ATSC_MGT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-atsc-mgt.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstMpegtsAtscMGT"><type>GstMpegtsAtscMGT</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-atsc-string-segment-get-string" role="function">
+<title>gst_mpegts_atsc_string_segment_get_string&#160;()</title>
+<indexterm zone="gst-mpegts-atsc-string-segment-get-string"><primary>gst_mpegts_atsc_string_segment_get_string</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_mpegts_atsc_string_segment_get_string
+                               (<parameter><link linkend="GstMpegtsAtscStringSegment"><type>GstMpegtsAtscStringSegment</type></link> *seg</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-mpegts-section-get-atsc-eit" role="function">
+<title>gst_mpegts_section_get_atsc_eit&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-atsc-eit"><primary>gst_mpegts_section_get_atsc_eit</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsAtscEIT"><returnvalue>GstMpegtsAtscEIT</returnvalue></link>&#160;*
+gst_mpegts_section_get_atsc_eit (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsAtscEIT"><type>GstMpegtsAtscEIT</type></link> contained in the <parameter>section</parameter>
+.</para>
+<refsect3 id="gst-mpegts-section-get-atsc-eit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-ATSC-EIT:CAPS"><literal>GST_MPEGTS_SECTION_ATSC_EIT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-atsc-eit.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstMpegtsAtscEIT"><type>GstMpegtsAtscEIT</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-get-atsc-ett" role="function">
+<title>gst_mpegts_section_get_atsc_ett&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-atsc-ett"><primary>gst_mpegts_section_get_atsc_ett</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsAtscETT"><returnvalue>GstMpegtsAtscETT</returnvalue></link>&#160;*
+gst_mpegts_section_get_atsc_ett (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsAtscETT"><type>GstMpegtsAtscETT</type></link> contained in the <parameter>section</parameter>
+.</para>
+<refsect3 id="gst-mpegts-section-get-atsc-ett.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-ATSC-ETT:CAPS"><literal>GST_MPEGTS_SECTION_ATSC_ETT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-atsc-ett.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstMpegtsAtscETT"><type>GstMpegtsAtscETT</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-get-atsc-stt" role="function">
+<title>gst_mpegts_section_get_atsc_stt&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-atsc-stt"><primary>gst_mpegts_section_get_atsc_stt</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsAtscSTT"><returnvalue>GstMpegtsAtscSTT</returnvalue></link>&#160;*
+gst_mpegts_section_get_atsc_stt (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsAtscSTT"><type>GstMpegtsAtscSTT</type></link> contained in the <parameter>section</parameter>
+.</para>
+<refsect3 id="gst-mpegts-section-get-atsc-stt.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-ATSC-STT:CAPS"><literal>GST_MPEGTS_SECTION_ATSC_STT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-atsc-stt.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstMpegtsAtscSTT"><type>GstMpegtsAtscSTT</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-atsc-stt-get-datetime-utc" role="function">
+<title>gst_mpegts_atsc_stt_get_datetime_utc&#160;()</title>
+<indexterm zone="gst-mpegts-atsc-stt-get-datetime-utc"><primary>gst_mpegts_atsc_stt_get_datetime_utc</primary></indexterm>
+<programlisting language="C"><link linkend="GstDateTime"><returnvalue>GstDateTime</returnvalue></link>&#160;*
+gst_mpegts_atsc_stt_get_datetime_utc (<parameter><link linkend="GstMpegtsAtscSTT"><type>GstMpegtsAtscSTT</type></link> *stt</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-ATSC-variants-of-MPEG-TS-sections.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpegtsSectionATSCTableID" role="enum">
+<title>enum GstMpegtsSectionATSCTableID</title>
+<indexterm zone="GstMpegtsSectionATSCTableID"><primary>GstMpegtsSectionATSCTableID</primary></indexterm>
+<para>Values for a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> table_id.</para>
+<para>These are the registered ATSC table_id variants.</para>
+<para>see also: <link linkend="GstMpegtsSectionTableID"><type>GstMpegtsSectionTableID</type></link></para>
+<refsect3 id="GstMpegtsSectionATSCTableID.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-MASTER-GUIDE:CAPS">GST_MTS_TABLE_ID_ATSC_MASTER_GUIDE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-TERRESTRIAL-VIRTUAL-CHANNEL:CAPS">GST_MTS_TABLE_ID_ATSC_TERRESTRIAL_VIRTUAL_CHANNEL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-CABLE-VIRTUAL-CHANNEL:CAPS">GST_MTS_TABLE_ID_ATSC_CABLE_VIRTUAL_CHANNEL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-RATING-REGION:CAPS">GST_MTS_TABLE_ID_ATSC_RATING_REGION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-EVENT-INFORMATION:CAPS">GST_MTS_TABLE_ID_ATSC_EVENT_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-CHANNEL-OR-EVENT-EXTENDED-TEXT:CAPS">GST_MTS_TABLE_ID_ATSC_CHANNEL_OR_EVENT_EXTENDED_TEXT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-SYSTEM-TIME:CAPS">GST_MTS_TABLE_ID_ATSC_SYSTEM_TIME</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-DATA-EVENT:CAPS">GST_MTS_TABLE_ID_ATSC_DATA_EVENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-DATA-SERVICE:CAPS">GST_MTS_TABLE_ID_ATSC_DATA_SERVICE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-NETWORK-RESOURCE:CAPS">GST_MTS_TABLE_ID_ATSC_NETWORK_RESOURCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-LONG-TERM-SERVICE:CAPS">GST_MTS_TABLE_ID_ATSC_LONG_TERM_SERVICE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-DIRECTED-CHANNEL-CHANGE:CAPS">GST_MTS_TABLE_ID_ATSC_DIRECTED_CHANNEL_CHANGE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-DIRECTED-CHANNEL-CHANGE-SECTION-CODE:CAPS">GST_MTS_TABLE_ID_ATSC_DIRECTED_CHANNEL_CHANGE_SECTION_CODE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-AGGREGATE-EVENT-INFORMATION:CAPS">GST_MTS_TABLE_ID_ATSC_AGGREGATE_EVENT_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-AGGREGATE-EXTENDED-TEXT:CAPS">GST_MTS_TABLE_ID_ATSC_AGGREGATE_EXTENDED_TEXT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-AGGREGATE-DATA-EVENT:CAPS">GST_MTS_TABLE_ID_ATSC_AGGREGATE_DATA_EVENT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-ATSC-SATELLITE-VIRTUAL-CHANNEL:CAPS">GST_MTS_TABLE_ID_ATSC_SATELLITE_VIRTUAL_CHANNEL</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegtsAtscVCTSource" role="struct">
+<title>struct GstMpegtsAtscVCTSource</title>
+<indexterm zone="GstMpegtsAtscVCTSource"><primary>GstMpegtsAtscVCTSource</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscVCTSource {
+  gchar    *short_name;
+  guint16   major_channel_number;
+  guint16   minor_channel_number;
+  guint8    modulation_mode;
+  guint32   carrier_frequency;
+  guint16   channel_TSID;
+  guint16   program_number;
+  /* FIXME: */
+  guint8    ETM_location;
+  gboolean  access_controlled;
+  gboolean  hidden;
+  gboolean  path_select; /* CVCT only - reserved bit in TVCT */
+  gboolean  out_of_band; /* CVCT only - reserved bit in TVCT */
+  gboolean  hide_guide;
+  /* FIXME: */
+  guint8    service_type;
+  guint16   source_id;
+  GPtrArray *descriptors;
+};
+</programlisting>
+<para>Source from a <parameter>GstMpegtsAtscVCT</parameter>
+, can be used both for TVCT and CVCT tables</para>
+<refsect3 id="GstMpegtsAtscVCTSource.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gchar"><type>gchar</type></link>&#160;*<structfield id="GstMpegtsAtscVCTSource.short-name">short_name</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.major-channel-number">major_channel_number</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.minor-channel-number">minor_channel_number</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.modulation-mode">modulation_mode</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.carrier-frequency">carrier_frequency</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.channel-TSID">channel_TSID</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.program-number">program_number</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.ETM-location">ETM_location</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.access-controlled">access_controlled</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.hidden">hidden</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.path-select">path_select</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.out-of-band">out_of_band</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.hide-guide">hide_guide</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.service-type">service_type</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscVCTSource.source-id">source_id</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscVCTSource.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> descriptors. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscVCT" role="struct">
+<title>struct GstMpegtsAtscVCT</title>
+<indexterm zone="GstMpegtsAtscVCT"><primary>GstMpegtsAtscVCT</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscVCT {
+  guint16   transport_stream_id;
+  guint8    protocol_version;
+  GPtrArray *sources;
+  GPtrArray *descriptors;
+};
+</programlisting>
+<para>Represents both:
+  Terrestrial Virtual Channel Table (A65)
+  Cable Virtual Channel Table (A65)</para>
+<refsect3 id="GstMpegtsAtscVCT.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscVCT.transport-stream-id">transport_stream_id</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscVCT.protocol-version">protocol_version</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscVCT.sources">sources</structfield>;</para></entry>
+<entry role="struct_member_description"><para> sources. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsAtscVCTSource]</emphasis></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscVCT.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> descriptors. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscMGTTableType" role="enum">
+<title>enum GstMpegtsAtscMGTTableType</title>
+<indexterm zone="GstMpegtsAtscMGTTableType"><primary>GstMpegtsAtscMGTTableType</primary></indexterm>
+<refsect3 id="GstMpegtsAtscMGTTableType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-ATSC-MGT-TABLE-TYPE-EIT0:CAPS">GST_MPEGTS_ATSC_MGT_TABLE_TYPE_EIT0</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-ATSC-MGT-TABLE-TYPE-EIT127:CAPS">GST_MPEGTS_ATSC_MGT_TABLE_TYPE_EIT127</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-ATSC-MGT-TABLE-TYPE-ETT0:CAPS">GST_MPEGTS_ATSC_MGT_TABLE_TYPE_ETT0</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-ATSC-MGT-TABLE-TYPE-ETT127:CAPS">GST_MPEGTS_ATSC_MGT_TABLE_TYPE_ETT127</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegtsAtscMGTTable" role="struct">
+<title>struct GstMpegtsAtscMGTTable</title>
+<indexterm zone="GstMpegtsAtscMGTTable"><primary>GstMpegtsAtscMGTTable</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscMGTTable {
+  guint16 table_type;
+  guint16 pid;
+  guint8  version_number;
+  guint32 number_bytes;
+  GPtrArray *descriptors;
+};
+</programlisting>
+<para>Source from a <parameter>GstMpegtsAtscMGT</parameter>
+</para>
+<refsect3 id="GstMpegtsAtscMGTTable.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscMGTTable.table-type">table_type</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscMGTTable.pid">pid</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscMGTTable.version-number">version_number</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegtsAtscMGTTable.number-bytes">number_bytes</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscMGTTable.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> descriptors. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscMGT" role="struct">
+<title>struct GstMpegtsAtscMGT</title>
+<indexterm zone="GstMpegtsAtscMGT"><primary>GstMpegtsAtscMGT</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscMGT {
+  guint8  protocol_version;
+  guint16 tables_defined;
+  GPtrArray *tables;
+  GPtrArray *descriptors;
+};
+</programlisting>
+<para>Master Guide Table (A65)</para>
+<refsect3 id="GstMpegtsAtscMGT.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscMGT.protocol-version">protocol_version</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscMGT.tables-defined">tables_defined</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscMGT.tables">tables</structfield>;</para></entry>
+<entry role="struct_member_description"><para> the tables. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsAtscMGTTable]</emphasis></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscMGT.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> descriptors. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscMultString" role="struct">
+<title>struct GstMpegtsAtscMultString</title>
+<indexterm zone="GstMpegtsAtscMultString"><primary>GstMpegtsAtscMultString</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscMultString {
+  gchar      iso_639_langcode[4];
+  GPtrArray *segments;
+};
+</programlisting>
+<refsect3 id="GstMpegtsAtscMultString.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gchar"><type>gchar</type></link>&#160;<structfield id="GstMpegtsAtscMultString.iso-639-langcode">iso_639_langcode</structfield>[4];</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscMultString.segments">segments</structfield>;</para></entry>
+<entry role="struct_member_description"><para>. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsAtscStringSegment]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscEITEvent" role="struct">
+<title>struct GstMpegtsAtscEITEvent</title>
+<indexterm zone="GstMpegtsAtscEITEvent"><primary>GstMpegtsAtscEITEvent</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscEITEvent {
+  guint16        event_id;
+  guint32        start_time;
+  guint8         etm_location;
+  guint32        length_in_seconds;
+  GPtrArray     *titles;
+
+  GPtrArray *descriptors;
+};
+</programlisting>
+<para>An ATSC EIT Event</para>
+<refsect3 id="GstMpegtsAtscEITEvent.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscEITEvent.event-id">event_id</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegtsAtscEITEvent.start-time">start_time</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscEITEvent.etm-location">etm_location</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegtsAtscEITEvent.length-in-seconds">length_in_seconds</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscEITEvent.titles">titles</structfield>;</para></entry>
+<entry role="struct_member_description"><para> the titles. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsAtscMultString]</emphasis></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscEITEvent.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> descriptors. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscEIT" role="struct">
+<title>struct GstMpegtsAtscEIT</title>
+<indexterm zone="GstMpegtsAtscEIT"><primary>GstMpegtsAtscEIT</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscEIT {
+  guint16        source_id;
+  guint8         protocol_version;
+
+  GPtrArray     *events;
+};
+</programlisting>
+<para>Event Information Table (ATSC)</para>
+<refsect3 id="GstMpegtsAtscEIT.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscEIT.source-id">source_id</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscEIT.protocol-version">protocol_version</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscEIT.events">events</structfield>;</para></entry>
+<entry role="struct_member_description"><para> Events. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsAtscEITEvent]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscETT" role="struct">
+<title>struct GstMpegtsAtscETT</title>
+<indexterm zone="GstMpegtsAtscETT"><primary>GstMpegtsAtscETT</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscETT {
+  guint16        ett_table_id_extension;
+  guint16        protocol_version;
+  guint32        etm_id;
+
+  GPtrArray     *messages;
+};
+</programlisting>
+<para>Extended Text Table (ATSC)</para>
+<refsect3 id="GstMpegtsAtscETT.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscETT.ett-table-id-extension">ett_table_id_extension</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsAtscETT.protocol-version">protocol_version</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegtsAtscETT.etm-id">etm_id</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscETT.messages">messages</structfield>;</para></entry>
+<entry role="struct_member_description"><para> List of texts. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsAtscMultString]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsAtscSTT" role="struct">
+<title>struct GstMpegtsAtscSTT</title>
+<indexterm zone="GstMpegtsAtscSTT"><primary>GstMpegtsAtscSTT</primary></indexterm>
+<programlisting language="C">struct GstMpegtsAtscSTT {
+  guint8     protocol_version;
+  guint32    system_time;
+  guint8     gps_utc_offset;
+  gboolean   ds_status;
+  guint8     ds_dayofmonth;
+  guint8     ds_hour;
+  GPtrArray *descriptors;
+
+  GstDateTime *utc_datetime;
+};
+</programlisting>
+<para>System Time Table (A65)</para>
+<refsect3 id="GstMpegtsAtscSTT.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscSTT.protocol-version">protocol_version</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegtsAtscSTT.system-time">system_time</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscSTT.gps-utc-offset">gps_utc_offset</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstMpegtsAtscSTT.ds-status">ds_status</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscSTT.ds-dayofmonth">ds_dayofmonth</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsAtscSTT.ds-hour">ds_hour</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsAtscSTT.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> descriptors. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstDateTime"><type>GstDateTime</type></link>&#160;*<structfield id="GstMpegtsAtscSTT.utc-datetime">utc_datetime</structfield>;</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+
+</refentry>

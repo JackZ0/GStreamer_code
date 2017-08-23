@@ -50,10 +50,10 @@
 <a name="gst-plugins-bad-plugins-glmosaic.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstAggregator.html#GstAggregator-struct">GstAggregator</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstVideoAggregator.html#GstVideoAggregator-struct">GstVideoAggregator</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> GstAggregator
+                    <span class="lineart">╰──</span> GstVideoAggregator
                         <span class="lineart">╰──</span> GstGLBaseMixer
                             <span class="lineart">╰──</span> GstGLMixer
                                 <span class="lineart">╰──</span> GstGLMosaic
@@ -63,7 +63,7 @@
 <a name="gst-plugins-bad-plugins-glmosaic.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstGLMosaic implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
+ <a href="../gstreamer-1.0/GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-glmosaic.description"></a><h2>Description</h2>
@@ -73,27 +73,14 @@ N &lt;= 6 because the rendering is more a like a cube than a mosaic
 Each opengl input stream is rendered on a cube face</p>
 <div class="refsect3">
 <a name="id-1.2.74.7.3"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2
-3
-4
-5
-6</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> format<span class="gtkdoc opt">=</span>YUY2 <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> glmosaic name<span class="gtkdoc opt">=</span>m <span class="gtkdoc opt">!</span> glimagesink \
-    videotestsrc pattern<span class="gtkdoc opt">=</span><span class="number">12</span> <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> format<span class="gtkdoc opt">=</span>I420<span class="gtkdoc opt">,</span> framerate<span class="gtkdoc opt">=</span><span class="number">5</span><span class="gtkdoc opt">/</span><span class="number">1</span><span class="gtkdoc opt">,</span> width<span class="gtkdoc opt">=</span><span class="number">100</span><span class="gtkdoc opt">,</span> height<span class="gtkdoc opt">=</span><span class="number">200</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span> \
-    videotestsrc <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> framerate<span class="gtkdoc opt">=</span><span class="number">15</span><span class="gtkdoc opt">/</span><span class="number">1</span><span class="gtkdoc opt">,</span> width<span class="gtkdoc opt">=</span><span class="number">1500</span><span class="gtkdoc opt">,</span> height<span class="gtkdoc opt">=</span><span class="number">1500</span> <span class="gtkdoc opt">!</span> gleffects effect<span class="gtkdoc opt">=</span><span class="number">3</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span> \
-    videotestsrc <span class="gtkdoc opt">!</span> gleffects effect<span class="gtkdoc opt">=</span><span class="number">2</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span>  \
-    videotestsrc <span class="gtkdoc opt">!</span> glfiltercube <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span> \
-    videotestsrc <span class="gtkdoc opt">!</span> gleffects effect<span class="gtkdoc opt">=</span><span class="number">6</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc ! video/x-raw, format=YUY2 ! queue ! glmosaic name=m ! glimagesink \
+    videotestsrc pattern=12 ! video/x-raw, format=I420, framerate=5/1, width=100, height=200 ! queue ! m. \
+    videotestsrc ! video/x-raw, framerate=15/1, width=1500, height=1500 ! gleffects effect=3 ! queue ! m. \
+    videotestsrc ! gleffects effect=2 ! queue ! m.  \
+    videotestsrc ! glfiltercube ! queue ! m. \
+    videotestsrc ! gleffects effect=6 ! queue ! m.
+</pre></div>
 <p>
 FBO (Frame Buffer Object) is required.</p>
 </div>

@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-h265parse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-h265parse.top_of_page" role="top_of_page">h265parse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>h265parse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-h265parse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstH265Parse--config-interval">config-interval</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstH265Parse"/><refsect1 id="gst-plugins-bad-plugins-h265parse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstH265Parse-struct">GstH265Parse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h265parse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseParse">GstBaseParse</link>
+                    <phrase role="lineart">╰──</phrase> GstH265Parse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-h265parse.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-h265parse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h265parse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h265parse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstH265Parse-struct" role="struct">
+<title>struct GstH265Parse</title>
+<indexterm zone="GstH265Parse-struct"><primary>GstH265Parse</primary></indexterm>
+<programlisting language="C">struct GstH265Parse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h265parse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstH265Parse--config-interval" role="property"><title>The <literal>“config-interval”</literal> property</title>
+<indexterm zone="GstH265Parse--config-interval"><primary>GstH265Parse:config-interval</primary></indexterm>
+<programlisting>  “config-interval”          <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Send VPS, SPS and PPS Insertion Interval in seconds (sprop parameter sets will be multiplexed in the data stream when detected.) (0 = disabled).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &lt;= 3600</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

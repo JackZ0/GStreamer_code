@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-ladspa">
+  <refmeta>
+    <refentrytitle>ladspa</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>ladspa</refname>
+    <refpurpose><anchor id="plugin-ladspa"/>LADSPA plugin</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstladspa.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.12.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>LGPL</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-amp-so-amp-mono">ladspa-amp-so-amp-mono</link></term><listitem><simpara>Mono Amplifier</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-amp-so-amp-stereo">ladspa-amp-so-amp-stereo</link></term><listitem><simpara>Stereo Amplifier</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-delay-so-delay-5s">ladspa-delay-so-delay-5s</link></term><listitem><simpara>Simple Delay Line</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-filter-so-hpf">ladspa-filter-so-hpf</link></term><listitem><simpara>Simple High Pass Filter</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-filter-so-lpf">ladspa-filter-so-lpf</link></term><listitem><simpara>Simple Low Pass Filter</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-sine-so-sine-faaa">ladspa-sine-so-sine-faaa</link></term><listitem><simpara>Sine Oscillator (Freq:audio, Amp:audio)</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-sine-so-sine-faac">ladspa-sine-so-sine-faac</link></term><listitem><simpara>Sine Oscillator (Freq:audio, Amp:control)</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspa-sine-so-sine-fcaa">ladspa-sine-so-sine-fcaa</link></term><listitem><simpara>Sine Oscillator (Freq:control, Amp:audio)</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspasrc-noise-so-noise-white">ladspasrc-noise-so-noise-white</link></term><listitem><simpara>White Noise Source</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-ladspasrc-sine-so-sine-fcac">ladspasrc-sine-so-sine-fcac</link></term><listitem><simpara>Sine Oscillator (Freq:control, Amp:control)</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

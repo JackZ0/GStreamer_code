@@ -1,0 +1,110 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-compare">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-compare.top_of_page" role="top_of_page">compare</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>compare</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-compare.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstBufferCopyFlags"><type>GstBufferCopyFlags</type></link></entry><entry role="property_name"><link linkend="GstCompare--meta">meta</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstCompareMethod"><type>GstCompareMethod</type></link></entry><entry role="property_name"><link linkend="GstCompare--method">method</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCompare--offset-ts">offset-ts</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstCompare--threshold">threshold</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCompare--upper">upper</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCompare"/><refsect1 id="gst-plugins-bad-plugins-compare.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCompare-struct">GstCompare</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compare.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstCompare
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-compare.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-compare-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compare.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compare.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCompare-struct" role="struct">
+<title>struct GstCompare</title>
+<indexterm zone="GstCompare-struct"><primary>GstCompare</primary></indexterm>
+<programlisting language="C">struct GstCompare;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-compare.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCompare--meta" role="property"><title>The <literal>“meta”</literal> property</title>
+<indexterm zone="GstCompare--meta"><primary>GstCompare:meta</primary></indexterm>
+<programlisting>  “meta”                     <link linkend="GstBufferCopyFlags"><type>GstBufferCopyFlags</type></link></programlisting>
+<para>Indicates which metadata should be compared.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_BUFFER_COPY_FLAGS|GST_BUFFER_COPY_TIMESTAMPS|GST_BUFFER_COPY_META|GST_BUFFER_COPY_MEMORY</para>
+</refsect2>
+<refsect2 id="GstCompare--method" role="property"><title>The <literal>“method”</literal> property</title>
+<indexterm zone="GstCompare--method"><primary>GstCompare:method</primary></indexterm>
+<programlisting>  “method”                   <link linkend="GstCompareMethod"><type>GstCompareMethod</type></link></programlisting>
+<para>Method to compare buffer content.</para><para>Flags: Read / Write</para>
+<para>Default value: Memory</para>
+</refsect2>
+<refsect2 id="GstCompare--offset-ts" role="property"><title>The <literal>“offset-ts”</literal> property</title>
+<indexterm zone="GstCompare--offset-ts"><primary>GstCompare:offset-ts</primary></indexterm>
+<programlisting>  “offset-ts”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Consider OFFSET and OFFSET_END part of timestamp metadata.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstCompare--threshold" role="property"><title>The <literal>“threshold”</literal> property</title>
+<indexterm zone="GstCompare--threshold"><primary>GstCompare:threshold</primary></indexterm>
+<programlisting>  “threshold”                <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Threshold beyond which to consider content different as determined by content-method.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCompare--upper" role="property"><title>The <literal>“upper”</literal> property</title>
+<indexterm zone="GstCompare--upper"><primary>GstCompare:upper</primary></indexterm>
+<programlisting>  “upper”                    <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether threshold value is upper bound or lower bound for difference measure.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

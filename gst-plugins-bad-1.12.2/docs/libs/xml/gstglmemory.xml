@@ -1,0 +1,1078 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLMemory">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLMemory.top_of_page">GstGlMemory</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGlMemory</refname>
+<refpurpose>memory subclass for GL textures</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLMemory.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-video-allocation-params-copy-data">gst_gl_video_allocation_params_copy_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-video-allocation-params-free-data">gst_gl_video_allocation_params_free_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-video-allocation-params-init-full">gst_gl_video_allocation_params_init_full</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-video-allocation-params-new">gst_gl_video_allocation_params_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-video-allocation-params-new-wrapped-data">gst_gl_video_allocation_params_new_wrapped_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-video-allocation-params-new-wrapped-gl-handle">gst_gl_video_allocation_params_new_wrapped_gl_handle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-video-allocation-params-new-wrapped-texture">gst_gl_video_allocation_params_new_wrapped_texture</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLMemoryAllocator"><returnvalue>GstGLMemoryAllocator</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-memory-allocator-get-default">gst_gl_memory_allocator_get_default</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-init-once">gst_gl_memory_init_once</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-init">gst_gl_memory_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-is-gl-memory">gst_is_gl_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-copy-into">gst_gl_memory_copy_into</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-copy-teximage">gst_gl_memory_copy_teximage</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-read-pixels">gst_gl_memory_read_pixels</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-texsubimage">gst_gl_memory_texsubimage</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-get-texture-height">gst_gl_memory_get_texture_height</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-get-texture-id">gst_gl_memory_get_texture_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-get-texture-target">gst_gl_memory_get_texture_target</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLFormat"><returnvalue>GstGLFormat</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-get-texture-format">gst_gl_memory_get_texture_format</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-get-texture-width">gst_gl_memory_get_texture_width</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-setup-buffer">gst_gl_memory_setup_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLVideoAllocationParams"/><anchor id="GstGLMemoryAllocator"/><refsect1 id="gst-plugins-bad-libs-GstGLMemory.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-MEMORY-VIDEO-FORMATS-STR:CAPS">GST_GL_MEMORY_VIDEO_FORMATS_STR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-CAPS-FEATURE-MEMORY-GL-MEMORY:CAPS">GST_CAPS_FEATURE_MEMORY_GL_MEMORY</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLVideoAllocationParams-struct">GstGLVideoAllocationParams</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-VIDEO:CAPS">GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_VIDEO</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryAllocator-struct">GstGLMemoryAllocator</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryAllocatorClass">GstGLMemoryAllocatorClass</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemory">GstGLMemory</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-MEMORY-ALLOCATOR-NAME:CAPS">GST_GL_MEMORY_ALLOCATOR_NAME</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemory.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLVideoAllocationParams
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAllocator">GstAllocator</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLMemoryAllocator
+                        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLMemoryPBOAllocator">GstGLMemoryPBOAllocator</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLMemory.description" role="desc">
+<title role="desc.title">Description</title>
+<para>GstGLMemory is a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> subclass providing support for the mapping of
+OpenGL textures.</para>
+<para><link linkend="GstGLMemory"><type>GstGLMemory</type></link> is created or wrapped through <link linkend="gst-gl-base-memory-alloc"><function>gst_gl_base_memory_alloc()</function></link>
+with <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link>.</para>
+<para>Data is uploaded or downloaded from the GPU as is necessary.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemory.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-video-allocation-params-copy-data" role="function" condition="since:1.8">
+<title>gst_gl_video_allocation_params_copy_data&#160;()</title>
+<indexterm zone="gst-gl-video-allocation-params-copy-data" role="1.8"><primary>gst_gl_video_allocation_params_copy_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_video_allocation_params_copy_data
+                               (<parameter><link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> *src_vid</parameter>,
+                                <parameter><link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> *dest_vid</parameter>);</programlisting>
+<para>Copy and set any dynamically allocated resources in <parameter>dest_vid</parameter>
+.  Intended
+for subclass usage only to chain up at the end of a subclass copy function.</para>
+<refsect3 id="gst-gl-video-allocation-params-copy-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>src_vid</para></entry>
+<entry role="parameter_description"><para>source <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> to copy from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dest_vid</para></entry>
+<entry role="parameter_description"><para>destination <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> to copy into</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-video-allocation-params-free-data" role="function" condition="since:1.8">
+<title>gst_gl_video_allocation_params_free_data&#160;()</title>
+<indexterm zone="gst-gl-video-allocation-params-free-data" role="1.8"><primary>gst_gl_video_allocation_params_free_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_video_allocation_params_free_data
+                               (<parameter><link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> *params</parameter>);</programlisting>
+<para>Unset and free any dynamically allocated resources.  Intended for subclass
+usage only to chain up at the end of a subclass free function.</para>
+<refsect3 id="gst-gl-video-allocation-params-free-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-video-allocation-params-init-full" role="function" condition="since:1.8">
+<title>gst_gl_video_allocation_params_init_full&#160;()</title>
+<indexterm zone="gst-gl-video-allocation-params-init-full" role="1.8"><primary>gst_gl_video_allocation_params_init_full</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_video_allocation_params_init_full
+                               (<parameter><link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> *params</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> struct_size</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> alloc_flags</parameter>,
+                                <parameter><link linkend="GstGLAllocationParamsCopyFunc"><type>GstGLAllocationParamsCopyFunc</type></link> copy</parameter>,
+                                <parameter><link linkend="GstGLAllocationParamsFreeFunc"><type>GstGLAllocationParamsFreeFunc</type></link> free</parameter>,
+                                <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                <parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *v_info</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>,
+                                <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *valign</parameter>,
+                                <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                                <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> wrapped_data</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> gl_handle</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                                <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<para>Intended for subclass usage</para>
+<refsect3 id="gst-gl-video-allocation-params-init-full.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> to initialize</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>struct_size</para></entry>
+<entry role="parameter_description"><para>the size of the struct in <parameter>params</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_flags</para></entry>
+<entry role="parameter_description"><para>some allocation flags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>copy</para></entry>
+<entry role="parameter_description"><para>a copy function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>free</para></entry>
+<entry role="parameter_description"><para>a free function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for <parameter>wrapped_data</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>v_info</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> for <parameter>wrapped_data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>the video plane <parameter>wrapped_data</parameter>
+represents</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>valign</para></entry>
+<entry role="parameter_description"><para> any <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> applied to symem mappings of <parameter>wrapped_data</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>wrapped_data</para></entry>
+<entry role="parameter_description"><para> the optional data pointer to wrap. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>gl_handle</para></entry>
+<entry role="parameter_description"><para>the optional OpenGL handle to wrap or 0</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-video-allocation-params-init-full.returns" role="returns">
+<title>Returns</title>
+<para> initializes <parameter>params</parameter>
+with the parameters specified</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-video-allocation-params-new" role="function" condition="since:1.8">
+<title>gst_gl_video_allocation_params_new&#160;()</title>
+<indexterm zone="gst-gl-video-allocation-params-new" role="1.8"><primary>gst_gl_video_allocation_params_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+gst_gl_video_allocation_params_new (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                    <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                    <parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *v_info</parameter>,
+                                    <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>,
+                                    <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *valign</parameter>,
+                                    <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                                    <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>);</programlisting>
+<refsect3 id="gst-gl-video-allocation-params-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for sysmem mappings of the texture. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>v_info</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> for the texture</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>the video plane of <parameter>v_info</parameter>
+to allocate</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>valign</para></entry>
+<entry role="parameter_description"><para> any <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> applied to symem mappings of the texture. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> for the created textures</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> for the created textures</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-video-allocation-params-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> for allocating <link linkend="GstGLMemory"><type>GstGLMemory</type></link>'s</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-video-allocation-params-new-wrapped-data" role="function" condition="since:1.8">
+<title>gst_gl_video_allocation_params_new_wrapped_data&#160;()</title>
+<indexterm zone="gst-gl-video-allocation-params-new-wrapped-data" role="1.8"><primary>gst_gl_video_allocation_params_new_wrapped_data</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+gst_gl_video_allocation_params_new_wrapped_data
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                <parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *v_info</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>,
+                                <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *valign</parameter>,
+                                <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                                <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> wrapped_data</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                                <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<refsect3 id="gst-gl-video-allocation-params-new-wrapped-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for <parameter>wrapped_data</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>v_info</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> for <parameter>wrapped_data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>the video plane <parameter>wrapped_data</parameter>
+represents</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>valign</para></entry>
+<entry role="parameter_description"><para> any <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> applied to symem mappings of <parameter>wrapped_data</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> for <parameter>wrapped_data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> for <parameter>wrapped_data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>wrapped_data</para></entry>
+<entry role="parameter_description"><para>the data pointer to wrap</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-video-allocation-params-new-wrapped-data.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> for wrapping <parameter>wrapped_data</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-video-allocation-params-new-wrapped-gl-handle" role="function" condition="since:1.8">
+<title>gst_gl_video_allocation_params_new_wrapped_gl_handle&#160;()</title>
+<indexterm zone="gst-gl-video-allocation-params-new-wrapped-gl-handle" role="1.8"><primary>gst_gl_video_allocation_params_new_wrapped_gl_handle</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+gst_gl_video_allocation_params_new_wrapped_gl_handle
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                <parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *v_info</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>,
+                                <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *valign</parameter>,
+                                <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                                <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> gl_handle</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                                <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<para><parameter>gl_handle</parameter>
+ is defined by the specific OpenGL handle being wrapped
+For <link linkend="GstGLMemory"><type>GstGLMemory</type></link> and <link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link> it is an OpenGL texture id.
+Other memory types may define it to require a different type of parameter.</para>
+<refsect3 id="gst-gl-video-allocation-params-new-wrapped-gl-handle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for <parameter>tex_id</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>v_info</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> for <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>the video plane <parameter>tex_id</parameter>
+represents</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>valign</para></entry>
+<entry role="parameter_description"><para> any <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> applied to symem mappings of <parameter>tex_id</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> for <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> for <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>gl_handle</para></entry>
+<entry role="parameter_description"><para>the GL handle to wrap</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-video-allocation-params-new-wrapped-gl-handle.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> for wrapping <parameter>gl_handle</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-video-allocation-params-new-wrapped-texture" role="function" condition="since:1.8">
+<title>gst_gl_video_allocation_params_new_wrapped_texture&#160;()</title>
+<indexterm zone="gst-gl-video-allocation-params-new-wrapped-texture" role="1.8"><primary>gst_gl_video_allocation_params_new_wrapped_texture</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLVideoAllocationParams"><returnvalue>GstGLVideoAllocationParams</returnvalue></link>&#160;*
+gst_gl_video_allocation_params_new_wrapped_texture
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                <parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *v_info</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>,
+                                <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *valign</parameter>,
+                                <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                                <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> tex_id</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                                <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<refsect3 id="gst-gl-video-allocation-params-new-wrapped-texture.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for <parameter>tex_id</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>v_info</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> for <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>the video plane <parameter>tex_id</parameter>
+represents</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>valign</para></entry>
+<entry role="parameter_description"><para> any <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> applied to symem mappings of <parameter>tex_id</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> for <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> for <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_id</para></entry>
+<entry role="parameter_description"><para>the GL texture to wrap</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-video-allocation-params-new-wrapped-texture.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> for wrapping <parameter>tex_id</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-allocator-get-default" role="function" condition="since:1.8">
+<title>gst_gl_memory_allocator_get_default&#160;()</title>
+<indexterm zone="gst-gl-memory-allocator-get-default" role="1.8"><primary>gst_gl_memory_allocator_get_default</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLMemoryAllocator"><returnvalue>GstGLMemoryAllocator</returnvalue></link>&#160;*
+gst_gl_memory_allocator_get_default (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-allocator-get-default.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-allocator-get-default.returns" role="returns">
+<title>Returns</title>
+<para> the default <link linkend="GstGLMemoryAllocator"><type>GstGLMemoryAllocator</type></link> supported by
+<parameter>context</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-init-once" role="function" condition="since:1.4">
+<title>gst_gl_memory_init_once&#160;()</title>
+<indexterm zone="gst-gl-memory-init-once" role="1.4"><primary>gst_gl_memory_init_once</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_memory_init_once (<parameter><type>void</type></parameter>);</programlisting>
+<para>Initializes the GL Base Texture allocator. It is safe to call this function
+multiple times.  This must be called before any other GstGLMemory operation.</para>
+<para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-memory-init" role="function" condition="since:1.8">
+<title>gst_gl_memory_init&#160;()</title>
+<indexterm zone="gst-gl-memory-init" role="1.8"><primary>gst_gl_memory_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_memory_init (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *mem</parameter>,
+                    <parameter><link linkend="GstAllocator"><type>GstAllocator</type></link> *allocator</parameter>,
+                    <parameter><link linkend="GstMemory"><type>GstMemory</type></link> *parent</parameter>,
+                    <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                    <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                    <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>,
+                    <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *params</parameter>,
+                    <parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *info</parameter>,
+                    <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>,
+                    <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *valign</parameter>,
+                    <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                    <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<para>Initializes <parameter>mem</parameter>
+ with the required parameters.  <parameter>info</parameter>
+ is assumed to have
+already have been modified with <link linkend="gst-video-info-align"><function>gst_video_info_align()</function></link>.</para>
+<refsect3 id="gst-gl-memory-init.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> to initialize</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>allocator</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstAllocator"><type>GstAllocator</type></link> to initialize with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>parent</para></entry>
+<entry role="parameter_description"><para> the parent <link linkend="GstMemory"><type>GstMemory</type></link> to initialize with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLContext"><type>GstGLContext</type></link> to initialize with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> for this <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> for this <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para> the <parameter>GstAllocationParams</parameter>
+to initialize with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>info</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> for this <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>the plane number (starting from 0) for this <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>valign</para></entry>
+<entry role="parameter_description"><para> optional <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> parameters. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-is-gl-memory" role="function" condition="since:1.4">
+<title>gst_is_gl_memory&#160;()</title>
+<indexterm zone="gst-is-gl-memory" role="1.4"><primary>gst_is_gl_memory</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_is_gl_memory (<parameter><link linkend="GstMemory"><type>GstMemory</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-is-gl-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMemory"><type>GstMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-is-gl-memory.returns" role="returns">
+<title>Returns</title>
+<para> whether the memory at <parameter>mem</parameter>
+is a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-memory-copy-into" role="function" condition="since:1.8">
+<title>gst_gl_memory_copy_into&#160;()</title>
+<indexterm zone="gst-gl-memory-copy-into" role="1.8"><primary>gst_gl_memory_copy_into</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_memory_copy_into (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>,
+                         <parameter><link linkend="guint"><type>guint</type></link> tex_id</parameter>,
+                         <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                         <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>,
+                         <parameter><link linkend="gint"><type>gint</type></link> width</parameter>,
+                         <parameter><link linkend="gint"><type>gint</type></link> height</parameter>);</programlisting>
+<para>Copies <parameter>gl_mem</parameter>
+ into the texture specfified by <parameter>tex_id</parameter>
+.  The format of <parameter>tex_id</parameter>
+
+is specified by <parameter>tex_format</parameter>
+, <parameter>width</parameter>
+ and <parameter>height</parameter>
+.</para>
+<refsect3 id="gst-gl-memory-copy-into.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_id</para></entry>
+<entry role="parameter_description"><para>OpenGL texture id</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>width of <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>height of <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-copy-into.returns" role="returns">
+<title>Returns</title>
+<para> Whether the copy suceeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-copy-teximage" role="function">
+<title>gst_gl_memory_copy_teximage&#160;()</title>
+<indexterm zone="gst-gl-memory-copy-teximage"><primary>gst_gl_memory_copy_teximage</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_memory_copy_teximage (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *src</parameter>,
+                             <parameter><link linkend="guint"><type>guint</type></link> tex_id</parameter>,
+                             <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> out_target</parameter>,
+                             <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> out_tex_format</parameter>,
+                             <parameter><link linkend="gint"><type>gint</type></link> width</parameter>,
+                             <parameter><link linkend="gint"><type>gint</type></link> height</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-memory-read-pixels" role="function" condition="since:1.8">
+<title>gst_gl_memory_read_pixels&#160;()</title>
+<indexterm zone="gst-gl-memory-read-pixels" role="1.8"><primary>gst_gl_memory_read_pixels</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_memory_read_pixels (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>,
+                           <parameter><link linkend="gpointer"><type>gpointer</type></link> read_pointer</parameter>);</programlisting>
+<para>Reads the texture in <link linkend="GstGLMemory"><type>GstGLMemory</type></link> into <parameter>read_pointer</parameter>
+ if no buffer is bound
+to <link linkend="GL-PIXEL-PACK-BUFFER:CAPS"><literal>GL_PIXEL_PACK_BUFFER</literal></link>.  Otherwise <parameter>read_pointer</parameter>
+ is the byte offset into
+the currently bound <link linkend="GL-PIXEL-PACK-BUFFER:CAPS"><literal>GL_PIXEL_PACK_BUFFER</literal></link> buffer to store the result of
+glReadPixels.  See the OpenGL specification for glReadPixels for more
+details.</para>
+<refsect3 id="gst-gl-memory-read-pixels.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>read_pointer</para></entry>
+<entry role="parameter_description"><para>the data pointer to pass to glReadPixels</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-read-pixels.returns" role="returns">
+<title>Returns</title>
+<para> whether theread operation succeeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-texsubimage" role="function" condition="since:1.8">
+<title>gst_gl_memory_texsubimage&#160;()</title>
+<indexterm zone="gst-gl-memory-texsubimage" role="1.8"><primary>gst_gl_memory_texsubimage</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_memory_texsubimage (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>,
+                           <parameter><link linkend="gpointer"><type>gpointer</type></link> read_pointer</parameter>);</programlisting>
+<para>See <link linkend="gst-gl-memory-read-pixels"><function>gst_gl_memory_read_pixels()</function></link> for what <parameter>read_pointer</parameter>
+ signifies.</para>
+<refsect3 id="gst-gl-memory-texsubimage.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>read_pointer</para></entry>
+<entry role="parameter_description"><para>the data pointer to pass to glTexSubImage</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-get-texture-height" role="function" condition="since:1.8">
+<title>gst_gl_memory_get_texture_height&#160;()</title>
+<indexterm zone="gst-gl-memory-get-texture-height" role="1.8"><primary>gst_gl_memory_get_texture_height</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+gst_gl_memory_get_texture_height (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-get-texture-height.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-get-texture-height.returns" role="returns">
+<title>Returns</title>
+<para> the texture height of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-get-texture-id" role="function" condition="since:1.8">
+<title>gst_gl_memory_get_texture_id&#160;()</title>
+<indexterm zone="gst-gl-memory-get-texture-id" role="1.8"><primary>gst_gl_memory_get_texture_id</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_gl_memory_get_texture_id (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-get-texture-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-get-texture-id.returns" role="returns">
+<title>Returns</title>
+<para> the OpenGL texture handle of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-get-texture-target" role="function" condition="since:1.8">
+<title>gst_gl_memory_get_texture_target&#160;()</title>
+<indexterm zone="gst-gl-memory-get-texture-target" role="1.8"><primary>gst_gl_memory_get_texture_target</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+gst_gl_memory_get_texture_target (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-get-texture-target.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-get-texture-target.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-get-texture-format" role="function" condition="since:1.12">
+<title>gst_gl_memory_get_texture_format&#160;()</title>
+<indexterm zone="gst-gl-memory-get-texture-format" role="1.12"><primary>gst_gl_memory_get_texture_format</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLFormat"><returnvalue>GstGLFormat</returnvalue></link>
+gst_gl_memory_get_texture_format (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-get-texture-format.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-get-texture-format.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.12">1.12</link></para></refsect2>
+<refsect2 id="gst-gl-memory-get-texture-width" role="function" condition="since:1.8">
+<title>gst_gl_memory_get_texture_width&#160;()</title>
+<indexterm zone="gst-gl-memory-get-texture-width" role="1.8"><primary>gst_gl_memory_get_texture_width</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+gst_gl_memory_get_texture_width (<parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-get-texture-width.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemory"><type>GstGLMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-get-texture-width.returns" role="returns">
+<title>Returns</title>
+<para> the texture width of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-setup-buffer" role="function" condition="since:1.8">
+<title>gst_gl_memory_setup_buffer&#160;()</title>
+<indexterm zone="gst-gl-memory-setup-buffer" role="1.8"><primary>gst_gl_memory_setup_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_memory_setup_buffer (<parameter><link linkend="GstGLMemoryAllocator"><type>GstGLMemoryAllocator</type></link> *allocator</parameter>,
+                            <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buffer</parameter>,
+                            <parameter><link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> *params</parameter>,
+                            <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> *tex_formats</parameter>,
+                            <parameter><link linkend="gpointer"><type>gpointer</type></link> *wrapped_data</parameter>,
+                            <parameter><link linkend="gsize"><type>gsize</type></link> n_wrapped_pointers</parameter>);</programlisting>
+<refsect3 id="gst-gl-memory-setup-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>allocator</para></entry>
+<entry role="parameter_description"><para>the <parameter>GstGLMemoryAllocator</parameter>
+to allocate from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstBuffer"><type>GstBuffer</type></link> to setup</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link> to allocate with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_formats</para></entry>
+<entry role="parameter_description"><para> a list of <link linkend="GstGLFormat"><type>GstGLFormat</type></link>'s to allocate with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>wrapped_data</para></entry>
+<entry role="parameter_description"><para>a list of wrapped data pointers</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_wrapped_pointers</para></entry>
+<entry role="parameter_description"><para>the number of elements in <parameter>tex_formats</parameter>
+and <parameter>wrapped_data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-setup-buffer.returns" role="returns">
+<title>Returns</title>
+<para> whether the buffer was correctly setup</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemory.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GST-GL-MEMORY-VIDEO-FORMATS-STR:CAPS" role="macro">
+<title>GST_GL_MEMORY_VIDEO_FORMATS_STR</title>
+<indexterm zone="GST-GL-MEMORY-VIDEO-FORMATS-STR:CAPS"><primary>GST_GL_MEMORY_VIDEO_FORMATS_STR</primary></indexterm>
+<programlisting language="C">#define             GST_GL_MEMORY_VIDEO_FORMATS_STR</programlisting>
+</refsect2>
+<refsect2 id="GST-CAPS-FEATURE-MEMORY-GL-MEMORY:CAPS" role="macro">
+<title>GST_CAPS_FEATURE_MEMORY_GL_MEMORY</title>
+<indexterm zone="GST-CAPS-FEATURE-MEMORY-GL-MEMORY:CAPS"><primary>GST_CAPS_FEATURE_MEMORY_GL_MEMORY</primary></indexterm>
+<programlisting language="C">#define GST_CAPS_FEATURE_MEMORY_GL_MEMORY "memory:GLMemory"
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLVideoAllocationParams-struct" role="struct">
+<title>struct GstGLVideoAllocationParams</title>
+<indexterm zone="GstGLVideoAllocationParams-struct"><primary>GstGLVideoAllocationParams</primary></indexterm>
+<programlisting language="C">struct GstGLVideoAllocationParams {
+  GstGLAllocationParams  parent;
+
+  GstVideoInfo          *v_info;
+  guint                  plane;
+  GstVideoAlignment     *valign;
+  GstGLTextureTarget     target;
+  GstGLFormat            tex_format;
+};
+</programlisting>
+<refsect3 id="GstGLVideoAllocationParams.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link>&#160;<structfield id="GstGLVideoAllocationParams-struct.parent">parent</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> structure</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link>&#160;*<structfield id="GstGLVideoAllocationParams-struct.v-info">v_info</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> to allocate</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLVideoAllocationParams-struct.plane">plane</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the video plane index to allocate</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link>&#160;*<structfield id="GstGLVideoAllocationParams-struct.valign">valign</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> to align the system representation to (may be <link linkend="NULL:CAPS"><literal>NULL</literal></link> for the default)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link>&#160;<structfield id="GstGLVideoAllocationParams-struct.target">target</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> to allocate</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLFormat"><type>GstGLFormat</type></link>&#160;<structfield id="GstGLVideoAllocationParams-struct.tex-format">tex_format</structfield>;</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-VIDEO:CAPS" role="macro">
+<title>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_VIDEO</title>
+<indexterm zone="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-VIDEO:CAPS"><primary>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_VIDEO</primary></indexterm>
+<programlisting language="C">#define GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_VIDEO (1 &lt;&lt; 3)
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLMemoryAllocator-struct" role="struct">
+<title>GstGLMemoryAllocator</title>
+<indexterm zone="GstGLMemoryAllocator-struct"><primary>GstGLMemoryAllocator</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLMemoryAllocator GstGLMemoryAllocator;</programlisting>
+<para>Opaque <link linkend="GstGLMemoryAllocator"><type>GstGLMemoryAllocator</type></link> struct</para>
+</refsect2>
+<refsect2 id="GstGLMemoryAllocatorClass" role="struct">
+<title>GstGLMemoryAllocatorClass</title>
+<indexterm zone="GstGLMemoryAllocatorClass"><primary>GstGLMemoryAllocatorClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLBaseMemoryAllocatorMapFunction       map;
+  GstGLBaseMemoryAllocatorCopyFunction      copy;
+  GstGLBaseMemoryAllocatorUnmapFunction     unmap;
+} GstGLMemoryAllocatorClass;
+</programlisting>
+<refsect3 id="GstGLMemoryAllocatorClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorMapFunction"><type>GstGLBaseMemoryAllocatorMapFunction</type></link>&#160;<structfield id="GstGLMemoryAllocatorClass.map">map</structfield>;</para></entry>
+<entry role="struct_member_description"><para>provide a custom map implementation</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorCopyFunction"><type>GstGLBaseMemoryAllocatorCopyFunction</type></link>&#160;<structfield id="GstGLMemoryAllocatorClass.copy">copy</structfield>;</para></entry>
+<entry role="struct_member_description"><para>provide a custom copy implementation</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorUnmapFunction"><type>GstGLBaseMemoryAllocatorUnmapFunction</type></link>&#160;<structfield id="GstGLMemoryAllocatorClass.unmap">unmap</structfield>;</para></entry>
+<entry role="struct_member_description"><para>provide a custom unmap implementation</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstGLMemory" role="struct">
+<title>GstGLMemory</title>
+<indexterm zone="GstGLMemory"><primary>GstGLMemory</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLBaseMemory           mem;
+
+  guint                     tex_id;
+  GstGLTextureTarget        tex_target;
+  GstGLFormat               tex_format;
+  GstVideoInfo              info;
+  GstVideoAlignment         valign;
+  guint                     plane;
+  gfloat                    tex_scaling[2];
+} GstGLMemory;
+</programlisting>
+<para>Represents information about a GL texture</para>
+<refsect3 id="GstGLMemory.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link>&#160;<structfield id="GstGLMemory.mem">mem</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLMemory.tex-id">tex_id</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the GL texture id for this memory</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link>&#160;<structfield id="GstGLMemory.tex-target">tex_target</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the GL texture target for this memory</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLFormat"><type>GstGLFormat</type></link>&#160;<structfield id="GstGLMemory.tex-format">tex_format</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link>&#160;<structfield id="GstGLMemory.info">info</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the texture's <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link>&#160;<structfield id="GstGLMemory.valign">valign</structfield>;</para></entry>
+<entry role="struct_member_description"><para>data alignment for system memory mapping</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLMemory.plane">plane</structfield>;</para></entry>
+<entry role="struct_member_description"><para>data plane in <parameter>info</parameter>
+</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gfloat"><type>gfloat</type></link>&#160;<structfield id="GstGLMemory.tex-scaling">tex_scaling</structfield>[2];</para></entry>
+<entry role="struct_member_description"><para>GL shader scaling parameters for <parameter>valign</parameter>
+and/or width/height</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GST-GL-MEMORY-ALLOCATOR-NAME:CAPS" role="macro">
+<title>GST_GL_MEMORY_ALLOCATOR_NAME</title>
+<indexterm zone="GST-GL-MEMORY-ALLOCATOR-NAME:CAPS"><primary>GST_GL_MEMORY_ALLOCATOR_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_MEMORY_ALLOCATOR_NAME   "GLMemory"
+</programlisting>
+<para>The name of the GL memory allocator</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemory.see-also">
+<title>See Also</title>
+<para><link linkend="GstMemory"><type>GstMemory</type></link>, <link linkend="GstAllocator"><type>GstAllocator</type></link>, <link linkend="GstGLBufferPool"><type>GstGLBufferPool</type></link></para>
+
+</refsect1>
+
+</refentry>

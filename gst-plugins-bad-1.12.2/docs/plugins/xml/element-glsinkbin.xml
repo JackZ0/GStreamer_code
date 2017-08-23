@@ -1,0 +1,248 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glsinkbin">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glsinkbin.top_of_page" role="top_of_page">glsinkbin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glsinkbin</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--force-aspect-ratio">force-aspect-ratio</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstElement"><type>GstElement</type></link> *</entry><entry role="property_name"><link linkend="GstGLSinkBin--sink">sink</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--async">async</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--blocksize">blocksize</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--enable-last-sample">enable-last-sample</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstSample"><type>GstSample</type></link> *</entry><entry role="property_name"><link linkend="GstGLSinkBin--last-sample">last-sample</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--max-bitrate">max-bitrate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--max-lateness">max-lateness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--qos">qos</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--render-delay">render-delay</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--sync">sync</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--throttle-time">throttle-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--ts-offset">ts-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--brightness">brightness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--contrast">contrast</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--hue">hue</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLSinkBin--saturation">saturation</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstGLSinkBin-create-element">create-element</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLSinkBin"/><refsect1 id="gst-plugins-bad-plugins-glsinkbin.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLSinkBin-struct">GstGLSinkBin</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstGLSinkBin
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLImageSinkBin">GstGLImageSinkBin</link>
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLSinkBin implements
+ <link linkend="GstChildProxy">GstChildProxy</link>,  <link linkend="GstVideoOverlay">GstVideoOverlay</link>,  <link linkend="GstNavigation">GstNavigation</link> and  <link linkend="GstColorBalance">GstColorBalance</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-glsinkbin-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLSinkBin-struct" role="struct">
+<title>struct GstGLSinkBin</title>
+<indexterm zone="GstGLSinkBin-struct"><primary>GstGLSinkBin</primary></indexterm>
+<programlisting language="C">struct GstGLSinkBin;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLSinkBin--force-aspect-ratio" role="property"><title>The <literal>“force-aspect-ratio”</literal> property</title>
+<indexterm zone="GstGLSinkBin--force-aspect-ratio"><primary>GstGLSinkBin:force-aspect-ratio</primary></indexterm>
+<programlisting>  “force-aspect-ratio”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, scaling will respect original aspect ratio.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--sink" role="property"><title>The <literal>“sink”</literal> property</title>
+<indexterm zone="GstGLSinkBin--sink"><primary>GstGLSinkBin:sink</primary></indexterm>
+<programlisting>  “sink”                     <link linkend="GstElement"><type>GstElement</type></link> *</programlisting>
+<para>The GL sink chain to use.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--async" role="property"><title>The <literal>“async”</literal> property</title>
+<indexterm zone="GstGLSinkBin--async"><primary>GstGLSinkBin:async</primary></indexterm>
+<programlisting>  “async”                    <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Go asynchronously to PAUSED.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--blocksize" role="property"><title>The <literal>“blocksize”</literal> property</title>
+<indexterm zone="GstGLSinkBin--blocksize"><primary>GstGLSinkBin:blocksize</primary></indexterm>
+<programlisting>  “blocksize”                <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Size in bytes to pull per buffer (0 = default).</para><para>Flags: Read / Write</para>
+<para>Default value: 4096</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--enable-last-sample" role="property"><title>The <literal>“enable-last-sample”</literal> property</title>
+<indexterm zone="GstGLSinkBin--enable-last-sample"><primary>GstGLSinkBin:enable-last-sample</primary></indexterm>
+<programlisting>  “enable-last-sample”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable the last-sample property.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--last-sample" role="property"><title>The <literal>“last-sample”</literal> property</title>
+<indexterm zone="GstGLSinkBin--last-sample"><primary>GstGLSinkBin:last-sample</primary></indexterm>
+<programlisting>  “last-sample”              <link linkend="GstSample"><type>GstSample</type></link> *</programlisting>
+<para>The last sample received in the sink.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--max-bitrate" role="property"><title>The <literal>“max-bitrate”</literal> property</title>
+<indexterm zone="GstGLSinkBin--max-bitrate"><primary>GstGLSinkBin:max-bitrate</primary></indexterm>
+<programlisting>  “max-bitrate”              <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>The maximum bits per second to render (0 = disabled).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--max-lateness" role="property"><title>The <literal>“max-lateness”</literal> property</title>
+<indexterm zone="GstGLSinkBin--max-lateness"><primary>GstGLSinkBin:max-lateness</primary></indexterm>
+<programlisting>  “max-lateness”             <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Maximum number of nanoseconds that a buffer can be late before it is dropped (-1 unlimited).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--qos" role="property"><title>The <literal>“qos”</literal> property</title>
+<indexterm zone="GstGLSinkBin--qos"><primary>GstGLSinkBin:qos</primary></indexterm>
+<programlisting>  “qos”                      <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Generate Quality-of-Service events upstream.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--render-delay" role="property"><title>The <literal>“render-delay”</literal> property</title>
+<indexterm zone="GstGLSinkBin--render-delay"><primary>GstGLSinkBin:render-delay</primary></indexterm>
+<programlisting>  “render-delay”             <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Additional render delay of the sink in nanoseconds.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--sync" role="property"><title>The <literal>“sync”</literal> property</title>
+<indexterm zone="GstGLSinkBin--sync"><primary>GstGLSinkBin:sync</primary></indexterm>
+<programlisting>  “sync”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sync on the clock.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--throttle-time" role="property"><title>The <literal>“throttle-time”</literal> property</title>
+<indexterm zone="GstGLSinkBin--throttle-time"><primary>GstGLSinkBin:throttle-time</primary></indexterm>
+<programlisting>  “throttle-time”            <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>The time to keep between rendered buffers (0 = disabled).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--ts-offset" role="property"><title>The <literal>“ts-offset”</literal> property</title>
+<indexterm zone="GstGLSinkBin--ts-offset"><primary>GstGLSinkBin:ts-offset</primary></indexterm>
+<programlisting>  “ts-offset”                <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Timestamp offset in nanoseconds.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--brightness" role="property"><title>The <literal>“brightness”</literal> property</title>
+<indexterm zone="GstGLSinkBin--brightness"><primary>GstGLSinkBin:brightness</primary></indexterm>
+<programlisting>  “brightness”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>brightness.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-1,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--contrast" role="property"><title>The <literal>“contrast”</literal> property</title>
+<indexterm zone="GstGLSinkBin--contrast"><primary>GstGLSinkBin:contrast</primary></indexterm>
+<programlisting>  “contrast”                 <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>contrast.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,2]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--hue" role="property"><title>The <literal>“hue”</literal> property</title>
+<indexterm zone="GstGLSinkBin--hue"><primary>GstGLSinkBin:hue</primary></indexterm>
+<programlisting>  “hue”                      <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>hue.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-1,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLSinkBin--saturation" role="property"><title>The <literal>“saturation”</literal> property</title>
+<indexterm zone="GstGLSinkBin--saturation"><primary>GstGLSinkBin:saturation</primary></indexterm>
+<programlisting>  “saturation”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>saturation.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,2]</para>
+<para>Default value: 1</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsinkbin.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLSinkBin-create-element" role="signal"><title>The <literal>“create-element”</literal> signal</title>
+<indexterm zone="GstGLSinkBin-create-element"><primary>GstGLSinkBin::create-element</primary></indexterm>
+<programlisting language="C"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*
+user_function (<link linkend="GstGLSinkBin"><type>GstGLSinkBin</type></link> *object,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data)</programlisting>
+<para>Will be emitted when we need the processing element/s that this bin will use</para>
+<refsect3 id="GstGLSinkBin-create-element.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLSinkBin"><type>GstGLSinkBin</type></link></para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLSinkBin-create-element.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstElement"><type>GstElement</type></link></para>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

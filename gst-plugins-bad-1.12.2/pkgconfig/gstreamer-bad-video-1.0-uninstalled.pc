@@ -1,0 +1,14 @@
+prefix=
+exec_prefix=
+libdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/video/.libs
+includedir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+girdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/video
+typelibdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/video
+
+Name: GStreamer bad video library, uninstalled
+Description: Bad video library for GStreamer elements, Not Installed
+Version: 1.12.2
+Requires: gstreamer-1.0 gstreamer-bad-base-1.0
+
+Libs: -L${libdir} -lgstbadvideo-1.0
+Cflags: -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs

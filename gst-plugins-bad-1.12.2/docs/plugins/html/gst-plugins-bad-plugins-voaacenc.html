@@ -66,9 +66,9 @@
 <a name="gst-plugins-bad-plugins-voaacenc.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0GstAudioEncoder.html#GstAudioEncoder-struct">GstAudioEncoder</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gst-plugins-base-libs-1.0/GstAudioEncoder.html#GstAudioEncoder-struct">GstAudioEncoder</a>
                     <span class="lineart">╰──</span> GstVoAacEnc
 </pre>
 </div>
@@ -76,7 +76,7 @@
 <a name="gst-plugins-bad-plugins-voaacenc.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstVoAacEnc implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
+ <a href="../gstreamer-1.0/GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-voaacenc.description"></a><h2>Description</h2>
@@ -84,17 +84,9 @@ GstVoAacEnc implements
 <a class="ulink" href="http://sourceforge.net/projects/opencore-amr/files/vo-aacenc/" target="_top">vo-aacenc library source file</a>.
 <div class="refsect3">
 <a name="id-1.2.131.8.4"></a><h4>Example launch line</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> filesrc location<span class="gtkdoc opt">=</span>abc<span class="gtkdoc opt">.</span>wav <span class="gtkdoc opt">!</span> wavparse <span class="gtkdoc opt">!</span> audioresample <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> voaacenc <span class="gtkdoc opt">!</span> filesink location<span class="gtkdoc opt">=</span>abc<span class="gtkdoc opt">.</span>aac</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 filesrc location=abc.wav ! wavparse ! audioresample ! audioconvert ! voaacenc ! filesink location=abc.aac
+</pre></div>
 <p></p>
 </div>
 <div class="refsynopsisdiv">

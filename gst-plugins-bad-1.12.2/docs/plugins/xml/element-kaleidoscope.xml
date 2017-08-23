@@ -1,0 +1,112 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-kaleidoscope">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-kaleidoscope.top_of_page" role="top_of_page">kaleidoscope</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>kaleidoscope</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-kaleidoscope.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstKaleidoscope--angle">angle</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstKaleidoscope--angle2">angle2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKaleidoscope--sides">sides</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstKaleidoscope"/><refsect1 id="gst-plugins-bad-plugins-kaleidoscope.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstKaleidoscope-struct">GstKaleidoscope</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kaleidoscope.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGeometricTransform">GstGeometricTransform</link>
+                            <phrase role="lineart">╰──</phrase> <link linkend="GstCircleGeometricTransform">GstCircleGeometricTransform</link>
+                                <phrase role="lineart">╰──</phrase> GstKaleidoscope
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-kaleidoscope.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The kaleidscope element applies 'kaleidoscope' geometric transform to the
+image.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! kaleidoscope ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-kaleidoscope-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kaleidoscope.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kaleidoscope.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstKaleidoscope-struct" role="struct">
+<title>struct GstKaleidoscope</title>
+<indexterm zone="GstKaleidoscope-struct"><primary>GstKaleidoscope</primary></indexterm>
+<programlisting language="C">struct GstKaleidoscope;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kaleidoscope.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstKaleidoscope--angle" role="property"><title>The <literal>“angle”</literal> property</title>
+<indexterm zone="GstKaleidoscope--angle"><primary>GstKaleidoscope:angle</primary></indexterm>
+<programlisting>  “angle”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>primary angle in radians of the kaleidoscope effect.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstKaleidoscope--angle2" role="property"><title>The <literal>“angle2”</literal> property</title>
+<indexterm zone="GstKaleidoscope--angle2"><primary>GstKaleidoscope:angle2</primary></indexterm>
+<programlisting>  “angle2”                   <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>secondary angle in radians of the kaleidoscope effect.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstKaleidoscope--sides" role="property"><title>The <literal>“sides”</literal> property</title>
+<indexterm zone="GstKaleidoscope--sides"><primary>GstKaleidoscope:sides</primary></indexterm>
+<programlisting>  “sides”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of sides of the kaleidoscope.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 2</para>
+<para>Default value: 3</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kaleidoscope.see-also">
+<title>See Also</title>
+<para>geometrictransform</para>
+
+</refsect1>
+
+</refentry>

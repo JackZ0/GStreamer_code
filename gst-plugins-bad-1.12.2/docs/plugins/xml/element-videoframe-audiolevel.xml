@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-videoframe-audiolevel">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-videoframe-audiolevel.top_of_page" role="top_of_page">videoframe-audiolevel</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>videoframe-audiolevel</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstVideoFrameAudioLevel"/><refsect1 id="gst-plugins-bad-plugins-videoframe-audiolevel.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVideoFrameAudioLevel-struct">GstVideoFrameAudioLevel</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoframe-audiolevel.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstVideoFrameAudioLevel
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-videoframe-audiolevel.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element acts like a synchronized audio/video &quot;level&quot;. It gathers
+all audio buffers sent between two video frames, and then sends a message
+that contains the RMS value of all samples for these buffers.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -m filesrc location="file.mkv" ! decodebin name=d ! "audio/x-raw" ! videoframe-audiolevel name=l ! autoaudiosink d. ! "video/x-raw" ! l. l. ! queue ! autovideosink ]|
+]]></programlisting></informalexample>
+</refsect3>
+
+<include href="element-videoframe-audiolevel-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoframe-audiolevel.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoframe-audiolevel.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstVideoFrameAudioLevel-struct" role="struct">
+<title>struct GstVideoFrameAudioLevel</title>
+<indexterm zone="GstVideoFrameAudioLevel-struct"><primary>GstVideoFrameAudioLevel</primary></indexterm>
+<programlisting language="C">struct GstVideoFrameAudioLevel;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,74 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-jifmux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-jifmux.top_of_page" role="top_of_page">jifmux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>jifmux</refname>
+<refpurpose>JPEG interchange format writer</refpurpose>
+</refnamediv>
+
+<anchor id="GstJifMux"/><refsect1 id="gst-plugins-bad-plugins-jifmux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJifMux-struct">GstJifMux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-jifmux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstJifMux
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-jifmux.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstJifMux implements
+ <link linkend="GstTagSetter">GstTagSetter</link> and  <link linkend="GstTagXmpWriter">GstTagXmpWriter</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-jifmux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Writes a JPEG image as JPEG/EXIF or JPEG/JFIF including various metadata. The
+jpeg image received on the sink pad should be minimal (e.g. should not
+contain metadata already).</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc num-buffers=1 ! jpegenc ! jifmux ! filesink location=...
+]]></programlisting></informalexample>
+<para>
+The above pipeline renders a frame, encodes to jpeg, adds metadata and writes
+it to disk.</para>
+</refsect3>
+
+<include href="element-jifmux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-jifmux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-jifmux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstJifMux-struct" role="struct">
+<title>struct GstJifMux</title>
+<indexterm zone="GstJifMux-struct"><primary>GstJifMux</primary></indexterm>
+<programlisting language="C">struct GstJifMux;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

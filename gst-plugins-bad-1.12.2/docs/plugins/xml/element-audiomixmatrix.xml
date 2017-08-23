@@ -1,0 +1,151 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-audiomixmatrix">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-audiomixmatrix.top_of_page" role="top_of_page">audiomixmatrix</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>audiomixmatrix</refname>
+<refpurpose>Transform input/output channels according to a matrix</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-audiomixmatrix.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstAudioMixMatrix--channel-mask">channel-mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstAudioMixMatrix--in-channels">in-channels</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstValueArray"><type>GstValueArray</type></link></entry><entry role="property_name"><link linkend="GstAudioMixMatrix--matrix">matrix</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GValueArray"><type>GValueArray</type></link> *</entry><entry role="property_name"><link linkend="GstAudioMixMatrix--matrix-value-array">matrix-value-array</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstAudioMixMatrixModeType"><type>GstAudioMixMatrixModeType</type></link></entry><entry role="property_name"><link linkend="GstAudioMixMatrix--mode">mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstAudioMixMatrix--out-channels">out-channels</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstAudioMixMatrix"/><refsect1 id="gst-plugins-bad-plugins-audiomixmatrix.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAudioMixMatrix-struct">GstAudioMixMatrix</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audiomixmatrix.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> GstAudioMixMatrix
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-audiomixmatrix.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element transforms a given number of input channels into a given
+number of output channels according to a given transformation matrix. The
+matrix coefficients must be between -1 and 1: the number of rows is equal
+to the number of output channels and the number of columns is equal to the
+number of input channels. In the first-channels mode, input/output channels
+are automatically negotiated and the transformation matrix is a truncated
+identity matrix.</para>
+<refsect3><title>Example matrix generation code</title><para>To generate the matrix using code:</para>
+<informalexample><programlisting><![CDATA[
+GValue v = G_VALUE_INIT;
+GValue v2 = G_VALUE_INIT;
+GValue v3 = G_VALUE_INIT;
+
+g_value_init (&v2, GST_TYPE_ARRAY);
+g_value_init (&v3, G_TYPE_DOUBLE);
+g_value_set_double (&v3, 1);
+gst_value_array_append_value (&v2, &v3);
+g_value_unset (&v3);
+[ Repeat for as many double as your input channels - unset and reinit v3 ]
+g_value_init (&v, GST_TYPE_ARRAY);
+gst_value_array_append_value (&v, &v2);
+g_value_unset (&v2);
+[ Repeat for as many v2's as your output channels - unset and reinit v2]
+g_object_set_property (G_OBJECT (audiomixmatrix), "matrix", &v);
+g_value_unset (&v);
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 audiotestsrc ! audio/x-raw,channels=4 ! audiomixmatrix in-channels=4 out-channels=2 channel-mask=-1 matrix="<<(double)1, (double)0, (double)0, (double)0>, <0.0, 1.0, 0.0, 0.0>>" ! audio/x-raw,channels=2 ! autoaudiosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-audiomixmatrix-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audiomixmatrix.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audiomixmatrix.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAudioMixMatrix-struct" role="struct">
+<title>struct GstAudioMixMatrix</title>
+<indexterm zone="GstAudioMixMatrix-struct"><primary>GstAudioMixMatrix</primary></indexterm>
+<programlisting language="C">struct GstAudioMixMatrix;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audiomixmatrix.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstAudioMixMatrix--channel-mask" role="property"><title>The <literal>“channel-mask”</literal> property</title>
+<indexterm zone="GstAudioMixMatrix--channel-mask"><primary>GstAudioMixMatrix:channel-mask</primary></indexterm>
+<programlisting>  “channel-mask”             <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Output channel mask (-1 means &quot;default for these channels&quot;).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstAudioMixMatrix--in-channels" role="property"><title>The <literal>“in-channels”</literal> property</title>
+<indexterm zone="GstAudioMixMatrix--in-channels"><primary>GstAudioMixMatrix:in-channels</primary></indexterm>
+<programlisting>  “in-channels”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>How many audio channels we have on the input side.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 64</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstAudioMixMatrix--matrix" role="property"><title>The <literal>“matrix”</literal> property</title>
+<indexterm zone="GstAudioMixMatrix--matrix"><primary>GstAudioMixMatrix:matrix</primary></indexterm>
+<programlisting>  “matrix”                   <link linkend="GstValueArray"><type>GstValueArray</type></link></programlisting>
+<para>Transformation matrix for input/output channels.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstAudioMixMatrix--matrix-value-array" role="property"><title>The <literal>“matrix-value-array”</literal> property</title>
+<indexterm zone="GstAudioMixMatrix--matrix-value-array"><primary>GstAudioMixMatrix:matrix-value-array</primary></indexterm>
+<programlisting>  “matrix-value-array”       <link linkend="GValueArray"><type>GValueArray</type></link> *</programlisting>
+<para>Transformation matrix (GValueArray) for input/output channels.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstAudioMixMatrix--mode" role="property"><title>The <literal>“mode”</literal> property</title>
+<indexterm zone="GstAudioMixMatrix--mode"><primary>GstAudioMixMatrix:mode</primary></indexterm>
+<programlisting>  “mode”                     <link linkend="GstAudioMixMatrixModeType"><type>GstAudioMixMatrixModeType</type></link></programlisting>
+<para>Whether to auto-negotiate input/output channels and matrix.</para><para>Flags: Read / Write</para>
+<para>Default value: Manual mode: please specify input/output channels and transformation matrix</para>
+</refsect2>
+<refsect2 id="GstAudioMixMatrix--out-channels" role="property"><title>The <literal>“out-channels”</literal> property</title>
+<indexterm zone="GstAudioMixMatrix--out-channels"><primary>GstAudioMixMatrix:out-channels</primary></indexterm>
+<programlisting>  “out-channels”             <link linkend="guint"><type>guint</type></link></programlisting>
+<para>How many audio channels we have on the output side.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 64</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

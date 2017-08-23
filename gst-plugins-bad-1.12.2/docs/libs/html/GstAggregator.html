@@ -44,7 +44,7 @@ aggregating their buffers.</p>
 <tbody>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPad.html#GstFlowReturn"><span class="returnvalue">GstFlowReturn</span></a>
+<a href="../gstreamer-1.0/GstPad.html#GstFlowReturn"><span class="returnvalue">GstFlowReturn</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="GstAggregator.html#gst-aggregator-finish-buffer" title="gst_aggregator_finish_buffer ()">gst_aggregator_finish_buffer</a> <span class="c_punctuation">()</span>
@@ -68,7 +68,7 @@ aggregating their buffers.</p>
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstClock.html#GstClockTime"><span class="returnvalue">GstClockTime</span></a>
+<a href="../gstreamer-1.0/GstClock.html#GstClockTime"><span class="returnvalue">GstClockTime</span></a>
 </td>
 <td class="function_name">
 <a class="link" href="GstAggregator.html#gst-aggregator-get-latency" title="gst_aggregator_get_latency ()">gst_aggregator_get_latency</a> <span class="c_punctuation">()</span>
@@ -127,8 +127,8 @@ aggregating their buffers.</p>
 <a name="GstAggregator.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
                 <span class="lineart">╰──</span> GstAggregator
                     <span class="lineart">╰──</span> <a class="link" href="GstVideoAggregator.html" title="GstVideoAggregator">GstVideoAggregator</a>
 </pre>
@@ -164,9 +164,9 @@ to ease their identification and subsequent processing.</p></li>
 <a name="GstAggregator.functions_details"></a><h2>Functions</h2>
 <div class="refsect2">
 <a name="gst-aggregator-finish-buffer"></a><h3>gst_aggregator_finish_buffer ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPad.html#GstFlowReturn"><span class="returnvalue">GstFlowReturn</span></a>
+<pre class="programlisting"><a href="../gstreamer-1.0/GstPad.html#GstFlowReturn"><span class="returnvalue">GstFlowReturn</span></a>
 gst_aggregator_finish_buffer (<em class="parameter"><code><a class="link" href="GstAggregator.html" title="GstAggregator"><span class="type">GstAggregator</span></a> *self</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBuffer.html#GstBuffer-struct"><span class="type">GstBuffer</span></a> *buffer</code></em>);</pre>
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstBuffer.html#GstBuffer"><span class="type">GstBuffer</span></a> *buffer</code></em>);</pre>
 <p>This method will push the provided output buffer downstream. If needed,
 mandatory events such as stream-start, caps, and segment events will be
 sent before pushing the buffer.</p>
@@ -186,7 +186,7 @@ sent before pushing the buffer.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>buffer</p></td>
-<td class="parameter_description"><p> the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBuffer.html#GstBuffer-struct"><span class="type">GstBuffer</span></a> to push. </p></td>
+<td class="parameter_description"><p> the <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstBuffer.html#GstBuffer"><span class="type">GstBuffer</span></a> to push. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Free data after the code is done."><span class="acronym">transfer full</span></acronym>]</span></td>
 </tr>
 </tbody>
@@ -198,7 +198,7 @@ sent before pushing the buffer.</p>
 <a name="gst-aggregator-set-src-caps"></a><h3>gst_aggregator_set_src_caps ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gst_aggregator_set_src_caps (<em class="parameter"><code><a class="link" href="GstAggregator.html" title="GstAggregator"><span class="type">GstAggregator</span></a> *self</code></em>,
-                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *caps</code></em>);</pre>
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *caps</code></em>);</pre>
 <p>Sets the caps to be used on the src pad.</p>
 <div class="refsect3">
 <a name="gst-aggregator-set-src-caps.parameters"></a><h4>Parameters</h4>
@@ -216,7 +216,7 @@ gst_aggregator_set_src_caps (<em class="parameter"><code><a class="link" href="G
 </tr>
 <tr>
 <td class="parameter_name"><p>caps</p></td>
-<td class="parameter_description"><p>The <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> to set on the src pad.</p></td>
+<td class="parameter_description"><p>The <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> to set on the src pad.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -266,11 +266,11 @@ sink pad.</p>
 <hr>
 <div class="refsect2">
 <a name="gst-aggregator-get-latency"></a><h3>gst_aggregator_get_latency ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstClock.html#GstClockTime"><span class="returnvalue">GstClockTime</span></a>
+<pre class="programlisting"><a href="../gstreamer-1.0/GstClock.html#GstClockTime"><span class="returnvalue">GstClockTime</span></a>
 gst_aggregator_get_latency (<em class="parameter"><code><a class="link" href="GstAggregator.html" title="GstAggregator"><span class="type">GstAggregator</span></a> *self</code></em>);</pre>
 <p>Retrieves the latency values reported by <em class="parameter"><code>self</code></em>
  in response to the latency
-query, or <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstClock.html#GST-CLOCK-TIME-NONE:CAPS"><code class="literal">GST_CLOCK_TIME_NONE</code></a> if there is not live source connected and the element
+query, or <a href="../gstreamer-1.0/GstClock.html#GST-CLOCK-TIME-NONE:CAPS"><code class="literal">GST_CLOCK_TIME_NONE</code></a> if there is not live source connected and the element
 will not wait for the clock.</p>
 <p>Typically only called by subclasses.</p>
 <div class="refsect3">
@@ -290,7 +290,7 @@ will not wait for the clock.</p>
 </div>
 <div class="refsect3">
 <a name="gst-aggregator-get-latency.returns"></a><h4>Returns</h4>
-<p> The latency or <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstClock.html#GST-CLOCK-TIME-NONE:CAPS"><code class="literal">GST_CLOCK_TIME_NONE</code></a> if the element does not sync</p>
+<p> The latency or <a href="../gstreamer-1.0/GstClock.html#GST-CLOCK-TIME-NONE:CAPS"><code class="literal">GST_CLOCK_TIME_NONE</code></a> if the element does not sync</p>
 </div>
 </div>
 </div>

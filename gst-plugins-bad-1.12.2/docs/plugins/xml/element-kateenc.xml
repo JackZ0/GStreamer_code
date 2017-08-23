@@ -1,0 +1,167 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-kateenc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-kateenc.top_of_page" role="top_of_page">kateenc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>kateenc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-kateenc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstKateEnc--category">category</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstKateEnc--default-spu-duration">default-spu-duration</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateEnc--granule-rate-denominator">granule-rate-denominator</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateEnc--granule-rate-numerator">granule-rate-numerator</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateEnc--granule-shift">granule-shift</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstKateEnc--keepalive-min-time">keepalive-min-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstKateEnc--language">language</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateEnc--original-canvas-height">original-canvas-height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateEnc--original-canvas-width">original-canvas-width</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstKateEnc"/><refsect1 id="gst-plugins-bad-plugins-kateenc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstKateEnc-struct">GstKateEnc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateenc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstKateEnc
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateenc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstKateEnc implements
+ <link linkend="GstTagSetter">GstTagSetter</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-kateenc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element encodes Kate streams</para>
+<ulink url="http://libkate.googlecode.com/">Kate</ulink> is a free codec
+<para>for text based data, such as subtitles. Any number of kate streams can be
+embedded in an Ogg stream.</para>
+<para>libkate (see above url) is needed to build this plugin.</para>
+<refsect3><title>Example pipeline</title><para>This encodes a DVD SPU track to a Kate stream:</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 dvdreadsrc ! dvddemux ! dvdsubparse ! kateenc category=spu-subtitles ! oggmux ! filesink location=test.ogg
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-kateenc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateenc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateenc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstKateEnc-struct" role="struct">
+<title>struct GstKateEnc</title>
+<indexterm zone="GstKateEnc-struct"><primary>GstKateEnc</primary></indexterm>
+<programlisting language="C">struct GstKateEnc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateenc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstKateEnc--category" role="property"><title>The <literal>“category”</literal> property</title>
+<indexterm zone="GstKateEnc--category"><primary>GstKateEnc:category</primary></indexterm>
+<programlisting>  “category”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The category of the stream.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstKateEnc--default-spu-duration" role="property"><title>The <literal>“default-spu-duration”</literal> property</title>
+<indexterm zone="GstKateEnc--default-spu-duration"><primary>GstKateEnc:default-spu-duration</primary></indexterm>
+<programlisting>  “default-spu-duration”     <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>The assumed max duration (in seconds) of SPUs with no duration specified.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 1.5</para>
+</refsect2>
+<refsect2 id="GstKateEnc--granule-rate-denominator" role="property"><title>The <literal>“granule-rate-denominator”</literal> property</title>
+<indexterm zone="GstKateEnc--granule-rate-denominator"><primary>GstKateEnc:granule-rate-denominator</primary></indexterm>
+<programlisting>  “granule-rate-denominator” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The denominator of the granule rate.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1000</para>
+</refsect2>
+<refsect2 id="GstKateEnc--granule-rate-numerator" role="property"><title>The <literal>“granule-rate-numerator”</literal> property</title>
+<indexterm zone="GstKateEnc--granule-rate-numerator"><primary>GstKateEnc:granule-rate-numerator</primary></indexterm>
+<programlisting>  “granule-rate-numerator”   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The numerator of the granule rate.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstKateEnc--granule-shift" role="property"><title>The <literal>“granule-shift”</literal> property</title>
+<indexterm zone="GstKateEnc--granule-shift"><primary>GstKateEnc:granule-shift</primary></indexterm>
+<programlisting>  “granule-shift”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The granule shift.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,64]</para>
+<para>Default value: 32</para>
+</refsect2>
+<refsect2 id="GstKateEnc--keepalive-min-time" role="property"><title>The <literal>“keepalive-min-time”</literal> property</title>
+<indexterm zone="GstKateEnc--keepalive-min-time"><primary>GstKateEnc:keepalive-min-time</primary></indexterm>
+<programlisting>  “keepalive-min-time”       <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Minimum time to emit keepalive packets (0 disables keepalive packets).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 2.5</para>
+</refsect2>
+<refsect2 id="GstKateEnc--language" role="property"><title>The <literal>“language”</literal> property</title>
+<indexterm zone="GstKateEnc--language"><primary>GstKateEnc:language</primary></indexterm>
+<programlisting>  “language”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The language of the stream (e.g. &quot;fr&quot; or &quot;fr_FR&quot; for French).</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstKateEnc--original-canvas-height" role="property"><title>The <literal>“original-canvas-height”</literal> property</title>
+<indexterm zone="GstKateEnc--original-canvas-height"><primary>GstKateEnc:original-canvas-height</primary></indexterm>
+<programlisting>  “original-canvas-height”   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The height of the canvas this stream was authored for (0 is unspecified).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstKateEnc--original-canvas-width" role="property"><title>The <literal>“original-canvas-width”</literal> property</title>
+<indexterm zone="GstKateEnc--original-canvas-width"><primary>GstKateEnc:original-canvas-width</primary></indexterm>
+<programlisting>  “original-canvas-width”    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The width of the canvas this stream was authored for (0 is unspecified).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kateenc.see-also">
+<title>See Also</title>
+<para>oggmux</para>
+
+</refsect1>
+
+</refentry>

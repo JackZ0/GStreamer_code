@@ -1,0 +1,126 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-sdpdemux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-sdpdemux.top_of_page" role="top_of_page">sdpdemux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>sdpdemux</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-sdpdemux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSDPDemux--debug">debug</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstSDPDemux--latency">latency</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstSDPDemux--timeout">timeout</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSDPDemux--redirect">redirect</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstSDPDemux"/><refsect1 id="gst-plugins-bad-plugins-sdpdemux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstSDPDemux-struct">GstSDPDemux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-sdpdemux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstSDPDemux
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-sdpdemux.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstSDPDemux implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-sdpdemux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>sdpdemux currently understands SDP as the input format of the session description.
+For each stream listed in the SDP a new stream_%u pad will be created
+with caps derived from the SDP media description. This is a caps of mime type
+&quot;application/x-rtp&quot; that can be connected to any available RTP depayloader
+element.</para>
+<para>sdpdemux will internally instantiate an RTP session manager element
+that will handle the RTCP messages to and from the server, jitter removal,
+packet reordering along with providing a clock for the pipeline.</para>
+<para>sdpdemux acts like a live element and will therefore only generate data in the
+PLAYING state.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 souphttpsrc location=http://some.server/session.sdp ! sdpdemux ! fakesink
+]]></programlisting></informalexample>
+<para> Establish a connection to an HTTP server that contains an SDP session description
+that gets parsed by sdpdemux and send the raw RTP packets to a fakesink.</para>
+</refsect3>
+
+<include href="element-sdpdemux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-sdpdemux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-sdpdemux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstSDPDemux-struct" role="struct">
+<title>struct GstSDPDemux</title>
+<indexterm zone="GstSDPDemux-struct"><primary>GstSDPDemux</primary></indexterm>
+<programlisting language="C">struct GstSDPDemux;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-sdpdemux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstSDPDemux--debug" role="property"><title>The <literal>“debug”</literal> property</title>
+<indexterm zone="GstSDPDemux--debug"><primary>GstSDPDemux:debug</primary></indexterm>
+<programlisting>  “debug”                    <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Dump request and response messages to stdout.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstSDPDemux--latency" role="property"><title>The <literal>“latency”</literal> property</title>
+<indexterm zone="GstSDPDemux--latency"><primary>GstSDPDemux:latency</primary></indexterm>
+<programlisting>  “latency”                  <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Amount of ms to buffer.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 200</para>
+</refsect2>
+<refsect2 id="GstSDPDemux--timeout" role="property"><title>The <literal>“timeout”</literal> property</title>
+<indexterm zone="GstSDPDemux--timeout"><primary>GstSDPDemux:timeout</primary></indexterm>
+<programlisting>  “timeout”                  <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Fail transport after UDP timeout microseconds (0 = disabled).</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 10000000</para>
+</refsect2>
+<refsect2 id="GstSDPDemux--redirect" role="property"><title>The <literal>“redirect”</literal> property</title>
+<indexterm zone="GstSDPDemux--redirect"><primary>GstSDPDemux:redirect</primary></indexterm>
+<programlisting>  “redirect”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sends a redirection message instead of using a custom session element.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

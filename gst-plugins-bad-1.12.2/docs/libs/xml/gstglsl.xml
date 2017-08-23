@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLSL">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLSL.top_of_page">GstGLSL</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLSL</refname>
+<refpurpose>helpers for dealing with OpenGL shaders</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLSL.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GQuark"><returnvalue>GQuark</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-error-quark">gst_glsl_error_quark</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLProfile"><returnvalue>GstGLSLProfile</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-profile-from-string">gst_glsl_profile_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-profile-to-string">gst_glsl_profile_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLVersion"><returnvalue>GstGLSLVersion</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-version-from-string">gst_glsl_version_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-version-to-string">gst_glsl_version_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-version-profile-from-string">gst_glsl_version_profile_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-version-profile-to-string">gst_glsl_version_profile_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-string-get-version-profile">gst_glsl_string_get_version_profile</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-supports-glsl-profile-version">gst_gl_context_supports_glsl_profile_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLVersion"><returnvalue>GstGLSLVersion</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-version-to-glsl-version">gst_gl_version_to_glsl_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSL.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GLSL-ERROR:CAPS">GST_GLSL_ERROR</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLSLError">GstGLSLError</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLSLProfile">GstGLSLProfile</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLSLVersion">GstGLSLVersion</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLSL.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSL.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-glsl-error-quark" role="function">
+<title>gst_glsl_error_quark&#160;()</title>
+<indexterm zone="gst-glsl-error-quark"><primary>gst_glsl_error_quark</primary></indexterm>
+<programlisting language="C"><link linkend="GQuark"><returnvalue>GQuark</returnvalue></link>
+gst_glsl_error_quark (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-profile-from-string" role="function">
+<title>gst_glsl_profile_from_string&#160;()</title>
+<indexterm zone="gst-glsl-profile-from-string"><primary>gst_glsl_profile_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLProfile"><returnvalue>GstGLSLProfile</returnvalue></link>
+gst_glsl_profile_from_string (<parameter>const <link linkend="gchar"><type>gchar</type></link> *string</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-profile-to-string" role="function">
+<title>gst_glsl_profile_to_string&#160;()</title>
+<indexterm zone="gst-glsl-profile-to-string"><primary>gst_glsl_profile_to_string</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_glsl_profile_to_string (<parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> profile</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-version-from-string" role="function">
+<title>gst_glsl_version_from_string&#160;()</title>
+<indexterm zone="gst-glsl-version-from-string"><primary>gst_glsl_version_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLVersion"><returnvalue>GstGLSLVersion</returnvalue></link>
+gst_glsl_version_from_string (<parameter>const <link linkend="gchar"><type>gchar</type></link> *string</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-version-to-string" role="function">
+<title>gst_glsl_version_to_string&#160;()</title>
+<indexterm zone="gst-glsl-version-to-string"><primary>gst_glsl_version_to_string</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_glsl_version_to_string (<parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> version</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-version-profile-from-string" role="function">
+<title>gst_glsl_version_profile_from_string&#160;()</title>
+<indexterm zone="gst-glsl-version-profile-from-string"><primary>gst_glsl_version_profile_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_glsl_version_profile_from_string (<parameter>const <link linkend="gchar"><type>gchar</type></link> *string</parameter>,
+                                      <parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> *version</parameter>,
+                                      <parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> *profile</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-version-profile-to-string" role="function">
+<title>gst_glsl_version_profile_to_string&#160;()</title>
+<indexterm zone="gst-glsl-version-profile-to-string"><primary>gst_glsl_version_profile_to_string</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_glsl_version_profile_to_string (<parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> version</parameter>,
+                                    <parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> profile</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-string-get-version-profile" role="function">
+<title>gst_glsl_string_get_version_profile&#160;()</title>
+<indexterm zone="gst-glsl-string-get-version-profile"><primary>gst_glsl_string_get_version_profile</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_glsl_string_get_version_profile (<parameter>const <link linkend="gchar"><type>gchar</type></link> *s</parameter>,
+                                     <parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> *version</parameter>,
+                                     <parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> *profile</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-context-supports-glsl-profile-version" role="function">
+<title>gst_gl_context_supports_glsl_profile_version&#160;()</title>
+<indexterm zone="gst-gl-context-supports-glsl-profile-version"><primary>gst_gl_context_supports_glsl_profile_version</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_supports_glsl_profile_version
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> version</parameter>,
+                                <parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> profile</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-version-to-glsl-version" role="function">
+<title>gst_gl_version_to_glsl_version&#160;()</title>
+<indexterm zone="gst-gl-version-to-glsl-version"><primary>gst_gl_version_to_glsl_version</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLVersion"><returnvalue>GstGLSLVersion</returnvalue></link>
+gst_gl_version_to_glsl_version (<parameter><link linkend="GstGLAPI"><type>GstGLAPI</type></link> gl_api</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> maj</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> min</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSL.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GST-GLSL-ERROR:CAPS" role="macro">
+<title>GST_GLSL_ERROR</title>
+<indexterm zone="GST-GLSL-ERROR:CAPS"><primary>GST_GLSL_ERROR</primary></indexterm>
+<programlisting language="C">#define GST_GLSL_ERROR (gst_glsl_error_quark ())
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLSLError" role="enum" condition="since:1.8">
+<title>enum GstGLSLError</title>
+<indexterm zone="GstGLSLError" role="1.8"><primary>GstGLSLError</primary></indexterm>
+<para>Compilation stage that caused an error</para>
+<refsect3 id="GstGLSLError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-ERROR-COMPILE:CAPS">GST_GLSL_ERROR_COMPILE</para></entry>
+<entry role="enum_member_description"><para>Compilation error occured</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-ERROR-LINK:CAPS">GST_GLSL_ERROR_LINK</para></entry>
+<entry role="enum_member_description"><para>Link error occured</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-ERROR-PROGRAM:CAPS">GST_GLSL_ERROR_PROGRAM</para></entry>
+<entry role="enum_member_description"><para>General program error occured</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLSLProfile" role="enum" condition="since:1.8">
+<title>enum GstGLSLProfile</title>
+<indexterm zone="GstGLSLProfile" role="1.8"><primary>GstGLSLProfile</primary></indexterm>
+<para>GLSL profiles</para>
+<refsect3 id="GstGLSLProfile.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-PROFILE-NONE:CAPS">GST_GLSL_PROFILE_NONE</para></entry>
+<entry role="enum_member_description"><para>no profile supported/available</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-PROFILE-ES:CAPS">GST_GLSL_PROFILE_ES</para></entry>
+<entry role="enum_member_description"><para>OpenGL|ES profile</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-PROFILE-CORE:CAPS">GST_GLSL_PROFILE_CORE</para></entry>
+<entry role="enum_member_description"><para>OpenGL core profile</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-PROFILE-COMPATIBILITY:CAPS">GST_GLSL_PROFILE_COMPATIBILITY</para></entry>
+<entry role="enum_member_description"><para>OpenGL compatibility profile</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-PROFILE-ANY:CAPS">GST_GLSL_PROFILE_ANY</para></entry>
+<entry role="enum_member_description"><para>any OpenGL/OpenGL|ES profile</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLSLVersion" role="enum" condition="since:1.8">
+<title>enum GstGLSLVersion</title>
+<indexterm zone="GstGLSLVersion" role="1.8"><primary>GstGLSLVersion</primary></indexterm>
+<para>GLSL version list</para>
+<refsect3 id="GstGLSLVersion.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-NONE:CAPS">GST_GLSL_VERSION_NONE</para></entry>
+<entry role="enum_member_description"><para>no version</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-100:CAPS">GST_GLSL_VERSION_100</para></entry>
+<entry role="enum_member_description"><para>version 100 (only valid for ES)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-110:CAPS">GST_GLSL_VERSION_110</para></entry>
+<entry role="enum_member_description"><para>version 110 (only valid for compatibility desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-120:CAPS">GST_GLSL_VERSION_120</para></entry>
+<entry role="enum_member_description"><para>version 120 (only valid for compatibility desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-130:CAPS">GST_GLSL_VERSION_130</para></entry>
+<entry role="enum_member_description"><para>version 130 (only valid for compatibility desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-140:CAPS">GST_GLSL_VERSION_140</para></entry>
+<entry role="enum_member_description"><para>version 140 (only valid for compatibility desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-150:CAPS">GST_GLSL_VERSION_150</para></entry>
+<entry role="enum_member_description"><para>version 150 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-300:CAPS">GST_GLSL_VERSION_300</para></entry>
+<entry role="enum_member_description"><para>version 300 (only valid for ES)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-310:CAPS">GST_GLSL_VERSION_310</para></entry>
+<entry role="enum_member_description"><para>version 310 (only valid for ES)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-320:CAPS">GST_GLSL_VERSION_320</para></entry>
+<entry role="enum_member_description"><para>version 320 (only valid for ES)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-330:CAPS">GST_GLSL_VERSION_330</para></entry>
+<entry role="enum_member_description"><para>version 330 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-400:CAPS">GST_GLSL_VERSION_400</para></entry>
+<entry role="enum_member_description"><para>version 400 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-410:CAPS">GST_GLSL_VERSION_410</para></entry>
+<entry role="enum_member_description"><para>version 410 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-420:CAPS">GST_GLSL_VERSION_420</para></entry>
+<entry role="enum_member_description"><para>version 420 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-430:CAPS">GST_GLSL_VERSION_430</para></entry>
+<entry role="enum_member_description"><para>version 430 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-440:CAPS">GST_GLSL_VERSION_440</para></entry>
+<entry role="enum_member_description"><para>version 440 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GLSL-VERSION-450:CAPS">GST_GLSL_VERSION_450</para></entry>
+<entry role="enum_member_description"><para>version 450 (valid for compatibility/core desktop GL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLSL.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link>, <link linkend="GstGLShader"><type>GstGLShader</type></link></para>
+
+</refsect1>
+
+</refentry>

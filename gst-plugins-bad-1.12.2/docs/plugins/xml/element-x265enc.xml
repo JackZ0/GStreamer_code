@@ -1,0 +1,127 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-x265enc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-x265enc.top_of_page" role="top_of_page">x265enc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>x265enc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-x265enc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstX265Enc--bitrate">bitrate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstX265LogLevel"><type>GstX265LogLevel</type></link></entry><entry role="property_name"><link linkend="GstX265Enc--log-level">log-level</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstX265Enc--option-string">option-string</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstX265Enc--qp">qp</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstX265SpeedPreset"><type>GstX265SpeedPreset</type></link></entry><entry role="property_name"><link linkend="GstX265Enc--speed-preset">speed-preset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstX265Tune"><type>GstX265Tune</type></link></entry><entry role="property_name"><link linkend="GstX265Enc--tune">tune</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstX265Enc"/><refsect1 id="gst-plugins-bad-plugins-x265enc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstX265Enc-struct">GstX265Enc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-x265enc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstVideoEncoder">GstVideoEncoder</link>
+                    <phrase role="lineart">╰──</phrase> GstX265Enc
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-x265enc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstX265Enc implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-x265enc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element encodes raw video into H265 compressed data.</para>
+
+<include href="element-x265enc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-x265enc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-x265enc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstX265Enc-struct" role="struct">
+<title>struct GstX265Enc</title>
+<indexterm zone="GstX265Enc-struct"><primary>GstX265Enc</primary></indexterm>
+<programlisting language="C">struct GstX265Enc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-x265enc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstX265Enc--bitrate" role="property"><title>The <literal>“bitrate”</literal> property</title>
+<indexterm zone="GstX265Enc--bitrate"><primary>GstX265Enc:bitrate</primary></indexterm>
+<programlisting>  “bitrate”                  <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Bitrate in kbit/sec.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,102400]</para>
+<para>Default value: 2048</para>
+</refsect2>
+<refsect2 id="GstX265Enc--log-level" role="property"><title>The <literal>“log-level”</literal> property</title>
+<indexterm zone="GstX265Enc--log-level"><primary>GstX265Enc:log-level</primary></indexterm>
+<programlisting>  “log-level”                <link linkend="GstX265LogLevel"><type>GstX265LogLevel</type></link></programlisting>
+<para>x265 log level.</para><para>Flags: Read / Write</para>
+<para>Default value: No logging</para>
+</refsect2>
+<refsect2 id="GstX265Enc--option-string" role="property"><title>The <literal>“option-string”</literal> property</title>
+<indexterm zone="GstX265Enc--option-string"><primary>GstX265Enc:option-string</primary></indexterm>
+<programlisting>  “option-string”            <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>String of x264 options (overridden by element properties).</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstX265Enc--qp" role="property"><title>The <literal>“qp”</literal> property</title>
+<indexterm zone="GstX265Enc--qp"><primary>GstX265Enc:qp</primary></indexterm>
+<programlisting>  “qp”                       <link linkend="gint"><type>gint</type></link></programlisting>
+<para>QP for P slices in (implied) CQP mode (-1 = disabled).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,51]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstX265Enc--speed-preset" role="property"><title>The <literal>“speed-preset”</literal> property</title>
+<indexterm zone="GstX265Enc--speed-preset"><primary>GstX265Enc:speed-preset</primary></indexterm>
+<programlisting>  “speed-preset”             <link linkend="GstX265SpeedPreset"><type>GstX265SpeedPreset</type></link></programlisting>
+<para>Preset name for speed/quality tradeoff options.</para><para>Flags: Read / Write</para>
+<para>Default value: medium</para>
+</refsect2>
+<refsect2 id="GstX265Enc--tune" role="property"><title>The <literal>“tune”</literal> property</title>
+<indexterm zone="GstX265Enc--tune"><primary>GstX265Enc:tune</primary></indexterm>
+<programlisting>  “tune”                     <link linkend="GstX265Tune"><type>GstX265Tune</type></link></programlisting>
+<para>Preset name for tuning options.</para><para>Flags: Read / Write</para>
+<para>Default value: ssim</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

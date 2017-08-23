@@ -1,0 +1,16 @@
+# the standard variables don't make sense for an uninstalled copy
+prefix=
+exec_prefix=
+libdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/allocators/.libs
+# includedir is builddir because it is used to find gstconfig.h in places
+includedir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+girdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/allocators
+typelibdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/allocators
+
+Name: GStreamer Bad Allocators Library, Uninstalled
+Description: Bad Allocators implementation, uninstalled
+Version: 1.12.2
+Requires: gstreamer-1.0
+Libs: -L${libdir} -lgstbadallocators-1.0
+Cflags: -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+

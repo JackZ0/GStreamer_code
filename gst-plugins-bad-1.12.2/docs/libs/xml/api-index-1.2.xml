@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<indexdiv id="api-index-1.2">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="gst-buffer-add-mpeg-video-meta"><link linkend="gst-buffer-add-mpeg-video-meta">gst_buffer_add_mpeg_video_meta</link>, function in <link linkend="gst-plugins-bad-libs-gstmpegvideometa">gstmpegvideometa</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>I</title>
+<indexentry><primaryie linkends="gst-insert-bin-append"><link linkend="gst-insert-bin-append">gst_insert_bin_append</link>, function in <link linkend="gst-plugins-bad-libs-GstInsertbin">GstInsertbin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-insert-bin-insert-after"><link linkend="gst-insert-bin-insert-after">gst_insert_bin_insert_after</link>, function in <link linkend="gst-plugins-bad-libs-GstInsertbin">GstInsertbin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-insert-bin-insert-before"><link linkend="gst-insert-bin-insert-before">gst_insert_bin_insert_before</link>, function in <link linkend="gst-plugins-bad-libs-GstInsertbin">GstInsertbin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-insert-bin-new"><link linkend="gst-insert-bin-new">gst_insert_bin_new</link>, function in <link linkend="gst-plugins-bad-libs-GstInsertbin">GstInsertbin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-insert-bin-prepend"><link linkend="gst-insert-bin-prepend">gst_insert_bin_prepend</link>, function in <link linkend="gst-plugins-bad-libs-GstInsertbin">GstInsertbin</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-insert-bin-remove"><link linkend="gst-insert-bin-remove">gst_insert_bin_remove</link>, function in <link linkend="gst-plugins-bad-libs-GstInsertbin">GstInsertbin</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>M</title>
+<indexentry><primaryie linkends="GstMpegVideoMeta"><link linkend="GstMpegVideoMeta">GstMpegVideoMeta</link>, struct in <link linkend="gst-plugins-bad-libs-gstmpegvideometa">gstmpegvideometa</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-quant-matrix-get-raster-from-zigzag"><link linkend="gst-mpeg-video-quant-matrix-get-raster-from-zigzag">gst_mpeg_video_quant_matrix_get_raster_from_zigzag</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-mpeg-video-quant-matrix-get-zigzag-from-raster"><link linkend="gst-mpeg-video-quant-matrix-get-zigzag-from-raster">gst_mpeg_video_quant_matrix_get_zigzag_from_raster</link>, function in <link linkend="gst-plugins-bad-libs-mpegvideoparser">mpegvideoparser</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

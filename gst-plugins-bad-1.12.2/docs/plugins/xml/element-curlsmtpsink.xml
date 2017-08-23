@@ -1,0 +1,147 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-curlsmtpsink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-curlsmtpsink.top_of_page" role="top_of_page">curlsmtpsink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>curlsmtpsink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-curlsmtpsink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--content-type">content-type</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--mail-from">mail-from</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--mail-rcpt">mail-rcpt</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--message-body">message-body</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCurlSmtpSink--nbr-attachments">nbr-attachments</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--pop-location">pop-location</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--pop-passwd">pop-passwd</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--pop-user">pop-user</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlSmtpSink--subject">subject</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCurlSmtpSink--use-ssl">use-ssl</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCurlSmtpSink"/><refsect1 id="gst-plugins-bad-plugins-curlsmtpsink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCurlSmtpSink-struct">GstCurlSmtpSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlsmtpsink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstCurlBaseSink">GstCurlBaseSink</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstCurlTlsSink">GstCurlTlsSink</link>
+                            <phrase role="lineart">╰──</phrase> GstCurlSmtpSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-curlsmtpsink.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-curlsmtpsink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlsmtpsink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlsmtpsink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCurlSmtpSink-struct" role="struct">
+<title>struct GstCurlSmtpSink</title>
+<indexterm zone="GstCurlSmtpSink-struct"><primary>GstCurlSmtpSink</primary></indexterm>
+<programlisting language="C">struct GstCurlSmtpSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlsmtpsink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCurlSmtpSink--content-type" role="property"><title>The <literal>“content-type”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--content-type"><primary>GstCurlSmtpSink:content-type</primary></indexterm>
+<programlisting>  “content-type”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The mime type of the body of the request.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--mail-from" role="property"><title>The <literal>“mail-from”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--mail-from"><primary>GstCurlSmtpSink:mail-from</primary></indexterm>
+<programlisting>  “mail-from”                <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Single address that the given mail should get sent from.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--mail-rcpt" role="property"><title>The <literal>“mail-rcpt”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--mail-rcpt"><primary>GstCurlSmtpSink:mail-rcpt</primary></indexterm>
+<programlisting>  “mail-rcpt”                <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Single address that the given mail should get sent to.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--message-body" role="property"><title>The <literal>“message-body”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--message-body"><primary>GstCurlSmtpSink:message-body</primary></indexterm>
+<programlisting>  “message-body”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Message body.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--nbr-attachments" role="property"><title>The <literal>“nbr-attachments”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--nbr-attachments"><primary>GstCurlSmtpSink:nbr-attachments</primary></indexterm>
+<programlisting>  “nbr-attachments”          <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number attachments to send.</para><para>Flags: Read / Write</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--pop-location" role="property"><title>The <literal>“pop-location”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--pop-location"><primary>GstCurlSmtpSink:pop-location</primary></indexterm>
+<programlisting>  “pop-location”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>URL POP used for authentication.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--pop-passwd" role="property"><title>The <literal>“pop-passwd”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--pop-passwd"><primary>GstCurlSmtpSink:pop-passwd</primary></indexterm>
+<programlisting>  “pop-passwd”               <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>User password to use for POP server authentication.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--pop-user" role="property"><title>The <literal>“pop-user”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--pop-user"><primary>GstCurlSmtpSink:pop-user</primary></indexterm>
+<programlisting>  “pop-user”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>User name to use for POP server authentication.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--subject" role="property"><title>The <literal>“subject”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--subject"><primary>GstCurlSmtpSink:subject</primary></indexterm>
+<programlisting>  “subject”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Mail subject.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstCurlSmtpSink--use-ssl" role="property"><title>The <literal>“use-ssl”</literal> property</title>
+<indexterm zone="GstCurlSmtpSink--use-ssl"><primary>GstCurlSmtpSink:use-ssl</primary></indexterm>
+<programlisting>  “use-ssl”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Use SSL/TLS for the connection.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

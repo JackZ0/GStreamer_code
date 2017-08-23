@@ -56,8 +56,8 @@
 <a name="GstVideoAggregator.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
                 <span class="lineart">╰──</span> <a class="link" href="GstAggregator.html" title="GstAggregator">GstAggregator</a>
                     <span class="lineart">╰──</span> GstVideoAggregator
 </pre>
@@ -66,7 +66,7 @@
 <a name="GstVideoAggregator.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstVideoAggregator implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
+ <a href="../gstreamer-1.0/GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
 </div>
 <div class="refsect1">
 <a name="GstVideoAggregator.description"></a><h2>Description</h2>
@@ -100,8 +100,8 @@ biggest incoming video stream and the framerate of the fastest incoming one.</p>
 <col width="200px" class="struct_members_annotations">
 </colgroup>
 <tbody><tr>
-<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> <em class="structfield"><code><a name="GstVideoAggregator-struct.info"></a>info</code></em>;</p></td>
-<td class="struct_member_description"><p>The <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> representing the currently set
+<td class="struct_member_name"><p><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> <em class="structfield"><code><a name="GstVideoAggregator-struct.info"></a>info</code></em>;</p></td>
+<td class="struct_member_description"><p>The <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> representing the currently set
 srcpad caps.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr></tbody>
@@ -143,7 +143,7 @@ srcpad caps.</p></td>
 <tr>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="GstVideoAggregatorClass.update-caps"></a>update_caps</code></em> ()</p></td>
 <td class="struct_member_description"><p>Optional.
-Lets subclasses update the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> representing
+Lets subclasses update the <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> representing
 the src pad caps before usage.  Return <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a> to indicate failure.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
@@ -161,8 +161,8 @@ is not guaranteed to be writable.</p></td>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="GstVideoAggregatorClass.aggregate-frames"></a>aggregate_frames</code></em> ()</p></td>
 <td class="struct_member_description"><p>Lets subclasses aggregate frames that are ready. Subclasses
 should iterate the GstElement.sinkpads and use the already
-mapped <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoFrame"><span class="type">GstVideoFrame</span></a> from GstVideoAggregatorPad.aggregated_frame
-or directly use the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBuffer.html#GstBuffer-struct"><span class="type">GstBuffer</span></a> from GstVideoAggregatorPad.buffer
+mapped <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoFrame"><span class="type">GstVideoFrame</span></a> from GstVideoAggregatorPad.aggregated_frame
+or directly use the <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstBuffer.html#GstBuffer"><span class="type">GstBuffer</span></a> from GstVideoAggregatorPad.buffer
 if it needs to map the buffer in a special way. The result of the
 aggregation should land in <em class="parameter"><code>outbuffer</code></em>
 .</p></td>
@@ -171,7 +171,7 @@ aggregation should land in <em class="parameter"><code>outbuffer</code></em>
 <tr>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="GstVideoAggregatorClass.get-output-buffer"></a>get_output_buffer</code></em> ()</p></td>
 <td class="struct_member_description"><p>Optional.
-Lets subclasses provide a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBuffer.html#GstBuffer-struct"><span class="type">GstBuffer</span></a> to be used as <em class="parameter"><code>outbuffer</code></em>
+Lets subclasses provide a <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstBuffer.html#GstBuffer"><span class="type">GstBuffer</span></a> to be used as <em class="parameter"><code>outbuffer</code></em>
 of
 the <span class="type">aggregate_frames</span> vmethod.</p></td>
 <td class="struct_member_annotations"> </td>
@@ -189,7 +189,7 @@ Lets subclasses decide of the best common format to use.</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *<em class="structfield"><code><a name="GstVideoAggregatorClass.sink-non-alpha-caps"></a>sink_non_alpha_caps</code></em>;</p></td>
+<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *<em class="structfield"><code><a name="GstVideoAggregatorClass.sink-non-alpha-caps"></a>sink_non_alpha_caps</code></em>;</p></td>
 <td> </td>
 <td> </td>
 </tr>

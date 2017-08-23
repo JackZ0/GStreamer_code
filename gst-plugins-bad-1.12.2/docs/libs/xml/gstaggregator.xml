@@ -1,0 +1,431 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstAggregator">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstAggregator.top_of_page">GstAggregator</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstAggregator</refname>
+<refpurpose>manages a set of pads with the purpose of
+aggregating their buffers.</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstAggregator.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstFlowReturn"><returnvalue>GstFlowReturn</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-aggregator-finish-buffer">gst_aggregator_finish_buffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-aggregator-set-src-caps">gst_aggregator_set_src_caps</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-aggregator-iterate-sinkpads">gst_aggregator_iterate_sinkpads</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstClockTime"><returnvalue>GstClockTime</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-aggregator-get-latency">gst_aggregator_get_latency</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstAggregator.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstAggregator--latency">latency</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstAggregator--start-time">start-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstAggregatorStartTimeSelection"><type>GstAggregatorStartTimeSelection</type></link></entry><entry role="property_name"><link linkend="GstAggregator--start-time-selection">start-time-selection</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstAggregator.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAggregator-struct">GstAggregator</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAggregatorClass">GstAggregatorClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstAggregator.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstAggregator
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstVideoAggregator">GstVideoAggregator</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstAggregator.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Manages a set of pads with the purpose of aggregating their buffers.
+Control is given to the subclass when all pads have data.</para>
+<itemizedlist>
+<listitem>
+<para>Base class for mixers and muxers. Subclasses should at least implement
+the <link linkend="GstAggregatorClass.aggregate"><function>GstAggregatorClass.aggregate()</function></link> virtual method.</para>
+</listitem>
+<listitem>
+<para>When data is queued on all pads, tha aggregate vmethod is called.</para>
+</listitem>
+<listitem>
+<para>One can peek at the data on any given GstAggregatorPad with the
+<link linkend="gst-aggregator-pad-get-buffer"><function>gst_aggregator_pad_get_buffer()</function></link> method, and take ownership of it
+with the <link linkend="gst-aggregator-pad-steal-buffer"><function>gst_aggregator_pad_steal_buffer()</function></link> method. When a buffer
+has been taken with <link linkend="steal-buffer"><function>steal_buffer()</function></link>, a new buffer can be queued
+on that pad.</para>
+</listitem>
+<listitem>
+<para>If the subclass wishes to push a buffer downstream in its aggregate
+implementation, it should do so through the
+<link linkend="gst-aggregator-finish-buffer"><function>gst_aggregator_finish_buffer()</function></link> method. This method will take care
+of sending and ordering mandatory events such as stream start, caps
+and segment.</para>
+</listitem>
+<listitem>
+<para>Same goes for EOS events, which should not be pushed directly by the
+subclass, it should instead return GST_FLOW_EOS in its aggregate
+implementation.</para>
+</listitem>
+<listitem><para>Note that the aggregator logic regarding gap event handling is to turn
+these into gap buffers with matching PTS and duration. It will also
+flag these buffers with GST_BUFFER_FLAG_GAP and GST_BUFFER_FLAG_DROPPABLE
+to ease their identification and subsequent processing.</para></listitem>
+</itemizedlist>
+
+</refsect1>
+<refsect1 id="GstAggregator.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-aggregator-finish-buffer" role="function">
+<title>gst_aggregator_finish_buffer&#160;()</title>
+<indexterm zone="gst-aggregator-finish-buffer"><primary>gst_aggregator_finish_buffer</primary></indexterm>
+<programlisting language="C"><link linkend="GstFlowReturn"><returnvalue>GstFlowReturn</returnvalue></link>
+gst_aggregator_finish_buffer (<parameter><link linkend="GstAggregator"><type>GstAggregator</type></link> *self</parameter>,
+                              <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buffer</parameter>);</programlisting>
+<para>This method will push the provided output buffer downstream. If needed,
+mandatory events such as stream-start, caps, and segment events will be
+sent before pushing the buffer.</para>
+<refsect3 id="gst-aggregator-finish-buffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstAggregator"><type>GstAggregator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstBuffer"><type>GstBuffer</type></link> to push. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-aggregator-set-src-caps" role="function">
+<title>gst_aggregator_set_src_caps&#160;()</title>
+<indexterm zone="gst-aggregator-set-src-caps"><primary>gst_aggregator_set_src_caps</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_aggregator_set_src_caps (<parameter><link linkend="GstAggregator"><type>GstAggregator</type></link> *self</parameter>,
+                             <parameter><link linkend="GstCaps"><type>GstCaps</type></link> *caps</parameter>);</programlisting>
+<para>Sets the caps to be used on the src pad.</para>
+<refsect3 id="gst-aggregator-set-src-caps.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstAggregator"><type>GstAggregator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>caps</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstCaps"><type>GstCaps</type></link> to set on the src pad.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-aggregator-iterate-sinkpads" role="function">
+<title>gst_aggregator_iterate_sinkpads&#160;()</title>
+<indexterm zone="gst-aggregator-iterate-sinkpads"><primary>gst_aggregator_iterate_sinkpads</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_aggregator_iterate_sinkpads (<parameter><link linkend="GstAggregator"><type>GstAggregator</type></link> *self</parameter>,
+                                 <parameter><link linkend="GstAggregatorPadForeachFunc"><type>GstAggregatorPadForeachFunc</type></link> func</parameter>,
+                                 <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>Iterate the sinkpads of aggregator to call a function on them.</para>
+<para>This method guarantees that <parameter>func</parameter>
+ will be called only once for each
+sink pad.</para>
+<refsect3 id="gst-aggregator-iterate-sinkpads.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstAggregator"><type>GstAggregator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>func</para></entry>
+<entry role="parameter_description"><para> The function to call. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope call</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> The data to pass to <parameter>func</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-aggregator-get-latency" role="function">
+<title>gst_aggregator_get_latency&#160;()</title>
+<indexterm zone="gst-aggregator-get-latency"><primary>gst_aggregator_get_latency</primary></indexterm>
+<programlisting language="C"><link linkend="GstClockTime"><returnvalue>GstClockTime</returnvalue></link>
+gst_aggregator_get_latency (<parameter><link linkend="GstAggregator"><type>GstAggregator</type></link> *self</parameter>);</programlisting>
+<para>Retrieves the latency values reported by <parameter>self</parameter>
+ in response to the latency
+query, or <link linkend="GST-CLOCK-TIME-NONE:CAPS"><literal>GST_CLOCK_TIME_NONE</literal></link> if there is not live source connected and the element
+will not wait for the clock.</para>
+<para>Typically only called by subclasses.</para>
+<refsect3 id="gst-aggregator-get-latency.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstAggregator"><type>GstAggregator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-aggregator-get-latency.returns" role="returns">
+<title>Returns</title>
+<para> The latency or <link linkend="GST-CLOCK-TIME-NONE:CAPS"><literal>GST_CLOCK_TIME_NONE</literal></link> if the element does not sync</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="GstAggregator.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAggregator-struct" role="struct">
+<title>struct GstAggregator</title>
+<indexterm zone="GstAggregator-struct"><primary>GstAggregator</primary></indexterm>
+<programlisting language="C">struct GstAggregator;</programlisting>
+<para>Aggregator base class object structure.</para>
+<refsect3 id="GstAggregator.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstAggregatorClass" role="struct">
+<title>struct GstAggregatorClass</title>
+<indexterm zone="GstAggregatorClass"><primary>GstAggregatorClass</primary></indexterm>
+<programlisting language="C">struct GstAggregatorClass {
+  GstElementClass   parent_class;
+
+  GType             sinkpads_type;
+
+  GstFlowReturn     (*flush)          (GstAggregator    *  aggregator);
+
+  GstFlowReturn     (*clip)           (GstAggregator    *  aggregator,
+                                       GstAggregatorPad *  aggregator_pad,
+                                       GstBuffer        *  buf,
+                                       GstBuffer        ** outbuf);
+
+  /* sinkpads virtual methods */
+  gboolean          (*sink_event)     (GstAggregator    *  aggregator,
+                                       GstAggregatorPad *  aggregator_pad,
+                                       GstEvent         *  event);
+
+  gboolean          (*sink_query)     (GstAggregator    *  aggregator,
+                                       GstAggregatorPad *  aggregator_pad,
+                                       GstQuery         *  query);
+
+  /* srcpad virtual methods */
+  gboolean          (*src_event)      (GstAggregator    *  aggregator,
+                                       GstEvent         *  event);
+
+  gboolean          (*src_query)      (GstAggregator    *  aggregator,
+                                       GstQuery         *  query);
+
+  gboolean          (*src_activate)   (GstAggregator    *  aggregator,
+                                       GstPadMode          mode,
+                                       gboolean            active);
+
+  GstFlowReturn     (*aggregate)      (GstAggregator    *  aggregator,
+                                       gboolean            timeout);
+
+  gboolean          (*stop)           (GstAggregator    *  aggregator);
+
+  gboolean          (*start)          (GstAggregator    *  aggregator);
+
+  GstClockTime      (*get_next_time)  (GstAggregator    *  aggregator);
+
+  GstAggregatorPad * (*create_new_pad) (GstAggregator  * self,
+                                        GstPadTemplate * templ,
+                                        const gchar    * req_name,
+                                        const GstCaps  * caps);
+};
+</programlisting>
+<para>The aggregator base class will handle in a thread-safe way all manners of
+concurrent flushes, seeks, pad additions and removals, leaving to the
+subclass the responsibility of clipping buffers, and aggregating buffers in
+the way the implementor sees fit.</para>
+<para>It will also take care of event ordering (stream-start, segment, eos).</para>
+<para>Basically, a basic implementation will override <parameter>aggregate</parameter>
+, and call
+_finish_buffer from inside that function.</para>
+<refsect3 id="GstAggregatorClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GType"><type>GType</type></link>&#160;<structfield id="GstAggregatorClass.sinkpads-type">sinkpads_type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Optional.
+The type of the pads that should be created when
+GstElement.request_new_pad is called.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.flush">flush</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called after a succesful flushing seek, once all the flush
+stops have been received. Flush pad-specific data in
+<link linkend="GstAggregatorPad"><type>GstAggregatorPad</type></link>->flush.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.clip">clip</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when a buffer is received on a sink pad, the task
+of clipping it and translating it to the current segment
+falls on the subclass.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.sink-event">sink_event</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when an event is received on a sink pad, the subclass
+should always chain up.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.sink-query">sink_query</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when a query is received on a sink pad, the subclass
+should always chain up.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.src-event">src_event</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when an event is received on the src pad, the subclass
+should always chain up.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.src-query">src_query</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when a query is received on the src pad, the subclass
+should always chain up.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.src-activate">src_activate</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when the src pad is activated, it will start/stop its
+pad task right after that call.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.aggregate">aggregate</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Mandatory.
+Called when buffers are queued on all sinkpads. Classes
+should iterate the GstElement->sinkpads and peek or steal
+buffers from the <link linkend="GstAggregatorPads"><type>GstAggregatorPads</type></link>. If the subclass returns
+GST_FLOW_EOS, sending of the eos event will be taken care
+of. Once / if a buffer has been constructed from the
+aggregated buffers, the subclass should call _finish_buffer.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.stop">stop</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when the element goes from PAUSED to READY.
+The subclass should free all resources and reset its state.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.start">start</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when the element goes from READY to PAUSED.
+The subclass should get ready to process
+aggregated buffers.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.get-next-time">get_next_time</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Called when the element needs to know the running time of the next
+rendered buffer for live pipelines. This causes deadline
+based aggregation to occur. Defaults to returning
+GST_CLOCK_TIME_NONE causing the element to wait for buffers
+on all sink pads before aggregating.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstAggregatorClass.create-new-pad">create_new_pad</structfield>&#160;()</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstAggregator.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstAggregator--latency" role="property"><title>The <literal>“latency”</literal> property</title>
+<indexterm zone="GstAggregator--latency"><primary>GstAggregator:latency</primary></indexterm>
+<programlisting>  “latency”                  <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Additional latency in live mode to allow upstream to take longer to produce buffers for the current position (in nanoseconds).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstAggregator--start-time" role="property"><title>The <literal>“start-time”</literal> property</title>
+<indexterm zone="GstAggregator--start-time"><primary>GstAggregator:start-time</primary></indexterm>
+<programlisting>  “start-time”               <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Start time to use if start-time-selection=set.</para><para>Flags: Read / Write</para>
+<para>Default value: 18446744073709551615</para>
+</refsect2>
+<refsect2 id="GstAggregator--start-time-selection" role="property"><title>The <literal>“start-time-selection”</literal> property</title>
+<indexterm zone="GstAggregator--start-time-selection"><primary>GstAggregator:start-time-selection</primary></indexterm>
+<programlisting>  “start-time-selection”     <link linkend="GstAggregatorStartTimeSelection"><type>GstAggregatorStartTimeSelection</type></link></programlisting>
+<para>Decides which start time is output.</para><para>Flags: Read / Write</para>
+<para>Default value: Start at 0 running time (default)</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstAggregator.see-also">
+<title>See Also</title>
+<para>gstcollectpads for historical reasons.</para>
+
+</refsect1>
+
+</refentry>

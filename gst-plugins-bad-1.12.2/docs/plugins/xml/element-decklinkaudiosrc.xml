@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-decklinkaudiosrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-decklinkaudiosrc.top_of_page" role="top_of_page">decklinkaudiosrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>decklinkaudiosrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstDecklinkAudioSrc--alignment-threshold">alignment-threshold</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDecklinkAudioSrc--buffer-size">buffer-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkAudioConnection"><type>GstDecklinkAudioConnection</type></link></entry><entry role="property_name"><link linkend="GstDecklinkAudioSrc--connection">connection</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDecklinkAudioSrc--device-number">device-number</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstDecklinkAudioSrc--discont-wait">discont-wait</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkAudioChannels"><type>GstDecklinkAudioChannels</type></link></entry><entry role="property_name"><link linkend="GstDecklinkAudioSrc--channels">channels</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDecklinkAudioSrc"/><refsect1 id="gst-plugins-bad-plugins-decklinkaudiosrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDecklinkAudioSrc-struct">GstDecklinkAudioSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> GstDecklinkAudioSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-decklinkaudiosrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDecklinkAudioSrc-struct" role="struct">
+<title>struct GstDecklinkAudioSrc</title>
+<indexterm zone="GstDecklinkAudioSrc-struct"><primary>GstDecklinkAudioSrc</primary></indexterm>
+<programlisting language="C">struct GstDecklinkAudioSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDecklinkAudioSrc--alignment-threshold" role="property"><title>The <literal>“alignment-threshold”</literal> property</title>
+<indexterm zone="GstDecklinkAudioSrc--alignment-threshold"><primary>GstDecklinkAudioSrc:alignment-threshold</primary></indexterm>
+<programlisting>  “alignment-threshold”      <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Timestamp alignment threshold in nanoseconds.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 18446744073709551614</para>
+<para>Default value: 40000000</para>
+</refsect2>
+<refsect2 id="GstDecklinkAudioSrc--buffer-size" role="property"><title>The <literal>“buffer-size”</literal> property</title>
+<indexterm zone="GstDecklinkAudioSrc--buffer-size"><primary>GstDecklinkAudioSrc:buffer-size</primary></indexterm>
+<programlisting>  “buffer-size”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Size of internal buffer in number of video frames.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,G_MAXINT]</para>
+<para>Default value: 5</para>
+</refsect2>
+<refsect2 id="GstDecklinkAudioSrc--connection" role="property"><title>The <literal>“connection”</literal> property</title>
+<indexterm zone="GstDecklinkAudioSrc--connection"><primary>GstDecklinkAudioSrc:connection</primary></indexterm>
+<programlisting>  “connection”               <link linkend="GstDecklinkAudioConnection"><type>GstDecklinkAudioConnection</type></link></programlisting>
+<para>Audio input connection to use.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Automatic</para>
+</refsect2>
+<refsect2 id="GstDecklinkAudioSrc--device-number" role="property"><title>The <literal>“device-number”</literal> property</title>
+<indexterm zone="GstDecklinkAudioSrc--device-number"><primary>GstDecklinkAudioSrc:device-number</primary></indexterm>
+<programlisting>  “device-number”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Output device instance to use.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDecklinkAudioSrc--discont-wait" role="property"><title>The <literal>“discont-wait”</literal> property</title>
+<indexterm zone="GstDecklinkAudioSrc--discont-wait"><primary>GstDecklinkAudioSrc:discont-wait</primary></indexterm>
+<programlisting>  “discont-wait”             <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Window of time in nanoseconds to wait before creating a discontinuity.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 18446744073709551614</para>
+<para>Default value: 1000000000</para>
+</refsect2>
+<refsect2 id="GstDecklinkAudioSrc--channels" role="property"><title>The <literal>“channels”</literal> property</title>
+<indexterm zone="GstDecklinkAudioSrc--channels"><primary>GstDecklinkAudioSrc:channels</primary></indexterm>
+<programlisting>  “channels”                 <link linkend="GstDecklinkAudioChannels"><type>GstDecklinkAudioChannels</type></link></programlisting>
+<para>Audio channels.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 2 Channels</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

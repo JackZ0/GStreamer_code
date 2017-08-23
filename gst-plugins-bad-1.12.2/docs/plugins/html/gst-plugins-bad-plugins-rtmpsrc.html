@@ -74,10 +74,10 @@
 <a name="gst-plugins-bad-plugins-rtmpsrc.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseSrc.html#GstBaseSrc-struct">GstBaseSrc</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstPushSrc.html#GstPushSrc-struct">GstPushSrc</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseSrc.html#GstBaseSrc-struct">GstBaseSrc</a>
+                    <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstPushSrc.html#GstPushSrc-struct">GstPushSrc</a>
                         <span class="lineart">╰──</span> GstRTMPSrc
 </pre>
 </div>
@@ -85,7 +85,7 @@
 <a name="gst-plugins-bad-plugins-rtmpsrc.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstRTMPSrc implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0gstreamer-GstUriHandler.html#GstURIHandler-struct">GstURIHandler</a>.</p>
+ <a href="../gstreamer-1.0/gstreamer-GstUriHandler.html#GstURIHandler-struct">GstURIHandler</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-rtmpsrc.description"></a><h2>Description</h2>
@@ -94,17 +94,9 @@ by an URI. This location can be specified using any protocol supported by
 the RTMP library, i.e. rtmp, rtmpt, rtmps, rtmpe, rtmfp, rtmpte and rtmpts.</p>
 <div class="refsect3">
 <a name="id-1.2.110.8.3"></a><h4>Example launch lines</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v rtmpsrc location<span class="gtkdoc opt">=</span>rtmp<span class="gtkdoc opt">:</span><span class="gtkdoc slc">//somehost/someurl ! fakesink</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v rtmpsrc location=rtmp://somehost/someurl ! fakesink
+</pre></div>
 <p> Open an RTMP location and pass its content to fakesink.</p>
 </div>
 <div class="refsynopsisdiv">

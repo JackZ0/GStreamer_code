@@ -1,0 +1,367 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-mpeg2enc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-mpeg2enc.top_of_page" role="top_of_page">mpeg2enc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>mpeg2enc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--altscan-mpeg2">altscan-mpeg2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMpeg2encAspect"><type>GstMpeg2encAspect</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--aspect">aspect</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--b-per-refframe">b-per-refframe</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--bitrate">bitrate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--bufsize">bufsize</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--closed-gop">closed-gop</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--constraints">constraints</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--correct-svcd-hds">correct-svcd-hds</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--dualprime">dualprime</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--dummy-svcd-sof">dummy-svcd-sof</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--force-b-b-p">force-b-b-p</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMpeg2encFormat"><type>GstMpeg2encFormat</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--format">format</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMpeg2encFramerate"><type>GstMpeg2encFramerate</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--framerate">framerate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMpeg2encInterlaceMode"><type>GstMpeg2encInterlaceMode</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--interlace-mode">interlace-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--intra-dc-prec">intra-dc-prec</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--keep-hf">keep-hf</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--max-gop-size">max-gop-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--min-gop-size">min-gop-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--motion-search-radius">motion-search-radius</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--non-video-bitrate">non-video-bitrate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMpeg2encVideoNorm"><type>GstMpeg2encVideoNorm</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--norm">norm</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMpeg2encPlaybackFieldOrders"><type>GstMpeg2encPlaybackFieldOrders</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--playback-field-order">playback-field-order</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--pulldown-3-2">pulldown-3-2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstMpeg2encQuantisationMatrix"><type>GstMpeg2encQuantisationMatrix</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--quant-matrix">quant-matrix</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--quant-reduction-max-var">quant-reduction-max-var</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--quantisation">quantisation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--quantisation-reduction">quantisation-reduction</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--reduce-hf">reduce-hf</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--reduction-2x2">reduction-2x2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--reduction-4x4">reduction-4x4</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--sequence-header-every-gop">sequence-header-every-gop</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--sequence-length">sequence-length</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--unit-coeff-elim">unit-coeff-elim</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMpeg2enc--vcd-still-size">vcd-still-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMpeg2enc"/><refsect1 id="gst-plugins-bad-plugins-mpeg2enc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstMpeg2enc-struct">GstMpeg2enc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstMpeg2enc
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstMpeg2enc implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element encodes raw video into an MPEG-1/2 elementary stream using the</para>
+<ulink url="http://mjpeg.sourceforge.net/">mjpegtools</ulink> library.
+<para>Documentation on MPEG encoding in general can be found in the </para>
+<ulink url="https://sourceforge.net/docman/display_doc.php?docid=3456&amp;group_id=5776">MJPEG Howto</ulink>
+<para>and on the various available parameters in the documentation
+of the mpeg2enc tool in particular, which shares options with this element.</para>
+<refsect2>
+<title>Example pipeline</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc num-buffers=1000 ! mpeg2enc ! filesink location=videotestsrc.m1v
+]]></programlisting></informalexample> This example pipeline will encode a test video source to a an MPEG1
+elementary stream (with Generic MPEG1 profile).
+<para>
+Likely, the <link linkend="GstMpeg2enc--format"><type>“format”</type></link> property
+is most important, as it selects the type of MPEG stream that is produced.
+In particular, default property values are dependent on the format,
+and can even be forcibly restrained to certain pre-sets (and thereby ignored).
+Note that the (S)VCD profiles also restrict the image size, so some scaling
+may be needed to accomodate this.  The so-called generic profiles (as used
+in the example above) allow most parameters to be adjusted.
+</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc num-buffers=1000 ! videoscale ! mpeg2enc format=1 norm=p ! filesink location=videotestsrc.m1v
+]]></programlisting></informalexample> This will produce an MPEG1 profile stream according to VCD2.0 specifications
+for PAL <link linkend="GstMpeg2enc--norm"><type>“norm”</type></link> (as the image height is dependent on video norm).
+</refsect2>
+
+<include href="element-mpeg2enc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpeg2enc-struct" role="struct">
+<title>GstMpeg2enc</title>
+<indexterm zone="GstMpeg2enc-struct"><primary>GstMpeg2enc</primary></indexterm>
+<programlisting language="C">typedef struct _GstMpeg2enc GstMpeg2enc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstMpeg2enc--altscan-mpeg2" role="property"><title>The <literal>“altscan-mpeg2”</literal> property</title>
+<indexterm zone="GstMpeg2enc--altscan-mpeg2"><primary>GstMpeg2enc:altscan-mpeg2</primary></indexterm>
+<programlisting>  “altscan-mpeg2”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Alternate MPEG-2 block scanning. Disabling this might make buggy players play SVCD streams.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--aspect" role="property"><title>The <literal>“aspect”</literal> property</title>
+<indexterm zone="GstMpeg2enc--aspect"><primary>GstMpeg2enc:aspect</primary></indexterm>
+<programlisting>  “aspect”                   <link linkend="GstMpeg2encAspect"><type>GstMpeg2encAspect</type></link></programlisting>
+<para>Display aspect ratio.</para><para>Flags: Read / Write</para>
+<para>Default value: Deduce from input</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--b-per-refframe" role="property"><title>The <literal>“b-per-refframe”</literal> property</title>
+<indexterm zone="GstMpeg2enc--b-per-refframe"><primary>GstMpeg2enc:b-per-refframe</primary></indexterm>
+<programlisting>  “b-per-refframe”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of B frames between each I/P frame.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,2]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--bitrate" role="property"><title>The <literal>“bitrate”</literal> property</title>
+<indexterm zone="GstMpeg2enc--bitrate"><primary>GstMpeg2enc:bitrate</primary></indexterm>
+<programlisting>  “bitrate”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Compressed video bitrate (kbps).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,40000]</para>
+<para>Default value: 1125</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--bufsize" role="property"><title>The <literal>“bufsize”</literal> property</title>
+<indexterm zone="GstMpeg2enc--bufsize"><primary>GstMpeg2enc:bufsize</primary></indexterm>
+<programlisting>  “bufsize”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Target decoders video buffer size (kB) (default depends on format).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [20,4000]</para>
+<para>Default value: 46</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--closed-gop" role="property"><title>The <literal>“closed-gop”</literal> property</title>
+<indexterm zone="GstMpeg2enc--closed-gop"><primary>GstMpeg2enc:closed-gop</primary></indexterm>
+<programlisting>  “closed-gop”               <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>All Group-of-Pictures are closed (for multi-angle DVDs).</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--constraints" role="property"><title>The <literal>“constraints”</literal> property</title>
+<indexterm zone="GstMpeg2enc--constraints"><primary>GstMpeg2enc:constraints</primary></indexterm>
+<programlisting>  “constraints”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Use strict video resolution and bitrate checks.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--correct-svcd-hds" role="property"><title>The <literal>“correct-svcd-hds”</literal> property</title>
+<indexterm zone="GstMpeg2enc--correct-svcd-hds"><primary>GstMpeg2enc:correct-svcd-hds</primary></indexterm>
+<programlisting>  “correct-svcd-hds”         <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Force SVCD width to 480 instead of 540/720.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--dualprime" role="property"><title>The <literal>“dualprime”</literal> property</title>
+<indexterm zone="GstMpeg2enc--dualprime"><primary>GstMpeg2enc:dualprime</primary></indexterm>
+<programlisting>  “dualprime”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Dual Prime Motion Estimation Mode for MPEG-2 I/P-frame only streams.  Quite some players do not support this.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--dummy-svcd-sof" role="property"><title>The <literal>“dummy-svcd-sof”</literal> property</title>
+<indexterm zone="GstMpeg2enc--dummy-svcd-sof"><primary>GstMpeg2enc:dummy-svcd-sof</primary></indexterm>
+<programlisting>  “dummy-svcd-sof”           <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Generate dummy SVCD scan-data (for vcdimager).</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--force-b-b-p" role="property"><title>The <literal>“force-b-b-p”</literal> property</title>
+<indexterm zone="GstMpeg2enc--force-b-b-p"><primary>GstMpeg2enc:force-b-b-p</primary></indexterm>
+<programlisting>  “force-b-b-p”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Force two B frames between I/P frames when closing GOP boundaries.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--format" role="property"><title>The <literal>“format”</literal> property</title>
+<indexterm zone="GstMpeg2enc--format"><primary>GstMpeg2enc:format</primary></indexterm>
+<programlisting>  “format”                   <link linkend="GstMpeg2encFormat"><type>GstMpeg2encFormat</type></link></programlisting>
+<para>Encoding profile format.</para><para>Flags: Read / Write</para>
+<para>Default value: Generic MPEG-1</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--framerate" role="property"><title>The <literal>“framerate”</literal> property</title>
+<indexterm zone="GstMpeg2enc--framerate"><primary>GstMpeg2enc:framerate</primary></indexterm>
+<programlisting>  “framerate”                <link linkend="GstMpeg2encFramerate"><type>GstMpeg2encFramerate</type></link></programlisting>
+<para>Output framerate.</para><para>Flags: Read / Write</para>
+<para>Default value: Same as input</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--interlace-mode" role="property"><title>The <literal>“interlace-mode”</literal> property</title>
+<indexterm zone="GstMpeg2enc--interlace-mode"><primary>GstMpeg2enc:interlace-mode</primary></indexterm>
+<programlisting>  “interlace-mode”           <link linkend="GstMpeg2encInterlaceMode"><type>GstMpeg2encInterlaceMode</type></link></programlisting>
+<para>MPEG-2 motion estimation and encoding modes.</para><para>Flags: Read / Write</para>
+<para>Default value: Progressive</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--intra-dc-prec" role="property"><title>The <literal>“intra-dc-prec”</literal> property</title>
+<indexterm zone="GstMpeg2enc--intra-dc-prec"><primary>GstMpeg2enc:intra-dc-prec</primary></indexterm>
+<programlisting>  “intra-dc-prec”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of bits precision for DC (base colour) in MPEG-2 blocks.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [8,11]</para>
+<para>Default value: 9</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--keep-hf" role="property"><title>The <literal>“keep-hf”</literal> property</title>
+<indexterm zone="GstMpeg2enc--keep-hf"><primary>GstMpeg2enc:keep-hf</primary></indexterm>
+<programlisting>  “keep-hf”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Maximize high-frequency resolution (for high-quality sources).</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--max-gop-size" role="property"><title>The <literal>“max-gop-size”</literal> property</title>
+<indexterm zone="GstMpeg2enc--max-gop-size"><primary>GstMpeg2enc:max-gop-size</primary></indexterm>
+<programlisting>  “max-gop-size”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Maximal size per Group-of-Pictures (-1=default).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,250]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--min-gop-size" role="property"><title>The <literal>“min-gop-size”</literal> property</title>
+<indexterm zone="GstMpeg2enc--min-gop-size"><primary>GstMpeg2enc:min-gop-size</primary></indexterm>
+<programlisting>  “min-gop-size”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Minimal size per Group-of-Pictures (-1=default).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,250]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--motion-search-radius" role="property"><title>The <literal>“motion-search-radius”</literal> property</title>
+<indexterm zone="GstMpeg2enc--motion-search-radius"><primary>GstMpeg2enc:motion-search-radius</primary></indexterm>
+<programlisting>  “motion-search-radius”     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Motion compensation search radius.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,32]</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--non-video-bitrate" role="property"><title>The <literal>“non-video-bitrate”</literal> property</title>
+<indexterm zone="GstMpeg2enc--non-video-bitrate"><primary>GstMpeg2enc:non-video-bitrate</primary></indexterm>
+<programlisting>  “non-video-bitrate”        <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Assumed bitrate of non-video for sequence splitting (kbps).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,10000]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--norm" role="property"><title>The <literal>“norm”</literal> property</title>
+<indexterm zone="GstMpeg2enc--norm"><primary>GstMpeg2enc:norm</primary></indexterm>
+<programlisting>  “norm”                     <link linkend="GstMpeg2encVideoNorm"><type>GstMpeg2encVideoNorm</type></link></programlisting>
+<para>Tag output for specific video norm.</para><para>Flags: Read / Write</para>
+<para>Default value: Unspecified</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--playback-field-order" role="property"><title>The <literal>“playback-field-order”</literal> property</title>
+<indexterm zone="GstMpeg2enc--playback-field-order"><primary>GstMpeg2enc:playback-field-order</primary></indexterm>
+<programlisting>  “playback-field-order”     <link linkend="GstMpeg2encPlaybackFieldOrders"><type>GstMpeg2encPlaybackFieldOrders</type></link></programlisting>
+<para>Force specific playback field order.</para><para>Flags: Read / Write</para>
+<para>Default value: Unspecified</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--pulldown-3-2" role="property"><title>The <literal>“pulldown-3-2”</literal> property</title>
+<indexterm zone="GstMpeg2enc--pulldown-3-2"><primary>GstMpeg2enc:pulldown-3-2</primary></indexterm>
+<programlisting>  “pulldown-3-2”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Generate header flags for 3-2 pull down 24fps movies.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--quant-matrix" role="property"><title>The <literal>“quant-matrix”</literal> property</title>
+<indexterm zone="GstMpeg2enc--quant-matrix"><primary>GstMpeg2enc:quant-matrix</primary></indexterm>
+<programlisting>  “quant-matrix”             <link linkend="GstMpeg2encQuantisationMatrix"><type>GstMpeg2encQuantisationMatrix</type></link></programlisting>
+<para>Quantisation matrix to use for encoding.</para><para>Flags: Read / Write</para>
+<para>Default value: Default</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--quant-reduction-max-var" role="property"><title>The <literal>“quant-reduction-max-var”</literal> property</title>
+<indexterm zone="GstMpeg2enc--quant-reduction-max-var"><primary>GstMpeg2enc:quant-reduction-max-var</primary></indexterm>
+<programlisting>  “quant-reduction-max-var”  <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Maximal luma variance below which quantisation boost is used.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,2500]</para>
+<para>Default value: 100</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--quantisation" role="property"><title>The <literal>“quantisation”</literal> property</title>
+<indexterm zone="GstMpeg2enc--quantisation"><primary>GstMpeg2enc:quantisation</primary></indexterm>
+<programlisting>  “quantisation”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Quantisation factor (-1=cbr, 0=default, 1=best, 31=worst).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,31]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--quantisation-reduction" role="property"><title>The <literal>“quantisation-reduction”</literal> property</title>
+<indexterm zone="GstMpeg2enc--quantisation-reduction"><primary>GstMpeg2enc:quantisation-reduction</primary></indexterm>
+<programlisting>  “quantisation-reduction”   <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Max. quantisation reduction for highly active blocks.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-4,10]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--reduce-hf" role="property"><title>The <literal>“reduce-hf”</literal> property</title>
+<indexterm zone="GstMpeg2enc--reduce-hf"><primary>GstMpeg2enc:reduce-hf</primary></indexterm>
+<programlisting>  “reduce-hf”                <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>How much to reduce high-frequency resolution (by increasing quantisation).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,2]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--reduction-2x2" role="property"><title>The <literal>“reduction-2x2”</literal> property</title>
+<indexterm zone="GstMpeg2enc--reduction-2x2"><primary>GstMpeg2enc:reduction-2x2</primary></indexterm>
+<programlisting>  “reduction-2x2”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Reduction factor for 2x2 subsampled candidate motion estimates (1=max. quality, 4=max. speed).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,4]</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--reduction-4x4" role="property"><title>The <literal>“reduction-4x4”</literal> property</title>
+<indexterm zone="GstMpeg2enc--reduction-4x4"><primary>GstMpeg2enc:reduction-4x4</primary></indexterm>
+<programlisting>  “reduction-4x4”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Reduction factor for 4x4 subsampled candidate motion estimates (1=max. quality, 4=max. speed).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,4]</para>
+<para>Default value: 2</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--sequence-header-every-gop" role="property"><title>The <literal>“sequence-header-every-gop”</literal> property</title>
+<indexterm zone="GstMpeg2enc--sequence-header-every-gop"><primary>GstMpeg2enc:sequence-header-every-gop</primary></indexterm>
+<programlisting>  “sequence-header-every-gop” <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Include a sequence header in every GOP.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--sequence-length" role="property"><title>The <literal>“sequence-length”</literal> property</title>
+<indexterm zone="GstMpeg2enc--sequence-length"><primary>GstMpeg2enc:sequence-length</primary></indexterm>
+<programlisting>  “sequence-length”          <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Place a sequence boundary after each &lt;num&gt; MB (0=disable).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,10240]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--unit-coeff-elim" role="property"><title>The <literal>“unit-coeff-elim”</literal> property</title>
+<indexterm zone="GstMpeg2enc--unit-coeff-elim"><primary>GstMpeg2enc:unit-coeff-elim</primary></indexterm>
+<programlisting>  “unit-coeff-elim”          <link linkend="gint"><type>gint</type></link></programlisting>
+<para>How agressively small-unit picture blocks should be skipped.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-40,40]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMpeg2enc--vcd-still-size" role="property"><title>The <literal>“vcd-still-size”</literal> property</title>
+<indexterm zone="GstMpeg2enc--vcd-still-size"><primary>GstMpeg2enc:vcd-still-size</primary></indexterm>
+<programlisting>  “vcd-still-size”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Size of VCD stills (in KB).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,512]</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mpeg2enc.see-also">
+<title>See Also</title>
+<para>mpeg2dec</para>
+
+</refsect1>
+
+</refentry>

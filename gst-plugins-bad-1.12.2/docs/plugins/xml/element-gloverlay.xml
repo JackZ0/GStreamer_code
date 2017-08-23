@@ -1,0 +1,240 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-gloverlay">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-gloverlay.top_of_page" role="top_of_page">gloverlay</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gloverlay</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-gloverlay.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--angle-png">angle-png</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--angle-video">angle-video</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstGLOverlay--location">location</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--proportion-png">proportion-png</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--proportion-video">proportion-video</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--ratio-video">ratio-video</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--rotate-png">rotate-png</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--rotate-video">rotate-video</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--video-top">video-top</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--xpos-png">xpos-png</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--xpos-video">xpos-video</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--ypos-png">ypos-png</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--ypos-video">ypos-video</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--alpha">alpha</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--offset-x">offset-x</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--offset-y">offset-y</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--overlay-height">overlay-height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--overlay-width">overlay-width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--relative-x">relative-x</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLOverlay--relative-y">relative-y</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLOverlay"/><refsect1 id="gst-plugins-bad-plugins-gloverlay.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLOverlay-struct">GstGLOverlay</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gloverlay.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGLOverlay
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-gloverlay.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Overlay GL video texture with a PNG image</para>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! gloverlay location=image.jpg ! glimagesink
+]]></programlisting></informalexample>
+<para>
+FBO (Frame Buffer Object) is required.</para>
+</refsect3>
+
+<include href="element-gloverlay-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gloverlay.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gloverlay.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLOverlay-struct" role="struct">
+<title>struct GstGLOverlay</title>
+<indexterm zone="GstGLOverlay-struct"><primary>GstGLOverlay</primary></indexterm>
+<programlisting language="C">struct GstGLOverlay;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gloverlay.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLOverlay--angle-png" role="property"><title>The <literal>“angle-png”</literal> property</title>
+<indexterm zone="GstGLOverlay--angle-png"><primary>GstGLOverlay:angle-png</primary></indexterm>
+<programlisting>  “angle-png”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>choose angle in axis to choosen between -90 and 90.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-90,90]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--angle-video" role="property"><title>The <literal>“angle-video”</literal> property</title>
+<indexterm zone="GstGLOverlay--angle-video"><primary>GstGLOverlay:angle-video</primary></indexterm>
+<programlisting>  “angle-video”              <link linkend="gint"><type>gint</type></link></programlisting>
+<para>choose angle in axis to choosen between -90 and 90.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-90,90]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--location" role="property"><title>The <literal>“location”</literal> property</title>
+<indexterm zone="GstGLOverlay--location"><primary>GstGLOverlay:location</primary></indexterm>
+<programlisting>  “location”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of image file to overlay.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--proportion-png" role="property"><title>The <literal>“proportion-png”</literal> property</title>
+<indexterm zone="GstGLOverlay--proportion-png"><primary>GstGLOverlay:proportion-png</primary></indexterm>
+<programlisting>  “proportion-png”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Relative size of iverlay image, in percents.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--proportion-video" role="property"><title>The <literal>“proportion-video”</literal> property</title>
+<indexterm zone="GstGLOverlay--proportion-video"><primary>GstGLOverlay:proportion-video</primary></indexterm>
+<programlisting>  “proportion-video”         <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Relative size of iverlay video, in percents.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--ratio-video" role="property"><title>The <literal>“ratio-video”</literal> property</title>
+<indexterm zone="GstGLOverlay--ratio-video"><primary>GstGLOverlay:ratio-video</primary></indexterm>
+<programlisting>  “ratio-video”              <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Flags: Read / Write</para>
+<para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--rotate-png" role="property"><title>The <literal>“rotate-png”</literal> property</title>
+<indexterm zone="GstGLOverlay--rotate-png"><primary>GstGLOverlay:rotate-png</primary></indexterm>
+<programlisting>  “rotate-png”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>choose rotation axis for the moment only Y axis is implemented.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--rotate-video" role="property"><title>The <literal>“rotate-video”</literal> property</title>
+<indexterm zone="GstGLOverlay--rotate-video"><primary>GstGLOverlay:rotate-video</primary></indexterm>
+<programlisting>  “rotate-video”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>choose rotation axis for the moment only Y axis is implemented.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,3]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--video-top" role="property"><title>The <literal>“video-top”</literal> property</title>
+<indexterm zone="GstGLOverlay--video-top"><primary>GstGLOverlay:video-top</primary></indexterm>
+<programlisting>  “video-top”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Video is over png image.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--xpos-png" role="property"><title>The <literal>“xpos-png”</literal> property</title>
+<indexterm zone="GstGLOverlay--xpos-png"><primary>GstGLOverlay:xpos-png</primary></indexterm>
+<programlisting>  “xpos-png”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>X position of overlay image in percents.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--xpos-video" role="property"><title>The <literal>“xpos-video”</literal> property</title>
+<indexterm zone="GstGLOverlay--xpos-video"><primary>GstGLOverlay:xpos-video</primary></indexterm>
+<programlisting>  “xpos-video”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>X position of overlay video in percents.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--ypos-png" role="property"><title>The <literal>“ypos-png”</literal> property</title>
+<indexterm zone="GstGLOverlay--ypos-png"><primary>GstGLOverlay:ypos-png</primary></indexterm>
+<programlisting>  “ypos-png”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Y position of overlay image in percents.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--ypos-video" role="property"><title>The <literal>“ypos-video”</literal> property</title>
+<indexterm zone="GstGLOverlay--ypos-video"><primary>GstGLOverlay:ypos-video</primary></indexterm>
+<programlisting>  “ypos-video”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Y position of overlay video in percents.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--alpha" role="property"><title>The <literal>“alpha”</literal> property</title>
+<indexterm zone="GstGLOverlay--alpha"><primary>GstGLOverlay:alpha</primary></indexterm>
+<programlisting>  “alpha”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Global alpha of overlay image.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--offset-x" role="property"><title>The <literal>“offset-x”</literal> property</title>
+<indexterm zone="GstGLOverlay--offset-x"><primary>GstGLOverlay:offset-x</primary></indexterm>
+<programlisting>  “offset-x”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>For positive value, horizontal offset of overlay image in pixels from left of video image. For negative value, horizontal offset of overlay image in pixels from right of video image.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--offset-y" role="property"><title>The <literal>“offset-y”</literal> property</title>
+<indexterm zone="GstGLOverlay--offset-y"><primary>GstGLOverlay:offset-y</primary></indexterm>
+<programlisting>  “offset-y”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>For positive value, vertical offset of overlay image in pixels from top of video image. For negative value, vertical offset of overlay image in pixels from bottom of video image.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--overlay-height" role="property"><title>The <literal>“overlay-height”</literal> property</title>
+<indexterm zone="GstGLOverlay--overlay-height"><primary>GstGLOverlay:overlay-height</primary></indexterm>
+<programlisting>  “overlay-height”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Height of overlay image in pixels (0 = same as overlay image).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--overlay-width" role="property"><title>The <literal>“overlay-width”</literal> property</title>
+<indexterm zone="GstGLOverlay--overlay-width"><primary>GstGLOverlay:overlay-width</primary></indexterm>
+<programlisting>  “overlay-width”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Width of overlay image in pixels (0 = same as overlay image).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--relative-x" role="property"><title>The <literal>“relative-x”</literal> property</title>
+<indexterm zone="GstGLOverlay--relative-x"><primary>GstGLOverlay:relative-x</primary></indexterm>
+<programlisting>  “relative-x”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Horizontal offset of overlay image in fractions of video image width, from top-left corner of video image.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLOverlay--relative-y" role="property"><title>The <literal>“relative-y”</literal> property</title>
+<indexterm zone="GstGLOverlay--relative-y"><primary>GstGLOverlay:relative-y</primary></indexterm>
+<programlisting>  “relative-y”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Vertical offset of overlay image in fractions of video image height, from top-left corner of video image.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

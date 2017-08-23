@@ -1,0 +1,125 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-fluiddec">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-fluiddec.top_of_page" role="top_of_page">fluiddec</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>fluiddec</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-fluiddec.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstFluidDec--soundfont">soundfont</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFluidDec--synth-chorus">synth-chorus</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstFluidDec--synth-gain">synth-gain</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFluidDec--synth-polyphony">synth-polyphony</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFluidDec--synth-reverb">synth-reverb</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstFluidDec"/><refsect1 id="gst-plugins-bad-plugins-fluiddec.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstFluidDec-struct">GstFluidDec</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fluiddec.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstFluidDec
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-fluiddec.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element renders midi-events as audio streams using</para>
+<ulink url="http://fluidsynth.sourceforge.net//">Fluidsynth</ulink>.
+<para>It offers better sound quality compared to the timidity or wildmidi element.</para>
+<refsect3><title>Example pipeline</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=song.mid ! midiparse ! fluiddec ! pulsesink
+]]></programlisting></informalexample>
+<para> This example pipeline will parse the midi and render to raw audio which is
+played via pulseaudio.</para>
+</refsect3>
+
+<include href="element-fluiddec-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fluiddec.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fluiddec.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFluidDec-struct" role="struct">
+<title>struct GstFluidDec</title>
+<indexterm zone="GstFluidDec-struct"><primary>GstFluidDec</primary></indexterm>
+<programlisting language="C">struct GstFluidDec;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fluiddec.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstFluidDec--soundfont" role="property"><title>The <literal>“soundfont”</literal> property</title>
+<indexterm zone="GstFluidDec--soundfont"><primary>GstFluidDec:soundfont</primary></indexterm>
+<programlisting>  “soundfont”                <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>the filename of a soundfont (NULL for default).</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstFluidDec--synth-chorus" role="property"><title>The <literal>“synth-chorus”</literal> property</title>
+<indexterm zone="GstFluidDec--synth-chorus"><primary>GstFluidDec:synth-chorus</primary></indexterm>
+<programlisting>  “synth-chorus”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Turn the chorus on or off.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstFluidDec--synth-gain" role="property"><title>The <literal>“synth-gain”</literal> property</title>
+<indexterm zone="GstFluidDec--synth-gain"><primary>GstFluidDec:synth-gain</primary></indexterm>
+<programlisting>  “synth-gain”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Set the master gain.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,10]</para>
+<para>Default value: 0.2</para>
+</refsect2>
+<refsect2 id="GstFluidDec--synth-polyphony" role="property"><title>The <literal>“synth-polyphony”</literal> property</title>
+<indexterm zone="GstFluidDec--synth-polyphony"><primary>GstFluidDec:synth-polyphony</primary></indexterm>
+<programlisting>  “synth-polyphony”          <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The number of simultaneous voices.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,65535]</para>
+<para>Default value: 256</para>
+</refsect2>
+<refsect2 id="GstFluidDec--synth-reverb" role="property"><title>The <literal>“synth-reverb”</literal> property</title>
+<indexterm zone="GstFluidDec--synth-reverb"><primary>GstFluidDec:synth-reverb</primary></indexterm>
+<programlisting>  “synth-reverb”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Turn the reverb on or off.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fluiddec.see-also">
+<title>See Also</title>
+<para>timidity, wildmidi</para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-dtls">
+  <refmeta>
+    <refentrytitle>dtls</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>dtls</refname>
+    <refpurpose><anchor id="plugin-dtls"/>DTLS decoder and encoder plugins</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstdtls.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.12.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>BSD</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-dtlsdec">dtlsdec</link></term><listitem><simpara>Decodes DTLS packets</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-dtlsenc">dtlsenc</link></term><listitem><simpara>Encodes packets with DTLS</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-dtlssrtpdec">dtlssrtpdec</link></term><listitem><simpara>Decodes SRTP packets with a key received from DTLS</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-dtlssrtpdemux">dtlssrtpdemux</link></term><listitem><simpara>Demultiplexes DTLS and SRTP packets</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-dtlssrtpenc">dtlssrtpenc</link></term><listitem><simpara>Encodes SRTP packets with a key received from DTLS</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

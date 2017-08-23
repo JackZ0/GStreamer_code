@@ -1,0 +1,164 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-fieldanalysis">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-fieldanalysis.top_of_page" role="top_of_page">fieldanalysis</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>fieldanalysis</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-fieldanalysis.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--block-height">block-height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--block-threshold">block-threshold</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--block-width">block-width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="FieldAnalysisCombMethod"><type>FieldAnalysisCombMethod</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--comb-method">comb-method</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFieldAnalysisFieldMetric"><type>GstFieldAnalysisFieldMetric</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--field-metric">field-metric</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--field-threshold">field-threshold</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFieldAnalysisFrameMetric"><type>GstFieldAnalysisFrameMetric</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--frame-metric">frame-metric</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--frame-threshold">frame-threshold</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--ignored-lines">ignored-lines</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--noise-floor">noise-floor</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstFieldAnalysis--spatial-threshold">spatial-threshold</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstFieldAnalysis"/><refsect1 id="gst-plugins-bad-plugins-fieldanalysis.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstFieldAnalysis-struct">GstFieldAnalysis</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fieldanalysis.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstFieldAnalysis
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-fieldanalysis.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Analyse fields from video buffers to identify whether the buffers are
+progressive/telecined/interlaced and, if telecined, the telecine pattern
+used.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v uridecodebin uri=/path/to/foo.bar ! fieldanalysis ! deinterlace ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> This pipeline will analyse a video stream with default metrics and thresholds and output progressive frames.</para>
+</refsect3>
+
+<include href="element-fieldanalysis-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fieldanalysis.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fieldanalysis.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFieldAnalysis-struct" role="struct">
+<title>struct GstFieldAnalysis</title>
+<indexterm zone="GstFieldAnalysis-struct"><primary>GstFieldAnalysis</primary></indexterm>
+<programlisting language="C">struct GstFieldAnalysis;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fieldanalysis.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstFieldAnalysis--block-height" role="property"><title>The <literal>“block-height”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--block-height"><primary>GstFieldAnalysis:block-height</primary></indexterm>
+<programlisting>  “block-height”             <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Block height for windowed comb detection.</para><para>Flags: Read / Write</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--block-threshold" role="property"><title>The <literal>“block-threshold”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--block-threshold"><primary>GstFieldAnalysis:block-threshold</primary></indexterm>
+<programlisting>  “block-threshold”          <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Block threshold for windowed comb detection.</para><para>Flags: Read / Write</para>
+<para>Default value: 80</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--block-width" role="property"><title>The <literal>“block-width”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--block-width"><primary>GstFieldAnalysis:block-width</primary></indexterm>
+<programlisting>  “block-width”              <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Block width for windowed comb detection.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--comb-method" role="property"><title>The <literal>“comb-method”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--comb-method"><primary>GstFieldAnalysis:comb-method</primary></indexterm>
+<programlisting>  “comb-method”              <link linkend="FieldAnalysisCombMethod"><type>FieldAnalysisCombMethod</type></link></programlisting>
+<para>Metric to be used for identifying comb artifacts if using windowed comb detection.</para><para>Flags: Read / Write</para>
+<para>Default value: 5-tap [1,-3,4,-3,1] vertical filter result is larger than spatial threshold*6</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--field-metric" role="property"><title>The <literal>“field-metric”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--field-metric"><primary>GstFieldAnalysis:field-metric</primary></indexterm>
+<programlisting>  “field-metric”             <link linkend="GstFieldAnalysisFieldMetric"><type>GstFieldAnalysisFieldMetric</type></link></programlisting>
+<para>Metric to be used for comparing same parity fields to decide if they are a repeated field for telecine.</para><para>Flags: Read / Write</para>
+<para>Default value: Sum of Squared Differences</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--field-threshold" role="property"><title>The <literal>“field-threshold”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--field-threshold"><primary>GstFieldAnalysis:field-threshold</primary></indexterm>
+<programlisting>  “field-threshold”          <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Threshold for field metric decisions.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0.08</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--frame-metric" role="property"><title>The <literal>“frame-metric”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--frame-metric"><primary>GstFieldAnalysis:frame-metric</primary></indexterm>
+<programlisting>  “frame-metric”             <link linkend="GstFieldAnalysisFrameMetric"><type>GstFieldAnalysisFrameMetric</type></link></programlisting>
+<para>Metric to be used for comparing opposite parity fields to decide if they are a progressive frame.</para><para>Flags: Read / Write</para>
+<para>Default value: 5-tap [1,-3,4,-3,1] Vertical Filter</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--frame-threshold" role="property"><title>The <literal>“frame-threshold”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--frame-threshold"><primary>GstFieldAnalysis:frame-threshold</primary></indexterm>
+<programlisting>  “frame-threshold”          <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Threshold for frame metric decisions.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0.002</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--ignored-lines" role="property"><title>The <literal>“ignored-lines”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--ignored-lines"><primary>GstFieldAnalysis:ignored-lines</primary></indexterm>
+<programlisting>  “ignored-lines”            <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Ignore this many lines from the top and bottom for windowed comb detection.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 2</para>
+<para>Default value: 2</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--noise-floor" role="property"><title>The <literal>“noise-floor”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--noise-floor"><primary>GstFieldAnalysis:noise-floor</primary></indexterm>
+<programlisting>  “noise-floor”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Noise floor for appropriate metrics (per-pixel metric values with a score less than this will be ignored).</para><para>Flags: Read / Write</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstFieldAnalysis--spatial-threshold" role="property"><title>The <literal>“spatial-threshold”</literal> property</title>
+<indexterm zone="GstFieldAnalysis--spatial-threshold"><primary>GstFieldAnalysis:spatial-threshold</primary></indexterm>
+<programlisting>  “spatial-threshold”        <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Threshold for combing metric decisions.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 9</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

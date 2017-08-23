@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-templatematch">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-templatematch.top_of_page" role="top_of_page">templatematch</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>templatematch</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-templatematch.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstTemplateMatch--display">display</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstTemplateMatch--method">method</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstTemplateMatch--template">template</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstTemplateMatch"/><refsect1 id="gst-plugins-bad-plugins-templatematch.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstTemplateMatch-struct">GstTemplateMatch</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-templatematch.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstTemplateMatch
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-templatematch.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Performs template matching on videos and images, providing detected positions via bus messages.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! decodebin ! videoconvert ! templatematch template=/path/to/file.jpg ! videoconvert ! xvimagesink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-templatematch-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-templatematch.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-templatematch.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTemplateMatch-struct" role="struct">
+<title>struct GstTemplateMatch</title>
+<indexterm zone="GstTemplateMatch-struct"><primary>GstTemplateMatch</primary></indexterm>
+<programlisting language="C">struct GstTemplateMatch;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-templatematch.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstTemplateMatch--display" role="property"><title>The <literal>“display”</literal> property</title>
+<indexterm zone="GstTemplateMatch--display"><primary>GstTemplateMatch:display</primary></indexterm>
+<programlisting>  “display”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sets whether the detected template should be highlighted in the output.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstTemplateMatch--method" role="property"><title>The <literal>“method”</literal> property</title>
+<indexterm zone="GstTemplateMatch--method"><primary>GstTemplateMatch:method</primary></indexterm>
+<programlisting>  “method”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Specifies the way the template must be compared with image regions. 0=SQDIFF, 1=SQDIFF_NORMED, 2=CCOR, 3=CCOR_NORMED, 4=CCOEFF, 5=CCOEFF_NORMED.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,5]</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstTemplateMatch--template" role="property"><title>The <literal>“template”</literal> property</title>
+<indexterm zone="GstTemplateMatch--template"><primary>GstTemplateMatch:template</primary></indexterm>
+<programlisting>  “template”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Filename of template image.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstGLSLStage">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstGLSLStage.top_of_page">GstGLSLStage</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLSLStage</refname>
+<refpurpose>object for dealing with OpenGL shader stages</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstGLSLStage.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-new">gst_glsl_stage_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-new-default-fragment">gst_glsl_stage_new_default_fragment</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-new-default-vertex">gst_glsl_stage_new_default_vertex</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-new-with-string">gst_glsl_stage_new_with_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-new-with-strings">gst_glsl_stage_new_with_strings</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-set-strings">gst_glsl_stage_set_strings</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-compile">gst_glsl_stage_compile</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-get-handle">gst_glsl_stage_get_handle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLProfile"><returnvalue>GstGLSLProfile</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-get-profile">gst_glsl_stage_get_profile</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-get-shader-type">gst_glsl_stage_get_shader_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLSLVersion"><returnvalue>GstGLSLVersion</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-glsl-stage-get-version">gst_glsl_stage_get_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLSLStage.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLSLStage-struct">GstGLSLStage</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLSLStageClass">GstGLSLStageClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLSLStage.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLSLStage
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstGLSLStage.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> holds and represents a single OpenGL shader stage.</para>
+
+</refsect1>
+<refsect1 id="GstGLSLStage.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-glsl-stage-new" role="function" condition="since:1.8">
+<title>gst_glsl_stage_new&#160;()</title>
+<indexterm zone="gst-glsl-stage-new" role="1.8"><primary>gst_glsl_stage_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+gst_glsl_stage_new (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                    <parameter><link linkend="guint"><type>guint</type></link> type</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the GL enum shader stage type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> of the specified <parameter>type</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-new-default-fragment" role="function">
+<title>gst_glsl_stage_new_default_fragment&#160;()</title>
+<indexterm zone="gst-glsl-stage-new-default-fragment"><primary>gst_glsl_stage_new_default_fragment</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+gst_glsl_stage_new_default_fragment (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-stage-new-default-vertex" role="function">
+<title>gst_glsl_stage_new_default_vertex&#160;()</title>
+<indexterm zone="gst-glsl-stage-new-default-vertex"><primary>gst_glsl_stage_new_default_vertex</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+gst_glsl_stage_new_default_vertex (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-glsl-stage-new-with-string" role="function" condition="since:1.8">
+<title>gst_glsl_stage_new_with_string&#160;()</title>
+<indexterm zone="gst-glsl-stage-new-with-string" role="1.8"><primary>gst_glsl_stage_new_with_string</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+gst_glsl_stage_new_with_string (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> type</parameter>,
+                                <parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> version</parameter>,
+                                <parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> profile</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *str</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-new-with-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the GL enum shader stage type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>version</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>profile</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>str</para></entry>
+<entry role="parameter_description"><para>a shader string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-new-with-string.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> of the specified <parameter>type</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-new-with-strings" role="function" condition="since:1.8">
+<title>gst_glsl_stage_new_with_strings&#160;()</title>
+<indexterm zone="gst-glsl-stage-new-with-strings" role="1.8"><primary>gst_glsl_stage_new_with_strings</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLStage"><returnvalue>GstGLSLStage</returnvalue></link>&#160;*
+gst_glsl_stage_new_with_strings (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                 <parameter><link linkend="guint"><type>guint</type></link> type</parameter>,
+                                 <parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> version</parameter>,
+                                 <parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> profile</parameter>,
+                                 <parameter><link linkend="gint"><type>gint</type></link> n_strings</parameter>,
+                                 <parameter>const <link linkend="gchar"><type>gchar</type></link> **str</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-new-with-strings.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the GL enum shader stage type</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>version</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>profile</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_strings</para></entry>
+<entry role="parameter_description"><para>the number of strings in <parameter>str</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>str</para></entry>
+<entry role="parameter_description"><para>an array of strings concatted together to produce a shader</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-new-with-strings.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> of the specified <parameter>type</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-set-strings" role="function" condition="since:1.8">
+<title>gst_glsl_stage_set_strings&#160;()</title>
+<indexterm zone="gst-glsl-stage-set-strings" role="1.8"><primary>gst_glsl_stage_set_strings</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_glsl_stage_set_strings (<parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>,
+                            <parameter><link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link> version</parameter>,
+                            <parameter><link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link> profile</parameter>,
+                            <parameter><link linkend="gint"><type>gint</type></link> n_strings</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> **str</parameter>);</programlisting>
+<para>Replaces the current shader string with <parameter>str</parameter>
+.</para>
+<refsect3 id="gst-glsl-stage-set-strings.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>version</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLVersion"><type>GstGLSLVersion</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>profile</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLProfile"><type>GstGLSLProfile</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>n_strings</para></entry>
+<entry role="parameter_description"><para>number of strings in <parameter>str</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>str</para></entry>
+<entry role="parameter_description"><para> a GLSL shader string. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-compile" role="function" condition="since:1.8">
+<title>gst_glsl_stage_compile&#160;()</title>
+<indexterm zone="gst-glsl-stage-compile" role="1.8"><primary>gst_glsl_stage_compile</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_glsl_stage_compile (<parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>,
+                        <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-compile.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> to use on failure</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-compile.returns" role="returns">
+<title>Returns</title>
+<para> whether the compilation suceeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-get-handle" role="function" condition="since:1.8">
+<title>gst_glsl_stage_get_handle&#160;()</title>
+<indexterm zone="gst-glsl-stage-get-handle" role="1.8"><primary>gst_glsl_stage_get_handle</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_glsl_stage_get_handle (<parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-get-handle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-get-handle.returns" role="returns">
+<title>Returns</title>
+<para> The GL handle for this shader stage</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-get-profile" role="function" condition="since:1.8">
+<title>gst_glsl_stage_get_profile&#160;()</title>
+<indexterm zone="gst-glsl-stage-get-profile" role="1.8"><primary>gst_glsl_stage_get_profile</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLProfile"><returnvalue>GstGLSLProfile</returnvalue></link>
+gst_glsl_stage_get_profile (<parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-get-profile.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-get-profile.returns" role="returns">
+<title>Returns</title>
+<para> The GLSL profile for the current shader stage</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-get-shader-type" role="function" condition="since:1.8">
+<title>gst_glsl_stage_get_shader_type&#160;()</title>
+<indexterm zone="gst-glsl-stage-get-shader-type" role="1.8"><primary>gst_glsl_stage_get_shader_type</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_glsl_stage_get_shader_type (<parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-get-shader-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-get-shader-type.returns" role="returns">
+<title>Returns</title>
+<para> The GL shader type for this shader stage</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-glsl-stage-get-version" role="function" condition="since:1.8">
+<title>gst_glsl_stage_get_version&#160;()</title>
+<indexterm zone="gst-glsl-stage-get-version" role="1.8"><primary>gst_glsl_stage_get_version</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLSLVersion"><returnvalue>GstGLSLVersion</returnvalue></link>
+gst_glsl_stage_get_version (<parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<refsect3 id="gst-glsl-stage-get-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-glsl-stage-get-version.returns" role="returns">
+<title>Returns</title>
+<para> The GLSL version for the current shader stage</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="GstGLSLStage.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLSLStage-struct" role="struct">
+<title>GstGLSLStage</title>
+<indexterm zone="GstGLSLStage-struct"><primary>GstGLSLStage</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLSLStage GstGLSLStage;</programlisting>
+<para>Opaque <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> struct</para>
+</refsect2>
+<refsect2 id="GstGLSLStageClass" role="struct">
+<title>GstGLSLStageClass</title>
+<indexterm zone="GstGLSLStageClass"><primary>GstGLSLStageClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+} GstGLSLStageClass;
+</programlisting>
+<para>Opaque <link linkend="GstGLSLStageClass"><type>GstGLSLStageClass</type></link> struct</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLSLStage.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLShader"><type>GstGLShader</type></link></para>
+
+</refsect1>
+
+</refentry>

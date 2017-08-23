@@ -1,0 +1,97 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-diffuse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-diffuse.top_of_page" role="top_of_page">diffuse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>diffuse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-diffuse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstDiffuse--scale">scale</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDiffuse"/><refsect1 id="gst-plugins-bad-plugins-diffuse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDiffuse-struct">GstDiffuse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-diffuse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGeometricTransform">GstGeometricTransform</link>
+                            <phrase role="lineart">╰──</phrase> GstDiffuse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-diffuse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Diffuse is a geometric image transform element. It diffuses the image by
+moving its pixels in random directions.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! diffuse ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-diffuse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-diffuse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-diffuse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDiffuse-struct" role="struct">
+<title>struct GstDiffuse</title>
+<indexterm zone="GstDiffuse-struct"><primary>GstDiffuse</primary></indexterm>
+<programlisting language="C">struct GstDiffuse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-diffuse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDiffuse--scale" role="property"><title>The <literal>“scale”</literal> property</title>
+<indexterm zone="GstDiffuse--scale"><primary>GstDiffuse:scale</primary></indexterm>
+<programlisting>  “scale”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Scale of the texture.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 4</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-diffuse.see-also">
+<title>See Also</title>
+<para>geometrictransform</para>
+
+</refsect1>
+
+</refentry>

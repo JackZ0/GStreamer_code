@@ -1,0 +1,101 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-mxfdemux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-mxfdemux.top_of_page" role="top_of_page">mxfdemux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>mxfdemux</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-mxfdemux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstMXFDemux--package">package</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstMXFDemux--max-drift">max-drift</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstStructure"><type>GstStructure</type></link> *</entry><entry role="property_name"><link linkend="GstMXFDemux--structure">structure</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMXFDemux"/><refsect1 id="gst-plugins-bad-plugins-mxfdemux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMXFDemux-struct">GstMXFDemux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mxfdemux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstMXFDemux
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-mxfdemux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>mxfdemux demuxes an MXF file into the different contained streams.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=/path/to/mxf ! mxfdemux ! audioconvert ! autoaudiosink
+]]></programlisting></informalexample>
+<para> This pipeline demuxes an MXF file and outputs one of the contained raw audio streams.</para>
+</refsect3>
+
+<include href="element-mxfdemux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mxfdemux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mxfdemux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMXFDemux-struct" role="struct">
+<title>struct GstMXFDemux</title>
+<indexterm zone="GstMXFDemux-struct"><primary>GstMXFDemux</primary></indexterm>
+<programlisting language="C">struct GstMXFDemux;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mxfdemux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstMXFDemux--package" role="property"><title>The <literal>“package”</literal> property</title>
+<indexterm zone="GstMXFDemux--package"><primary>GstMXFDemux:package</primary></indexterm>
+<programlisting>  “package”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Material or Source package to use for playback.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstMXFDemux--max-drift" role="property"><title>The <literal>“max-drift”</literal> property</title>
+<indexterm zone="GstMXFDemux--max-drift"><primary>GstMXFDemux:max-drift</primary></indexterm>
+<programlisting>  “max-drift”                <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Maximum number of nanoseconds by which tracks can differ.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 100000000</para>
+<para>Default value: 500000000</para>
+</refsect2>
+<refsect2 id="GstMXFDemux--structure" role="property"><title>The <literal>“structure”</literal> property</title>
+<indexterm zone="GstMXFDemux--structure"><primary>GstMXFDemux:structure</primary></indexterm>
+<programlisting>  “structure”                <link linkend="GstStructure"><type>GstStructure</type></link> *</programlisting>
+<para>Structural metadata of the MXF file.</para><para>Flags: Read</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

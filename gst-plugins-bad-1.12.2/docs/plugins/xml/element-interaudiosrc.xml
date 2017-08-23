@@ -1,0 +1,106 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-interaudiosrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-interaudiosrc.top_of_page" role="top_of_page">interaudiosrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>interaudiosrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-interaudiosrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstInterAudioSrc--channel">channel</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstInterAudioSrc--buffer-time">buffer-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstInterAudioSrc--latency-time">latency-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstInterAudioSrc--period-time">period-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstInterAudioSrc"/><refsect1 id="gst-plugins-bad-plugins-interaudiosrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstInterAudioSrc-struct">GstInterAudioSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-interaudiosrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> GstInterAudioSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-interaudiosrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-interaudiosrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-interaudiosrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-interaudiosrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstInterAudioSrc-struct" role="struct">
+<title>struct GstInterAudioSrc</title>
+<indexterm zone="GstInterAudioSrc-struct"><primary>GstInterAudioSrc</primary></indexterm>
+<programlisting language="C">struct GstInterAudioSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-interaudiosrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstInterAudioSrc--channel" role="property"><title>The <literal>“channel”</literal> property</title>
+<indexterm zone="GstInterAudioSrc--channel"><primary>GstInterAudioSrc:channel</primary></indexterm>
+<programlisting>  “channel”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Channel name to match inter src and sink elements.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;default&quot;</para>
+</refsect2>
+<refsect2 id="GstInterAudioSrc--buffer-time" role="property"><title>The <literal>“buffer-time”</literal> property</title>
+<indexterm zone="GstInterAudioSrc--buffer-time"><primary>GstInterAudioSrc:buffer-time</primary></indexterm>
+<programlisting>  “buffer-time”              <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Size of audio buffer.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1000000000</para>
+</refsect2>
+<refsect2 id="GstInterAudioSrc--latency-time" role="property"><title>The <literal>“latency-time”</literal> property</title>
+<indexterm zone="GstInterAudioSrc--latency-time"><primary>GstInterAudioSrc:latency-time</primary></indexterm>
+<programlisting>  “latency-time”             <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Latency as reported by the source.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 100000000</para>
+</refsect2>
+<refsect2 id="GstInterAudioSrc--period-time" role="property"><title>The <literal>“period-time”</literal> property</title>
+<indexterm zone="GstInterAudioSrc--period-time"><primary>GstInterAudioSrc:period-time</primary></indexterm>
+<programlisting>  “period-time”              <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>The minimum amount of data to read in each iteration.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 25000000</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

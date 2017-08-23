@@ -1,0 +1,207 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-neonhttpsrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-neonhttpsrc.top_of_page" role="top_of_page">neonhttpsrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>neonhttpsrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-neonhttpsrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstNeonhttpSrc--location">location</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstNeonhttpSrc--proxy">proxy</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchararray"><type>gchararray</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--uri">uri</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--automatic-redirect">automatic-redirect</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstNeonhttpSrc--iradio-genre">iradio-genre</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--iradio-mode">iradio-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstNeonhttpSrc--iradio-name">iradio-name</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstNeonhttpSrc--iradio-url">iradio-url</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--neon-http-debug">neon-http-debug</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstNeonhttpSrc--user-agent">user-agent</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--accept-self-signed">accept-self-signed</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--connect-timeout">connect-timeout</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GStrv"><type>GStrv</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--cookies">cookies</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstNeonhttpSrc--read-timeout">read-timeout</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-neonhttpsrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstNeonhttpSrc">GstNeonhttpSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-neonhttpsrc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstNeonhttpSrc implements
+ <link linkend="GstURIHandler">GstURIHandler</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-neonhttpsrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-neonhttpsrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-neonhttpsrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-neonhttpsrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstNeonhttpSrc" role="struct">
+<title>struct GstNeonhttpSrc</title>
+<indexterm zone="GstNeonhttpSrc"><primary>GstNeonhttpSrc</primary></indexterm>
+<programlisting language="C">struct GstNeonhttpSrc {
+  GstPushSrc element;
+
+  /* socket */
+  ne_session *session;
+  ne_request *request;
+  ne_uri uri;
+  gchar *location;
+  gchar *query_string;
+  ne_uri proxy;
+  gchar *user_agent;
+  gchar **cookies;
+
+  guint64 content_size;
+
+  gboolean eos;
+
+  /* whether to request icecast metadata */
+  gboolean iradio_mode;
+
+  /* enable Neon HTTP redirects (HTTP 302 status code) */
+  gboolean automatic_redirect;
+
+  /* enable Neon HTTP debug messages */
+  gboolean neon_http_debug;
+
+  /* accept self-signed certificates */
+  gboolean accept_self_signed;
+
+  gint64 read_position;
+  gboolean seekable;
+
+  /* seconds before timing out when connecting or reading to/from a socket */
+  guint connect_timeout;
+  guint read_timeout;
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-neonhttpsrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstNeonhttpSrc--location" role="property"><title>The <literal>“location”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--location"><primary>GstNeonhttpSrc:location</primary></indexterm>
+<programlisting>  “location”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location to read from.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--proxy" role="property"><title>The <literal>“proxy”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--proxy"><primary>GstNeonhttpSrc:proxy</primary></indexterm>
+<programlisting>  “proxy”                    <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Proxy server to use, in the form HOSTNAME:PORT. Defaults to the http_proxy environment variable.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--uri" role="property"><title>The <literal>“uri”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--uri"><primary>GstNeonhttpSrc:uri</primary></indexterm>
+<programlisting>  “uri”                      <link linkend="gchararray"><type>gchararray</type></link></programlisting>
+<para>The location in form of a URI (deprecated; use location).</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--automatic-redirect" role="property"><title>The <literal>“automatic-redirect”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--automatic-redirect"><primary>GstNeonhttpSrc:automatic-redirect</primary></indexterm>
+<programlisting>  “automatic-redirect”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Automatically follow HTTP redirects (HTTP Status Code 3xx).</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--iradio-genre" role="property"><title>The <literal>“iradio-genre”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--iradio-genre"><primary>GstNeonhttpSrc:iradio-genre</primary></indexterm>
+<programlisting>  “iradio-genre”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Genre of the stream.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--iradio-mode" role="property"><title>The <literal>“iradio-mode”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--iradio-mode"><primary>GstNeonhttpSrc:iradio-mode</primary></indexterm>
+<programlisting>  “iradio-mode”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable internet radio mode (ask server to send shoutcast/icecast metadata interleaved with the actual stream data).</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--iradio-name" role="property"><title>The <literal>“iradio-name”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--iradio-name"><primary>GstNeonhttpSrc:iradio-name</primary></indexterm>
+<programlisting>  “iradio-name”              <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Name of the stream.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--iradio-url" role="property"><title>The <literal>“iradio-url”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--iradio-url"><primary>GstNeonhttpSrc:iradio-url</primary></indexterm>
+<programlisting>  “iradio-url”               <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Homepage URL for radio stream.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--neon-http-debug" role="property"><title>The <literal>“neon-http-debug”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--neon-http-debug"><primary>GstNeonhttpSrc:neon-http-debug</primary></indexterm>
+<programlisting>  “neon-http-debug”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable Neon HTTP debug messages.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--user-agent" role="property"><title>The <literal>“user-agent”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--user-agent"><primary>GstNeonhttpSrc:user-agent</primary></indexterm>
+<programlisting>  “user-agent”               <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Value of the User-Agent HTTP request header field.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;GStreamer neonhttpsrc&quot;</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--accept-self-signed" role="property"><title>The <literal>“accept-self-signed”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--accept-self-signed"><primary>GstNeonhttpSrc:accept-self-signed</primary></indexterm>
+<programlisting>  “accept-self-signed”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Accept self-signed SSL/TLS certificates.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--connect-timeout" role="property"><title>The <literal>“connect-timeout”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--connect-timeout"><primary>GstNeonhttpSrc:connect-timeout</primary></indexterm>
+<programlisting>  “connect-timeout”          <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Value in seconds to timeout a blocking connection (0 = default).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 3600</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--cookies" role="property"><title>The <literal>“cookies”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--cookies"><primary>GstNeonhttpSrc:cookies</primary></indexterm>
+<programlisting>  “cookies”                  <link linkend="GStrv"><type>GStrv</type></link></programlisting>
+<para>HTTP request cookies.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstNeonhttpSrc--read-timeout" role="property"><title>The <literal>“read-timeout”</literal> property</title>
+<indexterm zone="GstNeonhttpSrc--read-timeout"><primary>GstNeonhttpSrc:read-timeout</primary></indexterm>
+<programlisting>  “read-timeout”             <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Value in seconds to timeout a blocking read (0 = default).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 3600</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

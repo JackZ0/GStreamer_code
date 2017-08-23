@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+
+<refentry id="gst-plugins-bad-plugins-tiger">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-plugins-tiger.top_of_page">tiger</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>tiger</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-tiger.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstKateTiger--category">category</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-background-alpha">default-background-alpha</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-background-blue">default-background-blue</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-background-green">default-background-green</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-background-red">default-background-red</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-font-alpha">default-font-alpha</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-font-blue">default-font-blue</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstKateTiger--default-font-desc">default-font-desc</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFontEffect"><type>GstFontEffect</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-font-effect">default-font-effect</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-font-effect-strength">default-font-effect-strength</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-font-green">default-font-green</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--default-font-red">default-font-red</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstKateTiger--language">language</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--original-canvas-height">original-canvas-height</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--original-canvas-width">original-canvas-width</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstKateTiger--quality">quality</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tiger.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstKateTiger">GstKateTiger</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-tiger.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tiger.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tiger.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstKateTiger" role="struct">
+<title>struct GstKateTiger</title>
+<indexterm zone="GstKateTiger"><primary>GstKateTiger</primary></indexterm>
+<programlisting language="C">struct GstKateTiger {
+  GstKateDecoderBase decoder;
+
+  GstPad *katesinkpad;
+  GstPad *videosinkpad;
+  GstPad *srcpad;
+
+  tiger_renderer *tr;
+
+  gdouble quality;
+  gchar *default_font_desc;
+  gboolean default_font_effect;
+  gdouble default_font_effect_strength;
+  guchar default_font_r;
+  guchar default_font_g;
+  guchar default_font_b;
+  guchar default_font_a;
+  guchar default_background_r;
+  guchar default_background_g;
+  guchar default_background_b;
+  guchar default_background_a;
+  gboolean silent;
+
+  GstVideoFormat video_format;
+  gint video_width;
+  gint video_height;
+  gboolean swap_rgb;
+  GstBuffer *render_buffer;
+  GstVideoOverlayComposition *composition;
+
+  GMutex *mutex;
+  GCond *cond;
+
+  GstSegment video_segment;
+  gboolean video_flushing;
+  gboolean seen_header;
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tiger.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstKateTiger--category" role="property"><title>The <literal>“category”</literal> property</title>
+<indexterm zone="GstKateTiger--category"><primary>GstKateTiger:category</primary></indexterm>
+<programlisting>  “category”                 <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>The category of the stream.</para><para>Flags: Read</para>
+<para>Default value: ""</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-background-alpha" role="property"><title>The <literal>“default-background-alpha”</literal> property</title>
+<indexterm zone="GstKateTiger--default-background-alpha"><primary>GstKateTiger:default-background-alpha</primary></indexterm>
+<programlisting>  “default-background-alpha” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default background color (alpha component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-background-blue" role="property"><title>The <literal>“default-background-blue”</literal> property</title>
+<indexterm zone="GstKateTiger--default-background-blue"><primary>GstKateTiger:default-background-blue</primary></indexterm>
+<programlisting>  “default-background-blue”  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default background color (blue component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-background-green" role="property"><title>The <literal>“default-background-green”</literal> property</title>
+<indexterm zone="GstKateTiger--default-background-green"><primary>GstKateTiger:default-background-green</primary></indexterm>
+<programlisting>  “default-background-green” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default background color (green component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-background-red" role="property"><title>The <literal>“default-background-red”</literal> property</title>
+<indexterm zone="GstKateTiger--default-background-red"><primary>GstKateTiger:default-background-red</primary></indexterm>
+<programlisting>  “default-background-red”   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default background color (red component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-font-alpha" role="property"><title>The <literal>“default-font-alpha”</literal> property</title>
+<indexterm zone="GstKateTiger--default-font-alpha"><primary>GstKateTiger:default-font-alpha</primary></indexterm>
+<programlisting>  “default-font-alpha”       <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default font color (alpha component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-font-blue" role="property"><title>The <literal>“default-font-blue”</literal> property</title>
+<indexterm zone="GstKateTiger--default-font-blue"><primary>GstKateTiger:default-font-blue</primary></indexterm>
+<programlisting>  “default-font-blue”        <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default font color (blue component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-font-desc" role="property"><title>The <literal>“default-font-desc”</literal> property</title>
+<indexterm zone="GstKateTiger--default-font-desc"><primary>GstKateTiger:default-font-desc</primary></indexterm>
+<programlisting>  “default-font-desc”        <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>Default font description (Pango style) to render text with.</para><para>Flags: Read / Write</para>
+<para>Default value: ""</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-font-effect" role="property"><title>The <literal>“default-font-effect”</literal> property</title>
+<indexterm zone="GstKateTiger--default-font-effect"><primary>GstKateTiger:default-font-effect</primary></indexterm>
+<programlisting>  “default-font-effect”      <link linkend="GstFontEffect"><type>GstFontEffect</type></link></programlisting>
+<para>Whether to apply an effect to text by default, for increased readability.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: outline</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-font-effect-strength" role="property"><title>The <literal>“default-font-effect-strength”</literal> property</title>
+<indexterm zone="GstKateTiger--default-font-effect-strength"><primary>GstKateTiger:default-font-effect-strength</primary></indexterm>
+<programlisting>  “default-font-effect-strength” <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>How pronounced should the font effect be (effect dependent).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.5</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-font-green" role="property"><title>The <literal>“default-font-green”</literal> property</title>
+<indexterm zone="GstKateTiger--default-font-green"><primary>GstKateTiger:default-font-green</primary></indexterm>
+<programlisting>  “default-font-green”       <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default font color (green component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--default-font-red" role="property"><title>The <literal>“default-font-red”</literal> property</title>
+<indexterm zone="GstKateTiger--default-font-red"><primary>GstKateTiger:default-font-red</primary></indexterm>
+<programlisting>  “default-font-red”         <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Default font color (red component, between 0 and 255) to render text with.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstKateTiger--language" role="property"><title>The <literal>“language”</literal> property</title>
+<indexterm zone="GstKateTiger--language"><primary>GstKateTiger:language</primary></indexterm>
+<programlisting>  “language”                 <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>The language of the stream.</para><para>Flags: Read</para>
+<para>Default value: ""</para>
+</refsect2>
+<refsect2 id="GstKateTiger--original-canvas-height" role="property"><title>The <literal>“original-canvas-height”</literal> property</title>
+<indexterm zone="GstKateTiger--original-canvas-height"><primary>GstKateTiger:original-canvas-height</primary></indexterm>
+<programlisting>  “original-canvas-height”   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The canvas height this stream was authored for (0 is unspecified).</para><para>Flags: Read</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstKateTiger--original-canvas-width" role="property"><title>The <literal>“original-canvas-width”</literal> property</title>
+<indexterm zone="GstKateTiger--original-canvas-width"><primary>GstKateTiger:original-canvas-width</primary></indexterm>
+<programlisting>  “original-canvas-width”    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The canvas width this stream was authored for.</para><para>Flags: Read</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstKateTiger--quality" role="property"><title>The <literal>“quality”</literal> property</title>
+<indexterm zone="GstKateTiger--quality"><primary>GstKateTiger:quality</primary></indexterm>
+<programlisting>  “quality”                  <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Rendering quality (0 is faster, 1 is best and slower).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

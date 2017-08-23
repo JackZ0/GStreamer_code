@@ -1,0 +1,1330 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-vc1parser">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-vc1parser.top_of_page">GstVc1Parser</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstVc1Parser</refname>
+<refpurpose>Convenience library for parsing vc1 video
+bitstream.</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-vc1parser.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-identify-next-bdu">gst_vc1_identify_next_bdu</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-parse-sequence-header">gst_vc1_parse_sequence_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-parse-sequence-layer">gst_vc1_parse_sequence_layer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-parse-sequence-header-struct-a">gst_vc1_parse_sequence_header_struct_a</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-parse-sequence-header-struct-b">gst_vc1_parse_sequence_header_struct_b</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-parse-sequence-header-struct-c">gst_vc1_parse_sequence_header_struct_c</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-parse-entry-point-header">gst_vc1_parse_entry_point_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-parse-frame-header">gst_vc1_parse_frame_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVC1BitPlanes"><returnvalue>GstVC1BitPlanes</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-vc1-bitplanes-new">gst_vc1_bitplanes_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-bitplanes-free">gst_vc1_bitplanes_free</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-bitplanes-free-1">gst_vc1_bitplanes_free_1</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-vc1-bitplanes-ensure-size">gst_vc1_bitplanes_ensure_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-vc1parser.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="MAX-HRD-NUM-LEAKY-BUCKETS:CAPS">MAX_HRD_NUM_LEAKY_BUCKETS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-VC1-BFRACTION-BASIS:CAPS">GST_VC1_BFRACTION_BASIS</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1StartCode">GstVC1StartCode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1Profile">GstVC1Profile</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1ParserResult">GstVC1ParserResult</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1PictureType">GstVC1PictureType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1Level">GstVC1Level</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1QuantizerSpec">GstVC1QuantizerSpec</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1DQProfile">GstVC1DQProfile</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1Condover">GstVC1Condover</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstVC1MvMode">GstVC1MvMode</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1SeqHdr">GstVC1SeqHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1AdvancedSeqHdr">GstVC1AdvancedSeqHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1SeqLayer">GstVC1SeqLayer</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1SeqStructA">GstVC1SeqStructA</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1SeqStructB">GstVC1SeqStructB</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1SeqStructC">GstVC1SeqStructC</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1HrdParam">GstVC1HrdParam</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1EntryPointHdr">GstVC1EntryPointHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1FrameHdr">GstVC1FrameHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1PicAdvanced">GstVC1PicAdvanced</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1PicSimpleMain">GstVC1PicSimpleMain</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstVC1Picture">GstVC1Picture</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1VopDquant">GstVC1VopDquant</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVC1BDU">GstVC1BDU</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-vc1parser.includes"><title>Includes</title><synopsis>#include &lt;gst/codecparsers/gstvc1parser.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-vc1parser.description" role="desc">
+<title role="desc.title">Description</title>
+<para>For more details about the structures, look at the
+smpte specifications (S421m-2006.pdf).</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-vc1parser.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-vc1-identify-next-bdu" role="function">
+<title>gst_vc1_identify_next_bdu&#160;()</title>
+<indexterm zone="gst-vc1-identify-next-bdu"><primary>gst_vc1_identify_next_bdu</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_identify_next_bdu (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                           <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                           <parameter><link linkend="GstVC1BDU"><type>GstVC1BDU</type></link> *bdu</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+ and fills <parameter>bdu</parameter>
+ fields</para>
+<refsect3 id="gst-vc1-identify-next-bdu.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>bdu</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstVC1BDU"><type>GstVC1BDU</type></link> where to store parsed bdu headers. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-identify-next-bdu.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1ParserResult"><type>GstVC1ParserResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-parse-sequence-header" role="function">
+<title>gst_vc1_parse_sequence_header&#160;()</title>
+<indexterm zone="gst-vc1-parse-sequence-header"><primary>gst_vc1_parse_sequence_header</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_parse_sequence_header (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                               <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                               <parameter><link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> *seqhdr</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+, and fills <parameter>seqhdr</parameter>
+ fields.</para>
+<refsect3 id="gst-vc1-parse-sequence-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>seqhdr</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> to set.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-parse-sequence-header.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1ParserResult"><type>GstVC1ParserResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-parse-sequence-layer" role="function">
+<title>gst_vc1_parse_sequence_layer&#160;()</title>
+<indexterm zone="gst-vc1-parse-sequence-layer"><primary>gst_vc1_parse_sequence_layer</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_parse_sequence_layer (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                              <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                              <parameter><link linkend="GstVC1SeqLayer"><type>GstVC1SeqLayer</type></link> *seqlayer</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+, and fills <parameter>seqlayer</parameter>
+ fields.</para>
+<refsect3 id="gst-vc1-parse-sequence-layer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>seqlayer</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqLayer"><type>GstVC1SeqLayer</type></link> to set.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-parse-sequence-layer.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1ParserResult"><type>GstVC1ParserResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-parse-sequence-header-struct-a" role="function">
+<title>gst_vc1_parse_sequence_header_struct_a&#160;()</title>
+<indexterm zone="gst-vc1-parse-sequence-header-struct-a"><primary>gst_vc1_parse_sequence_header_struct_a</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_parse_sequence_header_struct_a
+                               (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                <parameter><link linkend="GstVC1SeqStructA"><type>GstVC1SeqStructA</type></link> *structa</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+, and fills <parameter>structa</parameter>
+ fields.</para>
+<refsect3 id="gst-vc1-parse-sequence-header-struct-a.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>structa</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqStructA"><type>GstVC1SeqStructA</type></link> to set.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-parse-sequence-header-struct-a.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1ParserResult"><type>GstVC1ParserResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-parse-sequence-header-struct-b" role="function">
+<title>gst_vc1_parse_sequence_header_struct_b&#160;()</title>
+<indexterm zone="gst-vc1-parse-sequence-header-struct-b"><primary>gst_vc1_parse_sequence_header_struct_b</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_parse_sequence_header_struct_b
+                               (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                <parameter><link linkend="GstVC1SeqStructB"><type>GstVC1SeqStructB</type></link> *structb</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+, and fills <parameter>structb</parameter>
+ fields.</para>
+<refsect3 id="gst-vc1-parse-sequence-header-struct-b.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>structb</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqStructB"><type>GstVC1SeqStructB</type></link> to set.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-parse-sequence-header-struct-b.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1ParserResult"><type>GstVC1ParserResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-parse-sequence-header-struct-c" role="function">
+<title>gst_vc1_parse_sequence_header_struct_c&#160;()</title>
+<indexterm zone="gst-vc1-parse-sequence-header-struct-c"><primary>gst_vc1_parse_sequence_header_struct_c</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_parse_sequence_header_struct_c
+                               (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                <parameter><link linkend="GstVC1SeqStructC"><type>GstVC1SeqStructC</type></link> *structc</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+, and fills <parameter>structc</parameter>
+ fields.</para>
+<refsect3 id="gst-vc1-parse-sequence-header-struct-c.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>structc</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqStructC"><type>GstVC1SeqStructC</type></link> to set.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-parse-sequence-header-struct-c.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1ParserResult"><type>GstVC1ParserResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-parse-entry-point-header" role="function">
+<title>gst_vc1_parse_entry_point_header&#160;()</title>
+<indexterm zone="gst-vc1-parse-entry-point-header"><primary>gst_vc1_parse_entry_point_header</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_parse_entry_point_header (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                  <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                  <parameter><link linkend="GstVC1EntryPointHdr"><type>GstVC1EntryPointHdr</type></link> *entrypoint</parameter>,
+                                  <parameter><link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> *seqhdr</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+, and sets <parameter>entrypoint</parameter>
+ fields.</para>
+<refsect3 id="gst-vc1-parse-entry-point-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>entrypoint</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstVC1EntryPointHdr"><type>GstVC1EntryPointHdr</type></link> to set. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>seqhdr</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> currently being parsed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-parse-entry-point-header.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1EntryPointHdr"><type>GstVC1EntryPointHdr</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-parse-frame-header" role="function">
+<title>gst_vc1_parse_frame_header&#160;()</title>
+<indexterm zone="gst-vc1-parse-frame-header"><primary>gst_vc1_parse_frame_header</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1ParserResult"><returnvalue>GstVC1ParserResult</returnvalue></link>
+gst_vc1_parse_frame_header (<parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                            <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                            <parameter><link linkend="GstVC1FrameHdr"><type>GstVC1FrameHdr</type></link> *framehdr</parameter>,
+                            <parameter><link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> *seqhdr</parameter>,
+                            <parameter><link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link> *bitplanes</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+, and fills <parameter>entrypoint</parameter>
+ fields.</para>
+<refsect3 id="gst-vc1-parse-frame-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>framehdr</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1FrameHdr"><type>GstVC1FrameHdr</type></link> to fill.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>seqhdr</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> currently being parsed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>bitplanes</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link> to store bitplanes in or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-parse-frame-header.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstVC1ParserResult"><type>GstVC1ParserResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-bitplanes-new" role="function">
+<title>gst_vc1_bitplanes_new&#160;()</title>
+<indexterm zone="gst-vc1-bitplanes-new"><primary>gst_vc1_bitplanes_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstVC1BitPlanes"><returnvalue>GstVC1BitPlanes</returnvalue></link>&#160;*
+gst_vc1_bitplanes_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Creates a new <link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link>. It should be freed with
+<link linkend="gst-vc1-bitplanes-free"><function>gst_vc1_bitplanes_free()</function></link> after use.</para>
+<refsect3 id="gst-vc1-bitplanes-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-vc1-bitplanes-free" role="function">
+<title>gst_vc1_bitplanes_free&#160;()</title>
+<indexterm zone="gst-vc1-bitplanes-free"><primary>gst_vc1_bitplanes_free</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_vc1_bitplanes_free (<parameter><link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link> *bitplanes</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-vc1-bitplanes-free-1" role="function">
+<title>gst_vc1_bitplanes_free_1&#160;()</title>
+<indexterm zone="gst-vc1-bitplanes-free-1"><primary>gst_vc1_bitplanes_free_1</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_vc1_bitplanes_free_1 (<parameter><link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link> *bitplanes</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-vc1-bitplanes-ensure-size" role="function">
+<title>gst_vc1_bitplanes_ensure_size&#160;()</title>
+<indexterm zone="gst-vc1-bitplanes-ensure-size"><primary>gst_vc1_bitplanes_ensure_size</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_vc1_bitplanes_ensure_size (<parameter><link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link> *bitplanes</parameter>,
+                               <parameter><link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> *seqhdr</parameter>);</programlisting>
+<para>Fills the <parameter>bitplanes</parameter>
+ structure from <parameter>seqhdr</parameter>
+, this function
+should be called after <link linkend="gst-vc1-parse-sequence-header"><type>gst_vc1_parse_sequence_header</type></link> if
+in simple or main mode, or after <link linkend="gst-vc1-parse-entry-point-header"><type>gst_vc1_parse_entry_point_header</type></link>
+if in advanced mode.</para>
+<refsect3 id="gst-vc1-bitplanes-ensure-size.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>bitplanes</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1BitPlanes"><type>GstVC1BitPlanes</type></link> to reset</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>seqhdr</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstVC1SeqHdr"><type>GstVC1SeqHdr</type></link> from which to set <parameter>bitplanes</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-vc1-bitplanes-ensure-size.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if everything went fine, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-vc1parser.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="MAX-HRD-NUM-LEAKY-BUCKETS:CAPS" role="macro">
+<title>MAX_HRD_NUM_LEAKY_BUCKETS</title>
+<indexterm zone="MAX-HRD-NUM-LEAKY-BUCKETS:CAPS"><primary>MAX_HRD_NUM_LEAKY_BUCKETS</primary></indexterm>
+<programlisting language="C">#define MAX_HRD_NUM_LEAKY_BUCKETS 31
+</programlisting>
+</refsect2>
+<refsect2 id="GST-VC1-BFRACTION-BASIS:CAPS" role="macro">
+<title>GST_VC1_BFRACTION_BASIS</title>
+<indexterm zone="GST-VC1-BFRACTION-BASIS:CAPS"><primary>GST_VC1_BFRACTION_BASIS</primary></indexterm>
+<programlisting language="C">#define GST_VC1_BFRACTION_BASIS 840
+</programlisting>
+</refsect2>
+<refsect2 id="GstVC1StartCode" role="enum">
+<title>enum GstVC1StartCode</title>
+<indexterm zone="GstVC1StartCode"><primary>GstVC1StartCode</primary></indexterm>
+<refsect3 id="GstVC1StartCode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-END-OF-SEQ:CAPS">GST_VC1_END_OF_SEQ</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-SLICE:CAPS">GST_VC1_SLICE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-FIELD:CAPS">GST_VC1_FIELD</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-FRAME:CAPS">GST_VC1_FRAME</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-ENTRYPOINT:CAPS">GST_VC1_ENTRYPOINT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-SEQUENCE:CAPS">GST_VC1_SEQUENCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-SLICE-USER:CAPS">GST_VC1_SLICE_USER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-FIELD-USER:CAPS">GST_VC1_FIELD_USER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-FRAME-USER:CAPS">GST_VC1_FRAME_USER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-ENTRY-POINT-USER:CAPS">GST_VC1_ENTRY_POINT_USER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-SEQUENCE-USER:CAPS">GST_VC1_SEQUENCE_USER</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1Profile" role="enum">
+<title>enum GstVC1Profile</title>
+<indexterm zone="GstVC1Profile"><primary>GstVC1Profile</primary></indexterm>
+<refsect3 id="GstVC1Profile.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PROFILE-SIMPLE:CAPS">GST_VC1_PROFILE_SIMPLE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PROFILE-MAIN:CAPS">GST_VC1_PROFILE_MAIN</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PROFILE-RESERVED:CAPS">GST_VC1_PROFILE_RESERVED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PROFILE-ADVANCED:CAPS">GST_VC1_PROFILE_ADVANCED</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1ParserResult" role="enum">
+<title>enum GstVC1ParserResult</title>
+<indexterm zone="GstVC1ParserResult"><primary>GstVC1ParserResult</primary></indexterm>
+<refsect3 id="GstVC1ParserResult.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PARSER-OK:CAPS">GST_VC1_PARSER_OK</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PARSER-BROKEN-DATA:CAPS">GST_VC1_PARSER_BROKEN_DATA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PARSER-NO-BDU:CAPS">GST_VC1_PARSER_NO_BDU</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PARSER-NO-BDU-END:CAPS">GST_VC1_PARSER_NO_BDU_END</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PARSER-ERROR:CAPS">GST_VC1_PARSER_ERROR</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1PictureType" role="enum">
+<title>enum GstVC1PictureType</title>
+<indexterm zone="GstVC1PictureType"><primary>GstVC1PictureType</primary></indexterm>
+<refsect3 id="GstVC1PictureType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PICTURE-TYPE-P:CAPS">GST_VC1_PICTURE_TYPE_P</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PICTURE-TYPE-B:CAPS">GST_VC1_PICTURE_TYPE_B</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PICTURE-TYPE-I:CAPS">GST_VC1_PICTURE_TYPE_I</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PICTURE-TYPE-BI:CAPS">GST_VC1_PICTURE_TYPE_BI</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-PICTURE-TYPE-SKIPPED:CAPS">GST_VC1_PICTURE_TYPE_SKIPPED</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1Level" role="enum">
+<title>enum GstVC1Level</title>
+<indexterm zone="GstVC1Level"><primary>GstVC1Level</primary></indexterm>
+<refsect3 id="GstVC1Level.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-LOW:CAPS">GST_VC1_LEVEL_LOW</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-MEDIUM:CAPS">GST_VC1_LEVEL_MEDIUM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-HIGH:CAPS">GST_VC1_LEVEL_HIGH</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-L0:CAPS">GST_VC1_LEVEL_L0</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-L1:CAPS">GST_VC1_LEVEL_L1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-L2:CAPS">GST_VC1_LEVEL_L2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-L3:CAPS">GST_VC1_LEVEL_L3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-L4:CAPS">GST_VC1_LEVEL_L4</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-LEVEL-UNKNOWN:CAPS">GST_VC1_LEVEL_UNKNOWN</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1QuantizerSpec" role="enum">
+<title>enum GstVC1QuantizerSpec</title>
+<indexterm zone="GstVC1QuantizerSpec"><primary>GstVC1QuantizerSpec</primary></indexterm>
+<refsect3 id="GstVC1QuantizerSpec.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-QUANTIZER-IMPLICITLY:CAPS">GST_VC1_QUANTIZER_IMPLICITLY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-QUANTIZER-EXPLICITLY:CAPS">GST_VC1_QUANTIZER_EXPLICITLY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-QUANTIZER-NON-UNIFORM:CAPS">GST_VC1_QUANTIZER_NON_UNIFORM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-QUANTIZER-UNIFORM:CAPS">GST_VC1_QUANTIZER_UNIFORM</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1DQProfile" role="enum">
+<title>enum GstVC1DQProfile</title>
+<indexterm zone="GstVC1DQProfile"><primary>GstVC1DQProfile</primary></indexterm>
+<refsect3 id="GstVC1DQProfile.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-DQPROFILE-FOUR-EDGES:CAPS">GST_VC1_DQPROFILE_FOUR_EDGES</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-DQPROFILE-DOUBLE-EDGES:CAPS">GST_VC1_DQPROFILE_DOUBLE_EDGES</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-DQPROFILE-SINGLE-EDGE:CAPS">GST_VC1_DQPROFILE_SINGLE_EDGE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-DQPROFILE-ALL-MBS:CAPS">GST_VC1_DQPROFILE_ALL_MBS</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1Condover" role="enum">
+<title>enum GstVC1Condover</title>
+<indexterm zone="GstVC1Condover"><primary>GstVC1Condover</primary></indexterm>
+<refsect3 id="GstVC1Condover.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-CONDOVER-NONE:CAPS">GST_VC1_CONDOVER_NONE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-CONDOVER-ALL:CAPS">GST_VC1_CONDOVER_ALL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-CONDOVER-SELECT:CAPS">GST_VC1_CONDOVER_SELECT</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1MvMode" role="enum">
+<title>enum GstVC1MvMode</title>
+<indexterm zone="GstVC1MvMode"><primary>GstVC1MvMode</primary></indexterm>
+<refsect3 id="GstVC1MvMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-MVMODE-1MV-HPEL-BILINEAR:CAPS">GST_VC1_MVMODE_1MV_HPEL_BILINEAR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-MVMODE-1MV:CAPS">GST_VC1_MVMODE_1MV</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-MVMODE-1MV-HPEL:CAPS">GST_VC1_MVMODE_1MV_HPEL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-MVMODE-MIXED-MV:CAPS">GST_VC1_MVMODE_MIXED_MV</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-VC1-MVMODE-INTENSITY-COMP:CAPS">GST_VC1_MVMODE_INTENSITY_COMP</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstVC1SeqHdr" role="struct">
+<title>struct GstVC1SeqHdr</title>
+<indexterm zone="GstVC1SeqHdr"><primary>GstVC1SeqHdr</primary></indexterm>
+<programlisting language="C">struct GstVC1SeqHdr {
+  GstVC1Profile profile;
+
+  GstVC1SeqStructC struct_c;
+
+  /*  calculated */
+  guint mb_height;
+  guint mb_width;
+  guint mb_stride;
+
+  GstVC1AdvancedSeqHdr   advanced;
+};
+</programlisting>
+<para>Structure for sequence headers in any profile.</para>
+</refsect2>
+<refsect2 id="GstVC1AdvancedSeqHdr" role="struct">
+<title>struct GstVC1AdvancedSeqHdr</title>
+<indexterm zone="GstVC1AdvancedSeqHdr"><primary>GstVC1AdvancedSeqHdr</primary></indexterm>
+<programlisting language="C">struct GstVC1AdvancedSeqHdr {
+  GstVC1Level  level;
+
+  guint8  frmrtq_postproc;
+  guint8  bitrtq_postproc;
+  guint8  postprocflag;
+  guint16 max_coded_width;
+  guint16 max_coded_height;
+  guint8  pulldown;
+  guint8  interlace;
+  guint8  tfcntrflag;
+  guint8  finterpflag;
+  guint8  psf;
+  guint8  display_ext;
+  guint16 disp_horiz_size;
+  guint16 disp_vert_size;
+  guint8  aspect_ratio_flag;
+  guint8  aspect_ratio;
+  guint8  aspect_horiz_size;
+  guint8  aspect_vert_size;
+  guint8  framerate_flag;
+  guint8  framerateind;
+  guint8  frameratenr;
+  guint8  frameratedr;
+  guint16 framerateexp;
+  guint8  color_format_flag;
+  guint8  color_prim;
+  guint8  transfer_char;
+  guint8  matrix_coef;
+  guint8  hrd_param_flag;
+  guint8  colordiff_format;
+
+  GstVC1HrdParam hrd_param;
+
+  /* computed */
+  guint framerate; /* Around in fps, 0 if unknown*/
+  guint bitrate;   /* Around in kpbs, 0 if unknown*/
+  guint par_n;
+  guint par_d;
+  guint fps_n;
+  guint fps_d;
+
+  /* The last parsed entry point */
+  GstVC1EntryPointHdr entrypoint;
+};
+</programlisting>
+<para>Structure for the advanced profile sequence headers specific parameters.</para>
+</refsect2>
+<refsect2 id="GstVC1SeqLayer" role="struct">
+<title>struct GstVC1SeqLayer</title>
+<indexterm zone="GstVC1SeqLayer"><primary>GstVC1SeqLayer</primary></indexterm>
+<programlisting language="C">struct GstVC1SeqLayer {
+  guint32 numframes;
+
+  GstVC1SeqStructA struct_a;
+  GstVC1SeqStructB struct_b;
+  GstVC1SeqStructC struct_c;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstVC1SeqStructA" role="struct">
+<title>struct GstVC1SeqStructA</title>
+<indexterm zone="GstVC1SeqStructA"><primary>GstVC1SeqStructA</primary></indexterm>
+<programlisting language="C">struct GstVC1SeqStructA {
+  guint32 vert_size;
+  guint32 horiz_size;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstVC1SeqStructB" role="struct">
+<title>struct GstVC1SeqStructB</title>
+<indexterm zone="GstVC1SeqStructB"><primary>GstVC1SeqStructB</primary></indexterm>
+<programlisting language="C">struct GstVC1SeqStructB {
+  GstVC1Level  level;
+
+  guint8 cbr;
+  guint32 framerate;
+
+  /* In simple and main profiles only */
+  guint32 hrd_buffer;
+  guint32 hrd_rate;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstVC1SeqStructC" role="struct">
+<title>struct GstVC1SeqStructC</title>
+<indexterm zone="GstVC1SeqStructC"><primary>GstVC1SeqStructC</primary></indexterm>
+<programlisting language="C">struct GstVC1SeqStructC {
+  GstVC1Profile profile;
+
+  /* Only in simple and main profiles */
+  guint8 frmrtq_postproc;
+  guint8 bitrtq_postproc;
+  guint8 res_sprite;
+  guint8 loop_filter;
+  guint8 multires;
+  guint8 fastuvmc;
+  guint8 extended_mv;
+  guint8 dquant;
+  guint8 vstransform;
+  guint8 overlap;
+  guint8 syncmarker;
+  guint8 rangered;
+  guint8 maxbframes;
+  guint8 quantizer;
+  guint8 finterpflag;
+
+  /* Computed */
+  guint framerate; /* Around in fps, 0 if unknown*/
+  guint bitrate;   /* Around in kpbs, 0 if unknown*/
+
+  /* This should be filled by user if previously known */
+  guint16 coded_width;
+  /* This should be filled by user if previously known */
+  guint16 coded_height;
+
+  /* Wmvp specific */
+  guint8 wmvp;          /* Specify if the stream is wmp or not */
+  /* In the wmvp case, the framerate is not computed but in the bistream */
+  guint8 slice_code;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstVC1HrdParam" role="struct">
+<title>struct GstVC1HrdParam</title>
+<indexterm zone="GstVC1HrdParam"><primary>GstVC1HrdParam</primary></indexterm>
+<programlisting language="C">struct GstVC1HrdParam {
+  guint8 hrd_num_leaky_buckets;
+  guint8 bit_rate_exponent;
+  guint8 buffer_size_exponent;
+  guint16 hrd_rate[MAX_HRD_NUM_LEAKY_BUCKETS];
+  guint16 hrd_buffer[MAX_HRD_NUM_LEAKY_BUCKETS];
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstVC1EntryPointHdr" role="struct">
+<title>struct GstVC1EntryPointHdr</title>
+<indexterm zone="GstVC1EntryPointHdr"><primary>GstVC1EntryPointHdr</primary></indexterm>
+<programlisting language="C">struct GstVC1EntryPointHdr {
+  guint8 broken_link;
+  guint8 closed_entry;
+  guint8 panscan_flag;
+  guint8 refdist_flag;
+  guint8 loopfilter;
+  guint8 fastuvmc;
+  guint8 extended_mv;
+  guint8 dquant;
+  guint8 vstransform;
+  guint8 overlap;
+  guint8 quantizer;
+  guint8 coded_size_flag;
+  guint16 coded_width;
+  guint16 coded_height;
+  guint8 extended_dmv;
+  guint8 range_mapy_flag;
+  guint8 range_mapy;
+  guint8 range_mapuv_flag;
+  guint8 range_mapuv;
+
+  guint8 hrd_full[MAX_HRD_NUM_LEAKY_BUCKETS];
+};
+</programlisting>
+<para>Structure for entrypoint header, this will be used only in advanced profiles</para>
+</refsect2>
+<refsect2 id="GstVC1FrameHdr" role="struct">
+<title>struct GstVC1FrameHdr</title>
+<indexterm zone="GstVC1FrameHdr"><primary>GstVC1FrameHdr</primary></indexterm>
+<programlisting language="C">struct GstVC1FrameHdr {
+  /* common fields */
+  GstVC1PictureType ptype;
+  guint8 interpfrm;
+  guint8 halfqp;
+  guint8 transacfrm;
+  guint8 transdctab;
+  guint8 pqindex;
+  guint8 pquantizer;
+
+  /* Computed */
+  guint8 pquant;
+
+  /* Convenience fields */
+  guint8 profile;
+  guint8 dquant;
+
+  /*  If dquant */
+  GstVC1VopDquant vopdquant;
+
+  union {
+    GstVC1PicSimpleMain simple;
+    GstVC1PicAdvanced advanced;
+  } pic;
+
+  /* Size of the picture layer in bits */
+  guint header_size;
+};
+</programlisting>
+<para>Structure that represent picture in any profile or mode.
+You should look at <parameter>ptype</parameter>
+ and <parameter>profile</parameter>
+ to know what is currently
+in use.</para>
+</refsect2>
+<refsect2 id="GstVC1PicAdvanced" role="struct">
+<title>struct GstVC1PicAdvanced</title>
+<indexterm zone="GstVC1PicAdvanced"><primary>GstVC1PicAdvanced</primary></indexterm>
+<programlisting language="C">struct GstVC1PicAdvanced {
+  GstVC1FrameCodingMode fcm;
+  guint8  tfcntr;
+
+  guint8  rptfrm;
+  guint8  tff;
+  guint8  rff;
+  guint8  ps_present;
+  guint32 ps_hoffset;
+  guint32 ps_voffset;
+  guint16 ps_width;
+  guint16 ps_height;
+  guint8  rndctrl;
+  guint8  uvsamp;
+  guint8  postproc;
+
+  /*  B and P picture specific */
+  guint8  mvrange;
+  guint8  mvmode;
+  guint8  mvtab;
+  guint8  cbptab;
+  guint8  ttmbf;
+  guint8  ttfrm;
+
+  /* B and BI picture only
+   * Should be divided by #GST_VC1_BFRACTION_BASIS
+   * to get the real value. */
+  guint16 bfraction;
+
+  /* ppic */
+  guint8  mvmode2;
+  guint8  lumscale;
+  guint8  lumshift;
+
+  /* bipic */
+  guint8  bf;
+  guint8  condover;
+  guint8  transacfrm2;
+
+  /* Biplane value, those fields only mention the fact
+   * that the bitplane is in raw mode or not */
+  guint8  acpred;
+  guint8  overflags;
+  guint8  mvtypemb;
+  guint8  skipmb;
+  guint8  directmb;
+  guint8  forwardmb; /* B pic interlace field only */
+
+  /* For interlaced pictures only */
+  guint8  fieldtx;
+
+  /* P and B pictures */
+  guint8  intcomp;
+  guint8  dmvrange;
+  guint8  mbmodetab;
+  guint8  imvtab;
+  guint8  icbptab;
+  guint8  mvbptab2;
+  guint8  mvbptab4; /* If 4mvswitch in ppic */
+
+  /*  P picture */
+  guint8  mvswitch4;
+
+  /* For interlaced fields only */
+  guint16 refdist;
+  guint8 fptype; /* Raw value */
+
+  /* P pic */
+  guint8  numref;
+  guint8  reffield;
+  guint8  lumscale2;
+  guint8  lumshift2;
+  guint8  intcompfield;
+};
+</programlisting>
+<refsect3 id="GstVC1PicAdvanced.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstVC1FrameCodingMode"><type>GstVC1FrameCodingMode</type></link>&#160;<structfield id="GstVC1PicAdvanced.fcm">fcm</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.tfcntr">tfcntr</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.rptfrm">rptfrm</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.tff">tff</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.rff">rff</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.ps-present">ps_present</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstVC1PicAdvanced.ps-hoffset">ps_hoffset</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstVC1PicAdvanced.ps-voffset">ps_voffset</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstVC1PicAdvanced.ps-width">ps_width</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstVC1PicAdvanced.ps-height">ps_height</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.rndctrl">rndctrl</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.uvsamp">uvsamp</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.postproc">postproc</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvrange">mvrange</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvmode">mvmode</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvtab">mvtab</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.cbptab">cbptab</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.ttmbf">ttmbf</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.ttfrm">ttfrm</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstVC1PicAdvanced.bfraction">bfraction</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvmode2">mvmode2</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.lumscale">lumscale</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.lumshift">lumshift</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.bf">bf</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.condover">condover</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.transacfrm2">transacfrm2</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.acpred">acpred</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.overflags">overflags</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvtypemb">mvtypemb</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.skipmb">skipmb</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.directmb">directmb</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.forwardmb">forwardmb</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.fieldtx">fieldtx</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.intcomp">intcomp</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.dmvrange">dmvrange</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mbmodetab">mbmodetab</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.imvtab">imvtab</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.icbptab">icbptab</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvbptab2">mvbptab2</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvbptab4">mvbptab4</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.mvswitch4">mvswitch4</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstVC1PicAdvanced.refdist">refdist</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.fptype">fptype</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.numref">numref</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.reffield">reffield</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.lumscale2">lumscale2</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.lumshift2">lumshift2</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicAdvanced.intcompfield">intcompfield</structfield>;</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstVC1PicSimpleMain" role="struct">
+<title>struct GstVC1PicSimpleMain</title>
+<indexterm zone="GstVC1PicSimpleMain"><primary>GstVC1PicSimpleMain</primary></indexterm>
+<programlisting language="C">struct GstVC1PicSimpleMain {
+  guint8 frmcnt;
+  guint8 mvrange;
+  guint8 rangeredfrm;
+
+  /* I and P pic simple and main profiles only */
+  guint8 respic;
+
+  /* I and BI pic simple and main profiles only */
+  guint8 transacfrm2;
+  guint8 bf;
+
+  /* B and P pic simple and main profiles only */
+  guint8 mvmode;
+  guint8 mvtab;
+  guint8 ttmbf;
+
+  /* P pic simple and main profiles only */
+  guint8 mvmode2;
+  guint8 lumscale;
+  guint8 lumshift;
+
+  guint8 cbptab;
+  guint8 ttfrm;
+
+  /* B and BI picture only
+   * Should be divided by #GST_VC1_BFRACTION_BASIS
+   * to get the real value. */
+  guint16 bfraction;
+
+  /* Biplane value, those fields only mention the fact
+   * that the bitplane is in raw mode or not */
+  guint8 mvtypemb;
+  guint8 skipmb;
+  guint8 directmb; /* B pic main profile only */
+};
+</programlisting>
+<refsect3 id="GstVC1PicSimpleMain.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.frmcnt">frmcnt</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.mvrange">mvrange</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.rangeredfrm">rangeredfrm</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.respic">respic</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.transacfrm2">transacfrm2</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.bf">bf</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.mvmode">mvmode</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.mvtab">mvtab</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.ttmbf">ttmbf</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.mvmode2">mvmode2</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.lumscale">lumscale</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.lumshift">lumshift</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.cbptab">cbptab</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.ttfrm">ttfrm</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstVC1PicSimpleMain.bfraction">bfraction</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.mvtypemb">mvtypemb</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.skipmb">skipmb</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstVC1PicSimpleMain.directmb">directmb</structfield>;</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstVC1Picture" role="struct">
+<title>GstVC1Picture</title>
+<indexterm zone="GstVC1Picture"><primary>GstVC1Picture</primary></indexterm>
+<programlisting language="C">typedef struct _GstVC1Picture GstVC1Picture;</programlisting>
+</refsect2>
+<refsect2 id="GstVC1VopDquant" role="struct">
+<title>struct GstVC1VopDquant</title>
+<indexterm zone="GstVC1VopDquant"><primary>GstVC1VopDquant</primary></indexterm>
+<programlisting language="C">struct GstVC1VopDquant {
+  guint8 pqdiff;
+  guint8 abspq;
+
+  /* Computed */
+  guint8 altpquant;
+
+  /*  if dqant != 2*/
+  guint8 dquantfrm;
+  guint8 dqprofile;
+
+  /* Boundary edge selection. This represents DQSBEDGE
+   * if dqprofile == GST_VC1_DQPROFILE_SINGLE_EDGE or
+   * DQDBEDGE if dqprofile == GST_VC1_DQPROFILE_DOUBLE_EDGE */
+  guint8 dqbedge;
+
+  /* FIXME: remove */
+  guint8 unused;
+
+  /* if dqprofile == GST_VC1_DQPROFILE_ALL_MBS */
+  guint8 dqbilevel;
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstVC1BDU" role="struct">
+<title>struct GstVC1BDU</title>
+<indexterm zone="GstVC1BDU"><primary>GstVC1BDU</primary></indexterm>
+<programlisting language="C">struct GstVC1BDU {
+  GstVC1StartCode type;
+  guint size;
+  guint sc_offset;
+  guint offset;
+  guint8 * data;
+};
+</programlisting>
+<para>Structure that represents a Bitstream Data Unit.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

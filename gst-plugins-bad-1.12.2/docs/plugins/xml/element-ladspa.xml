@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+
+<refentry id="gst-plugins-bad-plugins-ladspa">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-plugins-ladspa.top_of_page">ladspa</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ladspa</refname>
+<refpurpose>bridge for LADSPA (Linux Audio Developer's Simple Plugin API)</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-ladspa.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstLADSPA">GstLADSPA</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-ladspa.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The LADSPA (Linux Audio Developer's Simple Plugin API) element is a bridge
+for plugins using the <ulink url="http://www.ladspa.org/">LADSPA</ulink> API.
+It scans all installed LADSPA plugins and registers them as gstreamer
+elements. If available it can also parse LRDF files and use the metadata for
+element classification. The functionality you get depends on the LADSPA plugins
+you have installed.</para>
+<refsect3><title>Example LADSPA line without this plugins</title><informalexample><programlisting><![CDATA[
+(padsp) listplugins
+(padsp) analyseplugin cmt.so amp_mono
+gst-launch-1.0 -e filesrc location="$myfile" ! decodebin ! audioconvert ! audioresample ! "audio/x-raw,format=S16LE,rate=48000,channels=1" ! wavenc ! filesink location="testin.wav"
+(padsp) applyplugin testin.wav testout.wav cmt.so amp_mono 2
+gst-launch-1.0 playbin uri=file://"$PWD"/testout.wav
+]]></programlisting></informalexample>
+<para> Decode any audio file into wav with the format expected for the specific ladspa plugin to be applied, apply the ladspa filter and play it.</para>
+<para>Now with this plugin:</para>
+</refsect3>
+<refsect3><title>Example LADSPA line with this plugins</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 autoaudiosrc ! ladspa-cmt-so-amp-mono gain=2 ! ladspa-caps-so-plate ! ladspa-tap-echo-so-tap-stereo-echo l-delay=500 r-haas-delay=500 ! tee name=myT myT. ! queue ! autoaudiosink myT. ! queue ! audioconvert ! goom ! videoconvert ! xvimagesink pixel-aspect-ratio=3/4
+]]></programlisting></informalexample>
+<para> Get audio input, filter it through CAPS Plate and TAP Stereo Echo, play it and show a visualization (recommended hearphones).</para>
+<para>In case you wonder the plugin naming scheme, quoting ladspa.h:
+  "Plugin types should be identified by file and label rather than by
+  index or plugin name, which may be changed in new plugin versions."
+This is really the best way then, and so it is less prone to conflicts.</para>
+<para>Also it is worth noting that LADSPA provides a control in and out interface,
+on top of the audio in and out one, so some parameters are readable too.</para>
+<para>You can see the listing of plugins available with:</para>
+</refsect3>
+<refsect3><title>Inspecting the plugins list</title><informalexample><programlisting><![CDATA[
+gst-inspect ladspa
+]]></programlisting></informalexample>
+<para> List available LADSPA plugins on gstreamer.</para>
+<para>You can see the parameters of any plugin with:</para>
+</refsect3>
+<refsect3><title>Inspecting the plugins</title><informalexample><programlisting><![CDATA[
+gst-inspect ladspa-retro-flange-1208-so-retroflange
+]]></programlisting></informalexample>
+<para> List details of the plugin, parameters, range and defaults included.</para>
+<para>The elements categorize in:</para>
+<itemizedlist>
+<listitem>
+<para>Filter/Effect/Audio/LADSPA:</para>
+</listitem>
+</itemizedlist>
+</refsect3>
+<refsect3><title>Example Filter/Effect/Audio/LADSPA line with this plugins</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location="$myfile" ! decodebin ! audioconvert ! audioresample ! ladspa-calf-so-reverb decay-time=15 high-frq-damp=20000 room-size=5 diffusion=1 wet-amount=2 dry-amount=2 pre-delay=50 bass-cut=20000 treble-cut=20000 ! ladspa-tap-echo-so-tap-stereo-echo l-delay=500 r-haas-delay=500 ! autoaudiosink
+]]></programlisting></informalexample>
+<para> Decode any audio file, filter it through Calf Reverb LADSPA then TAP Stereo Echo, and play it.</para>
+<itemizedlist>
+<listitem>
+<para>Source/Audio/LADSPA:</para>
+</listitem>
+</itemizedlist>
+</refsect3>
+<refsect3><title>Example Source/Audio/LADSPA line with this plugins</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 ladspasrc-sine-so-sine-fcac frequency=220 amplitude=100 ! audioconvert ! autoaudiosink
+]]></programlisting></informalexample>
+<para> Generate a sine wave with Sine Oscillator (Freq:control, Amp:control) and play it.</para>
+</refsect3>
+<refsect3><title>Example Source/Audio/LADSPA line with this plugins</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 ladspasrc-caps-so-click bpm=240 volume=1 ! autoaudiosink
+]]></programlisting></informalexample>
+<para> Generate clicks with CAPS Click - Metronome at 240 beats per minute and play it.</para>
+</refsect3>
+<refsect3><title>Example Source/Audio/LADSPA line with this plugins</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 ladspasrc-random-1661-so-random-fcsc-oa ! ladspa-cmt-so-amp-mono gain=1.5 ! ladspa-caps-so-plate ! tee name=myT myT. ! queue ! autoaudiosink myT. ! queue ! audioconvert ! wavescope ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> Generate random wave, filter it trhough Mono Amplifier and Versatile Plate Reverb, and play, while showing, it.</para>
+<itemizedlist>
+<listitem>
+<para>Sink/Audio/LADSPA:</para>
+</listitem>
+</itemizedlist>
+</refsect3>
+<refsect3><title>Example Sink/Audio/LADSPA line with this plugins</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 autoaudiosrc ! ladspa-cmt-so-amp-mono gain=2 ! ladspa-caps-so-plate ! ladspa-tap-echo-so-tap-stereo-echo l-delay=500 r-haas-delay=500 ! tee name=myT myT. ! audioconvert ! audioresample ! queue ! ladspasink-cmt-so-null-ai myT. ! audioconvert ! audioresample ! queue ! goom ! videoconvert ! xvimagesink pixel-aspect-ratio=3/4
+]]></programlisting></informalexample>
+<para> Get audio input, filter it trhough Mono Amplifier, CAPS Plate LADSPA and TAP Stereo Echo, explicitily anulate audio with Null (Audio Output), and play a visualization (recommended hearphones).</para>
+</refsect3>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ladspa.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ladspa.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstLADSPA" role="struct">
+<title>struct GstLADSPA</title>
+<indexterm zone="GstLADSPA"><primary>GstLADSPA</primary></indexterm>
+<programlisting language="C">struct GstLADSPA {
+  GstLADSPAClass *klass;
+
+  LADSPA_Handle *handle;
+  gboolean activated;
+  unsigned long rate;
+
+  struct
+  {
+    struct
+    {
+      LADSPA_Data *in;
+      LADSPA_Data *out;
+    } control;
+
+    struct
+    {
+      LADSPA_Data **in;
+      LADSPA_Data **out;
+    } audio;
+  } ports;
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ladspa.see-also">
+<title>See Also</title>
+<para><link linkend="GstAudioConvert"><type>GstAudioConvert</type></link> <link linkend="GstAudioResample"><type>GstAudioResample</type></link>, <link linkend="GstAudioTestSrc"><type>GstAudioTestSrc</type></link>, <link linkend="GstAutoAudioSink"><type>GstAutoAudioSink</type></link></para>
+
+</refsect1>
+
+</refentry>

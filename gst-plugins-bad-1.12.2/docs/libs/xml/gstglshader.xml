@@ -1,0 +1,894 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstGLShader">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstGLShader.top_of_page">GstGLShader</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLShader</refname>
+<refpurpose>object representing an OpenGL shader program</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstGLShader.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-shader-new">gst_gl_shader_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-shader-new-default">gst_gl_shader_new_default</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-shader-new-link-with-stages">gst_gl_shader_new_link_with_stages</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-shader-new-with-stages">gst_gl_shader_new_with_stages</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-use">gst_gl_shader_use</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-clear-shader">gst_gl_context_clear_shader</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="int"><returnvalue>int</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-get-program-handle">gst_gl_shader_get_program_handle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-release">gst_gl_shader_release</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-release-unlocked">gst_gl_shader_release_unlocked</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-attach">gst_gl_shader_attach</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-attach-unlocked">gst_gl_shader_attach_unlocked</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-compile-attach-stage">gst_gl_shader_compile_attach_stage</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-detach">gst_gl_shader_detach</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-detach-unlocked">gst_gl_shader_detach_unlocked</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-is-linked">gst_gl_shader_is_linked</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-link">gst_gl_shader_link</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-1i">gst_gl_shader_set_uniform_1i</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-1f">gst_gl_shader_set_uniform_1f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-1fv">gst_gl_shader_set_uniform_1fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-1iv">gst_gl_shader_set_uniform_1iv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-2f">gst_gl_shader_set_uniform_2f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-2fv">gst_gl_shader_set_uniform_2fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-2i">gst_gl_shader_set_uniform_2i</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-2iv">gst_gl_shader_set_uniform_2iv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-3f">gst_gl_shader_set_uniform_3f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-3fv">gst_gl_shader_set_uniform_3fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-3i">gst_gl_shader_set_uniform_3i</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-3iv">gst_gl_shader_set_uniform_3iv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-4f">gst_gl_shader_set_uniform_4f</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-4fv">gst_gl_shader_set_uniform_4fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-4i">gst_gl_shader_set_uniform_4i</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-4iv">gst_gl_shader_set_uniform_4iv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-2fv">gst_gl_shader_set_uniform_matrix_2fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-2x3fv">gst_gl_shader_set_uniform_matrix_2x3fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-2x4fv">gst_gl_shader_set_uniform_matrix_2x4fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-3fv">gst_gl_shader_set_uniform_matrix_3fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-3x2fv">gst_gl_shader_set_uniform_matrix_3x2fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-3x4fv">gst_gl_shader_set_uniform_matrix_3x4fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-4fv">gst_gl_shader_set_uniform_matrix_4fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-4x2fv">gst_gl_shader_set_uniform_matrix_4x2fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-set-uniform-matrix-4x3fv">gst_gl_shader_set_uniform_matrix_4x3fv</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-get-attribute-location">gst_gl_shader_get_attribute_location</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-bind-attribute-location">gst_gl_shader_bind_attribute_location</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-shader-bind-frag-data-location">gst_gl_shader_bind_frag_data_location</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLShader.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLShader--linked">linked</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLShader.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLShader-struct">GstGLShader</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLShader.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLShader
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstGLShader.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="GstGLShader.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-shader-new" role="function">
+<title>gst_gl_shader_new&#160;()</title>
+<indexterm zone="gst-gl-shader-new"><primary>gst_gl_shader_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+gst_gl_shader_new (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-new.returns" role="returns">
+<title>Returns</title>
+<para> a new empty <parameter>shader</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-shader-new-default" role="function" condition="since:1.8">
+<title>gst_gl_shader_new_default&#160;()</title>
+<indexterm zone="gst-gl-shader-new-default" role="1.8"><primary>gst_gl_shader_new_default</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+gst_gl_shader_new_default (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                           <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-new-default.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> that is filled on failure</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-new-default.returns" role="returns">
+<title>Returns</title>
+<para> a default <parameter>shader</parameter>
+or <link linkend="NULL:CAPS"><literal>NULL</literal></link> on failure. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-new-link-with-stages" role="function" condition="since:1.8">
+<title>gst_gl_shader_new_link_with_stages&#160;()</title>
+<indexterm zone="gst-gl-shader-new-link-with-stages" role="1.8"><primary>gst_gl_shader_new_link_with_stages</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+gst_gl_shader_new_link_with_stages (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>,
+                                    <parameter>...</parameter>);</programlisting>
+<para>Each stage will attempt to be compiled and attached to <parameter>shader</parameter>
+.  Then
+the shader will be linked. On error, <link linkend="NULL:CAPS"><literal>NULL</literal></link> will be returned and <parameter>error</parameter>
+ will
+contain the details of the error.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-new-link-with-stages.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>a NULL terminated list of <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link>'s</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-new-link-with-stages.returns" role="returns">
+<title>Returns</title>
+<para> a new <parameter>shader</parameter>
+with the specified stages. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-new-with-stages" role="function" condition="since:1.8">
+<title>gst_gl_shader_new_with_stages&#160;()</title>
+<indexterm zone="gst-gl-shader-new-with-stages" role="1.8"><primary>gst_gl_shader_new_with_stages</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLShader"><returnvalue>GstGLShader</returnvalue></link>&#160;*
+gst_gl_shader_new_with_stages (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                               <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>,
+                               <parameter>...</parameter>);</programlisting>
+<para>Each stage will attempt to be compiled and attached to <parameter>shader</parameter>
+.  On error,
+<link linkend="NULL:CAPS"><literal>NULL</literal></link> will be returned and <parameter>error</parameter>
+ will contain the details of the error.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-new-with-stages.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>a NULL terminated list of <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link>'s</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-new-with-stages.returns" role="returns">
+<title>Returns</title>
+<para> a new <parameter>shader</parameter>
+with the specified stages. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-use" role="function">
+<title>gst_gl_shader_use&#160;()</title>
+<indexterm zone="gst-gl-shader-use"><primary>gst_gl_shader_use</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_use (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>);</programlisting>
+<para>Mark's <parameter>shader</parameter>
+ as being used for the next GL draw command.</para>
+<para>Note: must be called in the GL thread and <parameter>shader</parameter>
+ must have been linked.</para>
+<refsect3 id="gst-gl-shader-use.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-context-clear-shader" role="function">
+<title>gst_gl_context_clear_shader&#160;()</title>
+<indexterm zone="gst-gl-context-clear-shader"><primary>gst_gl_context_clear_shader</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_context_clear_shader (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Clear's the currently set shader from the GL state machine.</para>
+<para>Note: must be called in the GL thread.</para>
+<refsect3 id="gst-gl-context-clear-shader.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-shader-get-program-handle" role="function" condition="since:1.8">
+<title>gst_gl_shader_get_program_handle&#160;()</title>
+<indexterm zone="gst-gl-shader-get-program-handle" role="1.8"><primary>gst_gl_shader_get_program_handle</primary></indexterm>
+<programlisting language="C"><link linkend="int"><returnvalue>int</returnvalue></link>
+gst_gl_shader_get_program_handle (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>);</programlisting>
+<refsect3 id="gst-gl-shader-get-program-handle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-get-program-handle.returns" role="returns">
+<title>Returns</title>
+<para> the GL program handle for this shader</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-release" role="function" condition="since:1.8">
+<title>gst_gl_shader_release&#160;()</title>
+<indexterm zone="gst-gl-shader-release" role="1.8"><primary>gst_gl_shader_release</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_release (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>);</programlisting>
+<para>Releases the shader and stages.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-release.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-release-unlocked" role="function" condition="since:1.8">
+<title>gst_gl_shader_release_unlocked&#160;()</title>
+<indexterm zone="gst-gl-shader-release-unlocked" role="1.8"><primary>gst_gl_shader_release_unlocked</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_release_unlocked (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>);</programlisting>
+<para>Releases the shader and stages.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-release-unlocked.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-attach" role="function" condition="since:1.8">
+<title>gst_gl_shader_attach&#160;()</title>
+<indexterm zone="gst-gl-shader-attach" role="1.8"><primary>gst_gl_shader_attach</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_shader_attach (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                      <parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<para>Attaches <parameter>stage</parameter>
+ to <parameter>shader</parameter>
+.  <parameter>stage</parameter>
+ must have been successfully compiled
+with <link linkend="gst-glsl-stage-compile"><function>gst_glsl_stage_compile()</function></link>.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-attach.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> to attach</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-attach.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>stage</parameter>
+could be attached to <parameter>shader</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-attach-unlocked" role="function" condition="since:1.8">
+<title>gst_gl_shader_attach_unlocked&#160;()</title>
+<indexterm zone="gst-gl-shader-attach-unlocked" role="1.8"><primary>gst_gl_shader_attach_unlocked</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_shader_attach_unlocked (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<para>Attaches <parameter>stage</parameter>
+ to <parameter>shader</parameter>
+.  <parameter>stage</parameter>
+ must have been successfully compiled
+with <link linkend="gst-glsl-stage-compile"><function>gst_glsl_stage_compile()</function></link>.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-attach-unlocked.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> to attach</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-attach-unlocked.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>stage</parameter>
+could be attached to <parameter>shader</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-compile-attach-stage" role="function" condition="since:1.8">
+<title>gst_gl_shader_compile_attach_stage&#160;()</title>
+<indexterm zone="gst-gl-shader-compile-attach-stage" role="1.8"><primary>gst_gl_shader_compile_attach_stage</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_shader_compile_attach_stage (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                    <parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>,
+                                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Compiles <parameter>stage</parameter>
+ and attaches it to <parameter>shader</parameter>
+.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-compile-attach-stage.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> to attach</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-compile-attach-stage.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>stage</parameter>
+could be compiled and attached to <parameter>shader</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-detach" role="function" condition="since:1.8">
+<title>gst_gl_shader_detach&#160;()</title>
+<indexterm zone="gst-gl-shader-detach" role="1.8"><primary>gst_gl_shader_detach</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_detach (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                      <parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<para>Detaches <parameter>stage</parameter>
+ from <parameter>shader</parameter>
+.  <parameter>stage</parameter>
+ must have been successfully attached
+to <parameter>shader</parameter>
+ with <link linkend="gst-gl-shader-attach"><function>gst_gl_shader_attach()</function></link> or <link linkend="gst-gl-shader-attach-unlocked"><function>gst_gl_shader_attach_unlocked()</function></link>.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-detach.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> to attach</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-detach-unlocked" role="function" condition="since:1.8">
+<title>gst_gl_shader_detach_unlocked&#160;()</title>
+<indexterm zone="gst-gl-shader-detach-unlocked" role="1.8"><primary>gst_gl_shader_detach_unlocked</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_detach_unlocked (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> *stage</parameter>);</programlisting>
+<para>Detaches <parameter>stage</parameter>
+ from <parameter>shader</parameter>
+.  <parameter>stage</parameter>
+ must have been successfully attached
+to <parameter>shader</parameter>
+ with <link linkend="gst-gl-shader-attach"><function>gst_gl_shader_attach()</function></link> or <link linkend="gst-gl-shader-attach-unlocked"><function>gst_gl_shader_attach_unlocked()</function></link>.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-detach-unlocked.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stage</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link> to attach</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-is-linked" role="function" condition="since:1.8">
+<title>gst_gl_shader_is_linked&#160;()</title>
+<indexterm zone="gst-gl-shader-is-linked" role="1.8"><primary>gst_gl_shader_is_linked</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_shader_is_linked (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>);</programlisting>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-is-linked.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-is-linked.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>shader</parameter>
+has been successfully linked</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-link" role="function" condition="since:1.8">
+<title>gst_gl_shader_link&#160;()</title>
+<indexterm zone="gst-gl-shader-link" role="1.8"><primary>gst_gl_shader_link</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_shader_link (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                    <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Links the current list of <link linkend="GstGLSLStage"><type>GstGLSLStage</type></link>'s in <parameter>shader</parameter>
+.</para>
+<para>Note: must be called in the GL thread</para>
+<refsect3 id="gst-gl-shader-link.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLShader"><type>GstGLShader</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-shader-link.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>shader</parameter>
+could be linked together.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-1i" role="function">
+<title>gst_gl_shader_set_uniform_1i&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-1i"><primary>gst_gl_shader_set_uniform_1i</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_1i (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-1f" role="function">
+<title>gst_gl_shader_set_uniform_1f&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-1f"><primary>gst_gl_shader_set_uniform_1f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_1f (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-1fv" role="function">
+<title>gst_gl_shader_set_uniform_1fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-1fv"><primary>gst_gl_shader_set_uniform_1fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_1fv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-1iv" role="function">
+<title>gst_gl_shader_set_uniform_1iv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-1iv"><primary>gst_gl_shader_set_uniform_1iv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_1iv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-2f" role="function">
+<title>gst_gl_shader_set_uniform_2f&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-2f"><primary>gst_gl_shader_set_uniform_2f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_2f (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v0</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v1</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-2fv" role="function">
+<title>gst_gl_shader_set_uniform_2fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-2fv"><primary>gst_gl_shader_set_uniform_2fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_2fv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-2i" role="function">
+<title>gst_gl_shader_set_uniform_2i&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-2i"><primary>gst_gl_shader_set_uniform_2i</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_2i (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v0</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v1</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-2iv" role="function">
+<title>gst_gl_shader_set_uniform_2iv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-2iv"><primary>gst_gl_shader_set_uniform_2iv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_2iv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-3f" role="function">
+<title>gst_gl_shader_set_uniform_3f&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-3f"><primary>gst_gl_shader_set_uniform_3f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_3f (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v0</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v1</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v2</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-3fv" role="function">
+<title>gst_gl_shader_set_uniform_3fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-3fv"><primary>gst_gl_shader_set_uniform_3fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_3fv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-3i" role="function">
+<title>gst_gl_shader_set_uniform_3i&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-3i"><primary>gst_gl_shader_set_uniform_3i</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_3i (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v0</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v1</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v2</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-3iv" role="function">
+<title>gst_gl_shader_set_uniform_3iv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-3iv"><primary>gst_gl_shader_set_uniform_3iv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_3iv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-4f" role="function">
+<title>gst_gl_shader_set_uniform_4f&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-4f"><primary>gst_gl_shader_set_uniform_4f</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_4f (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v0</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v1</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v2</parameter>,
+                              <parameter><link linkend="gfloat"><type>gfloat</type></link> v3</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-4fv" role="function">
+<title>gst_gl_shader_set_uniform_4fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-4fv"><primary>gst_gl_shader_set_uniform_4fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_4fv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-4i" role="function">
+<title>gst_gl_shader_set_uniform_4i&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-4i"><primary>gst_gl_shader_set_uniform_4i</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_4i (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v0</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v1</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v2</parameter>,
+                              <parameter><link linkend="gint"><type>gint</type></link> v3</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-4iv" role="function">
+<title>gst_gl_shader_set_uniform_4iv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-4iv"><primary>gst_gl_shader_set_uniform_4iv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_4iv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                               <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> count</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-2fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_2fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-2fv"><primary>gst_gl_shader_set_uniform_matrix_2fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_2fv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                      <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                      <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                      <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                      <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-2x3fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_2x3fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-2x3fv"><primary>gst_gl_shader_set_uniform_matrix_2x3fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_2x3fv
+                               (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-2x4fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_2x4fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-2x4fv"><primary>gst_gl_shader_set_uniform_matrix_2x4fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_2x4fv
+                               (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-3fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_3fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-3fv"><primary>gst_gl_shader_set_uniform_matrix_3fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_3fv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                      <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                      <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                      <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                      <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-3x2fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_3x2fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-3x2fv"><primary>gst_gl_shader_set_uniform_matrix_3x2fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_3x2fv
+                               (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-3x4fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_3x4fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-3x4fv"><primary>gst_gl_shader_set_uniform_matrix_3x4fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_3x4fv
+                               (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-4fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_4fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-4fv"><primary>gst_gl_shader_set_uniform_matrix_4fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_4fv (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                      <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                      <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                      <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                      <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-4x2fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_4x2fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-4x2fv"><primary>gst_gl_shader_set_uniform_matrix_4x2fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_4x2fv
+                               (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-set-uniform-matrix-4x3fv" role="function">
+<title>gst_gl_shader_set_uniform_matrix_4x3fv&#160;()</title>
+<indexterm zone="gst-gl-shader-set-uniform-matrix-4x3fv"><primary>gst_gl_shader_set_uniform_matrix_4x3fv</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_set_uniform_matrix_4x3fv
+                               (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> count</parameter>,
+                                <parameter><link linkend="gboolean"><type>gboolean</type></link> transpose</parameter>,
+                                <parameter>const <link linkend="gfloat"><type>gfloat</type></link> *value</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-get-attribute-location" role="function">
+<title>gst_gl_shader_get_attribute_location&#160;()</title>
+<indexterm zone="gst-gl-shader-get-attribute-location"><primary>gst_gl_shader_get_attribute_location</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+gst_gl_shader_get_attribute_location (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                      <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-bind-attribute-location" role="function">
+<title>gst_gl_shader_bind_attribute_location&#160;()</title>
+<indexterm zone="gst-gl-shader-bind-attribute-location"><primary>gst_gl_shader_bind_attribute_location</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_bind_attribute_location (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                       <parameter><link linkend="guint"><type>guint</type></link> index</parameter>,
+                                       <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-shader-bind-frag-data-location" role="function">
+<title>gst_gl_shader_bind_frag_data_location&#160;()</title>
+<indexterm zone="gst-gl-shader-bind-frag-data-location"><primary>gst_gl_shader_bind_frag_data_location</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_shader_bind_frag_data_location (<parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>,
+                                       <parameter><link linkend="guint"><type>guint</type></link> index</parameter>,
+                                       <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLShader.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLShader-struct" role="struct">
+<title>GstGLShader</title>
+<indexterm zone="GstGLShader-struct"><primary>GstGLShader</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLShader GstGLShader;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLShader.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLShader--linked" role="property"><title>The <literal>“linked”</literal> property</title>
+<indexterm zone="GstGLShader--linked"><primary>GstGLShader:linked</primary></indexterm>
+<programlisting>  “linked”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Shader link status.</para><para>Flags: Read</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLShader.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLSLStage"><type>GstGLSLStage</type></link></para>
+
+</refsect1>
+
+</refentry>

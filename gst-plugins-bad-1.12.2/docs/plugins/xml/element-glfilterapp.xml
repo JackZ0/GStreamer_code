@@ -1,0 +1,161 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glfilterapp">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glfilterapp.top_of_page" role="top_of_page">glfilterapp</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glfilterapp</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstGLFilterApp--client-data">client-data</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstGLFilterApp--client-draw-callback">client-draw-callback</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstGLFilterApp--client-reshape-callback">client-reshape-callback</link></entry><entry role="property_flags">Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link></entry><entry role="signal_name"><link linkend="GstGLFilterApp-client-draw">client-draw</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLFilterApp"/><refsect1 id="gst-plugins-bad-plugins-glfilterapp.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLFilterApp-struct">GstGLFilterApp</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGLFilterApp
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The resize and redraw callbacks can be set from a client code.</para>
+<refsect3><title>CLient callbacks</title><para>The graphic scene can be written from a client code through the
+two glfilterapp properties.</para>
+</refsect3>
+<refsect3><title>Examples</title><para>see gst-plugins-gl/tests/examples/generic/recordgraphic</para>
+</refsect3>
+
+<include href="element-glfilterapp-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLFilterApp-struct" role="struct">
+<title>struct GstGLFilterApp</title>
+<indexterm zone="GstGLFilterApp-struct"><primary>GstGLFilterApp</primary></indexterm>
+<programlisting language="C">struct GstGLFilterApp;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLFilterApp--client-data" role="property"><title>The <literal>“client-data”</literal> property</title>
+<indexterm zone="GstGLFilterApp--client-data"><primary>GstGLFilterApp:client-data</primary></indexterm>
+<programlisting>  “client-data”              <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Pass data to the draw and reshape callbacks.</para><para>Flags: Write</para>
+</refsect2>
+<refsect2 id="GstGLFilterApp--client-draw-callback" role="property"><title>The <literal>“client-draw-callback”</literal> property</title>
+<indexterm zone="GstGLFilterApp--client-draw-callback"><primary>GstGLFilterApp:client-draw-callback</primary></indexterm>
+<programlisting>  “client-draw-callback”     <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Define a custom draw callback in a client code.</para><para>Flags: Write</para>
+</refsect2>
+<refsect2 id="GstGLFilterApp--client-reshape-callback" role="property"><title>The <literal>“client-reshape-callback”</literal> property</title>
+<indexterm zone="GstGLFilterApp--client-reshape-callback"><primary>GstGLFilterApp:client-reshape-callback</primary></indexterm>
+<programlisting>  “client-reshape-callback”  <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Define a custom reshape callback in a client code.</para><para>Flags: Write</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterapp.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLFilterApp-client-draw" role="signal"><title>The <literal>“client-draw”</literal> signal</title>
+<indexterm zone="GstGLFilterApp-client-draw"><primary>GstGLFilterApp::client-draw</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+user_function (<link linkend="GstGLFilterApp"><type>GstGLFilterApp</type></link> *object,
+               <link linkend="guint"><type>guint</type></link>           texture,
+               <link linkend="guint"><type>guint</type></link>           width,
+               <link linkend="guint"><type>guint</type></link>           height,
+               <link linkend="gpointer"><type>gpointer</type></link>        user_data)</programlisting>
+<para>Will be emitted before to draw the texture.  The client should
+redraw the surface/contents with the <parameter>texture</parameter>
+, <parameter>width</parameter>
+ and <parameter>height</parameter>
+.</para>
+<refsect3 id="GstGLFilterApp-client-draw.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLImageSink"><type>GstGLImageSink</type></link></para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>texture</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> id of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> width of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>the <link linkend="guint"><type>guint</type></link> height of the texture.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLFilterApp-client-draw.returns" role="returns">
+<title>Returns</title>
+<para> whether the texture was redrawn by the signal.  If not, a
+default redraw will occur.</para>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

@@ -134,8 +134,8 @@
 <a name="gst-plugins-bad-libs-GstGLRenderbuffer.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct">GstAllocator</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct">GstAllocator</a>
                 <span class="lineart">╰──</span> <a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</a>
                     <span class="lineart">╰──</span> GstGLRenderbufferAllocator
 </pre>
@@ -154,7 +154,7 @@ with <span class="type">GstGLRenderbufferAllocationParams</span>.</p>
 <pre class="programlisting"><span class="returnvalue">GstGLRenderbufferAllocationParams</span> *
 gst_gl_renderbuffer_allocation_params_new
                                (<em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> *context</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
+                                <em class="parameter"><code><a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-OpenGL-Formats.html#GstGLFormat" title="enum GstGLFormat"><span class="type">GstGLFormat</span></a> renderbuffer_format</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> width</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> height</code></em>);</pre>
@@ -174,7 +174,7 @@ gst_gl_renderbuffer_allocation_params_new
 </tr>
 <tr>
 <td class="parameter_name"><p>alloc_params</p></td>
-<td class="parameter_description"><p> the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> for sysmem mappings of the texture. </p></td>
+<td class="parameter_description"><p> the <a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> for sysmem mappings of the texture. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -207,7 +207,7 @@ gst_gl_renderbuffer_allocation_params_new
 <pre class="programlisting"><span class="returnvalue">GstGLRenderbufferAllocationParams</span> *
 gst_gl_renderbuffer_allocation_params_new_wrapped
                                (<em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> *context</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
+                                <em class="parameter"><code><a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-OpenGL-Formats.html#GstGLFormat" title="enum GstGLFormat"><span class="type">GstGLFormat</span></a> renderbuffer_format</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> width</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> height</code></em>,
@@ -230,7 +230,7 @@ gst_gl_renderbuffer_allocation_params_new_wrapped
 </tr>
 <tr>
 <td class="parameter_name"><p>alloc_params</p></td>
-<td class="parameter_description"><p> the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> for <em class="parameter"><code>tex_id</code></em>
+<td class="parameter_description"><p> the <a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> for <em class="parameter"><code>tex_id</code></em>
 . </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
@@ -398,7 +398,7 @@ multiple times.  This must be called before any other GstGLRenderbuffer operatio
 <div class="refsect2">
 <a name="gst-is-gl-renderbuffer"></a><h3>gst_is_gl_renderbuffer ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gst_is_gl_renderbuffer (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *mem</code></em>);</pre>
+gst_is_gl_renderbuffer (<em class="parameter"><code><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *mem</code></em>);</pre>
 <div class="refsect3">
 <a name="gst-is-gl-renderbuffer.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -409,7 +409,7 @@ gst_is_gl_renderbuffer (<em class="parameter"><code><a href="/usr/share/gtk-doc/
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>mem</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -448,7 +448,7 @@ is a <span class="type">GstGLRenderbuffer</span></p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstGLRenderbuffer.see-also"></a><h2>See Also</h2>
-<p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a>, <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a></p>
+<p><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a>, <a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a></p>
 </div>
 </div>
 <div class="footer">

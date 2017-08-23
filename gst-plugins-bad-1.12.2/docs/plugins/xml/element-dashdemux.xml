@@ -1,0 +1,140 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-dashdemux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-dashdemux.top_of_page" role="top_of_page">dashdemux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dashdemux</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-dashdemux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstDashDemux--bandwidth-usage">bandwidth-usage</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDashDemux--max-bitrate">max-bitrate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDashDemux--max-buffering-time">max-buffering-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDashDemux--presentation-delay">presentation-delay</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFraction"><type>GstFraction</type></link></entry><entry role="property_name"><link linkend="GstDashDemux--max-video-framerate">max-video-framerate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDashDemux--max-video-height">max-video-height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDashDemux--max-video-width">max-video-width</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDashDemux"/><refsect1 id="gst-plugins-bad-plugins-dashdemux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDashDemux-struct">GstDashDemux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dashdemux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstAdaptiveDemux">GstAdaptiveDemux</link>
+                        <phrase role="lineart">╰──</phrase> GstDashDemux
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dashdemux.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstDashDemux implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-dashdemux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>DASH demuxer element.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 playbin uri="http://www-itec.uni-klu.ac.at/ftp/datasets/mmsys12/RedBullPlayStreets/redbull_4s/RedBullPlayStreets_4s_isoffmain_DIS_23009_1_v_2_1c2_2011_08_30.mpd"
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-dashdemux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dashdemux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dashdemux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDashDemux-struct" role="struct">
+<title>struct GstDashDemux</title>
+<indexterm zone="GstDashDemux-struct"><primary>GstDashDemux</primary></indexterm>
+<programlisting language="C">struct GstDashDemux;</programlisting>
+<para>Opaque <link linkend="GstDashDemux"><type>GstDashDemux</type></link> data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dashdemux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDashDemux--bandwidth-usage" role="property"><title>The <literal>“bandwidth-usage”</literal> property</title>
+<indexterm zone="GstDashDemux--bandwidth-usage"><primary>GstDashDemux:bandwidth-usage</primary></indexterm>
+<programlisting>  “bandwidth-usage”          <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Percentage of the available bandwidth to use when selecting representations (deprecated).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.8</para>
+</refsect2>
+<refsect2 id="GstDashDemux--max-bitrate" role="property"><title>The <literal>“max-bitrate”</literal> property</title>
+<indexterm zone="GstDashDemux--max-bitrate"><primary>GstDashDemux:max-bitrate</primary></indexterm>
+<programlisting>  “max-bitrate”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Max of bitrate supported by target video decoder (0 = no maximum).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDashDemux--max-buffering-time" role="property"><title>The <literal>“max-buffering-time”</literal> property</title>
+<indexterm zone="GstDashDemux--max-buffering-time"><primary>GstDashDemux:max-buffering-time</primary></indexterm>
+<programlisting>  “max-buffering-time”       <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Maximum number of seconds of buffer accumulated during playback(deprecated).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 2</para>
+<para>Default value: 30</para>
+</refsect2>
+<refsect2 id="GstDashDemux--presentation-delay" role="property"><title>The <literal>“presentation-delay”</literal> property</title>
+<indexterm zone="GstDashDemux--presentation-delay"><primary>GstDashDemux:presentation-delay</primary></indexterm>
+<programlisting>  “presentation-delay”       <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Default presentation delay (in seconds, milliseconds or fragments) (e.g. 12s, 2500ms, 3f).</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;10s&quot;</para>
+</refsect2>
+<refsect2 id="GstDashDemux--max-video-framerate" role="property"><title>The <literal>“max-video-framerate”</literal> property</title>
+<indexterm zone="GstDashDemux--max-video-framerate"><primary>GstDashDemux:max-video-framerate</primary></indexterm>
+<programlisting>  “max-video-framerate”      <link linkend="GstFraction"><type>GstFraction</type></link></programlisting>
+<para>Max video framerate to select (0/1 = no maximum).</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstDashDemux--max-video-height" role="property"><title>The <literal>“max-video-height”</literal> property</title>
+<indexterm zone="GstDashDemux--max-video-height"><primary>GstDashDemux:max-video-height</primary></indexterm>
+<programlisting>  “max-video-height”         <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Max video height to select (0 = no maximum).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDashDemux--max-video-width" role="property"><title>The <literal>“max-video-width”</literal> property</title>
+<indexterm zone="GstDashDemux--max-video-width"><primary>GstDashDemux:max-video-width</primary></indexterm>
+<programlisting>  “max-video-width”          <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Max video width to select (0 = no maximum).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,153 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-shmsink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-shmsink.top_of_page" role="top_of_page">shmsink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>shmsink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-shmsink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstShmSink--perms">perms</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstShmSink--shm-size">shm-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstShmSink--socket-path">socket-path</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstShmSink--wait-for-connection">wait-for-connection</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstShmSink--buffer-time">buffer-time</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsink.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstShmSink-client-connected">client-connected</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstShmSink-client-disconnected">client-disconnected</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstShmSink"/><refsect1 id="gst-plugins-bad-plugins-shmsink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstShmSink-struct">GstShmSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> GstShmSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-shmsink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Send data over shared memory to the matching source.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! "video/x-raw, format=YUY2, color-matrix=sdtv, \
+chroma-site=mpeg2, width=(int)320, height=(int)240, framerate=(fraction)30/1" \
+! shmsink socket-path=/tmp/blah shm-size=2000000
+]]></programlisting></informalexample>
+<para> Send video to shm buffers.</para>
+</refsect3>
+
+<include href="element-shmsink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstShmSink-struct" role="struct">
+<title>struct GstShmSink</title>
+<indexterm zone="GstShmSink-struct"><primary>GstShmSink</primary></indexterm>
+<programlisting language="C">struct GstShmSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstShmSink--perms" role="property"><title>The <literal>“perms”</literal> property</title>
+<indexterm zone="GstShmSink--perms"><primary>GstShmSink:perms</primary></indexterm>
+<programlisting>  “perms”                    <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Permissions to set on the shm area.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 4095</para>
+<para>Default value: 416</para>
+</refsect2>
+<refsect2 id="GstShmSink--shm-size" role="property"><title>The <literal>“shm-size”</literal> property</title>
+<indexterm zone="GstShmSink--shm-size"><primary>GstShmSink:shm-size</primary></indexterm>
+<programlisting>  “shm-size”                 <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Size of the shared memory area.</para><para>Flags: Read / Write</para>
+<para>Default value: 67108864</para>
+</refsect2>
+<refsect2 id="GstShmSink--socket-path" role="property"><title>The <literal>“socket-path”</literal> property</title>
+<indexterm zone="GstShmSink--socket-path"><primary>GstShmSink:socket-path</primary></indexterm>
+<programlisting>  “socket-path”              <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The path to the control socket used to control the shared memory transport. This may be modified during the NULL-&gt;READY transition.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstShmSink--wait-for-connection" role="property"><title>The <literal>“wait-for-connection”</literal> property</title>
+<indexterm zone="GstShmSink--wait-for-connection"><primary>GstShmSink:wait-for-connection</primary></indexterm>
+<programlisting>  “wait-for-connection”      <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Block the stream until the shm pipe is connected.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstShmSink--buffer-time" role="property"><title>The <literal>“buffer-time”</literal> property</title>
+<indexterm zone="GstShmSink--buffer-time"><primary>GstShmSink:buffer-time</primary></indexterm>
+<programlisting>  “buffer-time”              <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Maximum Size of the shm buffer in nanoseconds (-1 to disable).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-shmsink.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstShmSink-client-connected" role="signal"><title>The <literal>“client-connected”</literal> signal</title>
+<indexterm zone="GstShmSink-client-connected"><primary>GstShmSink::client-connected</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstShmSink"><type>GstShmSink</type></link> *gstshmsink,
+               <link linkend="gint"><type>gint</type></link>        arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstShmSink-client-disconnected" role="signal"><title>The <literal>“client-disconnected”</literal> signal</title>
+<indexterm zone="GstShmSink-client-disconnected"><primary>GstShmSink::client-disconnected</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstShmSink"><type>GstShmSink</type></link> *gstshmsink,
+               <link linkend="gint"><type>gint</type></link>        arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

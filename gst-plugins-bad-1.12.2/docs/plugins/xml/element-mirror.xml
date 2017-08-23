@@ -1,0 +1,131 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-mirror">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-mirror.top_of_page" role="top_of_page">mirror</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>mirror</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-mirror.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstMirrorMode"><type>GstMirrorMode</type></link></entry><entry role="property_name"><link linkend="GstMirror--mode">mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMirror"/><refsect1 id="gst-plugins-bad-plugins-mirror.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMirror-struct">GstMirror</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMirrorMode">GstMirrorMode</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mirror.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGeometricTransform">GstGeometricTransform</link>
+                            <phrase role="lineart">╰──</phrase> GstMirror
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-mirror.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Mirror is a geometric transform element. It splits the image into two halves
+and reflects one over each other.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! mirror ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-mirror-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mirror.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mirror.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMirror-struct" role="struct">
+<title>struct GstMirror</title>
+<indexterm zone="GstMirror-struct"><primary>GstMirror</primary></indexterm>
+<programlisting language="C">struct GstMirror;</programlisting>
+</refsect2>
+<refsect2 id="GstMirrorMode" role="enum">
+<title>enum GstMirrorMode</title>
+<indexterm zone="GstMirrorMode"><primary>GstMirrorMode</primary></indexterm>
+<para>How to split the video frame and which side reflect</para>
+<refsect3 id="GstMirrorMode.members" role="enum_members">
+<title>Members</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MIRROR-MODE-LEFT:CAPS">GST_MIRROR_MODE_LEFT</para></entry>
+<entry role="enum_member_description"><para>Split horizontally and reflect left into right</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MIRROR-MODE-RIGHT:CAPS">GST_MIRROR_MODE_RIGHT</para></entry>
+<entry role="enum_member_description"><para>Split horizontally and reflect right into left</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MIRROR-MODE-TOP:CAPS">GST_MIRROR_MODE_TOP</para></entry>
+<entry role="enum_member_description"><para>Split horizontally and reflect top into bottom</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MIRROR-MODE-BOTTOM:CAPS">GST_MIRROR_MODE_BOTTOM</para></entry>
+<entry role="enum_member_description"><para>Split horizontally and reflect bottom into top</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mirror.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstMirror--mode" role="property"><title>The <literal>“mode”</literal> property</title>
+<indexterm zone="GstMirror--mode"><primary>GstMirror:mode</primary></indexterm>
+<programlisting>  “mode”                     <link linkend="GstMirrorMode"><type>GstMirrorMode</type></link></programlisting>
+<para>How to split the video frame and which side reflect.</para><para>Flags: Read / Write</para>
+<para>Default value: Split horizontally and reflect left into right</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-mirror.see-also">
+<title>See Also</title>
+<para>geometrictransform</para>
+
+</refsect1>
+
+</refentry>

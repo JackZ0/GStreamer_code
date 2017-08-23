@@ -153,10 +153,10 @@
 <a name="gst-plugins-bad-plugins-webrtcdsp.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0GstAudioFilter.html#GstAudioFilter-struct">GstAudioFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> <a href="../gst-plugins-base-libs-1.0/GstAudioFilter.html#GstAudioFilter-struct">GstAudioFilter</a>
                         <span class="lineart">╰──</span> GstWebrtcDsp
 </pre>
 </div>
@@ -183,35 +183,18 @@ particular state and does not even need to be added to the pipeline yet.</p>
 <a name="id-1.2.134.7.5"></a><h3>Example launch line</h3>
 <p>As a conveniance, the echo canceller can be tested using an echo loop. In
 this configuration, one would expect a single echo to be heard.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> pulsesrc <span class="gtkdoc opt">!</span> webrtcdsp <span class="gtkdoc opt">!</span> webrtcechoprobe <span class="gtkdoc opt">!</span> pulsesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 pulsesrc ! webrtcdsp ! webrtcechoprobe ! pulsesink
+</pre></div>
 <p></p>
 <p>In real environment, you'll place the probe before the playback, but only
 process the far end streams. The DSP should be placed as close as possible
 to the audio capture. The following pipeline is astracted and does not
 represent a real pipeline.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> far<span class="gtkdoc opt">-</span>end<span class="gtkdoc opt">-</span>src <span class="gtkdoc opt">!</span> audio<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span>rate<span class="gtkdoc opt">=</span><span class="number">48000</span> <span class="gtkdoc opt">!</span> webrtcechoprobe <span class="gtkdoc opt">!</span> pulsesink \
-               pulsesrc <span class="gtkdoc opt">!</span> audio<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span>rate<span class="gtkdoc opt">=</span><span class="number">48000</span> <span class="gtkdoc opt">!</span> webrtcdsp <span class="gtkdoc opt">!</span> far<span class="gtkdoc opt">-</span>end<span class="gtkdoc opt">-</span>sink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 far-end-src ! audio/x-raw,rate=48000 ! webrtcechoprobe ! pulsesink \
+               pulsesrc ! audio/x-raw,rate=48000 ! webrtcdsp ! far-end-sink
+</pre></div>
 <p></p>
 </div>
 <div class="refsynopsisdiv">

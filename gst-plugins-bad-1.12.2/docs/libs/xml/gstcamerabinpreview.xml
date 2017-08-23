@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-gstcamerabinpreview">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-gstcamerabinpreview.top_of_page">gstcamerabinpreview</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gstcamerabinpreview</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-gstcamerabinpreview.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstCameraBinPreviewPipelineData"><returnvalue>GstCameraBinPreviewPipelineData</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-camerabin-create-preview-pipeline">gst_camerabin_create_preview_pipeline</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-camerabin-destroy-preview-pipeline">gst_camerabin_destroy_preview_pipeline</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-camerabin-preview-pipeline-post">gst_camerabin_preview_pipeline_post</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-camerabin-preview-set-caps">gst_camerabin_preview_set_caps</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-gstcamerabinpreview.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstcamerabinpreview.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-camerabin-create-preview-pipeline" role="function">
+<title>gst_camerabin_create_preview_pipeline&#160;()</title>
+<indexterm zone="gst-camerabin-create-preview-pipeline"><primary>gst_camerabin_create_preview_pipeline</primary></indexterm>
+<programlisting language="C"><link linkend="GstCameraBinPreviewPipelineData"><returnvalue>GstCameraBinPreviewPipelineData</returnvalue></link>&#160;*
+gst_camerabin_create_preview_pipeline (<parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                                       <parameter><link linkend="GstElement"><type>GstElement</type></link> *filter</parameter>);</programlisting>
+<para>Creates a new previewing pipeline that can receive buffers
+to be posted as camerabin preview messages for <parameter>element</parameter>
+</para>
+<refsect3 id="gst-camerabin-create-preview-pipeline.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>Owner of this pipeline</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>filter</para></entry>
+<entry role="parameter_description"><para>Custom filter to process preview data (an extra ref is taken)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-camerabin-create-preview-pipeline.returns" role="returns">
+<title>Returns</title>
+<para> The newly created <link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-camerabin-destroy-preview-pipeline" role="function">
+<title>gst_camerabin_destroy_preview_pipeline&#160;()</title>
+<indexterm zone="gst-camerabin-destroy-preview-pipeline"><primary>gst_camerabin_destroy_preview_pipeline</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_camerabin_destroy_preview_pipeline
+                               (<parameter><link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link> *preview</parameter>);</programlisting>
+<para>Frees a <link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link></para>
+<refsect3 id="gst-camerabin-destroy-preview-pipeline.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>preview</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-camerabin-preview-pipeline-post" role="function">
+<title>gst_camerabin_preview_pipeline_post&#160;()</title>
+<indexterm zone="gst-camerabin-preview-pipeline-post"><primary>gst_camerabin_preview_pipeline_post</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_camerabin_preview_pipeline_post (<parameter><link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link> *preview</parameter>,
+                                     <parameter><link linkend="GstSample"><type>GstSample</type></link> *sample</parameter>);</programlisting>
+<para>Converts the <parameter>sample</parameter>
+ to the desired format and posts the preview
+message to the bus.</para>
+<refsect3 id="gst-camerabin-preview-pipeline-post.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>preview</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sample</para></entry>
+<entry role="parameter_description"><para>the sample to be posted as a preview</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-camerabin-preview-pipeline-post.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> on success</para>
+</refsect3></refsect2>
+<refsect2 id="gst-camerabin-preview-set-caps" role="function">
+<title>gst_camerabin_preview_set_caps&#160;()</title>
+<indexterm zone="gst-camerabin-preview-set-caps"><primary>gst_camerabin_preview_set_caps</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_camerabin_preview_set_caps (<parameter><link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link> *preview</parameter>,
+                                <parameter><link linkend="GstCaps"><type>GstCaps</type></link> *caps</parameter>);</programlisting>
+<para>The caps that preview buffers should have when posted
+on the bus</para>
+<refsect3 id="gst-camerabin-preview-set-caps.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>preview</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstCameraBinPreviewPipelineData"><type>GstCameraBinPreviewPipelineData</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>caps</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstCaps"><type>GstCaps</type></link> to be set (a new ref will be taken)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstcamerabinpreview.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

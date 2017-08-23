@@ -1,0 +1,5 @@
+{ global:
+gst_is_phys_memory;
+gst_phys_memory_allocator_get_type;
+gst_phys_memory_get_phys_addr;
+local: *; };

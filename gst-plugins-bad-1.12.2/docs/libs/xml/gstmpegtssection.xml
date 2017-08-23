@@ -1,0 +1,1082 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-Base-MPEG-TS-sections">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-Base-MPEG-TS-sections.top_of_page">Base MPEG-TS sections</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>Base MPEG-TS sections</refname>
+<refpurpose>Sections for ITU H.222.0 | ISO/IEC 13818-1</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-sections.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-MPEGTS-SECTION-TYPE:CAPS">GST_MPEGTS_SECTION_TYPE</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMessage"><returnvalue>GstMessage</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-message-new-mpegts-section">gst_message_new_mpegts_section</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-message-parse-mpegts-section">gst_message_parse_mpegts_section</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-send-event">gst_mpegts_section_send_event</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-event-parse-mpegts-section">gst_event_parse_mpegts_section</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint8"><returnvalue>guint8</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-packetize">gst_mpegts_section_packetize</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-new">gst_mpegts_section_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-mpegts-section-ref">gst_mpegts_section_ref</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-mpegts-section-unref">gst_mpegts_section_unref</link><phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-pat">gst_mpegts_section_get_pat</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-pat-new">gst_mpegts_pat_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsPatProgram"><returnvalue>GstMpegtsPatProgram</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-pat-program-new">gst_mpegts_pat_program_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-from-pat">gst_mpegts_section_from_pat</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type">const <link linkend="GstMpegtsPMT"><returnvalue>GstMpegtsPMT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-pmt">gst_mpegts_section_get_pmt</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsPMT"><returnvalue>GstMpegtsPMT</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-pmt-new">gst_mpegts_pmt_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsPMTStream"><returnvalue>GstMpegtsPMTStream</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-pmt-stream-new">gst_mpegts_pmt_stream_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-from-pmt">gst_mpegts_section_from_pmt</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-tsdt">gst_mpegts_section_get_tsdt</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpegts-section-get-cat">gst_mpegts_section_get_cat</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMpegtsSection"/><refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-sections.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsSection-struct">GstMpegtsSection</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsSectionTableID">GstMpegtsSectionTableID</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsSectionType">GstMpegtsSectionType</link></entry></row>
+
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsPatProgram">GstMpegtsPatProgram</link></entry></row>
+
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsPMT">GstMpegtsPMT</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegtsPMTStream">GstMpegtsPMTStream</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegtsStreamType">GstMpegtsStreamType</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-sections.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstMpegtsSection
+    <link linkend="GEnum">GEnum</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> GstMpegtsSectionTableID
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> GstMpegtsSectionType
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstMpegtsStreamType
+</screen>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-sections.includes"><title>Includes</title><synopsis>#include &lt;gst/mpegts/mpegts.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-sections.description" role="desc">
+<title role="desc.title">Description</title>
+<para>For more details, refer to the ITU H.222.0 or ISO/IEC 13818-1 specifications
+and other specifications mentioned in the documentation.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-sections.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GST-MPEGTS-SECTION-TYPE:CAPS" role="macro">
+<title>GST_MPEGTS_SECTION_TYPE()</title>
+<indexterm zone="GST-MPEGTS-SECTION-TYPE:CAPS"><primary>GST_MPEGTS_SECTION_TYPE</primary></indexterm>
+<programlisting language="C">#define GST_MPEGTS_SECTION_TYPE(section) (GST_MPEGTS_SECTION (section)-&gt;section_type)
+</programlisting>
+</refsect2>
+<refsect2 id="gst-message-new-mpegts-section" role="function">
+<title>gst_message_new_mpegts_section&#160;()</title>
+<indexterm zone="gst-message-new-mpegts-section"><primary>gst_message_new_mpegts_section</primary></indexterm>
+<programlisting language="C"><link linkend="GstMessage"><returnvalue>GstMessage</returnvalue></link>&#160;*
+gst_message_new_mpegts_section (<parameter><link linkend="GstObject"><type>GstObject</type></link> *parent</parameter>,
+                                <parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Creates a new <link linkend="GstMessage"><type>GstMessage</type></link> for a <parameter>GstMpegtsSection</parameter>
+.</para>
+<refsect3 id="gst-message-new-mpegts-section.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>parent</para></entry>
+<entry role="parameter_description"><para> The creator of the message. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> to put in a message. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-message-new-mpegts-section.returns" role="returns">
+<title>Returns</title>
+<para> The new <link linkend="GstMessage"><type>GstMessage</type></link> to be posted, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if the
+section is not valid. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-message-parse-mpegts-section" role="function">
+<title>gst_message_parse_mpegts_section&#160;()</title>
+<indexterm zone="gst-message-parse-mpegts-section"><primary>gst_message_parse_mpegts_section</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+gst_message_parse_mpegts_section (<parameter><link linkend="GstMessage"><type>GstMessage</type></link> *message</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> contained in a message.</para>
+<refsect3 id="gst-message-parse-mpegts-section.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>message</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMessage"><type>GstMessage</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-message-parse-mpegts-section.returns" role="returns">
+<title>Returns</title>
+<para> the contained <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link>, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-send-event" role="function">
+<title>gst_mpegts_section_send_event&#160;()</title>
+<indexterm zone="gst-mpegts-section-send-event"><primary>gst_mpegts_section_send_event</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpegts_section_send_event (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>,
+                               <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>);</programlisting>
+<para>Creates a custom <link linkend="GstEvent"><type>GstEvent</type></link> with a <parameter>GstMpegtsSection</parameter>
+.
+The <link linkend="GstEvent"><type>GstEvent</type></link> is sent to the <parameter>element</parameter>
+ <link linkend="GstElement"><type>GstElement</type></link>.</para>
+<refsect3 id="gst-mpegts-section-send-event.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstElement"><type>GstElement</type></link> to send to section event to. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> to put in the event. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-send-event.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the event is sent</para>
+</refsect3></refsect2>
+<refsect2 id="gst-event-parse-mpegts-section" role="function">
+<title>gst_event_parse_mpegts_section&#160;()</title>
+<indexterm zone="gst-event-parse-mpegts-section"><primary>gst_event_parse_mpegts_section</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+gst_event_parse_mpegts_section (<parameter><link linkend="GstEvent"><type>GstEvent</type></link> *event</parameter>);</programlisting>
+<para>Extracts the <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> contained in the <parameter>event</parameter>
+ <link linkend="GstEvent"><type>GstEvent</type></link></para>
+<refsect3 id="gst-event-parse-mpegts-section.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>event</para></entry>
+<entry role="parameter_description"><para> <link linkend="GstEvent"><type>GstEvent</type></link> containing a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-event-parse-mpegts-section.returns" role="returns">
+<title>Returns</title>
+<para> The extracted <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-packetize" role="function">
+<title>gst_mpegts_section_packetize&#160;()</title>
+<indexterm zone="gst-mpegts-section-packetize"><primary>gst_mpegts_section_packetize</primary></indexterm>
+<programlisting language="C"><link linkend="guint8"><returnvalue>guint8</returnvalue></link>&#160;*
+gst_mpegts_section_packetize (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>,
+                              <parameter><link linkend="gsize"><type>gsize</type></link> *output_size</parameter>);</programlisting>
+<para>If the data in <parameter>section</parameter>
+ has already been packetized, the data pointer is returned
+immediately. Otherwise, the data field is allocated and populated.</para>
+<refsect3 id="gst-mpegts-section-packetize.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> that holds the data. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>output_size</para></entry>
+<entry role="parameter_description"><para> <link linkend="gsize"><type>gsize</type></link> to hold the size of the data. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-packetize.returns" role="returns">
+<title>Returns</title>
+<para> pointer to section data, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> on fail. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-new" role="function">
+<title>gst_mpegts_section_new&#160;()</title>
+<indexterm zone="gst-mpegts-section-new"><primary>gst_mpegts_section_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+gst_mpegts_section_new (<parameter><link linkend="guint16"><type>guint16</type></link> pid</parameter>,
+                        <parameter><link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                        <parameter><link linkend="gsize"><type>gsize</type></link> data_size</parameter>);</programlisting>
+<para>Creates a new <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> from the provided <parameter>data</parameter>
+.</para>
+<para>Note: Ensuring <parameter>data</parameter>
+ is big enough to contain the full section is the
+responsibility of the caller. If it is not big enough, <link linkend="NULL:CAPS"><literal>NULL</literal></link> will be
+returned.</para>
+<para>Note: it is the responsibility of the caller to ensure <parameter>data</parameter>
+ does point
+to the beginning of the section.</para>
+<refsect3 id="gst-mpegts-section-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>pid</para></entry>
+<entry role="parameter_description"><para>the PID to which this section belongs</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> a pointer to the beginning of the section (i.e. the first byte
+should contain the table_id field). </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data_size</para></entry>
+<entry role="parameter_description"><para>size of the <parameter>data</parameter>
+argument.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-new.returns" role="returns">
+<title>Returns</title>
+<para> A new <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> if the data was valid,
+else <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-ref" role="macro">
+<title>gst_mpegts_section_ref()</title>
+<indexterm zone="gst-mpegts-section-ref"><primary>gst_mpegts_section_ref</primary></indexterm>
+<programlisting language="C">#define gst_mpegts_section_ref(section)   ((GstMpegtsSection*) gst_mini_object_ref (GST_MINI_OBJECT_CAST (section)))
+</programlisting>
+</refsect2>
+<refsect2 id="gst-mpegts-section-unref" role="macro">
+<title>gst_mpegts_section_unref()</title>
+<indexterm zone="gst-mpegts-section-unref"><primary>gst_mpegts_section_unref</primary></indexterm>
+<programlisting language="C">#define gst_mpegts_section_unref(section) (gst_mini_object_unref (GST_MINI_OBJECT_CAST (section)))
+</programlisting>
+</refsect2>
+<refsect2 id="gst-mpegts-section-get-pat" role="function">
+<title>gst_mpegts_section_get_pat&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-pat"><primary>gst_mpegts_section_get_pat</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+gst_mpegts_section_get_pat (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Parses a Program Association Table (ITU H.222.0, ISO/IEC 13818-1).</para>
+<para>Returns the array of <link linkend="GstMpegtsPatProgram"><type>GstMpegtsPatProgram</type></link> contained in the section.</para>
+<para>Note: The PAT "transport_id" field corresponds to the "subtable_extension"
+field of the provided <parameter>section</parameter>
+.</para>
+<refsect3 id="gst-mpegts-section-get-pat.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-PAT:CAPS"><literal>GST_MPEGTS_SECTION_PAT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-pat.returns" role="returns">
+<title>Returns</title>
+<para> The
+<link linkend="GstMpegtsPatProgram"><type>GstMpegtsPatProgram</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened. Release with <link linkend="g-ptr-array-unref"><type>g_ptr_array_unref</type></link> when done. </para>
+<para><emphasis role="annotation">[<acronym>transfer container</acronym>][<acronym>element-type</acronym> GstMpegtsPatProgram]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-pat-new" role="function">
+<title>gst_mpegts_pat_new&#160;()</title>
+<indexterm zone="gst-mpegts-pat-new"><primary>gst_mpegts_pat_new</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+gst_mpegts_pat_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Allocates a new <link linkend="GPtrArray"><type>GPtrArray</type></link> for <link linkend="GstMpegtsPatProgram"><type>GstMpegtsPatProgram</type></link></para>
+<refsect3 id="gst-mpegts-pat-new.returns" role="returns">
+<title>Returns</title>
+<para> A newly allocated <link linkend="GPtrArray"><type>GPtrArray</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>element-type</acronym> GstMpegtsPatProgram]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-pat-program-new" role="function">
+<title>gst_mpegts_pat_program_new&#160;()</title>
+<indexterm zone="gst-mpegts-pat-program-new"><primary>gst_mpegts_pat_program_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsPatProgram"><returnvalue>GstMpegtsPatProgram</returnvalue></link>&#160;*
+gst_mpegts_pat_program_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Allocates a new <link linkend="GstMpegtsPatProgram"><type>GstMpegtsPatProgram</type></link>.</para>
+<refsect3 id="gst-mpegts-pat-program-new.returns" role="returns">
+<title>Returns</title>
+<para> A newly allocated <link linkend="GstMpegtsPatProgram"><type>GstMpegtsPatProgram</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-from-pat" role="function">
+<title>gst_mpegts_section_from_pat&#160;()</title>
+<indexterm zone="gst-mpegts-section-from-pat"><primary>gst_mpegts_section_from_pat</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+gst_mpegts_section_from_pat (<parameter><link linkend="GPtrArray"><type>GPtrArray</type></link> *programs</parameter>,
+                             <parameter><link linkend="guint16"><type>guint16</type></link> ts_id</parameter>);</programlisting>
+<para>Creates a PAT <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> from the <parameter>programs</parameter>
+ array of <link linkend="GstMpegtsPatPrograms"><type>GstMpegtsPatPrograms</type></link></para>
+<refsect3 id="gst-mpegts-section-from-pat.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>programs</para></entry>
+<entry role="parameter_description"><para> an array of <link linkend="GstMpegtsPatProgram"><type>GstMpegtsPatProgram</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>element-type</acronym> GstMpegtsPatProgram]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>ts_id</para></entry>
+<entry role="parameter_description"><para>Transport stream ID of the PAT</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-from-pat.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-get-pmt" role="function">
+<title>gst_mpegts_section_get_pmt&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-pmt"><primary>gst_mpegts_section_get_pmt</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMpegtsPMT"><returnvalue>GstMpegtsPMT</returnvalue></link>&#160;*
+gst_mpegts_section_get_pmt (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the <link linkend="GstMpegtsPMT"><type>GstMpegtsPMT</type></link> contained in the <parameter>section</parameter>
+.</para>
+<refsect3 id="gst-mpegts-section-get-pmt.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-PMT:CAPS"><literal>GST_MPEGTS_SECTION_PMT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-pmt.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstMpegtsPMT"><type>GstMpegtsPMT</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-pmt-new" role="function">
+<title>gst_mpegts_pmt_new&#160;()</title>
+<indexterm zone="gst-mpegts-pmt-new"><primary>gst_mpegts_pmt_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsPMT"><returnvalue>GstMpegtsPMT</returnvalue></link>&#160;*
+gst_mpegts_pmt_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Allocates and initializes a new <link linkend="GstMpegtsPMT"><type>GstMpegtsPMT</type></link>.</para>
+<refsect3 id="gst-mpegts-pmt-new.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="GstMpegtsPMT"><type>GstMpegtsPMT</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-pmt-stream-new" role="function">
+<title>gst_mpegts_pmt_stream_new&#160;()</title>
+<indexterm zone="gst-mpegts-pmt-stream-new"><primary>gst_mpegts_pmt_stream_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsPMTStream"><returnvalue>GstMpegtsPMTStream</returnvalue></link>&#160;*
+gst_mpegts_pmt_stream_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Allocates and initializes a new <link linkend="GstMpegtsPMTStream"><type>GstMpegtsPMTStream</type></link>.</para>
+<refsect3 id="gst-mpegts-pmt-stream-new.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="GstMpegtsPMTStream"><type>GstMpegtsPMTStream</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-from-pmt" role="function">
+<title>gst_mpegts_section_from_pmt&#160;()</title>
+<indexterm zone="gst-mpegts-section-from-pmt"><primary>gst_mpegts_section_from_pmt</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegtsSection"><returnvalue>GstMpegtsSection</returnvalue></link>&#160;*
+gst_mpegts_section_from_pmt (<parameter><link linkend="GstMpegtsPMT"><type>GstMpegtsPMT</type></link> *pmt</parameter>,
+                             <parameter><link linkend="guint16"><type>guint16</type></link> pid</parameter>);</programlisting>
+<para>Creates a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> from <parameter>pmt</parameter>
+ that is bound to <parameter>pid</parameter>
+</para>
+<refsect3 id="gst-mpegts-section-from-pmt.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>pmt</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstMpegtsPMT"><type>GstMpegtsPMT</type></link> to create a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> from. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>pid</para></entry>
+<entry role="parameter_description"><para>The PID that the <link linkend="GstMpegtsPMT"><type>GstMpegtsPMT</type></link> belongs to</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-from-pmt.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-get-tsdt" role="function">
+<title>gst_mpegts_section_get_tsdt&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-tsdt"><primary>gst_mpegts_section_get_tsdt</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+gst_mpegts_section_get_tsdt (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the array of <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> contained in the section</para>
+<refsect3 id="gst-mpegts-section-get-tsdt.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-TSDT:CAPS"><literal>GST_MPEGTS_SECTION_TSDT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-tsdt.returns" role="returns">
+<title>Returns</title>
+<para> The
+<link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened. Release with <link linkend="g-array-unref"><type>g_array_unref</type></link> when done. </para>
+<para><emphasis role="annotation">[<acronym>transfer container</acronym>][<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpegts-section-get-cat" role="function">
+<title>gst_mpegts_section_get_cat&#160;()</title>
+<indexterm zone="gst-mpegts-section-get-cat"><primary>gst_mpegts_section_get_cat</primary></indexterm>
+<programlisting language="C"><link linkend="GPtrArray"><returnvalue>GPtrArray</returnvalue></link>&#160;*
+gst_mpegts_section_get_cat (<parameter><link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> *section</parameter>);</programlisting>
+<para>Returns the array of <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> contained in the Conditional
+Access Table.</para>
+<refsect3 id="gst-mpegts-section-get-cat.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>section</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> of type <link linkend="GST-MPEGTS-SECTION-CAT:CAPS"><literal>GST_MPEGTS_SECTION_CAT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpegts-section-get-cat.returns" role="returns">
+<title>Returns</title>
+<para> The
+<link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link> contained in the section, or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if an error
+happened. Release with <link linkend="g-array-unref"><type>g_array_unref</type></link> when done. </para>
+<para><emphasis role="annotation">[<acronym>transfer container</acronym>][<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-Base-MPEG-TS-sections.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpegtsSection-struct" role="struct">
+<title>struct GstMpegtsSection</title>
+<indexterm zone="GstMpegtsSection-struct"><primary>GstMpegtsSection</primary></indexterm>
+<programlisting language="C">struct GstMpegtsSection {
+  GstMpegtsSectionType   section_type;
+
+  guint16       pid;
+  guint8        table_id;
+
+  guint16       subtable_extension;
+  guint8        version_number;
+
+  gboolean      current_next_indicator;
+
+  guint8        section_number;
+  guint8        last_section_number;
+
+  guint32       crc;
+};
+</programlisting>
+<para>Mpeg-TS Section Information (SI) (ISO/IEC 13818-1)</para>
+<refsect3 id="GstMpegtsSection.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpegtsSectionType"><type>GstMpegtsSectionType</type></link>&#160;<structfield id="GstMpegtsSection-struct.section-type">section_type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The type of section</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsSection-struct.pid">pid</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The pid on which this section was found</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsSection-struct.table-id">table_id</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The table id of this section</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsSection-struct.subtable-extension">subtable_extension</structfield>;</para></entry>
+<entry role="struct_member_description"><para>This meaning differs per section. See the documentation
+of the parsed section type for the meaning of this field</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsSection-struct.version-number">version_number</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Version of the section.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstMpegtsSection-struct.current-next-indicator">current_next_indicator</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Applies to current/next stream or not</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsSection-struct.section-number">section_number</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Number of the section (if multiple)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsSection-struct.last-section-number">last_section_number</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Number of the last expected section (if multiple)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegtsSection-struct.crc">crc</structfield>;</para></entry>
+<entry role="struct_member_description"><para>CRC</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsSectionTableID" role="enum">
+<title>enum GstMpegtsSectionTableID</title>
+<indexterm zone="GstMpegtsSectionTableID"><primary>GstMpegtsSectionTableID</primary></indexterm>
+<para>Values for a <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> table_id</para>
+<para>These are the registered ITU H.222.0 | ISO/IEC 13818-1 table_id variants.</para>
+<para>see also <link linkend="GstMpegtsSectionATSCTableID"><type>GstMpegtsSectionATSCTableID</type></link>, <link linkend="GstMpegtsSectionDVBTableID"><type>GstMpegtsSectionDVBTableID</type></link>, and
+<link linkend="GstMpegtsSectionSCTETableID"><type>GstMpegtsSectionSCTETableID</type></link></para>
+<refsect3 id="GstMpegtsSectionTableID.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-PROGRAM-ASSOCIATION:CAPS">GST_MTS_TABLE_ID_PROGRAM_ASSOCIATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-CONDITIONAL-ACCESS:CAPS">GST_MTS_TABLE_ID_CONDITIONAL_ACCESS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-TS-PROGRAM-MAP:CAPS">GST_MTS_TABLE_ID_TS_PROGRAM_MAP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-TS-DESCRIPTION:CAPS">GST_MTS_TABLE_ID_TS_DESCRIPTION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-14496-SCENE-DESCRIPTION:CAPS">GST_MTS_TABLE_ID_14496_SCENE_DESCRIPTION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-14496-OBJET-DESCRIPTOR:CAPS">GST_MTS_TABLE_ID_14496_OBJET_DESCRIPTOR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-METADATA:CAPS">GST_MTS_TABLE_ID_METADATA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-IPMP-CONTROL-INFORMATION:CAPS">GST_MTS_TABLE_ID_IPMP_CONTROL_INFORMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-DSM-CC-MULTIPROTO-ENCAPSULATED-DATA:CAPS">GST_MTS_TABLE_ID_DSM_CC_MULTIPROTO_ENCAPSULATED_DATA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-DSM-CC-U-N-MESSAGES:CAPS">GST_MTS_TABLE_ID_DSM_CC_U_N_MESSAGES</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-DSM-CC-DOWNLOAD-DATA-MESSAGES:CAPS">GST_MTS_TABLE_ID_DSM_CC_DOWNLOAD_DATA_MESSAGES</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-DSM-CC-STREAM-DESCRIPTORS:CAPS">GST_MTS_TABLE_ID_DSM_CC_STREAM_DESCRIPTORS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-DSM-CC-PRIVATE-DATA:CAPS">GST_MTS_TABLE_ID_DSM_CC_PRIVATE_DATA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-DSM-CC-ADDRESSABLE-SECTIONS:CAPS">GST_MTS_TABLE_ID_DSM_CC_ADDRESSABLE_SECTIONS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MTS-TABLE-ID-UNSET:CAPS">GST_MTS_TABLE_ID_UNSET</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegtsSectionType" role="enum">
+<title>enum GstMpegtsSectionType</title>
+<indexterm zone="GstMpegtsSectionType"><primary>GstMpegtsSectionType</primary></indexterm>
+<para>Types of <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link> that the library handles.</para>
+<refsect3 id="GstMpegtsSectionType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-UNKNOWN:CAPS">GST_MPEGTS_SECTION_UNKNOWN</para></entry>
+<entry role="enum_member_description"><para>Unknown section type</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-PAT:CAPS">GST_MPEGTS_SECTION_PAT</para></entry>
+<entry role="enum_member_description"><para>Program Association Table (ISO/IEC 13818-1)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-PMT:CAPS">GST_MPEGTS_SECTION_PMT</para></entry>
+<entry role="enum_member_description"><para>Program Map Table (ISO/IEC 13818-1)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-CAT:CAPS">GST_MPEGTS_SECTION_CAT</para></entry>
+<entry role="enum_member_description"><para>Conditional Access Table (ISO/IEC 13818-1)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-TSDT:CAPS">GST_MPEGTS_SECTION_TSDT</para></entry>
+<entry role="enum_member_description"><para>Transport Stream Description Table (ISO/IEC 13818-1)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-EIT:CAPS">GST_MPEGTS_SECTION_EIT</para></entry>
+<entry role="enum_member_description"><para>Event Information Table (EN 300 468)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-NIT:CAPS">GST_MPEGTS_SECTION_NIT</para></entry>
+<entry role="enum_member_description"><para>Network Information Table (ISO/IEC 13818-1 / EN 300 468)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-BAT:CAPS">GST_MPEGTS_SECTION_BAT</para></entry>
+<entry role="enum_member_description"><para>Bouquet Association Table ((EN 300 468)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-SDT:CAPS">GST_MPEGTS_SECTION_SDT</para></entry>
+<entry role="enum_member_description"><para>Service Description Table (EN 300 468)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-TDT:CAPS">GST_MPEGTS_SECTION_TDT</para></entry>
+<entry role="enum_member_description"><para>Time and Date Table (EN 300 468)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-TOT:CAPS">GST_MPEGTS_SECTION_TOT</para></entry>
+<entry role="enum_member_description"><para>Time Offset Table (EN 300 468)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-ATSC-TVCT:CAPS">GST_MPEGTS_SECTION_ATSC_TVCT</para></entry>
+<entry role="enum_member_description"><para>ATSC Terrestrial Virtual Channel Table (A65)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-ATSC-CVCT:CAPS">GST_MPEGTS_SECTION_ATSC_CVCT</para></entry>
+<entry role="enum_member_description"><para>ATSC Cable Virtual Channel Table (A65)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-ATSC-MGT:CAPS">GST_MPEGTS_SECTION_ATSC_MGT</para></entry>
+<entry role="enum_member_description"><para>ATSC Master Guide Table (A65)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-ATSC-ETT:CAPS">GST_MPEGTS_SECTION_ATSC_ETT</para></entry>
+<entry role="enum_member_description"><para>ATSC Extended Text Table (A65)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-ATSC-EIT:CAPS">GST_MPEGTS_SECTION_ATSC_EIT</para></entry>
+<entry role="enum_member_description"><para>ATSC Event Information Table (A65)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-SECTION-ATSC-STT:CAPS">GST_MPEGTS_SECTION_ATSC_STT</para></entry>
+<entry role="enum_member_description"><para>ATSC System Time Table (A65)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegtsPatProgram" role="struct">
+<title>struct GstMpegtsPatProgram</title>
+<indexterm zone="GstMpegtsPatProgram"><primary>GstMpegtsPatProgram</primary></indexterm>
+<programlisting language="C">struct GstMpegtsPatProgram {
+  guint16 program_number;
+  guint16 network_or_program_map_PID;
+};
+</programlisting>
+<para>A program entry from a Program Association Table (ITU H.222.0, ISO/IEC 13818-1).</para>
+<refsect3 id="GstMpegtsPatProgram.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsPatProgram.program-number">program_number</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the program number</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsPatProgram.network-or-program-map-PID">network_or_program_map_PID</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the network of program map PID</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsPMT" role="struct">
+<title>struct GstMpegtsPMT</title>
+<indexterm zone="GstMpegtsPMT"><primary>GstMpegtsPMT</primary></indexterm>
+<programlisting language="C">struct GstMpegtsPMT {
+  guint16    pcr_pid;
+  guint16    program_number;
+
+  GPtrArray *descriptors;
+  GPtrArray *streams;
+};
+</programlisting>
+<para>Program Map Table (ISO/IEC 13818-1).</para>
+<para>The program_number is contained in the subtable_extension field of the
+container <link linkend="GstMpegtsSection"><type>GstMpegtsSection</type></link>.</para>
+<refsect3 id="GstMpegtsPMT.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsPMT.pcr-pid">pcr_pid</structfield>;</para></entry>
+<entry role="struct_member_description"><para>PID of the stream containing PCR</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsPMT.program-number">program_number</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsPMT.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> array of <link linkend="GstMpegtsDescriptor"><type>GstMpegtsDescriptor</type></link>. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsPMT.streams">streams</structfield>;</para></entry>
+<entry role="struct_member_description"><para> Array of <link linkend="GstMpegtsPMTStream"><type>GstMpegtsPMTStream</type></link>. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsPMTStream]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsPMTStream" role="struct">
+<title>struct GstMpegtsPMTStream</title>
+<indexterm zone="GstMpegtsPMTStream"><primary>GstMpegtsPMTStream</primary></indexterm>
+<programlisting language="C">struct GstMpegtsPMTStream {
+  guint8      stream_type;
+  guint16     pid;
+
+  GPtrArray  *descriptors;
+};
+</programlisting>
+<para>An individual stream definition.</para>
+<refsect3 id="GstMpegtsPMTStream.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegtsPMTStream.stream-type">stream_type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the type of stream. See <link linkend="GstMpegtsStreamType"><type>GstMpegtsStreamType</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegtsPMTStream.pid">pid</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the PID of the stream</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GPtrArray"><type>GPtrArray</type></link>&#160;*<structfield id="GstMpegtsPMTStream.descriptors">descriptors</structfield>;</para></entry>
+<entry role="struct_member_description"><para> the descriptors of the
+stream. </para></entry>
+<entry role="struct_member_annotations"><emphasis role="annotation">[<acronym>element-type</acronym> GstMpegtsDescriptor]</emphasis></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegtsStreamType" role="enum">
+<title>enum GstMpegtsStreamType</title>
+<indexterm zone="GstMpegtsStreamType"><primary>GstMpegtsStreamType</primary></indexterm>
+<para>Type of mpeg-ts stream type.</para>
+<para>These values correspond to the base standard registered types. Depending
+on the variant of mpeg-ts being used (Bluray, ATSC, DVB, ...), other
+types might also be used, but will not conflict with these.</para>
+<para>Corresponds to table 2-34 of ITU H.222.0 | ISO/IEC 13818-1</para>
+<refsect3 id="GstMpegtsStreamType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-RESERVED-00:CAPS">GST_MPEGTS_STREAM_TYPE_RESERVED_00</para></entry>
+<entry role="enum_member_description"><para>ITU-T | ISO/IEC Reserved</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-MPEG1:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_MPEG1</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 11172-2 Video</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-MPEG2:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_MPEG2</para></entry>
+<entry role="enum_member_description"><para>Rec. ITU-T H.262 | ISO/IEC 13818-2
+Video or ISO/IEC 11172-2 constrained parameter video stream</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-AUDIO-MPEG1:CAPS">GST_MPEGTS_STREAM_TYPE_AUDIO_MPEG1</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 11172-3 Audio</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-AUDIO-MPEG2:CAPS">GST_MPEGTS_STREAM_TYPE_AUDIO_MPEG2</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13818-3 Audio</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-PRIVATE-SECTIONS:CAPS">GST_MPEGTS_STREAM_TYPE_PRIVATE_SECTIONS</para></entry>
+<entry role="enum_member_description"><para>private sections</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-PRIVATE-PES-PACKETS:CAPS">GST_MPEGTS_STREAM_TYPE_PRIVATE_PES_PACKETS</para></entry>
+<entry role="enum_member_description"><para>PES packets containing private data</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-MHEG:CAPS">GST_MPEGTS_STREAM_TYPE_MHEG</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13522 MHEG</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-DSM-CC:CAPS">GST_MPEGTS_STREAM_TYPE_DSM_CC</para></entry>
+<entry role="enum_member_description"><para>Annex A DSM-CC</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-H-222-1:CAPS">GST_MPEGTS_STREAM_TYPE_H_222_1</para></entry>
+<entry role="enum_member_description"><para>Rec. ITU-T H.222.1</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-DSMCC-A:CAPS">GST_MPEGTS_STREAM_TYPE_DSMCC_A</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13818-6 type A</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-DSMCC-B:CAPS">GST_MPEGTS_STREAM_TYPE_DSMCC_B</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13818-6 type B</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-DSMCC-C:CAPS">GST_MPEGTS_STREAM_TYPE_DSMCC_C</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13818-6 type C</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-DSMCC-D:CAPS">GST_MPEGTS_STREAM_TYPE_DSMCC_D</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13818-6 type D</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-AUXILIARY:CAPS">GST_MPEGTS_STREAM_TYPE_AUXILIARY</para></entry>
+<entry role="enum_member_description"><para>auxiliary streams</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-AUDIO-AAC-ADTS:CAPS">GST_MPEGTS_STREAM_TYPE_AUDIO_AAC_ADTS</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13818-7 Audio with ADTS
+transport syntax</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-MPEG4:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_MPEG4</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 14496-2 Visual</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-AUDIO-AAC-LATM:CAPS">GST_MPEGTS_STREAM_TYPE_AUDIO_AAC_LATM</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 14496-3 Audio with the LATM
+transport syntax as defined in ISO/IEC 14496-3</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-SL-FLEXMUX-PES-PACKETS:CAPS">GST_MPEGTS_STREAM_TYPE_SL_FLEXMUX_PES_PACKETS</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 14496-1
+SL-packetized stream or FlexMux stream carried in PES packets</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-SL-FLEXMUX-SECTIONS:CAPS">GST_MPEGTS_STREAM_TYPE_SL_FLEXMUX_SECTIONS</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 14496-1 SL-packetized
+stream or FlexMux stream carried in ISO/IEC 14496_sections</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-SYNCHRONIZED-DOWNLOAD:CAPS">GST_MPEGTS_STREAM_TYPE_SYNCHRONIZED_DOWNLOAD</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 13818-6 Synchronized
+Download Protocol</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-METADATA-PES-PACKETS:CAPS">GST_MPEGTS_STREAM_TYPE_METADATA_PES_PACKETS</para></entry>
+<entry role="enum_member_description"><para>Metadata carried in PES packets</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-METADATA-SECTIONS:CAPS">GST_MPEGTS_STREAM_TYPE_METADATA_SECTIONS</para></entry>
+<entry role="enum_member_description"><para>Metadata carried in metadata_sections</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-METADATA-DATA-CAROUSEL:CAPS">GST_MPEGTS_STREAM_TYPE_METADATA_DATA_CAROUSEL</para></entry>
+<entry role="enum_member_description"><para>Metadata carried in ISO/IEC
+13818-6 Data Carousel</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-METADATA-OBJECT-CAROUSEL:CAPS">GST_MPEGTS_STREAM_TYPE_METADATA_OBJECT_CAROUSEL</para></entry>
+<entry role="enum_member_description"><para>Metadata carried in
+ISO/IEC 13818-6 Object Carousel</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-METADATA-SYNCHRONIZED-DOWNLOAD:CAPS">GST_MPEGTS_STREAM_TYPE_METADATA_SYNCHRONIZED_DOWNLOAD</para></entry>
+<entry role="enum_member_description"><para>Metadata carried in
+ISO/IEC 13818-6 Synchronized Download Protocol</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-MPEG2-IPMP:CAPS">GST_MPEGTS_STREAM_TYPE_MPEG2_IPMP</para></entry>
+<entry role="enum_member_description"><para>IPMP stream (defined in ISO/IEC 13818-11,
+MPEG-2 IPMP)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-H264:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_H264</para></entry>
+<entry role="enum_member_description"><para>AVC video stream conforming to one or
+more profiles defined in Annex A of Rec. ITU-T H.264 | ISO/IEC 14496-10 or
+AVC video sub-bitstream of SVC as defined in 2.1.78 or MVC base view
+sub-bitstream, as defined in 2.1.85, or AVC video sub-bitstream of MVC, as
+defined in 2.1.88</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-AUDIO-AAC-CLEAN:CAPS">GST_MPEGTS_STREAM_TYPE_AUDIO_AAC_CLEAN</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 14496-3 Audio, without
+using any additional transport syntax, such as DST, ALS and SLS</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-MPEG4-TIMED-TEXT:CAPS">GST_MPEGTS_STREAM_TYPE_MPEG4_TIMED_TEXT</para></entry>
+<entry role="enum_member_description"><para>ISO/IEC 14496-17 Text</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-RVC:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_RVC</para></entry>
+<entry role="enum_member_description"><para>Auxiliary video stream as defined in
+ISO/IEC 23002-3</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-H264-SVC-SUB-BITSTREAM:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_H264_SVC_SUB_BITSTREAM</para></entry>
+<entry role="enum_member_description"><para>SVC video sub-bitstream
+of an AVC video stream conforming to one or more profiles defined in Annex G
+of Rec. ITU-T H.264 | ISO/IEC 14496-10</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-H264-MVC-SUB-BITSTREAM:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_H264_MVC_SUB_BITSTREAM</para></entry>
+<entry role="enum_member_description"><para>MVC video sub-bitstream
+of an AVC video stream conforming to one or more profiles defined in Annex H
+of Rec. ITU-T H.264 | ISO/IEC 14496-10</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-JP2K:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_JP2K</para></entry>
+<entry role="enum_member_description"><para>Video stream conforming to one or more
+profiles as defined in Rec. ITU-T T.800 | ISO/IEC 15444-1</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-MPEG2-STEREO-ADDITIONAL-VIEW:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_MPEG2_STEREO_ADDITIONAL_VIEW</para></entry>
+<entry role="enum_member_description"><para>Additional view
+Rec. ITU-T H.262 | ISO/IEC 13818-2 video stream for service-compatible
+stereoscopic 3D services</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-H264-STEREO-ADDITIONAL-VIEW:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_H264_STEREO_ADDITIONAL_VIEW</para></entry>
+<entry role="enum_member_description"><para>Additional view
+Rec. ITU-T H.264 | ISO/IEC 14496-10 video stream conforming to one or more
+profiles defined in Annex A for service-compatible stereoscopic 3D services</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-VIDEO-HEVC:CAPS">GST_MPEGTS_STREAM_TYPE_VIDEO_HEVC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEGTS-STREAM-TYPE-IPMP-STREAM:CAPS">GST_MPEGTS_STREAM_TYPE_IPMP_STREAM</para></entry>
+<entry role="enum_member_description"><para>IPMP stream</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

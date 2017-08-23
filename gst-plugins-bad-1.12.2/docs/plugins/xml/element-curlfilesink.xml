@@ -1,0 +1,92 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-curlfilesink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-curlfilesink.top_of_page" role="top_of_page">curlfilesink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>curlfilesink</refname>
+<refpurpose>sink that uploads data to a server using libcurl</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-curlfilesink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCurlFileSink--create-dirs">create-dirs</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCurlFileSink"/><refsect1 id="gst-plugins-bad-plugins-curlfilesink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCurlFileSink-struct">GstCurlFileSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlfilesink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstCurlBaseSink">GstCurlBaseSink</link>
+                        <phrase role="lineart">╰──</phrase> GstCurlFileSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-curlfilesink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This is a network sink that uses libcurl as a client to upload data to
+a local or network drive.</para>
+<refsect3><title>Example launch line (upload a JPEG file to /home/test/images directory)</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=image.jpg ! jpegparse ! curlfilesink  \
+    file-name=image.jpg  \
+    location=file:///home/test/images/
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-curlfilesink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlfilesink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlfilesink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCurlFileSink-struct" role="struct">
+<title>struct GstCurlFileSink</title>
+<indexterm zone="GstCurlFileSink-struct"><primary>GstCurlFileSink</primary></indexterm>
+<programlisting language="C">struct GstCurlFileSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlfilesink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCurlFileSink--create-dirs" role="property"><title>The <literal>“create-dirs”</literal> property</title>
+<indexterm zone="GstCurlFileSink--create-dirs"><primary>GstCurlFileSink:create-dirs</primary></indexterm>
+<programlisting>  “create-dirs”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Attempt to create missing directory included in the path.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

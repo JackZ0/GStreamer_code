@@ -1,0 +1,96 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-webpdec">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-webpdec.top_of_page" role="top_of_page">webpdec</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>webpdec</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-webpdec.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebPDec--bypass-filtering">bypass-filtering</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebPDec--no-fancy-upsampling">no-fancy-upsampling</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebPDec--use-threads">use-threads</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstWebPDec"/><refsect1 id="gst-plugins-bad-plugins-webpdec.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstWebPDec-struct">GstWebPDec</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpdec.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstVideoDecoder">GstVideoDecoder</link>
+                    <phrase role="lineart">╰──</phrase> GstWebPDec
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-webpdec.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-webpdec-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpdec.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpdec.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstWebPDec-struct" role="struct">
+<title>struct GstWebPDec</title>
+<indexterm zone="GstWebPDec-struct"><primary>GstWebPDec</primary></indexterm>
+<programlisting language="C">struct GstWebPDec;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpdec.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstWebPDec--bypass-filtering" role="property"><title>The <literal>“bypass-filtering”</literal> property</title>
+<indexterm zone="GstWebPDec--bypass-filtering"><primary>GstWebPDec:bypass-filtering</primary></indexterm>
+<programlisting>  “bypass-filtering”         <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, skip the in-loop filtering.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstWebPDec--no-fancy-upsampling" role="property"><title>The <literal>“no-fancy-upsampling”</literal> property</title>
+<indexterm zone="GstWebPDec--no-fancy-upsampling"><primary>GstWebPDec:no-fancy-upsampling</primary></indexterm>
+<programlisting>  “no-fancy-upsampling”      <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, use faster pointwise upsampler.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstWebPDec--use-threads" role="property"><title>The <literal>“use-threads”</literal> property</title>
+<indexterm zone="GstWebPDec--use-threads"><primary>GstWebPDec:use-threads</primary></indexterm>
+<programlisting>  “use-threads”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, use multi-threaded decoding.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

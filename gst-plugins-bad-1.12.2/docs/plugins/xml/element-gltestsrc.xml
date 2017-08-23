@@ -1,0 +1,190 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-gltestsrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-gltestsrc.top_of_page" role="top_of_page">gltestsrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gltestsrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-gltestsrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGLTestSrc--is-live">is-live</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstGLTestSrcPattern"><type>GstGLTestSrcPattern</type></link></entry><entry role="property_name"><link linkend="GstGLTestSrc--pattern">pattern</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstGLTestSrc--timestamp-offset">timestamp-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLTestSrc"/><refsect1 id="gst-plugins-bad-plugins-gltestsrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstGLTestSrc-struct">GstGLTestSrc</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLTestSrcPattern">GstGLTestSrcPattern</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gltestsrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> GstGLTestSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-gltestsrc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The gltestsrc element is used to produce test video texture.
+The video test produced can be controlled with the &quot;pattern&quot;
+property.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v gltestsrc pattern=smpte ! glimagesink
+]]></programlisting></informalexample>
+<para>
+Shows original SMPTE color bars in a window.</para>
+</refsect3>
+
+<include href="element-gltestsrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gltestsrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gltestsrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLTestSrc-struct" role="struct">
+<title>GstGLTestSrc</title>
+<indexterm zone="GstGLTestSrc-struct"><primary>GstGLTestSrc</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLTestSrc GstGLTestSrc;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+<refsect2 id="GstGLTestSrcPattern" role="enum">
+<title>enum GstGLTestSrcPattern</title>
+<indexterm zone="GstGLTestSrcPattern"><primary>GstGLTestSrcPattern</primary></indexterm>
+<para>The test pattern to produce.</para>
+<refsect3 id="GstGLTestSrcPattern.members" role="enum_members">
+<title>Members</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-SMPTE:CAPS">GST_GL_TEST_SRC_SMPTE</para></entry>
+<entry role="enum_member_description"><para>A standard SMPTE test pattern</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-SNOW:CAPS">GST_GL_TEST_SRC_SNOW</para></entry>
+<entry role="enum_member_description"><para>Random noise</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-BLACK:CAPS">GST_GL_TEST_SRC_BLACK</para></entry>
+<entry role="enum_member_description"><para>A black image</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-WHITE:CAPS">GST_GL_TEST_SRC_WHITE</para></entry>
+<entry role="enum_member_description"><para>A white image</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-RED:CAPS">GST_GL_TEST_SRC_RED</para></entry>
+<entry role="enum_member_description"><para>A red image</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-GREEN:CAPS">GST_GL_TEST_SRC_GREEN</para></entry>
+<entry role="enum_member_description"><para>A green image</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-BLUE:CAPS">GST_GL_TEST_SRC_BLUE</para></entry>
+<entry role="enum_member_description"><para>A blue image</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-CHECKERS1:CAPS">GST_GL_TEST_SRC_CHECKERS1</para></entry>
+<entry role="enum_member_description"><para>Checkers pattern (1px)</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-CHECKERS2:CAPS">GST_GL_TEST_SRC_CHECKERS2</para></entry>
+<entry role="enum_member_description"><para>Checkers pattern (2px)</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-CHECKERS4:CAPS">GST_GL_TEST_SRC_CHECKERS4</para></entry>
+<entry role="enum_member_description"><para>Checkers pattern (4px)</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-CHECKERS8:CAPS">GST_GL_TEST_SRC_CHECKERS8</para></entry>
+<entry role="enum_member_description"><para>Checkers pattern (8px)</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-CIRCULAR:CAPS">GST_GL_TEST_SRC_CIRCULAR</para></entry>
+<entry role="enum_member_description"><para>Circular pattern</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-BLINK:CAPS">GST_GL_TEST_SRC_BLINK</para></entry>
+<entry role="enum_member_description"><para>Alternate between black and white</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEST-SRC-MANDELBROT:CAPS">GST_GL_TEST_SRC_MANDELBROT</para></entry>
+<entry/><entry/>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gltestsrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLTestSrc--is-live" role="property"><title>The <literal>“is-live”</literal> property</title>
+<indexterm zone="GstGLTestSrc--is-live"><primary>GstGLTestSrc:is-live</primary></indexterm>
+<programlisting>  “is-live”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether to act as a live source.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstGLTestSrc--pattern" role="property"><title>The <literal>“pattern”</literal> property</title>
+<indexterm zone="GstGLTestSrc--pattern"><primary>GstGLTestSrc:pattern</primary></indexterm>
+<programlisting>  “pattern”                  <link linkend="GstGLTestSrcPattern"><type>GstGLTestSrcPattern</type></link></programlisting>
+<para>Type of test pattern to generate.</para><para>Flags: Read / Write</para>
+<para>Default value: SMPTE 100% color bars</para>
+</refsect2>
+<refsect2 id="GstGLTestSrc--timestamp-offset" role="property"><title>The <literal>“timestamp-offset”</literal> property</title>
+<indexterm zone="GstGLTestSrc--timestamp-offset"><primary>GstGLTestSrc:timestamp-offset</primary></indexterm>
+<programlisting>  “timestamp-offset”         <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>An offset added to timestamps set on buffers (in ns).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

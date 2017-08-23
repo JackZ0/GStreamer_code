@@ -1,0 +1,104 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-smooth">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-smooth.top_of_page" role="top_of_page">smooth</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>smooth</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-smooth.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSmooth--active">active</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSmooth--filter-size">filter-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSmooth--luma-only">luma-only</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSmooth--tolerance">tolerance</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstSmooth"/><refsect1 id="gst-plugins-bad-plugins-smooth.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstSmooth-struct">GstSmooth</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-smooth.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstSmooth
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-smooth.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-smooth-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-smooth.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-smooth.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstSmooth-struct" role="struct">
+<title>struct GstSmooth</title>
+<indexterm zone="GstSmooth-struct"><primary>GstSmooth</primary></indexterm>
+<programlisting language="C">struct GstSmooth;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-smooth.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstSmooth--active" role="property"><title>The <literal>“active”</literal> property</title>
+<indexterm zone="GstSmooth--active"><primary>GstSmooth:active</primary></indexterm>
+<programlisting>  “active”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>process video.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstSmooth--filter-size" role="property"><title>The <literal>“filter-size”</literal> property</title>
+<indexterm zone="GstSmooth--filter-size"><primary>GstSmooth:filter-size</primary></indexterm>
+<programlisting>  “filter-size”              <link linkend="gint"><type>gint</type></link></programlisting>
+<para>size of media filter.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstSmooth--luma-only" role="property"><title>The <literal>“luma-only”</literal> property</title>
+<indexterm zone="GstSmooth--luma-only"><primary>GstSmooth:luma-only</primary></indexterm>
+<programlisting>  “luma-only”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>only filter luma part.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstSmooth--tolerance" role="property"><title>The <literal>“tolerance”</literal> property</title>
+<indexterm zone="GstSmooth--tolerance"><primary>GstSmooth:tolerance</primary></indexterm>
+<programlisting>  “tolerance”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>contrast tolerance for smoothing.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,1146 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-mpeg4parser">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-mpeg4parser.top_of_page">GstMpeg4Parser</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstMpeg4Parser</refname>
+<refpurpose>Convenience library for parsing mpeg4 part 2 video
+bitstream.</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-mpeg4parser.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg4-parse">gst_mpeg4_parse</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg4-parse-video-object-plane">gst_mpeg4_parse_video_object_plane</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg4-parse-group-of-vop">gst_mpeg4_parse_group_of_vop</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg4-parse-video-object-layer">gst_mpeg4_parse_video_object_layer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg4-parse-visual-object">gst_mpeg4_parse_visual_object</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg4-parse-visual-object-sequence">gst_mpeg4_parse_visual_object_sequence</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg4-parse-video-packet-header">gst_mpeg4_parse_video_packet_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-mpeg4parser.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4StartCode">GstMpeg4StartCode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4VisualObjectType">GstMpeg4VisualObjectType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4AspectRatioInfo">GstMpeg4AspectRatioInfo</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4ParseResult">GstMpeg4ParseResult</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4VideoObjectCodingType">GstMpeg4VideoObjectCodingType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4ChromaFormat">GstMpeg4ChromaFormat</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4VideoObjectLayerShape">GstMpeg4VideoObjectLayerShape</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4SpriteEnable">GstMpeg4SpriteEnable</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4Profile">GstMpeg4Profile</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpeg4Level">GstMpeg4Level</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4VisualObjectSequence">GstMpeg4VisualObjectSequence</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4VisualObject">GstMpeg4VisualObject</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4VideoSignalType">GstMpeg4VideoSignalType</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4VideoPlaneShortHdr">GstMpeg4VideoPlaneShortHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4VideoObjectLayer">GstMpeg4VideoObjectLayer</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4SpriteTrajectory">GstMpeg4SpriteTrajectory</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4GroupOfVOP">GstMpeg4GroupOfVOP</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4VideoObjectPlane">GstMpeg4VideoObjectPlane</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4Packet">GstMpeg4Packet</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpeg4VideoPacketHdr">GstMpeg4VideoPacketHdr</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-mpeg4parser.includes"><title>Includes</title><synopsis>#include &lt;gst/codecparsers/gstmpeg4parser.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-mpeg4parser.description" role="desc">
+<title role="desc.title">Description</title>
+<para>For more details about the structures, you can refer to the
+specifications: ISO-IEC-14496-2_2004_MPEG4_VISUAL.pdf</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-mpeg4parser.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-mpeg4-parse" role="function">
+<title>gst_mpeg4_parse&#160;()</title>
+<indexterm zone="gst-mpeg4-parse"><primary>gst_mpeg4_parse</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+gst_mpeg4_parse (<parameter><link linkend="GstMpeg4Packet"><type>GstMpeg4Packet</type></link> *packet</parameter>,
+                 <parameter><link linkend="gboolean"><type>gboolean</type></link> skip_user_data</parameter>,
+                 <parameter><link linkend="GstMpeg4VideoObjectPlane"><type>GstMpeg4VideoObjectPlane</type></link> *vop</parameter>,
+                 <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                 <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>,
+                 <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+ and fills <parameter>packet</parameter>
+ with the information of the next packet
+found.</para>
+<refsect3 id="gst-mpeg4-parse.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>packet</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4Packet"><type>GstMpeg4Packet</type></link> to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>skip_user_data</para></entry>
+<entry role="parameter_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to skip user data packet <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>vop</para></entry>
+<entry role="parameter_description"><para>The last parsed <link linkend="GstMpeg4VideoObjectPlane"><type>GstMpeg4VideoObjectPlane</type></link> or <link linkend="NULL:CAPS"><literal>NULL</literal></link> if you do
+not need to detect the resync codes.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>offset from which to start the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of the <parameter>data</parameter>
+to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg4-parse.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstMpeg4ParseResult"><type>GstMpeg4ParseResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg4-parse-video-object-plane" role="function">
+<title>gst_mpeg4_parse_video_object_plane&#160;()</title>
+<indexterm zone="gst-mpeg4-parse-video-object-plane"><primary>gst_mpeg4_parse_video_object_plane</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+gst_mpeg4_parse_video_object_plane (<parameter><link linkend="GstMpeg4VideoObjectPlane"><type>GstMpeg4VideoObjectPlane</type></link> *vop</parameter>,
+                                    <parameter><link linkend="GstMpeg4SpriteTrajectory"><type>GstMpeg4SpriteTrajectory</type></link> *sprite_trajectory</parameter>,
+                                    <parameter><link linkend="GstMpeg4VideoObjectLayer"><type>GstMpeg4VideoObjectLayer</type></link> *vol</parameter>,
+                                    <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                    <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+ containing the video object plane packet, and fills the <parameter>vol</parameter>
+
+structure.</para>
+<refsect3 id="gst-mpeg4-parse-video-object-plane.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vop</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VideoObjectPlane"><type>GstMpeg4VideoObjectPlane</type></link> currently being parsed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sprite_trajectory</para></entry>
+<entry role="parameter_description"><para>A <link linkend="GstMpeg4SpriteTrajectory"><type>GstMpeg4SpriteTrajectory</type></link> to fill or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>vol</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VideoObjectLayer"><type>GstMpeg4VideoObjectLayer</type></link> structure to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of the <parameter>data</parameter>
+to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg4-parse-video-object-plane.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstMpeg4ParseResult"><type>GstMpeg4ParseResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg4-parse-group-of-vop" role="function">
+<title>gst_mpeg4_parse_group_of_vop&#160;()</title>
+<indexterm zone="gst-mpeg4-parse-group-of-vop"><primary>gst_mpeg4_parse_group_of_vop</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+gst_mpeg4_parse_group_of_vop (<parameter><link linkend="GstMpeg4GroupOfVOP"><type>GstMpeg4GroupOfVOP</type></link> *gov</parameter>,
+                              <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                              <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+ containing the group of video object plane packet, and fills
+the <parameter>gov</parameter>
+ structure.</para>
+<refsect3 id="gst-mpeg4-parse-group-of-vop.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gov</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4GroupOfVOP"><type>GstMpeg4GroupOfVOP</type></link> structure to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of the <parameter>data</parameter>
+to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg4-parse-group-of-vop.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstMpeg4ParseResult"><type>GstMpeg4ParseResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg4-parse-video-object-layer" role="function">
+<title>gst_mpeg4_parse_video_object_layer&#160;()</title>
+<indexterm zone="gst-mpeg4-parse-video-object-layer"><primary>gst_mpeg4_parse_video_object_layer</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+gst_mpeg4_parse_video_object_layer (<parameter><link linkend="GstMpeg4VideoObjectLayer"><type>GstMpeg4VideoObjectLayer</type></link> *vol</parameter>,
+                                    <parameter><link linkend="GstMpeg4VisualObject"><type>GstMpeg4VisualObject</type></link> *vo</parameter>,
+                                    <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                    <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+ containing the video object layer packet, and fills
+the <parameter>vol</parameter>
+ structure.</para>
+<refsect3 id="gst-mpeg4-parse-video-object-layer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vol</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VideoObjectLayer"><type>GstMpeg4VideoObjectLayer</type></link> structure to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>vo</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VisualObject"><type>GstMpeg4VisualObject</type></link> currently being parsed or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of the <parameter>data</parameter>
+to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg4-parse-video-object-layer.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstMpeg4ParseResult"><type>GstMpeg4ParseResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg4-parse-visual-object" role="function">
+<title>gst_mpeg4_parse_visual_object&#160;()</title>
+<indexterm zone="gst-mpeg4-parse-visual-object"><primary>gst_mpeg4_parse_visual_object</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+gst_mpeg4_parse_visual_object (<parameter><link linkend="GstMpeg4VisualObject"><type>GstMpeg4VisualObject</type></link> *vo</parameter>,
+                               <parameter><link linkend="GstMpeg4VideoSignalType"><type>GstMpeg4VideoSignalType</type></link> *signal_type</parameter>,
+                               <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                               <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+ containing the visual object packet, and fills
+the <parameter>vo</parameter>
+ structure.</para>
+<refsect3 id="gst-mpeg4-parse-visual-object.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vo</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VisualObject"><type>GstMpeg4VisualObject</type></link> structure to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>signal_type</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VideoSignalType"><type>GstMpeg4VideoSignalType</type></link> to fill or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse, should contain the vo_start_code
+but not the start code prefix</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of the <parameter>data</parameter>
+to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg4-parse-visual-object.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstMpeg4ParseResult"><type>GstMpeg4ParseResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg4-parse-visual-object-sequence" role="function">
+<title>gst_mpeg4_parse_visual_object_sequence&#160;()</title>
+<indexterm zone="gst-mpeg4-parse-visual-object-sequence"><primary>gst_mpeg4_parse_visual_object_sequence</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+gst_mpeg4_parse_visual_object_sequence
+                               (<parameter><link linkend="GstMpeg4VisualObjectSequence"><type>GstMpeg4VisualObjectSequence</type></link> *vos</parameter>,
+                                <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Parses <parameter>data</parameter>
+ containing the visual object sequence packet, and fills
+the <parameter>vos</parameter>
+ structure.</para>
+<refsect3 id="gst-mpeg4-parse-visual-object-sequence.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>vos</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VisualObjectSequence"><type>GstMpeg4VisualObjectSequence</type></link> structure to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse, should contain the visual_object_sequence_start_code
+but not the start code prefix</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of the <parameter>data</parameter>
+to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg4-parse-visual-object-sequence.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstMpeg4ParseResult"><type>GstMpeg4ParseResult</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg4-parse-video-packet-header" role="function">
+<title>gst_mpeg4_parse_video_packet_header&#160;()</title>
+<indexterm zone="gst-mpeg4-parse-video-packet-header"><primary>gst_mpeg4_parse_video_packet_header</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpeg4ParseResult"><returnvalue>GstMpeg4ParseResult</returnvalue></link>
+gst_mpeg4_parse_video_packet_header (<parameter><link linkend="GstMpeg4VideoPacketHdr"><type>GstMpeg4VideoPacketHdr</type></link> *videopackethdr</parameter>,
+                                     <parameter><link linkend="GstMpeg4VideoObjectLayer"><type>GstMpeg4VideoObjectLayer</type></link> *vol</parameter>,
+                                     <parameter><link linkend="GstMpeg4VideoObjectPlane"><type>GstMpeg4VideoObjectPlane</type></link> *vop</parameter>,
+                                     <parameter><link linkend="GstMpeg4SpriteTrajectory"><type>GstMpeg4SpriteTrajectory</type></link> *sprite_trajectory</parameter>,
+                                     <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                     <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>);</programlisting>
+<para>Parsers <parameter>data</parameter>
+ containing the video packet header
+and fills the <parameter>videopackethdr</parameter>
+ structure</para>
+<refsect3 id="gst-mpeg4-parse-video-packet-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>videopackethdr</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstMpeg4VideoPacketHdr"><type>GstMpeg4VideoPacketHdr</type></link> structure to fill</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>vol</para></entry>
+<entry role="parameter_description"><para>The last parsed <link linkend="GstMpeg4VideoObjectLayer"><type>GstMpeg4VideoObjectLayer</type></link>, will be updated
+with the informations found during the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>vop</para></entry>
+<entry role="parameter_description"><para>The last parsed <link linkend="GstMpeg4VideoObjectPlane"><type>GstMpeg4VideoObjectPlane</type></link>, will be updated
+with the informations found during the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sprite_trajectory</para></entry>
+<entry role="parameter_description"><para>A <link linkend="GstMpeg4SpriteTrajectory"><type>GstMpeg4SpriteTrajectory</type></link> to fill or <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+with the informations found during the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse, should be set after the resync marker.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of the data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-mpeg4parser.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpeg4StartCode" role="enum">
+<title>enum GstMpeg4StartCode</title>
+<indexterm zone="GstMpeg4StartCode"><primary>GstMpeg4StartCode</primary></indexterm>
+<para>Defines the different startcodes present in the bitstream as
+defined in: Table 6-3 — Start code values</para>
+<refsect3 id="GstMpeg4StartCode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VIDEO-OBJ-FIRST:CAPS">GST_MPEG4_VIDEO_OBJ_FIRST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VIDEO-OBJ-LAST:CAPS">GST_MPEG4_VIDEO_OBJ_LAST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VIDEO-LAYER-FIRST:CAPS">GST_MPEG4_VIDEO_LAYER_FIRST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VIDEO-LAYER-LAST:CAPS">GST_MPEG4_VIDEO_LAYER_LAST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VISUAL-OBJ-SEQ-START:CAPS">GST_MPEG4_VISUAL_OBJ_SEQ_START</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VISUAL-OBJ-SEQ-END:CAPS">GST_MPEG4_VISUAL_OBJ_SEQ_END</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-USER-DATA:CAPS">GST_MPEG4_USER_DATA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-GROUP-OF-VOP:CAPS">GST_MPEG4_GROUP_OF_VOP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VIDEO-SESSION-ERR:CAPS">GST_MPEG4_VIDEO_SESSION_ERR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VISUAL-OBJ:CAPS">GST_MPEG4_VISUAL_OBJ</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VIDEO-OBJ-PLANE:CAPS">GST_MPEG4_VIDEO_OBJ_PLANE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-FBA:CAPS">GST_MPEG4_FBA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-FBA-PLAN:CAPS">GST_MPEG4_FBA_PLAN</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-MESH:CAPS">GST_MPEG4_MESH</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-MESH-PLAN:CAPS">GST_MPEG4_MESH_PLAN</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-STILL-TEXTURE-OBJ:CAPS">GST_MPEG4_STILL_TEXTURE_OBJ</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-TEXTURE-SPATIAL:CAPS">GST_MPEG4_TEXTURE_SPATIAL</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-TEXTURE-SNR-LAYER:CAPS">GST_MPEG4_TEXTURE_SNR_LAYER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-TEXTURE-TILE:CAPS">GST_MPEG4_TEXTURE_TILE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-SHAPE-LAYER:CAPS">GST_MPEG4_SHAPE_LAYER</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-STUFFING:CAPS">GST_MPEG4_STUFFING</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-SYSTEM-FIRST:CAPS">GST_MPEG4_SYSTEM_FIRST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-SYSTEM-LAST:CAPS">GST_MPEG4_SYSTEM_LAST</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-RESYNC:CAPS">GST_MPEG4_RESYNC</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4VisualObjectType" role="enum">
+<title>enum GstMpeg4VisualObjectType</title>
+<indexterm zone="GstMpeg4VisualObjectType"><primary>GstMpeg4VisualObjectType</primary></indexterm>
+<para>Defines the different visual object types as
+defined in: Table 6-5 -- Meaning of visual object type</para>
+<refsect3 id="GstMpeg4VisualObjectType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-VIDEO-ID:CAPS">GST_MPEG4_VIDEO_ID</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-STILL-TEXTURE-ID:CAPS">GST_MPEG4_STILL_TEXTURE_ID</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-STILL-MESH-ID:CAPS">GST_MPEG4_STILL_MESH_ID</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-STILL-FBA-ID:CAPS">GST_MPEG4_STILL_FBA_ID</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-STILL-3D-MESH-ID:CAPS">GST_MPEG4_STILL_3D_MESH_ID</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4AspectRatioInfo" role="enum">
+<title>enum GstMpeg4AspectRatioInfo</title>
+<indexterm zone="GstMpeg4AspectRatioInfo"><primary>GstMpeg4AspectRatioInfo</primary></indexterm>
+<para>Defines the different pixel aspect ratios as
+defined in: Table 6-12 -- Meaning of pixel aspect ratio</para>
+<refsect3 id="GstMpeg4AspectRatioInfo.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-SQUARE:CAPS">GST_MPEG4_SQUARE</para></entry>
+<entry role="enum_member_description"><para>1:1 square</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-625-TYPE-4-3:CAPS">GST_MPEG4_625_TYPE_4_3</para></entry>
+<entry role="enum_member_description"><para>12:11 (625-type for 4:3 picture)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-525-TYPE-4-3:CAPS">GST_MPEG4_525_TYPE_4_3</para></entry>
+<entry role="enum_member_description"><para>10:11 (525-type for 4:3 picture)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-625-TYPE-16-9:CAPS">GST_MPEG4_625_TYPE_16_9</para></entry>
+<entry role="enum_member_description"><para>16:11 (625-type stretched for 16:9 picture)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-525-TYPE-16-9:CAPS">GST_MPEG4_525_TYPE_16_9</para></entry>
+<entry role="enum_member_description"><para>40:33 (525-type stretched for 16:9 picture)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-EXTENDED-PAR:CAPS">GST_MPEG4_EXTENDED_PAR</para></entry>
+<entry role="enum_member_description"><para>Extended par</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4ParseResult" role="enum">
+<title>enum GstMpeg4ParseResult</title>
+<indexterm zone="GstMpeg4ParseResult"><primary>GstMpeg4ParseResult</primary></indexterm>
+<para>Result type of any parsing function.</para>
+<refsect3 id="GstMpeg4ParseResult.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PARSER-OK:CAPS">GST_MPEG4_PARSER_OK</para></entry>
+<entry role="enum_member_description"><para>The parsing went well</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PARSER-BROKEN-DATA:CAPS">GST_MPEG4_PARSER_BROKEN_DATA</para></entry>
+<entry role="enum_member_description"><para>The bitstream was broken</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PARSER-NO-PACKET:CAPS">GST_MPEG4_PARSER_NO_PACKET</para></entry>
+<entry role="enum_member_description"><para>There was no packet in the buffer</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PARSER-NO-PACKET-END:CAPS">GST_MPEG4_PARSER_NO_PACKET_END</para></entry>
+<entry role="enum_member_description"><para>There was no packet end in the buffer</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PARSER-ERROR:CAPS">GST_MPEG4_PARSER_ERROR</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4VideoObjectCodingType" role="enum">
+<title>enum GstMpeg4VideoObjectCodingType</title>
+<indexterm zone="GstMpeg4VideoObjectCodingType"><primary>GstMpeg4VideoObjectCodingType</primary></indexterm>
+<para>The vop coding types as defined in:
+Table 6-20 -- Meaning of vop_coding_type</para>
+<refsect3 id="GstMpeg4VideoObjectCodingType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-I-VOP:CAPS">GST_MPEG4_I_VOP</para></entry>
+<entry role="enum_member_description"><para>intra-coded (I)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-P-VOP:CAPS">GST_MPEG4_P_VOP</para></entry>
+<entry role="enum_member_description"><para>predictive-coded (P)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-B-VOP:CAPS">GST_MPEG4_B_VOP</para></entry>
+<entry role="enum_member_description"><para>bidirectionally-predictive-coded (B)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-S-VOP:CAPS">GST_MPEG4_S_VOP</para></entry>
+<entry role="enum_member_description"><para>sprite (S)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4ChromaFormat" role="enum">
+<title>enum GstMpeg4ChromaFormat</title>
+<indexterm zone="GstMpeg4ChromaFormat"><primary>GstMpeg4ChromaFormat</primary></indexterm>
+<para>The chroma format in use as
+defined in: Table 6-13 -- Meaning of chroma_format</para>
+<refsect3 id="GstMpeg4ChromaFormat.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-CHROMA-4-2-0:CAPS">GST_MPEG4_CHROMA_4_2_0</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4VideoObjectLayerShape" role="enum">
+<title>enum GstMpeg4VideoObjectLayerShape</title>
+<indexterm zone="GstMpeg4VideoObjectLayerShape"><primary>GstMpeg4VideoObjectLayerShape</primary></indexterm>
+<para>The different video object layer shapes as defined in:
+Table 6-16 — Video Object Layer shape type</para>
+<refsect3 id="GstMpeg4VideoObjectLayerShape.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-RECTANGULAR:CAPS">GST_MPEG4_RECTANGULAR</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-BINARY:CAPS">GST_MPEG4_BINARY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-BINARY-ONLY:CAPS">GST_MPEG4_BINARY_ONLY</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-GRAYSCALE:CAPS">GST_MPEG4_GRAYSCALE</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4SpriteEnable" role="enum">
+<title>enum GstMpeg4SpriteEnable</title>
+<indexterm zone="GstMpeg4SpriteEnable"><primary>GstMpeg4SpriteEnable</primary></indexterm>
+<para>Indicates the usage of static sprite coding
+or global motion compensation (GMC) as defined in:
+Table V2 - 2 -- Meaning of sprite_enable codewords</para>
+<refsect3 id="GstMpeg4SpriteEnable.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-SPRITE-UNUSED:CAPS">GST_MPEG4_SPRITE_UNUSED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-SPRITE-STATIC:CAPS">GST_MPEG4_SPRITE_STATIC</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-SPRITE-GMG:CAPS">GST_MPEG4_SPRITE_GMG</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4Profile" role="enum">
+<title>enum GstMpeg4Profile</title>
+<indexterm zone="GstMpeg4Profile"><primary>GstMpeg4Profile</primary></indexterm>
+<para>Different defined profiles as defined in:
+9- Profiles and levels</para>
+<para>It is computed using:
+Table G.1 — FLC table for profile_and_level_indication</para>
+<refsect3 id="GstMpeg4Profile.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-CORE:CAPS">GST_MPEG4_PROFILE_CORE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-MAIN:CAPS">GST_MPEG4_PROFILE_MAIN</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-N-BIT:CAPS">GST_MPEG4_PROFILE_N_BIT</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-SIMPLE:CAPS">GST_MPEG4_PROFILE_SIMPLE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-HYBRID:CAPS">GST_MPEG4_PROFILE_HYBRID</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-RESERVED:CAPS">GST_MPEG4_PROFILE_RESERVED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-SIMPLE-FBA:CAPS">GST_MPEG4_PROFILE_SIMPLE_FBA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-CORE-STUDIO:CAPS">GST_MPEG4_PROFILE_CORE_STUDIO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-SIMPLE-STUDIO:CAPS">GST_MPEG4_PROFILE_SIMPLE_STUDIO</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-CORE-SCALABLE:CAPS">GST_MPEG4_PROFILE_CORE_SCALABLE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-ADVANCED-CORE:CAPS">GST_MPEG4_PROFILE_ADVANCED_CORE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-ADVANCED-SIMPLE:CAPS">GST_MPEG4_PROFILE_ADVANCED_SIMPLE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-SIMPLE-SCALABLE:CAPS">GST_MPEG4_PROFILE_SIMPLE_SCALABLE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-SCALABLE-TEXTURE:CAPS">GST_MPEG4_PROFILE_SCALABLE_TEXTURE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-SIMPLE-FACE-ANIMATION:CAPS">GST_MPEG4_PROFILE_SIMPLE_FACE_ANIMATION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-BASIC-ANIMATED-TEXTURE:CAPS">GST_MPEG4_PROFILE_BASIC_ANIMATED_TEXTURE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-ADVANCED-REALTIME-SIMPLE:CAPS">GST_MPEG4_PROFILE_ADVANCED_REALTIME_SIMPLE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-ADVANCED-SCALABLE-TEXTURE:CAPS">GST_MPEG4_PROFILE_ADVANCED_SCALABLE_TEXTURE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-FINE-GRANULARITY-SCALABLE:CAPS">GST_MPEG4_PROFILE_FINE_GRANULARITY_SCALABLE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-PROFILE-ADVANCED-CODING-EFFICIENCY:CAPS">GST_MPEG4_PROFILE_ADVANCED_CODING_EFFICIENCY</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4Level" role="enum">
+<title>enum GstMpeg4Level</title>
+<indexterm zone="GstMpeg4Level"><primary>GstMpeg4Level</primary></indexterm>
+<para>Different levels as defined in:
+9- Profiles and levels</para>
+<para>It is computed using:
+Table G.1 — FLC table for profile_and_level_indication</para>
+<refsect3 id="GstMpeg4Level.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL0:CAPS">GST_MPEG4_LEVEL0</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL1:CAPS">GST_MPEG4_LEVEL1</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL2:CAPS">GST_MPEG4_LEVEL2</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL3:CAPS">GST_MPEG4_LEVEL3</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL3b">GST_MPEG4_LEVEL3b</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL4:CAPS">GST_MPEG4_LEVEL4</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL5:CAPS">GST_MPEG4_LEVEL5</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG4-LEVEL-RESERVED:CAPS">GST_MPEG4_LEVEL_RESERVED</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpeg4VisualObjectSequence" role="struct">
+<title>struct GstMpeg4VisualObjectSequence</title>
+<indexterm zone="GstMpeg4VisualObjectSequence"><primary>GstMpeg4VisualObjectSequence</primary></indexterm>
+<programlisting language="C">struct GstMpeg4VisualObjectSequence {
+  guint8 profile_and_level_indication;
+
+  /* Computed according to:
+   * Table G.1 — FLC table for profile_and_level_indication */
+  GstMpeg4Level level;
+  GstMpeg4Profile profile;
+};
+</programlisting>
+<para>The visual object sequence structure as defined in:
+6.2.2 Visual Object Sequence and Visual Object</para>
+</refsect2>
+<refsect2 id="GstMpeg4VisualObject" role="struct">
+<title>struct GstMpeg4VisualObject</title>
+<indexterm zone="GstMpeg4VisualObject"><primary>GstMpeg4VisualObject</primary></indexterm>
+<programlisting language="C">struct GstMpeg4VisualObject {
+  guint8 is_identifier;
+  /* If is_identifier */
+  guint8 verid;
+  guint8 priority;
+
+  GstMpeg4VisualObjectType type;
+};
+</programlisting>
+<para>The visual object structure as defined in:
+6.2.2 Visual Object Sequence and Visual Object</para>
+</refsect2>
+<refsect2 id="GstMpeg4VideoSignalType" role="struct">
+<title>struct GstMpeg4VideoSignalType</title>
+<indexterm zone="GstMpeg4VideoSignalType"><primary>GstMpeg4VideoSignalType</primary></indexterm>
+<programlisting language="C">struct GstMpeg4VideoSignalType {
+  guint8 type;
+
+  guint8 format;
+  guint8 range;
+  guint8 color_description;
+  guint8 color_primaries;
+  guint8 transfer_characteristics;
+  guint8 matrix_coefficients;
+};
+</programlisting>
+<para>The video signal type structure as defined in:
+6.2.2 Visual Object Sequence and Visual Object.</para>
+</refsect2>
+<refsect2 id="GstMpeg4VideoPlaneShortHdr" role="struct">
+<title>struct GstMpeg4VideoPlaneShortHdr</title>
+<indexterm zone="GstMpeg4VideoPlaneShortHdr"><primary>GstMpeg4VideoPlaneShortHdr</primary></indexterm>
+<programlisting language="C">struct GstMpeg4VideoPlaneShortHdr {
+  guint8 temporal_reference;
+  guint8 split_screen_indicator;
+  guint8 document_camera_indicator;
+  guint8 full_picture_freeze_release;
+  guint8 source_format;
+  guint8 picture_coding_type;
+  guint8 vop_quant;
+  guint8 pei;
+  guint8 psupp;
+
+  /*  Gob layer specific fields */
+  guint8 gob_header_empty;
+  guint8 gob_number;
+  guint8 gob_frame_id;
+  guint8 quant_scale;
+
+  /* Computed
+   * If all the values are set to 0, then it is reserved
+   * Table 6-25 -- Parameters Defined by source_format Field
+   */
+  guint16 vop_width;
+  guint16 vop_height;
+  guint16 num_macroblocks_in_gob;
+  guint8 num_gobs_in_vop;
+
+  /* The size in bits */
+  guint size;
+};
+</programlisting>
+<para>The video plane short header structure as defined in:
+6.2.5.2 Video Plane with Short Header</para>
+</refsect2>
+<refsect2 id="GstMpeg4VideoObjectLayer" role="struct">
+<title>struct GstMpeg4VideoObjectLayer</title>
+<indexterm zone="GstMpeg4VideoObjectLayer"><primary>GstMpeg4VideoObjectLayer</primary></indexterm>
+<programlisting language="C">struct GstMpeg4VideoObjectLayer {
+  guint8 random_accessible_vol;
+  guint8 video_object_type_indication;
+
+  guint8 is_object_layer_identifier;
+  /* if is_object_layer_identifier */
+  guint8 verid;
+  guint8 priority;
+
+  GstMpeg4AspectRatioInfo aspect_ratio_info;
+  guint8 par_width;
+  guint8 par_height;
+
+  guint8 control_parameters;
+  /* if control_parameters */
+  GstMpeg4ChromaFormat chroma_format;
+  guint8 low_delay;
+  guint8 vbv_parameters;
+  /* if vbv_parameters */
+  guint16 first_half_bitrate;
+  guint16 latter_half_bitrate;
+  guint16 first_half_vbv_buffer_size;
+  guint16 latter_half_vbv_buffer_size;
+  guint16 first_half_vbv_occupancy;
+  guint16 latter_half_vbv_occupancy;
+
+  /* Computed values */
+  guint32 bit_rate;
+  guint32 vbv_buffer_size;
+
+  GstMpeg4VideoObjectLayerShape shape;
+  /* if shape == GST_MPEG4_GRAYSCALE &amp;&amp; verid =! 1 */
+  guint8 shape_extension;
+
+  guint16 vop_time_increment_resolution;
+  guint8 vop_time_increment_bits;
+  guint8 fixed_vop_rate;
+  /* if fixed_vop_rate */
+  guint16 fixed_vop_time_increment;
+
+  guint16 width;
+  guint16 height;
+  guint8 interlaced;
+  guint8 obmc_disable;
+
+  GstMpeg4SpriteEnable sprite_enable;
+  /* if vol-&gt;sprite_enable == SPRITE_GMG or SPRITE_STATIC*/
+  /* if vol-&gt;sprite_enable != GST_MPEG4_SPRITE_GMG */
+  guint16 sprite_width;
+  guint16 sprite_height;
+  guint16 sprite_left_coordinate;
+  guint16 sprite_top_coordinate;
+
+  guint8 no_of_sprite_warping_points;
+  guint8 sprite_warping_accuracy;
+  guint8 sprite_brightness_change;
+  /* if vol-&gt;sprite_enable != GST_MPEG4_SPRITE_GMG */
+  guint8 low_latency_sprite_enable;
+
+  /* if shape != GST_MPEG4_RECTANGULAR */
+  guint8 sadct_disable;
+
+  guint8 not_8_bit;
+
+  /* if no_8_bit */
+  guint8 quant_precision;
+  guint8 bits_per_pixel;
+
+  /* if shape == GRAYSCALE */
+  guint8 no_gray_quant_update;
+  guint8 composition_method;
+  guint8 linear_composition;
+
+  guint8 quant_type;
+  /* if quant_type */
+  guint8 load_intra_quant_mat;
+  guint8 intra_quant_mat[64];
+  guint8 load_non_intra_quant_mat;
+  guint8 non_intra_quant_mat[64];
+
+  guint8 quarter_sample;
+  guint8 complexity_estimation_disable;
+  guint8 resync_marker_disable;
+  guint8 data_partitioned;
+  guint8 reversible_vlc;
+  guint8 newpred_enable;
+  guint8 reduced_resolution_vop_enable;
+  guint8 scalability;
+  guint8 enhancement_type;
+
+  GstMpeg4VideoPlaneShortHdr short_hdr;
+};
+</programlisting>
+<para>The video object layer structure as defined in:
+6.2.3 Video Object Layer</para>
+</refsect2>
+<refsect2 id="GstMpeg4SpriteTrajectory" role="struct">
+<title>struct GstMpeg4SpriteTrajectory</title>
+<indexterm zone="GstMpeg4SpriteTrajectory"><primary>GstMpeg4SpriteTrajectory</primary></indexterm>
+<programlisting language="C">struct GstMpeg4SpriteTrajectory {
+  guint16 vop_ref_points[63]; /* Defined as "du" in 6.2.5.4 */
+  guint16 sprite_ref_points[63]; /* Defined as "dv" in 6.2.5.4 */
+};
+</programlisting>
+<para>The sprite trajectory structure as defined in:
+7.8.4 Sprite reference point decoding and
+6.2.5.4 Sprite coding</para>
+</refsect2>
+<refsect2 id="GstMpeg4GroupOfVOP" role="struct">
+<title>struct GstMpeg4GroupOfVOP</title>
+<indexterm zone="GstMpeg4GroupOfVOP"><primary>GstMpeg4GroupOfVOP</primary></indexterm>
+<programlisting language="C">struct GstMpeg4GroupOfVOP {
+  guint8 hours;
+  guint8 minutes;
+  guint8 seconds;
+
+  guint8 closed;
+  guint8 broken_link;
+};
+</programlisting>
+<para>The group of video object plane structure as defined in:
+6.2.4 Group of Video Object Plane</para>
+</refsect2>
+<refsect2 id="GstMpeg4VideoObjectPlane" role="struct">
+<title>struct GstMpeg4VideoObjectPlane</title>
+<indexterm zone="GstMpeg4VideoObjectPlane"><primary>GstMpeg4VideoObjectPlane</primary></indexterm>
+<programlisting language="C">struct GstMpeg4VideoObjectPlane {
+  GstMpeg4VideoObjectCodingType coding_type;
+
+  guint8  modulo_time_base;
+  guint16 time_increment;
+
+  guint8  coded;
+  /* if newpred_enable */
+  guint16 id;
+  guint8  id_for_prediction_indication;
+  guint16 id_for_prediction;
+
+  guint16 width;
+  guint16 height;
+  guint16 horizontal_mc_spatial_ref;
+  guint16 vertical_mc_spatial_ref;
+
+  guint8  rounding_type;
+  /*if vol-&gt;shape != GST_MPEG4_RECTANGULAR */
+  guint8  background_composition;
+  guint8  change_conv_ratio_disable;
+  guint8  constant_alpha;
+  guint8  constant_alpha_value;
+  guint8  reduced_resolution;
+
+  guint8  intra_dc_vlc_thr;
+
+
+  guint8  top_field_first;
+  guint8  alternate_vertical_scan_flag;
+
+  guint16 quant;
+
+  guint8  fcode_forward;
+  guint8  fcode_backward;
+
+  guint8  shape_coding_type;
+  guint8  load_backward_shape;
+  guint8  ref_select_code;
+
+  /* Computed macroblock informations */
+  guint16 mb_height;
+  guint16 mb_width;
+  guint mb_num;
+
+  /* The size of the header */
+  guint    size;
+};
+</programlisting>
+<para>The Video object plane structure as defined in:
+6.2.5 Video Object Plane and Video Plane with Short Header</para>
+</refsect2>
+<refsect2 id="GstMpeg4Packet" role="struct">
+<title>struct GstMpeg4Packet</title>
+<indexterm zone="GstMpeg4Packet"><primary>GstMpeg4Packet</primary></indexterm>
+<programlisting language="C">struct GstMpeg4Packet {
+  const guint8     *data;
+  guint             offset;
+  gsize             size;
+  guint             marker_size;
+
+  GstMpeg4StartCode type;
+};
+</programlisting>
+<para>A structure that contains the type of a packet, its offset and its size</para>
+<refsect3 id="GstMpeg4Packet.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para>const&#160;<link linkend="guint8"><type>guint8</type></link>&#160;*<structfield id="GstMpeg4Packet.data">data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the data containing packet starting at <parameter>offset</parameter>
+</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpeg4Packet.offset">offset</structfield>;</para></entry>
+<entry role="struct_member_description"><para>offset of the start of the packet (without the 3 bytes startcode), but
+including the <link linkend="GstMpeg4StartCode"><type>GstMpeg4StartCode</type></link> byte.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gsize"><type>gsize</type></link>&#160;<structfield id="GstMpeg4Packet.size">size</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The size in bytes of the packet or <link linkend="G-MAXUINT:CAPS"><literal>G_MAXUINT</literal></link> if the end wasn't found.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpeg4Packet.marker-size">marker_size</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The size in bit of the resync marker.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpeg4StartCode"><type>GstMpeg4StartCode</type></link>&#160;<structfield id="GstMpeg4Packet.type">type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the type of the packet that start at <parameter>offset</parameter>
+</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpeg4VideoPacketHdr" role="struct">
+<title>struct GstMpeg4VideoPacketHdr</title>
+<indexterm zone="GstMpeg4VideoPacketHdr"><primary>GstMpeg4VideoPacketHdr</primary></indexterm>
+<programlisting language="C">struct GstMpeg4VideoPacketHdr {
+  guint8  header_extension_code;
+  guint16 macroblock_number;
+  guint16 quant_scale;
+  guint   size;
+};
+</programlisting>
+<para>The video packet header structure as defined in:
+6.2.5.2 Video Plane with Short Header</para>
+<refsect3 id="GstMpeg4VideoPacketHdr.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpeg4VideoPacketHdr.header-extension-code">header_extension_code</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpeg4VideoPacketHdr.macroblock-number">macroblock_number</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpeg4VideoPacketHdr.quant-scale">quant_scale</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpeg4VideoPacketHdr.size">size</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Size of the header in bit.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+
+</refentry>

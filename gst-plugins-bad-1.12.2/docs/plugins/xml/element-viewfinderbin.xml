@@ -1,0 +1,95 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-viewfinderbin">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-viewfinderbin.top_of_page" role="top_of_page">viewfinderbin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>viewfinderbin</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-viewfinderbin.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstElement"><type>GstElement</type></link> *</entry><entry role="property_name"><link linkend="GstViewfinderBin--video-sink">video-sink</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstViewfinderBin--disable-converters">disable-converters</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstViewfinderBin"/><refsect1 id="gst-plugins-bad-plugins-viewfinderbin.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstViewfinderBin-struct">GstViewfinderBin</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-viewfinderbin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstViewfinderBin
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-viewfinderbin.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstViewfinderBin implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-viewfinderbin.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-viewfinderbin-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-viewfinderbin.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-viewfinderbin.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstViewfinderBin-struct" role="struct">
+<title>struct GstViewfinderBin</title>
+<indexterm zone="GstViewfinderBin-struct"><primary>GstViewfinderBin</primary></indexterm>
+<programlisting language="C">struct GstViewfinderBin;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-viewfinderbin.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstViewfinderBin--video-sink" role="property"><title>The <literal>“video-sink”</literal> property</title>
+<indexterm zone="GstViewfinderBin--video-sink"><primary>GstViewfinderBin:video-sink</primary></indexterm>
+<programlisting>  “video-sink”               <link linkend="GstElement"><type>GstElement</type></link> *</programlisting>
+<para>the video output element to use (NULL = default).</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstViewfinderBin--disable-converters" role="property"><title>The <literal>“disable-converters”</literal> property</title>
+<indexterm zone="GstViewfinderBin--disable-converters"><primary>GstViewfinderBin:disable-converters</primary></indexterm>
+<programlisting>  “disable-converters”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If video converters should be disabled (must be set on NULL).</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

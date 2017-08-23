@@ -1,0 +1,83 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-watchdog">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-watchdog.top_of_page" role="top_of_page">watchdog</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>watchdog</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-watchdog.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstWatchdog--timeout">timeout</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstWatchdog"/><refsect1 id="gst-plugins-bad-plugins-watchdog.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstWatchdog-struct">GstWatchdog</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-watchdog.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> GstWatchdog
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-watchdog.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-watchdog-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-watchdog.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-watchdog.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstWatchdog-struct" role="struct">
+<title>struct GstWatchdog</title>
+<indexterm zone="GstWatchdog-struct"><primary>GstWatchdog</primary></indexterm>
+<programlisting language="C">struct GstWatchdog;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-watchdog.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstWatchdog--timeout" role="property"><title>The <literal>“timeout”</literal> property</title>
+<indexterm zone="GstWatchdog--timeout"><primary>GstWatchdog:timeout</primary></indexterm>
+<programlisting>  “timeout”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Timeout (in ms) after which an element error is sent to the bus if no buffers are received. 0 means disabled.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 1000</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

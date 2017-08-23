@@ -1,0 +1,119 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-netsim">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-netsim.top_of_page" role="top_of_page">netsim</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>netsim</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-netsim.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstNetSim--delay-probability">delay-probability</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstNetSim--drop-packets">drop-packets</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstNetSim--drop-probability">drop-probability</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstNetSim--duplicate-probability">duplicate-probability</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstNetSim--max-delay">max-delay</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstNetSim--min-delay">min-delay</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstNetSim"/><refsect1 id="gst-plugins-bad-plugins-netsim.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstNetSim-struct">GstNetSim</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-netsim.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstNetSim
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-netsim.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-netsim-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-netsim.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-netsim.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstNetSim-struct" role="struct">
+<title>struct GstNetSim</title>
+<indexterm zone="GstNetSim-struct"><primary>GstNetSim</primary></indexterm>
+<programlisting language="C">struct GstNetSim;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-netsim.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstNetSim--delay-probability" role="property"><title>The <literal>“delay-probability”</literal> property</title>
+<indexterm zone="GstNetSim--delay-probability"><primary>GstNetSim:delay-probability</primary></indexterm>
+<programlisting>  “delay-probability”        <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>The Probability a buffer is delayed.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstNetSim--drop-packets" role="property"><title>The <literal>“drop-packets”</literal> property</title>
+<indexterm zone="GstNetSim--drop-packets"><primary>GstNetSim:drop-packets</primary></indexterm>
+<programlisting>  “drop-packets”             <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Drop the next n packets.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstNetSim--drop-probability" role="property"><title>The <literal>“drop-probability”</literal> property</title>
+<indexterm zone="GstNetSim--drop-probability"><primary>GstNetSim:drop-probability</primary></indexterm>
+<programlisting>  “drop-probability”         <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>The Probability a buffer is dropped.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstNetSim--duplicate-probability" role="property"><title>The <literal>“duplicate-probability”</literal> property</title>
+<indexterm zone="GstNetSim--duplicate-probability"><primary>GstNetSim:duplicate-probability</primary></indexterm>
+<programlisting>  “duplicate-probability”    <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>The Probability a buffer is duplicated.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstNetSim--max-delay" role="property"><title>The <literal>“max-delay”</literal> property</title>
+<indexterm zone="GstNetSim--max-delay"><primary>GstNetSim:max-delay</primary></indexterm>
+<programlisting>  “max-delay”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The maximum delay in ms to apply to buffers.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 400</para>
+</refsect2>
+<refsect2 id="GstNetSim--min-delay" role="property"><title>The <literal>“min-delay”</literal> property</title>
+<indexterm zone="GstNetSim--min-delay"><primary>GstNetSim:min-delay</primary></indexterm>
+<programlisting>  “min-delay”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The minimum delay in ms to apply to buffers.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: 200</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

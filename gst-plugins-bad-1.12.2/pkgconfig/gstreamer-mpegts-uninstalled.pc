@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=@mpegtslibdir@
+includedir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+
+Name: GStreamer MPEG-TS, Uninstalled
+Description: GStreamer MPEG-TS support, uninstalled
+Requires: gstreamer-1.0 gstreamer-base-1.0
+Version: 1.12.2
+Libs: -L${libdir} -lgstmpegts-1.0
+Cflags: -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+

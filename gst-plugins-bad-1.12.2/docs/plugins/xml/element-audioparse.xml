@@ -1,0 +1,164 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-audioparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-audioparse.top_of_page" role="top_of_page">audioparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>audioparse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-audioparse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--channels">channels</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--depth">depth</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstAudioParseEndianness"><type>GstAudioParseEndianness</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--endianness">endianness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstAudioParseFormat"><type>GstAudioParseFormat</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--format">format</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--rate">rate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--signed">signed</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--width">width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GValueArray"><type>GValueArray</type></link> *</entry><entry role="property_name"><link linkend="GstAudioParse--channel-positions">channel-positions</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--interleaved">interleaved</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstAudioFormat"><type>GstAudioFormat</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--raw-format">raw-format</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAudioParse--use-sink-caps">use-sink-caps</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstAudioParse"/><refsect1 id="gst-plugins-bad-plugins-audioparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAudioParse-struct">GstAudioParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audioparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstAudioParse
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audioparse.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstAudioParse implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-audioparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Converts a byte stream into audio frames.</para>
+<para>This element is deprecated. Use <link linkend="GstRawAudioParse"><type>GstRawAudioParse</type></link> instead.</para>
+
+<include href="element-audioparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audioparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audioparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAudioParse-struct" role="struct">
+<title>struct GstAudioParse</title>
+<indexterm zone="GstAudioParse-struct"><primary>GstAudioParse</primary></indexterm>
+<programlisting language="C">struct GstAudioParse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-audioparse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstAudioParse--channels" role="property"><title>The <literal>“channels”</literal> property</title>
+<indexterm zone="GstAudioParse--channels"><primary>GstAudioParse:channels</primary></indexterm>
+<programlisting>  “channels”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of channels in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,64]</para>
+<para>Default value: 2</para>
+</refsect2>
+<refsect2 id="GstAudioParse--depth" role="property"><title>The <literal>“depth”</literal> property</title>
+<indexterm zone="GstAudioParse--depth"><primary>GstAudioParse:depth</primary></indexterm>
+<programlisting>  “depth”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Depth of audio samples in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstAudioParse--endianness" role="property"><title>The <literal>“endianness”</literal> property</title>
+<indexterm zone="GstAudioParse--endianness"><primary>GstAudioParse:endianness</primary></indexterm>
+<programlisting>  “endianness”               <link linkend="GstAudioParseEndianness"><type>GstAudioParseEndianness</type></link></programlisting>
+<para>Endianness of audio samples in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: Little Endian</para>
+</refsect2>
+<refsect2 id="GstAudioParse--format" role="property"><title>The <literal>“format”</literal> property</title>
+<indexterm zone="GstAudioParse--format"><primary>GstAudioParse:format</primary></indexterm>
+<programlisting>  “format”                   <link linkend="GstAudioParseFormat"><type>GstAudioParseFormat</type></link></programlisting>
+<para>Format of audio samples in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: Raw</para>
+</refsect2>
+<refsect2 id="GstAudioParse--rate" role="property"><title>The <literal>“rate”</literal> property</title>
+<indexterm zone="GstAudioParse--rate"><primary>GstAudioParse:rate</primary></indexterm>
+<programlisting>  “rate”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Rate of audio samples in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 44100</para>
+</refsect2>
+<refsect2 id="GstAudioParse--signed" role="property"><title>The <literal>“signed”</literal> property</title>
+<indexterm zone="GstAudioParse--signed"><primary>GstAudioParse:signed</primary></indexterm>
+<programlisting>  “signed”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sign of audio samples in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstAudioParse--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstAudioParse--width"><primary>GstAudioParse:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Width of audio samples in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstAudioParse--channel-positions" role="property"><title>The <literal>“channel-positions”</literal> property</title>
+<indexterm zone="GstAudioParse--channel-positions"><primary>GstAudioParse:channel-positions</primary></indexterm>
+<programlisting>  “channel-positions”        <link linkend="GValueArray"><type>GValueArray</type></link> *</programlisting>
+<para>Channel positions used on the output.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstAudioParse--interleaved" role="property"><title>The <literal>“interleaved”</literal> property</title>
+<indexterm zone="GstAudioParse--interleaved"><primary>GstAudioParse:interleaved</primary></indexterm>
+<programlisting>  “interleaved”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>True if audio has interleaved layout.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstAudioParse--raw-format" role="property"><title>The <literal>“raw-format”</literal> property</title>
+<indexterm zone="GstAudioParse--raw-format"><primary>GstAudioParse:raw-format</primary></indexterm>
+<programlisting>  “raw-format”               <link linkend="GstAudioFormat"><type>GstAudioFormat</type></link></programlisting>
+<para>Format of audio samples in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_AUDIO_FORMAT_S16LE</para>
+</refsect2>
+<refsect2 id="GstAudioParse--use-sink-caps" role="property"><title>The <literal>“use-sink-caps”</literal> property</title>
+<indexterm zone="GstAudioParse--use-sink-caps"><primary>GstAudioParse:use-sink-caps</primary></indexterm>
+<programlisting>  “use-sink-caps”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Use the sink caps for the format, only performing timestamping.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

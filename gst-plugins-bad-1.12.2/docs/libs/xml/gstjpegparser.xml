@@ -1,0 +1,720 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-jpegparser">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-jpegparser.top_of_page">GstJpegParser</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstJpegParser</refname>
+<refpurpose>Convenience library for JPEG bitstream parsing.</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-jpegparser.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-parse">gst_jpeg_parse</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-segment-parse-frame-header">gst_jpeg_segment_parse_frame_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-segment-parse-scan-header">gst_jpeg_segment_parse_scan_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-segment-parse-huffman-table">gst_jpeg_segment_parse_huffman_table</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-segment-parse-quantization-table">gst_jpeg_segment_parse_quantization_table</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-segment-parse-restart-interval">gst_jpeg_segment_parse_restart_interval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-get-default-quantization-tables">gst_jpeg_get_default_quantization_tables</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-jpeg-get-default-huffman-tables">gst_jpeg_get_default_huffman_tables</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-jpegparser.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MAX-FRAME-COMPONENTS:CAPS">GST_JPEG_MAX_FRAME_COMPONENTS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MAX-SCAN-COMPONENTS:CAPS">GST_JPEG_MAX_SCAN_COMPONENTS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MAX-QUANT-ELEMENTS:CAPS">GST_JPEG_MAX_QUANT_ELEMENTS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MARKER-SOF-MIN:CAPS">GST_JPEG_MARKER_SOF_MIN</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MARKER-SOF-MAX:CAPS">GST_JPEG_MARKER_SOF_MAX</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MARKER-APP-MIN:CAPS">GST_JPEG_MARKER_APP_MIN</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MARKER-APP-MAX:CAPS">GST_JPEG_MARKER_APP_MAX</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MARKER-RST-MIN:CAPS">GST_JPEG_MARKER_RST_MIN</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-JPEG-MARKER-RST-MAX:CAPS">GST_JPEG_MARKER_RST_MAX</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstJpegEntropyCodingMode">GstJpegEntropyCodingMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstJpegProfile">GstJpegProfile</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegSegment">GstJpegSegment</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegFrameHdr">GstJpegFrameHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegFrameComponent">GstJpegFrameComponent</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegScanHdr">GstJpegScanHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegScanComponent">GstJpegScanComponent</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegHuffmanTables">GstJpegHuffmanTables</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegHuffmanTable">GstJpegHuffmanTable</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJpegQuantTable">GstJpegQuantTable</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-jpegparser.includes"><title>Includes</title><synopsis>#include &lt;gst/codecparsers/gstjpegparser.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-jpegparser.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Provides useful functions for parsing JPEG images</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-jpegparser.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-jpeg-parse" role="function" condition="since:1.6">
+<title>gst_jpeg_parse&#160;()</title>
+<indexterm zone="gst-jpeg-parse" role="1.6"><primary>gst_jpeg_parse</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_jpeg_parse (<parameter><link linkend="GstJpegSegment"><type>GstJpegSegment</type></link> *seg</parameter>,
+                <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<para>Parses the JPEG bitstream contained in <parameter>data</parameter>
+, and returns the
+detected segment as a <link linkend="GstJpegSegment"><type>GstJpegSegment</type></link>.</para>
+<para>Note that a valid segment may be returned with a length that exceeds
+the available data. It is up to the caller to make sure there's enough
+data available when parsing the segment.</para>
+<refsect3 id="gst-jpeg-parse.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>segment</para></entry>
+<entry role="parameter_description"><para> pointer to a <link linkend="GstJpegSegment"><type>GstJpegSegment</type></link> structure to fill in. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset from which to start parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-jpeg-parse.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if a packet start code was found.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-jpeg-segment-parse-frame-header" role="function" condition="since:1.6">
+<title>gst_jpeg_segment_parse_frame_header&#160;()</title>
+<indexterm zone="gst-jpeg-segment-parse-frame-header" role="1.6"><primary>gst_jpeg_segment_parse_frame_header</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_jpeg_segment_parse_frame_header (<parameter>const <link linkend="GstJpegSegment"><type>GstJpegSegment</type></link> *segment</parameter>,
+                                     <parameter><link linkend="GstJpegFrameHdr"><type>GstJpegFrameHdr</type></link> *frame_hdr</parameter>);</programlisting>
+<para>Parses the <parameter>frame_hdr</parameter>
+ JPEG frame header structure members from <parameter>segment</parameter>
+.</para>
+<para>The caller must make sure there is enough data for the whole segment
+available.</para>
+<refsect3 id="gst-jpeg-segment-parse-frame-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>segment</para></entry>
+<entry role="parameter_description"><para>the JPEG segment</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>frame_hdr</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstJpegFrameHdr"><type>GstJpegFrameHdr</type></link> structure to fill in. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-jpeg-segment-parse-frame-header.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if the frame header was correctly parsed.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-jpeg-segment-parse-scan-header" role="function" condition="since:1.6">
+<title>gst_jpeg_segment_parse_scan_header&#160;()</title>
+<indexterm zone="gst-jpeg-segment-parse-scan-header" role="1.6"><primary>gst_jpeg_segment_parse_scan_header</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_jpeg_segment_parse_scan_header (<parameter>const <link linkend="GstJpegSegment"><type>GstJpegSegment</type></link> *segment</parameter>,
+                                    <parameter><link linkend="GstJpegScanHdr"><type>GstJpegScanHdr</type></link> *scan_hdr</parameter>);</programlisting>
+<para>Parses the <parameter>scan_hdr</parameter>
+ JPEG scan header structure members from <parameter>segment</parameter>
+.</para>
+<para>The caller must make sure there is enough data for the whole segment
+available.</para>
+<refsect3 id="gst-jpeg-segment-parse-scan-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>segment</para></entry>
+<entry role="parameter_description"><para>the JPEG segment</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>scan_hdr</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstJpegScanHdr"><type>GstJpegScanHdr</type></link> structure to fill in. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-jpeg-segment-parse-scan-header.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if the scan header was correctly parsed</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-jpeg-segment-parse-huffman-table" role="function" condition="since:1.6">
+<title>gst_jpeg_segment_parse_huffman_table&#160;()</title>
+<indexterm zone="gst-jpeg-segment-parse-huffman-table" role="1.6"><primary>gst_jpeg_segment_parse_huffman_table</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_jpeg_segment_parse_huffman_table (<parameter>const <link linkend="GstJpegSegment"><type>GstJpegSegment</type></link> *segment</parameter>,
+                                      <parameter><link linkend="GstJpegHuffmanTables"><type>GstJpegHuffmanTables</type></link> *huff_tables</parameter>);</programlisting>
+<para>Parses the JPEG Huffman table structure members from <parameter>segment</parameter>
+.</para>
+<para>The caller must make sure there is enough data for the whole segment
+available.</para>
+<para>Note: <parameter>huf_tables</parameter>
+ represents the complete set of possible Huffman
+tables. However, the parser will only write to the Huffman table
+specified by the table destination identifier (Th). While doing so,
+the <parameter>valid</parameter>
+ flag of the specified Huffman table will also be set to
+<link linkend="TRUE:CAPS"><literal>TRUE</literal></link>;</para>
+<refsect3 id="gst-jpeg-segment-parse-huffman-table.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>segment</para></entry>
+<entry role="parameter_description"><para>the JPEG segment</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>huff_tables</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstJpegHuffmanTables"><type>GstJpegHuffmanTables</type></link> structure to fill in. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-jpeg-segment-parse-huffman-table.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if the Huffman table was correctly parsed.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-jpeg-segment-parse-quantization-table" role="function" condition="since:1.6">
+<title>gst_jpeg_segment_parse_quantization_table&#160;()</title>
+<indexterm zone="gst-jpeg-segment-parse-quantization-table" role="1.6"><primary>gst_jpeg_segment_parse_quantization_table</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_jpeg_segment_parse_quantization_table
+                               (<parameter>const <link linkend="GstJpegSegment"><type>GstJpegSegment</type></link> *segment</parameter>,
+                                <parameter><link linkend="GstJpegQuantTables"><type>GstJpegQuantTables</type></link> *quant_tables</parameter>);</programlisting>
+<para>Parses the JPEG quantization table structure members from <parameter>segment</parameter>
+.</para>
+<para>The caller must make sure there is enough data for the whole segment
+available.</para>
+<para>Note: <parameter>quant_tables</parameter>
+ represents the complete set of possible
+quantization tables. However, the parser will only write to the
+quantization table specified by the table destination identifier
+(Tq). While doing so, the <parameter>valid</parameter>
+ flag of the specified quantization
+table will also be set to <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>.</para>
+<refsect3 id="gst-jpeg-segment-parse-quantization-table.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>segment</para></entry>
+<entry role="parameter_description"><para>the JPEG segment</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>quant_tables</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstJpegQuantTables"><type>GstJpegQuantTables</type></link> structure to fill in. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-jpeg-segment-parse-quantization-table.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if the quantization table was correctly parsed.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-jpeg-segment-parse-restart-interval" role="function" condition="since:1.6">
+<title>gst_jpeg_segment_parse_restart_interval&#160;()</title>
+<indexterm zone="gst-jpeg-segment-parse-restart-interval" role="1.6"><primary>gst_jpeg_segment_parse_restart_interval</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_jpeg_segment_parse_restart_interval
+                               (<parameter>const <link linkend="GstJpegSegment"><type>GstJpegSegment</type></link> *segment</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> *interval</parameter>);</programlisting>
+<para>The caller must make sure there is enough data for the whole segment
+available.</para>
+<refsect3 id="gst-jpeg-segment-parse-restart-interval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>segment</para></entry>
+<entry role="parameter_description"><para>the JPEG segment</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>interval</para></entry>
+<entry role="parameter_description"><para> The parsed restart interval value. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-jpeg-segment-parse-restart-interval.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if the restart interval value was correctly parsed.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-jpeg-get-default-quantization-tables" role="function">
+<title>gst_jpeg_get_default_quantization_tables&#160;()</title>
+<indexterm zone="gst-jpeg-get-default-quantization-tables"><primary>gst_jpeg_get_default_quantization_tables</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_jpeg_get_default_quantization_tables
+                               (<parameter><link linkend="GstJpegQuantTables"><type>GstJpegQuantTables</type></link> *quant_tables</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-jpeg-get-default-huffman-tables" role="function" condition="since:1.6">
+<title>gst_jpeg_get_default_huffman_tables&#160;()</title>
+<indexterm zone="gst-jpeg-get-default-huffman-tables" role="1.6"><primary>gst_jpeg_get_default_huffman_tables</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_jpeg_get_default_huffman_tables (<parameter><link linkend="GstJpegHuffmanTables"><type>GstJpegHuffmanTables</type></link> *huff_tables</parameter>);</programlisting>
+<para>Fills in <parameter>huf_tables</parameter>
+ with the default AC/DC Huffman tables, as
+specified by the JPEG standard.</para>
+<refsect3 id="gst-jpeg-get-default-huffman-tables.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>huf_tables</para></entry>
+<entry role="parameter_description"><para> The default DC/AC Huffman tables to fill in. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-jpegparser.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GST-JPEG-MAX-FRAME-COMPONENTS:CAPS" role="macro" condition="since:1.6">
+<title>GST_JPEG_MAX_FRAME_COMPONENTS</title>
+<indexterm zone="GST-JPEG-MAX-FRAME-COMPONENTS:CAPS" role="1.6"><primary>GST_JPEG_MAX_FRAME_COMPONENTS</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MAX_FRAME_COMPONENTS   256
+</programlisting>
+<para>Maximum number of image components in a frame (Nf).</para>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GST-JPEG-MAX-SCAN-COMPONENTS:CAPS" role="macro" condition="since:1.6">
+<title>GST_JPEG_MAX_SCAN_COMPONENTS</title>
+<indexterm zone="GST-JPEG-MAX-SCAN-COMPONENTS:CAPS" role="1.6"><primary>GST_JPEG_MAX_SCAN_COMPONENTS</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MAX_SCAN_COMPONENTS    4
+</programlisting>
+<para>Maximum number of image components in a scan (Ns).</para>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GST-JPEG-MAX-QUANT-ELEMENTS:CAPS" role="macro" condition="since:1.6">
+<title>GST_JPEG_MAX_QUANT_ELEMENTS</title>
+<indexterm zone="GST-JPEG-MAX-QUANT-ELEMENTS:CAPS" role="1.6"><primary>GST_JPEG_MAX_QUANT_ELEMENTS</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MAX_QUANT_ELEMENTS     64
+</programlisting>
+<para>Number of elements in the quantization table.</para>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GST-JPEG-MARKER-SOF-MIN:CAPS" role="macro">
+<title>GST_JPEG_MARKER_SOF_MIN</title>
+<indexterm zone="GST-JPEG-MARKER-SOF-MIN:CAPS"><primary>GST_JPEG_MARKER_SOF_MIN</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MARKER_SOF_MIN GST_JPEG_MARKER_SOF0
+</programlisting>
+</refsect2>
+<refsect2 id="GST-JPEG-MARKER-SOF-MAX:CAPS" role="macro">
+<title>GST_JPEG_MARKER_SOF_MAX</title>
+<indexterm zone="GST-JPEG-MARKER-SOF-MAX:CAPS"><primary>GST_JPEG_MARKER_SOF_MAX</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MARKER_SOF_MAX GST_JPEG_MARKER_SOF15
+</programlisting>
+</refsect2>
+<refsect2 id="GST-JPEG-MARKER-APP-MIN:CAPS" role="macro">
+<title>GST_JPEG_MARKER_APP_MIN</title>
+<indexterm zone="GST-JPEG-MARKER-APP-MIN:CAPS"><primary>GST_JPEG_MARKER_APP_MIN</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MARKER_APP_MIN GST_JPEG_MARKER_APP0
+</programlisting>
+</refsect2>
+<refsect2 id="GST-JPEG-MARKER-APP-MAX:CAPS" role="macro">
+<title>GST_JPEG_MARKER_APP_MAX</title>
+<indexterm zone="GST-JPEG-MARKER-APP-MAX:CAPS"><primary>GST_JPEG_MARKER_APP_MAX</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MARKER_APP_MAX GST_JPEG_MARKER_APP15
+</programlisting>
+</refsect2>
+<refsect2 id="GST-JPEG-MARKER-RST-MIN:CAPS" role="macro">
+<title>GST_JPEG_MARKER_RST_MIN</title>
+<indexterm zone="GST-JPEG-MARKER-RST-MIN:CAPS"><primary>GST_JPEG_MARKER_RST_MIN</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MARKER_RST_MIN GST_JPEG_MARKER_RST0
+</programlisting>
+</refsect2>
+<refsect2 id="GST-JPEG-MARKER-RST-MAX:CAPS" role="macro">
+<title>GST_JPEG_MARKER_RST_MAX</title>
+<indexterm zone="GST-JPEG-MARKER-RST-MAX:CAPS"><primary>GST_JPEG_MARKER_RST_MAX</primary></indexterm>
+<programlisting language="C">#define GST_JPEG_MARKER_RST_MAX GST_JPEG_MARKER_RST7
+</programlisting>
+</refsect2>
+<refsect2 id="GstJpegEntropyCodingMode" role="enum" condition="since:1.6">
+<title>enum GstJpegEntropyCodingMode</title>
+<indexterm zone="GstJpegEntropyCodingMode" role="1.6"><primary>GstJpegEntropyCodingMode</primary></indexterm>
+<para>JPEG entropy coding mode.</para>
+<refsect3 id="GstJpegEntropyCodingMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-JPEG-ENTROPY-CODING-HUFFMAN:CAPS">GST_JPEG_ENTROPY_CODING_HUFFMAN</para></entry>
+<entry role="enum_member_description"><para>Huffman coding</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-JPEG-ENTROPY-CODING-ARITHMETIC:CAPS">GST_JPEG_ENTROPY_CODING_ARITHMETIC</para></entry>
+<entry role="enum_member_description"><para>arithmetic coding</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegProfile" role="enum" condition="since:1.6">
+<title>enum GstJpegProfile</title>
+<indexterm zone="GstJpegProfile" role="1.6"><primary>GstJpegProfile</primary></indexterm>
+<para>JPEG encoding processes.</para>
+<refsect3 id="GstJpegProfile.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-JPEG-PROFILE-BASELINE:CAPS">GST_JPEG_PROFILE_BASELINE</para></entry>
+<entry role="enum_member_description"><para>Baseline DCT</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-JPEG-PROFILE-EXTENDED:CAPS">GST_JPEG_PROFILE_EXTENDED</para></entry>
+<entry role="enum_member_description"><para>Extended sequential DCT</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-JPEG-PROFILE-PROGRESSIVE:CAPS">GST_JPEG_PROFILE_PROGRESSIVE</para></entry>
+<entry role="enum_member_description"><para>Progressive DCT</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-JPEG-PROFILE-LOSSLESS:CAPS">GST_JPEG_PROFILE_LOSSLESS</para></entry>
+<entry role="enum_member_description"><para>Lossless (sequential)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegSegment" role="struct" condition="since:1.6">
+<title>struct GstJpegSegment</title>
+<indexterm zone="GstJpegSegment" role="1.6"><primary>GstJpegSegment</primary></indexterm>
+<programlisting language="C">struct GstJpegSegment {
+  GstJpegMarker marker;
+  const guint8 *data;
+  guint offset;
+  gssize size;
+};
+</programlisting>
+<para>A structure that contains the type of a segment, its offset and its size.</para>
+<refsect3 id="GstJpegSegment.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstJpegMarker"><type>GstJpegMarker</type></link>&#160;<structfield id="GstJpegSegment.marker">marker</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The type of the segment that starts at <parameter>offset</parameter>
+</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para>const&#160;<link linkend="guint8"><type>guint8</type></link>&#160;*<structfield id="GstJpegSegment.data">data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the data containing the jpeg segment starting at <parameter>offset</parameter>
+</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstJpegSegment.offset">offset</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The offset to the segment start in bytes. This is the
+exact start of the segment, no marker code included</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gssize"><type>gssize</type></link>&#160;<structfield id="GstJpegSegment.size">size</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The size of the segment in bytes, or -1 if the end was not
+found. It is the exact size of the segment, without the sync byte and
+marker code but including any length bytes.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegFrameHdr" role="struct" condition="since:1.6">
+<title>struct GstJpegFrameHdr</title>
+<indexterm zone="GstJpegFrameHdr" role="1.6"><primary>GstJpegFrameHdr</primary></indexterm>
+<programlisting language="C">struct GstJpegFrameHdr {
+  guint8 sample_precision;              /* 2 .. 16      */
+  guint16 width;                        /* 1 .. 65535   */
+  guint16 height;                       /* 0 .. 65535   */
+  guint8 num_components;                /* 1 .. 255     */
+  GstJpegFrameComponent components[GST_JPEG_MAX_FRAME_COMPONENTS];
+};
+</programlisting>
+<para>Frame header.</para>
+<refsect3 id="GstJpegFrameHdr.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegFrameHdr.sample-precision">sample_precision</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Sample precision (P)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstJpegFrameHdr.width">width</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Number of samples per line (X)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstJpegFrameHdr.height">height</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Number of lines (Y)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegFrameHdr.num-components">num_components</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Number of image components in frame (Nf)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstJpegFrameComponent"><type>GstJpegFrameComponent</type></link>&#160;<structfield id="GstJpegFrameHdr.components">components</structfield>[GST_JPEG_MAX_FRAME_COMPONENTS];</para></entry>
+<entry role="struct_member_description"><para>Image components</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegFrameComponent" role="struct" condition="since:1.6">
+<title>struct GstJpegFrameComponent</title>
+<indexterm zone="GstJpegFrameComponent" role="1.6"><primary>GstJpegFrameComponent</primary></indexterm>
+<programlisting language="C">struct GstJpegFrameComponent {
+  guint8 identifier;                    /* 0 .. 255     */
+  guint8 horizontal_factor;             /* 1 .. 4       */
+  guint8 vertical_factor;               /* 1 .. 4       */
+  guint8 quant_table_selector;          /* 0 .. 3       */
+};
+</programlisting>
+<para>Component-specification parameters.</para>
+<refsect3 id="GstJpegFrameComponent.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegFrameComponent.identifier">identifier</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Component identifier (Ci)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegFrameComponent.horizontal-factor">horizontal_factor</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Horizontal sampling factor (Hi)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegFrameComponent.vertical-factor">vertical_factor</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Vertical sampling factor (Vi)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegFrameComponent.quant-table-selector">quant_table_selector</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Quantization table destination selector (Tqi)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegScanHdr" role="struct" condition="since:1.6">
+<title>struct GstJpegScanHdr</title>
+<indexterm zone="GstJpegScanHdr" role="1.6"><primary>GstJpegScanHdr</primary></indexterm>
+<programlisting language="C">struct GstJpegScanHdr {
+  guint8 num_components;                /* 1 .. 4       */
+  GstJpegScanComponent components[GST_JPEG_MAX_SCAN_COMPONENTS];
+};
+</programlisting>
+<para>Scan header.</para>
+<refsect3 id="GstJpegScanHdr.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegScanHdr.num-components">num_components</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Number of image components in scan (Ns)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstJpegScanComponent"><type>GstJpegScanComponent</type></link>&#160;<structfield id="GstJpegScanHdr.components">components</structfield>[GST_JPEG_MAX_SCAN_COMPONENTS];</para></entry>
+<entry role="struct_member_description"><para>Image components</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegScanComponent" role="struct" condition="since:1.6">
+<title>struct GstJpegScanComponent</title>
+<indexterm zone="GstJpegScanComponent" role="1.6"><primary>GstJpegScanComponent</primary></indexterm>
+<programlisting language="C">struct GstJpegScanComponent {
+    guint8 component_selector;          /* 0 .. 255     */
+    guint8 dc_selector;                 /* 0 .. 3       */
+    guint8 ac_selector;                 /* 0 .. 3       */
+};
+</programlisting>
+<para>Component-specification parameters.</para>
+<refsect3 id="GstJpegScanComponent.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegScanComponent.component-selector">component_selector</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Scan component selector (Csj)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegScanComponent.dc-selector">dc_selector</structfield>;</para></entry>
+<entry role="struct_member_description"><para>DC entropy coding table destination selector (Tdj)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegScanComponent.ac-selector">ac_selector</structfield>;</para></entry>
+<entry role="struct_member_description"><para>AC entropy coding table destination selector (Taj)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegHuffmanTables" role="struct" condition="since:1.6">
+<title>struct GstJpegHuffmanTables</title>
+<indexterm zone="GstJpegHuffmanTables" role="1.6"><primary>GstJpegHuffmanTables</primary></indexterm>
+<programlisting language="C">struct GstJpegHuffmanTables {
+  GstJpegHuffmanTable dc_tables[GST_JPEG_MAX_SCAN_COMPONENTS];
+  GstJpegHuffmanTable ac_tables[GST_JPEG_MAX_SCAN_COMPONENTS];
+};
+</programlisting>
+<para>Helper data structure that holds all AC/DC Huffman tables used to
+decode an image.</para>
+<refsect3 id="GstJpegHuffmanTables.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstJpegHuffmanTable"><type>GstJpegHuffmanTable</type></link>&#160;<structfield id="GstJpegHuffmanTables.dc-tables">dc_tables</structfield>[GST_JPEG_MAX_SCAN_COMPONENTS];</para></entry>
+<entry role="struct_member_description"><para>DC Huffman tables</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstJpegHuffmanTable"><type>GstJpegHuffmanTable</type></link>&#160;<structfield id="GstJpegHuffmanTables.ac-tables">ac_tables</structfield>[GST_JPEG_MAX_SCAN_COMPONENTS];</para></entry>
+<entry role="struct_member_description"><para>AC Huffman tables</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegHuffmanTable" role="struct" condition="since:1.6">
+<title>struct GstJpegHuffmanTable</title>
+<indexterm zone="GstJpegHuffmanTable" role="1.6"><primary>GstJpegHuffmanTable</primary></indexterm>
+<programlisting language="C">struct GstJpegHuffmanTable {
+  guint8 huf_bits[16];
+  guint8 huf_values[256];
+  gboolean valid;
+};
+</programlisting>
+<para>Huffman table.</para>
+<refsect3 id="GstJpegHuffmanTable.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegHuffmanTable.huf-bits">huf_bits</structfield>[16];</para></entry>
+<entry role="struct_member_description"><para>Number of Huffman codes of length i + 1 (Li)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegHuffmanTable.huf-values">huf_values</structfield>[256];</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstJpegHuffmanTable.valid">valid</structfield>;</para></entry>
+<entry role="struct_member_description"><para>If the Huffman table is valid, which means it has already
+been parsed</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="GstJpegQuantTable" role="struct" condition="since:1.6">
+<title>struct GstJpegQuantTable</title>
+<indexterm zone="GstJpegQuantTable" role="1.6"><primary>GstJpegQuantTable</primary></indexterm>
+<programlisting language="C">struct GstJpegQuantTable {
+  guint8 quant_precision;
+  guint16 quant_table[GST_JPEG_MAX_QUANT_ELEMENTS];
+  gboolean valid;
+};
+</programlisting>
+<para>Quantization table.</para>
+<refsect3 id="GstJpegQuantTable.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstJpegQuantTable.quant-precision">quant_precision</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Quantization table element precision (Pq)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstJpegQuantTable.quant-table">quant_table</structfield>[GST_JPEG_MAX_QUANT_ELEMENTS];</para></entry>
+<entry role="struct_member_description"><para>Quantization table elements (Qk)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gboolean"><type>gboolean</type></link>&#160;<structfield id="GstJpegQuantTable.valid">valid</structfield>;</para></entry>
+<entry role="struct_member_description"><para>If the quantization table is valid, which means it has
+already been parsed</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

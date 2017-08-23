@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<!DOCTYPE screen PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<screen>
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstAllocator">GstAllocator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLBufferAllocator">GstGLBufferAllocator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLMemoryAllocator">GstGLMemoryAllocator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLMemoryPBOAllocator">GstGLMemoryPBOAllocator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLRenderbufferAllocator">GstGLRenderbufferAllocator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPad">GstPad</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAggregatorPad">GstAggregatorPad</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstVideoAggregatorPad">GstVideoAggregatorPad</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstElement">GstElement</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstBin">GstBin</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstInsertBin">GstInsertBin</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstAggregator">GstAggregator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstVideoAggregator">GstVideoAggregator</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>           <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstBufferPool">GstBufferPool</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBufferPool">GstGLBufferPool</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLColorConvert">GstGLColorConvert</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLContext">GstGLContext</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLDisplay">GstGLDisplay</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLFramebuffer">GstGLFramebuffer</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLShader">GstGLShader</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLSLStage">GstGLSLStage</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLUpload">GstGLUpload</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLViewConvert">GstGLViewConvert</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLWindow">GstGLWindow</link>
+    <phrase role="lineart">&#9474;</phrase>       <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPlayer">GstPlayer</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerStreamInfo">GstPlayerStreamInfo</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerAudioInfo">GstPlayerAudioInfo</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerSubtitleInfo">GstPlayerSubtitleInfo</link>
+    <phrase role="lineart">&#9474;</phrase>   <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPlayerVideoInfo">GstPlayerVideoInfo</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerMediaInfo">GstPlayerMediaInfo</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPlayerVideoOverlayVideoRenderer">GstPlayerVideoOverlayVideoRenderer</link>
+    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerSignalDispatcher">GstPlayerSignalDispatcher</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPlayerVideoRenderer">GstPlayerVideoRenderer</link>
+    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsSection">GstMpegtsSection</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsDescriptor">GstMpegtsDescriptor</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLAllocationParams">GstGLAllocationParams</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLBufferAllocationParams">GstGLBufferAllocationParams</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLVideoAllocationParams">GstGLVideoAllocationParams</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPlayerVisualization">GstPlayerVisualization</link>
+    <link linkend="GEnum">GEnum</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsSectionType">GstMpegtsSectionType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsSectionTableID">GstMpegtsSectionTableID</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsCableOuterFECScheme">GstMpegtsCableOuterFECScheme</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsModulationType">GstMpegtsModulationType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsSatellitePolarizationType">GstMpegtsSatellitePolarizationType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsSatelliteRolloff">GstMpegtsSatelliteRolloff</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsDVBCodeRate">GstMpegtsDVBCodeRate</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsDescriptorType">GstMpegtsDescriptorType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsIso639AudioType">GstMpegtsIso639AudioType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsRunningStatus">GstMpegtsRunningStatus</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsDVBServiceType">GstMpegtsDVBServiceType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstMpegtsStreamType">GstMpegtsStreamType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerColorBalanceType">GstPlayerColorBalanceType</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerError">GstPlayerError</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstPlayerState">GstPlayerState</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLStereoDownmix">GstGLStereoDownmix</link>
+</screen>

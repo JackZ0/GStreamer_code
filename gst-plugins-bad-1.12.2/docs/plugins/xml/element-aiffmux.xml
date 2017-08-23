@@ -1,0 +1,59 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-aiffmux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-aiffmux.top_of_page" role="top_of_page">aiffmux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>aiffmux</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstAiffMux"/><refsect1 id="gst-plugins-bad-plugins-aiffmux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAiffMux-struct">GstAiffMux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-aiffmux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstAiffMux
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-aiffmux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Format an audio stream into the Audio Interchange File Format</para>
+
+<include href="element-aiffmux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-aiffmux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-aiffmux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAiffMux-struct" role="struct">
+<title>struct GstAiffMux</title>
+<indexterm zone="GstAiffMux-struct"><primary>GstAiffMux</primary></indexterm>
+<programlisting language="C">struct GstAiffMux;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -38,29 +38,15 @@ a similar fashion to compositor and videomixer. See the compositor plugin
 for documentation about the <span class="type">GstGLVideoMixerPad</span> properties.</p>
 <div class="refsect3">
 <a name="id-1.2.85.3.3"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2
-3
-4
-5
-6
-7</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span>  glvideomixer name<span class="gtkdoc opt">=</span>m <span class="gtkdoc opt">!</span> glimagesink \
-    videotestsrc <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> format<span class="gtkdoc opt">=</span>YUY2 <span class="gtkdoc opt">!</span> glupload <span class="gtkdoc opt">!</span> glcolorconvert <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span> \
-    videotestsrc pattern<span class="gtkdoc opt">=</span><span class="number">12</span> <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> format<span class="gtkdoc opt">=</span>I420<span class="gtkdoc opt">,</span> framerate<span class="gtkdoc opt">=</span><span class="number">5</span><span class="gtkdoc opt">/</span><span class="number">1</span><span class="gtkdoc opt">,</span> width<span class="gtkdoc opt">=</span><span class="number">100</span><span class="gtkdoc opt">,</span> height<span class="gtkdoc opt">=</span><span class="number">200</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> \
-    glupload <span class="gtkdoc opt">!</span> glcolorconvert <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span> \
-    videotestsrc <span class="gtkdoc opt">!</span> glupload <span class="gtkdoc opt">!</span> gleffects effect<span class="gtkdoc opt">=</span><span class="number">2</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span>  \
-    videotestsrc <span class="gtkdoc opt">!</span> glupload <span class="gtkdoc opt">!</span> glfiltercube <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span> \
-    videotestsrc <span class="gtkdoc opt">!</span> glupload <span class="gtkdoc opt">!</span> gleffects effect<span class="gtkdoc opt">=</span><span class="number">6</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> m<span class="gtkdoc opt">.</span>gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span>  glvideomixer name<span class="gtkdoc opt">=</span>m <span class="gtkdoc opt">!</span> glimagesink \</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0  glvideomixer name=m ! glimagesink \
+    videotestsrc ! video/x-raw, format=YUY2 ! glupload ! glcolorconvert ! m. \
+    videotestsrc pattern=12 ! video/x-raw, format=I420, framerate=5/1, width=100, height=200 ! queue ! \
+    glupload ! glcolorconvert ! m. \
+    videotestsrc ! glupload ! gleffects effect=2 ! queue ! m.  \
+    videotestsrc ! glupload ! glfiltercube ! queue ! m. \
+    videotestsrc ! glupload ! gleffects effect=6 ! queue ! m.gst-launch-1.0  glvideomixer name=m ! glimagesink \
+</pre></div>
 <p></p>
 </div>
 <div class="refsynopsisdiv">

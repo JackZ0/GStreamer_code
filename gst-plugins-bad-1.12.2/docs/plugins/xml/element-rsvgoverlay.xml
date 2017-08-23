@@ -1,0 +1,188 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-rsvgoverlay">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-rsvgoverlay.top_of_page" role="top_of_page">rsvgoverlay</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>rsvgoverlay</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-rsvgoverlay.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstRsvgOverlay--data">data</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--fit-to-frame">fit-to-frame</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstRsvgOverlay--location">location</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--x">x</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--y">y</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--height">height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--height-relative">height-relative</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--width">width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--width-relative">width-relative</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--x-relative">x-relative</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstRsvgOverlay--y-relative">y-relative</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstRsvgOverlay"/><refsect1 id="gst-plugins-bad-plugins-rsvgoverlay.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstRsvgOverlay-struct">GstRsvgOverlay</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rsvgoverlay.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstRsvgOverlay
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-rsvgoverlay.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This elements overlays SVG graphics over the video. SVG data can
+either be specified through properties, or fed through the
+data-sink pad.</para>
+<para>Position and dimension of the SVG graphics can be achieved by
+specifying appropriate dimensions in the SVG file itself, but
+shortcuts are provided by the element to specify x/y position and
+width/height dimension, both in absolute form (pixels) and in
+relative form (percentage of video dimension).</para>
+<para>For any measure (x/y/width/height), the absolute value (in pixels)
+takes precedence over the relative one if both are
+specified. Absolute values must be set to 0 to disable them.</para>
+<para>If all parameters are 0, the image is displayed without rescaling
+at (0, 0) position.</para>
+<para>The fit-to-frame property is a shortcut for displaying the SVG
+overlay at (0, 0) position filling the whole screen. It modifies
+the values of the x/y/width/height attributes, by setting
+height-/width-relative to 1.0. and all other attributes to 0.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! videoconvert ! rsvgoverlay location=foo.svg ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> specifies the SVG location through the filename property.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! videoconvert ! rsvgoverlay name=overlay ! videoconvert ! autovideosink filesrc location=foo.svg ! image/svg ! overlay.data_sink
+]]></programlisting></informalexample>
+<para> does the same by feeding data through the data_sink pad. You can also specify the SVG data itself as parameter:</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! videoconvert ! rsvgoverlay data='<svg viewBox="0 0 800 600"><image x="80%" y="80%" width="10%" height="10%" xlink:href="foo.jpg" /></svg>' ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-rsvgoverlay-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rsvgoverlay.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rsvgoverlay.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstRsvgOverlay-struct" role="struct">
+<title>struct GstRsvgOverlay</title>
+<indexterm zone="GstRsvgOverlay-struct"><primary>GstRsvgOverlay</primary></indexterm>
+<programlisting language="C">struct GstRsvgOverlay;</programlisting>
+<para>Opaque object data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rsvgoverlay.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstRsvgOverlay--data" role="property"><title>The <literal>“data”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--data"><primary>GstRsvgOverlay:data</primary></indexterm>
+<programlisting>  “data”                     <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>SVG data.</para><para>Flags: Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--fit-to-frame" role="property"><title>The <literal>“fit-to-frame”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--fit-to-frame"><primary>GstRsvgOverlay:fit-to-frame</primary></indexterm>
+<programlisting>  “fit-to-frame”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Fit the SVG to fill the whole frame.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--location" role="property"><title>The <literal>“location”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--location"><primary>GstRsvgOverlay:location</primary></indexterm>
+<programlisting>  “location”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>SVG file location.</para><para>Flags: Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--x" role="property"><title>The <literal>“x”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--x"><primary>GstRsvgOverlay:x</primary></indexterm>
+<programlisting>  “x”                        <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Specify an x offset.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= -2147483647</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--y" role="property"><title>The <literal>“y”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--y"><primary>GstRsvgOverlay:y</primary></indexterm>
+<programlisting>  “y”                        <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Specify a y offset.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= -2147483647</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--height" role="property"><title>The <literal>“height”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--height"><primary>GstRsvgOverlay:height</primary></indexterm>
+<programlisting>  “height”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Specify a height in pixels.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= -2147483647</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--height-relative" role="property"><title>The <literal>“height-relative”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--height-relative"><primary>GstRsvgOverlay:height-relative</primary></indexterm>
+<programlisting>  “height-relative”          <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Specify a height relative to the display size.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--width"><primary>GstRsvgOverlay:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Specify a width in pixels.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= -2147483647</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--width-relative" role="property"><title>The <literal>“width-relative”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--width-relative"><primary>GstRsvgOverlay:width-relative</primary></indexterm>
+<programlisting>  “width-relative”           <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Specify a width relative to the display size.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--x-relative" role="property"><title>The <literal>“x-relative”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--x-relative"><primary>GstRsvgOverlay:x-relative</primary></indexterm>
+<programlisting>  “x-relative”               <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Specify an x offset relative to the display size.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRsvgOverlay--y-relative" role="property"><title>The <literal>“y-relative”</literal> property</title>
+<indexterm zone="GstRsvgOverlay--y-relative"><primary>GstRsvgOverlay:y-relative</primary></indexterm>
+<programlisting>  “y-relative”               <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Specify a y offset relative to the display size.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

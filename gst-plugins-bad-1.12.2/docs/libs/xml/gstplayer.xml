@@ -1,0 +1,1900 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstPlayer">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstPlayer.top_of_page">GstPlayer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstPlayer</refname>
+<refpurpose>Player</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstPlayer.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstPlayer"><returnvalue>GstPlayer</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-new">gst_player_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-play">gst_player_play</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-pause">gst_player_pause</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-stop">gst_player_stop</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-seek">gst_player_seek</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-uri">gst_player_set_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-uri">gst_player_get_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstClockTime"><returnvalue>GstClockTime</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-duration">gst_player_get_duration</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstClockTime"><returnvalue>GstClockTime</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-position">gst_player_get_position</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-volume">gst_player_set_volume</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-mute">gst_player_set_mute</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-volume">gst_player_get_volume</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-mute">gst_player_get_mute</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-pipeline">gst_player_get_pipeline</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-config">gst_player_set_config</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstStructure"><returnvalue>GstStructure</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-config">gst_player_get_config</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-state-get-name">gst_player_state_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-error-get-name">gst_player_error_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPlayerMediaInfo"><returnvalue>GstPlayerMediaInfo</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-media-info">gst_player_get_media_info</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-audio-track">gst_player_set_audio_track</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-video-track">gst_player_set_video_track</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-subtitle-track">gst_player_set_subtitle_track</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPlayerAudioInfo"><returnvalue>GstPlayerAudioInfo</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-current-audio-track">gst_player_get_current_audio_track</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPlayerVideoInfo"><returnvalue>GstPlayerVideoInfo</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-current-video-track">gst_player_get_current_video_track</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPlayerSubtitleInfo"><returnvalue>GstPlayerSubtitleInfo</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-current-subtitle-track">gst_player_get_current_subtitle_track</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-audio-track-enabled">gst_player_set_audio_track_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-video-track-enabled">gst_player_set_video_track_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-subtitle-track-enabled">gst_player_set_subtitle_track_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-subtitle-uri">gst_player_set_subtitle_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-subtitle-uri">gst_player_get_subtitle_uri</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-visualization">gst_player_set_visualization</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-visualization-enabled">gst_player_set_visualization_enabled</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-current-visualization">gst_player_get_current_visualization</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-color-balance-type-get-name">gst_player_color_balance_type_get_name</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-has-color-balance">gst_player_has_color_balance</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-color-balance">gst_player_set_color_balance</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-color-balance">gst_player_get_color_balance</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVideoMultiviewMode"><returnvalue>GstVideoMultiviewMode</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-multiview-mode">gst_player_get_multiview_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-multiview-mode">gst_player_set_multiview_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstVideoMultiviewFlags"><returnvalue>GstVideoMultiviewFlags</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-multiview-flags">gst_player_get_multiview_flags</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-multiview-flags">gst_player_set_multiview_flags</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-audio-video-offset">gst_player_get_audio_video_offset</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-audio-video-offset">gst_player_set_audio_video_offset</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-get-rate">gst_player_get_rate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-set-rate">gst_player_set_rate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstSample"><returnvalue>GstSample</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-get-video-snapshot">gst_player_get_video_snapshot</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-config-set-position-update-interval">gst_player_config_set_position_update_interval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-config-get-position-update-interval">gst_player_config_get_position_update_interval</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-config-set-user-agent">gst_player_config_set_user_agent</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-player-config-get-user-agent">gst_player_config_get_user_agent</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-config-set-seek-accurate">gst_player_config_set_seek_accurate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-player-config-get-seek-accurate">gst_player_config_get_seek_accurate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstPlayer.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstPlayer--audio-video-offset">audio-video-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstPlayerAudioInfo"><type>GstPlayerAudioInfo</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--current-audio-track">current-audio-track</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="GstPlayerSubtitleInfo"><type>GstPlayerSubtitleInfo</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--current-subtitle-track">current-subtitle-track</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="GstPlayerVideoInfo"><type>GstPlayerVideoInfo</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--current-video-track">current-video-track</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstPlayer--duration">duration</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="GstPlayerMediaInfo"><type>GstPlayerMediaInfo</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--media-info">media-info</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstPlayer--mute">mute</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstElement"><type>GstElement</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--pipeline">pipeline</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstPlayer--position">position</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstPlayer--rate">rate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstPlayerSignalDispatcher"><type>GstPlayerSignalDispatcher</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--signal-dispatcher">signal-dispatcher</link></entry><entry role="property_flags">Write / Construct Only</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--suburi">suburi</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--uri">uri</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></entry><entry role="property_name"><link linkend="GstPlayer--video-multiview-flags">video-multiview-flags</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewFramePacking"><type>GstVideoMultiviewFramePacking</type></link></entry><entry role="property_name"><link linkend="GstPlayer--video-multiview-mode">video-multiview-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstPlayerVideoRenderer"><type>GstPlayerVideoRenderer</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstPlayer--video-renderer">video-renderer</link></entry><entry role="property_flags">Write / Construct Only</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstPlayer--volume">volume</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstPlayer.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-buffering">buffering</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-duration-changed">duration-changed</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-end-of-stream">end-of-stream</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-error">error</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-media-info-updated">media-info-updated</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-mute-changed">mute-changed</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-position-updated">position-updated</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-seek-done">seek-done</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-state-changed">state-changed</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-uri-loaded">uri-loaded</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-video-dimensions-changed">video-dimensions-changed</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-volume-changed">volume-changed</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstPlayer-warning">warning</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstPlayerSignalDispatcher"/><anchor id="GstPlayerVideoRenderer"/><refsect1 id="GstPlayer.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstPlayer-struct">GstPlayer</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPlayerState">GstPlayerState</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PLAYER-ERROR:CAPS">GST_PLAYER_ERROR</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPlayerError">GstPlayerError</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPlayerColorBalanceType">GstPlayerColorBalanceType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPlayerSnapshotFormat">GstPlayerSnapshotFormat</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstPlayerSignalDispatcher-struct">GstPlayerSignalDispatcher</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstPlayerSignalDispatcherInterface">GstPlayerSignalDispatcherInterface</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstPlayerVideoRenderer-struct">GstPlayerVideoRenderer</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstPlayerVideoRendererInterface">GstPlayerVideoRendererInterface</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstPlayer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GEnum">GEnum</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> GstPlayerColorBalanceType
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> GstPlayerError
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstPlayerState
+    <link linkend="GInterface">GInterface</link>
+    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> GstPlayerSignalDispatcher
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstPlayerVideoRenderer
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstPlayer
+</screen>
+</refsect1>
+<refsect1 id="GstPlayer.prerequisites" role="prerequisites">
+<title role="prerequisites.title">Prerequisites</title>
+<para>
+GstPlayerSignalDispatcher requires
+ <link linkend="GObject">GObject</link>.</para>
+<para>
+GstPlayerVideoRenderer requires
+ <link linkend="GObject">GObject</link>.</para>
+
+</refsect1>
+<refsect1 id="GstPlayer.implementations" role="implementations">
+<title role="implementations.title">Known Implementations</title>
+<para>
+GstPlayerVideoRenderer is implemented by
+ <link linkend="GstPlayerVideoOverlayVideoRenderer">GstPlayerVideoOverlayVideoRenderer</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="GstPlayer.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="GstPlayer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-player-new" role="function">
+<title>gst_player_new&#160;()</title>
+<indexterm zone="gst-player-new"><primary>gst_player_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayer"><returnvalue>GstPlayer</returnvalue></link>&#160;*
+gst_player_new (<parameter><link linkend="GstPlayerVideoRenderer"><type>GstPlayerVideoRenderer</type></link> *video_renderer</parameter>,
+                <parameter><link linkend="GstPlayerSignalDispatcher"><type>GstPlayerSignalDispatcher</type></link> *signal_dispatcher</parameter>);</programlisting>
+<para>Creates a new <link linkend="GstPlayer"><type>GstPlayer</type></link> instance that uses <parameter>signal_dispatcher</parameter>
+ to dispatch
+signals to some event loop system, or emits signals directly if NULL is
+passed. See <link linkend="gst-player-g-main-context-signal-dispatcher-new"><function>gst_player_g_main_context_signal_dispatcher_new()</function></link>.</para>
+<para>Video is going to be rendered by <parameter>video_renderer</parameter>
+, or if <link linkend="NULL:CAPS"><literal>NULL</literal></link> is provided
+no special video set up will be done and some default handling will be
+performed.</para>
+<refsect3 id="gst-player-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>video_renderer</para></entry>
+<entry role="parameter_description"><para> GstPlayerVideoRenderer to use. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>signal_dispatcher</para></entry>
+<entry role="parameter_description"><para> GstPlayerSignalDispatcher to use. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-play" role="function">
+<title>gst_player_play&#160;()</title>
+<indexterm zone="gst-player-play"><primary>gst_player_play</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_play (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Request to play the loaded stream.</para>
+<refsect3 id="gst-player-play.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-pause" role="function">
+<title>gst_player_pause&#160;()</title>
+<indexterm zone="gst-player-pause"><primary>gst_player_pause</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_pause (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Pauses the current stream.</para>
+<refsect3 id="gst-player-pause.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-stop" role="function">
+<title>gst_player_stop&#160;()</title>
+<indexterm zone="gst-player-stop"><primary>gst_player_stop</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_stop (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Stops playing the current stream and resets to the first position
+in the stream.</para>
+<refsect3 id="gst-player-stop.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-seek" role="function">
+<title>gst_player_seek&#160;()</title>
+<indexterm zone="gst-player-seek"><primary>gst_player_seek</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_seek (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                 <parameter><link linkend="GstClockTime"><type>GstClockTime</type></link> position</parameter>);</programlisting>
+<para>Seeks the currently-playing stream to the absolute <parameter>position</parameter>
+ time
+in nanoseconds.</para>
+<refsect3 id="gst-player-seek.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>position</para></entry>
+<entry role="parameter_description"><para>position to seek in nanoseconds</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-uri" role="function">
+<title>gst_player_set_uri&#160;()</title>
+<indexterm zone="gst-player-set-uri"><primary>gst_player_set_uri</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_uri (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                    <parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>);</programlisting>
+<para>Sets the next URI to play.</para>
+<refsect3 id="gst-player-set-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>next URI to play.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-uri" role="function">
+<title>gst_player_get_uri&#160;()</title>
+<indexterm zone="gst-player-get-uri"><primary>gst_player_get_uri</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_player_get_uri (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Gets the URI of the currently-playing stream.</para>
+<refsect3 id="gst-player-get-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-uri.returns" role="returns">
+<title>Returns</title>
+<para> a string containing the URI of the
+currently-playing stream. <link linkend="g-free"><function>g_free()</function></link> after usage. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-duration" role="function">
+<title>gst_player_get_duration&#160;()</title>
+<indexterm zone="gst-player-get-duration"><primary>gst_player_get_duration</primary></indexterm>
+<programlisting language="C"><link linkend="GstClockTime"><returnvalue>GstClockTime</returnvalue></link>
+gst_player_get_duration (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Retrieves the duration of the media stream that self represents.</para>
+<refsect3 id="gst-player-get-duration.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-duration.returns" role="returns">
+<title>Returns</title>
+<para> the duration of the currently-playing media stream, in
+nanoseconds.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-position" role="function">
+<title>gst_player_get_position&#160;()</title>
+<indexterm zone="gst-player-get-position"><primary>gst_player_get_position</primary></indexterm>
+<programlisting language="C"><link linkend="GstClockTime"><returnvalue>GstClockTime</returnvalue></link>
+gst_player_get_position (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<refsect3 id="gst-player-get-position.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-position.returns" role="returns">
+<title>Returns</title>
+<para> the absolute position time, in nanoseconds, of the
+currently-playing stream.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-volume" role="function">
+<title>gst_player_set_volume&#160;()</title>
+<indexterm zone="gst-player-set-volume"><primary>gst_player_set_volume</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_volume (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                       <parameter><link linkend="gdouble"><type>gdouble</type></link> val</parameter>);</programlisting>
+<para>Sets the volume level of the stream as a percentage between 0 and 1.</para>
+<refsect3 id="gst-player-set-volume.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>val</para></entry>
+<entry role="parameter_description"><para>the new volume level, as a percentage between 0 and 1</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-mute" role="function">
+<title>gst_player_set_mute&#160;()</title>
+<indexterm zone="gst-player-set-mute"><primary>gst_player_set_mute</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_mute (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                     <parameter><link linkend="gboolean"><type>gboolean</type></link> val</parameter>);</programlisting>
+<para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the currently-playing stream should be muted.</para>
+<refsect3 id="gst-player-set-mute.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>val</para></entry>
+<entry role="parameter_description"><para>Mute state the should be set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-volume" role="function">
+<title>gst_player_get_volume&#160;()</title>
+<indexterm zone="gst-player-get-volume"><primary>gst_player_get_volume</primary></indexterm>
+<programlisting language="C"><link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>
+gst_player_get_volume (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Returns the current volume level, as a percentage between 0 and 1.</para>
+<refsect3 id="gst-player-get-volume.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-volume.returns" role="returns">
+<title>Returns</title>
+<para> the volume as percentage between 0 and 1.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-mute" role="function">
+<title>gst_player_get_mute&#160;()</title>
+<indexterm zone="gst-player-get-mute"><primary>gst_player_get_mute</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_get_mute (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<refsect3 id="gst-player-get-mute.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-mute.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the currently-playing stream is muted.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-pipeline" role="function">
+<title>gst_player_get_pipeline&#160;()</title>
+<indexterm zone="gst-player-get-pipeline"><primary>gst_player_get_pipeline</primary></indexterm>
+<programlisting language="C"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>&#160;*
+gst_player_get_pipeline (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<refsect3 id="gst-player-get-pipeline.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-pipeline.returns" role="returns">
+<title>Returns</title>
+<para> The internal playbin instance. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-config" role="function">
+<title>gst_player_set_config&#160;()</title>
+<indexterm zone="gst-player-set-config"><primary>gst_player_set_config</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_set_config (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                       <parameter><link linkend="GstStructure"><type>GstStructure</type></link> *config</parameter>);</programlisting>
+<para>Set the configuration of the player. If the player is already configured, and
+the configuration haven't change, this function will return <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>. If the
+player is not in the GST_PLAYER_STATE_STOPPED, this method will return <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>
+and active configuration will remain.</para>
+<para><parameter>config</parameter>
+ is a <link linkend="GstStructure"><type>GstStructure</type></link> that contains the configuration parameters for
+the player.</para>
+<para>This function takes ownership of <parameter>config</parameter>
+.</para>
+<refsect3 id="gst-player-set-config.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstStructure"><type>GstStructure</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-set-config.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> when the configuration could be set.
+Since 1.10</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-config" role="function">
+<title>gst_player_get_config&#160;()</title>
+<indexterm zone="gst-player-get-config"><primary>gst_player_get_config</primary></indexterm>
+<programlisting language="C"><link linkend="GstStructure"><returnvalue>GstStructure</returnvalue></link>&#160;*
+gst_player_get_config (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Get a copy of the current configuration of the player. This configuration
+can either be modified and used for the <link linkend="gst-player-set-config"><function>gst_player_set_config()</function></link> call
+or it must be freed after usage.</para>
+<refsect3 id="gst-player-get-config.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-config.returns" role="returns">
+<title>Returns</title>
+<para> a copy of the current configuration of <parameter>player</parameter>
+. Use
+<link linkend="gst-structure-free"><function>gst_structure_free()</function></link> after usage or <link linkend="gst-player-set-config"><function>gst_player_set_config()</function></link>.</para>
+<para>Since 1.10. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-state-get-name" role="function">
+<title>gst_player_state_get_name&#160;()</title>
+<indexterm zone="gst-player-state-get-name"><primary>gst_player_state_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_player_state_get_name (<parameter><link linkend="GstPlayerState"><type>GstPlayerState</type></link> state</parameter>);</programlisting>
+<para>Gets a string representing the given state.</para>
+<refsect3 id="gst-player-state-get-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>state</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayerState"><type>GstPlayerState</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-state-get-name.returns" role="returns">
+<title>Returns</title>
+<para> a string with the name of the state. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-error-get-name" role="function">
+<title>gst_player_error_get_name&#160;()</title>
+<indexterm zone="gst-player-error-get-name"><primary>gst_player_error_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_player_error_get_name (<parameter><link linkend="GstPlayerError"><type>GstPlayerError</type></link> error</parameter>);</programlisting>
+<para>Gets a string representing the given error.</para>
+<refsect3 id="gst-player-error-get-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayerError"><type>GstPlayerError</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-error-get-name.returns" role="returns">
+<title>Returns</title>
+<para> a string with the given error. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-media-info" role="function">
+<title>gst_player_get_media_info&#160;()</title>
+<indexterm zone="gst-player-get-media-info"><primary>gst_player_get_media_info</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayerMediaInfo"><returnvalue>GstPlayerMediaInfo</returnvalue></link>&#160;*
+gst_player_get_media_info (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>A Function to get the current media info <link linkend="GstPlayerMediaInfo"><type>GstPlayerMediaInfo</type></link> instance.</para>
+<refsect3 id="gst-player-get-media-info.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-media-info.returns" role="returns">
+<title>Returns</title>
+<para> media info instance.</para>
+<para>The caller should free it with <link linkend="g-object-unref"><function>g_object_unref()</function></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-audio-track" role="function">
+<title>gst_player_set_audio_track&#160;()</title>
+<indexterm zone="gst-player-set-audio-track"><primary>gst_player_set_audio_track</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_set_audio_track (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                            <parameter><link linkend="gint"><type>gint</type></link> stream_index</parameter>);</programlisting>
+<refsect3 id="gst-player-set-audio-track.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stream_index</para></entry>
+<entry role="parameter_description"><para>stream index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-set-audio-track.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> or <link linkend="FALSE:CAPS"><literal>FALSE</literal></link></para>
+<para>Sets the audio track <parameter>stream_idex</parameter>
+.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-video-track" role="function">
+<title>gst_player_set_video_track&#160;()</title>
+<indexterm zone="gst-player-set-video-track"><primary>gst_player_set_video_track</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_set_video_track (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                            <parameter><link linkend="gint"><type>gint</type></link> stream_index</parameter>);</programlisting>
+<refsect3 id="gst-player-set-video-track.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stream_index</para></entry>
+<entry role="parameter_description"><para>stream index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-set-video-track.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> or <link linkend="FALSE:CAPS"><literal>FALSE</literal></link></para>
+<para>Sets the video track <parameter>stream_index</parameter>
+.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-subtitle-track" role="function">
+<title>gst_player_set_subtitle_track&#160;()</title>
+<indexterm zone="gst-player-set-subtitle-track"><primary>gst_player_set_subtitle_track</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_set_subtitle_track (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> stream_index</parameter>);</programlisting>
+<refsect3 id="gst-player-set-subtitle-track.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stream_index</para></entry>
+<entry role="parameter_description"><para>stream index</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-set-subtitle-track.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> or <link linkend="FALSE:CAPS"><literal>FALSE</literal></link></para>
+<para>Sets the subtitle strack <parameter>stream_index</parameter>
+.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-current-audio-track" role="function">
+<title>gst_player_get_current_audio_track&#160;()</title>
+<indexterm zone="gst-player-get-current-audio-track"><primary>gst_player_get_current_audio_track</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayerAudioInfo"><returnvalue>GstPlayerAudioInfo</returnvalue></link>&#160;*
+gst_player_get_current_audio_track (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>A Function to get current audio <link linkend="GstPlayerAudioInfo"><type>GstPlayerAudioInfo</type></link> instance.</para>
+<refsect3 id="gst-player-get-current-audio-track.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-current-audio-track.returns" role="returns">
+<title>Returns</title>
+<para> current audio track.</para>
+<para>The caller should free it with <link linkend="g-object-unref"><function>g_object_unref()</function></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-current-video-track" role="function">
+<title>gst_player_get_current_video_track&#160;()</title>
+<indexterm zone="gst-player-get-current-video-track"><primary>gst_player_get_current_video_track</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayerVideoInfo"><returnvalue>GstPlayerVideoInfo</returnvalue></link>&#160;*
+gst_player_get_current_video_track (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>A Function to get current video <link linkend="GstPlayerVideoInfo"><type>GstPlayerVideoInfo</type></link> instance.</para>
+<refsect3 id="gst-player-get-current-video-track.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-current-video-track.returns" role="returns">
+<title>Returns</title>
+<para> current video track.</para>
+<para>The caller should free it with <link linkend="g-object-unref"><function>g_object_unref()</function></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-current-subtitle-track" role="function">
+<title>gst_player_get_current_subtitle_track&#160;()</title>
+<indexterm zone="gst-player-get-current-subtitle-track"><primary>gst_player_get_current_subtitle_track</primary></indexterm>
+<programlisting language="C"><link linkend="GstPlayerSubtitleInfo"><returnvalue>GstPlayerSubtitleInfo</returnvalue></link>&#160;*
+gst_player_get_current_subtitle_track (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>A Function to get current subtitle <link linkend="GstPlayerSubtitleInfo"><type>GstPlayerSubtitleInfo</type></link> instance.</para>
+<refsect3 id="gst-player-get-current-subtitle-track.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-current-subtitle-track.returns" role="returns">
+<title>Returns</title>
+<para> current subtitle track.</para>
+<para>The caller should free it with <link linkend="g-object-unref"><function>g_object_unref()</function></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-audio-track-enabled" role="function">
+<title>gst_player_set_audio_track_enabled&#160;()</title>
+<indexterm zone="gst-player-set-audio-track-enabled"><primary>gst_player_set_audio_track_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_audio_track_enabled (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                                    <parameter><link linkend="gboolean"><type>gboolean</type></link> enabled</parameter>);</programlisting>
+<para>Enable or disable the current audio track.</para>
+<refsect3 id="gst-player-set-audio-track-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>TRUE or FALSE</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-video-track-enabled" role="function">
+<title>gst_player_set_video_track_enabled&#160;()</title>
+<indexterm zone="gst-player-set-video-track-enabled"><primary>gst_player_set_video_track_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_video_track_enabled (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                                    <parameter><link linkend="gboolean"><type>gboolean</type></link> enabled</parameter>);</programlisting>
+<para>Enable or disable the current video track.</para>
+<refsect3 id="gst-player-set-video-track-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>TRUE or FALSE</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-subtitle-track-enabled" role="function">
+<title>gst_player_set_subtitle_track_enabled&#160;()</title>
+<indexterm zone="gst-player-set-subtitle-track-enabled"><primary>gst_player_set_subtitle_track_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_subtitle_track_enabled (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                                       <parameter><link linkend="gboolean"><type>gboolean</type></link> enabled</parameter>);</programlisting>
+<para>Enable or disable the current subtitle track.</para>
+<refsect3 id="gst-player-set-subtitle-track-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>TRUE or FALSE</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-subtitle-uri" role="function">
+<title>gst_player_set_subtitle_uri&#160;()</title>
+<indexterm zone="gst-player-set-subtitle-uri"><primary>gst_player_set_subtitle_uri</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_subtitle_uri (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                             <parameter>const <link linkend="gchar"><type>gchar</type></link> *uri</parameter>);</programlisting>
+<para>Sets the external subtitle URI.</para>
+<refsect3 id="gst-player-set-subtitle-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>uri</para></entry>
+<entry role="parameter_description"><para>subtitle URI</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-subtitle-uri" role="function">
+<title>gst_player_get_subtitle_uri&#160;()</title>
+<indexterm zone="gst-player-get-subtitle-uri"><primary>gst_player_get_subtitle_uri</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_player_get_subtitle_uri (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>current subtitle URI</para>
+<refsect3 id="gst-player-get-subtitle-uri.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-subtitle-uri.returns" role="returns">
+<title>Returns</title>
+<para> URI of the current external subtitle.
+<link linkend="g-free"><function>g_free()</function></link> after usage. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-visualization" role="function">
+<title>gst_player_set_visualization&#160;()</title>
+<indexterm zone="gst-player-set-visualization"><primary>gst_player_set_visualization</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_set_visualization (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+<refsect3 id="gst-player-set-visualization.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>visualization element obtained from
+<link linkend="gst-player-visualizations-get"><function><link linkend="gst-player-visualizations-get"><function>gst_player_visualizations_get()</function></link></function></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-set-visualization.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the visualizations was set correctly. Otherwise,
+<link linkend="FALSE:CAPS"><literal>FALSE</literal></link>.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-visualization-enabled" role="function">
+<title>gst_player_set_visualization_enabled&#160;()</title>
+<indexterm zone="gst-player-set-visualization-enabled"><primary>gst_player_set_visualization_enabled</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_visualization_enabled (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                                      <parameter><link linkend="gboolean"><type>gboolean</type></link> enabled</parameter>);</programlisting>
+<para>Enable or disable the visualization.</para>
+<refsect3 id="gst-player-set-visualization-enabled.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>enabled</para></entry>
+<entry role="parameter_description"><para>TRUE or FALSE</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-current-visualization" role="function">
+<title>gst_player_get_current_visualization&#160;()</title>
+<indexterm zone="gst-player-get-current-visualization"><primary>gst_player_get_current_visualization</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_player_get_current_visualization (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<refsect3 id="gst-player-get-current-visualization.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-current-visualization.returns" role="returns">
+<title>Returns</title>
+<para> Name of the currently enabled visualization.
+<link linkend="g-free"><function>g_free()</function></link> after usage. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-color-balance-type-get-name" role="function">
+<title>gst_player_color_balance_type_get_name&#160;()</title>
+<indexterm zone="gst-player-color-balance-type-get-name"><primary>gst_player_color_balance_type_get_name</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_player_color_balance_type_get_name
+                               (<parameter><link linkend="GstPlayerColorBalanceType"><type>GstPlayerColorBalanceType</type></link> type</parameter>);</programlisting>
+<para>Gets a string representing the given color balance type.</para>
+<refsect3 id="gst-player-color-balance-type-get-name.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayerColorBalanceType"><type>GstPlayerColorBalanceType</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-color-balance-type-get-name.returns" role="returns">
+<title>Returns</title>
+<para> a string with the name of the color
+balance type. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-has-color-balance" role="function">
+<title>gst_player_has_color_balance&#160;()</title>
+<indexterm zone="gst-player-has-color-balance"><primary>gst_player_has_color_balance</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_has_color_balance (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Checks whether the <parameter>player</parameter>
+ has color balance support available.</para>
+<refsect3 id="gst-player-has-color-balance.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-has-color-balance.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if <parameter>player</parameter>
+has color balance support. Otherwise,
+<link linkend="FALSE:CAPS"><literal>FALSE</literal></link>.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-color-balance" role="function">
+<title>gst_player_set_color_balance&#160;()</title>
+<indexterm zone="gst-player-set-color-balance"><primary>gst_player_set_color_balance</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_color_balance (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                              <parameter><link linkend="GstPlayerColorBalanceType"><type>GstPlayerColorBalanceType</type></link> type</parameter>,
+                              <parameter><link linkend="gdouble"><type>gdouble</type></link> value</parameter>);</programlisting>
+<para>Sets the current value of the indicated channel <parameter>type</parameter>
+ to the passed
+value.</para>
+<refsect3 id="gst-player-set-color-balance.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayerColorBalanceType"><type>GstPlayerColorBalanceType</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>The new value for the <parameter>type</parameter>
+, ranged [0,1]</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-color-balance" role="function">
+<title>gst_player_get_color_balance&#160;()</title>
+<indexterm zone="gst-player-get-color-balance"><primary>gst_player_get_color_balance</primary></indexterm>
+<programlisting language="C"><link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>
+gst_player_get_color_balance (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                              <parameter><link linkend="GstPlayerColorBalanceType"><type>GstPlayerColorBalanceType</type></link> type</parameter>);</programlisting>
+<para>Retrieve the current value of the indicated <parameter>type</parameter>
+.</para>
+<refsect3 id="gst-player-get-color-balance.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayerColorBalanceType"><type>GstPlayerColorBalanceType</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-color-balance.returns" role="returns">
+<title>Returns</title>
+<para> The current value of <parameter>type</parameter>
+, between [0,1]. In case of
+error -1 is returned.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-multiview-mode" role="function" condition="since:1.10">
+<title>gst_player_get_multiview_mode&#160;()</title>
+<indexterm zone="gst-player-get-multiview-mode" role="1.10"><primary>gst_player_get_multiview_mode</primary></indexterm>
+<programlisting language="C"><link linkend="GstVideoMultiviewMode"><returnvalue>GstVideoMultiviewMode</returnvalue></link>
+gst_player_get_multiview_mode (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Retrieve the current value of the indicated <parameter>type</parameter>
+.</para>
+<refsect3 id="gst-player-get-multiview-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-multiview-mode.returns" role="returns">
+<title>Returns</title>
+<para> The current value of <parameter>type</parameter>
+, Default: -1 "none"</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-player-set-multiview-mode" role="function" condition="since:1.10">
+<title>gst_player_set_multiview_mode&#160;()</title>
+<indexterm zone="gst-player-set-multiview-mode" role="1.10"><primary>gst_player_set_multiview_mode</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_multiview_mode (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                               <parameter><link linkend="GstVideoMultiviewMode"><type>GstVideoMultiviewMode</type></link> mode</parameter>);</programlisting>
+<para>Sets the current value of the indicated mode <parameter>type</parameter>
+ to the passed
+value.</para>
+<refsect3 id="gst-player-set-multiview-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mode</para></entry>
+<entry role="parameter_description"><para>The new value for the <parameter>type</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-player-get-multiview-flags" role="function" condition="since:1.10">
+<title>gst_player_get_multiview_flags&#160;()</title>
+<indexterm zone="gst-player-get-multiview-flags" role="1.10"><primary>gst_player_get_multiview_flags</primary></indexterm>
+<programlisting language="C"><link linkend="GstVideoMultiviewFlags"><returnvalue>GstVideoMultiviewFlags</returnvalue></link>
+gst_player_get_multiview_flags (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Retrieve the current value of the indicated <parameter>type</parameter>
+.</para>
+<refsect3 id="gst-player-get-multiview-flags.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-multiview-flags.returns" role="returns">
+<title>Returns</title>
+<para> The current value of <parameter>type</parameter>
+, Default: 0x00000000 "none</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-player-set-multiview-flags" role="function" condition="since:1.10">
+<title>gst_player_set_multiview_flags&#160;()</title>
+<indexterm zone="gst-player-set-multiview-flags" role="1.10"><primary>gst_player_set_multiview_flags</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_multiview_flags (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                                <parameter><link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link> flags</parameter>);</programlisting>
+<para>Sets the current value of the indicated mode <parameter>type</parameter>
+ to the passed
+value.</para>
+<refsect3 id="gst-player-set-multiview-flags.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flags</para></entry>
+<entry role="parameter_description"><para>The new value for the <parameter>type</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-player-get-audio-video-offset" role="function">
+<title>gst_player_get_audio_video_offset&#160;()</title>
+<indexterm zone="gst-player-get-audio-video-offset"><primary>gst_player_get_audio_video_offset</primary></indexterm>
+<programlisting language="C"><link linkend="gint64"><returnvalue>gint64</returnvalue></link>
+gst_player_get_audio_video_offset (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<para>Retrieve the current value of audio-video-offset property</para>
+<refsect3 id="gst-player-get-audio-video-offset.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-audio-video-offset.returns" role="returns">
+<title>Returns</title>
+<para> The current value of audio-video-offset in nanoseconds</para>
+<para>Since 1.10</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-audio-video-offset" role="function">
+<title>gst_player_set_audio_video_offset&#160;()</title>
+<indexterm zone="gst-player-set-audio-video-offset"><primary>gst_player_set_audio_video_offset</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_audio_video_offset (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                                   <parameter><link linkend="gint64"><type>gint64</type></link> offset</parameter>);</programlisting>
+<para>Sets audio-video-offset property by value of <parameter>offset</parameter>
+</para>
+<para>Since 1.10</para>
+<refsect3 id="gst-player-set-audio-video-offset.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para><link linkend="gint64"><type>gint64</type></link> in nanoseconds</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-rate" role="function">
+<title>gst_player_get_rate&#160;()</title>
+<indexterm zone="gst-player-get-rate"><primary>gst_player_get_rate</primary></indexterm>
+<programlisting language="C"><link linkend="gdouble"><returnvalue>gdouble</returnvalue></link>
+gst_player_get_rate (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>);</programlisting>
+<refsect3 id="gst-player-get-rate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-rate.returns" role="returns">
+<title>Returns</title>
+<para> current playback rate</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-set-rate" role="function">
+<title>gst_player_set_rate&#160;()</title>
+<indexterm zone="gst-player-set-rate"><primary>gst_player_set_rate</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_set_rate (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                     <parameter><link linkend="gdouble"><type>gdouble</type></link> rate</parameter>);</programlisting>
+<para>Playback at specified rate</para>
+<refsect3 id="gst-player-set-rate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>rate</para></entry>
+<entry role="parameter_description"><para>playback rate</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-get-video-snapshot" role="function">
+<title>gst_player_get_video_snapshot&#160;()</title>
+<indexterm zone="gst-player-get-video-snapshot"><primary>gst_player_get_video_snapshot</primary></indexterm>
+<programlisting language="C"><link linkend="GstSample"><returnvalue>GstSample</returnvalue></link>&#160;*
+gst_player_get_video_snapshot (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                               <parameter><link linkend="GstPlayerSnapshotFormat"><type>GstPlayerSnapshotFormat</type></link> format</parameter>,
+                               <parameter><link linkend="GstStructure"><type>GstStructure</type></link> *config</parameter>);</programlisting>
+<para>Get a snapshot of the currently selected video stream, if any. The format can be
+selected with <parameter>format</parameter>
+ and optional configuration is possible with <parameter>config</parameter>
+
+Currently supported settings are:</para>
+<itemizedlist>
+<listitem><para>width, height of type G_TYPE_INT</para></listitem>
+<listitem><para>pixel-aspect-ratio of type GST_TYPE_FRACTION
+Except for GST_PLAYER_THUMBNAIL_RAW_NATIVE format, if no config is set, pixel-aspect-ratio would be 1/1</para></listitem>
+</itemizedlist>
+<refsect3 id="gst-player-get-video-snapshot.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>output format of the video snapshot</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para> Additional configuration. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-get-video-snapshot.returns" role="returns">
+<title>Returns</title>
+<para>  Current video snapshot sample or <link linkend="NULL:CAPS"><literal>NULL</literal></link> on failure</para>
+<para>Since 1.12. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-config-set-position-update-interval" role="function">
+<title>gst_player_config_set_position_update_interval&#160;()</title>
+<indexterm zone="gst-player-config-set-position-update-interval"><primary>gst_player_config_set_position_update_interval</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_config_set_position_update_interval
+                               (<parameter><link linkend="GstStructure"><type>GstStructure</type></link> *config</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> interval</parameter>);</programlisting>
+<para>set interval in milliseconds between two position-updated signals.
+pass 0 to stop updating the position.
+Since 1.10</para>
+<refsect3 id="gst-player-config-set-position-update-interval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayer"><type>GstPlayer</type></link> configuration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>interval</para></entry>
+<entry role="parameter_description"><para>interval in ms</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-config-get-position-update-interval" role="function">
+<title>gst_player_config_get_position_update_interval&#160;()</title>
+<indexterm zone="gst-player-config-get-position-update-interval"><primary>gst_player_config_get_position_update_interval</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_player_config_get_position_update_interval
+                               (<parameter>const <link linkend="GstStructure"><type>GstStructure</type></link> *config</parameter>);</programlisting>
+<refsect3 id="gst-player-config-get-position-update-interval.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayer"><type>GstPlayer</type></link> configuration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-config-get-position-update-interval.returns" role="returns">
+<title>Returns</title>
+<para> current position update interval in milliseconds</para>
+<para>Since 1.10</para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-config-set-user-agent" role="function">
+<title>gst_player_config_set_user_agent&#160;()</title>
+<indexterm zone="gst-player-config-set-user-agent"><primary>gst_player_config_set_user_agent</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_config_set_user_agent (<parameter><link linkend="GstStructure"><type>GstStructure</type></link> *config</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *agent</parameter>);</programlisting>
+<para>Set the user agent to pass to the server if <parameter>player</parameter>
+ needs to connect
+to a server during playback. This is typically used when playing HTTP
+or RTSP streams.</para>
+<para>Since 1.10</para>
+<refsect3 id="gst-player-config-set-user-agent.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayer"><type>GstPlayer</type></link> configuration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>agent</para></entry>
+<entry role="parameter_description"><para>the string to use as user agent</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-player-config-get-user-agent" role="function">
+<title>gst_player_config_get_user_agent&#160;()</title>
+<indexterm zone="gst-player-config-get-user-agent"><primary>gst_player_config_get_user_agent</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_player_config_get_user_agent (<parameter>const <link linkend="GstStructure"><type>GstStructure</type></link> *config</parameter>);</programlisting>
+<para>Return the user agent which has been configured using
+<link linkend="gst-player-config-set-user-agent"><function>gst_player_config_set_user_agent()</function></link> if any.</para>
+<refsect3 id="gst-player-config-get-user-agent.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayer"><type>GstPlayer</type></link> configuration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-config-get-user-agent.returns" role="returns">
+<title>Returns</title>
+<para> the configured agent, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>
+Since 1.10. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-player-config-set-seek-accurate" role="function" condition="since:1.12">
+<title>gst_player_config_set_seek_accurate&#160;()</title>
+<indexterm zone="gst-player-config-set-seek-accurate" role="1.12"><primary>gst_player_config_set_seek_accurate</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_player_config_set_seek_accurate (<parameter><link linkend="GstPlayer"><type>GstPlayer</type></link> *player</parameter>,
+                                     <parameter><link linkend="gboolean"><type>gboolean</type></link> accurate</parameter>);</programlisting>
+<para>Enable or disable accurate seeking. When enabled, elements will try harder
+to seek as accurately as possible to the requested seek position. Generally
+it will be slower especially for formats that don't have any indexes or
+timestamp markers in the stream.</para>
+<para>If accurate seeking is disabled, elements will seek as close as the request
+position without slowing down seeking too much.</para>
+<para>Accurate seeking is disabled by default.</para>
+<refsect3 id="gst-player-config-set-seek-accurate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>player</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPlayer"><type>GstPlayer</type></link> instance</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>accurate</para></entry>
+<entry role="parameter_description"><para>accurate seek or not</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.12">1.12</link></para></refsect2>
+<refsect2 id="gst-player-config-get-seek-accurate" role="function">
+<title>gst_player_config_get_seek_accurate&#160;()</title>
+<indexterm zone="gst-player-config-get-seek-accurate"><primary>gst_player_config_get_seek_accurate</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_player_config_get_seek_accurate (<parameter>const <link linkend="GstStructure"><type>GstStructure</type></link> *config</parameter>);</programlisting>
+<refsect3 id="gst-player-config-get-seek-accurate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstPlayer"><type>GstPlayer</type></link> configuration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-player-config-get-seek-accurate.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if accurate seeking is enabled</para>
+<para>Since 1.12</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="GstPlayer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstPlayer-struct" role="struct">
+<title>GstPlayer</title>
+<indexterm zone="GstPlayer-struct"><primary>GstPlayer</primary></indexterm>
+<programlisting language="C">typedef struct _GstPlayer GstPlayer;</programlisting>
+</refsect2>
+<refsect2 id="GstPlayerState" role="enum">
+<title>enum GstPlayerState</title>
+<indexterm zone="GstPlayerState"><primary>GstPlayerState</primary></indexterm>
+<refsect3 id="GstPlayerState.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-STATE-STOPPED:CAPS">GST_PLAYER_STATE_STOPPED</para></entry>
+<entry role="enum_member_description"><para>the player is stopped.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-STATE-BUFFERING:CAPS">GST_PLAYER_STATE_BUFFERING</para></entry>
+<entry role="enum_member_description"><para>the player is buffering.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-STATE-PAUSED:CAPS">GST_PLAYER_STATE_PAUSED</para></entry>
+<entry role="enum_member_description"><para>the player is paused.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-STATE-PLAYING:CAPS">GST_PLAYER_STATE_PLAYING</para></entry>
+<entry role="enum_member_description"><para>the player is currently playing a
+stream.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GST-PLAYER-ERROR:CAPS" role="macro">
+<title>GST_PLAYER_ERROR</title>
+<indexterm zone="GST-PLAYER-ERROR:CAPS"><primary>GST_PLAYER_ERROR</primary></indexterm>
+<programlisting language="C">#define      GST_PLAYER_ERROR                         (gst_player_error_quark ())
+</programlisting>
+</refsect2>
+<refsect2 id="GstPlayerError" role="enum">
+<title>enum GstPlayerError</title>
+<indexterm zone="GstPlayerError"><primary>GstPlayerError</primary></indexterm>
+<refsect3 id="GstPlayerError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-ERROR-FAILED:CAPS">GST_PLAYER_ERROR_FAILED</para></entry>
+<entry role="enum_member_description"><para>generic error.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPlayerColorBalanceType" role="enum">
+<title>enum GstPlayerColorBalanceType</title>
+<indexterm zone="GstPlayerColorBalanceType"><primary>GstPlayerColorBalanceType</primary></indexterm>
+<refsect3 id="GstPlayerColorBalanceType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-COLOR-BALANCE-BRIGHTNESS:CAPS">GST_PLAYER_COLOR_BALANCE_BRIGHTNESS</para></entry>
+<entry role="enum_member_description"><para>brightness or black level.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-COLOR-BALANCE-CONTRAST:CAPS">GST_PLAYER_COLOR_BALANCE_CONTRAST</para></entry>
+<entry role="enum_member_description"><para>contrast or luma gain.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-COLOR-BALANCE-SATURATION:CAPS">GST_PLAYER_COLOR_BALANCE_SATURATION</para></entry>
+<entry role="enum_member_description"><para>color saturation or chroma
+gain.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-COLOR-BALANCE-HUE:CAPS">GST_PLAYER_COLOR_BALANCE_HUE</para></entry>
+<entry role="enum_member_description"><para>hue or color balance.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPlayerSnapshotFormat" role="enum">
+<title>enum GstPlayerSnapshotFormat</title>
+<indexterm zone="GstPlayerSnapshotFormat"><primary>GstPlayerSnapshotFormat</primary></indexterm>
+<refsect3 id="GstPlayerSnapshotFormat.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-THUMBNAIL-RAW-NATIVE:CAPS">GST_PLAYER_THUMBNAIL_RAW_NATIVE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-THUMBNAIL-RAW-xRGB">GST_PLAYER_THUMBNAIL_RAW_xRGB</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-THUMBNAIL-RAW-BGRx">GST_PLAYER_THUMBNAIL_RAW_BGRx</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-THUMBNAIL-JPG:CAPS">GST_PLAYER_THUMBNAIL_JPG</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PLAYER-THUMBNAIL-PNG:CAPS">GST_PLAYER_THUMBNAIL_PNG</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPlayerSignalDispatcher-struct" role="struct">
+<title>GstPlayerSignalDispatcher</title>
+<indexterm zone="GstPlayerSignalDispatcher-struct"><primary>GstPlayerSignalDispatcher</primary></indexterm>
+<programlisting language="C">typedef struct _GstPlayerSignalDispatcher GstPlayerSignalDispatcher;</programlisting>
+</refsect2>
+<refsect2 id="GstPlayerSignalDispatcherInterface" role="struct">
+<title>struct GstPlayerSignalDispatcherInterface</title>
+<indexterm zone="GstPlayerSignalDispatcherInterface"><primary>GstPlayerSignalDispatcherInterface</primary></indexterm>
+<programlisting language="C">struct GstPlayerSignalDispatcherInterface {
+  GTypeInterface parent_iface;
+
+  void (*dispatch) (GstPlayerSignalDispatcher * self,
+                    GstPlayer * player,
+                    GstPlayerSignalDispatcherFunc emitter,
+                    gpointer data,
+                    GDestroyNotify destroy);
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstPlayerVideoRenderer-struct" role="struct">
+<title>GstPlayerVideoRenderer</title>
+<indexterm zone="GstPlayerVideoRenderer-struct"><primary>GstPlayerVideoRenderer</primary></indexterm>
+<programlisting language="C">typedef struct _GstPlayerVideoRenderer GstPlayerVideoRenderer;</programlisting>
+</refsect2>
+<refsect2 id="GstPlayerVideoRendererInterface" role="struct">
+<title>struct GstPlayerVideoRendererInterface</title>
+<indexterm zone="GstPlayerVideoRendererInterface"><primary>GstPlayerVideoRendererInterface</primary></indexterm>
+<programlisting language="C">struct GstPlayerVideoRendererInterface {
+  GTypeInterface parent_iface;
+
+  GstElement * (*create_video_sink) (GstPlayerVideoRenderer * self, GstPlayer * player);
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstPlayer.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstPlayer--audio-video-offset" role="property"><title>The <literal>“audio-video-offset”</literal> property</title>
+<indexterm zone="GstPlayer--audio-video-offset"><primary>GstPlayer:audio-video-offset</primary></indexterm>
+<programlisting>  “audio-video-offset”       <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>The synchronisation offset between audio and video in nanoseconds.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstPlayer--current-audio-track" role="property"><title>The <literal>“current-audio-track”</literal> property</title>
+<indexterm zone="GstPlayer--current-audio-track"><primary>GstPlayer:current-audio-track</primary></indexterm>
+<programlisting>  “current-audio-track”      <link linkend="GstPlayerAudioInfo"><type>GstPlayerAudioInfo</type></link>&#160;*</programlisting>
+<para>Current audio track information.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstPlayer--current-subtitle-track" role="property"><title>The <literal>“current-subtitle-track”</literal> property</title>
+<indexterm zone="GstPlayer--current-subtitle-track"><primary>GstPlayer:current-subtitle-track</primary></indexterm>
+<programlisting>  “current-subtitle-track”   <link linkend="GstPlayerSubtitleInfo"><type>GstPlayerSubtitleInfo</type></link>&#160;*</programlisting>
+<para>Current audio subtitle information.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstPlayer--current-video-track" role="property"><title>The <literal>“current-video-track”</literal> property</title>
+<indexterm zone="GstPlayer--current-video-track"><primary>GstPlayer:current-video-track</primary></indexterm>
+<programlisting>  “current-video-track”      <link linkend="GstPlayerVideoInfo"><type>GstPlayerVideoInfo</type></link>&#160;*</programlisting>
+<para>Current video track information.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstPlayer--duration" role="property"><title>The <literal>“duration”</literal> property</title>
+<indexterm zone="GstPlayer--duration"><primary>GstPlayer:duration</primary></indexterm>
+<programlisting>  “duration”                 <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Duration.</para><para>Flags: Read</para>
+<para>Default value: 18446744073709551615</para>
+</refsect2>
+<refsect2 id="GstPlayer--media-info" role="property"><title>The <literal>“media-info”</literal> property</title>
+<indexterm zone="GstPlayer--media-info"><primary>GstPlayer:media-info</primary></indexterm>
+<programlisting>  “media-info”               <link linkend="GstPlayerMediaInfo"><type>GstPlayerMediaInfo</type></link>&#160;*</programlisting>
+<para>Current media information.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstPlayer--mute" role="property"><title>The <literal>“mute”</literal> property</title>
+<indexterm zone="GstPlayer--mute"><primary>GstPlayer:mute</primary></indexterm>
+<programlisting>  “mute”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Mute.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstPlayer--pipeline" role="property"><title>The <literal>“pipeline”</literal> property</title>
+<indexterm zone="GstPlayer--pipeline"><primary>GstPlayer:pipeline</primary></indexterm>
+<programlisting>  “pipeline”                 <link linkend="GstElement"><type>GstElement</type></link>&#160;*</programlisting>
+<para>GStreamer pipeline that is used.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstPlayer--position" role="property"><title>The <literal>“position”</literal> property</title>
+<indexterm zone="GstPlayer--position"><primary>GstPlayer:position</primary></indexterm>
+<programlisting>  “position”                 <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Current Position.</para><para>Flags: Read</para>
+<para>Default value: 18446744073709551615</para>
+</refsect2>
+<refsect2 id="GstPlayer--rate" role="property"><title>The <literal>“rate”</literal> property</title>
+<indexterm zone="GstPlayer--rate"><primary>GstPlayer:rate</primary></indexterm>
+<programlisting>  “rate”                     <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Playback rate.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-64,64]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstPlayer--signal-dispatcher" role="property"><title>The <literal>“signal-dispatcher”</literal> property</title>
+<indexterm zone="GstPlayer--signal-dispatcher"><primary>GstPlayer:signal-dispatcher</primary></indexterm>
+<programlisting>  “signal-dispatcher”        <link linkend="GstPlayerSignalDispatcher"><type>GstPlayerSignalDispatcher</type></link>&#160;*</programlisting>
+<para>Dispatcher for the signals to e.g. event loops.</para><para>Flags: Write / Construct Only</para>
+</refsect2>
+<refsect2 id="GstPlayer--suburi" role="property"><title>The <literal>“suburi”</literal> property</title>
+<indexterm zone="GstPlayer--suburi"><primary>GstPlayer:suburi</primary></indexterm>
+<programlisting>  “suburi”                   <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>Current Subtitle URI.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstPlayer--uri" role="property"><title>The <literal>“uri”</literal> property</title>
+<indexterm zone="GstPlayer--uri"><primary>GstPlayer:uri</primary></indexterm>
+<programlisting>  “uri”                      <link linkend="gchar"><type>gchar</type></link>&#160;*</programlisting>
+<para>Current URI.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstPlayer--video-multiview-flags" role="property"><title>The <literal>“video-multiview-flags”</literal> property</title>
+<indexterm zone="GstPlayer--video-multiview-flags"><primary>GstPlayer:video-multiview-flags</primary></indexterm>
+<programlisting>  “video-multiview-flags”    <link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></programlisting>
+<para>Override details of the multiview frame layout.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstPlayer--video-multiview-mode" role="property"><title>The <literal>“video-multiview-mode”</literal> property</title>
+<indexterm zone="GstPlayer--video-multiview-mode"><primary>GstPlayer:video-multiview-mode</primary></indexterm>
+<programlisting>  “video-multiview-mode”     <link linkend="GstVideoMultiviewFramePacking"><type>GstVideoMultiviewFramePacking</type></link></programlisting>
+<para>Re-interpret a video stream as one of several frame-packed stereoscopic modes.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_VIDEO_MULTIVIEW_FRAME_PACKING_NONE</para>
+</refsect2>
+<refsect2 id="GstPlayer--video-renderer" role="property"><title>The <literal>“video-renderer”</literal> property</title>
+<indexterm zone="GstPlayer--video-renderer"><primary>GstPlayer:video-renderer</primary></indexterm>
+<programlisting>  “video-renderer”           <link linkend="GstPlayerVideoRenderer"><type>GstPlayerVideoRenderer</type></link>&#160;*</programlisting>
+<para>Video renderer to use for rendering videos.</para><para>Flags: Write / Construct Only</para>
+</refsect2>
+<refsect2 id="GstPlayer--volume" role="property"><title>The <literal>“volume”</literal> property</title>
+<indexterm zone="GstPlayer--volume"><primary>GstPlayer:volume</primary></indexterm>
+<programlisting>  “volume”                   <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Volume.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,10]</para>
+<para>Default value: 1</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstPlayer.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstPlayer-buffering" role="signal"><title>The <literal>“buffering”</literal> signal</title>
+<indexterm zone="GstPlayer-buffering"><primary>GstPlayer::buffering</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="gint"><type>gint</type></link>       arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-duration-changed" role="signal"><title>The <literal>“duration-changed”</literal> signal</title>
+<indexterm zone="GstPlayer-duration-changed"><primary>GstPlayer::duration-changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="guint64"><type>guint64</type></link>    arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-end-of-stream" role="signal"><title>The <literal>“end-of-stream”</literal> signal</title>
+<indexterm zone="GstPlayer-end-of-stream"><primary>GstPlayer::end-of-stream</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-error" role="signal"><title>The <literal>“error”</literal> signal</title>
+<indexterm zone="GstPlayer-error"><primary>GstPlayer::error</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="GError"><type>GError</type></link>    *arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-media-info-updated" role="signal"><title>The <literal>“media-info-updated”</literal> signal</title>
+<indexterm zone="GstPlayer-media-info-updated"><primary>GstPlayer::media-info-updated</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link>          *gstplayer,
+               <link linkend="GstPlayerMediaInfo"><type>GstPlayerMediaInfo</type></link> *arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>            user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-mute-changed" role="signal"><title>The <literal>“mute-changed”</literal> signal</title>
+<indexterm zone="GstPlayer-mute-changed"><primary>GstPlayer::mute-changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-position-updated" role="signal"><title>The <literal>“position-updated”</literal> signal</title>
+<indexterm zone="GstPlayer-position-updated"><primary>GstPlayer::position-updated</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="guint64"><type>guint64</type></link>    arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-seek-done" role="signal"><title>The <literal>“seek-done”</literal> signal</title>
+<indexterm zone="GstPlayer-seek-done"><primary>GstPlayer::seek-done</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="guint64"><type>guint64</type></link>    arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-state-changed" role="signal"><title>The <literal>“state-changed”</literal> signal</title>
+<indexterm zone="GstPlayer-state-changed"><primary>GstPlayer::state-changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link>     *gstplayer,
+               <link linkend="GstPlayerState"><type>GstPlayerState</type></link> arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>       user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-uri-loaded" role="signal"><title>The <literal>“uri-loaded”</literal> signal</title>
+<indexterm zone="GstPlayer-uri-loaded"><primary>GstPlayer::uri-loaded</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="gchar"><type>gchar</type></link>     *arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-video-dimensions-changed" role="signal"><title>The <literal>“video-dimensions-changed”</literal> signal</title>
+<indexterm zone="GstPlayer-video-dimensions-changed"><primary>GstPlayer::video-dimensions-changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="gint"><type>gint</type></link>       arg1,
+               <link linkend="gint"><type>gint</type></link>       arg2,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-volume-changed" role="signal"><title>The <literal>“volume-changed”</literal> signal</title>
+<indexterm zone="GstPlayer-volume-changed"><primary>GstPlayer::volume-changed</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2><refsect2 id="GstPlayer-warning" role="signal"><title>The <literal>“warning”</literal> signal</title>
+<indexterm zone="GstPlayer-warning"><primary>GstPlayer::warning</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstPlayer"><type>GstPlayer</type></link> *gstplayer,
+               <link linkend="GError"><type>GError</type></link>    *arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-NO-HOOKS:CAPS">No Hooks</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

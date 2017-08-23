@@ -1,0 +1,64 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-rsvgdec">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-rsvgdec.top_of_page" role="top_of_page">rsvgdec</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>rsvgdec</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstRsvgDec"/><refsect1 id="gst-plugins-bad-plugins-rsvgdec.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstRsvgDec-struct">GstRsvgDec</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rsvgdec.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstVideoDecoder">GstVideoDecoder</link>
+                    <phrase role="lineart">╰──</phrase> GstRsvgDec
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-rsvgdec.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This elements renders SVG graphics.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=image.svg ! rsvgdec ! imagefreeze ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> render and show a svg image.</para>
+</refsect3>
+
+<include href="element-rsvgdec-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rsvgdec.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rsvgdec.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstRsvgDec-struct" role="struct">
+<title>struct GstRsvgDec</title>
+<indexterm zone="GstRsvgDec-struct"><primary>GstRsvgDec</primary></indexterm>
+<programlisting language="C">struct GstRsvgDec;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

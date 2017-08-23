@@ -1,0 +1,14 @@
+prefix=
+exec_prefix=
+libdir=@baselibdir@
+includedir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+girdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/base
+typelibdir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs/gst/base
+
+Name: GStreamer bad base classes, uninstalled
+Description: Bad base classes for GStreamer elements, Not Installed
+Version: 1.12.2
+Requires: gstreamer-1.0
+
+Libs: -L${libdir} -lgstbadbase-1.0
+Cflags: -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs

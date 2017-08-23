@@ -1,0 +1,124 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glcolorbalance">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glcolorbalance.top_of_page" role="top_of_page">glcolorbalance</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glcolorbalance</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glcolorbalance.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLColorBalance--brightness">brightness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLColorBalance--contrast">contrast</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLColorBalance--hue">hue</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLColorBalance--saturation">saturation</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLColorBalance"/><refsect1 id="gst-plugins-bad-plugins-glcolorbalance.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLColorBalance-struct">GstGLColorBalance</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorbalance.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGLColorBalance
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorbalance.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLColorBalance implements
+ <link linkend="GstColorBalance">GstColorBalance</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glcolorbalance.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Adjusts brightness, contrast, hue, saturation on a video stream.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! glupload ! glcolorbalance saturation=0.0 ! glcolorconvert ! gldownload ! ximagesink
+]]></programlisting></informalexample>
+<para> This pipeline converts the image to black and white by setting the
+saturation to 0.0.</para>
+</refsect3>
+
+<include href="element-glcolorbalance-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorbalance.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorbalance.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLColorBalance-struct" role="struct">
+<title>struct GstGLColorBalance</title>
+<indexterm zone="GstGLColorBalance-struct"><primary>GstGLColorBalance</primary></indexterm>
+<programlisting language="C">struct GstGLColorBalance;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorbalance.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLColorBalance--brightness" role="property"><title>The <literal>“brightness”</literal> property</title>
+<indexterm zone="GstGLColorBalance--brightness"><primary>GstGLColorBalance:brightness</primary></indexterm>
+<programlisting>  “brightness”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>brightness.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-1,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLColorBalance--contrast" role="property"><title>The <literal>“contrast”</literal> property</title>
+<indexterm zone="GstGLColorBalance--contrast"><primary>GstGLColorBalance:contrast</primary></indexterm>
+<programlisting>  “contrast”                 <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>contrast.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,2]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstGLColorBalance--hue" role="property"><title>The <literal>“hue”</literal> property</title>
+<indexterm zone="GstGLColorBalance--hue"><primary>GstGLColorBalance:hue</primary></indexterm>
+<programlisting>  “hue”                      <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>hue.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-1,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLColorBalance--saturation" role="property"><title>The <literal>“saturation”</literal> property</title>
+<indexterm zone="GstGLColorBalance--saturation"><primary>GstGLColorBalance:saturation</primary></indexterm>
+<programlisting>  “saturation”               <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>saturation.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,2]</para>
+<para>Default value: 1</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

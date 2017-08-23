@@ -1,0 +1,104 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-wildmidi">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-wildmidi.top_of_page" role="top_of_page">wildmidi</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>wildmidi</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-wildmidi.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWildmidi--high-quality">high-quality</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWildmidi--linear-volume">linear-volume</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstWildmidi"/><refsect1 id="gst-plugins-bad-plugins-wildmidi.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstWildmidi-struct">GstWildmidi</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-wildmidi.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstWildmidi
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-wildmidi.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element renders midi-files as audio streams using</para>
+<ulink url="http://wildmidi.sourceforge.net//">Wildmidi</ulink>.
+<para>It offers better sound quality compared to the timidity element. Wildmidi
+uses the same sound-patches as timidity (it tries the path in $WILDMIDI_CFG,
+$HOME/.wildmidirc and /etc/wildmidi.cfg)</para>
+<refsect3><title>Example pipeline</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=song.mid ! wildmidi ! alsasink
+]]></programlisting></informalexample>
+<para> This example pipeline will parse the midi and render to raw audio which is
+played via alsa.</para>
+</refsect3>
+
+<include href="element-wildmidi-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-wildmidi.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-wildmidi.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstWildmidi-struct" role="struct">
+<title>struct GstWildmidi</title>
+<indexterm zone="GstWildmidi-struct"><primary>GstWildmidi</primary></indexterm>
+<programlisting language="C">struct GstWildmidi;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-wildmidi.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstWildmidi--high-quality" role="property"><title>The <literal>“high-quality”</literal> property</title>
+<indexterm zone="GstWildmidi--high-quality"><primary>GstWildmidi:high-quality</primary></indexterm>
+<programlisting>  “high-quality”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>High Quality.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstWildmidi--linear-volume" role="property"><title>The <literal>“linear-volume”</literal> property</title>
+<indexterm zone="GstWildmidi--linear-volume"><primary>GstWildmidi:linear-volume</primary></indexterm>
+<programlisting>  “linear-volume”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Linear volume.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-wildmidi.see-also">
+<title>See Also</title>
+<para>timidity</para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLMemoryPBO">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLMemoryPBO.top_of_page">GstGLMemoryPBO</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLMemoryPBO</refname>
+<refpurpose>memory subclass for GL textures</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLMemoryPBO.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-is-gl-memory-pbo">gst_is_gl_memory_pbo</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-pbo-copy-into-texture">gst_gl_memory_pbo_copy_into_texture</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-pbo-download-transfer">gst_gl_memory_pbo_download_transfer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-pbo-init-once">gst_gl_memory_pbo_init_once</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-memory-pbo-upload-transfer">gst_gl_memory_pbo_upload_transfer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLMemoryPBOAllocator"/><refsect1 id="gst-plugins-bad-libs-GstGLMemoryPBO.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryPBOAllocator-struct">GstGLMemoryPBOAllocator</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryPBOAllocatorClass">GstGLMemoryPBOAllocatorClass</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-MEMORY-PBO-ALLOCATOR-NAME:CAPS">GST_GL_MEMORY_PBO_ALLOCATOR_NAME</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLMemoryPBO">GstGLMemoryPBO</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemoryPBO.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAllocator">GstAllocator</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLMemoryAllocator">GstGLMemoryAllocator</link>
+                        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLMemoryPBOAllocator
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLMemoryPBO.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link> is created or wrapped through <link linkend="gst-gl-base-memory-alloc"><function>gst_gl_base_memory_alloc()</function></link>
+with <link linkend="GstGLVideoAllocationParams"><type>GstGLVideoAllocationParams</type></link>.</para>
+<para>Data is uploaded or downloaded from the GPU as is necessary.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemoryPBO.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-is-gl-memory-pbo" role="function" condition="since:1.8">
+<title>gst_is_gl_memory_pbo&#160;()</title>
+<indexterm zone="gst-is-gl-memory-pbo" role="1.8"><primary>gst_is_gl_memory_pbo</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_is_gl_memory_pbo (<parameter><link linkend="GstMemory"><type>GstMemory</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-is-gl-memory-pbo.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMemory"><type>GstMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-is-gl-memory-pbo.returns" role="returns">
+<title>Returns</title>
+<para> whether the memory at <parameter>mem</parameter>
+is a <link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-pbo-copy-into-texture" role="function" condition="since:1.8">
+<title>gst_gl_memory_pbo_copy_into_texture&#160;()</title>
+<indexterm zone="gst-gl-memory-pbo-copy-into-texture" role="1.8"><primary>gst_gl_memory_pbo_copy_into_texture</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_memory_pbo_copy_into_texture (<parameter><link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link> *gl_mem</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> tex_id</parameter>,
+                                     <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>,
+                                     <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> tex_format</parameter>,
+                                     <parameter><link linkend="gint"><type>gint</type></link> width</parameter>,
+                                     <parameter><link linkend="gint"><type>gint</type></link> height</parameter>,
+                                     <parameter><link linkend="gint"><type>gint</type></link> stride</parameter>,
+                                     <parameter><link linkend="gboolean"><type>gboolean</type></link> respecify</parameter>);</programlisting>
+<para>Copies <parameter>gl_mem</parameter>
+ into the texture specfified by <parameter>tex_id</parameter>
+.  The format of <parameter>tex_id</parameter>
+
+is specified by <parameter>tex_format</parameter>
+, <parameter>width</parameter>
+ and <parameter>height</parameter>
+.</para>
+<para>If <parameter>respecify</parameter>
+ is <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>, then the copy is performed in terms of the texture
+data.  This is useful for splitting RGBA textures into RG or R textures or
+vice versa. The requirement for this to succeed is that the backing texture
+data must be the same size, i.e. say a RGBA8 texture is converted into a RG8
+texture, then the RG texture must have twice as many pixels available for
+output as the RGBA texture.</para>
+<para>Otherwise, if <parameter>respecify</parameter>
+ is <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>, then the copy is performed per texel
+using glCopyTexImage.  See the OpenGL specification for details on the
+mappings between texture formats.</para>
+<refsect3 id="gst-gl-memory-pbo-copy-into-texture.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_id</para></entry>
+<entry role="parameter_description"><para>the destination texture id</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>the destination <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tex_format</para></entry>
+<entry role="parameter_description"><para>the destination <link linkend="GstGLFormat"><type>GstGLFormat</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>width of <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>height of <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>stride</para></entry>
+<entry role="parameter_description"><para>stride of the backing texture data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>respecify</para></entry>
+<entry role="parameter_description"><para>whether to copy the data or copy per texel</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-memory-pbo-copy-into-texture.returns" role="returns">
+<title>Returns</title>
+<para> Whether the copy suceeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-pbo-download-transfer" role="function" condition="since:1.8">
+<title>gst_gl_memory_pbo_download_transfer&#160;()</title>
+<indexterm zone="gst-gl-memory-pbo-download-transfer" role="1.8"><primary>gst_gl_memory_pbo_download_transfer</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_memory_pbo_download_transfer (<parameter><link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link> *gl_mem</parameter>);</programlisting>
+<para>Transfer the texture data from the texture into the PBO if necessary.</para>
+<refsect3 id="gst-gl-memory-pbo-download-transfer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-memory-pbo-init-once" role="function">
+<title>gst_gl_memory_pbo_init_once&#160;()</title>
+<indexterm zone="gst-gl-memory-pbo-init-once"><primary>gst_gl_memory_pbo_init_once</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_memory_pbo_init_once (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-memory-pbo-upload-transfer" role="function" condition="since:1.8">
+<title>gst_gl_memory_pbo_upload_transfer&#160;()</title>
+<indexterm zone="gst-gl-memory-pbo-upload-transfer" role="1.8"><primary>gst_gl_memory_pbo_upload_transfer</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_memory_pbo_upload_transfer (<parameter><link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link> *gl_mem</parameter>);</programlisting>
+<para>Transfer the texture data from the PBO into the texture if necessary.</para>
+<refsect3 id="gst-gl-memory-pbo-upload-transfer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLMemoryPBO"><type>GstGLMemoryPBO</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemoryPBO.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLMemoryPBOAllocator-struct" role="struct">
+<title>GstGLMemoryPBOAllocator</title>
+<indexterm zone="GstGLMemoryPBOAllocator-struct"><primary>GstGLMemoryPBOAllocator</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLMemoryPBOAllocator GstGLMemoryPBOAllocator;</programlisting>
+</refsect2>
+<refsect2 id="GstGLMemoryPBOAllocatorClass" role="struct">
+<title>GstGLMemoryPBOAllocatorClass</title>
+<indexterm zone="GstGLMemoryPBOAllocatorClass"><primary>GstGLMemoryPBOAllocatorClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLMemoryAllocatorClass parent_class;
+} GstGLMemoryPBOAllocatorClass;
+</programlisting>
+</refsect2>
+<refsect2 id="GST-GL-MEMORY-PBO-ALLOCATOR-NAME:CAPS" role="macro">
+<title>GST_GL_MEMORY_PBO_ALLOCATOR_NAME</title>
+<indexterm zone="GST-GL-MEMORY-PBO-ALLOCATOR-NAME:CAPS"><primary>GST_GL_MEMORY_PBO_ALLOCATOR_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_MEMORY_PBO_ALLOCATOR_NAME   "GLMemoryPBO"
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLMemoryPBO" role="struct">
+<title>GstGLMemoryPBO</title>
+<indexterm zone="GstGLMemoryPBO"><primary>GstGLMemoryPBO</primary></indexterm>
+<programlisting language="C">typedef struct {
+} GstGLMemoryPBO;
+</programlisting>
+<para>Private instance</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLMemoryPBO.see-also">
+<title>See Also</title>
+<para><link linkend="GstMemory"><type>GstMemory</type></link>, <link linkend="GstAllocator"><type>GstAllocator</type></link>, <link linkend="GstGLBufferPool"><type>GstGLBufferPool</type></link></para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,65 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-autovideoconvert">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-autovideoconvert.top_of_page" role="top_of_page">autovideoconvert</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>autovideoconvert</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstAutoVideoConvert"/><refsect1 id="gst-plugins-bad-plugins-autovideoconvert.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAutoVideoConvert-struct">GstAutoVideoConvert</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-autovideoconvert.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstAutoVideoConvert
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-autovideoconvert.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstAutoVideoConvert implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-autovideoconvert.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-autovideoconvert-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-autovideoconvert.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-autovideoconvert.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAutoVideoConvert-struct" role="struct">
+<title>struct GstAutoVideoConvert</title>
+<indexterm zone="GstAutoVideoConvert-struct"><primary>GstAutoVideoConvert</primary></indexterm>
+<programlisting language="C">struct GstAutoVideoConvert;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

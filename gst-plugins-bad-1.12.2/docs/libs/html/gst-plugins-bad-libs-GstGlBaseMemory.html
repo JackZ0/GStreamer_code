@@ -260,12 +260,12 @@
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstGlBaseMemory.object-hierarchy"></a><h2>Object Hierarchy</h2>
-<pre class="screen">    <a href="https://developer.gnome.org/gobject/unstable/gobject-Boxed-Types.html">GBoxed</a>
+<pre class="screen">    <a href="/usr/share/gtk-doc/html/gobject/gobject-Boxed-Types.html">GBoxed</a>
     <span class="lineart">╰──</span> GstGLAllocationParams
     <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct">GstAllocator</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct">GstAllocator</a>
                 <span class="lineart">╰──</span> GstGLBaseMemoryAllocator
                     <span class="lineart">├──</span> <a class="link" href="gst-plugins-bad-libs-GstGLBuffer.html#GstGLBufferAllocator">GstGLBufferAllocator</a>
                     <span class="lineart">├──</span> <a class="link" href="gst-plugins-bad-libs-GstGLMemory.html#GstGLMemoryAllocator">GstGLMemoryAllocator</a>
@@ -274,7 +274,7 @@
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstGlBaseMemory.description"></a><h2>Description</h2>
-<p>GstGLBaseMemory is a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> subclass providing the basis of support
+<p>GstGLBaseMemory is a <a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> subclass providing the basis of support
 for the mapping of GL buffers.</p>
 <p>Data is uploaded or downloaded from the GPU as is necessary.</p>
 </div>
@@ -346,7 +346,7 @@ gst_gl_allocation_params_init (<em class="parameter"><code><a class="link" href=
                                <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GstGLAllocationParamsFreeFunc" title="GstGLAllocationParamsFreeFunc ()"><span class="type">GstGLAllocationParamsFreeFunc</span></a> free</code></em>,
                                <em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> *context</code></em>,
                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gsize"><span class="type">gsize</span></a> alloc_size</code></em>,
-                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
+                               <em class="parameter"><code><a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *alloc_params</code></em>,
                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> wrapped_data</code></em>,
                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> gl_handle</code></em>,
                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
@@ -401,7 +401,7 @@ when freeing the memory.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>alloc_params</p></td>
-<td class="parameter_description"><p> a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> to apply. </p></td>
+<td class="parameter_description"><p> a <a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> to apply. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="Don't free data after the code is done."><span class="acronym">transfer none</span></acronym>][<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -559,10 +559,10 @@ multiple times.  This must be called before any other GstGLBaseMemory operation.
 <a name="gst-gl-base-memory-init"></a><h3>gst_gl_base_memory_init ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gst_gl_base_memory_init (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GstGLBaseMemory" title="GstGLBaseMemory"><span class="type">GstGLBaseMemory</span></a> *mem</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a> *allocator</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *parent</code></em>,
+                         <em class="parameter"><code><a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a> *allocator</code></em>,
+                         <em class="parameter"><code><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *parent</code></em>,
                          <em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> *context</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *params</code></em>,
+                         <em class="parameter"><code><a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *params</code></em>,
                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gsize"><span class="type">gsize</span></a> size</code></em>,
                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>,
                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Datasets.html#GDestroyNotify"><span class="type">GDestroyNotify</span></a> notify</code></em>);</pre>
@@ -584,12 +584,12 @@ gst_gl_base_memory_init (<em class="parameter"><code><a class="link" href="gst-p
 </tr>
 <tr>
 <td class="parameter_name"><p>allocator</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a> to initialize with</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a> to initialize with</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>parent</p></td>
-<td class="parameter_description"><p> the parent <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> to initialize with. </p></td>
+<td class="parameter_description"><p> the parent <a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> to initialize with. </p></td>
 <td class="parameter_annotations"><span class="annotation">[<acronym title="NULL is OK, both for passing and for returning."><span class="acronym">allow-none</span></acronym>]</span></td>
 </tr>
 <tr>
@@ -628,7 +628,7 @@ with. </p></td>
 <div class="refsect2">
 <a name="gst-is-gl-base-memory"></a><h3>gst_is_gl_base_memory ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gst_is_gl_base_memory (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *mem</code></em>);</pre>
+gst_is_gl_base_memory (<em class="parameter"><code><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> *mem</code></em>);</pre>
 <div class="refsect3">
 <a name="gst-is-gl-base-memory.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -639,7 +639,7 @@ gst_is_gl_base_memory (<em class="parameter"><code><a href="/usr/share/gtk-doc/h
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>mem</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -732,9 +732,9 @@ function to allocate and OpenGL resources needed for your application</p>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="returnvalue">gpointer</span></a>
 <span class="c_punctuation">(</span>*GstGLBaseMemoryAllocatorMapFunction<span class="c_punctuation">)</span>
                                (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GstGLBaseMemory" title="GstGLBaseMemory"><span class="type">GstGLBaseMemory</span></a> *mem</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> *info</code></em>,
+                                <em class="parameter"><code><a href="../gstreamer-1.0/GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> *info</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gsize"><span class="type">gsize</span></a> maxsize</code></em>);</pre>
-<p>Also see <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#gst-memory-map"><code class="function">gst_memory_map()</code></a>;</p>
+<p>Also see <a href="../gstreamer-1.0/GstMemory.html#gst-memory-map"><code class="function">gst_memory_map()</code></a>;</p>
 <div class="refsect3">
 <a name="GstGLBaseMemoryAllocatorMapFunction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -751,7 +751,7 @@ function to allocate and OpenGL resources needed for your application</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>info</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> to map with</p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> to map with</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -774,8 +774,8 @@ function to allocate and OpenGL resources needed for your application</p>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*GstGLBaseMemoryAllocatorUnmapFunction<span class="c_punctuation">)</span>
                                (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GstGLBaseMemory" title="GstGLBaseMemory"><span class="type">GstGLBaseMemory</span></a> *mem</code></em>,
-                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> *info</code></em>);</pre>
-<p>Also see <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#gst-memory-unmap"><code class="function">gst_memory_unmap()</code></a>;</p>
+                                <em class="parameter"><code><a href="../gstreamer-1.0/GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> *info</code></em>);</pre>
+<p>Also see <a href="../gstreamer-1.0/GstMemory.html#gst-memory-unmap"><code class="function">gst_memory_unmap()</code></a>;</p>
 <div class="refsect3">
 <a name="GstGLBaseMemoryAllocatorUnmapFunction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -792,7 +792,7 @@ function to allocate and OpenGL resources needed for your application</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>info</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> to map with</p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstMemory.html#GstMapInfo"><span class="type">GstMapInfo</span></a> to map with</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 </tbody>
@@ -808,7 +808,7 @@ function to allocate and OpenGL resources needed for your application</p>
                                (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GstGLBaseMemory" title="GstGLBaseMemory"><span class="type">GstGLBaseMemory</span></a> *mem</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gssize"><span class="type">gssize</span></a> offset</code></em>,
                                 <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gssize"><span class="type">gssize</span></a> size</code></em>);</pre>
-<p>Also see <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#gst-memory-copy"><code class="function">gst_memory_copy()</code></a>;</p>
+<p>Also see <a href="../gstreamer-1.0/GstMemory.html#gst-memory-copy"><code class="function">gst_memory_copy()</code></a>;</p>
 <div class="refsect3">
 <a name="GstGLBaseMemoryAllocatorCopyFunction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1037,9 +1037,9 @@ gst_gl_base_memory_memcpy (<em class="parameter"><code><a class="link" href="gst
 <pre class="programlisting">#define GST_MAP_GL (GST_MAP_FLAG_LAST &lt;&lt; 1)
 </pre>
 <p>Flag indicating that we should map the GL object instead of to system memory.</p>
-<p>Combining <a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GST-MAP-GL:CAPS" title="GST_MAP_GL"><span class="type">GST_MAP_GL</span></a> with <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GST-MAP-WRITE:CAPS"><span class="type">GST_MAP_WRITE</span></a> has the same semantics as though
+<p>Combining <a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GST-MAP-GL:CAPS" title="GST_MAP_GL"><span class="type">GST_MAP_GL</span></a> with <a href="../gstreamer-1.0/GstMemory.html#GST-MAP-WRITE:CAPS"><span class="type">GST_MAP_WRITE</span></a> has the same semantics as though
 you are writing to OpenGL. Conversely, combining <a class="link" href="gst-plugins-bad-libs-GstGlBaseMemory.html#GST-MAP-GL:CAPS" title="GST_MAP_GL"><span class="type">GST_MAP_GL</span></a> with
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GST-MAP-READ:CAPS"><span class="type">GST_MAP_READ</span></a> has the same semantics as though you are reading from OpenGL.</p>
+<a href="../gstreamer-1.0/GstMemory.html#GST-MAP-READ:CAPS"><span class="type">GST_MAP_READ</span></a> has the same semantics as though you are reading from OpenGL.</p>
 </div>
 <hr>
 <div class="refsect2">
@@ -1173,8 +1173,8 @@ you are writing to OpenGL. Conversely, combining <a class="link" href="gst-plugi
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
-<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *<em class="structfield"><code><a name="GstGLAllocationParams-struct.alloc-params"></a>alloc_params</code></em>;</p></td>
-<td class="struct_member_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a></p></td>
+<td class="struct_member_name"><p><a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a> *<em class="structfield"><code><a name="GstGLAllocationParams-struct.alloc-params"></a>alloc_params</code></em>;</p></td>
+<td class="struct_member_description"><p>the <a href="../gstreamer-1.0/GstAllocator.html#GstAllocationParams-struct"><span class="type">GstAllocationParams</span></a></p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
@@ -1251,7 +1251,7 @@ with</p></td>
 </colgroup>
 <tbody>
 <tr>
-<td class="struct_member_name"><p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> <em class="structfield"><code><a name="GstGLBaseMemory.mem"></a>mem</code></em>;</p></td>
+<td class="struct_member_name"><p><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> <em class="structfield"><code><a name="GstGLBaseMemory.mem"></a>mem</code></em>;</p></td>
 <td class="struct_member_description"><p>the parent object</p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
@@ -1267,7 +1267,7 @@ with</p></td>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstGlBaseMemory.see-also"></a><h2>See Also</h2>
-<p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a>, <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a></p>
+<p><a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a>, <a href="../gstreamer-1.0/GstAllocator.html#GstAllocator-struct"><span class="type">GstAllocator</span></a></p>
 </div>
 </div>
 <div class="footer">

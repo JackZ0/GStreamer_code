@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-rawparse">
+  <refmeta>
+    <refentrytitle>rawparse</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>rawparse</refname>
+    <refpurpose><anchor id="plugin-rawparse"/>Parses byte streams into raw frames</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstrawparse.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.11.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>LGPL</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-audioparse">audioparse</link></term><listitem><simpara>Converts stream into audio frames (deprecated: use rawaudioparse instead)</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-rawaudioparse">rawaudioparse</link></term><listitem><simpara>Converts unformatted data streams into timestamped raw audio frames</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-rawvideoparse">rawvideoparse</link></term><listitem><simpara>Converts unformatted data streams into timestamped raw video frames</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-unalignedaudioparse">unalignedaudioparse</link></term><listitem><simpara>Parse unaligned raw audio data</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-unalignedvideoparse">unalignedvideoparse</link></term><listitem><simpara>Parse unaligned raw video data</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-videoparse">videoparse</link></term><listitem><simpara>Converts stream into video frames (deprecated: use rawvideoparse instead)</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

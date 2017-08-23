@@ -1,0 +1,1106 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-mpegvideoparser">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-mpegvideoparser.top_of_page">GstMpegvideoParser</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstMpegvideoParser</refname>
+<refpurpose>Convenience library for mpeg1 and 2 video
+bitstream parsing.</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-mpegvideoparser.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse">gst_mpeg_video_parse</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse-sequence-header">gst_mpeg_video_parse_sequence_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse-picture-header">gst_mpeg_video_parse_picture_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse-picture-extension">gst_mpeg_video_parse_picture_extension</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse-gop">gst_mpeg_video_parse_gop</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse-sequence-extension">gst_mpeg_video_parse_sequence_extension</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse-sequence-display-extension">gst_mpeg_video_parse_sequence_display_extension</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-parse-quant-matrix-extension">gst_mpeg_video_parse_quant_matrix_extension</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-finalise-mpeg2-sequence-header">gst_mpeg_video_finalise_mpeg2_sequence_header</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-quant-matrix-get-raster-from-zigzag">gst_mpeg_video_quant_matrix_get_raster_from_zigzag</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-quant-matrix-get-zigzag-from-raster">gst_mpeg_video_quant_matrix_get_zigzag_from_raster</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-mpegvideoparser.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegVideoPacketTypeCode">GstMpegVideoPacketTypeCode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegVideoPacketExtensionCode">GstMpegVideoPacketExtensionCode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegVideoLevel">GstMpegVideoLevel</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegVideoProfile">GstMpegVideoProfile</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegVideoPictureType">GstMpegVideoPictureType</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstMpegVideoPictureStructure">GstMpegVideoPictureStructure</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegVideoSequenceHdr">GstMpegVideoSequenceHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegVideoSequenceExt">GstMpegVideoSequenceExt</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegVideoPictureHdr">GstMpegVideoPictureHdr</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegVideoGop">GstMpegVideoGop</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegVideoPictureExt">GstMpegVideoPictureExt</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegVideoQuantMatrixExt">GstMpegVideoQuantMatrixExt</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-mpegvideoparser.includes"><title>Includes</title><synopsis>#include &lt;gst/codecparsers/gstmpegvideoparser.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-mpegvideoparser.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Provides useful functions for mpeg videos bitstream parsing.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-mpegvideoparser.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-mpeg-video-parse" role="function">
+<title>gst_mpeg_video_parse&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse"><primary>gst_mpeg_video_parse</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse (<parameter><link linkend="GstMpegVideoPacket"><type>GstMpegVideoPacket</type></link> *packet</parameter>,
+                      <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                      <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                      <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<para>Parses the MPEG 1/2 video bitstream contained in <parameter>data</parameter>
+, and returns the
+offset, and if known also the size, in <parameter>packet</parameter>
+. This function will scan
+the data to find the next packet if needed.</para>
+<refsect3 id="gst-mpeg-video-parse.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>packet</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMpegVideoPacket"><type>GstMpegVideoPacket</type></link> to fill with the data and offset of the
+next packet found</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data to parse</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset from which to start parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg-video-parse.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if a packet start code was found, otherwise FALSE.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg-video-parse-sequence-header" role="function" condition="deprecated:Use gst_mpeg_video_packet_parse_sequence_header() instead.">
+<title>gst_mpeg_video_parse_sequence_header&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse-sequence-header" role="deprecated"><primary>gst_mpeg_video_parse_sequence_header</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse_sequence_header (<parameter><link linkend="GstMpegVideoSequenceHdr"><type>GstMpegVideoSequenceHdr</type></link> *seqhdr</parameter>,
+                                      <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                      <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                      <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<warning><para><literal>gst_mpeg_video_parse_sequence_header</literal> is deprecated and should not be used in newly-written code.</para> <para>Use <link linkend="gst-mpeg-video-packet-parse-sequence-header"><function>gst_mpeg_video_packet_parse_sequence_header()</function></link> instead.</para>
+</warning>
+<para>Parses the <parameter>seqhdr</parameter>
+ Mpeg Video Sequence Header structure members from <parameter>data</parameter>
+</para>
+<refsect3 id="gst-mpeg-video-parse-sequence-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>seqhdr</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegVideoSequenceHdr"><type>GstMpegVideoSequenceHdr</type></link> structure to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data from which to parse the sequence header</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset in byte from which to start parsing <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg-video-parse-sequence-header.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the seqhdr could be parsed correctly, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg-video-parse-picture-header" role="function" condition="deprecated:Use gst_mpeg_video_packet_parse_picture_header() instead.">
+<title>gst_mpeg_video_parse_picture_header&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse-picture-header" role="deprecated"><primary>gst_mpeg_video_parse_picture_header</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse_picture_header (<parameter><link linkend="GstMpegVideoPictureHdr"><type>GstMpegVideoPictureHdr</type></link> *hdr</parameter>,
+                                     <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                     <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                     <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<warning><para><literal>gst_mpeg_video_parse_picture_header</literal> is deprecated and should not be used in newly-written code.</para> <para>Use <link linkend="gst-mpeg-video-packet-parse-picture-header"><function>gst_mpeg_video_packet_parse_picture_header()</function></link> instead.</para>
+</warning>
+<para>Parsers the <parameter>hdr</parameter>
+ Mpeg Video Picture Header structure members from <parameter>data</parameter>
+</para>
+<refsect3 id="gst-mpeg-video-parse-picture-header.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>hdr</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegVideoPictureHdr"><type>GstMpegVideoPictureHdr</type></link> structure to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data from which to parse the picture header</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset in byte from which to start the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg-video-parse-picture-header.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the picture sequence could be parsed correctly, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>
+otherwise.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg-video-parse-picture-extension" role="function" condition="deprecated:Use gst_mpeg_video_packet_parse_picture_extension() instead.">
+<title>gst_mpeg_video_parse_picture_extension&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse-picture-extension" role="deprecated"><primary>gst_mpeg_video_parse_picture_extension</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse_picture_extension
+                               (<parameter><link linkend="GstMpegVideoPictureExt"><type>GstMpegVideoPictureExt</type></link> *ext</parameter>,
+                                <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<warning><para><literal>gst_mpeg_video_parse_picture_extension</literal> is deprecated and should not be used in newly-written code.</para> <para>Use <link linkend="gst-mpeg-video-packet-parse-picture-extension"><function>gst_mpeg_video_packet_parse_picture_extension()</function></link> instead.</para>
+</warning>
+<para>Parse the <parameter>ext</parameter>
+ Mpeg Video Picture Extension structure members from <parameter>data</parameter>
+</para>
+<refsect3 id="gst-mpeg-video-parse-picture-extension.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ext</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegVideoPictureExt"><type>GstMpegVideoPictureExt</type></link> structure to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data from which to parse the picture extension</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset in byte from which to start the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg-video-parse-picture-extension.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the picture extension could be parsed correctly,
+<link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg-video-parse-gop" role="function" condition="deprecated:Use gst_mpeg_video_packet_parse_gop() instead.">
+<title>gst_mpeg_video_parse_gop&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse-gop" role="deprecated"><primary>gst_mpeg_video_parse_gop</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse_gop (<parameter><link linkend="GstMpegVideoGop"><type>GstMpegVideoGop</type></link> *gop</parameter>,
+                          <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                          <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                          <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<warning><para><literal>gst_mpeg_video_parse_gop</literal> is deprecated and should not be used in newly-written code.</para> <para>Use <link linkend="gst-mpeg-video-packet-parse-gop"><function>gst_mpeg_video_packet_parse_gop()</function></link> instead.</para>
+</warning>
+<para>Parses the <parameter>gop</parameter>
+ Mpeg Video Group of Picture structure members from <parameter>data</parameter>
+</para>
+<refsect3 id="gst-mpeg-video-parse-gop.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gop</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegVideoGop"><type>GstMpegVideoGop</type></link> structure to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data from which to parse the gop</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset in byte from which to start the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg-video-parse-gop.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the gop could be parsed correctly, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg-video-parse-sequence-extension" role="function" condition="deprecated:Use gst_mpeg_video_packet_parse_sequence_extension() instead.">
+<title>gst_mpeg_video_parse_sequence_extension&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse-sequence-extension" role="deprecated"><primary>gst_mpeg_video_parse_sequence_extension</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse_sequence_extension
+                               (<parameter><link linkend="GstMpegVideoSequenceExt"><type>GstMpegVideoSequenceExt</type></link> *seqext</parameter>,
+                                <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<warning><para><literal>gst_mpeg_video_parse_sequence_extension</literal> is deprecated and should not be used in newly-written code.</para> <para>Use <link linkend="gst-mpeg-video-packet-parse-sequence-extension"><function>gst_mpeg_video_packet_parse_sequence_extension()</function></link> instead.</para>
+</warning>
+<para>Parses the <parameter>seqext</parameter>
+ Mpeg Video Sequence Extension structure members from <parameter>data</parameter>
+</para>
+<refsect3 id="gst-mpeg-video-parse-sequence-extension.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>seqext</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegVideoSequenceExt"><type>GstMpegVideoSequenceExt</type></link> structure to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data from which to parse the sequence extension</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset in byte from which to start parsing <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg-video-parse-sequence-extension.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the seqext could be parsed correctly, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg-video-parse-sequence-display-extension" role="function" condition="deprecated:">
+<title>gst_mpeg_video_parse_sequence_display_extension&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse-sequence-display-extension" role="deprecated"><primary>gst_mpeg_video_parse_sequence_display_extension</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse_sequence_display_extension
+                               (<parameter><link linkend="GstMpegVideoSequenceDisplayExt"><type>GstMpegVideoSequenceDisplayExt</type></link> *seqdisplayext</parameter>,
+                                <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<warning><para><literal>gst_mpeg_video_parse_sequence_display_extension</literal> is deprecated and should not be used in newly-written code.</para></warning>
+</refsect2>
+<refsect2 id="gst-mpeg-video-parse-quant-matrix-extension" role="function" condition="deprecated:Use gst_mpeg_video_packet_parse_quant_matrix_extension() instead.">
+<title>gst_mpeg_video_parse_quant_matrix_extension&#160;()</title>
+<indexterm zone="gst-mpeg-video-parse-quant-matrix-extension" role="deprecated"><primary>gst_mpeg_video_parse_quant_matrix_extension</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_parse_quant_matrix_extension
+                               (<parameter><link linkend="GstMpegVideoQuantMatrixExt"><type>GstMpegVideoQuantMatrixExt</type></link> *quant</parameter>,
+                                <parameter>const <link linkend="guint8"><type>guint8</type></link> *data</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> offset</parameter>);</programlisting>
+<warning><para><literal>gst_mpeg_video_parse_quant_matrix_extension</literal> is deprecated and should not be used in newly-written code.</para> <para>Use <link linkend="gst-mpeg-video-packet-parse-quant-matrix-extension"><function>gst_mpeg_video_packet_parse_quant_matrix_extension()</function></link> instead.</para>
+</warning>
+<para>Parses the <parameter>quant</parameter>
+ Mpeg Video Quant Matrix Extension structure members from
+<parameter>data</parameter>
+</para>
+<refsect3 id="gst-mpeg-video-parse-quant-matrix-extension.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>quant</para></entry>
+<entry role="parameter_description"><para> The <link linkend="GstMpegVideoQuantMatrixExt"><type>GstMpegVideoQuantMatrixExt</type></link> structure to fill. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>The data from which to parse the Quantization Matrix extension</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>The size of <parameter>data</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>The offset in byte from which to start the parsing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-mpeg-video-parse-quant-matrix-extension.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the quant matrix extension could be parsed correctly,
+<link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-mpeg-video-finalise-mpeg2-sequence-header" role="function">
+<title>gst_mpeg_video_finalise_mpeg2_sequence_header&#160;()</title>
+<indexterm zone="gst-mpeg-video-finalise-mpeg2-sequence-header"><primary>gst_mpeg_video_finalise_mpeg2_sequence_header</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_mpeg_video_finalise_mpeg2_sequence_header
+                               (<parameter><link linkend="GstMpegVideoSequenceHdr"><type>GstMpegVideoSequenceHdr</type></link> *hdr</parameter>,
+                                <parameter><link linkend="GstMpegVideoSequenceExt"><type>GstMpegVideoSequenceExt</type></link> *seqext</parameter>,
+                                <parameter><link linkend="GstMpegVideoSequenceDisplayExt"><type>GstMpegVideoSequenceDisplayExt</type></link> *displayext</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-mpeg-video-quant-matrix-get-raster-from-zigzag" role="function" condition="since:1.2">
+<title>gst_mpeg_video_quant_matrix_get_raster_from_zigzag&#160;()</title>
+<indexterm zone="gst-mpeg-video-quant-matrix-get-raster-from-zigzag" role="1.2"><primary>gst_mpeg_video_quant_matrix_get_raster_from_zigzag</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_mpeg_video_quant_matrix_get_raster_from_zigzag
+                               (<parameter><link linkend="guint8"><type>guint8</type></link> out_quant[64]</parameter>,
+                                <parameter>const <link linkend="guint8"><type>guint8</type></link> quant[64]</parameter>);</programlisting>
+<para>Converts quantization matrix <parameter>quant</parameter>
+ from zigzag scan order to
+raster scan order and store the resulting factors into <parameter>out_quant</parameter>
+.</para>
+<para>Note: it is an error to pass the same table in both <parameter>quant</parameter>
+ and
+<parameter>out_quant</parameter>
+ arguments.</para>
+<refsect3 id="gst-mpeg-video-quant-matrix-get-raster-from-zigzag.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>out_quant</para></entry>
+<entry role="parameter_description"><para> The resulting quantization matrix. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>quant</para></entry>
+<entry role="parameter_description"><para>The source quantization matrix</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+<refsect2 id="gst-mpeg-video-quant-matrix-get-zigzag-from-raster" role="function" condition="since:1.2">
+<title>gst_mpeg_video_quant_matrix_get_zigzag_from_raster&#160;()</title>
+<indexterm zone="gst-mpeg-video-quant-matrix-get-zigzag-from-raster" role="1.2"><primary>gst_mpeg_video_quant_matrix_get_zigzag_from_raster</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_mpeg_video_quant_matrix_get_zigzag_from_raster
+                               (<parameter><link linkend="guint8"><type>guint8</type></link> out_quant[64]</parameter>,
+                                <parameter>const <link linkend="guint8"><type>guint8</type></link> quant[64]</parameter>);</programlisting>
+<para>Converts quantization matrix <parameter>quant</parameter>
+ from raster scan order to
+zigzag scan order and store the resulting factors into <parameter>out_quant</parameter>
+.</para>
+<para>Note: it is an error to pass the same table in both <parameter>quant</parameter>
+ and
+<parameter>out_quant</parameter>
+ arguments.</para>
+<refsect3 id="gst-mpeg-video-quant-matrix-get-zigzag-from-raster.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>out_quant</para></entry>
+<entry role="parameter_description"><para> The resulting quantization matrix. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>quant</para></entry>
+<entry role="parameter_description"><para>The source quantization matrix</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-mpegvideoparser.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMpegVideoPacketTypeCode" role="enum">
+<title>enum GstMpegVideoPacketTypeCode</title>
+<indexterm zone="GstMpegVideoPacketTypeCode"><primary>GstMpegVideoPacketTypeCode</primary></indexterm>
+<para>Indicates the type of MPEG packet</para>
+<refsect3 id="GstMpegVideoPacketTypeCode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-PICTURE:CAPS">GST_MPEG_VIDEO_PACKET_PICTURE</para></entry>
+<entry role="enum_member_description"><para>Picture packet starting code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-SLICE-MIN:CAPS">GST_MPEG_VIDEO_PACKET_SLICE_MIN</para></entry>
+<entry role="enum_member_description"><para>Slice min packet starting code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-SLICE-MAX:CAPS">GST_MPEG_VIDEO_PACKET_SLICE_MAX</para></entry>
+<entry role="enum_member_description"><para>Slice max packet starting code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-USER-DATA:CAPS">GST_MPEG_VIDEO_PACKET_USER_DATA</para></entry>
+<entry role="enum_member_description"><para>User data packet starting code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-SEQUENCE:CAPS">GST_MPEG_VIDEO_PACKET_SEQUENCE</para></entry>
+<entry role="enum_member_description"><para>Sequence packet starting code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-EXTENSION:CAPS">GST_MPEG_VIDEO_PACKET_EXTENSION</para></entry>
+<entry role="enum_member_description"><para>Extension packet starting code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-SEQUENCE-END:CAPS">GST_MPEG_VIDEO_PACKET_SEQUENCE_END</para></entry>
+<entry role="enum_member_description"><para>Sequence end packet code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-GOP:CAPS">GST_MPEG_VIDEO_PACKET_GOP</para></entry>
+<entry role="enum_member_description"><para>Group of Picture packet starting code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-NONE:CAPS">GST_MPEG_VIDEO_PACKET_NONE</para></entry>
+<entry role="enum_member_description"><para>None packet code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegVideoPacketExtensionCode" role="enum">
+<title>enum GstMpegVideoPacketExtensionCode</title>
+<indexterm zone="GstMpegVideoPacketExtensionCode"><primary>GstMpegVideoPacketExtensionCode</primary></indexterm>
+<para>Indicates what type of packets are in this block, some are mutually
+exclusive though - ie, sequence packs are accumulated separately. GOP &amp;
+Picture may occur together or separately.</para>
+<refsect3 id="GstMpegVideoPacketExtensionCode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-EXT-SEQUENCE:CAPS">GST_MPEG_VIDEO_PACKET_EXT_SEQUENCE</para></entry>
+<entry role="enum_member_description"><para>Sequence extension code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-EXT-SEQUENCE-DISPLAY:CAPS">GST_MPEG_VIDEO_PACKET_EXT_SEQUENCE_DISPLAY</para></entry>
+<entry role="enum_member_description"><para>Sequence Display extension code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-EXT-QUANT-MATRIX:CAPS">GST_MPEG_VIDEO_PACKET_EXT_QUANT_MATRIX</para></entry>
+<entry role="enum_member_description"><para>Quantization Matrix extension code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-EXT-SEQUENCE-SCALABLE:CAPS">GST_MPEG_VIDEO_PACKET_EXT_SEQUENCE_SCALABLE</para></entry>
+<entry role="enum_member_description"><para>Sequence Scalable extension code</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PACKET-EXT-PICTURE:CAPS">GST_MPEG_VIDEO_PACKET_EXT_PICTURE</para></entry>
+<entry role="enum_member_description"><para>Picture coding extension</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegVideoLevel" role="enum">
+<title>enum GstMpegVideoLevel</title>
+<indexterm zone="GstMpegVideoLevel"><primary>GstMpegVideoLevel</primary></indexterm>
+<para>Mpeg-2 Levels.</para>
+<refsect3 id="GstMpegVideoLevel.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-LEVEL-HIGH:CAPS">GST_MPEG_VIDEO_LEVEL_HIGH</para></entry>
+<entry role="enum_member_description"><para>High level (HL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-LEVEL-HIGH-1440:CAPS">GST_MPEG_VIDEO_LEVEL_HIGH_1440</para></entry>
+<entry role="enum_member_description"><para>High 1440 level (H-14)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-LEVEL-MAIN:CAPS">GST_MPEG_VIDEO_LEVEL_MAIN</para></entry>
+<entry role="enum_member_description"><para>Main level (ML)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-LEVEL-LOW:CAPS">GST_MPEG_VIDEO_LEVEL_LOW</para></entry>
+<entry role="enum_member_description"><para>Low level (LL)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegVideoProfile" role="enum">
+<title>enum GstMpegVideoProfile</title>
+<indexterm zone="GstMpegVideoProfile"><primary>GstMpegVideoProfile</primary></indexterm>
+<para>Mpeg-2 Profiles.</para>
+<refsect3 id="GstMpegVideoProfile.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PROFILE-422:CAPS">GST_MPEG_VIDEO_PROFILE_422</para></entry>
+<entry role="enum_member_description"><para>4:2:2 profile (422)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PROFILE-HIGH:CAPS">GST_MPEG_VIDEO_PROFILE_HIGH</para></entry>
+<entry role="enum_member_description"><para>High profile (HP)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PROFILE-SPATIALLY-SCALABLE:CAPS">GST_MPEG_VIDEO_PROFILE_SPATIALLY_SCALABLE</para></entry>
+<entry role="enum_member_description"><para>Spatially Scalable profile (Spatial)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PROFILE-SNR-SCALABLE:CAPS">GST_MPEG_VIDEO_PROFILE_SNR_SCALABLE</para></entry>
+<entry role="enum_member_description"><para>SNR Scalable profile (SNR)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PROFILE-MAIN:CAPS">GST_MPEG_VIDEO_PROFILE_MAIN</para></entry>
+<entry role="enum_member_description"><para>Main profile (MP)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PROFILE-SIMPLE:CAPS">GST_MPEG_VIDEO_PROFILE_SIMPLE</para></entry>
+<entry role="enum_member_description"><para>Simple profile (SP)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegVideoPictureType" role="enum">
+<title>enum GstMpegVideoPictureType</title>
+<indexterm zone="GstMpegVideoPictureType"><primary>GstMpegVideoPictureType</primary></indexterm>
+<para>Picture type.</para>
+<refsect3 id="GstMpegVideoPictureType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PICTURE-TYPE-I:CAPS">GST_MPEG_VIDEO_PICTURE_TYPE_I</para></entry>
+<entry role="enum_member_description"><para>Intra-coded (I) frame</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PICTURE-TYPE-P:CAPS">GST_MPEG_VIDEO_PICTURE_TYPE_P</para></entry>
+<entry role="enum_member_description"><para>Predictive-codec (P) frame</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PICTURE-TYPE-B:CAPS">GST_MPEG_VIDEO_PICTURE_TYPE_B</para></entry>
+<entry role="enum_member_description"><para>Bidirectionally predictive-coded (B) frame</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PICTURE-TYPE-D:CAPS">GST_MPEG_VIDEO_PICTURE_TYPE_D</para></entry>
+<entry role="enum_member_description"><para>D frame</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegVideoPictureStructure" role="enum">
+<title>enum GstMpegVideoPictureStructure</title>
+<indexterm zone="GstMpegVideoPictureStructure"><primary>GstMpegVideoPictureStructure</primary></indexterm>
+<para>Picture structure type.</para>
+<refsect3 id="GstMpegVideoPictureStructure.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PICTURE-STRUCTURE-TOP-FIELD:CAPS">GST_MPEG_VIDEO_PICTURE_STRUCTURE_TOP_FIELD</para></entry>
+<entry role="enum_member_description"><para>Top field</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PICTURE-STRUCTURE-BOTTOM-FIELD:CAPS">GST_MPEG_VIDEO_PICTURE_STRUCTURE_BOTTOM_FIELD</para></entry>
+<entry role="enum_member_description"><para>Bottom field</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-MPEG-VIDEO-PICTURE-STRUCTURE-FRAME:CAPS">GST_MPEG_VIDEO_PICTURE_STRUCTURE_FRAME</para></entry>
+<entry role="enum_member_description"><para>Frame picture</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstMpegVideoSequenceHdr" role="struct">
+<title>struct GstMpegVideoSequenceHdr</title>
+<indexterm zone="GstMpegVideoSequenceHdr"><primary>GstMpegVideoSequenceHdr</primary></indexterm>
+<programlisting language="C">struct GstMpegVideoSequenceHdr {
+  guint16 width, height;
+  guint8  aspect_ratio_info;
+  guint8  frame_rate_code;
+  guint32 bitrate_value;
+  guint16 vbv_buffer_size_value;
+
+  guint8  constrained_parameters_flag;
+
+  guint8  load_intra_quantiser_matrix;
+  guint8  intra_quantizer_matrix[64];
+  guint8  load_non_intra_quantiser_matrix;
+  guint8  non_intra_quantizer_matrix[64];
+
+  /* Calculated values */
+  guint   par_w, par_h;
+  guint   fps_n, fps_d;
+  guint   bitrate;
+};
+</programlisting>
+<para>The Mpeg2 Video Sequence Header structure.</para>
+<refsect3 id="GstMpegVideoSequenceHdr.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.width">width</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Width of each frame</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.height">height</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Height of each frame</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.aspect-ratio-info">aspect_ratio_info</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.frame-rate-code">frame_rate_code</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint32"><type>guint32</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.bitrate-value">bitrate_value</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Value of the bitrate as is in the stream (400bps unit)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.vbv-buffer-size-value">vbv_buffer_size_value</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.constrained-parameters-flag">constrained_parameters_flag</structfield>;</para></entry>
+<entry role="struct_member_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if this stream uses contrained parameters.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.load-intra-quantiser-matrix">load_intra_quantiser_matrix</structfield>;</para></entry>
+<entry role="struct_member_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> indicates the presence of intra_quantiser_matrix</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.intra-quantizer-matrix">intra_quantizer_matrix</structfield>[64];</para></entry>
+<entry role="struct_member_description"><para>intra-quantization table, in zigzag scan order</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.load-non-intra-quantiser-matrix">load_non_intra_quantiser_matrix</structfield>;</para></entry>
+<entry role="struct_member_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> indicates the presence of non_intra_quantiser_matrix</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.non-intra-quantizer-matrix">non_intra_quantizer_matrix</structfield>[64];</para></entry>
+<entry role="struct_member_description"><para>non-intra quantization table, in zigzag scan order</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.par-w">par_w</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Calculated Pixel Aspect Ratio width</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.par-h">par_h</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Calculated Pixel Aspect Ratio height</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.fps-n">fps_n</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Calculated Framrate nominator</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.fps-d">fps_d</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Calculated Framerate denominator</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpegVideoSequenceHdr.bitrate">bitrate</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the real bitrate of the Mpeg video stream in bits per second, 0 if VBR stream</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegVideoSequenceExt" role="struct">
+<title>struct GstMpegVideoSequenceExt</title>
+<indexterm zone="GstMpegVideoSequenceExt"><primary>GstMpegVideoSequenceExt</primary></indexterm>
+<programlisting language="C">struct GstMpegVideoSequenceExt {
+  /* mpeg2 decoder profile */
+  guint8 profile;
+  /* mpeg2 decoder level */
+  guint8 level;
+
+  guint8 progressive;
+  guint8 chroma_format;
+
+  guint8 horiz_size_ext, vert_size_ext;
+
+  guint16 bitrate_ext;
+  guint8 vbv_buffer_size_extension;
+  guint8 low_delay;
+  guint8 fps_n_ext, fps_d_ext;
+
+  /* Additional information */
+  guint8 profile_level_escape_bit;
+};
+</programlisting>
+<para>The Mpeg2 Video Sequence Extension structure.</para>
+<refsect3 id="GstMpegVideoSequenceExt.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.profile">profile</structfield>;</para></entry>
+<entry role="struct_member_description"><para>mpeg2 decoder profile</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.level">level</structfield>;</para></entry>
+<entry role="struct_member_description"><para>mpeg2 decoder level</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.progressive">progressive</structfield>;</para></entry>
+<entry role="struct_member_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the frames are progressive <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.chroma-format">chroma_format</structfield>;</para></entry>
+<entry role="struct_member_description"><para>indicates the chrominance format</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.horiz-size-ext">horiz_size_ext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Horizontal size</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.vert-size-ext">vert_size_ext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Vertical size</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.bitrate-ext">bitrate_ext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The bitrate</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.vbv-buffer-size-extension">vbv_buffer_size_extension</structfield>;</para></entry>
+<entry role="struct_member_description"><para>VBV vuffer size</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.low-delay">low_delay</structfield>;</para></entry>
+<entry role="struct_member_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the sequence doesn't contain any B-pictures, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>
+otherwise</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.fps-n-ext">fps_n_ext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Framerate nominator code</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.fps-d-ext">fps_d_ext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Framerate denominator code</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoSequenceExt.profile-level-escape-bit">profile_level_escape_bit</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Escape bit. If set, the meaning of the
+<parameter>profile</parameter>
+and <parameter>level</parameter>
+fields is different.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegVideoPictureHdr" role="struct">
+<title>struct GstMpegVideoPictureHdr</title>
+<indexterm zone="GstMpegVideoPictureHdr"><primary>GstMpegVideoPictureHdr</primary></indexterm>
+<programlisting language="C">struct GstMpegVideoPictureHdr {
+  guint16 tsn;
+  guint8 pic_type;
+  guint16 vbv_delay;
+
+  guint8 full_pel_forward_vector, full_pel_backward_vector;
+
+  guint8 f_code[2][2];
+};
+</programlisting>
+<para>The Mpeg2 Video Picture Header structure.</para>
+<refsect3 id="GstMpegVideoPictureHdr.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegVideoPictureHdr.tsn">tsn</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Temporal Sequence Number</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureHdr.pic-type">pic_type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Type of the frame</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint16"><type>guint16</type></link>&#160;<structfield id="GstMpegVideoPictureHdr.vbv-delay">vbv_delay</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureHdr.full-pel-forward-vector">full_pel_forward_vector</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the full pel forward flag of
+the frame: 0 or 1.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureHdr.full-pel-backward-vector">full_pel_backward_vector</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the full pel backward flag
+of the frame: 0 or 1.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureHdr.f-code">f_code</structfield>[2][2];</para></entry>
+<entry role="struct_member_description"><para>F code</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegVideoGop" role="struct">
+<title>struct GstMpegVideoGop</title>
+<indexterm zone="GstMpegVideoGop"><primary>GstMpegVideoGop</primary></indexterm>
+<programlisting language="C">struct GstMpegVideoGop {
+  guint8 drop_frame_flag;
+
+  guint8 hour, minute, second, frame;
+
+  guint8 closed_gop;
+  guint8 broken_link;
+};
+</programlisting>
+<para>The Mpeg Video Group of Picture structure.</para>
+<refsect3 id="GstMpegVideoGop.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoGop.drop-frame-flag">drop_frame_flag</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Drop Frame Flag</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoGop.hour">hour</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Hour (0-23)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoGop.minute">minute</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Minute (O-59)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoGop.second">second</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Second (0-59)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoGop.frame">frame</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Frame (0-59)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoGop.closed-gop">closed_gop</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Closed Gop</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoGop.broken-link">broken_link</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Broken link</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegVideoPictureExt" role="struct">
+<title>struct GstMpegVideoPictureExt</title>
+<indexterm zone="GstMpegVideoPictureExt"><primary>GstMpegVideoPictureExt</primary></indexterm>
+<programlisting language="C">struct GstMpegVideoPictureExt {
+  guint8 f_code[2][2];
+
+  guint8 intra_dc_precision;
+  guint8 picture_structure;
+  guint8 top_field_first;
+  guint8 frame_pred_frame_dct;
+  guint8 concealment_motion_vectors;
+  guint8 q_scale_type;
+  guint8 intra_vlc_format;
+  guint8 alternate_scan;
+  guint8 repeat_first_field;
+  guint8 chroma_420_type;
+  guint8 progressive_frame;
+  guint8 composite_display;
+  guint8 v_axis;
+  guint8 field_sequence;
+  guint8 sub_carrier;
+  guint8 burst_amplitude;
+  guint8 sub_carrier_phase;
+};
+</programlisting>
+<para>The Mpeg2 Video Picture Extension structure.</para>
+<refsect3 id="GstMpegVideoPictureExt.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.f-code">f_code</structfield>[2][2];</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.intra-dc-precision">intra_dc_precision</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Intra DC precision</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.picture-structure">picture_structure</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Structure of the picture</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.top-field-first">top_field_first</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Top field first</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.frame-pred-frame-dct">frame_pred_frame_dct</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Frame</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.concealment-motion-vectors">concealment_motion_vectors</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Concealment Motion Vectors</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.q-scale-type">q_scale_type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Q Scale Type</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.intra-vlc-format">intra_vlc_format</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Intra Vlc Format</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.alternate-scan">alternate_scan</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Alternate Scan</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.repeat-first-field">repeat_first_field</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Repeat First Field</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.chroma-420-type">chroma_420_type</structfield>;</para></entry>
+<entry role="struct_member_description"><para>Chroma 420 Type</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.progressive-frame">progressive_frame</structfield>;</para></entry>
+<entry role="struct_member_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the frame is progressive <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.composite-display">composite_display</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.v-axis">v_axis</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.field-sequence">field_sequence</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.sub-carrier">sub_carrier</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.burst-amplitude">burst_amplitude</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint8"><type>guint8</type></link>&#160;<structfield id="GstMpegVideoPictureExt.sub-carrier-phase">sub_carrier_phase</structfield>;</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstMpegVideoQuantMatrixExt" role="struct">
+<title>struct GstMpegVideoQuantMatrixExt</title>
+<indexterm zone="GstMpegVideoQuantMatrixExt"><primary>GstMpegVideoQuantMatrixExt</primary></indexterm>
+<programlisting language="C">struct GstMpegVideoQuantMatrixExt {
+ guint8 load_intra_quantiser_matrix;
+ guint8 intra_quantiser_matrix[64];
+ guint8 load_non_intra_quantiser_matrix;
+ guint8 non_intra_quantiser_matrix[64];
+ guint8 load_chroma_intra_quantiser_matrix;
+ guint8 chroma_intra_quantiser_matrix[64];
+ guint8 load_chroma_non_intra_quantiser_matrix;
+ guint8 chroma_non_intra_quantiser_matrix[64];
+};
+</programlisting>
+<para>The Quant Matrix Extension structure that exposes quantization
+matrices in zigzag scan order. i.e. the original encoded scan
+order.</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

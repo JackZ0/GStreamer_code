@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLWindowX11">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLWindowX11.top_of_page">GstGLWindowX11</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLWindowX11</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowX11.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLWindowX11"><returnvalue>GstGLWindowX11</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-window-x11-new">gst_gl_window_x11_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-x11-create-window">gst_gl_window_x11_create_window</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-x11-trap-x-errors">gst_gl_window_x11_trap_x_errors</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-x11-untrap-x-errors">gst_gl_window_x11_untrap_x_errors</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowX11.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLWindowX11">GstGLWindowX11</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLWindowX11Class">GstGLWindowX11Class</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowX11.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowX11.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-window-x11-new" role="function">
+<title>gst_gl_window_x11_new&#160;()</title>
+<indexterm zone="gst-gl-window-x11-new"><primary>gst_gl_window_x11_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLWindowX11"><returnvalue>GstGLWindowX11</returnvalue></link>&#160;*
+gst_gl_window_x11_new (<parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-window-x11-create-window" role="function">
+<title>gst_gl_window_x11_create_window&#160;()</title>
+<indexterm zone="gst-gl-window-x11-create-window"><primary>gst_gl_window_x11_create_window</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_window_x11_create_window (<parameter><link linkend="GstGLWindowX11"><type>GstGLWindowX11</type></link> *window_x11</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-window-x11-trap-x-errors" role="function">
+<title>gst_gl_window_x11_trap_x_errors&#160;()</title>
+<indexterm zone="gst-gl-window-x11-trap-x-errors"><primary>gst_gl_window_x11_trap_x_errors</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_x11_trap_x_errors (<parameter><type>void</type></parameter>);</programlisting>
+<para>Traps every X error until <link linkend="gst-gl-window-x11-untrap-x-errors"><function>gst_gl_window_x11_untrap_x_errors()</function></link> is called.</para>
+</refsect2>
+<refsect2 id="gst-gl-window-x11-untrap-x-errors" role="function">
+<title>gst_gl_window_x11_untrap_x_errors&#160;()</title>
+<indexterm zone="gst-gl-window-x11-untrap-x-errors"><primary>gst_gl_window_x11_untrap_x_errors</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+gst_gl_window_x11_untrap_x_errors (<parameter><type>void</type></parameter>);</programlisting>
+<para>Removes the X error trap and returns the current status.</para>
+<refsect3 id="gst-gl-window-x11-untrap-x-errors.returns" role="returns">
+<title>Returns</title>
+<para> the trapped error code, or 0 for success</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowX11.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLWindowX11" role="struct">
+<title>struct GstGLWindowX11</title>
+<indexterm zone="GstGLWindowX11"><primary>GstGLWindowX11</primary></indexterm>
+<programlisting language="C">struct GstGLWindowX11 {
+};
+</programlisting>
+<para>Opaque <link linkend="GstGLWindowX11"><type>GstGLWindowX11</type></link> object</para>
+</refsect2>
+<refsect2 id="GstGLWindowX11Class" role="struct">
+<title>struct GstGLWindowX11Class</title>
+<indexterm zone="GstGLWindowX11Class"><primary>GstGLWindowX11Class</primary></indexterm>
+<programlisting language="C">struct GstGLWindowX11Class {
+};
+</programlisting>
+<para>Opaque <link linkend="GstGLWindowX11Class"><type>GstGLWindowX11Class</type></link> object</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

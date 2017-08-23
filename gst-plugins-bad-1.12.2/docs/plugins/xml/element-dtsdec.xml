@@ -1,0 +1,92 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-dtsdec">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-dtsdec.top_of_page" role="top_of_page">dtsdec</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dtsdec</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-dtsdec.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstDtsDec--drc">drc</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDtsDec"/><refsect1 id="gst-plugins-bad-plugins-dtsdec.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDtsDec-struct">GstDtsDec</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtsdec.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAudioDecoder">GstAudioDecoder</link>
+                    <phrase role="lineart">╰──</phrase> GstDtsDec
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-dtsdec.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Digital Theatre System (DTS) audio decoder</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 dvdreadsrc title=1 ! mpegpsdemux ! dtsdec ! audioresample ! audioconvert ! alsasink
+]]></programlisting></informalexample>
+<para> Play a DTS audio track from a dvd.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=abc.dts ! dtsdec ! audioresample ! audioconvert ! alsasink
+]]></programlisting></informalexample>
+<para> Decode a standalone file and play it.</para>
+</refsect3>
+
+<include href="element-dtsdec-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtsdec.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtsdec.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDtsDec-struct" role="struct">
+<title>struct GstDtsDec</title>
+<indexterm zone="GstDtsDec-struct"><primary>GstDtsDec</primary></indexterm>
+<programlisting language="C">struct GstDtsDec;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtsdec.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDtsDec--drc" role="property"><title>The <literal>“drc”</literal> property</title>
+<indexterm zone="GstDtsDec--drc"><primary>GstDtsDec:drc</primary></indexterm>
+<programlisting>  “drc”                      <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Use Dynamic Range Compression.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

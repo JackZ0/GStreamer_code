@@ -436,7 +436,7 @@ mentioned in the release notes for the affected release.
 <a name="GstPhotographyCapturePrepared"></a><h3>GstPhotographyCapturePrepared ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*GstPhotographyCapturePrepared<span class="c_punctuation">)</span> (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> data</code></em>,
-                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *configured_caps</code></em>);</pre>
+                                  <em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *configured_caps</code></em>);</pre>
 <p>This callback will be called when the element has finished preparations
 and is ready for image capture. The next buffer that element produces
 will be of <em class="parameter"><code>configured_caps</code></em>
@@ -458,7 +458,7 @@ to e.g. reconfigure capsfilters in pipeline if any.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>configured_caps</p></td>
-<td class="parameter_description"><p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> defining the configured capture format.
+<td class="parameter_description"><p><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> defining the configured capture format.
 Ownership of these caps stays in the element.</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
@@ -472,7 +472,7 @@ Ownership of these caps stays in the element.</p></td>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_ev_compensation (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *ev_comp</code></em>);</pre>
-<p>Get the ev compensation value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the ev compensation value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-ev-compensation.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -484,7 +484,7 @@ gst_photography_get_ev_compensation (<em class="parameter"><code><a class="link"
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -506,7 +506,7 @@ gst_photography_get_ev_compensation (<em class="parameter"><code><a class="link"
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_iso_speed (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> *iso_speed</code></em>);</pre>
-<p>Get the ISO value (light sensivity) for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the ISO value (light sensivity) for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-iso-speed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -518,7 +518,7 @@ gst_photography_get_iso_speed (<em class="parameter"><code><a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -540,7 +540,7 @@ gst_photography_get_iso_speed (<em class="parameter"><code><a class="link" href=
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_aperture (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> *aperture</code></em>);</pre>
-<p>Get the aperture value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the aperture value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-aperture.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -552,7 +552,7 @@ gst_photography_get_aperture (<em class="parameter"><code><a class="link" href="
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -574,7 +574,7 @@ gst_photography_get_aperture (<em class="parameter"><code><a class="link" href="
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_exposure (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint32"><span class="type">guint32</span></a> *exposure</code></em>);</pre>
-<p>Get the fixed exposure time (in us) for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the fixed exposure time (in us) for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-exposure.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -586,7 +586,7 @@ gst_photography_get_exposure (<em class="parameter"><code><a class="link" href="
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -609,7 +609,7 @@ gst_photography_get_exposure (<em class="parameter"><code><a class="link" href="
 gst_photography_get_white_balance_mode
                                (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyWhiteBalanceMode" title="enum GstPhotographyWhiteBalanceMode"><span class="type">GstPhotographyWhiteBalanceMode</span></a> *wb_mode</code></em>);</pre>
-<p>Get the white balance mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the white balance mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-white-balance-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -621,7 +621,7 @@ gst_photography_get_white_balance_mode
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -643,7 +643,7 @@ gst_photography_get_white_balance_mode
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_color_tone_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                      <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyColorToneMode" title="enum GstPhotographyColorToneMode"><span class="type">GstPhotographyColorToneMode</span></a> *tone_mode</code></em>);</pre>
-<p>Get the color tone mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the color tone mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-color-tone-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -655,7 +655,7 @@ gst_photography_get_color_tone_mode (<em class="parameter"><code><a class="link"
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -677,7 +677,7 @@ gst_photography_get_color_tone_mode (<em class="parameter"><code><a class="link"
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_scene_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographySceneMode" title="enum GstPhotographySceneMode"><span class="type">GstPhotographySceneMode</span></a> *scene_mode</code></em>);</pre>
-<p>Get the scene mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the scene mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-scene-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -689,7 +689,7 @@ gst_photography_get_scene_mode (<em class="parameter"><code><a class="link" href
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -711,7 +711,7 @@ gst_photography_get_scene_mode (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_flash_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyFlashMode" title="enum GstPhotographyFlashMode"><span class="type">GstPhotographyFlashMode</span></a> *flash_mode</code></em>);</pre>
-<p>Get the flash mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the flash mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-flash-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -723,7 +723,7 @@ gst_photography_get_flash_mode (<em class="parameter"><code><a class="link" href
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -745,7 +745,7 @@ gst_photography_get_flash_mode (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_flicker_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                   <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyFlickerReductionMode" title="enum GstPhotographyFlickerReductionMode"><span class="type">GstPhotographyFlickerReductionMode</span></a> *mode</code></em>);</pre>
-<p>Get the flicker mode value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the flicker mode value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-flicker-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -757,7 +757,7 @@ gst_photography_get_flicker_mode (<em class="parameter"><code><a class="link" hr
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -779,7 +779,7 @@ gst_photography_get_flicker_mode (<em class="parameter"><code><a class="link" hr
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_focus_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyFocusMode" title="enum GstPhotographyFocusMode"><span class="type">GstPhotographyFocusMode</span></a> *mode</code></em>);</pre>
-<p>Get the focus mode value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the focus mode value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-focus-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -791,7 +791,7 @@ gst_photography_get_focus_mode (<em class="parameter"><code><a class="link" href
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -813,7 +813,7 @@ gst_photography_get_focus_mode (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_noise_reduction (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                      <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyNoiseReduction" title="enum GstPhotographyNoiseReduction"><span class="type">GstPhotographyNoiseReduction</span></a> *noise_reduction</code></em>);</pre>
-<p>Get the noise reduction mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the noise reduction mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-noise-reduction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -825,7 +825,7 @@ gst_photography_get_noise_reduction (<em class="parameter"><code><a class="link"
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -847,7 +847,7 @@ gst_photography_get_noise_reduction (<em class="parameter"><code><a class="link"
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_get_zoom (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> *zoom</code></em>);</pre>
-<p>Get the zoom value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Get the zoom value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-get-zoom.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -859,7 +859,7 @@ gst_photography_get_zoom (<em class="parameter"><code><a class="link" href="gst-
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -881,7 +881,7 @@ gst_photography_get_zoom (<em class="parameter"><code><a class="link" href="gst-
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_ev_compensation (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> ev_comp</code></em>);</pre>
-<p>Set the ev compensation value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the ev compensation value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-ev-compensation.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -893,7 +893,7 @@ gst_photography_set_ev_compensation (<em class="parameter"><code><a class="link"
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -915,7 +915,7 @@ gst_photography_set_ev_compensation (<em class="parameter"><code><a class="link"
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_iso_speed (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> iso_speed</code></em>);</pre>
-<p>Set the ISO value (light sensivity) for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the ISO value (light sensivity) for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-iso-speed.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -927,7 +927,7 @@ gst_photography_set_iso_speed (<em class="parameter"><code><a class="link" href=
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -949,7 +949,7 @@ gst_photography_set_iso_speed (<em class="parameter"><code><a class="link" href=
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_aperture (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> aperture</code></em>);</pre>
-<p>Set the aperture value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the aperture value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-aperture.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -961,7 +961,7 @@ gst_photography_set_aperture (<em class="parameter"><code><a class="link" href="
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -983,7 +983,7 @@ gst_photography_set_aperture (<em class="parameter"><code><a class="link" href="
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_exposure (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> exposure</code></em>);</pre>
-<p>Set the fixed exposure time (in us) for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the fixed exposure time (in us) for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-exposure.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -995,7 +995,7 @@ gst_photography_set_exposure (<em class="parameter"><code><a class="link" href="
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1018,7 +1018,7 @@ gst_photography_set_exposure (<em class="parameter"><code><a class="link" href="
 gst_photography_set_white_balance_mode
                                (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyWhiteBalanceMode" title="enum GstPhotographyWhiteBalanceMode"><span class="type">GstPhotographyWhiteBalanceMode</span></a> wb_mode</code></em>);</pre>
-<p>Set the white balance mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the white balance mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-white-balance-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1030,7 +1030,7 @@ gst_photography_set_white_balance_mode
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1052,7 +1052,7 @@ gst_photography_set_white_balance_mode
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_color_tone_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                      <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyColorToneMode" title="enum GstPhotographyColorToneMode"><span class="type">GstPhotographyColorToneMode</span></a> tone_mode</code></em>);</pre>
-<p>Set the color tone mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the color tone mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-color-tone-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1064,7 +1064,7 @@ gst_photography_set_color_tone_mode (<em class="parameter"><code><a class="link"
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1086,7 +1086,7 @@ gst_photography_set_color_tone_mode (<em class="parameter"><code><a class="link"
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_scene_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographySceneMode" title="enum GstPhotographySceneMode"><span class="type">GstPhotographySceneMode</span></a> scene_mode</code></em>);</pre>
-<p>Set the scene mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the scene mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-scene-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1098,7 +1098,7 @@ gst_photography_set_scene_mode (<em class="parameter"><code><a class="link" href
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1120,7 +1120,7 @@ gst_photography_set_scene_mode (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_flash_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyFlashMode" title="enum GstPhotographyFlashMode"><span class="type">GstPhotographyFlashMode</span></a> flash_mode</code></em>);</pre>
-<p>Set the flash mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the flash mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-flash-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1132,7 +1132,7 @@ gst_photography_set_flash_mode (<em class="parameter"><code><a class="link" href
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1154,7 +1154,7 @@ gst_photography_set_flash_mode (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_flicker_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                   <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyFlickerReductionMode" title="enum GstPhotographyFlickerReductionMode"><span class="type">GstPhotographyFlickerReductionMode</span></a> mode</code></em>);</pre>
-<p>Set the flicker mode value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>.</p>
+<p>Set the flicker mode value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>.</p>
 <div class="refsect3">
 <a name="gst-photography-set-flicker-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1166,7 +1166,7 @@ gst_photography_set_flicker_mode (<em class="parameter"><code><a class="link" hr
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1188,7 +1188,7 @@ gst_photography_set_flicker_mode (<em class="parameter"><code><a class="link" hr
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_focus_mode (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                 <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyFocusMode" title="enum GstPhotographyFocusMode"><span class="type">GstPhotographyFocusMode</span></a> mode</code></em>);</pre>
-<p>Set the focus mode value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>.</p>
+<p>Set the focus mode value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>.</p>
 <div class="refsect3">
 <a name="gst-photography-set-focus-mode.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1200,7 +1200,7 @@ gst_photography_set_focus_mode (<em class="parameter"><code><a class="link" href
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1222,7 +1222,7 @@ gst_photography_set_focus_mode (<em class="parameter"><code><a class="link" href
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_noise_reduction (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                      <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyNoiseReduction" title="enum GstPhotographyNoiseReduction"><span class="type">GstPhotographyNoiseReduction</span></a> noise_reduction</code></em>);</pre>
-<p>Set the noise reduction mode for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
+<p>Set the noise reduction mode for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p>
 <div class="refsect3">
 <a name="gst-photography-set-noise-reduction.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1234,7 +1234,7 @@ gst_photography_set_noise_reduction (<em class="parameter"><code><a class="link"
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1256,7 +1256,7 @@ gst_photography_set_noise_reduction (<em class="parameter"><code><a class="link"
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_set_zoom (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gfloat"><span class="type">gfloat</span></a> zoom</code></em>);</pre>
-<p>Set the zoom value for the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>.
+<p>Set the zoom value for the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>.
 E.g. 1.0 to get original image and 3.0 for 3x zoom and so on.</p>
 <div class="refsect3">
 <a name="gst-photography-set-zoom.parameters"></a><h4>Parameters</h4>
@@ -1269,7 +1269,7 @@ E.g. 1.0 to get original image and 3.0 for 3x zoom and so on.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1291,7 +1291,7 @@ E.g. 1.0 to get original image and 3.0 for 3x zoom and so on.</p>
 <pre class="programlisting"><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyCaps" title="enum GstPhotographyCaps"><span class="returnvalue">GstPhotographyCaps</span></a>
 gst_photography_get_capabilities (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>);</pre>
 <p>Get <a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyCaps" title="enum GstPhotographyCaps"><span class="type">GstPhotographyCaps</span></a> bitmask value that indicates what photography
-interface features the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> supports</p>
+interface features the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> supports</p>
 <div class="refsect3">
 <a name="gst-photography-get-capabilities.parameters"></a><h4>Parameters</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -1302,7 +1302,7 @@ interface features the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.
 </colgroup>
 <tbody><tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr></tbody>
 </table></div>
@@ -1318,7 +1318,7 @@ interface features the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_photography_prepare_for_capture (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> *photo</code></em>,
                                      <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotographyCapturePrepared" title="GstPhotographyCapturePrepared ()"><span class="type">GstPhotographyCapturePrepared</span></a> func</code></em>,
-                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> *capture_caps</code></em>,
+                                     <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> *capture_caps</code></em>,
                                      <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>Start preparations for capture. Preparations can take indeterminate
 amount of time and <em class="parameter"><code>func</code></em>
@@ -1335,7 +1335,7 @@ done. Image capture will begin after callback returns.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1345,7 +1345,7 @@ done. Image capture will begin after callback returns.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>capture_caps</p></td>
-<td class="parameter_description"><p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstCaps.html#GstCaps-struct"><span class="type">GstCaps</span></a> defining the desired format of the captured image</p></td>
+<td class="parameter_description"><p><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstCaps.html#GstCaps"><span class="type">GstCaps</span></a> defining the desired format of the captured image</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1381,7 +1381,7 @@ message is posted to bus when autofocusing has finished.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1411,7 +1411,7 @@ gst_photography_set_config (<em class="parameter"><code><a class="link" href="gs
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -1445,7 +1445,7 @@ gst_photography_get_config (<em class="parameter"><code><a class="link" href="gs
 <tbody>
 <tr>
 <td class="parameter_name"><p>photo</p></td>
-<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p><a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GstPhotography" title="GstPhotography"><span class="type">GstPhotography</span></a> interface of a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -2219,7 +2219,7 @@ supports.</p>
 <div class="refsect2">
 <a name="GstPhotographyShakeRisk"></a><h3>enum GstPhotographyShakeRisk</h3>
 <p>Risk level of captured image becoming "shaken" due to camera movement and
-too long exposure time. Used in <a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GST-PHOTOGRAPHY-SHAKE-RISK:CAPS" title="GST_PHOTOGRAPHY_SHAKE_RISK"><span class="type">GST_PHOTOGRAPHY_SHAKE_RISK</span></a> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMessage.html#GstMessage-struct"><span class="type">GstMessage</span></a>.</p>
+too long exposure time. Used in <a class="link" href="gst-plugins-bad-libs-GstPhotography.html#GST-PHOTOGRAPHY-SHAKE-RISK:CAPS" title="GST_PHOTOGRAPHY_SHAKE_RISK"><span class="type">GST_PHOTOGRAPHY_SHAKE_RISK</span></a> <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstMessage.html#GstMessage"><span class="type">GstMessage</span></a>.</p>
 <div class="refsect3">
 <a name="GstPhotographyShakeRisk.members"></a><h4>Members</h4>
 <div class="informaltable"><table class="informaltable" width="100%" border="0">
@@ -2259,7 +2259,7 @@ too long exposure time. Used in <a class="link" href="gst-plugins-bad-libs-GstPh
 <a name="GST-PHOTOGRAPHY-AUTOFOCUS-DONE:CAPS"></a><h3>GST_PHOTOGRAPHY_AUTOFOCUS_DONE</h3>
 <pre class="programlisting">#define GST_PHOTOGRAPHY_AUTOFOCUS_DONE "autofocus-done"
 </pre>
-<p>Name of custom GstMessage that will be posted to <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBus.html#GstBus-struct"><span class="type">GstBus</span></a> when autofocusing
+<p>Name of custom GstMessage that will be posted to <a href="../gstreamer-1.0/GstBus.html#GstBus-struct"><span class="type">GstBus</span></a> when autofocusing
 is complete.
 This message contains following fields:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
@@ -2292,7 +2292,7 @@ This message contains following fields:</p>
 <a name="GST-PHOTOGRAPHY-SHAKE-RISK:CAPS"></a><h3>GST_PHOTOGRAPHY_SHAKE_RISK</h3>
 <pre class="programlisting">#define GST_PHOTOGRAPHY_SHAKE_RISK "shake-risk"
 </pre>
-<p>Name of custom GstMessage that is posted to <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBus.html#GstBus-struct"><span class="type">GstBus</span></a> during autofocusing
+<p>Name of custom GstMessage that is posted to <a href="../gstreamer-1.0/GstBus.html#GstBus-struct"><span class="type">GstBus</span></a> during autofocusing
 process. It is posted if there is change in the risk of captured image
 becoming "shaken" due to camera movement and too long exposure time.</p>
 <p>This message contains following fields:</p>

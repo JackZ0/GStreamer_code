@@ -1,0 +1,98 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-chopmydata">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-chopmydata.top_of_page" role="top_of_page">chopmydata</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>chopmydata</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-chopmydata.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstChopMyData--max-size">max-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstChopMyData--min-size">min-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstChopMyData--step-size">step-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstChopMyData"/><refsect1 id="gst-plugins-bad-plugins-chopmydata.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstChopMyData-struct">GstChopMyData</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-chopmydata.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstChopMyData
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-chopmydata.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-chopmydata-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-chopmydata.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-chopmydata.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstChopMyData-struct" role="struct">
+<title>struct GstChopMyData</title>
+<indexterm zone="GstChopMyData-struct"><primary>GstChopMyData</primary></indexterm>
+<programlisting language="C">struct GstChopMyData;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-chopmydata.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstChopMyData--max-size" role="property"><title>The <literal>“max-size”</literal> property</title>
+<indexterm zone="GstChopMyData--max-size"><primary>GstChopMyData:max-size</primary></indexterm>
+<programlisting>  “max-size”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Maximum size of outgoing buffers.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 4096</para>
+</refsect2>
+<refsect2 id="GstChopMyData--min-size" role="property"><title>The <literal>“min-size”</literal> property</title>
+<indexterm zone="GstChopMyData--min-size"><primary>GstChopMyData:min-size</primary></indexterm>
+<programlisting>  “min-size”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Minimum size of outgoing buffers.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstChopMyData--step-size" role="property"><title>The <literal>“step-size”</literal> property</title>
+<indexterm zone="GstChopMyData--step-size"><primary>GstChopMyData:step-size</primary></indexterm>
+<programlisting>  “step-size”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Step increment for random buffer sizes.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 4096</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-bayer2rgb">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-bayer2rgb.top_of_page" role="top_of_page">bayer2rgb</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>bayer2rgb</refname>
+<refpurpose/>
+</refnamediv>
+
+
+
+<refsect1 id="gst-plugins-bad-plugins-bayer2rgb.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Decodes raw camera bayer (fourcc BA81) to RGB.</para>
+
+<include href="element-bayer2rgb-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bayer2rgb.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bayer2rgb.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

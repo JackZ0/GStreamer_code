@@ -1,0 +1,125 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glviewconvert">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glviewconvert.top_of_page" role="top_of_page">glviewconvert</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glviewconvert</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glviewconvert.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstGLStereoDownmix"><type>GstGLStereoDownmix</type></link></entry><entry role="property_name"><link linkend="GstGLViewConvertElement--downmix-mode">downmix-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></entry><entry role="property_name"><link linkend="GstGLViewConvertElement--input-flags-override">input-flags-override</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewFramePacking"><type>GstVideoMultiviewFramePacking</type></link></entry><entry role="property_name"><link linkend="GstGLViewConvertElement--input-mode-override">input-mode-override</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></entry><entry role="property_name"><link linkend="GstGLViewConvertElement--output-flags-override">output-flags-override</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoMultiviewMode"><type>GstVideoMultiviewMode</type></link></entry><entry role="property_name"><link linkend="GstGLViewConvertElement--output-mode-override">output-mode-override</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLViewConvertElement"/><refsect1 id="gst-plugins-bad-plugins-glviewconvert.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLViewConvertElement-struct">GstGLViewConvertElement</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glviewconvert.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGLViewConvertElement
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glviewconvert.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Convert stereoscopic video between different representations using fragment shaders.</para>
+<para>The element can use either property settings or caps negotiation to choose the
+input and output formats to process.</para>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! glupload ! glviewconvert ! glimagesink
+]]></programlisting></informalexample>
+<para> Simple placebo example demonstrating identity passthrough of mono video</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc pattern=checkers-1 ! glupload ! \
+    glviewconvert input-mode-override=side-by-side ! glimagesink -v
+]]></programlisting></informalexample>
+<para> Force re-interpretation of the input checkers pattern as a side-by-side stereoscopic
+   image and display in glimagesink.
+FBO (Frame Buffer Object) and GLSL (OpenGL Shading Language) are required.</para>
+</refsect3>
+
+<include href="element-glviewconvert-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glviewconvert.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glviewconvert.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLViewConvertElement-struct" role="struct">
+<title>struct GstGLViewConvertElement</title>
+<indexterm zone="GstGLViewConvertElement-struct"><primary>GstGLViewConvertElement</primary></indexterm>
+<programlisting language="C">struct GstGLViewConvertElement;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glviewconvert.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLViewConvertElement--downmix-mode" role="property"><title>The <literal>“downmix-mode”</literal> property</title>
+<indexterm zone="GstGLViewConvertElement--downmix-mode"><primary>GstGLViewConvertElement:downmix-mode</primary></indexterm>
+<programlisting>  “downmix-mode”             <link linkend="GstGLStereoDownmix"><type>GstGLStereoDownmix</type></link></programlisting>
+<para>Output anaglyph type to generate when downmixing to mono.</para><para>Flags: Read / Write</para>
+<para>Default value: Dubois optimised Green-Magenta anaglyph</para>
+</refsect2>
+<refsect2 id="GstGLViewConvertElement--input-flags-override" role="property"><title>The <literal>“input-flags-override”</literal> property</title>
+<indexterm zone="GstGLViewConvertElement--input-flags-override"><primary>GstGLViewConvertElement:input-flags-override</primary></indexterm>
+<programlisting>  “input-flags-override”     <link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></programlisting>
+<para>Override any input information about multiview layout flags.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLViewConvertElement--input-mode-override" role="property"><title>The <literal>“input-mode-override”</literal> property</title>
+<indexterm zone="GstGLViewConvertElement--input-mode-override"><primary>GstGLViewConvertElement:input-mode-override</primary></indexterm>
+<programlisting>  “input-mode-override”      <link linkend="GstVideoMultiviewFramePacking"><type>GstVideoMultiviewFramePacking</type></link></programlisting>
+<para>Override any input information about multiview layout.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_VIDEO_MULTIVIEW_FRAME_PACKING_NONE</para>
+</refsect2>
+<refsect2 id="GstGLViewConvertElement--output-flags-override" role="property"><title>The <literal>“output-flags-override”</literal> property</title>
+<indexterm zone="GstGLViewConvertElement--output-flags-override"><primary>GstGLViewConvertElement:output-flags-override</primary></indexterm>
+<programlisting>  “output-flags-override”    <link linkend="GstVideoMultiviewFlags"><type>GstVideoMultiviewFlags</type></link></programlisting>
+<para>Override automatic negotiation for output multiview layout flags.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLViewConvertElement--output-mode-override" role="property"><title>The <literal>“output-mode-override”</literal> property</title>
+<indexterm zone="GstGLViewConvertElement--output-mode-override"><primary>GstGLViewConvertElement:output-mode-override</primary></indexterm>
+<programlisting>  “output-mode-override”     <link linkend="GstVideoMultiviewMode"><type>GstVideoMultiviewMode</type></link></programlisting>
+<para>Override automatic output mode selection for multiview layout.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_VIDEO_MULTIVIEW_MODE_NONE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

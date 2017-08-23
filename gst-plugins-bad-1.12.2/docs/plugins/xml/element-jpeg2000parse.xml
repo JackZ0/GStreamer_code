@@ -1,0 +1,58 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-jpeg2000parse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-jpeg2000parse.top_of_page" role="top_of_page">jpeg2000parse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>jpeg2000parse</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstJPEG2000Parse"/><refsect1 id="gst-plugins-bad-plugins-jpeg2000parse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstJPEG2000Parse-struct">GstJPEG2000Parse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-jpeg2000parse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseParse">GstBaseParse</link>
+                    <phrase role="lineart">╰──</phrase> GstJPEG2000Parse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-jpeg2000parse.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-jpeg2000parse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-jpeg2000parse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-jpeg2000parse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstJPEG2000Parse-struct" role="struct">
+<title>struct GstJPEG2000Parse</title>
+<indexterm zone="GstJPEG2000Parse-struct"><primary>GstJPEG2000Parse</primary></indexterm>
+<programlisting language="C">struct GstJPEG2000Parse;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

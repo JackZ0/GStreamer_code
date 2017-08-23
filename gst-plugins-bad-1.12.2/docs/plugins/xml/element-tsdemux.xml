@@ -1,0 +1,90 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-tsdemux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-tsdemux.top_of_page" role="top_of_page">tsdemux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>tsdemux</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-tsdemux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstTSDemux--emit-stats">emit-stats</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstTSDemux--program-number">program-number</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstTSDemux"/><refsect1 id="gst-plugins-bad-plugins-tsdemux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstTSDemux-struct">GstTSDemux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tsdemux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="MpegTSBase">MpegTSBase</link>
+                    <phrase role="lineart">╰──</phrase> GstTSDemux
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-tsdemux.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-tsdemux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tsdemux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tsdemux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTSDemux-struct" role="struct">
+<title>struct GstTSDemux</title>
+<indexterm zone="GstTSDemux-struct"><primary>GstTSDemux</primary></indexterm>
+<programlisting language="C">struct GstTSDemux;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tsdemux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstTSDemux--emit-stats" role="property"><title>The <literal>“emit-stats”</literal> property</title>
+<indexterm zone="GstTSDemux--emit-stats"><primary>GstTSDemux:emit-stats</primary></indexterm>
+<programlisting>  “emit-stats”               <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Emit messages for every pcr/opcr/pts/dts.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstTSDemux--program-number" role="property"><title>The <literal>“program-number”</literal> property</title>
+<indexterm zone="GstTSDemux--program-number"><primary>GstTSDemux:program-number</primary></indexterm>
+<programlisting>  “program-number”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Program Number to demux for (-1 to ignore).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+
+<refentry id="gst-plugins-bad-plugins-gltransformation">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-plugins-gltransformation.top_of_page">gltransformation</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gltransformation</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-gltransformation.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLTransformation">GstGLTransformation</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-gltransformation.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Transforms video on the GPU.</para>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 gltestsrc ! gltransformation rotation-z=45 ! glimagesink
+]]></programlisting></informalexample>
+<para> A pipeline to rotate by 45 degrees</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 gltestsrc ! gltransformation translation-x=0.5 ! glimagesink
+]]></programlisting></informalexample>
+<para> Translate the video by 0.5</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 gltestsrc ! gltransformation scale-y=0.5 scale-x=0.5 ! glimagesink
+]]></programlisting></informalexample>
+<para> Resize the video by 0.5</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 gltestsrc ! gltransformation rotation-x=-45 ortho=True ! glimagesink
+]]></programlisting></informalexample>
+<para> Rotate the video around the X-Axis by -45° with an orthographic projection</para>
+</refsect3>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gltransformation.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gltransformation.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLTransformation" role="struct">
+<title>struct GstGLTransformation</title>
+<indexterm zone="GstGLTransformation"><primary>GstGLTransformation</primary></indexterm>
+<programlisting language="C">struct GstGLTransformation {
+    GstGLFilter filter;
+
+    GstGLShader *shader;
+    GLuint       vao;
+    GLuint       vbo_indices;
+    GLuint       vertex_buffer;
+    GLint        attr_position;
+    GLint        attr_texture;
+
+    GstGLMemory *in_tex;
+    GstGLMemory *out_tex;
+
+    gfloat xrotation;
+    gfloat yrotation;
+    gfloat zrotation;
+
+    gfloat xscale;
+    gfloat yscale;
+
+    gfloat xtranslation;
+    gfloat ytranslation;
+    gfloat ztranslation;
+
+    gfloat xpivot;
+    gfloat ypivot;
+    gfloat zpivot;
+
+    /* perspective */
+    gfloat fov;
+    gfloat aspect;
+    gfloat znear;
+    gfloat zfar;
+    gboolean ortho;
+
+    graphene_matrix_t model_matrix;
+    graphene_matrix_t view_matrix;
+    graphene_matrix_t projection_matrix;
+    graphene_matrix_t inv_model_matrix;
+    graphene_matrix_t inv_view_matrix;
+    graphene_matrix_t inv_projection_matrix;
+    graphene_matrix_t mvp_matrix;
+
+    graphene_vec3_t camera_position;
+
+    gboolean downstream_supports_affine_meta;
+    gboolean caps_change;
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

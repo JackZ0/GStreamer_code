@@ -1,0 +1,151 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-faac">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-faac.top_of_page" role="top_of_page">faac</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>faac</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-faac.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFaac--bitrate">bitrate</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFaac--midside">midside</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstFaacOutputFormat"><type>GstFaacOutputFormat</type></link></entry><entry role="property_name"><link linkend="GstFaac--outputformat">outputformat</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFaacProfile"><type>GstFaacProfile</type></link></entry><entry role="property_name"><link linkend="GstFaac--profile">profile</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFaacShortCtl"><type>GstFaacShortCtl</type></link></entry><entry role="property_name"><link linkend="GstFaac--shortctl">shortctl</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFaac--tns">tns</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFaac--quality">quality</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstFaacBrtype"><type>GstFaacBrtype</type></link></entry><entry role="property_name"><link linkend="GstFaac--rate-control">rate-control</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstFaac"/><refsect1 id="gst-plugins-bad-plugins-faac.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstFaac-struct">GstFaac</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faac.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAudioEncoder">GstAudioEncoder</link>
+                    <phrase role="lineart">╰──</phrase> GstFaac
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faac.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstFaac implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-faac.description" role="desc">
+<title role="desc.title">Description</title>
+<para>faac encodes raw audio to AAC (MPEG-4 part 3) streams.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 audiotestsrc wave=sine num-buffers=100 ! audioconvert ! faac ! matroskamux ! filesink location=sine.mkv
+]]></programlisting></informalexample>
+<para> Encode a sine beep as aac and write to matroska container.</para>
+</refsect3>
+
+<include href="element-faac-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faac.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faac.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFaac-struct" role="struct">
+<title>struct GstFaac</title>
+<indexterm zone="GstFaac-struct"><primary>GstFaac</primary></indexterm>
+<programlisting language="C">struct GstFaac;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faac.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstFaac--bitrate" role="property"><title>The <literal>“bitrate”</literal> property</title>
+<indexterm zone="GstFaac--bitrate"><primary>GstFaac:bitrate</primary></indexterm>
+<programlisting>  “bitrate”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Average Bitrate (ABR) in bits/sec.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [8000,320000]</para>
+<para>Default value: 128000</para>
+</refsect2>
+<refsect2 id="GstFaac--midside" role="property"><title>The <literal>“midside”</literal> property</title>
+<indexterm zone="GstFaac--midside"><primary>GstFaac:midside</primary></indexterm>
+<programlisting>  “midside”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Allow mid/side encoding.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstFaac--outputformat" role="property"><title>The <literal>“outputformat”</literal> property</title>
+<indexterm zone="GstFaac--outputformat"><primary>GstFaac:outputformat</primary></indexterm>
+<programlisting>  “outputformat”             <link linkend="GstFaacOutputFormat"><type>GstFaacOutputFormat</type></link></programlisting>
+<para>Format of output frames.</para><para>Flags: Read / Write</para>
+<para>Default value: OUTPUTFORMAT_RAW</para>
+</refsect2>
+<refsect2 id="GstFaac--profile" role="property"><title>The <literal>“profile”</literal> property</title>
+<indexterm zone="GstFaac--profile"><primary>GstFaac:profile</primary></indexterm>
+<programlisting>  “profile”                  <link linkend="GstFaacProfile"><type>GstFaacProfile</type></link></programlisting>
+<para>MPEG/AAC encoding profile.</para><para>Flags: Read / Write</para>
+<para>Default value: LC</para>
+</refsect2>
+<refsect2 id="GstFaac--shortctl" role="property"><title>The <literal>“shortctl”</literal> property</title>
+<indexterm zone="GstFaac--shortctl"><primary>GstFaac:shortctl</primary></indexterm>
+<programlisting>  “shortctl”                 <link linkend="GstFaacShortCtl"><type>GstFaacShortCtl</type></link></programlisting>
+<para>Block type encorcing.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: SHORTCTL_NORMAL</para>
+</refsect2>
+<refsect2 id="GstFaac--tns" role="property"><title>The <literal>“tns”</literal> property</title>
+<indexterm zone="GstFaac--tns"><primary>GstFaac:tns</primary></indexterm>
+<programlisting>  “tns”                      <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Use temporal noise shaping.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstFaac--quality" role="property"><title>The <literal>“quality”</literal> property</title>
+<indexterm zone="GstFaac--quality"><primary>GstFaac:quality</primary></indexterm>
+<programlisting>  “quality”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Variable bitrate (VBR) quantizer quality in %.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [1,1000]</para>
+<para>Default value: 100</para>
+</refsect2>
+<refsect2 id="GstFaac--rate-control" role="property"><title>The <literal>“rate-control”</literal> property</title>
+<indexterm zone="GstFaac--rate-control"><primary>GstFaac:rate-control</primary></indexterm>
+<programlisting>  “rate-control”             <link linkend="GstFaacBrtype"><type>GstFaacBrtype</type></link></programlisting>
+<para>Encoding bitrate type (VBR/ABR).</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: VBR</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-faac.see-also">
+<title>See Also</title>
+<para>faad</para>
+
+</refsect1>
+
+</refentry>

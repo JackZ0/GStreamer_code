@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-geometrictransform">
+  <refmeta>
+    <refentrytitle>geometrictransform</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>geometrictransform</refname>
+    <refpurpose><anchor id="plugin-geometrictransform"/>Various geometric image transform elements</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstgeometrictransform.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.12.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>LGPL</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-bulge">bulge</link></term><listitem><simpara>Adds a protuberance in the center point</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-circle">circle</link></term><listitem><simpara>Warps the picture into an arc shaped form</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-diffuse">diffuse</link></term><listitem><simpara>Diffuses the image by moving its pixels in random directions</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-fisheye">fisheye</link></term><listitem><simpara>Simulate a fisheye lens by zooming on the center of the image and compressing the edges</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-kaleidoscope">kaleidoscope</link></term><listitem><simpara>Applies 'kaleidoscope' geometric transform to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-marble">marble</link></term><listitem><simpara>Applies a marbling effect to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-mirror">mirror</link></term><listitem><simpara>Split the image into two halves and reflect one over each other</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-perspective">perspective</link></term><listitem><simpara>Apply a 2D perspective transform</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-pinch">pinch</link></term><listitem><simpara>Applies 'pinch' geometric transform to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-rotate">rotate</link></term><listitem><simpara>Rotates the picture by an arbitrary angle</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-sphere">sphere</link></term><listitem><simpara>Applies 'sphere' geometric transform to the image</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-square">square</link></term><listitem><simpara>Distort center part of the image into a square</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-stretch">stretch</link></term><listitem><simpara>Stretch the image in a circle around the center point</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-tunnel">tunnel</link></term><listitem><simpara>Light tunnel effect</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-twirl">twirl</link></term><listitem><simpara>Twists the image from the center out</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-waterripple">waterripple</link></term><listitem><simpara>Creates a water ripple effect on the image</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

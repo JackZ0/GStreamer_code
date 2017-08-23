@@ -1,0 +1,440 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-OpenGL-debugging">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-OpenGL-debugging.top_of_page">OpenGL debugging</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>OpenGL debugging</refname>
+<refpurpose>helper routines for dealing with OpenGL debugging</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-OpenGL-debugging.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLAsyncDebugLogGetMessage">*GstGLAsyncDebugLogGetMessage</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLAsyncDebug"><returnvalue>GstGLAsyncDebug</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-new">gst_gl_async_debug_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-free">gst_gl_async_debug_free</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-init">gst_gl_async_debug_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-unset">gst_gl_async_debug_unset</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-freeze">gst_gl_async_debug_freeze</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-thaw">gst_gl_async_debug_thaw</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-output-log-msg">gst_gl_async_debug_output_log_msg</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-store-log-msg">gst_gl_async_debug_store_log_msg</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-async-debug-store-log-msg-valist">gst_gl_async_debug_store_log_msg_valist</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ASYNC-CAT-LEVEL-LOG-valist">GST_GL_ASYNC_CAT_LEVEL_LOG_valist</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ASYNC-CAT-LEVEL-LOG:CAPS">GST_GL_ASYNC_CAT_LEVEL_LOG</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-insert-debug-marker">gst_gl_insert_debug_marker</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-debugging.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLAsyncDebug">GstGLAsyncDebug</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-OpenGL-debugging.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-debugging.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GstGLAsyncDebugLogGetMessage" role="function">
+<title>GstGLAsyncDebugLogGetMessage&#160;()</title>
+<indexterm zone="GstGLAsyncDebugLogGetMessage"><primary>GstGLAsyncDebugLogGetMessage</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+<phrase role="c_punctuation">(</phrase>*GstGLAsyncDebugLogGetMessage<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-async-debug-new" role="function" condition="since:1.8">
+<title>gst_gl_async_debug_new&#160;()</title>
+<indexterm zone="gst-gl-async-debug-new" role="1.8"><primary>gst_gl_async_debug_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLAsyncDebug"><returnvalue>GstGLAsyncDebug</returnvalue></link>&#160;*
+gst_gl_async_debug_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Free with <link linkend="gst-gl-async-debug-free"><function>gst_gl_async_debug_free()</function></link></para>
+
+<para><emphasis role="annotation">[<acronym>skip</acronym>]</emphasis></para><refsect3 id="gst-gl-async-debug-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-async-debug-free" role="function" condition="since:1.8">
+<title>gst_gl_async_debug_free&#160;()</title>
+<indexterm zone="gst-gl-async-debug-free" role="1.8"><primary>gst_gl_async_debug_free</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_free (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>);</programlisting>
+<para>Frees <parameter>ad</parameter>
+</para>
+<refsect3 id="gst-gl-async-debug-free.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-async-debug-init" role="function" condition="since:1.8">
+<title>gst_gl_async_debug_init&#160;()</title>
+<indexterm zone="gst-gl-async-debug-init" role="1.8"><primary>gst_gl_async_debug_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_init (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>);</programlisting>
+<para>Initialize <parameter>ad</parameter>
+.  Intended for use with <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link>'s that are embedded
+in other structs.</para>
+<refsect3 id="gst-gl-async-debug-init.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-async-debug-unset" role="function">
+<title>gst_gl_async_debug_unset&#160;()</title>
+<indexterm zone="gst-gl-async-debug-unset"><primary>gst_gl_async_debug_unset</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_unset (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>);</programlisting>
+<para>Unset any dynamically allocated data.  Intended for use with
+<link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link>'s that are embedded in other structs.</para>
+<refsect3 id="gst-gl-async-debug-unset.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-async-debug-freeze" role="function" condition="since:1.8">
+<title>gst_gl_async_debug_freeze&#160;()</title>
+<indexterm zone="gst-gl-async-debug-freeze" role="1.8"><primary>gst_gl_async_debug_freeze</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_freeze (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>);</programlisting>
+<para>freeze the debug output.  While frozen, any call to
+<link linkend="gst-gl-async-debug-output-log-msg"><function>gst_gl_async_debug_output_log_msg()</function></link> will not output any messages but
+subsequent calls to <link linkend="gst-gl-async-debug-store-log-msg"><function>gst_gl_async_debug_store_log_msg()</function></link> will overwrite previous
+messages.</para>
+<refsect3 id="gst-gl-async-debug-freeze.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-async-debug-thaw" role="function" condition="since:1.8">
+<title>gst_gl_async_debug_thaw&#160;()</title>
+<indexterm zone="gst-gl-async-debug-thaw" role="1.8"><primary>gst_gl_async_debug_thaw</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_thaw (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>);</programlisting>
+<para>unfreeze the debug output.  See <link linkend="gst-gl-async-debug-freeze"><function>gst_gl_async_debug_freeze()</function></link> for what freezing means</para>
+<refsect3 id="gst-gl-async-debug-thaw.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-async-debug-output-log-msg" role="function">
+<title>gst_gl_async_debug_output_log_msg&#160;()</title>
+<indexterm zone="gst-gl-async-debug-output-log-msg"><primary>gst_gl_async_debug_output_log_msg</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_output_log_msg (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>);</programlisting>
+<para>Outputs a previously stored debug message.</para>
+<refsect3 id="gst-gl-async-debug-output-log-msg.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> to store the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-async-debug-store-log-msg" role="function" condition="since:1.8">
+<title>gst_gl_async_debug_store_log_msg&#160;()</title>
+<indexterm zone="gst-gl-async-debug-store-log-msg" role="1.8"><primary>gst_gl_async_debug_store_log_msg</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_store_log_msg (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>,
+                                  <parameter><link linkend="GstDebugCategory"><type>GstDebugCategory</type></link> *cat</parameter>,
+                                  <parameter><link linkend="GstDebugLevel"><type>GstDebugLevel</type></link> level</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *file</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *function</parameter>,
+                                  <parameter><link linkend="gint"><type>gint</type></link> line</parameter>,
+                                  <parameter><link linkend="GObject"><type>GObject</type></link> *object</parameter>,
+                                  <parameter>const <link linkend="gchar"><type>gchar</type></link> *format</parameter>,
+                                  <parameter>...</parameter>);</programlisting>
+<para>Stores a debug message for later output by <link linkend="gst-gl-async-debug-output-log-msg"><function>gst_gl_async_debug_output_log_msg()</function></link></para>
+<refsect3 id="gst-gl-async-debug-store-log-msg.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> to store the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cat</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstDebugCategory"><type>GstDebugCategory</type></link> to output the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>level</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstLevel"><type>GstLevel</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>file</para></entry>
+<entry role="parameter_description"><para>the file where the debug message originates from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>function</para></entry>
+<entry role="parameter_description"><para>the function where the debug message originates from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>line</para></entry>
+<entry role="parameter_description"><para>the line in <parameter>file</parameter>
+where the debug message originates from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GObject"><type>GObject</type></link> to associate with the debug message. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>a printf style format string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>the list of arguments for <parameter>format</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-async-debug-store-log-msg-valist" role="function" condition="since:1.8">
+<title>gst_gl_async_debug_store_log_msg_valist&#160;()</title>
+<indexterm zone="gst-gl-async-debug-store-log-msg-valist" role="1.8"><primary>gst_gl_async_debug_store_log_msg_valist</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_async_debug_store_log_msg_valist
+                               (<parameter><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> *ad</parameter>,
+                                <parameter><link linkend="GstDebugCategory"><type>GstDebugCategory</type></link> *cat</parameter>,
+                                <parameter><link linkend="GstDebugLevel"><type>GstDebugLevel</type></link> level</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *file</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *function</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> line</parameter>,
+                                <parameter><link linkend="GObject"><type>GObject</type></link> *object</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *format</parameter>,
+                                <parameter><link linkend="va-list"><type>va_list</type></link> varargs</parameter>);</programlisting>
+<para>Stores a debug message for later output by <link linkend="gst-gl-async-debug-output-log-msg"><function>gst_gl_async_debug_output_log_msg()</function></link></para>
+<refsect3 id="gst-gl-async-debug-store-log-msg-valist.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> to store the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cat</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstDebugCategory"><type>GstDebugCategory</type></link> to output the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>level</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstLevel"><type>GstLevel</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>file</para></entry>
+<entry role="parameter_description"><para>the file where the debug message originates from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>function</para></entry>
+<entry role="parameter_description"><para>the function where the debug message originates from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>line</para></entry>
+<entry role="parameter_description"><para>the line in <parameter>file</parameter>
+where the debug message originates from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GObject"><type>GObject</type></link> to associate with the debug message. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>a printf style format string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>varargs</para></entry>
+<entry role="parameter_description"><para>the list of arguments for <parameter>format</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GST-GL-ASYNC-CAT-LEVEL-LOG-valist" role="macro">
+<title>GST_GL_ASYNC_CAT_LEVEL_LOG_valist()</title>
+<indexterm zone="GST-GL-ASYNC-CAT-LEVEL-LOG-valist"><primary>GST_GL_ASYNC_CAT_LEVEL_LOG_valist</primary></indexterm>
+<programlisting language="C">#define             GST_GL_ASYNC_CAT_LEVEL_LOG_valist(ad,cat,level,object,format,varargs)</programlisting>
+<para>Stores a debug message in <parameter>ad</parameter>
+ for later output</para>
+<refsect3 id="GST-GL-ASYNC-CAT-LEVEL-LOG-valist.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> to store the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cat</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstDebugCategory"><type>GstDebugCategory</type></link> to output the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>level</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstLevel"><type>GstLevel</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GObject"><type>GObject</type></link> to associate with the debug message. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>a printf style format string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>varargs</para></entry>
+<entry role="parameter_description"><para>the list of arguments for <parameter>format</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GST-GL-ASYNC-CAT-LEVEL-LOG:CAPS" role="macro">
+<title>GST_GL_ASYNC_CAT_LEVEL_LOG()</title>
+<indexterm zone="GST-GL-ASYNC-CAT-LEVEL-LOG:CAPS"><primary>GST_GL_ASYNC_CAT_LEVEL_LOG</primary></indexterm>
+<programlisting language="C">#define             GST_GL_ASYNC_CAT_LEVEL_LOG(ad,cat,level,object,format,...)</programlisting>
+<para>Stores a debug message in <parameter>ad</parameter>
+ for later output</para>
+<refsect3 id="GST-GL-ASYNC-CAT-LEVEL-LOG.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>ad</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> to store the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>cat</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstDebugCategory"><type>GstDebugCategory</type></link> to output the message in</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>level</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstLevel"><type>GstLevel</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GObject"><type>GObject</type></link> to associate with the debug message. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>a printf style format string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>the list of arguments for <parameter>format</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-insert-debug-marker" role="function" condition="since:1.8">
+<title>gst_gl_insert_debug_marker&#160;()</title>
+<indexterm zone="gst-gl-insert-debug-marker" role="1.8"><primary>gst_gl_insert_debug_marker</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_insert_debug_marker (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                            <parameter>const <link linkend="gchar"><type>gchar</type></link> *format</parameter>,
+                            <parameter>...</parameter>);</programlisting>
+<para>Inserts a marker into a GL debug stream.  Requires the 'gldebugmarker'
+debug category to be at least <link linkend="GST-LEVEL-FIXME:CAPS"><literal>GST_LEVEL_FIXME</literal></link>.</para>
+<refsect3 id="gst-gl-insert-debug-marker.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>a printf-style format string</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>...</para></entry>
+<entry role="parameter_description"><para>arguments form <parameter>format</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-debugging.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLAsyncDebug" role="struct">
+<title>struct GstGLAsyncDebug</title>
+<indexterm zone="GstGLAsyncDebug"><primary>GstGLAsyncDebug</primary></indexterm>
+<programlisting language="C">struct GstGLAsyncDebug {
+};
+</programlisting>
+<para><link linkend="GstGLAsyncDebug"><type>GstGLAsyncDebug</type></link> an opaque structure and should only be accessed through the
+provided API.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-debugging.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+
+</refsect1>
+
+</refentry>

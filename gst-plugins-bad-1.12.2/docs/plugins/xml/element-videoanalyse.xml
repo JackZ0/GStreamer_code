@@ -1,0 +1,112 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-videoanalyse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-videoanalyse.top_of_page" role="top_of_page">videoanalyse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>videoanalyse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-videoanalyse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstVideoAnalyse--message">message</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstVideoAnalyse"/><refsect1 id="gst-plugins-bad-plugins-videoanalyse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVideoAnalyse-struct">GstVideoAnalyse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoanalyse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstVideoAnalyse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-videoanalyse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This plugin analyses every video frame and if the <link linkend="GstVideoAnalyse--message"><type>“message”</type></link>
+property is <link linkend="TRUE:CAPS"><type>TRUE</type></link>, posts an element message with video statistics called
+<literal>GstVideoAnalyse</literal>.</para>
+<para>The message's structure contains these fields:</para>
+<itemizedlist>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>timestamp</literal>: the timestamp of the buffer that triggered the message.</para>
+</listitem>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>stream-time</literal>: the stream time of the buffer.</para>
+</listitem>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>running-time</literal>: the running_time of the buffer.</para>
+</listitem>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link><literal>duration</literal>:the duration of the buffer.</para>
+</listitem>
+<listitem>
+<para><link linkend="gdouble"><type>gdouble</type></link><literal>luma-average</literal>: the average brightness of the frame. Range: 0.0-1.0</para>
+</listitem>
+<listitem>
+<para><link linkend="gdouble"><type>gdouble</type></link><literal>luma-variance</literal>: the brightness variance of the frame.</para>
+</listitem>
+</itemizedlist>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -m videotestsrc ! videoanalyse ! videoconvert ! ximagesink
+]]></programlisting></informalexample>
+<para> This pipeline emits messages to the console for each frame that has been analysed.</para>
+</refsect3>
+
+<include href="element-videoanalyse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoanalyse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoanalyse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstVideoAnalyse-struct" role="struct">
+<title>struct GstVideoAnalyse</title>
+<indexterm zone="GstVideoAnalyse-struct"><primary>GstVideoAnalyse</primary></indexterm>
+<programlisting language="C">struct GstVideoAnalyse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoanalyse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstVideoAnalyse--message" role="property"><title>The <literal>“message”</literal> property</title>
+<indexterm zone="GstVideoAnalyse--message"><primary>GstVideoAnalyse:message</primary></indexterm>
+<programlisting>  “message”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Post statics messages.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

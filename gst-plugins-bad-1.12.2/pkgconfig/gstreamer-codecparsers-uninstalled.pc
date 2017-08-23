@@ -1,0 +1,12 @@
+prefix=
+exec_prefix=
+libdir=@codecparserslibdir@
+includedir=/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+
+Name: GStreamer codec parsers, Uninstalled
+Description: Bitstream parsers for GStreamer elements, uninstalled
+Requires: gstreamer-1.0 gstreamer-base-1.0
+Version: 1.12.2
+Libs: -L${libdir} -lgstcodecparsers-1.0
+Cflags: -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs -I/home/rk3188/gst/GStreamer_code/gst-plugins-bad-1.12.2/gst-libs
+

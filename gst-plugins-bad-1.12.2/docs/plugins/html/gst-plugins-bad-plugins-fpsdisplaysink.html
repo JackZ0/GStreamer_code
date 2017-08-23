@@ -56,7 +56,7 @@
 </tr>
 <tr>
 <td class="property_type">
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *</td>
+<a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *</td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-fpsdisplaysink.html#GstFPSDisplaySink--video-sink" title="The “video-sink” property">video-sink</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -136,9 +136,9 @@
 <a name="gst-plugins-bad-plugins-fpsdisplaysink.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBin.html#GstBin-struct">GstBin</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstBin.html#GstBin-struct">GstBin</a>
                     <span class="lineart">╰──</span> GstFPSDisplaySink
 </pre>
 </div>
@@ -146,30 +146,19 @@
 <a name="gst-plugins-bad-plugins-fpsdisplaysink.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstFPSDisplaySink implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
+ <a href="../gstreamer-1.0/GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-fpsdisplaysink.description"></a><h2>Description</h2>
 <p>Can display the current and average framerate as a testoverlay or on stdout.</p>
 <div class="refsect3">
 <a name="id-1.2.39.9.3"></a><h4>Example launch lines</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2
-3
-4</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc <span class="gtkdoc opt">!</span> fpsdisplaysink
-gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc <span class="gtkdoc opt">!</span> fpsdisplaysink text<span class="gtkdoc opt">-</span>overlay<span class="gtkdoc opt">=</span><span class="keyword">false</span>
-gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> filesrc location<span class="gtkdoc opt">=</span>video<span class="gtkdoc opt">.</span>avi <span class="gtkdoc opt">!</span> decodebin name<span class="gtkdoc opt">=</span>d <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> fpsdisplaysink d<span class="gtkdoc opt">. !</span> queue <span class="gtkdoc opt">!</span> fakesink sync<span class="gtkdoc opt">=</span><span class="keyword">true</span>
-gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> playbin uri<span class="gtkdoc opt">=</span>file<span class="gtkdoc opt">:</span><span class="gtkdoc slc">///path/to/video.avi video-sink=&quot;fpsdisplaysink&quot; audio-sink=fakesink</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc ! fpsdisplaysink
+gst-launch-1.0 videotestsrc ! fpsdisplaysink text-overlay=false
+gst-launch-1.0 filesrc location=video.avi ! decodebin name=d ! queue ! fpsdisplaysink d. ! queue ! fakesink sync=true
+gst-launch-1.0 playbin uri=file:///path/to/video.avi video-sink="fpsdisplaysink" audio-sink=fakesink
+</pre></div>
 <p></p>
 </div>
 <div class="refsynopsisdiv">
@@ -260,7 +249,7 @@ gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span
 <hr>
 <div class="refsect2">
 <a name="GstFPSDisplaySink--video-sink"></a><h3>The <code class="literal">“video-sink”</code> property</h3>
-<pre class="programlisting">  “video-sink”               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *</pre>
+<pre class="programlisting">  “video-sink”               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *</pre>
 <p>Video sink to use (Must only be called on NULL state).</p>
 <p>Flags: Read / Write</p>
 </div>

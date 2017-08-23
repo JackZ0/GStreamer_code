@@ -1,0 +1,123 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-zbar">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-zbar.top_of_page" role="top_of_page">zbar</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>zbar</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-zbar.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstZBar--message">message</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstZBar--cache">cache</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstZBar--attach-frame">attach-frame</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstZBar"/><refsect1 id="gst-plugins-bad-plugins-zbar.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstZBar-struct">GstZBar</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-zbar.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstZBar
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-zbar.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Detect bar codes in the video streams and send them as element messages to
+the <link linkend="GstBus"><type>GstBus</type></link> if .<link linkend="GstZBar--message"><type>“message”</type></link> property is <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>.
+If the .<link linkend="GstZBar--attach-frame"><type>“attach-frame”</type></link> property is <link linkend="TRUE:CAPS"><literal>TRUE</literal></link>, the posted barcode message
+includes a sample of the frame where the barcode was detected (Since 1.6).</para>
+<para>The element generate messages named<literal>barcode</literal>. The structure containes these fields:</para>
+<itemizedlist>
+<listitem><para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>timestamp</literal>: the timestamp of the buffer that triggered the message.</para></listitem>
+<listitem><para>gchar * <literal>type</literal>: the symbol type.</para></listitem>
+<listitem><para>gchar * <literal>symbol</literal>: the deteted bar code data.</para></listitem>
+<listitem><para>gint <literal>quality</literal>: an unscaled, relative quantity: larger values are better than smaller
+values.</para></listitem>
+<listitem>
+<para>GstSample <literal>frame</literal>: the frame in which the barcode message was detected, if
+the .<link linkend="GstZBar--attach-frame"><type>“attach-frame”</type></link> property was set to <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> (Since 1.6)</para>
+</listitem>
+</itemizedlist>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -m v4l2src ! videoconvert ! zbar ! videoconvert ! xvimagesink
+]]></programlisting></informalexample>
+<para> This pipeline will detect barcodes and send them as messages.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -m v4l2src ! tee name=t ! queue ! videoconvert ! zbar ! fakesink t. ! queue ! xvimagesink
+]]></programlisting></informalexample>
+<para> Same as above, but running the filter on a branch to keep the display in color</para>
+</refsect3>
+
+<include href="element-zbar-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-zbar.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-zbar.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstZBar-struct" role="struct">
+<title>struct GstZBar</title>
+<indexterm zone="GstZBar-struct"><primary>GstZBar</primary></indexterm>
+<programlisting language="C">struct GstZBar;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-zbar.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstZBar--message" role="property"><title>The <literal>“message”</literal> property</title>
+<indexterm zone="GstZBar--message"><primary>GstZBar:message</primary></indexterm>
+<programlisting>  “message”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Post a barcode message for each detected code.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstZBar--cache" role="property"><title>The <literal>“cache”</literal> property</title>
+<indexterm zone="GstZBar--cache"><primary>GstZBar:cache</primary></indexterm>
+<programlisting>  “cache”                    <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable the inter-image result cache.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstZBar--attach-frame" role="property"><title>The <literal>“attach-frame”</literal> property</title>
+<indexterm zone="GstZBar--attach-frame"><primary>GstZBar:attach-frame</primary></indexterm>
+<programlisting>  “attach-frame”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Attach a frame dump to each barcode message.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

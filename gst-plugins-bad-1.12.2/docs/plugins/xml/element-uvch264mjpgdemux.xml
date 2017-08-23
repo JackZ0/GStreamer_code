@@ -1,0 +1,92 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-uvch264mjpgdemux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-uvch264mjpgdemux.top_of_page" role="top_of_page">uvch264mjpgdemux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>uvch264mjpgdemux</refname>
+<refpurpose>UVC H264 compliant MJPG demuxer</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-uvch264mjpgdemux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstUvcH264MjpgDemux--device-fd">device-fd</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstUvcH264MjpgDemux--num-clock-samples">num-clock-samples</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstUvcH264MjpgDemux"/><refsect1 id="gst-plugins-bad-plugins-uvch264mjpgdemux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstUvcH264MjpgDemux-struct">GstUvcH264MjpgDemux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-uvch264mjpgdemux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstUvcH264MjpgDemux
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-uvch264mjpgdemux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Parses a MJPG stream from a UVC H264 compliant encoding camera and extracts
+each muxed stream into separate pads.</para>
+
+<include href="element-uvch264mjpgdemux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-uvch264mjpgdemux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-uvch264mjpgdemux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstUvcH264MjpgDemux-struct" role="struct">
+<title>struct GstUvcH264MjpgDemux</title>
+<indexterm zone="GstUvcH264MjpgDemux-struct"><primary>GstUvcH264MjpgDemux</primary></indexterm>
+<programlisting language="C">struct GstUvcH264MjpgDemux;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-uvch264mjpgdemux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstUvcH264MjpgDemux--device-fd" role="property"><title>The <literal>“device-fd”</literal> property</title>
+<indexterm zone="GstUvcH264MjpgDemux--device-fd"><primary>GstUvcH264MjpgDemux:device-fd</primary></indexterm>
+<programlisting>  “device-fd”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>File descriptor of the v4l2 device.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstUvcH264MjpgDemux--num-clock-samples" role="property"><title>The <literal>“num-clock-samples”</literal> property</title>
+<indexterm zone="GstUvcH264MjpgDemux--num-clock-samples"><primary>GstUvcH264MjpgDemux:num-clock-samples</primary></indexterm>
+<programlisting>  “num-clock-samples”        <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of clock samples to gather for the PTS synchronization (-1 = unlimited).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 32</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

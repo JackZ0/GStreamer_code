@@ -1,0 +1,149 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-openalsink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-openalsink.top_of_page" role="top_of_page">openalsink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>openalsink</refname>
+<refpurpose>capture raw audio samples through OpenAL</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-openalsink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstOpenALSink--context-handle">context-handle</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstOpenALSink--device">device</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstOpenALSink--device-handle">device-handle</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstOpenALSink--device-name">device-name</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstOpenALSink--source-id">source-id</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstOpenALSink--user-context">user-context</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstOpenALSink--user-device">user-device</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstOpenALSink--user-source">user-source</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstOpenALSink"/><refsect1 id="gst-plugins-bad-plugins-openalsink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstOpenALSink-struct">GstOpenALSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstAudioBaseSink">GstAudioBaseSink</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstAudioSink">GstAudioSink</link>
+                            <phrase role="lineart">╰──</phrase> GstOpenALSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-openalsink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element plays raw audio samples through OpenAL.</para>
+<para>Unfortunately the capture API doesn't have a format enumeration/check. all you can do is try opening it and see if it works.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 audiotestsrc ! audioconvert ! volume volume=0.5 ! openalsink
+]]></programlisting></informalexample>
+<para> will play a sine wave (continuous beep sound) through OpenAL.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=stream.wav ! decodebin ! audioconvert ! openalsink
+]]></programlisting></informalexample>
+<para> will play a wav audio file through OpenAL.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 openalsrc ! "audio/x-raw,format=S16LE,rate=44100" ! audioconvert ! volume volume=0.25 ! openalsink
+]]></programlisting></informalexample>
+<para> will capture and play audio through OpenAL.</para>
+</refsect3>
+
+<include href="element-openalsink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstOpenALSink-struct" role="struct">
+<title>struct GstOpenALSink</title>
+<indexterm zone="GstOpenALSink-struct"><primary>GstOpenALSink</primary></indexterm>
+<programlisting language="C">struct GstOpenALSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstOpenALSink--context-handle" role="property"><title>The <literal>“context-handle”</literal> property</title>
+<indexterm zone="GstOpenALSink--context-handle"><primary>GstOpenALSink:context-handle</primary></indexterm>
+<programlisting>  “context-handle”           <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Custom playback context.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstOpenALSink--device" role="property"><title>The <literal>“device”</literal> property</title>
+<indexterm zone="GstOpenALSink--device"><primary>GstOpenALSink:device</primary></indexterm>
+<programlisting>  “device”                   <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Human-readable name of the device.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstOpenALSink--device-handle" role="property"><title>The <literal>“device-handle”</literal> property</title>
+<indexterm zone="GstOpenALSink--device-handle"><primary>GstOpenALSink:device-handle</primary></indexterm>
+<programlisting>  “device-handle”            <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Custom playback device.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstOpenALSink--device-name" role="property"><title>The <literal>“device-name”</literal> property</title>
+<indexterm zone="GstOpenALSink--device-name"><primary>GstOpenALSink:device-name</primary></indexterm>
+<programlisting>  “device-name”              <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Human-readable name of the opened device.</para><para>Flags: Read</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstOpenALSink--source-id" role="property"><title>The <literal>“source-id”</literal> property</title>
+<indexterm zone="GstOpenALSink--source-id"><primary>GstOpenALSink:source-id</primary></indexterm>
+<programlisting>  “source-id”                <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Custom playback sID.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstOpenALSink--user-context" role="property"><title>The <literal>“user-context”</literal> property</title>
+<indexterm zone="GstOpenALSink--user-context"><primary>GstOpenALSink:user-context</primary></indexterm>
+<programlisting>  “user-context”             <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>User context.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstOpenALSink--user-device" role="property"><title>The <literal>“user-device”</literal> property</title>
+<indexterm zone="GstOpenALSink--user-device"><primary>GstOpenALSink:user-device</primary></indexterm>
+<programlisting>  “user-device”              <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>User device.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstOpenALSink--user-source" role="property"><title>The <literal>“user-source”</literal> property</title>
+<indexterm zone="GstOpenALSink--user-source"><primary>GstOpenALSink:user-source</primary></indexterm>
+<programlisting>  “user-source”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>User source.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-openalsink.see-also">
+<title>See Also</title>
+<para>openalsrc</para>
+
+</refsect1>
+
+</refentry>

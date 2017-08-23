@@ -1,0 +1,99 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-irtspparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-irtspparse.top_of_page" role="top_of_page">irtspparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>irtspparse</refname>
+<refpurpose>Interleaved RTSP parser</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-irtspparse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstIRTSPParse--channel-id">channel-id</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstIRTSPParse"/><refsect1 id="gst-plugins-bad-plugins-irtspparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstIRTSPParse-struct">GstIRTSPParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-irtspparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseParse">GstBaseParse</link>
+                    <phrase role="lineart">╰──</phrase> GstIRTSPParse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-irtspparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This is an interleaved RTSP parser that allows extracting specific
+so-called &quot;channels&quot; from received interleaved (TCP) RTSP data
+(typically extracted from some network capture).</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=h264crasher.pcap ! pcapparse ! irtspparse
+! rtph264depay ! ffdec_h264 ! fakesink
+]]></programlisting></informalexample>
+<para> Read from a pcap dump file using filesrc, extract the raw TCP packets,
+depayload and decode them.</para>
+</refsect3>
+
+<include href="element-irtspparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-irtspparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-irtspparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstIRTSPParse-struct" role="struct">
+<title>struct GstIRTSPParse</title>
+<indexterm zone="GstIRTSPParse-struct"><primary>GstIRTSPParse</primary></indexterm>
+<programlisting language="C">struct GstIRTSPParse;</programlisting>
+<para>The opaque GstIRTSPParse object</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-irtspparse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstIRTSPParse--channel-id" role="property"><title>The <literal>“channel-id”</literal> property</title>
+<indexterm zone="GstIRTSPParse--channel-id"><primary>GstIRTSPParse:channel-id</primary></indexterm>
+<programlisting>  “channel-id”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Channel Identifier.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-irtspparse.see-also">
+<title>See Also</title>
+<para><link linkend="GstPcapParse"><type>GstPcapParse</type></link></para>
+
+</refsect1>
+
+</refentry>

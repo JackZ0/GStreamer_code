@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<indexdiv id="api-index-1.4">
+<indexdiv><title>C</title>
+<indexentry><primaryie linkends="gst-context-get-gl-display"><link linkend="gst-context-get-gl-display">gst_context_get_gl_display</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-context-set-gl-display"><link linkend="gst-context-set-gl-display">gst_context_set_gl_display</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="gst-gl-color-convert-new"><link linkend="gst-gl-color-convert-new">gst_gl_color_convert_new</link>, function in <link linkend="GstGLColorConvert">GstGLColorConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-color-convert-perform"><link linkend="gst-gl-color-convert-perform">gst_gl_color_convert_perform</link>, function in <link linkend="GstGLColorConvert">GstGLColorConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-activate"><link linkend="gst-gl-context-activate">gst_gl_context_activate</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-check-feature"><link linkend="gst-gl-context-check-feature">gst_gl_context_check_feature</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-check-gl-version"><link linkend="gst-gl-context-check-gl-version">gst_gl_context_check_gl_version</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-create"><link linkend="gst-gl-context-create">gst_gl_context_create</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-default-get-proc-address"><link linkend="gst-gl-context-default-get-proc-address">gst_gl_context_default_get_proc_address</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-display"><link linkend="gst-gl-context-get-display">gst_gl_context_get_display</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-gl-api"><link linkend="gst-gl-context-get-gl-api">gst_gl_context_get_gl_api</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-gl-context"><link linkend="gst-gl-context-get-gl-context">gst_gl_context_get_gl_context</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-gl-platform"><link linkend="gst-gl-context-get-gl-platform">gst_gl_context_get_gl_platform</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-gl-version"><link linkend="gst-gl-context-get-gl-version">gst_gl_context_get_gl_version</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-proc-address"><link linkend="gst-gl-context-get-proc-address">gst_gl_context_get_proc_address</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-window"><link linkend="gst-gl-context-get-window">gst_gl_context_get_window</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-new"><link linkend="gst-gl-context-new">gst_gl_context_new</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-new-wrapped"><link linkend="gst-gl-context-new-wrapped">gst_gl_context_new_wrapped</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-set-window"><link linkend="gst-gl-context-set-window">gst_gl_context_set_window</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-thread-add"><link linkend="gst-gl-context-thread-add">gst_gl_context_thread_add</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-get-handle"><link linkend="gst-gl-display-get-handle">gst_gl_display_get_handle</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-get-handle-type"><link linkend="gst-gl-display-get-handle-type">gst_gl_display_get_handle_type</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-new"><link linkend="gst-gl-display-new">gst_gl_display_new</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-filter-filter-texture"><link linkend="gst-gl-filter-filter-texture">gst_gl_filter_filter_texture</link>, function in <link linkend="GstGLFilter">GstGLFilter</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-filter-render-to-target-with-shader"><link linkend="gst-gl-filter-render-to-target-with-shader">gst_gl_filter_render_to_target_with_shader</link>, function in <link linkend="GstGLFilter">GstGLFilter</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-memory-init-once"><link linkend="gst-gl-memory-init-once">gst_gl_memory_init_once</link>, function in <link linkend="gst-plugins-bad-libs-GstGLMemory">GstGLMemory</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-draw"><link linkend="gst-gl-window-draw">gst_gl_window_draw</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-get-context"><link linkend="gst-gl-window-get-context">gst_gl_window_get_context</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-get-display"><link linkend="gst-gl-window-get-display">gst_gl_window_get_display</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-get-window-handle"><link linkend="gst-gl-window-get-window-handle">gst_gl_window_get_window_handle</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-new"><link linkend="gst-gl-window-new">gst_gl_window_new</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-quit"><link linkend="gst-gl-window-quit">gst_gl_window_quit</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-run"><link linkend="gst-gl-window-run">gst_gl_window_run</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-send-message"><link linkend="gst-gl-window-send-message">gst_gl_window_send_message</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-send-message-async"><link linkend="gst-gl-window-send-message-async">gst_gl_window_send_message_async</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-set-close-callback"><link linkend="gst-gl-window-set-close-callback">gst_gl_window_set_close_callback</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-set-draw-callback"><link linkend="gst-gl-window-set-draw-callback">gst_gl_window_set_draw_callback</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-set-resize-callback"><link linkend="gst-gl-window-set-resize-callback">gst_gl_window_set_resize_callback</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-set-window-handle"><link linkend="gst-gl-window-set-window-handle">gst_gl_window_set_window_handle</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>H</title>
+<indexentry><primaryie linkends="gst-h264-pps-clear"><link linkend="gst-h264-pps-clear">gst_h264_pps_clear</link>, function in <link linkend="gst-plugins-bad-libs-h264parser">h264parser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-h264-quant-matrix-4x4-get-raster-from-zigzag"><link linkend="gst-h264-quant-matrix-4x4-get-raster-from-zigzag">gst_h264_quant_matrix_4x4_get_raster_from_zigzag</link>, function in <link linkend="gst-plugins-bad-libs-h264parser">h264parser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-h264-quant-matrix-4x4-get-zigzag-from-raster"><link linkend="gst-h264-quant-matrix-4x4-get-zigzag-from-raster">gst_h264_quant_matrix_4x4_get_zigzag_from_raster</link>, function in <link linkend="gst-plugins-bad-libs-h264parser">h264parser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-h264-quant-matrix-8x8-get-raster-from-zigzag"><link linkend="gst-h264-quant-matrix-8x8-get-raster-from-zigzag">gst_h264_quant_matrix_8x8_get_raster_from_zigzag</link>, function in <link linkend="gst-plugins-bad-libs-h264parser">h264parser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-h264-quant-matrix-8x8-get-zigzag-from-raster"><link linkend="gst-h264-quant-matrix-8x8-get-zigzag-from-raster">gst_h264_quant_matrix_8x8_get_zigzag_from_raster</link>, function in <link linkend="gst-plugins-bad-libs-h264parser">h264parser</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>I</title>
+<indexentry><primaryie linkends="gst-is-gl-memory"><link linkend="gst-is-gl-memory">gst_is_gl_memory</link>, function in <link linkend="gst-plugins-bad-libs-GstGLMemory">GstGLMemory</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

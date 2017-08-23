@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-curlftpsink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-curlftpsink.top_of_page" role="top_of_page">curlftpsink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>curlftpsink</refname>
+<refpurpose>sink that uploads data to a server using libcurl</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-curlftpsink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCurlFtpSink--create-dirs">create-dirs</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCurlFtpSink--epsv-mode">epsv-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlFtpSink--ftp-port">ftp-port</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstCurlFtpSink--create-tmp-file">create-tmp-file</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstCurlFtpSink--temp-file-name">temp-file-name</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCurlFtpSink"/><refsect1 id="gst-plugins-bad-plugins-curlftpsink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCurlFtpSink-struct">GstCurlFtpSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlftpsink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstCurlBaseSink">GstCurlBaseSink</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstCurlTlsSink">GstCurlTlsSink</link>
+                            <phrase role="lineart">╰──</phrase> GstCurlFtpSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-curlftpsink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This is a network sink that uses libcurl as a client to upload data to
+an FTP server.</para>
+<refsect3><title>Example launch line</title><para>Upload a JPEG file to /home/test/images * directory)</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=image.jpg ! jpegparse ! curlftpsink  \
+    file-name=image.jpg  \
+    location=ftp://192.168.0.1/images/
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-curlftpsink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlftpsink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlftpsink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCurlFtpSink-struct" role="struct">
+<title>struct GstCurlFtpSink</title>
+<indexterm zone="GstCurlFtpSink-struct"><primary>GstCurlFtpSink</primary></indexterm>
+<programlisting language="C">struct GstCurlFtpSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-curlftpsink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCurlFtpSink--create-dirs" role="property"><title>The <literal>“create-dirs”</literal> property</title>
+<indexterm zone="GstCurlFtpSink--create-dirs"><primary>GstCurlFtpSink:create-dirs</primary></indexterm>
+<programlisting>  “create-dirs”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Attempt to create missing directory included in the path.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstCurlFtpSink--epsv-mode" role="property"><title>The <literal>“epsv-mode”</literal> property</title>
+<indexterm zone="GstCurlFtpSink--epsv-mode"><primary>GstCurlFtpSink:epsv-mode</primary></indexterm>
+<programlisting>  “epsv-mode”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable the use of the EPSV command when doing passive FTP transfers.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstCurlFtpSink--ftp-port" role="property"><title>The <literal>“ftp-port”</literal> property</title>
+<indexterm zone="GstCurlFtpSink--ftp-port"><primary>GstCurlFtpSink:ftp-port</primary></indexterm>
+<programlisting>  “ftp-port”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The PORT instruction tells the remote server to connect to the IP address.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstCurlFtpSink--create-tmp-file" role="property"><title>The <literal>“create-tmp-file”</literal> property</title>
+<indexterm zone="GstCurlFtpSink--create-tmp-file"><primary>GstCurlFtpSink:create-tmp-file</primary></indexterm>
+<programlisting>  “create-tmp-file”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Use a temporary file name when uploading a a file. When the transfer is complete,            this temporary file is renamed to the final file name. This is useful for ensuring           that remote systems do not read a partially uploaded file.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstCurlFtpSink--temp-file-name" role="property"><title>The <literal>“temp-file-name”</literal> property</title>
+<indexterm zone="GstCurlFtpSink--temp-file-name"><primary>GstCurlFtpSink:temp-file-name</primary></indexterm>
+<programlisting>  “temp-file-name”           <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Filename pattern to use when generating a temporary filename for uploads.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

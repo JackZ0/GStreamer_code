@@ -1,0 +1,1677 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstPhotography">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstPhotography.top_of_page">GstPhotography</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstPhotography</refname>
+<refpurpose>Interface for digital image capture elements</refpurpose>
+</refnamediv>
+<refsect1 id="gst-plugins-bad-libs-GstPhotography.stability-level">
+<title>Stability Level</title>
+<acronym>Unstable</acronym>, unless otherwise indicated
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-GstPhotography.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstPhotographyCapturePrepared">*GstPhotographyCapturePrepared</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-ev-compensation">gst_photography_get_ev_compensation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-iso-speed">gst_photography_get_iso_speed</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-aperture">gst_photography_get_aperture</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-exposure">gst_photography_get_exposure</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-white-balance-mode">gst_photography_get_white_balance_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-color-tone-mode">gst_photography_get_color_tone_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-scene-mode">gst_photography_get_scene_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-flash-mode">gst_photography_get_flash_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-flicker-mode">gst_photography_get_flicker_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-focus-mode">gst_photography_get_focus_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-noise-reduction">gst_photography_get_noise_reduction</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-zoom">gst_photography_get_zoom</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-ev-compensation">gst_photography_set_ev_compensation</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-iso-speed">gst_photography_set_iso_speed</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-aperture">gst_photography_set_aperture</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-exposure">gst_photography_set_exposure</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-white-balance-mode">gst_photography_set_white_balance_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-color-tone-mode">gst_photography_set_color_tone_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-scene-mode">gst_photography_set_scene_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-flash-mode">gst_photography_set_flash_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-flicker-mode">gst_photography_set_flicker_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-focus-mode">gst_photography_set_focus_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-noise-reduction">gst_photography_set_noise_reduction</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-zoom">gst_photography_set_zoom</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstPhotographyCaps"><returnvalue>GstPhotographyCaps</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-capabilities">gst_photography_get_capabilities</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-prepare-for-capture">gst_photography_prepare_for_capture</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-autofocus">gst_photography_set_autofocus</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-set-config">gst_photography_set_config</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-photography-get-config">gst_photography_get_config</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstPhotography.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstPhotography">GstPhotography</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyNoiseReduction">GstPhotographyNoiseReduction</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyWhiteBalanceMode">GstPhotographyWhiteBalanceMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyColorToneMode">GstPhotographyColorToneMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographySceneMode">GstPhotographySceneMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyFlashMode">GstPhotographyFlashMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyFlickerReductionMode">GstPhotographyFlickerReductionMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyFocusMode">GstPhotographyFocusMode</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyFocusStatus">GstPhotographyFocusStatus</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyCaps">GstPhotographyCaps</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstPhotographyShakeRisk">GstPhotographyShakeRisk</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-AUTOFOCUS-DONE:CAPS">GST_PHOTOGRAPHY_AUTOFOCUS_DONE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-SHAKE-RISK:CAPS">GST_PHOTOGRAPHY_SHAKE_RISK</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-WB-MODE:CAPS">GST_PHOTOGRAPHY_PROP_WB_MODE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-SCENE-MODE:CAPS">GST_PHOTOGRAPHY_PROP_SCENE_MODE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-FLASH-MODE:CAPS">GST_PHOTOGRAPHY_PROP_FLASH_MODE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-NOISE-REDUCTION:CAPS">GST_PHOTOGRAPHY_PROP_NOISE_REDUCTION</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-FOCUS-STATUS:CAPS">GST_PHOTOGRAPHY_PROP_FOCUS_STATUS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-CAPABILITIES:CAPS">GST_PHOTOGRAPHY_PROP_CAPABILITIES</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-SHAKE-RISK:CAPS">GST_PHOTOGRAPHY_PROP_SHAKE_RISK</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-EV-COMP:CAPS">GST_PHOTOGRAPHY_PROP_EV_COMP</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-ISO-SPEED:CAPS">GST_PHOTOGRAPHY_PROP_ISO_SPEED</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-APERTURE:CAPS">GST_PHOTOGRAPHY_PROP_APERTURE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-IMAGE-CAPTURE-SUPPORTED-CAPS">GST_PHOTOGRAPHY_PROP_IMAGE_CAPTURE_SUPPORTED_CAPS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-IMAGE-PREVIEW-SUPPORTED-CAPS">GST_PHOTOGRAPHY_PROP_IMAGE_PREVIEW_SUPPORTED_CAPS</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-FLICKER-MODE:CAPS">GST_PHOTOGRAPHY_PROP_FLICKER_MODE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-FOCUS-MODE:CAPS">GST_PHOTOGRAPHY_PROP_FOCUS_MODE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-PHOTOGRAPHY-PROP-ZOOM:CAPS">GST_PHOTOGRAPHY_PROP_ZOOM</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstPhotography.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The interface allows access to some common digital image capture parameters.</para>
+<note>
+  The GstPhotography interface is unstable API and may change in future.
+  One can define GST_USE_UNSTABLE_API to acknowledge and avoid this warning.
+</note>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstPhotography.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GstPhotographyCapturePrepared" role="function">
+<title>GstPhotographyCapturePrepared&#160;()</title>
+<indexterm zone="GstPhotographyCapturePrepared"><primary>GstPhotographyCapturePrepared</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstPhotographyCapturePrepared<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>,
+                                  <parameter>const <link linkend="GstCaps"><type>GstCaps</type></link> *configured_caps</parameter>);</programlisting>
+<para>This callback will be called when the element has finished preparations
+and is ready for image capture. The next buffer that element produces
+will be of <parameter>configured_caps</parameter>
+ format, so this callback allows the application
+to e.g. reconfigure capsfilters in pipeline if any.</para>
+<refsect3 id="GstPhotographyCapturePrepared.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>user data that has been given, when registering the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>configured_caps</para></entry>
+<entry role="parameter_description"><para><link linkend="GstCaps"><type>GstCaps</type></link> defining the configured capture format.
+Ownership of these caps stays in the element.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-ev-compensation" role="function">
+<title>gst_photography_get_ev_compensation&#160;()</title>
+<indexterm zone="gst-photography-get-ev-compensation"><primary>gst_photography_get_ev_compensation</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_ev_compensation (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                     <parameter><link linkend="gfloat"><type>gfloat</type></link> *ev_comp</parameter>);</programlisting>
+<para>Get the ev compensation value for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-ev-compensation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ev_comp</para></entry>
+<entry role="parameter_description"><para>ev compensation value to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-ev-compensation.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-iso-speed" role="function">
+<title>gst_photography_get_iso_speed&#160;()</title>
+<indexterm zone="gst-photography-get-iso-speed"><primary>gst_photography_get_iso_speed</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_iso_speed (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> *iso_speed</parameter>);</programlisting>
+<para>Get the ISO value (light sensivity) for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-iso-speed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>iso_speed</para></entry>
+<entry role="parameter_description"><para>ISO speed value to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-iso-speed.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-aperture" role="function">
+<title>gst_photography_get_aperture&#160;()</title>
+<indexterm zone="gst-photography-get-aperture"><primary>gst_photography_get_aperture</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_aperture (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                              <parameter><link linkend="guint"><type>guint</type></link> *aperture</parameter>);</programlisting>
+<para>Get the aperture value for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-aperture.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>aperture</para></entry>
+<entry role="parameter_description"><para>aperture value to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-aperture.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-exposure" role="function">
+<title>gst_photography_get_exposure&#160;()</title>
+<indexterm zone="gst-photography-get-exposure"><primary>gst_photography_get_exposure</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_exposure (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                              <parameter><link linkend="guint32"><type>guint32</type></link> *exposure</parameter>);</programlisting>
+<para>Get the fixed exposure time (in us) for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-exposure.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>exposure</para></entry>
+<entry role="parameter_description"><para>exposure time to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-exposure.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-white-balance-mode" role="function">
+<title>gst_photography_get_white_balance_mode&#160;()</title>
+<indexterm zone="gst-photography-get-white-balance-mode"><primary>gst_photography_get_white_balance_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_white_balance_mode
+                               (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographyWhiteBalanceMode"><type>GstPhotographyWhiteBalanceMode</type></link> *wb_mode</parameter>);</programlisting>
+<para>Get the white balance mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-white-balance-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>wb_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyWhiteBalanceMode"><type>GstPhotographyWhiteBalanceMode</type></link> to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-white-balance-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-color-tone-mode" role="function">
+<title>gst_photography_get_color_tone_mode&#160;()</title>
+<indexterm zone="gst-photography-get-color-tone-mode"><primary>gst_photography_get_color_tone_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_color_tone_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                     <parameter><link linkend="GstPhotographyColorToneMode"><type>GstPhotographyColorToneMode</type></link> *tone_mode</parameter>);</programlisting>
+<para>Get the color tone mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-color-tone-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tone_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyColorToneMode"><type>GstPhotographyColorToneMode</type></link> to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-color-tone-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-scene-mode" role="function">
+<title>gst_photography_get_scene_mode&#160;()</title>
+<indexterm zone="gst-photography-get-scene-mode"><primary>gst_photography_get_scene_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_scene_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographySceneMode"><type>GstPhotographySceneMode</type></link> *scene_mode</parameter>);</programlisting>
+<para>Get the scene mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-scene-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>scene_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographySceneMode"><type>GstPhotographySceneMode</type></link> to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-scene-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-flash-mode" role="function">
+<title>gst_photography_get_flash_mode&#160;()</title>
+<indexterm zone="gst-photography-get-flash-mode"><primary>gst_photography_get_flash_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_flash_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographyFlashMode"><type>GstPhotographyFlashMode</type></link> *flash_mode</parameter>);</programlisting>
+<para>Get the flash mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-flash-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flash_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyFlashMode"><type>GstPhotographyFlashMode</type></link> to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-flash-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-flicker-mode" role="function">
+<title>gst_photography_get_flicker_mode&#160;()</title>
+<indexterm zone="gst-photography-get-flicker-mode"><primary>gst_photography_get_flicker_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_flicker_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                  <parameter><link linkend="GstPhotographyFlickerReductionMode"><type>GstPhotographyFlickerReductionMode</type></link> *mode</parameter>);</programlisting>
+<para>Get the flicker mode value for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-flicker-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flicker_mode</para></entry>
+<entry role="parameter_description"><para>flicker mode value to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-flicker-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-focus-mode" role="function">
+<title>gst_photography_get_focus_mode&#160;()</title>
+<indexterm zone="gst-photography-get-focus-mode"><primary>gst_photography_get_focus_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_focus_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographyFocusMode"><type>GstPhotographyFocusMode</type></link> *mode</parameter>);</programlisting>
+<para>Get the focus mode value for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-focus-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>focus_mode</para></entry>
+<entry role="parameter_description"><para>focus_mode value to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-focus-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-noise-reduction" role="function">
+<title>gst_photography_get_noise_reduction&#160;()</title>
+<indexterm zone="gst-photography-get-noise-reduction"><primary>gst_photography_get_noise_reduction</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_noise_reduction (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                     <parameter><link linkend="GstPhotographyNoiseReduction"><type>GstPhotographyNoiseReduction</type></link> *noise_reduction</parameter>);</programlisting>
+<para>Get the noise reduction mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-noise-reduction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>noise_reduction</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyNoiseReductionMode"><type>GstPhotographyNoiseReductionMode</type></link> to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-noise-reduction.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-zoom" role="function">
+<title>gst_photography_get_zoom&#160;()</title>
+<indexterm zone="gst-photography-get-zoom"><primary>gst_photography_get_zoom</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_zoom (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                          <parameter><link linkend="gfloat"><type>gfloat</type></link> *zoom</parameter>);</programlisting>
+<para>Get the zoom value for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-get-zoom.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>zoom</para></entry>
+<entry role="parameter_description"><para>zoom value to get</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-zoom.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if getting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-ev-compensation" role="function">
+<title>gst_photography_set_ev_compensation&#160;()</title>
+<indexterm zone="gst-photography-set-ev-compensation"><primary>gst_photography_set_ev_compensation</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_ev_compensation (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                     <parameter><link linkend="gfloat"><type>gfloat</type></link> ev_comp</parameter>);</programlisting>
+<para>Set the ev compensation value for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-ev-compensation.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ev_comp</para></entry>
+<entry role="parameter_description"><para>ev compensation value to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-ev-compensation.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-iso-speed" role="function">
+<title>gst_photography_set_iso_speed&#160;()</title>
+<indexterm zone="gst-photography-set-iso-speed"><primary>gst_photography_set_iso_speed</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_iso_speed (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> iso_speed</parameter>);</programlisting>
+<para>Set the ISO value (light sensivity) for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-iso-speed.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>iso_speed</para></entry>
+<entry role="parameter_description"><para>ISO speed value to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-iso-speed.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-aperture" role="function">
+<title>gst_photography_set_aperture&#160;()</title>
+<indexterm zone="gst-photography-set-aperture"><primary>gst_photography_set_aperture</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_aperture (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                              <parameter><link linkend="guint"><type>guint</type></link> aperture</parameter>);</programlisting>
+<para>Set the aperture value for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-aperture.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>aperture</para></entry>
+<entry role="parameter_description"><para>aperture value to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-aperture.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-exposure" role="function">
+<title>gst_photography_set_exposure&#160;()</title>
+<indexterm zone="gst-photography-set-exposure"><primary>gst_photography_set_exposure</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_exposure (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                              <parameter><link linkend="guint"><type>guint</type></link> exposure</parameter>);</programlisting>
+<para>Set the fixed exposure time (in us) for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-exposure.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>exposure</para></entry>
+<entry role="parameter_description"><para>exposure time to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-exposure.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-white-balance-mode" role="function">
+<title>gst_photography_set_white_balance_mode&#160;()</title>
+<indexterm zone="gst-photography-set-white-balance-mode"><primary>gst_photography_set_white_balance_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_white_balance_mode
+                               (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographyWhiteBalanceMode"><type>GstPhotographyWhiteBalanceMode</type></link> wb_mode</parameter>);</programlisting>
+<para>Set the white balance mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-white-balance-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>wb_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyWhiteBalanceMode"><type>GstPhotographyWhiteBalanceMode</type></link> to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-white-balance-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-color-tone-mode" role="function">
+<title>gst_photography_set_color_tone_mode&#160;()</title>
+<indexterm zone="gst-photography-set-color-tone-mode"><primary>gst_photography_set_color_tone_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_color_tone_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                     <parameter><link linkend="GstPhotographyColorToneMode"><type>GstPhotographyColorToneMode</type></link> tone_mode</parameter>);</programlisting>
+<para>Set the color tone mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-color-tone-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>tone_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyColorToneMode"><type>GstPhotographyColorToneMode</type></link> to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-color-tone-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-scene-mode" role="function">
+<title>gst_photography_set_scene_mode&#160;()</title>
+<indexterm zone="gst-photography-set-scene-mode"><primary>gst_photography_set_scene_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_scene_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographySceneMode"><type>GstPhotographySceneMode</type></link> scene_mode</parameter>);</programlisting>
+<para>Set the scene mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-scene-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>scene_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographySceneMode"><type>GstPhotographySceneMode</type></link> to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-scene-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-flash-mode" role="function">
+<title>gst_photography_set_flash_mode&#160;()</title>
+<indexterm zone="gst-photography-set-flash-mode"><primary>gst_photography_set_flash_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_flash_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographyFlashMode"><type>GstPhotographyFlashMode</type></link> flash_mode</parameter>);</programlisting>
+<para>Set the flash mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-flash-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flash_mode</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyFlashMode"><type>GstPhotographyFlashMode</type></link> to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-flash-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-flicker-mode" role="function">
+<title>gst_photography_set_flicker_mode&#160;()</title>
+<indexterm zone="gst-photography-set-flicker-mode"><primary>gst_photography_set_flicker_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_flicker_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                  <parameter><link linkend="GstPhotographyFlickerReductionMode"><type>GstPhotographyFlickerReductionMode</type></link> mode</parameter>);</programlisting>
+<para>Set the flicker mode value for the <link linkend="GstElement"><type>GstElement</type></link>.</para>
+<refsect3 id="gst-photography-set-flicker-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>flicker_mode</para></entry>
+<entry role="parameter_description"><para>flicker mode value to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-flicker-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-focus-mode" role="function">
+<title>gst_photography_set_focus_mode&#160;()</title>
+<indexterm zone="gst-photography-set-focus-mode"><primary>gst_photography_set_focus_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_focus_mode (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                <parameter><link linkend="GstPhotographyFocusMode"><type>GstPhotographyFocusMode</type></link> mode</parameter>);</programlisting>
+<para>Set the focus mode value for the <link linkend="GstElement"><type>GstElement</type></link>.</para>
+<refsect3 id="gst-photography-set-focus-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>focus_mode</para></entry>
+<entry role="parameter_description"><para>focus mode value to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-focus-mode.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-noise-reduction" role="function">
+<title>gst_photography_set_noise_reduction&#160;()</title>
+<indexterm zone="gst-photography-set-noise-reduction"><primary>gst_photography_set_noise_reduction</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_noise_reduction (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                     <parameter><link linkend="GstPhotographyNoiseReduction"><type>GstPhotographyNoiseReduction</type></link> noise_reduction</parameter>);</programlisting>
+<para>Set the noise reduction mode for the <link linkend="GstElement"><type>GstElement</type></link></para>
+<refsect3 id="gst-photography-set-noise-reduction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>noise_reduction</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographyNoiseReductionMode"><type>GstPhotographyNoiseReductionMode</type></link> to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-noise-reduction.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-zoom" role="function">
+<title>gst_photography_set_zoom&#160;()</title>
+<indexterm zone="gst-photography-set-zoom"><primary>gst_photography_set_zoom</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_zoom (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                          <parameter><link linkend="gfloat"><type>gfloat</type></link> zoom</parameter>);</programlisting>
+<para>Set the zoom value for the <link linkend="GstElement"><type>GstElement</type></link>.
+E.g. 1.0 to get original image and 3.0 for 3x zoom and so on.</para>
+<refsect3 id="gst-photography-set-zoom.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>zoom</para></entry>
+<entry role="parameter_description"><para>zoom value to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-zoom.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if setting the value succeeded, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> otherwise</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-capabilities" role="function">
+<title>gst_photography_get_capabilities&#160;()</title>
+<indexterm zone="gst-photography-get-capabilities"><primary>gst_photography_get_capabilities</primary></indexterm>
+<programlisting language="C"><link linkend="GstPhotographyCaps"><returnvalue>GstPhotographyCaps</returnvalue></link>
+gst_photography_get_capabilities (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>);</programlisting>
+<para>Get <link linkend="GstPhotographyCaps"><type>GstPhotographyCaps</type></link> bitmask value that indicates what photography
+interface features the <link linkend="GstElement"><type>GstElement</type></link> supports</para>
+<refsect3 id="gst-photography-get-capabilities.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-capabilities.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="GstPhotographyCaps"><type>GstPhotographyCaps</type></link> value</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-prepare-for-capture" role="function">
+<title>gst_photography_prepare_for_capture&#160;()</title>
+<indexterm zone="gst-photography-prepare-for-capture"><primary>gst_photography_prepare_for_capture</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_prepare_for_capture (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                                     <parameter><link linkend="GstPhotographyCapturePrepared"><type>GstPhotographyCapturePrepared</type></link> func</parameter>,
+                                     <parameter><link linkend="GstCaps"><type>GstCaps</type></link> *capture_caps</parameter>,
+                                     <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>Start preparations for capture. Preparations can take indeterminate
+amount of time and <parameter>func</parameter>
+ callback is called after preparations are
+done. Image capture will begin after callback returns.</para>
+<refsect3 id="gst-photography-prepare-for-capture.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>func</para></entry>
+<entry role="parameter_description"><para>callback that is called after capturing has been prepared</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>capture_caps</para></entry>
+<entry role="parameter_description"><para><link linkend="GstCaps"><type>GstCaps</type></link> defining the desired format of the captured image</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data that will be passed to the callback <parameter>func</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-prepare-for-capture.returns" role="returns">
+<title>Returns</title>
+<para> <link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if preparations were started (caps were OK), otherwise <link linkend="FALSE:CAPS"><literal>FALSE</literal></link>.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-autofocus" role="function">
+<title>gst_photography_set_autofocus&#160;()</title>
+<indexterm zone="gst-photography-set-autofocus"><primary>gst_photography_set_autofocus</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_photography_set_autofocus (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                               <parameter><link linkend="gboolean"><type>gboolean</type></link> on</parameter>);</programlisting>
+<para>Start or stop autofocusing. <link linkend="GST-PHOTOGRAPHY-AUTOFOCUS-DONE:CAPS"><literal>GST_PHOTOGRAPHY_AUTOFOCUS_DONE</literal></link>
+message is posted to bus when autofocusing has finished.</para>
+<refsect3 id="gst-photography-set-autofocus.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>on</para></entry>
+<entry role="parameter_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to start autofocusing, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> to stop autofocusing</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-set-config" role="function">
+<title>gst_photography_set_config&#160;()</title>
+<indexterm zone="gst-photography-set-config"><primary>gst_photography_set_config</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_set_config (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                            <parameter><link linkend="GstPhotographySettings"><type>GstPhotographySettings</type></link> *config</parameter>);</programlisting>
+<para>Set all configuration settings at once.</para>
+<refsect3 id="gst-photography-set-config.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographySettings"><type>GstPhotographySettings</type></link> containg the configuration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-set-config.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if configuration was set successfully, otherwise FALSE.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-photography-get-config" role="function">
+<title>gst_photography_get_config&#160;()</title>
+<indexterm zone="gst-photography-get-config"><primary>gst_photography_get_config</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_photography_get_config (<parameter><link linkend="GstPhotography"><type>GstPhotography</type></link> *photo</parameter>,
+                            <parameter><link linkend="GstPhotographySettings"><type>GstPhotographySettings</type></link> *config</parameter>);</programlisting>
+<para>Get all configuration settings at once.</para>
+<refsect3 id="gst-photography-get-config.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>photo</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotography"><type>GstPhotography</type></link> interface of a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>config</para></entry>
+<entry role="parameter_description"><para><link linkend="GstPhotographySettings"><type>GstPhotographySettings</type></link> containg the configuration</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-photography-get-config.returns" role="returns">
+<title>Returns</title>
+<para> TRUE if configuration was got successfully, otherwise FALSE.</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstPhotography.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstPhotography" role="struct">
+<title>GstPhotography</title>
+<indexterm zone="GstPhotography"><primary>GstPhotography</primary></indexterm>
+<programlisting language="C">typedef struct _GstPhotography GstPhotography;</programlisting>
+<para>Opaque <link linkend="GstPhotography"><type>GstPhotography</type></link> data structure.</para>
+</refsect2>
+<refsect2 id="GstPhotographyNoiseReduction" role="enum">
+<title>enum GstPhotographyNoiseReduction</title>
+<indexterm zone="GstPhotographyNoiseReduction"><primary>GstPhotographyNoiseReduction</primary></indexterm>
+<para>Noise Reduction features of a photography capture or filter element.</para>
+<refsect3 id="GstPhotographyNoiseReduction.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-NOISE-REDUCTION-BAYER:CAPS">GST_PHOTOGRAPHY_NOISE_REDUCTION_BAYER</para></entry>
+<entry role="enum_member_description"><para>Adaptive noise reduction on Bayer
+format</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-NOISE-REDUCTION-YCC:CAPS">GST_PHOTOGRAPHY_NOISE_REDUCTION_YCC</para></entry>
+<entry role="enum_member_description"><para>reduces the noise on Y and 2-chroma
+images.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-NOISE-REDUCTION-TEMPORAL:CAPS">GST_PHOTOGRAPHY_NOISE_REDUCTION_TEMPORAL</para></entry>
+<entry role="enum_member_description"><para>Multi-frame adaptive NR,
+provided for the video mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-NOISE-REDUCTION-FIXED:CAPS">GST_PHOTOGRAPHY_NOISE_REDUCTION_FIXED</para></entry>
+<entry role="enum_member_description"><para>Fixed Pattern Noise refers to noise
+that does not change between frames. The noise is removed from the sensor
+image, by subtracting a previously-captured black image in memory.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-NOISE-REDUCTION-EXTRA:CAPS">GST_PHOTOGRAPHY_NOISE_REDUCTION_EXTRA</para></entry>
+<entry role="enum_member_description"><para>Extra Noise Reduction. In the case
+of high-ISO capturing, some noise remains after YCC NR. XNR reduces this
+remaining noise.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyWhiteBalanceMode" role="enum">
+<title>enum GstPhotographyWhiteBalanceMode</title>
+<indexterm zone="GstPhotographyWhiteBalanceMode"><primary>GstPhotographyWhiteBalanceMode</primary></indexterm>
+<para>Modes for white balance control.</para>
+<refsect3 id="GstPhotographyWhiteBalanceMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-AUTO:CAPS">GST_PHOTOGRAPHY_WB_MODE_AUTO</para></entry>
+<entry role="enum_member_description"><para>Choose white balance mode automatically</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-DAYLIGHT:CAPS">GST_PHOTOGRAPHY_WB_MODE_DAYLIGHT</para></entry>
+<entry role="enum_member_description"><para>Mode for daylight conditions</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-CLOUDY:CAPS">GST_PHOTOGRAPHY_WB_MODE_CLOUDY</para></entry>
+<entry role="enum_member_description"><para>Mode for cloudy conditions</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-SUNSET:CAPS">GST_PHOTOGRAPHY_WB_MODE_SUNSET</para></entry>
+<entry role="enum_member_description"><para>Mode for sunset conditions</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-TUNGSTEN:CAPS">GST_PHOTOGRAPHY_WB_MODE_TUNGSTEN</para></entry>
+<entry role="enum_member_description"><para>Mode for tungsten lighting</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-FLUORESCENT:CAPS">GST_PHOTOGRAPHY_WB_MODE_FLUORESCENT</para></entry>
+<entry role="enum_member_description"><para>Mode for fluorescent lighting</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-MANUAL:CAPS">GST_PHOTOGRAPHY_WB_MODE_MANUAL</para></entry>
+<entry role="enum_member_description"><para>Disable automatic white balance adjustment
+and keep current values.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-WARM-FLUORESCENT:CAPS">GST_PHOTOGRAPHY_WB_MODE_WARM_FLUORESCENT</para></entry>
+<entry role="enum_member_description"><para>Mode for warm fluorescent lighting (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-WB-MODE-SHADE:CAPS">GST_PHOTOGRAPHY_WB_MODE_SHADE</para></entry>
+<entry role="enum_member_description"><para>Mode for shade lighting (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyColorToneMode" role="enum">
+<title>enum GstPhotographyColorToneMode</title>
+<indexterm zone="GstPhotographyColorToneMode"><primary>GstPhotographyColorToneMode</primary></indexterm>
+<para>Modes for special color effects.</para>
+<refsect3 id="GstPhotographyColorToneMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-NORMAL:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_NORMAL</para></entry>
+<entry role="enum_member_description"><para>No effects</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-SEPIA:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_SEPIA</para></entry>
+<entry role="enum_member_description"><para>Sepia</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-NEGATIVE:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_NEGATIVE</para></entry>
+<entry role="enum_member_description"><para>Negative</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-GRAYSCALE:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_GRAYSCALE</para></entry>
+<entry role="enum_member_description"><para>Grayscale</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-NATURAL:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_NATURAL</para></entry>
+<entry role="enum_member_description"><para>Natural</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-VIVID:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_VIVID</para></entry>
+<entry role="enum_member_description"><para>Vivid</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-COLORSWAP:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_COLORSWAP</para></entry>
+<entry role="enum_member_description"><para>Colorswap</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-SOLARIZE:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_SOLARIZE</para></entry>
+<entry role="enum_member_description"><para>Solarize</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-OUT-OF-FOCUS:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_OUT_OF_FOCUS</para></entry>
+<entry role="enum_member_description"><para>Out of focus</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-SKY-BLUE:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_SKY_BLUE</para></entry>
+<entry role="enum_member_description"><para>Sky blue</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-GRASS-GREEN:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_GRASS_GREEN</para></entry>
+<entry role="enum_member_description"><para>Grass green</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-SKIN-WHITEN:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_SKIN_WHITEN</para></entry>
+<entry role="enum_member_description"><para>Skin whiten</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-POSTERIZE:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_POSTERIZE</para></entry>
+<entry role="enum_member_description"><para>Posterize (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-WHITEBOARD:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_WHITEBOARD</para></entry>
+<entry role="enum_member_description"><para>Whiteboard (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-BLACKBOARD:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_BLACKBOARD</para></entry>
+<entry role="enum_member_description"><para>Blackboard (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-COLOR-TONE-MODE-AQUA:CAPS">GST_PHOTOGRAPHY_COLOR_TONE_MODE_AQUA</para></entry>
+<entry role="enum_member_description"><para>Aqua (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographySceneMode" role="enum">
+<title>enum GstPhotographySceneMode</title>
+<indexterm zone="GstPhotographySceneMode"><primary>GstPhotographySceneMode</primary></indexterm>
+<para>Each mode contains preset <link linkend="GstPhotography"><type>GstPhotography</type></link> options in order to produce
+good capturing result in certain scene.</para>
+<refsect3 id="GstPhotographySceneMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-MANUAL:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_MANUAL</para></entry>
+<entry role="enum_member_description"><para>Set individual options manually</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-CLOSEUP:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_CLOSEUP</para></entry>
+<entry role="enum_member_description"><para>Mode for close objects</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-PORTRAIT:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_PORTRAIT</para></entry>
+<entry role="enum_member_description"><para>Mode for portraits</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-LANDSCAPE:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_LANDSCAPE</para></entry>
+<entry role="enum_member_description"><para>Mode for landscapes</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-SPORT:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_SPORT</para></entry>
+<entry role="enum_member_description"><para>Mode for scene with fast motion</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-NIGHT:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_NIGHT</para></entry>
+<entry role="enum_member_description"><para>Mode for night conditions</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-AUTO:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_AUTO</para></entry>
+<entry role="enum_member_description"><para>Choose scene mode automatically</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-ACTION:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_ACTION</para></entry>
+<entry role="enum_member_description"><para>Take photos of fast moving
+    objects (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-NIGHT-PORTRAIT:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_NIGHT_PORTRAIT</para></entry>
+<entry role="enum_member_description"><para>Take people pictures
+    at night (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-THEATRE:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_THEATRE</para></entry>
+<entry role="enum_member_description"><para>Take photos in a theater (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-BEACH:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_BEACH</para></entry>
+<entry role="enum_member_description"><para>Take pictures on the beach (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-SNOW:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_SNOW</para></entry>
+<entry role="enum_member_description"><para>Take pictures on the snow (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-SUNSET:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_SUNSET</para></entry>
+<entry role="enum_member_description"><para>Take sunset photos (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-STEADY-PHOTO:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_STEADY_PHOTO</para></entry>
+<entry role="enum_member_description"><para>Avoid blurry pictures
+    (for example, due to hand shake) (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-FIREWORKS:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_FIREWORKS</para></entry>
+<entry role="enum_member_description"><para>For shooting firework
+    displays (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-PARTY:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_PARTY</para></entry>
+<entry role="enum_member_description"><para>Take indoor low-light shot (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-CANDLELIGHT:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_CANDLELIGHT</para></entry>
+<entry role="enum_member_description"><para>Capture the naturally warm color
+    of scenes lit by candles (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SCENE-MODE-BARCODE:CAPS">GST_PHOTOGRAPHY_SCENE_MODE_BARCODE</para></entry>
+<entry role="enum_member_description"><para>Applications are looking for
+    a barcode (Since 1.2)</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyFlashMode" role="enum">
+<title>enum GstPhotographyFlashMode</title>
+<indexterm zone="GstPhotographyFlashMode"><primary>GstPhotographyFlashMode</primary></indexterm>
+<para>Modes for flash control.</para>
+<refsect3 id="GstPhotographyFlashMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLASH-MODE-AUTO:CAPS">GST_PHOTOGRAPHY_FLASH_MODE_AUTO</para></entry>
+<entry role="enum_member_description"><para>Fire flash automatically according to
+lighting conditions.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLASH-MODE-OFF:CAPS">GST_PHOTOGRAPHY_FLASH_MODE_OFF</para></entry>
+<entry role="enum_member_description"><para>Never fire flash</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLASH-MODE-ON:CAPS">GST_PHOTOGRAPHY_FLASH_MODE_ON</para></entry>
+<entry role="enum_member_description"><para>Always fire flash</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLASH-MODE-FILL-IN:CAPS">GST_PHOTOGRAPHY_FLASH_MODE_FILL_IN</para></entry>
+<entry role="enum_member_description"><para>Fill in flash</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLASH-MODE-RED-EYE:CAPS">GST_PHOTOGRAPHY_FLASH_MODE_RED_EYE</para></entry>
+<entry role="enum_member_description"><para>Flash mode for reducing chance of
+capturing red eyes</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyFlickerReductionMode" role="enum">
+<title>enum GstPhotographyFlickerReductionMode</title>
+<indexterm zone="GstPhotographyFlickerReductionMode"><primary>GstPhotographyFlickerReductionMode</primary></indexterm>
+<para>Reduce flicker in video caused by light source fluctuation.</para>
+<refsect3 id="GstPhotographyFlickerReductionMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLICKER-REDUCTION-OFF:CAPS">GST_PHOTOGRAPHY_FLICKER_REDUCTION_OFF</para></entry>
+<entry role="enum_member_description"><para>Disable flicker reduction</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLICKER-REDUCTION-50HZ:CAPS">GST_PHOTOGRAPHY_FLICKER_REDUCTION_50HZ</para></entry>
+<entry role="enum_member_description"><para>50Hz flicker reduction</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLICKER-REDUCTION-60HZ:CAPS">GST_PHOTOGRAPHY_FLICKER_REDUCTION_60HZ</para></entry>
+<entry role="enum_member_description"><para>60Hz flicker reduction</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FLICKER-REDUCTION-AUTO:CAPS">GST_PHOTOGRAPHY_FLICKER_REDUCTION_AUTO</para></entry>
+<entry role="enum_member_description"><para>Choose mode automatically</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyFocusMode" role="enum">
+<title>enum GstPhotographyFocusMode</title>
+<indexterm zone="GstPhotographyFocusMode"><primary>GstPhotographyFocusMode</primary></indexterm>
+<para>Choose mode for focusing algorithm.</para>
+<refsect3 id="GstPhotographyFocusMode.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-AUTO:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_AUTO</para></entry>
+<entry role="enum_member_description"><para>Choose focus mode automatically</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-MACRO:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_MACRO</para></entry>
+<entry role="enum_member_description"><para>Mode for focusing objects close to lens</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-PORTRAIT:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_PORTRAIT</para></entry>
+<entry role="enum_member_description"><para>Mode for portraits</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-INFINITY:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_INFINITY</para></entry>
+<entry role="enum_member_description"><para>Mode for landscapes and far away objects</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-HYPERFOCAL:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_HYPERFOCAL</para></entry>
+<entry role="enum_member_description"><para>Mode for maximum depth of field, keeping
+focus acceptable both in infinify and as close objects as possible</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-EXTENDED:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_EXTENDED</para></entry>
+<entry role="enum_member_description"><para>Extended focus mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-CONTINUOUS-NORMAL:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_CONTINUOUS_NORMAL</para></entry>
+<entry role="enum_member_description"><para>Continuous autofocus mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-CONTINUOUS-EXTENDED:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_CONTINUOUS_EXTENDED</para></entry>
+<entry role="enum_member_description"><para>Extended continuous
+autofocus mode</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-MODE-MANUAL:CAPS">GST_PHOTOGRAPHY_FOCUS_MODE_MANUAL</para></entry>
+<entry role="enum_member_description"><para>Disable automatic focusing
+and keep current value. <link linkend="GstPhotography--lens-focus"><type>“lens-focus”</type></link> property can
+be used to change focus manually.</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyFocusStatus" role="enum">
+<title>enum GstPhotographyFocusStatus</title>
+<indexterm zone="GstPhotographyFocusStatus"><primary>GstPhotographyFocusStatus</primary></indexterm>
+<para>Status of the focusing operation, used in <link linkend="GST-PHOTOGRAPHY-AUTOFOCUS-DONE:CAPS"><type>GST_PHOTOGRAPHY_AUTOFOCUS_DONE</type></link>
+message.</para>
+<refsect3 id="GstPhotographyFocusStatus.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-STATUS-NONE:CAPS">GST_PHOTOGRAPHY_FOCUS_STATUS_NONE</para></entry>
+<entry role="enum_member_description"><para>No status available</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-STATUS-RUNNING:CAPS">GST_PHOTOGRAPHY_FOCUS_STATUS_RUNNING</para></entry>
+<entry role="enum_member_description"><para>Focusing is ongoing</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-STATUS-FAIL:CAPS">GST_PHOTOGRAPHY_FOCUS_STATUS_FAIL</para></entry>
+<entry role="enum_member_description"><para>Focusing failed</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-FOCUS-STATUS-SUCCESS:CAPS">GST_PHOTOGRAPHY_FOCUS_STATUS_SUCCESS</para></entry>
+<entry role="enum_member_description"><para>Focusing succeeded</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyCaps" role="enum">
+<title>enum GstPhotographyCaps</title>
+<indexterm zone="GstPhotographyCaps"><primary>GstPhotographyCaps</primary></indexterm>
+<para>Bitmask that indicates which <link linkend="GstPhotography"><type>GstPhotography</type></link> interface features an instance
+supports.</para>
+<refsect3 id="GstPhotographyCaps.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-NONE:CAPS">GST_PHOTOGRAPHY_CAPS_NONE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-EV-COMP:CAPS">GST_PHOTOGRAPHY_CAPS_EV_COMP</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-ISO-SPEED:CAPS">GST_PHOTOGRAPHY_CAPS_ISO_SPEED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-WB-MODE:CAPS">GST_PHOTOGRAPHY_CAPS_WB_MODE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-TONE:CAPS">GST_PHOTOGRAPHY_CAPS_TONE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-SCENE:CAPS">GST_PHOTOGRAPHY_CAPS_SCENE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-FLASH:CAPS">GST_PHOTOGRAPHY_CAPS_FLASH</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-ZOOM:CAPS">GST_PHOTOGRAPHY_CAPS_ZOOM</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-FOCUS:CAPS">GST_PHOTOGRAPHY_CAPS_FOCUS</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-APERTURE:CAPS">GST_PHOTOGRAPHY_CAPS_APERTURE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-EXPOSURE:CAPS">GST_PHOTOGRAPHY_CAPS_EXPOSURE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-SHAKE:CAPS">GST_PHOTOGRAPHY_CAPS_SHAKE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-WHITE-BALANCE:CAPS">GST_PHOTOGRAPHY_CAPS_WHITE_BALANCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-NOISE-REDUCTION:CAPS">GST_PHOTOGRAPHY_CAPS_NOISE_REDUCTION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-FLICKER-REDUCTION:CAPS">GST_PHOTOGRAPHY_CAPS_FLICKER_REDUCTION</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-CAPS-ALL:CAPS">GST_PHOTOGRAPHY_CAPS_ALL</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstPhotographyShakeRisk" role="enum">
+<title>enum GstPhotographyShakeRisk</title>
+<indexterm zone="GstPhotographyShakeRisk"><primary>GstPhotographyShakeRisk</primary></indexterm>
+<para>Risk level of captured image becoming "shaken" due to camera movement and
+too long exposure time. Used in <link linkend="GST-PHOTOGRAPHY-SHAKE-RISK:CAPS"><type>GST_PHOTOGRAPHY_SHAKE_RISK</type></link> <link linkend="GstMessage"><type>GstMessage</type></link>.</para>
+<refsect3 id="GstPhotographyShakeRisk.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SHAKE-RISK-LOW:CAPS">GST_PHOTOGRAPHY_SHAKE_RISK_LOW</para></entry>
+<entry role="enum_member_description"><para>Low risk</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SHAKE-RISK-MEDIUM:CAPS">GST_PHOTOGRAPHY_SHAKE_RISK_MEDIUM</para></entry>
+<entry role="enum_member_description"><para>Medium risk</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-PHOTOGRAPHY-SHAKE-RISK-HIGH:CAPS">GST_PHOTOGRAPHY_SHAKE_RISK_HIGH</para></entry>
+<entry role="enum_member_description"><para>High risk</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-AUTOFOCUS-DONE:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_AUTOFOCUS_DONE</title>
+<indexterm zone="GST-PHOTOGRAPHY-AUTOFOCUS-DONE:CAPS"><primary>GST_PHOTOGRAPHY_AUTOFOCUS_DONE</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_AUTOFOCUS_DONE "autofocus-done"
+</programlisting>
+<para>Name of custom GstMessage that will be posted to <link linkend="GstBus"><type>GstBus</type></link> when autofocusing
+is complete.
+This message contains following fields:</para>
+<itemizedlist>
+<listitem>
+  <para>
+  <link linkend="GstPhotographyFocusStatus"><type>GstPhotographyFocusStatus</type></link>
+  <classname>&quot;status&quot;</classname>:
+  Tells if focusing succeeded or failed.
+  </para>
+</listitem>
+<listitem>
+  <para>
+  <link linkend="G-TYPE-INT:CAPS"><type>G_TYPE_INT</type></link>
+  <classname>&quot;focus-window-rows&quot;</classname>:
+  Tells number of focus matrix rows.
+  </para>
+</listitem>
+<listitem>
+  <para>
+  <link linkend="G-TYPE-INT:CAPS"><type>G_TYPE_INT</type></link>
+  <classname>&quot;focus-window-columns&quot;</classname>:
+  Tells number of focus matrix columns.
+  </para>
+</listitem>
+<listitem>
+  <para>
+  <link linkend="G-TYPE-INT:CAPS"><type>G_TYPE_INT</type></link>
+  <classname>&quot;focus-window-mask&quot;</classname>:
+  Bitmask containing rows x columns bits which mark the focus points in the
+  focus matrix. Lowest bit (LSB) always represents the top-left corner of the
+  focus matrix. This field is only valid when focusing status is SUCCESS.
+  </para>
+</listitem>
+</itemizedlist>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-SHAKE-RISK:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_SHAKE_RISK</title>
+<indexterm zone="GST-PHOTOGRAPHY-SHAKE-RISK:CAPS"><primary>GST_PHOTOGRAPHY_SHAKE_RISK</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_SHAKE_RISK "shake-risk"
+</programlisting>
+<para>Name of custom GstMessage that is posted to <link linkend="GstBus"><type>GstBus</type></link> during autofocusing
+process. It is posted if there is change in the risk of captured image
+becoming "shaken" due to camera movement and too long exposure time.</para>
+<para>This message contains following fields:</para>
+<itemizedlist>
+<listitem>
+  <para>
+  <link linkend="GstPhotographyShakeRisk"><type>GstPhotographyShakeRisk</type></link>
+  <classname>&quot;status&quot;</classname>:
+  Tells risk level of capturing shaken image.
+  </para>
+</listitem>
+</itemizedlist>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-WB-MODE:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_WB_MODE</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-WB-MODE:CAPS"><primary>GST_PHOTOGRAPHY_PROP_WB_MODE</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_WB_MODE            "white-balance-mode"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-SCENE-MODE:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_SCENE_MODE</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-SCENE-MODE:CAPS"><primary>GST_PHOTOGRAPHY_PROP_SCENE_MODE</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_SCENE_MODE         "scene-mode"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-FLASH-MODE:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_FLASH_MODE</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-FLASH-MODE:CAPS"><primary>GST_PHOTOGRAPHY_PROP_FLASH_MODE</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_FLASH_MODE         "flash-mode"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-NOISE-REDUCTION:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_NOISE_REDUCTION</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-NOISE-REDUCTION:CAPS"><primary>GST_PHOTOGRAPHY_PROP_NOISE_REDUCTION</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_NOISE_REDUCTION    "noise-reduction"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-FOCUS-STATUS:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_FOCUS_STATUS</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-FOCUS-STATUS:CAPS"><primary>GST_PHOTOGRAPHY_PROP_FOCUS_STATUS</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_FOCUS_STATUS       "focus-status"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-CAPABILITIES:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_CAPABILITIES</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-CAPABILITIES:CAPS"><primary>GST_PHOTOGRAPHY_PROP_CAPABILITIES</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_CAPABILITIES       "capabilities"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-SHAKE-RISK:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_SHAKE_RISK</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-SHAKE-RISK:CAPS"><primary>GST_PHOTOGRAPHY_PROP_SHAKE_RISK</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_SHAKE_RISK         "shake-risk"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-EV-COMP:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_EV_COMP</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-EV-COMP:CAPS"><primary>GST_PHOTOGRAPHY_PROP_EV_COMP</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_EV_COMP            "ev-compensation"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-ISO-SPEED:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_ISO_SPEED</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-ISO-SPEED:CAPS"><primary>GST_PHOTOGRAPHY_PROP_ISO_SPEED</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_ISO_SPEED          "iso-speed"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-APERTURE:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_APERTURE</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-APERTURE:CAPS"><primary>GST_PHOTOGRAPHY_PROP_APERTURE</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_APERTURE           "aperture"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-IMAGE-CAPTURE-SUPPORTED-CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_IMAGE_CAPTURE_SUPPORTED_CAPS</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-IMAGE-CAPTURE-SUPPORTED-CAPS"><primary>GST_PHOTOGRAPHY_PROP_IMAGE_CAPTURE_SUPPORTED_CAPS</primary></indexterm>
+<programlisting language="C">#define             GST_PHOTOGRAPHY_PROP_IMAGE_CAPTURE_SUPPORTED_CAPS</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-IMAGE-PREVIEW-SUPPORTED-CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_IMAGE_PREVIEW_SUPPORTED_CAPS</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-IMAGE-PREVIEW-SUPPORTED-CAPS"><primary>GST_PHOTOGRAPHY_PROP_IMAGE_PREVIEW_SUPPORTED_CAPS</primary></indexterm>
+<programlisting language="C">#define             GST_PHOTOGRAPHY_PROP_IMAGE_PREVIEW_SUPPORTED_CAPS</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-FLICKER-MODE:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_FLICKER_MODE</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-FLICKER-MODE:CAPS"><primary>GST_PHOTOGRAPHY_PROP_FLICKER_MODE</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_FLICKER_MODE       "flicker-mode"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-FOCUS-MODE:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_FOCUS_MODE</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-FOCUS-MODE:CAPS"><primary>GST_PHOTOGRAPHY_PROP_FOCUS_MODE</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_FOCUS_MODE         "focus-mode"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-PHOTOGRAPHY-PROP-ZOOM:CAPS" role="macro">
+<title>GST_PHOTOGRAPHY_PROP_ZOOM</title>
+<indexterm zone="GST-PHOTOGRAPHY-PROP-ZOOM:CAPS"><primary>GST_PHOTOGRAPHY_PROP_ZOOM</primary></indexterm>
+<programlisting language="C">#define GST_PHOTOGRAPHY_PROP_ZOOM               "zoom"
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

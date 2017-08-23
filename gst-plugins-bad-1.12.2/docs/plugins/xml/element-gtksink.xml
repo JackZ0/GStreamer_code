@@ -1,0 +1,111 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-gtksink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-gtksink.top_of_page" role="top_of_page">gtksink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gtksink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-gtksink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGtkSink--force-aspect-ratio">force-aspect-ratio</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGtkSink--ignore-alpha">ignore-alpha</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFraction"><type>GstFraction</type></link></entry><entry role="property_name"><link linkend="GstGtkSink--pixel-aspect-ratio">pixel-aspect-ratio</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GtkWidget"><type>GtkWidget</type></link> *</entry><entry role="property_name"><link linkend="GstGtkSink--widget">widget</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGtkSink"/><refsect1 id="gst-plugins-bad-plugins-gtksink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGtkSink-struct">GstGtkSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gtksink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoSink">GstVideoSink</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGtkBaseSink">GstGtkBaseSink</link>
+                            <phrase role="lineart">╰──</phrase> GstGtkSink
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gtksink.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGtkSink implements
+ <link linkend="GstNavigation">GstNavigation</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-gtksink.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-gtksink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gtksink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gtksink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGtkSink-struct" role="struct">
+<title>struct GstGtkSink</title>
+<indexterm zone="GstGtkSink-struct"><primary>GstGtkSink</primary></indexterm>
+<programlisting language="C">struct GstGtkSink;</programlisting>
+<para>Opaque <link linkend="GstGtkSink"><type>GstGtkSink</type></link> object</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-gtksink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGtkSink--force-aspect-ratio" role="property"><title>The <literal>“force-aspect-ratio”</literal> property</title>
+<indexterm zone="GstGtkSink--force-aspect-ratio"><primary>GstGtkSink:force-aspect-ratio</primary></indexterm>
+<programlisting>  “force-aspect-ratio”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, scaling will respect original aspect ratio.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGtkSink--ignore-alpha" role="property"><title>The <literal>“ignore-alpha”</literal> property</title>
+<indexterm zone="GstGtkSink--ignore-alpha"><primary>GstGtkSink:ignore-alpha</primary></indexterm>
+<programlisting>  “ignore-alpha”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, alpha will be ignored and converted to black.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstGtkSink--pixel-aspect-ratio" role="property"><title>The <literal>“pixel-aspect-ratio”</literal> property</title>
+<indexterm zone="GstGtkSink--pixel-aspect-ratio"><primary>GstGtkSink:pixel-aspect-ratio</primary></indexterm>
+<programlisting>  “pixel-aspect-ratio”       <link linkend="GstFraction"><type>GstFraction</type></link></programlisting>
+<para>The pixel aspect ratio of the device.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGtkSink--widget" role="property"><title>The <literal>“widget”</literal> property</title>
+<indexterm zone="GstGtkSink--widget"><primary>GstGtkSink:widget</primary></indexterm>
+<programlisting>  “widget”                   <link linkend="GtkWidget"><type>GtkWidget</type></link> *</programlisting>
+<para>The GtkWidget to place in the widget heirachy.</para><para>Flags: Read</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

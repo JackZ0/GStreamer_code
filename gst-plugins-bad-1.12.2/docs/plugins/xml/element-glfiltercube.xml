@@ -1,0 +1,150 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glfiltercube">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glfiltercube.top_of_page" role="top_of_page">glfiltercube</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glfiltercube</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glfiltercube.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLFilterCube--aspect">aspect</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstGLFilterCube--blue">blue</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLFilterCube--fovy">fovy</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstGLFilterCube--green">green</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstGLFilterCube--red">red</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLFilterCube--zfar">zfar</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstGLFilterCube--znear">znear</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLFilterCube"/><refsect1 id="gst-plugins-bad-plugins-glfiltercube.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLFilterCube-struct">GstGLFilterCube</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfiltercube.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGLFilterCube
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glfiltercube.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The resize and redraw callbacks can be set from a client code.</para>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! glfiltercube ! glimagesink
+]]></programlisting></informalexample>
+<para> A pipeline to mpa textures on the 6 cube faces..
+FBO is required.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! glfiltercube ! video/x-raw, width=640, height=480 ! glimagesink
+]]></programlisting></informalexample>
+<para> Resize scene after drawing the cube.
+The scene size is greater than the input video size.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! video/x-raw, width=640, height=480  ! glfiltercube ! glimagesink
+]]></programlisting></informalexample>
+<para> Resize scene before drawing the cube.
+The scene size is greater than the input video size.</para>
+</refsect3>
+
+<include href="element-glfiltercube-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfiltercube.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfiltercube.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLFilterCube-struct" role="struct">
+<title>struct GstGLFilterCube</title>
+<indexterm zone="GstGLFilterCube-struct"><primary>GstGLFilterCube</primary></indexterm>
+<programlisting language="C">struct GstGLFilterCube;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfiltercube.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLFilterCube--aspect" role="property"><title>The <literal>“aspect”</literal> property</title>
+<indexterm zone="GstGLFilterCube--aspect"><primary>GstGLFilterCube:aspect</primary></indexterm>
+<programlisting>  “aspect”                   <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Field of view in the x direction.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLFilterCube--blue" role="property"><title>The <literal>“blue”</literal> property</title>
+<indexterm zone="GstGLFilterCube--blue"><primary>GstGLFilterCube:blue</primary></indexterm>
+<programlisting>  “blue”                     <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Background blue color.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLFilterCube--fovy" role="property"><title>The <literal>“fovy”</literal> property</title>
+<indexterm zone="GstGLFilterCube--fovy"><primary>GstGLFilterCube:fovy</primary></indexterm>
+<programlisting>  “fovy”                     <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Field of view angle in degrees.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,180]</para>
+<para>Default value: 45</para>
+</refsect2>
+<refsect2 id="GstGLFilterCube--green" role="property"><title>The <literal>“green”</literal> property</title>
+<indexterm zone="GstGLFilterCube--green"><primary>GstGLFilterCube:green</primary></indexterm>
+<programlisting>  “green”                    <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Background green color.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLFilterCube--red" role="property"><title>The <literal>“red”</literal> property</title>
+<indexterm zone="GstGLFilterCube--red"><primary>GstGLFilterCube:red</primary></indexterm>
+<programlisting>  “red”                      <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Background red color.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLFilterCube--zfar" role="property"><title>The <literal>“zfar”</literal> property</title>
+<indexterm zone="GstGLFilterCube--zfar"><primary>GstGLFilterCube:zfar</primary></indexterm>
+<programlisting>  “zfar”                     <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Specifies the distance from the viewer to the far clipping plane.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1000]</para>
+<para>Default value: 100</para>
+</refsect2>
+<refsect2 id="GstGLFilterCube--znear" role="property"><title>The <literal>“znear”</literal> property</title>
+<indexterm zone="GstGLFilterCube--znear"><primary>GstGLFilterCube:znear</primary></indexterm>
+<programlisting>  “znear”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Specifies the distance from the viewer to the near clipping plane.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 0.1</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,286 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLAPI">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLAPI.top_of_page">GstGlApi</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGlApi</refname>
+<refpurpose>OpenGL API specific functionality</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLAPI.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-api-to-string">gst_gl_api_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLAPI"><returnvalue>GstGLAPI</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-api-from-string">gst_gl_api_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-platform-to-string">gst_gl_platform_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLPlatform"><returnvalue>GstGLPlatform</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-platform-from-string">gst_gl_platform_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLAPI.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLAPI">GstGLAPI</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLPlatform">GstGLPlatform</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-API-GLES1-NAME:CAPS">GST_GL_API_GLES1_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-API-GLES2-NAME:CAPS">GST_GL_API_GLES2_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-API-OPENGL3-NAME:CAPS">GST_GL_API_OPENGL3_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-API-OPENGL-NAME:CAPS">GST_GL_API_OPENGL_NAME</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLAPI.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Provides some helper API for dealing with OpenGL API's and platforms</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLAPI.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-api-to-string" role="function">
+<title>gst_gl_api_to_string&#160;()</title>
+<indexterm zone="gst-gl-api-to-string"><primary>gst_gl_api_to_string</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_gl_api_to_string (<parameter><link linkend="GstGLAPI"><type>GstGLAPI</type></link> api</parameter>);</programlisting>
+<refsect3 id="gst-gl-api-to-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>api</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAPI"><type>GstGLAPI</type></link> to stringify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-api-to-string.returns" role="returns">
+<title>Returns</title>
+<para> A space seperated string of the OpenGL api's enabled in <parameter>api</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-api-from-string" role="function">
+<title>gst_gl_api_from_string&#160;()</title>
+<indexterm zone="gst-gl-api-from-string"><primary>gst_gl_api_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLAPI"><returnvalue>GstGLAPI</returnvalue></link>
+gst_gl_api_from_string (<parameter>const <link linkend="gchar"><type>gchar</type></link> *api_s</parameter>);</programlisting>
+<refsect3 id="gst-gl-api-from-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>api_s</para></entry>
+<entry role="parameter_description"><para>a space seperated string of OpenGL apis</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-api-from-string.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstGLAPI"><type>GstGLAPI</type></link> represented by <parameter>api_s</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-platform-to-string" role="function">
+<title>gst_gl_platform_to_string&#160;()</title>
+<indexterm zone="gst-gl-platform-to-string"><primary>gst_gl_platform_to_string</primary></indexterm>
+<programlisting language="C"><link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_gl_platform_to_string (<parameter><link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> platform</parameter>);</programlisting>
+<refsect3 id="gst-gl-platform-to-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>platform</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> to stringify</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-platform-to-string.returns" role="returns">
+<title>Returns</title>
+<para> A space seperated string of the OpenGL platforms enabled in <parameter>platform</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-platform-from-string" role="function">
+<title>gst_gl_platform_from_string&#160;()</title>
+<indexterm zone="gst-gl-platform-from-string"><primary>gst_gl_platform_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLPlatform"><returnvalue>GstGLPlatform</returnvalue></link>
+gst_gl_platform_from_string (<parameter>const <link linkend="gchar"><type>gchar</type></link> *platform_s</parameter>);</programlisting>
+<refsect3 id="gst-gl-platform-from-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>platform_s</para></entry>
+<entry role="parameter_description"><para>a space seperated string of OpenGL platformss</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-platform-from-string.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> represented by <parameter>platform_s</parameter>
+</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLAPI.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLAPI" role="enum">
+<title>enum GstGLAPI</title>
+<indexterm zone="GstGLAPI"><primary>GstGLAPI</primary></indexterm>
+<refsect3 id="GstGLAPI.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-API-NONE:CAPS">GST_GL_API_NONE</para></entry>
+<entry role="enum_member_description"><para>no API</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-API-OPENGL:CAPS">GST_GL_API_OPENGL</para></entry>
+<entry role="enum_member_description"><para>Desktop OpenGL up to and including 3.1.  The
+                   compatibility profile when the OpenGL version is &gt;= 3.2</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-API-OPENGL3:CAPS">GST_GL_API_OPENGL3</para></entry>
+<entry role="enum_member_description"><para>Desktop OpenGL &gt;= 3.2 core profile</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-API-GLES1:CAPS">GST_GL_API_GLES1</para></entry>
+<entry role="enum_member_description"><para>OpenGL ES 1.x</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-API-GLES2:CAPS">GST_GL_API_GLES2</para></entry>
+<entry role="enum_member_description"><para>OpenGL ES 2.x and 3.x</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-API-ANY:CAPS">GST_GL_API_ANY</para></entry>
+<entry role="enum_member_description"><para>Any OpenGL API</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstGLPlatform" role="enum">
+<title>enum GstGLPlatform</title>
+<indexterm zone="GstGLPlatform"><primary>GstGLPlatform</primary></indexterm>
+<refsect3 id="GstGLPlatform.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-PLATFORM-NONE:CAPS">GST_GL_PLATFORM_NONE</para></entry>
+<entry role="enum_member_description"><para>no platform</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-PLATFORM-EGL:CAPS">GST_GL_PLATFORM_EGL</para></entry>
+<entry role="enum_member_description"><para>the EGL platform used primarily with the X11, wayland
+                     and android window systems as well as on embedded Linux</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-PLATFORM-GLX:CAPS">GST_GL_PLATFORM_GLX</para></entry>
+<entry role="enum_member_description"><para>the GLX platform used primarily with the X11 window system</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-PLATFORM-WGL:CAPS">GST_GL_PLATFORM_WGL</para></entry>
+<entry role="enum_member_description"><para>the WGL platform used primarily on Windows</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-PLATFORM-CGL:CAPS">GST_GL_PLATFORM_CGL</para></entry>
+<entry role="enum_member_description"><para>the CGL platform used primarily on OS X</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-PLATFORM-EAGL:CAPS">GST_GL_PLATFORM_EAGL</para></entry>
+<entry role="enum_member_description"><para>the EAGL platform used primarily on iOS</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-PLATFORM-ANY:CAPS">GST_GL_PLATFORM_ANY</para></entry>
+<entry role="enum_member_description"><para>any OpenGL platform</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GST-GL-API-GLES1-NAME:CAPS" role="macro">
+<title>GST_GL_API_GLES1_NAME</title>
+<indexterm zone="GST-GL-API-GLES1-NAME:CAPS"><primary>GST_GL_API_GLES1_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_API_GLES1_NAME "gles1"
+</programlisting>
+<para>The name for <link linkend="GST-GL-API-GLES1:CAPS"><literal>GST_GL_API_GLES1</literal></link> used in various places</para>
+</refsect2>
+<refsect2 id="GST-GL-API-GLES2-NAME:CAPS" role="macro">
+<title>GST_GL_API_GLES2_NAME</title>
+<indexterm zone="GST-GL-API-GLES2-NAME:CAPS"><primary>GST_GL_API_GLES2_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_API_GLES2_NAME "gles2"
+</programlisting>
+<para>The name for <link linkend="GST-GL-API-GLES2:CAPS"><literal>GST_GL_API_GLES2</literal></link> used in various places</para>
+</refsect2>
+<refsect2 id="GST-GL-API-OPENGL3-NAME:CAPS" role="macro">
+<title>GST_GL_API_OPENGL3_NAME</title>
+<indexterm zone="GST-GL-API-OPENGL3-NAME:CAPS"><primary>GST_GL_API_OPENGL3_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_API_OPENGL3_NAME "opengl3"
+</programlisting>
+<para>The name for <link linkend="GST-GL-API-OPENGL3:CAPS"><literal>GST_GL_API_OPENGL3</literal></link> used in various places</para>
+</refsect2>
+<refsect2 id="GST-GL-API-OPENGL-NAME:CAPS" role="macro">
+<title>GST_GL_API_OPENGL_NAME</title>
+<indexterm zone="GST-GL-API-OPENGL-NAME:CAPS"><primary>GST_GL_API_OPENGL_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_API_OPENGL_NAME "opengl"
+</programlisting>
+<para>The name for <link linkend="GST-GL-API-OPENGL:CAPS"><literal>GST_GL_API_OPENGL</literal></link> used in various places</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLAPI.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link>, <link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+
+</refsect1>
+
+</refentry>

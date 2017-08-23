@@ -1,0 +1,112 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-square">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-square.top_of_page" role="top_of_page">square</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>square</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-square.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstSquare--height">height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstSquare--width">width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstSquare--zoom">zoom</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstSquare"/><refsect1 id="gst-plugins-bad-plugins-square.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstSquare-struct">GstSquare</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-square.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGeometricTransform">GstGeometricTransform</link>
+                            <phrase role="lineart">╰──</phrase> GstSquare
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-square.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The square element distorts the center part of the image into a square.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! square zoom=100 ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-square-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-square.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-square.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstSquare-struct" role="struct">
+<title>struct GstSquare</title>
+<indexterm zone="GstSquare-struct"><primary>GstSquare</primary></indexterm>
+<programlisting language="C">struct GstSquare;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-square.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstSquare--height" role="property"><title>The <literal>“height”</literal> property</title>
+<indexterm zone="GstSquare--height"><primary>GstSquare:height</primary></indexterm>
+<programlisting>  “height”                   <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Height of the square, relative to the frame height.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.5</para>
+</refsect2>
+<refsect2 id="GstSquare--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstSquare--width"><primary>GstSquare:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Width of the square, relative to the frame width.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.5</para>
+</refsect2>
+<refsect2 id="GstSquare--zoom" role="property"><title>The <literal>“zoom”</literal> property</title>
+<indexterm zone="GstSquare--zoom"><primary>GstSquare:zoom</primary></indexterm>
+<programlisting>  “zoom”                     <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Zoom amount in the center region.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,100]</para>
+<para>Default value: 2</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-square.see-also">
+<title>See Also</title>
+<para>geometrictransform</para>
+
+</refsect1>
+
+</refentry>

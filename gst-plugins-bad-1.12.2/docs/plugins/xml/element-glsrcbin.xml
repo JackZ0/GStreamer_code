@@ -1,0 +1,131 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glsrcbin">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glsrcbin.top_of_page" role="top_of_page">glsrcbin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glsrcbin</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstElement"><type>GstElement</type></link> *</entry><entry role="property_name"><link linkend="GstGLSrcBin--src">src</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstGLSrcBin-create-element">create-element</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLSrcBin"/><refsect1 id="gst-plugins-bad-plugins-glsrcbin.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLSrcBin-struct">GstGLSrcBin</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstGLSrcBin
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLSrcBin implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-glsrcbin-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLSrcBin-struct" role="struct">
+<title>struct GstGLSrcBin</title>
+<indexterm zone="GstGLSrcBin-struct"><primary>GstGLSrcBin</primary></indexterm>
+<programlisting language="C">struct GstGLSrcBin;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLSrcBin--src" role="property"><title>The <literal>“src”</literal> property</title>
+<indexterm zone="GstGLSrcBin--src"><primary>GstGLSrcBin:src</primary></indexterm>
+<programlisting>  “src”                      <link linkend="GstElement"><type>GstElement</type></link> *</programlisting>
+<para>The GL src chain to use.</para><para>Flags: Read / Write</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glsrcbin.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLSrcBin-create-element" role="signal"><title>The <literal>“create-element”</literal> signal</title>
+<indexterm zone="GstGLSrcBin-create-element"><primary>GstGLSrcBin::create-element</primary></indexterm>
+<programlisting language="C"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*
+user_function (<link linkend="GstGLSrcBin"><type>GstGLSrcBin</type></link> *object,
+               <link linkend="gpointer"><type>gpointer</type></link>     user_data)</programlisting>
+<para>Will be emitted when we need the processing element/s that this bin will use</para>
+<refsect3 id="GstGLSrcBin-create-element.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLSrcBin"><type>GstGLSrcBin</type></link></para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLSrcBin-create-element.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstElement"><type>GstElement</type></link></para>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

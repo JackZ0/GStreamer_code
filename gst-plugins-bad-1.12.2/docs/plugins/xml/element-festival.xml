@@ -1,0 +1,66 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-festival">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-festival.top_of_page" role="top_of_page">festival</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>festival</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstFestival"/><refsect1 id="gst-plugins-bad-plugins-festival.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstFestival-struct">GstFestival</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-festival.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstFestival
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-festival.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element connects to a</para>
+<ulink url="http://www.festvox.org/festival/index.html">festival</ulink>
+<para>server process and uses it to synthesize speech. Festival need to run already
+in server mode, started as <screen>festival --server</screen></para>
+<refsect3><title>Example pipeline</title><informalexample><programlisting><![CDATA[
+echo 'Hello G-Streamer!' | gst-launch-1.0 fdsrc fd=0 ! festival ! wavparse ! audioconvert ! alsasink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-festival-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-festival.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-festival.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFestival-struct" role="struct">
+<title>struct GstFestival</title>
+<indexterm zone="GstFestival-struct"><primary>GstFestival</primary></indexterm>
+<programlisting language="C">struct GstFestival;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

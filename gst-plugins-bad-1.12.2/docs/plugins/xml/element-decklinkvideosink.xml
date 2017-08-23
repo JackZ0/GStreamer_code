@@ -1,0 +1,104 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-decklinkvideosink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-decklinkvideosink.top_of_page" role="top_of_page">decklinkvideosink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>decklinkvideosink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSink--device-number">device-number</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkModes"><type>GstDecklinkModes</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSink--mode">mode</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkVideoFormat"><type>GstDecklinkVideoFormat</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSink--video-format">video-format</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkTimecodeFormat"><type>GstDecklinkTimecodeFormat</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSink--timecode-format">timecode-format</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDecklinkVideoSink"/><refsect1 id="gst-plugins-bad-plugins-decklinkvideosink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDecklinkVideoSink-struct">GstDecklinkVideoSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> GstDecklinkVideoSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosink.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-decklinkvideosink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDecklinkVideoSink-struct" role="struct">
+<title>struct GstDecklinkVideoSink</title>
+<indexterm zone="GstDecklinkVideoSink-struct"><primary>GstDecklinkVideoSink</primary></indexterm>
+<programlisting language="C">struct GstDecklinkVideoSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDecklinkVideoSink--device-number" role="property"><title>The <literal>“device-number”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSink--device-number"><primary>GstDecklinkVideoSink:device-number</primary></indexterm>
+<programlisting>  “device-number”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Output device instance to use.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSink--mode" role="property"><title>The <literal>“mode”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSink--mode"><primary>GstDecklinkVideoSink:mode</primary></indexterm>
+<programlisting>  “mode”                     <link linkend="GstDecklinkModes"><type>GstDecklinkModes</type></link></programlisting>
+<para>Video Mode to use for playback.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: NTSC SD 60i</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSink--video-format" role="property"><title>The <literal>“video-format”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSink--video-format"><primary>GstDecklinkVideoSink:video-format</primary></indexterm>
+<programlisting>  “video-format”             <link linkend="GstDecklinkVideoFormat"><type>GstDecklinkVideoFormat</type></link></programlisting>
+<para>Video format type to use for playback.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: bmdFormat8BitYUV</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSink--timecode-format" role="property"><title>The <literal>“timecode-format”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSink--timecode-format"><primary>GstDecklinkVideoSink:timecode-format</primary></indexterm>
+<programlisting>  “timecode-format”          <link linkend="GstDecklinkTimecodeFormat"><type>GstDecklinkTimecodeFormat</type></link></programlisting>
+<para>Timecode format type to use for playback.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: bmdTimecodeRP188Any</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

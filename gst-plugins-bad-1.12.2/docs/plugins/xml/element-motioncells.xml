@@ -1,0 +1,218 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-motioncells">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-motioncells.top_of_page" role="top_of_page">motioncells</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>motioncells</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-motioncells.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--calculatemotion">calculatemotion</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstMotioncells--cellscolor">cellscolor</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstMotioncells--datafile">datafile</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstMotioncells--datafileextension">datafileextension</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--display">display</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--gap">gap</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--gridx">gridx</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--gridy">gridy</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--minimummotionframes">minimummotionframes</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstMotioncells--motioncellsidx">motioncellsidx</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--motioncellthickness">motioncellthickness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstMotioncells--motionmaskcellspos">motionmaskcellspos</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstMotioncells--motionmaskcoords">motionmaskcoords</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--postallmotion">postallmotion</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--postnomotion">postnomotion</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--sensitivity">sensitivity</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--threshold">threshold</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstMotioncells--usealpha">usealpha</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstMotioncells"/><refsect1 id="gst-plugins-bad-plugins-motioncells.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMotioncells-struct">GstMotioncells</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-motioncells.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstMotioncells
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-motioncells.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Performs motion detection on videos.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc pattern=18 ! videorate ! videoscale ! video/x-raw,width=320,height=240,framerate=5/1 ! videoconvert ! motioncells ! videoconvert ! xvimagesink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-motioncells-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-motioncells.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-motioncells.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstMotioncells-struct" role="struct">
+<title>struct GstMotioncells</title>
+<indexterm zone="GstMotioncells-struct"><primary>GstMotioncells</primary></indexterm>
+<programlisting language="C">struct GstMotioncells;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-motioncells.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstMotioncells--calculatemotion" role="property"><title>The <literal>“calculatemotion”</literal> property</title>
+<indexterm zone="GstMotioncells--calculatemotion"><primary>GstMotioncells:calculatemotion</primary></indexterm>
+<programlisting>  “calculatemotion”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Toggles motion calculation. If FALSE, this filter does nothing.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstMotioncells--cellscolor" role="property"><title>The <literal>“cellscolor”</literal> property</title>
+<indexterm zone="GstMotioncells--cellscolor"><primary>GstMotioncells:cellscolor</primary></indexterm>
+<programlisting>  “cellscolor”               <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Color for motion cells in R,G,B format. Max per channel is 255.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;255,255,0&quot;</para>
+</refsect2>
+<refsect2 id="GstMotioncells--datafile" role="property"><title>The <literal>“datafile”</literal> property</title>
+<indexterm zone="GstMotioncells--datafile"><primary>GstMotioncells:datafile</primary></indexterm>
+<programlisting>  “datafile”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of motioncells data file (empty string means no saving).</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstMotioncells--datafileextension" role="property"><title>The <literal>“datafileextension”</literal> property</title>
+<indexterm zone="GstMotioncells--datafileextension"><primary>GstMotioncells:datafileextension</primary></indexterm>
+<programlisting>  “datafileextension”        <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Extension of datafile.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;vamc&quot;</para>
+</refsect2>
+<refsect2 id="GstMotioncells--display" role="property"><title>The <literal>“display”</literal> property</title>
+<indexterm zone="GstMotioncells--display"><primary>GstMotioncells:display</primary></indexterm>
+<programlisting>  “display”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Toggle display of motion cells on current frame.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMotioncells--gap" role="property"><title>The <literal>“gap”</literal> property</title>
+<indexterm zone="GstMotioncells--gap"><primary>GstMotioncells:gap</primary></indexterm>
+<programlisting>  “gap”                      <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Interval in seconds after which motion is considered finished and a motion finished bus message is posted.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,60]</para>
+<para>Default value: 5</para>
+</refsect2>
+<refsect2 id="GstMotioncells--gridx" role="property"><title>The <literal>“gridx”</literal> property</title>
+<indexterm zone="GstMotioncells--gridx"><primary>GstMotioncells:gridx</primary></indexterm>
+<programlisting>  “gridx”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of horizontal grid cells.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [8,32]</para>
+<para>Default value: 10</para>
+</refsect2>
+<refsect2 id="GstMotioncells--gridy" role="property"><title>The <literal>“gridy”</literal> property</title>
+<indexterm zone="GstMotioncells--gridy"><primary>GstMotioncells:gridy</primary></indexterm>
+<programlisting>  “gridy”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of vertical grid cells.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [8,32]</para>
+<para>Default value: 10</para>
+</refsect2>
+<refsect2 id="GstMotioncells--minimummotionframes" role="property"><title>The <literal>“minimummotionframes”</literal> property</title>
+<indexterm zone="GstMotioncells--minimummotionframes"><primary>GstMotioncells:minimummotionframes</primary></indexterm>
+<programlisting>  “minimummotionframes”      <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Minimum number of motion frames triggering a motion event.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,60]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstMotioncells--motioncellsidx" role="property"><title>The <literal>“motioncellsidx”</literal> property</title>
+<indexterm zone="GstMotioncells--motioncellsidx"><primary>GstMotioncells:motioncellsidx</primary></indexterm>
+<programlisting>  “motioncellsidx”           <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Describe a cell with its line and column idx separated with &quot;:&quot;. Pass multiple cells as a comma-separated list.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstMotioncells--motioncellthickness" role="property"><title>The <literal>“motioncellthickness”</literal> property</title>
+<indexterm zone="GstMotioncells--motioncellthickness"><primary>GstMotioncells:motioncellthickness</primary></indexterm>
+<programlisting>  “motioncellthickness”      <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Motion Cell Border Thickness. Set to -1 to fill motion cell.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,5]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstMotioncells--motionmaskcellspos" role="property"><title>The <literal>“motionmaskcellspos”</literal> property</title>
+<indexterm zone="GstMotioncells--motionmaskcellspos"><primary>GstMotioncells:motionmaskcellspos</primary></indexterm>
+<programlisting>  “motionmaskcellspos”       <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Describe a cell with its line and column idx separated with &quot;:&quot;. Pass multiple cells as a comma-separated list.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstMotioncells--motionmaskcoords" role="property"><title>The <literal>“motionmaskcoords”</literal> property</title>
+<indexterm zone="GstMotioncells--motionmaskcoords"><primary>GstMotioncells:motionmaskcoords</primary></indexterm>
+<programlisting>  “motionmaskcoords”         <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Describe a region with its upper left and lower right x, y coordinates separated with &quot;:&quot;. Pass multiple regions as a comma-separated list.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstMotioncells--postallmotion" role="property"><title>The <literal>“postallmotion”</literal> property</title>
+<indexterm zone="GstMotioncells--postallmotion"><primary>GstMotioncells:postallmotion</primary></indexterm>
+<programlisting>  “postallmotion”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Post bus messages for every motion frame or just motion start and motion stop.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstMotioncells--postnomotion" role="property"><title>The <literal>“postnomotion”</literal> property</title>
+<indexterm zone="GstMotioncells--postnomotion"><primary>GstMotioncells:postnomotion</primary></indexterm>
+<programlisting>  “postnomotion”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>If non 0, post a no_motion event on the bus if no motion is detected for the given number of seconds.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,180]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstMotioncells--sensitivity" role="property"><title>The <literal>“sensitivity”</literal> property</title>
+<indexterm zone="GstMotioncells--sensitivity"><primary>GstMotioncells:sensitivity</primary></indexterm>
+<programlisting>  “sensitivity”              <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Motion detection sensitivity.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.5</para>
+</refsect2>
+<refsect2 id="GstMotioncells--threshold" role="property"><title>The <literal>“threshold”</literal> property</title>
+<indexterm zone="GstMotioncells--threshold"><primary>GstMotioncells:threshold</primary></indexterm>
+<programlisting>  “threshold”                <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Threshold value for motion. Filter detects motion when at least this fraction of the cells have moved.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.01</para>
+</refsect2>
+<refsect2 id="GstMotioncells--usealpha" role="property"><title>The <literal>“usealpha”</literal> property</title>
+<indexterm zone="GstMotioncells--usealpha"><primary>GstMotioncells:usealpha</primary></indexterm>
+<programlisting>  “usealpha”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Toggle usage of alpha blending on frames with motion cells.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

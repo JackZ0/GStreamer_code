@@ -1,0 +1,67 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-ttmlrender">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-ttmlrender.top_of_page" role="top_of_page">ttmlrender</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ttmlrender</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstTtmlRender"/><refsect1 id="gst-plugins-bad-plugins-ttmlrender.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstTtmlRender-struct">GstTtmlRender</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ttmlrender.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstTtmlRender
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-ttmlrender.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Renders timed text on top of a video stream. It receives text in buffers
+from a ttmlparse element; each text string is in its own <link linkend="GstMemory"><type>GstMemory</type></link> within
+the GstBuffer, and the styling and layout associated with each text string
+is in metadata attached to the <link linkend="GstBuffer"><type>GstBuffer</type></link>.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=<media file location> ! video/quicktime ! qtdemux name=q ttmlrender name=r q. ! queue ! h264parse ! avdec_h264 ! autovideoconvert ! r.video_sink filesrc location=<subtitle file location> blocksize=16777216 ! queue ! ttmlparse ! r.text_sink r. ! ximagesink q. ! queue ! aacparse ! avdec_aac ! audioconvert ! alsasink
+]]></programlisting></informalexample>
+<para> Parse and render TTML subtitles contained in a single XML file over an
+MP4 stream containing H.264 video and AAC audio:</para>
+</refsect3>
+
+<include href="element-ttmlrender-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ttmlrender.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ttmlrender.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTtmlRender-struct" role="struct">
+<title>struct GstTtmlRender</title>
+<indexterm zone="GstTtmlRender-struct"><primary>GstTtmlRender</primary></indexterm>
+<programlisting language="C">struct GstTtmlRender;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

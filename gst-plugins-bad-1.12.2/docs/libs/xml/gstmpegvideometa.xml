@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-gstmpegvideometa">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-gstmpegvideometa.top_of_page">gstmpegvideometa</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>gstmpegvideometa</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-gstmpegvideometa.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstMpegVideoMeta"><returnvalue>GstMpegVideoMeta</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-buffer-add-mpeg-video-meta">gst_buffer_add_mpeg_video_meta</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-buffer-get-mpeg-video-meta">gst_buffer_get_mpeg_video_meta</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="GstMetaInfo"><returnvalue>GstMetaInfo</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-mpeg-video-meta-get-info">gst_mpeg_video_meta_get_info</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstmpegvideometa.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-MPEG-VIDEO-META-API-TYPE:CAPS">GST_MPEG_VIDEO_META_API_TYPE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-MPEG-VIDEO-META-INFO:CAPS">GST_MPEG_VIDEO_META_INFO</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstMpegVideoMeta">GstMpegVideoMeta</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-gstmpegvideometa.includes"><title>Includes</title><synopsis>#include &lt;gst/codecparsers/gstmpegvideometa.h&gt;
+</synopsis></refsect1>
+
+<refsect1 id="gst-plugins-bad-libs-gstmpegvideometa.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstmpegvideometa.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-buffer-add-mpeg-video-meta" role="function" condition="since:1.2">
+<title>gst_buffer_add_mpeg_video_meta&#160;()</title>
+<indexterm zone="gst-buffer-add-mpeg-video-meta" role="1.2"><primary>gst_buffer_add_mpeg_video_meta</primary></indexterm>
+<programlisting language="C"><link linkend="GstMpegVideoMeta"><returnvalue>GstMpegVideoMeta</returnvalue></link>&#160;*
+gst_buffer_add_mpeg_video_meta (<parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *buffer</parameter>,
+                                <parameter>const <link linkend="GstMpegVideoSequenceHdr"><type>GstMpegVideoSequenceHdr</type></link> *seq_hdr</parameter>,
+                                <parameter>const <link linkend="GstMpegVideoSequenceExt"><type>GstMpegVideoSequenceExt</type></link> *seq_ext</parameter>,
+                                <parameter>const <link linkend="GstMpegVideoSequenceDisplayExt"><type>GstMpegVideoSequenceDisplayExt</type></link> *disp_ext</parameter>,
+                                <parameter>const <link linkend="GstMpegVideoPictureHdr"><type>GstMpegVideoPictureHdr</type></link> *pic_hdr</parameter>,
+                                <parameter>const <link linkend="GstMpegVideoPictureExt"><type>GstMpegVideoPictureExt</type></link> *pic_ext</parameter>,
+                                <parameter>const <link linkend="GstMpegVideoQuantMatrixExt"><type>GstMpegVideoQuantMatrixExt</type></link> *quant_ext</parameter>);</programlisting>
+<para>Creates and adds a <link linkend="GstMpegVideoMeta"><type>GstMpegVideoMeta</type></link> to a <parameter>buffer</parameter>
+.</para>
+<para>Provided structures must either be <link linkend="NULL:CAPS"><literal>NULL</literal></link> or GSlice-allocated.</para>
+<refsect3 id="gst-buffer-add-mpeg-video-meta.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>buffer</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstBuffer"><type>GstBuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-buffer-add-mpeg-video-meta.returns" role="returns">
+<title>Returns</title>
+<para> a newly created <link linkend="GstMpegVideoMeta"><type>GstMpegVideoMeta</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+<refsect2 id="gst-buffer-get-mpeg-video-meta" role="macro">
+<title>gst_buffer_get_mpeg_video_meta()</title>
+<indexterm zone="gst-buffer-get-mpeg-video-meta"><primary>gst_buffer_get_mpeg_video_meta</primary></indexterm>
+<programlisting language="C">#define gst_buffer_get_mpeg_video_meta(b) ((GstMpegVideoMeta*)gst_buffer_get_meta((b),GST_MPEG_VIDEO_META_API_TYPE))
+</programlisting>
+</refsect2>
+<refsect2 id="gst-mpeg-video-meta-get-info" role="function">
+<title>gst_mpeg_video_meta_get_info&#160;()</title>
+<indexterm zone="gst-mpeg-video-meta-get-info"><primary>gst_mpeg_video_meta_get_info</primary></indexterm>
+<programlisting language="C">const <link linkend="GstMetaInfo"><returnvalue>GstMetaInfo</returnvalue></link>&#160;*
+gst_mpeg_video_meta_get_info (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-gstmpegvideometa.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GST-MPEG-VIDEO-META-API-TYPE:CAPS" role="macro">
+<title>GST_MPEG_VIDEO_META_API_TYPE</title>
+<indexterm zone="GST-MPEG-VIDEO-META-API-TYPE:CAPS"><primary>GST_MPEG_VIDEO_META_API_TYPE</primary></indexterm>
+<programlisting language="C">#define GST_MPEG_VIDEO_META_API_TYPE  (gst_mpeg_video_meta_api_get_type())
+</programlisting>
+</refsect2>
+<refsect2 id="GST-MPEG-VIDEO-META-INFO:CAPS" role="macro">
+<title>GST_MPEG_VIDEO_META_INFO</title>
+<indexterm zone="GST-MPEG-VIDEO-META-INFO:CAPS"><primary>GST_MPEG_VIDEO_META_INFO</primary></indexterm>
+<programlisting language="C">#define GST_MPEG_VIDEO_META_INFO  (gst_mpeg_video_meta_get_info())
+</programlisting>
+</refsect2>
+<refsect2 id="GstMpegVideoMeta" role="struct" condition="since:1.2">
+<title>struct GstMpegVideoMeta</title>
+<indexterm zone="GstMpegVideoMeta" role="1.2"><primary>GstMpegVideoMeta</primary></indexterm>
+<programlisting language="C">struct GstMpegVideoMeta {
+  GstMeta            meta;
+
+  GstMpegVideoSequenceHdr        *sequencehdr;
+  GstMpegVideoSequenceExt        *sequenceext;
+  GstMpegVideoSequenceDisplayExt *sequencedispext;
+  GstMpegVideoPictureHdr         *pichdr;
+  GstMpegVideoPictureExt         *picext;
+  GstMpegVideoQuantMatrixExt     *quantext;
+
+  guint num_slices;
+  gsize slice_offset;
+};
+</programlisting>
+<para>Extra buffer metadata describing the contents of a MPEG1/2 Video frame</para>
+<para>Can be used by elements (mainly decoders) to avoid having to parse
+Mpeg video 1/2 packets if it can be done upstream.</para>
+<para>The various fields are only valid during the lifetime of the <link linkend="GstMpegVideoMeta"><type>GstMpegVideoMeta</type></link>.
+If elements wish to use those for longer, they are required to make a copy.</para>
+<refsect3 id="GstMpegVideoMeta.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMeta"><type>GstMeta</type></link>&#160;<structfield id="GstMpegVideoMeta.meta">meta</structfield>;</para></entry>
+<entry role="struct_member_description"><para>parent <link linkend="GstMeta"><type>GstMeta</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpegVideoSequenceHdr"><type>GstMpegVideoSequenceHdr</type></link>&#160;*<structfield id="GstMpegVideoMeta.sequencehdr">sequencehdr</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstMpegVideoSequenceHdr"><type>GstMpegVideoSequenceHdr</type></link> if present in the buffer</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpegVideoSequenceExt"><type>GstMpegVideoSequenceExt</type></link>&#160;*<structfield id="GstMpegVideoMeta.sequenceext">sequenceext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstMpegVideoSequenceExt"><type>GstMpegVideoSequenceExt</type></link> if present in the buffer</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpegVideoSequenceDisplayExt"><type>GstMpegVideoSequenceDisplayExt</type></link>&#160;*<structfield id="GstMpegVideoMeta.sequencedispext">sequencedispext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstMpegVideoSequenceDisplayExt"><type>GstMpegVideoSequenceDisplayExt</type></link> if present in the
+buffer.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpegVideoPictureHdr"><type>GstMpegVideoPictureHdr</type></link>&#160;*<structfield id="GstMpegVideoMeta.pichdr">pichdr</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstMpegVideoPictureHdr"><type>GstMpegVideoPictureHdr</type></link> if present in the buffer.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpegVideoPictureExt"><type>GstMpegVideoPictureExt</type></link>&#160;*<structfield id="GstMpegVideoMeta.picext">picext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstMpegVideoPictureExt"><type>GstMpegVideoPictureExt</type></link> if present in the buffer.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMpegVideoQuantMatrixExt"><type>GstMpegVideoQuantMatrixExt</type></link>&#160;*<structfield id="GstMpegVideoMeta.quantext">quantext</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstMpegVideoQuantMatrixExt"><type>GstMpegVideoQuantMatrixExt</type></link> if present in the buffer</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstMpegVideoMeta.num-slices">num_slices</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gsize"><type>gsize</type></link>&#160;<structfield id="GstMpegVideoMeta.slice-offset">slice_offset</structfield>;</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+
+</refsect1>
+
+</refentry>

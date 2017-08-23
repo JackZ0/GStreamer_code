@@ -1,0 +1,84 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-decklinkaudiosink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-decklinkaudiosink.top_of_page" role="top_of_page">decklinkaudiosink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>decklinkaudiosink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDecklinkAudioSink--device-number">device-number</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDecklinkAudioSink"/><refsect1 id="gst-plugins-bad-plugins-decklinkaudiosink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDecklinkAudioSink-struct">GstDecklinkAudioSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstAudioBaseSink">GstAudioBaseSink</link>
+                        <phrase role="lineart">╰──</phrase> GstDecklinkAudioSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosink.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-decklinkaudiosink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDecklinkAudioSink-struct" role="struct">
+<title>struct GstDecklinkAudioSink</title>
+<indexterm zone="GstDecklinkAudioSink-struct"><primary>GstDecklinkAudioSink</primary></indexterm>
+<programlisting language="C">struct GstDecklinkAudioSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkaudiosink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDecklinkAudioSink--device-number" role="property"><title>The <literal>“device-number”</literal> property</title>
+<indexterm zone="GstDecklinkAudioSink--device-number"><primary>GstDecklinkAudioSink:device-number</primary></indexterm>
+<programlisting>  “device-number”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Output device instance to use.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

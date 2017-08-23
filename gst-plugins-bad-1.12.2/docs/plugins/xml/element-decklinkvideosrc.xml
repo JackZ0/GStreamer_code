@@ -1,0 +1,148 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-decklinkvideosrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-decklinkvideosrc.top_of_page" role="top_of_page">decklinkvideosrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>decklinkvideosrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--buffer-size">buffer-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkConnection"><type>GstDecklinkConnection</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--connection">connection</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--device-number">device-number</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkModes"><type>GstDecklinkModes</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--mode">mode</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkVideoFormat"><type>GstDecklinkVideoFormat</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--video-format">video-format</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstDecklinkTimecodeFormat"><type>GstDecklinkTimecodeFormat</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--timecode-format">timecode-format</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--drop-no-signal-frames">drop-no-signal-frames</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--output-stream-time">output-stream-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--skip-first-time">skip-first-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstDecklinkVideoSrc--signal">signal</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDecklinkVideoSrc"/><refsect1 id="gst-plugins-bad-plugins-decklinkvideosrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDecklinkVideoSrc-struct">GstDecklinkVideoSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> GstDecklinkVideoSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-decklinkvideosrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDecklinkVideoSrc-struct" role="struct">
+<title>struct GstDecklinkVideoSrc</title>
+<indexterm zone="GstDecklinkVideoSrc-struct"><primary>GstDecklinkVideoSrc</primary></indexterm>
+<programlisting language="C">struct GstDecklinkVideoSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-decklinkvideosrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDecklinkVideoSrc--buffer-size" role="property"><title>The <literal>“buffer-size”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--buffer-size"><primary>GstDecklinkVideoSrc:buffer-size</primary></indexterm>
+<programlisting>  “buffer-size”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Size of internal buffer in number of video frames.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,G_MAXINT]</para>
+<para>Default value: 5</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--connection" role="property"><title>The <literal>“connection”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--connection"><primary>GstDecklinkVideoSrc:connection</primary></indexterm>
+<programlisting>  “connection”               <link linkend="GstDecklinkConnection"><type>GstDecklinkConnection</type></link></programlisting>
+<para>Video input connection to use.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Auto</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--device-number" role="property"><title>The <literal>“device-number”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--device-number"><primary>GstDecklinkVideoSrc:device-number</primary></indexterm>
+<programlisting>  “device-number”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Output device instance to use.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--mode" role="property"><title>The <literal>“mode”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--mode"><primary>GstDecklinkVideoSrc:mode</primary></indexterm>
+<programlisting>  “mode”                     <link linkend="GstDecklinkModes"><type>GstDecklinkModes</type></link></programlisting>
+<para>Video Mode to use for playback.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Automatic detection</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--video-format" role="property"><title>The <literal>“video-format”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--video-format"><primary>GstDecklinkVideoSrc:video-format</primary></indexterm>
+<programlisting>  “video-format”             <link linkend="GstDecklinkVideoFormat"><type>GstDecklinkVideoFormat</type></link></programlisting>
+<para>Video format type to use for input (Only use auto for mode=auto).</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Auto</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--timecode-format" role="property"><title>The <literal>“timecode-format”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--timecode-format"><primary>GstDecklinkVideoSrc:timecode-format</primary></indexterm>
+<programlisting>  “timecode-format”          <link linkend="GstDecklinkTimecodeFormat"><type>GstDecklinkTimecodeFormat</type></link></programlisting>
+<para>Timecode format type to use for input.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: bmdTimecodeRP188Any</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--drop-no-signal-frames" role="property"><title>The <literal>“drop-no-signal-frames”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--drop-no-signal-frames"><primary>GstDecklinkVideoSrc:drop-no-signal-frames</primary></indexterm>
+<programlisting>  “drop-no-signal-frames”    <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Drop frames that are marked as having no input signal.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--output-stream-time" role="property"><title>The <literal>“output-stream-time”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--output-stream-time"><primary>GstDecklinkVideoSrc:output-stream-time</primary></indexterm>
+<programlisting>  “output-stream-time”       <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Output stream time directly instead of translating to pipeline clock.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--skip-first-time" role="property"><title>The <literal>“skip-first-time”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--skip-first-time"><primary>GstDecklinkVideoSrc:skip-first-time</primary></indexterm>
+<programlisting>  “skip-first-time”          <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Skip that much time of initial frames after starting.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDecklinkVideoSrc--signal" role="property"><title>The <literal>“signal”</literal> property</title>
+<indexterm zone="GstDecklinkVideoSrc--signal"><primary>GstDecklinkVideoSrc:signal</primary></indexterm>
+<programlisting>  “signal”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>True if there is a valid input signal available.</para><para>Flags: Read</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

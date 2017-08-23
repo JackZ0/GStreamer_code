@@ -1,0 +1,130 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-pcapparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-pcapparse.top_of_page" role="top_of_page">pcapparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>pcapparse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-pcapparse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstPcapParse--dst-ip">dst-ip</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstPcapParse--dst-port">dst-port</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstPcapParse--src-ip">src-ip</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstPcapParse--src-port">src-port</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstCaps"><type>GstCaps</type></link> *</entry><entry role="property_name"><link linkend="GstPcapParse--caps">caps</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstPcapParse--ts-offset">ts-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstPcapParse"/><refsect1 id="gst-plugins-bad-plugins-pcapparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstPcapParse-struct">GstPcapParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pcapparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstPcapParse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-pcapparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Extracts payloads from Ethernet-encapsulated IP packets.
+Use <link linkend="GstPcapParse--src-ip"><type>“src-ip”</type></link>, <link linkend="GstPcapParse--dst-ip"><type>“dst-ip”</type></link>,
+<link linkend="GstPcapParse--src-port"><type>“src-port”</type></link> and <link linkend="GstPcapParse--dst-port"><type>“dst-port”</type></link> to restrict which packets
+should be included.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=h264crasher.pcap ! pcapparse ! rtph264depay
+! ffdec_h264 ! fakesink
+]]></programlisting></informalexample>
+<para> Read from a pcap dump file using filesrc, extract the raw UDP packets,
+depayload and decode them.</para>
+</refsect3>
+
+<include href="element-pcapparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pcapparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pcapparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstPcapParse-struct" role="struct">
+<title>struct GstPcapParse</title>
+<indexterm zone="GstPcapParse-struct"><primary>GstPcapParse</primary></indexterm>
+<programlisting language="C">struct GstPcapParse;</programlisting>
+<para>GstPcapParse element.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pcapparse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstPcapParse--dst-ip" role="property"><title>The <literal>“dst-ip”</literal> property</title>
+<indexterm zone="GstPcapParse--dst-ip"><primary>GstPcapParse:dst-ip</primary></indexterm>
+<programlisting>  “dst-ip”                   <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Destination IP to restrict to.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstPcapParse--dst-port" role="property"><title>The <literal>“dst-port”</literal> property</title>
+<indexterm zone="GstPcapParse--dst-port"><primary>GstPcapParse:dst-port</primary></indexterm>
+<programlisting>  “dst-port”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Destination port to restrict to.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,65535]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstPcapParse--src-ip" role="property"><title>The <literal>“src-ip”</literal> property</title>
+<indexterm zone="GstPcapParse--src-ip"><primary>GstPcapParse:src-ip</primary></indexterm>
+<programlisting>  “src-ip”                   <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Source IP to restrict to.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstPcapParse--src-port" role="property"><title>The <literal>“src-port”</literal> property</title>
+<indexterm zone="GstPcapParse--src-port"><primary>GstPcapParse:src-port</primary></indexterm>
+<programlisting>  “src-port”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Source port to restrict to.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,65535]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstPcapParse--caps" role="property"><title>The <literal>“caps”</literal> property</title>
+<indexterm zone="GstPcapParse--caps"><primary>GstPcapParse:caps</primary></indexterm>
+<programlisting>  “caps”                     <link linkend="GstCaps"><type>GstCaps</type></link> *</programlisting>
+<para>The caps of the source pad.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstPcapParse--ts-offset" role="property"><title>The <literal>“ts-offset”</literal> property</title>
+<indexterm zone="GstPcapParse--ts-offset"><primary>GstPcapParse:ts-offset</primary></indexterm>
+<programlisting>  “ts-offset”                <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Relative timestamp offset (ns) to apply (-1 = use absolute packet time).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

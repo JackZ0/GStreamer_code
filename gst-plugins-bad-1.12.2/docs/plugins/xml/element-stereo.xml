@@ -1,0 +1,97 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-stereo">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-stereo.top_of_page" role="top_of_page">stereo</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>stereo</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-stereo.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstStereo--active">active</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstStereo--stereo">stereo</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstStereo"/><refsect1 id="gst-plugins-bad-plugins-stereo.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstStereo-struct">GstStereo</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-stereo.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstAudioFilter">GstAudioFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstStereo
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-stereo.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Create a wide stereo effect.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=sine.ogg ! oggdemux ! vorbisdec ! audioconvert ! stereo ! audioconvert ! audioresample ! alsasink
+]]></programlisting></informalexample>
+<para> Play an Ogg/Vorbis file.</para>
+</refsect3>
+
+<include href="element-stereo-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-stereo.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-stereo.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstStereo-struct" role="struct">
+<title>struct GstStereo</title>
+<indexterm zone="GstStereo-struct"><primary>GstStereo</primary></indexterm>
+<programlisting language="C">struct GstStereo;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-stereo.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstStereo--active" role="property"><title>The <literal>“active”</literal> property</title>
+<indexterm zone="GstStereo--active"><primary>GstStereo:active</primary></indexterm>
+<programlisting>  “active”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>active.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstStereo--stereo" role="property"><title>The <literal>“stereo”</literal> property</title>
+<indexterm zone="GstStereo--stereo"><primary>GstStereo:stereo</primary></indexterm>
+<programlisting>  “stereo”                   <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>stereo.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.1</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

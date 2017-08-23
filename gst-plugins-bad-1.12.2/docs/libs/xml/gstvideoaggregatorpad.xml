@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstVideoAggregatorPad">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstVideoAggregatorPad.top_of_page">GstVideoAggregatorPad</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstVideoAggregatorPad</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="GstVideoAggregatorPad.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstVideoAggregatorPad--ignore-eos">ignore-eos</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstVideoAggregatorPad--zorder">zorder</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstVideoAggregatorPad.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVideoAggregatorPad-struct">GstVideoAggregatorPad</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVideoAggregatorPadClass">GstVideoAggregatorPadClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstVideoAggregatorPad.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstPad">GstPad</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAggregatorPad">GstAggregatorPad</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstVideoAggregatorPad
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstVideoAggregatorPad.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="GstVideoAggregatorPad.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="GstVideoAggregatorPad.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstVideoAggregatorPad-struct" role="struct">
+<title>struct GstVideoAggregatorPad</title>
+<indexterm zone="GstVideoAggregatorPad-struct"><primary>GstVideoAggregatorPad</primary></indexterm>
+<programlisting language="C">struct GstVideoAggregatorPad;</programlisting>
+<refsect3 id="GstVideoAggregatorPad.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstVideoAggregatorPadClass" role="struct">
+<title>struct GstVideoAggregatorPadClass</title>
+<indexterm zone="GstVideoAggregatorPadClass"><primary>GstVideoAggregatorPadClass</primary></indexterm>
+<programlisting language="C">struct GstVideoAggregatorPadClass {
+  GstAggregatorPadClass parent_class;
+  gboolean           (*set_info)              (GstVideoAggregatorPad * pad,
+                                               GstVideoAggregator    * videoaggregator,
+                                               GstVideoInfo          * current_info,
+                                               GstVideoInfo          * wanted_info);
+
+  gboolean           (*prepare_frame)         (GstVideoAggregatorPad * pad,
+                                               GstVideoAggregator    * videoaggregator);
+
+  void               (*clean_frame)           (GstVideoAggregatorPad * pad,
+                                               GstVideoAggregator    * videoaggregator);
+
+  gpointer          _gst_reserved[GST_PADDING_LARGE];
+};
+</programlisting>
+<para><parameter>set_info</parameter>
+: Lets subclass set a converter on the pad,
+                right after a new format has been negotiated.
+<parameter>prepare_frame</parameter>
+: Prepare the frame from the pad buffer (if any)
+                and sets it to <parameter>aggregated_frame</parameter>
+
+<parameter>clean_frame</parameter>
+:   clean the frame previously prepared in prepare_frame</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstVideoAggregatorPad.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstVideoAggregatorPad--ignore-eos" role="property"><title>The <literal>“ignore-eos”</literal> property</title>
+<indexterm zone="GstVideoAggregatorPad--ignore-eos"><primary>GstVideoAggregatorPad:ignore-eos</primary></indexterm>
+<programlisting>  “ignore-eos”               <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Aggregate the last frame on pads that are EOS till they are released.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstVideoAggregatorPad--zorder" role="property"><title>The <literal>“zorder”</literal> property</title>
+<indexterm zone="GstVideoAggregatorPad--zorder"><primary>GstVideoAggregatorPad:zorder</primary></indexterm>
+<programlisting>  “zorder”                   <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Z Order of the picture.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

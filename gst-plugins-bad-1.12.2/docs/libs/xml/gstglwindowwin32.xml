@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLWindowWin32">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLWindowWin32.top_of_page">GstGLWindowWin32</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLWindowWin32</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowWin32.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLWindowWin32"><returnvalue>GstGLWindowWin32</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-window-win32-new">gst_gl_window_win32_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-win32-create-window">gst_gl_window_win32_create_window</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowWin32.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLWindowWin32">GstGLWindowWin32</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLWindowWin32Class">GstGLWindowWin32Class</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowWin32.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowWin32.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-window-win32-new" role="function">
+<title>gst_gl_window_win32_new&#160;()</title>
+<indexterm zone="gst-gl-window-win32-new"><primary>gst_gl_window_win32_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLWindowWin32"><returnvalue>GstGLWindowWin32</returnvalue></link>&#160;*
+gst_gl_window_win32_new (<parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-window-win32-create-window" role="function">
+<title>gst_gl_window_win32_create_window&#160;()</title>
+<indexterm zone="gst-gl-window-win32-create-window"><primary>gst_gl_window_win32_create_window</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_window_win32_create_window (<parameter><link linkend="GstGLWindowWin32"><type>GstGLWindowWin32</type></link> *window_win32</parameter>,
+                                   <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLWindowWin32.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLWindowWin32" role="struct">
+<title>struct GstGLWindowWin32</title>
+<indexterm zone="GstGLWindowWin32"><primary>GstGLWindowWin32</primary></indexterm>
+<programlisting language="C">struct GstGLWindowWin32 {
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLWindowWin32Class" role="struct">
+<title>struct GstGLWindowWin32Class</title>
+<indexterm zone="GstGLWindowWin32Class"><primary>GstGLWindowWin32Class</primary></indexterm>
+<programlisting language="C">struct GstGLWindowWin32Class {
+};
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

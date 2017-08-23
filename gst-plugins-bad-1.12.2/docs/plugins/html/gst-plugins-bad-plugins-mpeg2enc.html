@@ -233,8 +233,8 @@
 <a name="gst-plugins-bad-plugins-mpeg2enc.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
                 <span class="lineart">╰──</span> GstMpeg2enc
 </pre>
 </div>
@@ -242,7 +242,7 @@
 <a name="gst-plugins-bad-plugins-mpeg2enc.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstMpeg2enc implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
+ <a href="../gstreamer-1.0/GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-mpeg2enc.description"></a><h2>Description</h2>
@@ -253,17 +253,9 @@ GstMpeg2enc implements
 of the mpeg2enc tool in particular, which shares options with this element.</p>
 <div class="refsect2">
 <a name="id-1.2.96.8.7"></a><h3>Example pipeline</h3>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc num<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">1000</span> <span class="gtkdoc opt">!</span> mpeg2enc <span class="gtkdoc opt">!</span> filesink location<span class="gtkdoc opt">=</span>videotestsrc<span class="gtkdoc opt">.</span>m1v</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
- This example pipeline will encode a test video source to a an MPEG1
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc num-buffers=1000 ! mpeg2enc ! filesink location=videotestsrc.m1v
+</pre></div> This example pipeline will encode a test video source to a an MPEG1
 elementary stream (with Generic MPEG1 profile).
 <p>
 Likely, the <a class="link" href="gst-plugins-bad-plugins-mpeg2enc.html#GstMpeg2enc--format" title="The “format” property"><span class="type">“format”</span></a> property
@@ -274,17 +266,9 @@ Note that the (S)VCD profiles also restrict the image size, so some scaling
 may be needed to accomodate this.  The so-called generic profiles (as used
 in the example above) allow most parameters to be adjusted.
 </p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc num<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">1000</span> <span class="gtkdoc opt">!</span> videoscale <span class="gtkdoc opt">!</span> mpeg2enc format<span class="gtkdoc opt">=</span><span class="number">1</span> norm<span class="gtkdoc opt">=</span>p <span class="gtkdoc opt">!</span> filesink location<span class="gtkdoc opt">=</span>videotestsrc<span class="gtkdoc opt">.</span>m1v</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
- This will produce an MPEG1 profile stream according to VCD2.0 specifications
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc num-buffers=1000 ! videoscale ! mpeg2enc format=1 norm=p ! filesink location=videotestsrc.m1v
+</pre></div> This will produce an MPEG1 profile stream according to VCD2.0 specifications
 for PAL <a class="link" href="gst-plugins-bad-plugins-mpeg2enc.html#GstMpeg2enc--norm" title="The “norm” property"><span class="type">“norm”</span></a> (as the image height is dependent on video norm).
 </div>
 <div class="refsynopsisdiv">

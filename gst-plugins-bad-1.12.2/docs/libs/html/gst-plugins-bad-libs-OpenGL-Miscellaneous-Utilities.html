@@ -130,8 +130,8 @@
 <div class="refsect2">
 <a name="gst-gl-handle-set-context"></a><h3>gst_gl_handle_set_context ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gst_gl_handle_set_context (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
-                           <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> *context</code></em>,
+gst_gl_handle_set_context (<em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                           <em class="parameter"><code><a href="../gstreamer-1.0/GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> *context</code></em>,
                            <em class="parameter"><code><a class="link" href="GstGLDisplay.html" title="GstGLDisplay"><span class="type">GstGLDisplay</span></a> **display</code></em>,
                            <em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> **other_context</code></em>);</pre>
 <p>Helper function for implementing GstElement::<code class="function">set_context()</code> in OpenGL capable
@@ -152,12 +152,12 @@ result in <em class="parameter"><code>display</code></em>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>context</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstContext.html#GstContext-struct"><span class="type">GstContext</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstContext.html#GstContext-struct"><span class="type">GstContext</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -184,8 +184,8 @@ could be set successfully</p>
 <div class="refsect2">
 <a name="gst-gl-handle-context-query"></a><h3>gst_gl_handle_context_query ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gst_gl_handle_context_query (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
-                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstQuery.html#GstQuery-struct"><span class="type">GstQuery</span></a> *query</code></em>,
+gst_gl_handle_context_query (<em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstQuery.html#GstQuery"><span class="type">GstQuery</span></a> *query</code></em>,
                              <em class="parameter"><code><a class="link" href="GstGLDisplay.html" title="GstGLDisplay"><span class="type">GstGLDisplay</span></a> *display</code></em>,
                              <em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> *context</code></em>,
                              <em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> *other_context</code></em>);</pre>
@@ -200,12 +200,12 @@ gst_gl_handle_context_query (<em class="parameter"><code><a href="/usr/share/gtk
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>query</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstQuery.html#GstQuery-struct"><span class="type">GstQuery</span></a> of type <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstQuery.html#GST-QUERY-CONTEXT:CAPS"><code class="literal">GST_QUERY_CONTEXT</code></a></p></td>
+<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstQuery.html#GstQuery"><span class="type">GstQuery</span></a> of type <a href="../gstreamer-1.0/GstQuery.html#GST-QUERY-CONTEXT:CAPS"><code class="literal">GST_QUERY_CONTEXT</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -245,17 +245,17 @@ gst_gl_ensure_element_data (<em class="parameter"><code><a href="/usr/share/gtk-
                             <em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> **other_context_ptr</code></em>);</pre>
 <p>Perform the steps necessary for retrieving a <a class="link" href="GstGLDisplay.html" title="GstGLDisplay"><span class="type">GstGLDisplay</span></a> and (optionally)
 an application provided <a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> from the surrounding elements or from
-the application using the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> mechanism.</p>
+the application using the <a href="../gstreamer-1.0/GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> mechanism.</p>
 <p>If the contents of <em class="parameter"><code>display_ptr</code></em>
  or <em class="parameter"><code>other_context_ptr</code></em>
  are not <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a>, then no
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> query is necessary for <a class="link" href="GstGLDisplay.html" title="GstGLDisplay"><span class="type">GstGLDisplay</span></a> or <a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> retrieval
+<a href="../gstreamer-1.0/GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> query is necessary for <a class="link" href="GstGLDisplay.html" title="GstGLDisplay"><span class="type">GstGLDisplay</span></a> or <a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> retrieval
 or is performed.</p>
-<p>This performs <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> queries (if necessary) for a winsys display
+<p>This performs <a href="../gstreamer-1.0/GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> queries (if necessary) for a winsys display
 connection with <a class="link" href="GstGLDisplay.html#GST-GL-DISPLAY-CONTEXT-TYPE:CAPS" title="GST_GL_DISPLAY_CONTEXT_TYPE"><code class="literal">GST_GL_DISPLAY_CONTEXT_TYPE</code></a>, "gst.x11.display.handle", and
 "GstWaylandDisplayHandleContextType" stopping after the first successful
 retrieval.</p>
-<p>This also performs a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> query (if necessary) for an optional
+<p>This also performs a <a href="../gstreamer-1.0/GstContext.html#GstContext-struct"><span class="type">GstContext</span></a> query (if necessary) for an optional
 application provided <a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> using the name "gst.gl.app_context".
 The returned <a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> will be shared with a GStreamer created OpenGL context.</p>
 <div class="refsect3">
@@ -269,7 +269,7 @@ The returned <a class="link" href="GstGLContext.html" title="GstGLContext"><span
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> running the query</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> running the query</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -295,11 +295,11 @@ The returned <a class="link" href="GstGLContext.html" title="GstGLContext"><span
 <div class="refsect2">
 <a name="gst-gl-query-local-gl-context"></a><h3>gst_gl_query_local_gl_context ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
-gst_gl_query_local_gl_context (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
-                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPad.html#GstPadDirection"><span class="type">GstPadDirection</span></a> direction</code></em>,
+gst_gl_query_local_gl_context (<em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                               <em class="parameter"><code><a href="../gstreamer-1.0/GstPad.html#GstPadDirection"><span class="type">GstPadDirection</span></a> direction</code></em>,
                                <em class="parameter"><code><a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a> **context_ptr</code></em>);</pre>
 <p>Performs a GST_QUERY_CONTEXT query of type "gst.gl.local_context" on all
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPad.html#GstPad-struct"><span class="type">GstPads</span></a> in <em class="parameter"><code>element</code></em>
+<a href="../gstreamer-1.0/GstPad.html#GstPad-struct"><span class="type">GstPads</span></a> in <em class="parameter"><code>element</code></em>
  of <em class="parameter"><code>direction</code></em>
  for the local OpenGL context used by
 GStreamer elements.</p>
@@ -314,12 +314,12 @@ GStreamer elements.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to query from</p></td>
+<td class="parameter_description"><p>a <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to query from</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>direction</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPad.html#GstPadDirection"><span class="type">GstPadDirection</span></a> to query</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstPad.html#GstPadDirection"><span class="type">GstPadDirection</span></a> to query</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -341,8 +341,8 @@ contains a <a class="link" href="GstGLContext.html" title="GstGLContext"><span c
 <div class="refsect2">
 <a name="gst-gl-get-plane-data-size"></a><h3>gst_gl_get_plane_data_size ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
-gst_gl_get_plane_data_size (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> *info</code></em>,
-                            <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> *align</code></em>,
+gst_gl_get_plane_data_size (<em class="parameter"><code><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> *info</code></em>,
+                            <em class="parameter"><code><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> *align</code></em>,
                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> plane</code></em>);</pre>
 <p>Retrieve the size in bytes of a video plane of data with a certain alignment</p>
 <div class="refsect3">
@@ -356,12 +356,12 @@ gst_gl_get_plane_data_size (<em class="parameter"><code><a href="/usr/share/gtk-
 <tbody>
 <tr>
 <td class="parameter_name"><p>info</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>align</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_description"><p>a <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -378,8 +378,8 @@ to retrieve the data size of</p></td>
 <div class="refsect2">
 <a name="gst-gl-get-plane-start"></a><h3>gst_gl_get_plane_start ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gsize"><span class="returnvalue">gsize</span></a>
-gst_gl_get_plane_start (<em class="parameter"><code><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> *info</code></em>,
-                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> *valign</code></em>,
+gst_gl_get_plane_start (<em class="parameter"><code><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a> *info</code></em>,
+                        <em class="parameter"><code><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> *valign</code></em>,
                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#guint"><span class="type">guint</span></a> plane</code></em>);</pre>
 <div class="refsect3">
 <a name="gst-gl-get-plane-start.parameters"></a><h4>Parameters</h4>
@@ -392,12 +392,12 @@ gst_gl_get_plane_start (<em class="parameter"><code><a href="/usr/share/gtk-doc/
 <tbody>
 <tr>
 <td class="parameter_name"><p>info</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a></p></td>
+<td class="parameter_description"><p>a <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoInfo"><span class="type">GstVideoInfo</span></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>valign</p></td>
-<td class="parameter_description"><p>a <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
+<td class="parameter_description"><p>a <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoAlignment"><span class="type">GstVideoAlignment</span></a> or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#NULL:CAPS"><code class="literal">NULL</code></a></p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>

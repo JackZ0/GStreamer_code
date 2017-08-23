@@ -73,10 +73,10 @@
 <a name="gst-plugins-bad-plugins-bs2b.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0GstAudioFilter.html#GstAudioFilter-struct">GstAudioFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> <a href="../gst-plugins-base-libs-1.0/GstAudioFilter.html#GstAudioFilter-struct">GstAudioFilter</a>
                         <span class="lineart">╰──</span> GstBs2b
 </pre>
 </div>
@@ -84,7 +84,7 @@
 <a name="gst-plugins-bad-plugins-bs2b.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstBs2b implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
+ <a href="../gstreamer-1.0/GstPreset.html#GstPreset-struct">GstPreset</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-bs2b.description"></a><h2>Description</h2>
@@ -93,17 +93,9 @@ It does so by mixing the left and right channel in a way that simulates
 a stereo speaker setup while using headphones.</p>
 <div class="refsect3">
 <a name="id-1.2.10.8.3"></a><h4>Example pipelines</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> audiotestsrc <span class="gtkdoc opt">!</span> <span class="string">&quot;audio/x-raw,channel-mask=(bitmask)0x1&quot;</span> <span class="gtkdoc opt">!</span> interleave name<span class="gtkdoc opt">=</span>i <span class="gtkdoc opt">!</span> bs2b <span class="gtkdoc opt">!</span> autoaudiosink audiotestsrc freq<span class="gtkdoc opt">=</span><span class="number">330</span> <span class="gtkdoc opt">!</span> <span class="string">&quot;audio/x-raw,channel-mask=(bitmask)0x2&quot;</span> <span class="gtkdoc opt">!</span> i<span class="gtkdoc opt">.</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 audiotestsrc ! "audio/x-raw,channel-mask=(bitmask)0x1" ! interleave name=i ! bs2b ! autoaudiosink audiotestsrc freq=330 ! "audio/x-raw,channel-mask=(bitmask)0x2" ! i.
+</pre></div>
 <p> Play two independent sine test sources and crossfeed them.</p>
 </div>
 <div class="refsynopsisdiv">

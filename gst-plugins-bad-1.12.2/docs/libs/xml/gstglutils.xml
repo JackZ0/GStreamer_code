@@ -1,0 +1,401 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities.top_of_page">GstGLUtils</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLUtils</refname>
+<refpurpose>some miscellaneous utilities for OpenGL</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-handle-set-context">gst_gl_handle_set_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-handle-context-query">gst_gl_handle_context_query</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-ensure-element-data">gst_gl_ensure_element_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-local-gl-context">gst_gl_query_local_gl_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gsize"><returnvalue>gsize</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-get-plane-data-size">gst_gl_get_plane_data_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gsize"><returnvalue>gsize</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-get-plane-start">gst_gl_get_plane_start</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-value-get-texture-target-mask">gst_gl_value_get_texture_target_mask</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-value-set-texture-target">gst_gl_value_set_texture_target</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-value-set-texture-target-from-mask">gst_gl_value_set_texture_target_from_mask</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-check-extension">gst_gl_check_extension</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-handle-set-context" role="function">
+<title>gst_gl_handle_set_context&#160;()</title>
+<indexterm zone="gst-gl-handle-set-context"><primary>gst_gl_handle_set_context</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_handle_set_context (<parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                           <parameter><link linkend="GstContext"><type>GstContext</type></link> *context</parameter>,
+                           <parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> **display</parameter>,
+                           <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> **other_context</parameter>);</programlisting>
+<para>Helper function for implementing GstElement::<link linkend="set-context"><function>set_context()</function></link> in OpenGL capable
+elements.</para>
+<para>Retrieve's the <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> or <link linkend="GstGLContext"><type>GstGLContext</type></link> in <parameter>context</parameter>
+ and places the
+result in <parameter>display</parameter>
+ or <parameter>other_context</parameter>
+ respectively.</para>
+<refsect3 id="gst-gl-handle-set-context.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstContext"><type>GstContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>display</para></entry>
+<entry role="parameter_description"><para> location of a <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>][<acronym>transfer full</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>other_context</para></entry>
+<entry role="parameter_description"><para> location of a <link linkend="GstGLContext"><type>GstGLContext</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>][<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-handle-set-context.returns" role="returns">
+<title>Returns</title>
+<para> whether the <parameter>display</parameter>
+or <parameter>other_context</parameter>
+could be set successfully</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-handle-context-query" role="function">
+<title>gst_gl_handle_context_query&#160;()</title>
+<indexterm zone="gst-gl-handle-context-query"><primary>gst_gl_handle_context_query</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_handle_context_query (<parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                             <parameter><link linkend="GstQuery"><type>GstQuery</type></link> *query</parameter>,
+                             <parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>,
+                             <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                             <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *other_context</parameter>);</programlisting>
+<refsect3 id="gst-gl-handle-context-query.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstElement"><type>GstElement</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstQuery"><type>GstQuery</type></link> of type <link linkend="GST-QUERY-CONTEXT:CAPS"><literal>GST_QUERY_CONTEXT</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>display</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>nullable</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstGLContext"><type>GstGLContext</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>nullable</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>other_context</para></entry>
+<entry role="parameter_description"><para> application provided <link linkend="GstGLContext"><type>GstGLContext</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>nullable</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-handle-context-query.returns" role="returns">
+<title>Returns</title>
+<para> Whether the <parameter>query</parameter>
+was successfully responded to from the passed
+<parameter>display</parameter>
+, <parameter>context</parameter>
+, and <parameter>other_context</parameter>
+.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-ensure-element-data" role="function">
+<title>gst_gl_ensure_element_data&#160;()</title>
+<indexterm zone="gst-gl-ensure-element-data"><primary>gst_gl_ensure_element_data</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_ensure_element_data (<parameter><link linkend="gpointer"><type>gpointer</type></link> element</parameter>,
+                            <parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> **display_ptr</parameter>,
+                            <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> **other_context_ptr</parameter>);</programlisting>
+<para>Perform the steps necessary for retrieving a <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> and (optionally)
+an application provided <link linkend="GstGLContext"><type>GstGLContext</type></link> from the surrounding elements or from
+the application using the <link linkend="GstContext"><type>GstContext</type></link> mechanism.</para>
+<para>If the contents of <parameter>display_ptr</parameter>
+ or <parameter>other_context_ptr</parameter>
+ are not <link linkend="NULL:CAPS"><literal>NULL</literal></link>, then no
+<link linkend="GstContext"><type>GstContext</type></link> query is necessary for <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> or <link linkend="GstGLContext"><type>GstGLContext</type></link> retrieval
+or is performed.</para>
+<para>This performs <link linkend="GstContext"><type>GstContext</type></link> queries (if necessary) for a winsys display
+connection with <link linkend="GST-GL-DISPLAY-CONTEXT-TYPE:CAPS"><literal>GST_GL_DISPLAY_CONTEXT_TYPE</literal></link>, "gst.x11.display.handle", and
+"GstWaylandDisplayHandleContextType" stopping after the first successful
+retrieval.</para>
+<para>This also performs a <link linkend="GstContext"><type>GstContext</type></link> query (if necessary) for an optional
+application provided <link linkend="GstGLContext"><type>GstGLContext</type></link> using the name "gst.gl.app_context".
+The returned <link linkend="GstGLContext"><type>GstGLContext</type></link> will be shared with a GStreamer created OpenGL context.</para>
+<refsect3 id="gst-gl-ensure-element-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> running the query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>display_ptr</para></entry>
+<entry role="parameter_description"><para> the resulting <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>other_context_ptr</para></entry>
+<entry role="parameter_description"><para> the resulting <link linkend="GstGLContext"><type>GstGLContext</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-ensure-element-data.returns" role="returns">
+<title>Returns</title>
+<para> whether a <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> exists in <parameter>display_ptr</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-query-local-gl-context" role="function">
+<title>gst_gl_query_local_gl_context&#160;()</title>
+<indexterm zone="gst-gl-query-local-gl-context"><primary>gst_gl_query_local_gl_context</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_query_local_gl_context (<parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                               <parameter><link linkend="GstPadDirection"><type>GstPadDirection</type></link> direction</parameter>,
+                               <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> **context_ptr</parameter>);</programlisting>
+<para>Performs a GST_QUERY_CONTEXT query of type "gst.gl.local_context" on all
+<link linkend="GstPads"><type>GstPads</type></link> in <parameter>element</parameter>
+ of <parameter>direction</parameter>
+ for the local OpenGL context used by
+GStreamer elements.</para>
+<refsect3 id="gst-gl-query-local-gl-context.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstElement"><type>GstElement</type></link> to query from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>direction</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstPadDirection"><type>GstPadDirection</type></link> to query</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context_ptr</para></entry>
+<entry role="parameter_description"><para> location containing the current and/or resulting
+<link linkend="GstGLContext"><type>GstGLContext</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>inout</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-query-local-gl-context.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>context_ptr</parameter>
+contains a <link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-get-plane-data-size" role="function">
+<title>gst_gl_get_plane_data_size&#160;()</title>
+<indexterm zone="gst-gl-get-plane-data-size"><primary>gst_gl_get_plane_data_size</primary></indexterm>
+<programlisting language="C"><link linkend="gsize"><returnvalue>gsize</returnvalue></link>
+gst_gl_get_plane_data_size (<parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *info</parameter>,
+                            <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *align</parameter>,
+                            <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>);</programlisting>
+<para>Retrieve the size in bytes of a video plane of data with a certain alignment</para>
+<refsect3 id="gst-gl-get-plane-data-size.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>info</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>align</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>plane number in <parameter>info</parameter>
+to retrieve the data size of</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-get-plane-start" role="function">
+<title>gst_gl_get_plane_start&#160;()</title>
+<indexterm zone="gst-gl-get-plane-start"><primary>gst_gl_get_plane_start</primary></indexterm>
+<programlisting language="C"><link linkend="gsize"><returnvalue>gsize</returnvalue></link>
+gst_gl_get_plane_start (<parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *info</parameter>,
+                        <parameter><link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> *valign</parameter>,
+                        <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>);</programlisting>
+<refsect3 id="gst-gl-get-plane-start.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>info</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>valign</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstVideoAlignment"><type>GstVideoAlignment</type></link> or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>plane number in <parameter>info</parameter>
+to retrieve the data size of</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-get-plane-start.returns" role="returns">
+<title>Returns</title>
+<para> difference between the supposed start of the plane from the <parameter>info</parameter>
+and where the data from the previous plane ends.</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-value-get-texture-target-mask" role="function">
+<title>gst_gl_value_get_texture_target_mask&#160;()</title>
+<indexterm zone="gst-gl-value-get-texture-target-mask"><primary>gst_gl_value_get_texture_target_mask</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+gst_gl_value_get_texture_target_mask (<parameter>const <link linkend="GValue"><type>GValue</type></link> *value</parameter>);</programlisting>
+<para>See <link linkend="gst-gl-value-set-texture-target-from-mask"><function>gst_gl_value_set_texture_target_from_mask()</function></link> for what entails a mask</para>
+<refsect3 id="gst-gl-value-get-texture-target-mask.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>an initialized <link linkend="GValue"><type>GValue</type></link> of type G_TYPE_STRING</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-value-get-texture-target-mask.returns" role="returns">
+<title>Returns</title>
+<para> the mask of <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link>'s in <parameter>value</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-value-set-texture-target" role="function">
+<title>gst_gl_value_set_texture_target&#160;()</title>
+<indexterm zone="gst-gl-value-set-texture-target"><primary>gst_gl_value_set_texture_target</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_value_set_texture_target (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                 <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>);</programlisting>
+<refsect3 id="gst-gl-value-set-texture-target.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>an initialized <link linkend="GValue"><type>GValue</type></link> of type G_TYPE_STRING</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link>'s</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-value-set-texture-target.returns" role="returns">
+<title>Returns</title>
+<para> whether the <parameter>target</parameter>
+could be set on <parameter>value</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-value-set-texture-target-from-mask" role="function">
+<title>gst_gl_value_set_texture_target_from_mask&#160;()</title>
+<indexterm zone="gst-gl-value-set-texture-target-from-mask"><primary>gst_gl_value_set_texture_target_from_mask</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_value_set_texture_target_from_mask
+                               (<parameter><link linkend="GValue"><type>GValue</type></link> *value</parameter>,
+                                <parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target_mask</parameter>);</programlisting>
+<para>A mask is a bitwise OR of (1 &lt;&lt; target) where target is a valid
+<link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link></para>
+<refsect3 id="gst-gl-value-set-texture-target-from-mask.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>value</para></entry>
+<entry role="parameter_description"><para>an uninitialized <link linkend="GValue"><type>GValue</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>target_mask</para></entry>
+<entry role="parameter_description"><para>a bitwise mask of <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link>'s</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-value-set-texture-target-from-mask.returns" role="returns">
+<title>Returns</title>
+<para> whether the <parameter>target_mask</parameter>
+could be set on <parameter>value</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-check-extension" role="function">
+<title>gst_gl_check_extension&#160;()</title>
+<indexterm zone="gst-gl-check-extension"><primary>gst_gl_check_extension</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_check_extension (<parameter>const <link linkend="char"><type>char</type></link> *name</parameter>,
+                        <parameter>const <link linkend="gchar"><type>gchar</type></link> *ext</parameter>);</programlisting>
+<refsect3 id="gst-gl-check-extension.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the extension to search for</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>ext</para></entry>
+<entry role="parameter_description"><para>the list of possible extensions</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-check-extension.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>name</parameter>
+is in the space seperated list of <parameter>ext</parameter>
+</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Miscellaneous-Utilities.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+
+</refsect1>
+
+</refentry>

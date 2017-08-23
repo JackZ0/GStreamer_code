@@ -1,0 +1,123 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-grabcut">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-grabcut.top_of_page" role="top_of_page">grabcut</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>grabcut</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-grabcut.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstGrabcut--scale">scale</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstGrabcut--test-mode">test-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGrabcut"/><refsect1 id="gst-plugins-bad-plugins-grabcut.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGrabcut-struct">GstGrabcut</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-grabcut.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGrabcut
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-grabcut.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element is a wrapper around OpenCV grabcut implementation. GrabCut is an
+image segmentation method based on graph cuts technique. It can be seen as a
+way of fine-grain segmenting the image from some FG and BG &quot;seed&quot; areas. The
+OpenCV implementation follows the article [1].
+The &quot;seed&quot; areas are taken in this element from either an input bounding box
+coming from a face detection, or from alpha channel values. The input box is
+taken from a &quot;face&quot; event such as the one generated from the 'facedetect'
+element. The Alpha channel values should be one of the following (cv.hpp):
+enum{
+ GC_BGD    = 0,  //!&lt; background
+ GC_FGD    = 1,  //!&lt; foreground
+ GC_PR_BGD = 2,  //!&lt; most probably background
+ GC_PR_FGD = 3   //!&lt; most probably foreground
+};
+with values over GC_PR_FGD interpreted as GC_PR_FGD. IN CASE OF no alpha mask
+input (all 0's or all 1's), the 'GstOpenCvFaceDetect-face' downstream event
+is used to create a bbox of PR_FG elements. If both foreground alpha
+is not specified and there is no face detection, nothing is done.</para>
+<para>[1] C. Rother, V. Kolmogorov, and A. Blake, &quot;GrabCut: Interactive foreground
+extraction using iterated graph cuts, ACM Trans. Graph., vol. 23, pp. 309–314,
+2004.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 --gst-debug=grabcut=4  v4l2src device=/dev/video0 ! videoconvert ! grabcut ! videoconvert ! video/x-raw,width=320,height=240 ! ximagesink
+]]></programlisting></informalexample>
+Another example launch line
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 --gst-debug=grabcut=4  v4l2src device=/dev/video0 ! videoconvert ! facedetect display=0 ! videoconvert ! grabcut test-mode=true ! videoconvert ! video/x-raw,width=320,height=240 ! ximagesink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-grabcut-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-grabcut.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-grabcut.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGrabcut-struct" role="struct">
+<title>struct GstGrabcut</title>
+<indexterm zone="GstGrabcut-struct"><primary>GstGrabcut</primary></indexterm>
+<programlisting language="C">struct GstGrabcut;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-grabcut.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGrabcut--scale" role="property"><title>The <literal>“scale”</literal> property</title>
+<indexterm zone="GstGrabcut--scale"><primary>GstGrabcut:scale</primary></indexterm>
+<programlisting>  “scale”                    <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Grow factor for the face bounding box, if present.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,4]</para>
+<para>Default value: 1.6</para>
+</refsect2>
+<refsect2 id="GstGrabcut--test-mode" role="property"><title>The <literal>“test-mode”</literal> property</title>
+<indexterm zone="GstGrabcut--test-mode"><primary>GstGrabcut:test-mode</primary></indexterm>
+<programlisting>  “test-mode”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If true, the output RGB is overwritten with the segmented foreground. Alpha channel same as normal case .</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

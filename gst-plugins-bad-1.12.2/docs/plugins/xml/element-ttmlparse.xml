@@ -1,0 +1,73 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-ttmlparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-ttmlparse.top_of_page" role="top_of_page">ttmlparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>ttmlparse</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstTtmlParse"/><refsect1 id="gst-plugins-bad-plugins-ttmlparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstTtmlParse-struct">GstTtmlParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ttmlparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstTtmlParse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-ttmlparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Parses timed text subtitle files described using Timed Text Markup Language
+(TTML). Currently, only the EBU-TT-D profile of TTML, designed for
+distribution of subtitles over IP, is supported.</para>
+<para>The parser outputs a <link linkend="GstBuffer"><type>GstBuffer</type></link> for each scene in the input TTML file, a
+scene being a period of time during which a static set of subtitles should
+be visible. The parser places each text element within a scene into its own
+<link linkend="GstMemory"><type>GstMemory</type></link> within the scene's buffer, and attaches metadata to the buffer
+describing the styling and layout associated with all the contained text
+elements. A downstream renderer element uses this information to correctly
+render the text on top of video frames.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 filesrc location=<media file location> ! video/quicktime ! qtdemux name=q ttmlrender name=r q. ! queue ! h264parse ! avdec_h264 ! autovideoconvert ! r.video_sink filesrc location=<subtitle file location> blocksize=16777216 ! queue ! ttmlparse ! r.text_sink r. ! ximagesink q. ! queue ! aacparse ! avdec_aac ! audioconvert ! alsasink
+]]></programlisting></informalexample>
+<para> Parse and render TTML subtitles contained in a single XML file over an
+MP4 stream containing H.264 video and AAC audio.</para>
+</refsect3>
+
+<include href="element-ttmlparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ttmlparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-ttmlparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstTtmlParse-struct" role="struct">
+<title>struct GstTtmlParse</title>
+<indexterm zone="GstTtmlParse-struct"><primary>GstTtmlParse</primary></indexterm>
+<programlisting language="C">struct GstTtmlParse;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

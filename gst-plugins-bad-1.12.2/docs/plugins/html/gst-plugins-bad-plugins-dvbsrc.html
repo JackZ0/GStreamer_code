@@ -357,10 +357,10 @@
 <a name="gst-plugins-bad-plugins-dvbsrc.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseSrc.html#GstBaseSrc-struct">GstBaseSrc</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstPushSrc.html#GstPushSrc-struct">GstPushSrc</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseSrc.html#GstBaseSrc-struct">GstBaseSrc</a>
+                    <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstPushSrc.html#GstPushSrc-struct">GstPushSrc</a>
                         <span class="lineart">╰──</span> GstDvbSrc
 </pre>
 </div>
@@ -370,65 +370,25 @@
 broadcasting standards include DVB-T/C/S, ATSC, ISDB-T and DTMB.</p>
 <div class="refsect3">
 <a name="id-1.2.29.8.3"></a><h4>Example launch line</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> dvbsrc modulation<span class="gtkdoc opt">=</span><span class="string">&quot;QAM 64&quot;</span> trans<span class="gtkdoc opt">-</span>mode<span class="gtkdoc opt">=</span><span class="number">8</span>k bandwidth<span class="gtkdoc opt">=</span><span class="number">8</span> frequency<span class="gtkdoc opt">=</span><span class="number">514000000</span> code<span class="gtkdoc opt">-</span>rate<span class="gtkdoc opt">-</span>lp<span class="gtkdoc opt">=</span>AUTO code<span class="gtkdoc opt">-</span>rate<span class="gtkdoc opt">-</span>hp<span class="gtkdoc opt">=</span><span class="number">2</span><span class="gtkdoc opt">/</span><span class="number">3</span> guard<span class="gtkdoc opt">=</span><span class="number">4</span>  hierarchy<span class="gtkdoc opt">=</span><span class="number">0</span> <span class="gtkdoc opt">!</span> mpegtsdemux name<span class="gtkdoc opt">=</span>demux <span class="gtkdoc opt">!</span> queue max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">0</span> max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">=</span><span class="number">0</span> <span class="gtkdoc opt">!</span> mpegvideoparse <span class="gtkdoc opt">!</span> mpegvideoparse <span class="gtkdoc opt">!</span> mpeg2dec <span class="gtkdoc opt">!</span> xvimagesink demux<span class="gtkdoc opt">. !</span> queue max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">0</span> max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">=</span><span class="number">0</span> <span class="gtkdoc opt">!</span> mpegaudioparse <span class="gtkdoc opt">!</span> mpg123audiodec <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> pulsesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 dvbsrc modulation="QAM 64" trans-mode=8k bandwidth=8 frequency=514000000 code-rate-lp=AUTO code-rate-hp=2/3 guard=4  hierarchy=0 ! mpegtsdemux name=demux ! queue max-size-buffers=0 max-size-time=0 ! mpegvideoparse ! mpegvideoparse ! mpeg2dec ! xvimagesink demux. ! queue max-size-buffers=0 max-size-time=0 ! mpegaudioparse ! mpg123audiodec ! audioconvert ! pulsesink
+</pre></div>
 <p> Captures a full transport stream from DVB card 0 that is a DVB-T card at tuned frequency 514000000 Hz with other parameters as seen in the pipeline and renders the first TV program on the transport stream.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> dvbsrc modulation<span class="gtkdoc opt">=</span><span class="string">&quot;QAM 64&quot;</span> trans<span class="gtkdoc opt">-</span>mode<span class="gtkdoc opt">=</span><span class="number">8</span>k bandwidth<span class="gtkdoc opt">=</span><span class="number">8</span> frequency<span class="gtkdoc opt">=</span><span class="number">514000000</span> code<span class="gtkdoc opt">-</span>rate<span class="gtkdoc opt">-</span>lp<span class="gtkdoc opt">=</span>AUTO code<span class="gtkdoc opt">-</span>rate<span class="gtkdoc opt">-</span>hp<span class="gtkdoc opt">=</span><span class="number">2</span><span class="gtkdoc opt">/</span><span class="number">3</span> guard<span class="gtkdoc opt">=</span><span class="number">4</span>  hierarchy<span class="gtkdoc opt">=</span><span class="number">0</span> pids<span class="gtkdoc opt">=</span><span class="number">100</span><span class="gtkdoc opt">:</span><span class="number">256</span><span class="gtkdoc opt">:</span><span class="number">257</span> <span class="gtkdoc opt">!</span> mpegtsdemux name<span class="gtkdoc opt">=</span>demux <span class="gtkdoc opt">!</span> queue max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">0</span> max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">=</span><span class="number">0</span> <span class="gtkdoc opt">!</span> mpegvideoparse <span class="gtkdoc opt">!</span> mpeg2dec <span class="gtkdoc opt">!</span> xvimagesink demux<span class="gtkdoc opt">. !</span> queue max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">0</span> max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">=</span><span class="number">0</span> <span class="gtkdoc opt">!</span> mpegaudioparse <span class="gtkdoc opt">!</span> mpg123audiodec <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> pulsesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 dvbsrc modulation="QAM 64" trans-mode=8k bandwidth=8 frequency=514000000 code-rate-lp=AUTO code-rate-hp=2/3 guard=4  hierarchy=0 pids=100:256:257 ! mpegtsdemux name=demux ! queue max-size-buffers=0 max-size-time=0 ! mpegvideoparse ! mpeg2dec ! xvimagesink demux. ! queue max-size-buffers=0 max-size-time=0 ! mpegaudioparse ! mpg123audiodec ! audioconvert ! pulsesink
+</pre></div>
 <p> Captures and renders a transport stream from DVB card 0 that is a DVB-T card for a program at tuned frequency 514000000 Hz with PMT PID 100 and elementary stream PIDs of 256, 257 with other parameters as seen in the pipeline.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> dvbsrc polarity<span class="gtkdoc opt">=</span><span class="string">&quot;h&quot;</span> frequency<span class="gtkdoc opt">=</span><span class="number">11302000</span> symbol<span class="gtkdoc opt">-</span>rate<span class="gtkdoc opt">=</span><span class="number">27500</span> diseqc<span class="gtkdoc opt">-</span>source<span class="gtkdoc opt">=</span><span class="number">0</span> pids<span class="gtkdoc opt">=</span><span class="number">50</span><span class="gtkdoc opt">:</span><span class="number">102</span><span class="gtkdoc opt">:</span><span class="number">103</span> <span class="gtkdoc opt">!</span> mpegtsdemux name<span class="gtkdoc opt">=</span>demux <span class="gtkdoc opt">!</span> queue max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">0</span> max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">=</span><span class="number">0</span> <span class="gtkdoc opt">!</span> mpegvideoparse <span class="gtkdoc opt">!</span> mpeg2dec <span class="gtkdoc opt">!</span> xvimagesink demux<span class="gtkdoc opt">. !</span> queue max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>buffers<span class="gtkdoc opt">=</span><span class="number">0</span> max<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">=</span><span class="number">0</span> <span class="gtkdoc opt">!</span> mpegaudioparse <span class="gtkdoc opt">!</span> mpg123audiodec <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> pulsesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 dvbsrc polarity="h" frequency=11302000 symbol-rate=27500 diseqc-source=0 pids=50:102:103 ! mpegtsdemux name=demux ! queue max-size-buffers=0 max-size-time=0 ! mpegvideoparse ! mpeg2dec ! xvimagesink demux. ! queue max-size-buffers=0 max-size-time=0 ! mpegaudioparse ! mpg123audiodec ! audioconvert ! pulsesink
+</pre></div>
 <p> Captures and renders a transport stream from DVB card 0 that is a DVB-S card for a program at tuned frequency 11302000 kHz, symbol rate of 27500 kBd (kilo bauds) with PMT PID of 50 and elementary stream PIDs of 102 and 103.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> dvbsrc frequency<span class="gtkdoc opt">=</span><span class="number">515142857</span> guard<span class="gtkdoc opt">=</span><span class="number">16</span> trans<span class="gtkdoc opt">-</span>mode<span class="gtkdoc opt">=</span><span class="string">&quot;8k&quot;</span> isdbt<span class="gtkdoc opt">-</span>layer<span class="gtkdoc opt">-</span>enabled<span class="gtkdoc opt">=</span><span class="number">7</span> isdbt<span class="gtkdoc opt">-</span>partial<span class="gtkdoc opt">-</span>reception<span class="gtkdoc opt">=</span><span class="number">1</span> isdbt<span class="gtkdoc opt">-</span>layera<span class="gtkdoc opt">-</span>fec<span class="gtkdoc opt">=</span><span class="string">&quot;2/3&quot;</span> isdbt<span class="gtkdoc opt">-</span>layera<span class="gtkdoc opt">-</span>modulation<span class="gtkdoc opt">=</span><span class="string">&quot;QPSK&quot;</span> isdbt<span class="gtkdoc opt">-</span>layera<span class="gtkdoc opt">-</span>segment<span class="gtkdoc opt">-</span>count<span class="gtkdoc opt">=</span><span class="number">1</span> isdbt<span class="gtkdoc opt">-</span>layera<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">-</span>interleaving<span class="gtkdoc opt">=</span><span class="number">4</span> isdbt<span class="gtkdoc opt">-</span>layerb<span class="gtkdoc opt">-</span>fec<span class="gtkdoc opt">=</span><span class="string">&quot;3/4&quot;</span> isdbt<span class="gtkdoc opt">-</span>layerb<span class="gtkdoc opt">-</span>modulation<span class="gtkdoc opt">=</span><span class="string">&quot;qam-64&quot;</span> isdbt<span class="gtkdoc opt">-</span>layerb<span class="gtkdoc opt">-</span>segment<span class="gtkdoc opt">-</span>count<span class="gtkdoc opt">=</span><span class="number">12</span> isdbt<span class="gtkdoc opt">-</span>layerb<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">-</span>interleaving<span class="gtkdoc opt">=</span><span class="number">2</span> isdbt<span class="gtkdoc opt">-</span>layerc<span class="gtkdoc opt">-</span>fec<span class="gtkdoc opt">=</span><span class="string">&quot;1/2&quot;</span> isdbt<span class="gtkdoc opt">-</span>layerc<span class="gtkdoc opt">-</span>modulation<span class="gtkdoc opt">=</span><span class="string">&quot;qam-64&quot;</span> isdbt<span class="gtkdoc opt">-</span>layerc<span class="gtkdoc opt">-</span>segment<span class="gtkdoc opt">-</span>count<span class="gtkdoc opt">=</span><span class="number">0</span> isdbt<span class="gtkdoc opt">-</span>layerc<span class="gtkdoc opt">-</span>time<span class="gtkdoc opt">-</span>interleaving<span class="gtkdoc opt">=</span><span class="number">0</span> delsys<span class="gtkdoc opt">=</span><span class="string">&quot;isdb-t&quot;</span> <span class="gtkdoc opt">!</span> tsdemux <span class="gtkdoc opt">!</span> <span class="string">&quot;video/x-h264&quot;</span> <span class="gtkdoc opt">!</span> h264parse <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> avdec_h264 <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> autovideosink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 dvbsrc frequency=515142857 guard=16 trans-mode="8k" isdbt-layer-enabled=7 isdbt-partial-reception=1 isdbt-layera-fec="2/3" isdbt-layera-modulation="QPSK" isdbt-layera-segment-count=1 isdbt-layera-time-interleaving=4 isdbt-layerb-fec="3/4" isdbt-layerb-modulation="qam-64" isdbt-layerb-segment-count=12 isdbt-layerb-time-interleaving=2 isdbt-layerc-fec="1/2" isdbt-layerc-modulation="qam-64" isdbt-layerc-segment-count=0 isdbt-layerc-time-interleaving=0 delsys="isdb-t" ! tsdemux ! "video/x-h264" ! h264parse ! queue ! avdec_h264 ! videoconvert ! queue ! autovideosink
+</pre></div>
 <p> Captures and renders the video track of TV Paraíba HD (Globo affiliate) in Campina Grande, Brazil. This is an ISDB-T (Brazilian ISDB-Tb variant) broadcast.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> dvbsrc frequency<span class="gtkdoc opt">=</span><span class="number">503000000</span> delsys<span class="gtkdoc opt">=</span><span class="string">&quot;atsc&quot;</span> modulation<span class="gtkdoc opt">=</span><span class="string">&quot;8vsb&quot;</span> pids<span class="gtkdoc opt">=</span><span class="number">48</span><span class="gtkdoc opt">:</span><span class="number">49</span><span class="gtkdoc opt">:</span><span class="number">52</span> <span class="gtkdoc opt">!</span> decodebin name<span class="gtkdoc opt">=</span>dec dec<span class="gtkdoc opt">. !</span> videoconvert <span class="gtkdoc opt">!</span> autovideosink dec<span class="gtkdoc opt">. !</span> audioconvert <span class="gtkdoc opt">!</span> autoaudiosink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+ gst-launch-1.0 dvbsrc frequency=503000000 delsys="atsc" modulation="8vsb" pids=48:49:52 ! decodebin name=dec dec. ! videoconvert ! autovideosink dec. ! audioconvert ! autoaudiosink
+</pre></div>
 <p> Captures and renders KOFY-HD in San Jose, California. This is an ATSC broadcast, PMT ID 48, Audio/Video elementary stream PIDs 49 and 52 respectively.</p>
 </div>
 <div class="refsynopsisdiv">

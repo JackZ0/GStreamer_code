@@ -1,0 +1,187 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-dfbvideosink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-dfbvideosink.top_of_page" role="top_of_page">dfbvideosink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dfbvideosink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-dfbvideosink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDfbVideoSink--brightness">brightness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDfbVideoSink--contrast">contrast</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDfbVideoSink--hue">hue</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDfbVideoSink--pixel-aspect-ratio">pixel-aspect-ratio</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDfbVideoSink--saturation">saturation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstDfbVideoSink--surface">surface</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstDfbVideoSink--vsync">vsync</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDfbVideoSinkLayerMode"><type>GstDfbVideoSinkLayerMode</type></link></entry><entry role="property_name"><link linkend="GstDfbVideoSink--layer-mode">layer-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDfbVideoSink"/><refsect1 id="gst-plugins-bad-plugins-dfbvideosink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDfbVideoSink-struct">GstDfbVideoSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dfbvideosink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoSink">GstVideoSink</link>
+                        <phrase role="lineart">╰──</phrase> GstDfbVideoSink
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dfbvideosink.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstDfbVideoSink implements
+ <link linkend="GstNavigation">GstNavigation</link> and  <link linkend="GstColorBalance">GstColorBalance</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-dfbvideosink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>DfbVideoSink renders video frames using the</para>
+<ulink url="http://www.directfb.org/">DirectFB</ulink> library.
+<para>Rendering can happen in two different modes :</para>
+<itemizedlist>
+<listitem><para>Standalone: this mode will take complete control of the monitor forcing</para>
+<ulink url="http://www.directfb.org/">DirectFB</ulink> to fullscreen layout.
+<para>This is convenient to test using the  gst-launch-1.0 command line tool or
+other simple applications. It is possible to interrupt playback while
+being in this mode by pressing the Escape key.
+This mode handles navigation events for every input device supported by
+the <ulink url="http://www.directfb.org/">DirectFB</ulink> library, it will
+look for available video modes in the fb.modes file and try to switch
+the framebuffer video mode to the most suitable one. Depending on
+hardware acceleration capabilities the element will handle scaling or not.
+If no acceleration is available it will do clipping or centering of the
+video frames respecting the original aspect ratio.</para>
+</listitem>
+<listitem><para>Embedded: this mode will render video frames in a
+<link linkend="GstDfbVideoSink--surface"><type>“surface”</type></link> provided by the
+application developer. This is a more advanced usage of the element and
+it is required to integrate video playback in existing</para>
+<ulink url="http://www.directfb.org/">DirectFB</ulink> applications.
+<para>When using this mode the element just renders to the
+<link linkend="GstDfbVideoSink--surface"><type>“surface”</type></link> provided by the
+application, that means it won't handle navigation events and won't resize
+the <link linkend="GstDfbVideoSink--surface"><type>“surface”</type></link> to fit video
+frames geometry. Application has to implement the necessary code to grab
+informations about the negotiated geometry and resize there
+<link linkend="GstDfbVideoSink--surface"><type>“surface”</type></link> accordingly.</para>
+</listitem>
+</itemizedlist>
+<para>For both modes the element implements a buffer pool allocation system to
+optimize memory allocation time and handle reverse negotiation. Indeed if
+you insert an element like videoscale in the pipeline the video sink will
+negotiate with it to try get a scaled video for either the fullscreen layout
+or the application provided external <link linkend="GstDfbVideoSink--surface"><type>“surface”</type></link>.</para>
+<refsect3><title>Example application</title><include href="element-dfb-example.xml" xmlns="http://www.w3.org/2003/XInclude"/>
+
+</refsect3>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! dfbvideosink hue=20000 saturation=40000 brightness=25000
+]]></programlisting></informalexample>
+<para> test the colorbalance interface implementation in dfbvideosink</para>
+</refsect3>
+
+<include href="element-dfbvideosink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dfbvideosink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dfbvideosink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDfbVideoSink-struct" role="struct">
+<title>struct GstDfbVideoSink</title>
+<indexterm zone="GstDfbVideoSink-struct"><primary>GstDfbVideoSink</primary></indexterm>
+<programlisting language="C">struct GstDfbVideoSink;</programlisting>
+<para>The opaque <link linkend="GstDfbVideoSink"><type>GstDfbVideoSink</type></link> structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dfbvideosink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDfbVideoSink--brightness" role="property"><title>The <literal>“brightness”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--brightness"><primary>GstDfbVideoSink:brightness</primary></indexterm>
+<programlisting>  “brightness”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The brightness of the video.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 32768</para>
+</refsect2>
+<refsect2 id="GstDfbVideoSink--contrast" role="property"><title>The <literal>“contrast”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--contrast"><primary>GstDfbVideoSink:contrast</primary></indexterm>
+<programlisting>  “contrast”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The contrast of the video.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 32768</para>
+</refsect2>
+<refsect2 id="GstDfbVideoSink--hue" role="property"><title>The <literal>“hue”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--hue"><primary>GstDfbVideoSink:hue</primary></indexterm>
+<programlisting>  “hue”                      <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The hue of the video.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 32768</para>
+</refsect2>
+<refsect2 id="GstDfbVideoSink--pixel-aspect-ratio" role="property"><title>The <literal>“pixel-aspect-ratio”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--pixel-aspect-ratio"><primary>GstDfbVideoSink:pixel-aspect-ratio</primary></indexterm>
+<programlisting>  “pixel-aspect-ratio”       <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The pixel aspect ratio of the device.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;1/1&quot;</para>
+</refsect2>
+<refsect2 id="GstDfbVideoSink--saturation" role="property"><title>The <literal>“saturation”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--saturation"><primary>GstDfbVideoSink:saturation</primary></indexterm>
+<programlisting>  “saturation”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The saturation of the video.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,65535]</para>
+<para>Default value: 32768</para>
+</refsect2>
+<refsect2 id="GstDfbVideoSink--surface" role="property"><title>The <literal>“surface”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--surface"><primary>GstDfbVideoSink:surface</primary></indexterm>
+<programlisting>  “surface”                  <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>The target surface for video.</para><para>Flags: Write</para>
+</refsect2>
+<refsect2 id="GstDfbVideoSink--vsync" role="property"><title>The <literal>“vsync”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--vsync"><primary>GstDfbVideoSink:vsync</primary></indexterm>
+<programlisting>  “vsync”                    <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Wait for next vertical sync to draw frames.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstDfbVideoSink--layer-mode" role="property"><title>The <literal>“layer-mode”</literal> property</title>
+<indexterm zone="GstDfbVideoSink--layer-mode"><primary>GstDfbVideoSink:layer-mode</primary></indexterm>
+<programlisting>  “layer-mode”               <link linkend="GstDfbVideoSinkLayerMode"><type>GstDfbVideoSinkLayerMode</type></link></programlisting>
+<para>The cooperative level handling the access permission (set this to 'administrative' when the cursor is required).</para><para>Flags: Read / Write</para>
+<para>Default value: DLSCL_EXCLUSIVE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

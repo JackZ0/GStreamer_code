@@ -1,0 +1,216 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-facedetect">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-facedetect.top_of_page" role="top_of_page">facedetect</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>facedetect</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-facedetect.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--display">display</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstFaceDetect--eyes-profile">eyes-profile</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstOpencvFaceDetectFlags"><type>GstOpencvFaceDetectFlags</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--flags">flags</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--min-neighbors">min-neighbors</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--min-size-height">min-size-height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--min-size-width">min-size-width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstFaceDetect--mouth-profile">mouth-profile</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstFaceDetect--nose-profile">nose-profile</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstFaceDetect--profile">profile</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--scale-factor">scale-factor</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFaceDetectUpdates"><type>GstFaceDetectUpdates</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--updates">updates</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFaceDetect--min-stddev">min-stddev</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstFaceDetect"/><refsect1 id="gst-plugins-bad-plugins-facedetect.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstFaceDetect-struct">GstFaceDetect</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstFaceDetectUpdates">GstFaceDetectUpdates</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-facedetect.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstFaceDetect
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-facedetect.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Performs face detection on videos and images.
+If you have high cpu load you need to use videoscale with capsfilter and reduce the video resolution.</para>
+<para>The image is scaled down multiple times using the GstFaceDetect::scale-factor
+until the size is &lt;= GstFaceDetect::min-size-width or
+GstFaceDetect::min-size-height.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 autovideosrc ! decodebin ! colorspace ! facedetect ! videoconvert ! xvimagesink
+]]></programlisting></informalexample> Detect and show faces
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 autovideosrc ! video/x-raw,width=320,height=240 ! videoconvert ! facedetect min-size-width=60 min-size-height=60 ! colorspace ! xvimagesink
+]]></programlisting></informalexample> Detect large faces on a smaller image
+
+</refsect2>
+
+<include href="element-facedetect-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-facedetect.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-facedetect.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFaceDetect-struct" role="struct">
+<title>struct GstFaceDetect</title>
+<indexterm zone="GstFaceDetect-struct"><primary>GstFaceDetect</primary></indexterm>
+<programlisting language="C">struct GstFaceDetect;</programlisting>
+</refsect2>
+<refsect2 id="GstFaceDetectUpdates" role="enum">
+<title>enum GstFaceDetectUpdates</title>
+<indexterm zone="GstFaceDetectUpdates"><primary>GstFaceDetectUpdates</primary></indexterm>
+<para>Bus messages update scheme</para>
+<refsect3 id="GstFaceDetectUpdates.members" role="enum_members">
+<title>Members</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-FACEDETECT-UPDATES-EVERY-FRAME:CAPS">GST_FACEDETECT_UPDATES_EVERY_FRAME</para></entry>
+<entry role="enum_member_description"><para>Send bus update messages for every frame</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-FACEDETECT-UPDATES-ON-CHANGE:CAPS">GST_FACEDETECT_UPDATES_ON_CHANGE</para></entry>
+<entry role="enum_member_description"><para>Send bus update messages on change (face detected/not detected)</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-FACEDETECT-UPDATES-ON-FACE:CAPS">GST_FACEDETECT_UPDATES_ON_FACE</para></entry>
+<entry role="enum_member_description"><para>Send bus update messages when a face is detected</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-FACEDETECT-UPDATES-NONE:CAPS">GST_FACEDETECT_UPDATES_NONE</para></entry>
+<entry role="enum_member_description"><para>No bus update messages</para>
+</entry>
+<entry role="enum_member_annotations"/>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-facedetect.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstFaceDetect--display" role="property"><title>The <literal>“display”</literal> property</title>
+<indexterm zone="GstFaceDetect--display"><primary>GstFaceDetect:display</primary></indexterm>
+<programlisting>  “display”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sets whether the detected faces should be highlighted in the output.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--eyes-profile" role="property"><title>The <literal>“eyes-profile”</literal> property</title>
+<indexterm zone="GstFaceDetect--eyes-profile"><primary>GstFaceDetect:eyes-profile</primary></indexterm>
+<programlisting>  “eyes-profile”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of Haar cascade file to use for eye-pair detection.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;/usr/share/OpenCV/haarcascades/haarcascade_mcs_eyepair_small.xml&quot;</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--flags" role="property"><title>The <literal>“flags”</literal> property</title>
+<indexterm zone="GstFaceDetect--flags"><primary>GstFaceDetect:flags</primary></indexterm>
+<programlisting>  “flags”                    <link linkend="GstOpencvFaceDetectFlags"><type>GstOpencvFaceDetectFlags</type></link></programlisting>
+<para>Flags to cvHaarDetectObjects.</para><para>Flags: Read / Write</para>
+<para>Default value: Do Canny edge detection to discard some regions</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--min-neighbors" role="property"><title>The <literal>“min-neighbors”</literal> property</title>
+<indexterm zone="GstFaceDetect--min-neighbors"><primary>GstFaceDetect:min-neighbors</primary></indexterm>
+<programlisting>  “min-neighbors”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Minimum number (minus 1) of neighbor rectangles that makes up an object.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--min-size-height" role="property"><title>The <literal>“min-size-height”</literal> property</title>
+<indexterm zone="GstFaceDetect--min-size-height"><primary>GstFaceDetect:min-size-height</primary></indexterm>
+<programlisting>  “min-size-height”          <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Minimum area height to be recognized as a face.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 30</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--min-size-width" role="property"><title>The <literal>“min-size-width”</literal> property</title>
+<indexterm zone="GstFaceDetect--min-size-width"><primary>GstFaceDetect:min-size-width</primary></indexterm>
+<programlisting>  “min-size-width”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Minimum area width to be recognized as a face.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 30</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--mouth-profile" role="property"><title>The <literal>“mouth-profile”</literal> property</title>
+<indexterm zone="GstFaceDetect--mouth-profile"><primary>GstFaceDetect:mouth-profile</primary></indexterm>
+<programlisting>  “mouth-profile”            <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of Haar cascade file to use for mouth detection.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;/usr/share/OpenCV/haarcascades/haarcascade_mcs_mouth.xml&quot;</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--nose-profile" role="property"><title>The <literal>“nose-profile”</literal> property</title>
+<indexterm zone="GstFaceDetect--nose-profile"><primary>GstFaceDetect:nose-profile</primary></indexterm>
+<programlisting>  “nose-profile”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of Haar cascade file to use for nose detection.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;/usr/share/OpenCV/haarcascades/haarcascade_mcs_nose.xml&quot;</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--profile" role="property"><title>The <literal>“profile”</literal> property</title>
+<indexterm zone="GstFaceDetect--profile"><primary>GstFaceDetect:profile</primary></indexterm>
+<programlisting>  “profile”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Location of Haar cascade file to use for face detection.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;/usr/share/OpenCV/haarcascades/haarcascade_frontalface_default.xml&quot;</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--scale-factor" role="property"><title>The <literal>“scale-factor”</literal> property</title>
+<indexterm zone="GstFaceDetect--scale-factor"><primary>GstFaceDetect:scale-factor</primary></indexterm>
+<programlisting>  “scale-factor”             <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Factor by which the frame is scaled after each object scan.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1.1,10]</para>
+<para>Default value: 1.25</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--updates" role="property"><title>The <literal>“updates”</literal> property</title>
+<indexterm zone="GstFaceDetect--updates"><primary>GstFaceDetect:updates</primary></indexterm>
+<programlisting>  “updates”                  <link linkend="GstFaceDetectUpdates"><type>GstFaceDetectUpdates</type></link></programlisting>
+<para>When send update bus messages, if at all.</para><para>Flags: Read / Write</para>
+<para>Default value: Send update messages on every frame</para>
+</refsect2>
+<refsect2 id="GstFaceDetect--min-stddev" role="property"><title>The <literal>“min-stddev”</literal> property</title>
+<indexterm zone="GstFaceDetect--min-stddev"><primary>GstFaceDetect:min-stddev</primary></indexterm>
+<programlisting>  “min-stddev”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Minimum image average standard deviation: on images with standard deviation lesser than this value facedetection will not be performed. Setting this property help to save cpu and reduce false positives not performing face detection on images with little changes.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

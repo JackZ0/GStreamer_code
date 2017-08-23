@@ -1,0 +1,145 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-katetag">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-katetag.top_of_page" role="top_of_page">katetag</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>katetag</refname>
+<refpurpose>retags kate streams</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-katetag.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstKateTag--category">category</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstKateTag--language">language</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTag--original-canvas-height">original-canvas-height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKateTag--original-canvas-width">original-canvas-width</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstKateTag"/><refsect1 id="gst-plugins-bad-plugins-katetag.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstKateTag-struct">GstKateTag</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-katetag.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstKateParse">GstKateParse</link>
+                    <phrase role="lineart">╰──</phrase> GstKateTag
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-katetag.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstKateTag implements
+ <link linkend="GstTagSetter">GstTagSetter</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-katetag.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The katetag element can change the tag contained within a raw
+kate stream. Specifically, it modifies the comments header packet
+of the kate stream, as well as the language and category of the
+kate stream.</para>
+<para>The element will also process the stream as the <link linkend="kateparse"><type>kateparse</type></link> element does
+so it can be used when remuxing an Ogg Kate stream, without additional
+elements.</para>
+<para>Applications can set the tags to write using the <link linkend="GstTagSetter"><type>GstTagSetter</type></link> interface.
+Tags contained within the kate stream will be picked up
+automatically (and merged according to the merge mode set via the tag
+setter interface).</para>
+<refsect3><title>Example pipelines</title><para>This element is only useful with gst-launch-1.0 for modifying the language
+and/or category (which are properties of the stream located in the kate
+beginning of stream header), because it does not support setting the tags
+on a <link linkend="GstTagSetter"><type>GstTagSetter</type></link> interface. Conceptually, the element will usually be
+used like:</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=foo.ogg ! oggdemux ! katetag ! oggmux ! filesink location=bar.ogg
+]]></programlisting></informalexample>
+<para/>
+<para>This pipeline will set the language and category of the stream to the
+given values:</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=foo.ogg ! oggdemux ! katetag language=pt_BR category=subtitles ! oggmux ! filesink location=bar.ogg
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-katetag-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-katetag.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-katetag.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstKateTag-struct" role="struct">
+<title>struct GstKateTag</title>
+<indexterm zone="GstKateTag-struct"><primary>GstKateTag</primary></indexterm>
+<programlisting language="C">struct GstKateTag;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-katetag.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstKateTag--category" role="property"><title>The <literal>“category”</literal> property</title>
+<indexterm zone="GstKateTag--category"><primary>GstKateTag:category</primary></indexterm>
+<programlisting>  “category”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Set the category of the stream.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstKateTag--language" role="property"><title>The <literal>“language”</literal> property</title>
+<indexterm zone="GstKateTag--language"><primary>GstKateTag:language</primary></indexterm>
+<programlisting>  “language”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Set the language of the stream.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;&quot;</para>
+</refsect2>
+<refsect2 id="GstKateTag--original-canvas-height" role="property"><title>The <literal>“original-canvas-height”</literal> property</title>
+<indexterm zone="GstKateTag--original-canvas-height"><primary>GstKateTag:original-canvas-height</primary></indexterm>
+<programlisting>  “original-canvas-height”   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Set the height of the canvas this stream was authored for (0 is unspecified).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstKateTag--original-canvas-width" role="property"><title>The <literal>“original-canvas-width”</literal> property</title>
+<indexterm zone="GstKateTag--original-canvas-width"><primary>GstKateTag:original-canvas-width</primary></indexterm>
+<programlisting>  “original-canvas-width”    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Set the width of the canvas this stream was authored for (0 is unspecified).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-katetag.see-also">
+<title>See Also</title>
+<para><link linkend="oggdemux"><type>oggdemux</type></link>, <link linkend="oggmux"><type>oggmux</type></link>, <link linkend="kateparse"><type>kateparse</type></link>, <link linkend="GstTagSetter"><type>GstTagSetter</type></link></para>
+
+</refsect1>
+
+</refentry>

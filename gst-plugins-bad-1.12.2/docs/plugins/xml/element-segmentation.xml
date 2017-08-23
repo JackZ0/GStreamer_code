@@ -1,0 +1,128 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-segmentation">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-segmentation.top_of_page" role="top_of_page">segmentation</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>segmentation</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-segmentation.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstSegmentation--learning-rate">learning-rate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstSegmentationMethod"><type>GstSegmentationMethod</type></link></entry><entry role="property_name"><link linkend="GstSegmentation--method">method</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSegmentation--test-mode">test-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstSegmentation"/><refsect1 id="gst-plugins-bad-plugins-segmentation.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstSegmentation-struct">GstSegmentation</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-segmentation.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstSegmentation
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-segmentation.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element creates and updates a fg/bg model using one of several approaches.
+The one called &quot;codebook&quot; refers to the codebook approach following the opencv
+O'Reilly book [1] implementation of the algorithm described in K. Kim,
+T. H. Chalidabhongse, D. Harwood and L. Davis [2]. BackgroundSubtractorMOG [3],
+or MOG for shorts, refers to a Gaussian Mixture-based Background/Foreground
+Segmentation Algorithm. OpenCV MOG implements the algorithm described in [4].
+BackgroundSubtractorMOG2 [5], refers to another Gaussian Mixture-based
+Background/Foreground segmentation algorithm. OpenCV MOG2 implements the
+algorithm described in [6] and [7].</para>
+<para>[1] Learning OpenCV: Computer Vision with the OpenCV Library by Gary Bradski
+and Adrian Kaehler, Published by O'Reilly Media, October 3, 2008
+[2] &quot;Real-time Foreground-Background Segmentation using Codebook Model&quot;,
+Real-time Imaging, Volume 11, Issue 3, Pages 167-256, June 2005.
+[3] http://opencv.itseez.com/modules/video/doc/motion_analysis_and_object_tracking.html<link linkend="backgroundsubtractormog"><type>backgroundsubtractormog</type></link>
+[4] P. KadewTraKuPong and R. Bowden, &quot;An improved adaptive background
+mixture model for real-time tracking with shadow detection&quot;, Proc. 2nd
+European Workshop on Advanced Video-Based Surveillance Systems, 2001
+[5] http://opencv.itseez.com/modules/video/doc/motion_analysis_and_object_tracking.html<link linkend="backgroundsubtractormog2"><type>backgroundsubtractormog2</type></link>
+[6] Z.Zivkovic, &quot;Improved adaptive Gausian mixture model for background
+subtraction&quot;, International Conference Pattern Recognition, UK, August, 2004.
+[7] Z.Zivkovic, F. van der Heijden, &quot;Efficient Adaptive Density Estimation
+per Image Pixel for the Task of Background Subtraction&quot;, Pattern Recognition
+Letters, vol. 27, no. 7, pages 773-780, 2006.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0  v4l2src device=/dev/video0 ! videoconvert ! segmentation test-mode=true method=2 ! videoconvert ! ximagesink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-segmentation-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-segmentation.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-segmentation.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstSegmentation-struct" role="struct">
+<title>struct GstSegmentation</title>
+<indexterm zone="GstSegmentation-struct"><primary>GstSegmentation</primary></indexterm>
+<programlisting language="C">struct GstSegmentation;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-segmentation.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstSegmentation--learning-rate" role="property"><title>The <literal>“learning-rate”</literal> property</title>
+<indexterm zone="GstSegmentation--learning-rate"><primary>GstSegmentation:learning-rate</primary></indexterm>
+<programlisting>  “learning-rate”            <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Speed with which a motionless foreground pixel would become background (inverse of number of frames).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.01</para>
+</refsect2>
+<refsect2 id="GstSegmentation--method" role="property"><title>The <literal>“method”</literal> property</title>
+<indexterm zone="GstSegmentation--method"><primary>GstSegmentation:method</primary></indexterm>
+<programlisting>  “method”                   <link linkend="GstSegmentationMethod"><type>GstSegmentationMethod</type></link></programlisting>
+<para>Segmentation method to use.</para><para>Flags: Read / Write</para>
+<para>Default value: Mixture-of-Gaussians segmentation (Zivkovic2004)</para>
+</refsect2>
+<refsect2 id="GstSegmentation--test-mode" role="property"><title>The <literal>“test-mode”</literal> property</title>
+<indexterm zone="GstSegmentation--test-mode"><primary>GstSegmentation:test-mode</primary></indexterm>
+<programlisting>  “test-mode”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If true, the output RGB is overwritten with the calculated foreground (white color).</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

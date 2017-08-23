@@ -1,0 +1,156 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-tonegeneratesrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-tonegeneratesrc.top_of_page" role="top_of_page">tonegeneratesrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>tonegeneratesrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-tonegeneratesrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--freq">freq</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--freq2">freq2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--off-time">off-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--off-time2">off-time2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--on-time">on-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--on-time2">on-time2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--repeat">repeat</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--samplesperbuffer">samplesperbuffer</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--volume">volume</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstToneGenerateSrc--volume2">volume2</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstToneGenerateSrc"/><refsect1 id="gst-plugins-bad-plugins-tonegeneratesrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstToneGenerateSrc-struct">GstToneGenerateSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tonegeneratesrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> GstToneGenerateSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-tonegeneratesrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-tonegeneratesrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tonegeneratesrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tonegeneratesrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstToneGenerateSrc-struct" role="struct">
+<title>struct GstToneGenerateSrc</title>
+<indexterm zone="GstToneGenerateSrc-struct"><primary>GstToneGenerateSrc</primary></indexterm>
+<programlisting language="C">struct GstToneGenerateSrc;</programlisting>
+<para>tonegeneratesrc object structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-tonegeneratesrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstToneGenerateSrc--freq" role="property"><title>The <literal>“freq”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--freq"><primary>GstToneGenerateSrc:freq</primary></indexterm>
+<programlisting>  “freq”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Frequency of test signal.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,20000]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--freq2" role="property"><title>The <literal>“freq2”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--freq2"><primary>GstToneGenerateSrc:freq2</primary></indexterm>
+<programlisting>  “freq2”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Frequency of second telephony tone component.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,20000]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--off-time" role="property"><title>The <literal>“off-time”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--off-time"><primary>GstToneGenerateSrc:off-time</primary></indexterm>
+<programlisting>  “off-time”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Time of the first period  when the tone signal is off.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 1000</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--off-time2" role="property"><title>The <literal>“off-time2”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--off-time2"><primary>GstToneGenerateSrc:off-time2</primary></indexterm>
+<programlisting>  “off-time2”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Time of the second period  when the tone signal is off.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 1000</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--on-time" role="property"><title>The <literal>“on-time”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--on-time"><primary>GstToneGenerateSrc:on-time</primary></indexterm>
+<programlisting>  “on-time”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Time of the first period  when the tone signal is present.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1000</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--on-time2" role="property"><title>The <literal>“on-time2”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--on-time2"><primary>GstToneGenerateSrc:on-time2</primary></indexterm>
+<programlisting>  “on-time2”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Time of the second period  when the tone signal is present.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1000</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--repeat" role="property"><title>The <literal>“repeat”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--repeat"><primary>GstToneGenerateSrc:repeat</primary></indexterm>
+<programlisting>  “repeat”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether to repeat specified tone indefinitly.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--samplesperbuffer" role="property"><title>The <literal>“samplesperbuffer”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--samplesperbuffer"><primary>GstToneGenerateSrc:samplesperbuffer</primary></indexterm>
+<programlisting>  “samplesperbuffer”         <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Number of samples in each outgoing buffer.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1024</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--volume" role="property"><title>The <literal>“volume”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--volume"><primary>GstToneGenerateSrc:volume</primary></indexterm>
+<programlisting>  “volume”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Volume of first signal.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-50,0]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstToneGenerateSrc--volume2" role="property"><title>The <literal>“volume2”</literal> property</title>
+<indexterm zone="GstToneGenerateSrc--volume2"><primary>GstToneGenerateSrc:volume2</primary></indexterm>
+<programlisting>  “volume2”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Volume of second tone signal.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-50,0]</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

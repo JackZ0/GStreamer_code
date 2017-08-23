@@ -49,8 +49,8 @@
 <a name="gst-plugins-bad-plugins-ttmlparse.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
                 <span class="lineart">╰──</span> GstTtmlParse
 </pre>
 </div>
@@ -59,26 +59,18 @@
 <p>Parses timed text subtitle files described using Timed Text Markup Language
 (TTML). Currently, only the EBU-TT-D profile of TTML, designed for
 distribution of subtitles over IP, is supported.</p>
-<p>The parser outputs a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBuffer.html#GstBuffer-struct"><span class="type">GstBuffer</span></a> for each scene in the input TTML file, a
+<p>The parser outputs a <a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstBuffer.html#GstBuffer"><span class="type">GstBuffer</span></a> for each scene in the input TTML file, a
 scene being a period of time during which a static set of subtitles should
 be visible. The parser places each text element within a scene into its own
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> within the scene's buffer, and attaches metadata to the buffer
+<a href="../gstreamer-1.0/GstMemory.html#GstMemory-struct"><span class="type">GstMemory</span></a> within the scene's buffer, and attaches metadata to the buffer
 describing the styling and layout associated with all the contained text
 elements. A downstream renderer element uses this information to correctly
 render the text on top of video frames.</p>
 <div class="refsect3">
 <a name="id-1.2.136.6.4"></a><h4>Example launch lines</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> filesrc location<span class="gtkdoc opt">=&lt;</span>media file location<span class="gtkdoc opt">&gt; !</span> video<span class="gtkdoc opt">/</span>quicktime <span class="gtkdoc opt">!</span> qtdemux name<span class="gtkdoc opt">=</span>q ttmlrender name<span class="gtkdoc opt">=</span>r q<span class="gtkdoc opt">. !</span> queue <span class="gtkdoc opt">!</span> h264parse <span class="gtkdoc opt">!</span> avdec_h264 <span class="gtkdoc opt">!</span> autovideoconvert <span class="gtkdoc opt">!</span> r<span class="gtkdoc opt">.</span>video_sink filesrc location<span class="gtkdoc opt">=&lt;</span>subtitle file location<span class="gtkdoc opt">&gt;</span> blocksize<span class="gtkdoc opt">=</span><span class="number">16777216</span> <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> ttmlparse <span class="gtkdoc opt">!</span> r<span class="gtkdoc opt">.</span>text_sink r<span class="gtkdoc opt">. !</span> ximagesink q<span class="gtkdoc opt">. !</span> queue <span class="gtkdoc opt">!</span> aacparse <span class="gtkdoc opt">!</span> avdec_aac <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> alsasink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 filesrc location=&lt;media file location&gt; ! video/quicktime ! qtdemux name=q ttmlrender name=r q. ! queue ! h264parse ! avdec_h264 ! autovideoconvert ! r.video_sink filesrc location=&lt;subtitle file location&gt; blocksize=16777216 ! queue ! ttmlparse ! r.text_sink r. ! ximagesink q. ! queue ! aacparse ! avdec_aac ! audioconvert ! alsasink
+</pre></div>
 <p> Parse and render TTML subtitles contained in a single XML file over an
 MP4 stream containing H.264 video and AAC audio.</p>
 </div>

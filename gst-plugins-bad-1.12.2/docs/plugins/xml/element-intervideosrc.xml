@@ -1,0 +1,89 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-intervideosrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-intervideosrc.top_of_page" role="top_of_page">intervideosrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>intervideosrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-intervideosrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstInterVideoSrc--channel">channel</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstInterVideoSrc--timeout">timeout</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstInterVideoSrc"/><refsect1 id="gst-plugins-bad-plugins-intervideosrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstInterVideoSrc-struct">GstInterVideoSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intervideosrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> GstInterVideoSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-intervideosrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-intervideosrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intervideosrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intervideosrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstInterVideoSrc-struct" role="struct">
+<title>struct GstInterVideoSrc</title>
+<indexterm zone="GstInterVideoSrc-struct"><primary>GstInterVideoSrc</primary></indexterm>
+<programlisting language="C">struct GstInterVideoSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intervideosrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstInterVideoSrc--channel" role="property"><title>The <literal>“channel”</literal> property</title>
+<indexterm zone="GstInterVideoSrc--channel"><primary>GstInterVideoSrc:channel</primary></indexterm>
+<programlisting>  “channel”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Channel name to match inter src and sink elements.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;default&quot;</para>
+</refsect2>
+<refsect2 id="GstInterVideoSrc--timeout" role="property"><title>The <literal>“timeout”</literal> property</title>
+<indexterm zone="GstInterVideoSrc--timeout"><primary>GstInterVideoSrc:timeout</primary></indexterm>
+<programlisting>  “timeout”                  <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Timeout after which to start outputting black frames.</para><para>Flags: Read / Write</para>
+<para>Default value: 1000000000</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

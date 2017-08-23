@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-intersubsink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-intersubsink.top_of_page" role="top_of_page">intersubsink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>intersubsink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-intersubsink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstInterSubSink--channel">channel</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstInterSubSink"/><refsect1 id="gst-plugins-bad-plugins-intersubsink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstInterSubSink-struct">GstInterSubSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intersubsink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> GstInterSubSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-intersubsink.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-intersubsink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intersubsink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intersubsink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstInterSubSink-struct" role="struct">
+<title>struct GstInterSubSink</title>
+<indexterm zone="GstInterSubSink-struct"><primary>GstInterSubSink</primary></indexterm>
+<programlisting language="C">struct GstInterSubSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-intersubsink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstInterSubSink--channel" role="property"><title>The <literal>“channel”</literal> property</title>
+<indexterm zone="GstInterSubSink--channel"><primary>GstInterSubSink:channel</primary></indexterm>
+<programlisting>  “channel”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Channel name to match inter src and sink elements.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;default&quot;</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

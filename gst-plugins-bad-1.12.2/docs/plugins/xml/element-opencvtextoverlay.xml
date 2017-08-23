@@ -1,0 +1,155 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-opencvtextoverlay">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-opencvtextoverlay.top_of_page" role="top_of_page">opencvtextoverlay</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>opencvtextoverlay</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-opencvtextoverlay.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--colorB">colorB</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--colorG">colorG</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--colorR">colorR</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--height">height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--text">text</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--thickness">thickness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--width">width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--xpos">xpos</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstOpencvTextOverlay--ypos">ypos</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstOpencvTextOverlay"/><refsect1 id="gst-plugins-bad-plugins-opencvtextoverlay.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstOpencvTextOverlay-struct">GstOpencvTextOverlay</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opencvtextoverlay.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstOpencvTextOverlay
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-opencvtextoverlay.description" role="desc">
+<title role="desc.title">Description</title>
+<para>opencvtextoverlay renders the text on top of the video frames</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! videoconvert ! opencvtextoverlay text="Opencv Text Overlay " ! videoconvert ! xvimagesink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-opencvtextoverlay-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opencvtextoverlay.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opencvtextoverlay.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstOpencvTextOverlay-struct" role="struct">
+<title>struct GstOpencvTextOverlay</title>
+<indexterm zone="GstOpencvTextOverlay-struct"><primary>GstOpencvTextOverlay</primary></indexterm>
+<programlisting language="C">struct GstOpencvTextOverlay;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opencvtextoverlay.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstOpencvTextOverlay--colorB" role="property"><title>The <literal>“colorB”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--colorB"><primary>GstOpencvTextOverlay:colorB</primary></indexterm>
+<programlisting>  “colorB”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the color -B.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--colorG" role="property"><title>The <literal>“colorG”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--colorG"><primary>GstOpencvTextOverlay:colorG</primary></indexterm>
+<programlisting>  “colorG”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the color -G.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--colorR" role="property"><title>The <literal>“colorR”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--colorR"><primary>GstOpencvTextOverlay:colorR</primary></indexterm>
+<programlisting>  “colorR”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the color -R.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,255]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--height" role="property"><title>The <literal>“height”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--height"><primary>GstOpencvTextOverlay:height</primary></indexterm>
+<programlisting>  “height”                   <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Sets the height of fonts.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,5]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--text" role="property"><title>The <literal>“text”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--text"><primary>GstOpencvTextOverlay:text</primary></indexterm>
+<programlisting>  “text”                     <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Text to be display.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;Opencv Text Overlay&quot;</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--thickness" role="property"><title>The <literal>“thickness”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--thickness"><primary>GstOpencvTextOverlay:thickness</primary></indexterm>
+<programlisting>  “thickness”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the Thickness of Font.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 2</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--width"><primary>GstOpencvTextOverlay:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Sets the width of fonts.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,5]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--xpos" role="property"><title>The <literal>“xpos”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--xpos"><primary>GstOpencvTextOverlay:xpos</primary></indexterm>
+<programlisting>  “xpos”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the Horizontal position.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 50</para>
+</refsect2>
+<refsect2 id="GstOpencvTextOverlay--ypos" role="property"><title>The <literal>“ypos”</literal> property</title>
+<indexterm zone="GstOpencvTextOverlay--ypos"><primary>GstOpencvTextOverlay:ypos</primary></indexterm>
+<programlisting>  “ypos”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the Vertical position.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 50</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

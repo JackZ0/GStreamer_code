@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstInsertbin">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstInsertbin.top_of_page">GstInsertbin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstInsertbin</refname>
+<refpurpose>A <link linkend="GstBin"><type>GstBin</type></link> to insertally link filter-like elements.</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstInsertBinCallback">*GstInsertBinCallback</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-insert-bin-new">gst_insert_bin_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-insert-bin-append">gst_insert_bin_append</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-insert-bin-prepend">gst_insert_bin_prepend</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-insert-bin-insert-after">gst_insert_bin_insert_after</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-insert-bin-insert-before">gst_insert_bin_insert_before</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-insert-bin-remove">gst_insert_bin_remove</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstInsertBin-append">append</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstInsertBin-insert-after">insert-after</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstInsertBin-insert-before">insert-before</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstInsertBin-prepend">prepend</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstInsertBin-remove">remove</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstInsertBin"/><refsect1 id="gst-plugins-bad-libs-GstInsertbin.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstInsertBin-struct">GstInsertBin</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstInsertBinClass">GstInsertBinClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstInsertBin
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstInsertBin implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element is a <link linkend="GstBin"><type>GstBin</type></link> that has a single source and sink pad. It allows
+the user (the application) to easily add and remove filter-like element
+(that has a single source and sink pad), to the pipeline while it is running.
+It features a fully asynchronous API inspired by GLib's GAsyncResult based
+APIs.</para>
+<para>Each operation (addition or removal) can take a callback, this callback
+is guaranteed to be called. Unlike GIO, there is no guarantee about where
+this callback will be called from, it could be called before the action
+returns or it could be called later from another thread. The signature of
+this callback <link linkend="GstInsertBinCallback"><function>GstInsertBinCallback()</function></link>.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GstInsertBinCallback" role="function">
+<title>GstInsertBinCallback&#160;()</title>
+<indexterm zone="GstInsertBinCallback"><primary>GstInsertBinCallback</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstInsertBinCallback<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GstInsertBin"><type>GstInsertBin</type></link> *insertbin</parameter>,
+                         <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                         <parameter><link linkend="gboolean"><type>gboolean</type></link> success</parameter>,
+                         <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>This is the prototype of callbacks to be called when the operation completes.
+It could be called at any time, including as a re-entrant call while the
+operation is requested.</para>
+<refsect3 id="GstInsertBinCallback.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>insertbin</para></entry>
+<entry role="parameter_description"><para>A <link linkend="GstInsertBin"><type>GstInsertBin</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>The <link linkend="GstElement"><type>GstElement</type></link> on which the operation was performed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>success</para></entry>
+<entry role="parameter_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> if the operation was successful</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The user data passed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-insert-bin-new" role="function" condition="since:1.2">
+<title>gst_insert_bin_new&#160;()</title>
+<indexterm zone="gst-insert-bin-new" role="1.2"><primary>gst_insert_bin_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>&#160;*
+gst_insert_bin_new (<parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+<para>Creates a new <link linkend="GstInsertBin"><type>GstInsertBin</type></link></para>
+<refsect3 id="gst-insert-bin-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para> The name of the new <link linkend="GstInsertBin"><type>GstInsertBin</type></link> element (or <link linkend="NULL:CAPS"><literal>NULL</literal></link>). </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-insert-bin-new.returns" role="returns">
+<title>Returns</title>
+<para> The new <link linkend="GstInsertBin"><type>GstInsertBin</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+<refsect2 id="gst-insert-bin-append" role="function" condition="since:1.2">
+<title>gst_insert_bin_append&#160;()</title>
+<indexterm zone="gst-insert-bin-append" role="1.2"><primary>gst_insert_bin_append</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_insert_bin_append (<parameter><link linkend="GstInsertBin"><type>GstInsertBin</type></link> *self</parameter>,
+                       <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                       <parameter><link linkend="GstInsertBinCallback"><type>GstInsertBinCallback</type></link> callback</parameter>,
+                       <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>This action signal adds the filter like element after any other element
+in the bin.</para>
+<para>Same as the <link linkend="GstInsertBin-append"><type>“append”</type></link> signal.</para>
+<refsect3 id="gst-insert-bin-append.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> the callback to call when the element has been
+added or not, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+<refsect2 id="gst-insert-bin-prepend" role="function" condition="since:1.2">
+<title>gst_insert_bin_prepend&#160;()</title>
+<indexterm zone="gst-insert-bin-prepend" role="1.2"><primary>gst_insert_bin_prepend</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_insert_bin_prepend (<parameter><link linkend="GstInsertBin"><type>GstInsertBin</type></link> *self</parameter>,
+                        <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                        <parameter><link linkend="GstInsertBinCallback"><type>GstInsertBinCallback</type></link> callback</parameter>,
+                        <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>This action signal adds the filter like element before any other element
+in the bin.</para>
+<para>Same as the <link linkend="GstInsertBin-prepend"><type>“prepend”</type></link> signal.</para>
+<refsect3 id="gst-insert-bin-prepend.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> the callback to call when the element has been
+added or not, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+<refsect2 id="gst-insert-bin-insert-after" role="function" condition="since:1.2">
+<title>gst_insert_bin_insert_after&#160;()</title>
+<indexterm zone="gst-insert-bin-insert-after" role="1.2"><primary>gst_insert_bin_insert_after</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_insert_bin_insert_after (<parameter><link linkend="GstInsertBin"><type>GstInsertBin</type></link> *self</parameter>,
+                             <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                             <parameter><link linkend="GstElement"><type>GstElement</type></link> *sibling</parameter>,
+                             <parameter><link linkend="GstInsertBinCallback"><type>GstInsertBinCallback</type></link> callback</parameter>,
+                             <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>This action signal adds the filter like element after the <parameter>sibling</parameter>
+
+element in the bin.</para>
+<para>Same as the <link linkend="GstInsertBin-insert-after"><type>“insert-after”</type></link> signal.</para>
+<refsect3 id="gst-insert-bin-insert-after.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sibling</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add <parameter>element</parameter>
+after</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> the callback to call when the element has been
+added or not, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+<refsect2 id="gst-insert-bin-insert-before" role="function" condition="since:1.2">
+<title>gst_insert_bin_insert_before&#160;()</title>
+<indexterm zone="gst-insert-bin-insert-before" role="1.2"><primary>gst_insert_bin_insert_before</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_insert_bin_insert_before (<parameter><link linkend="GstInsertBin"><type>GstInsertBin</type></link> *self</parameter>,
+                              <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                              <parameter><link linkend="GstElement"><type>GstElement</type></link> *sibling</parameter>,
+                              <parameter><link linkend="GstInsertBinCallback"><type>GstInsertBinCallback</type></link> callback</parameter>,
+                              <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>This action signal adds the filter like element before the <parameter>sibling</parameter>
+
+element in the bin.</para>
+<para>Same as the <link linkend="GstInsertBin-insert-before"><type>“insert-before”</type></link> signal.</para>
+<refsect3 id="gst-insert-bin-insert-before.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sibling</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add <parameter>element</parameter>
+before</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> the callback to call when the element has been
+added or not, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+<refsect2 id="gst-insert-bin-remove" role="function" condition="since:1.2">
+<title>gst_insert_bin_remove&#160;()</title>
+<indexterm zone="gst-insert-bin-remove" role="1.2"><primary>gst_insert_bin_remove</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_insert_bin_remove (<parameter><link linkend="GstInsertBin"><type>GstInsertBin</type></link> *self</parameter>,
+                       <parameter><link linkend="GstElement"><type>GstElement</type></link> *element</parameter>,
+                       <parameter><link linkend="GstInsertBinCallback"><type>GstInsertBinCallback</type></link> callback</parameter>,
+                       <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<para>This action signal removed the filter like element from the bin.</para>
+<para>Same as the <link linkend="GstInsertBin-remove"><type>“remove”</type></link> signal.</para>
+<refsect3 id="gst-insert-bin-remove.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to remove</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> the callback to call when the element has been
+removed or not, or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.2">1.2</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstInsertBin-struct" role="struct">
+<title>struct GstInsertBin</title>
+<indexterm zone="GstInsertBin-struct"><primary>GstInsertBin</primary></indexterm>
+<programlisting language="C">struct GstInsertBin;</programlisting>
+<para>The object structure.</para>
+</refsect2>
+<refsect2 id="GstInsertBinClass" role="struct">
+<title>struct GstInsertBinClass</title>
+<indexterm zone="GstInsertBinClass"><primary>GstInsertBinClass</primary></indexterm>
+<programlisting language="C">struct GstInsertBinClass {
+  GstBinClass parent_class;
+};
+</programlisting>
+<para>The object class structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstInsertbin.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstInsertBin-append" role="signal"><title>The <literal>“append”</literal> signal</title>
+<indexterm zone="GstInsertBin-append"><primary>GstInsertBin::append</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstInsertBin"><type>GstInsertBin</type></link> *element,
+               <link linkend="GstElement"><type>GstElement</type></link>   *callback,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data2,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data)</programlisting>
+<para>This action signal adds the filter like element after any other element
+in the bin.</para>
+<para>Same as <link linkend="gst-insert-bin-append"><function>gst_insert_bin_append()</function></link></para>
+<refsect3 id="GstInsertBin-append.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para>the callback to call when the element has been added or not, or
+<link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data2</para></entry>
+<entry role="parameter_description"><para>The user data of the signal (ignored)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2><refsect2 id="GstInsertBin-insert-after" role="signal"><title>The <literal>“insert-after”</literal> signal</title>
+<indexterm zone="GstInsertBin-insert-after"><primary>GstInsertBin::insert-after</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstInsertBin"><type>GstInsertBin</type></link> *element,
+               <link linkend="GstElement"><type>GstElement</type></link>   *sibling,
+               <link linkend="GstElement"><type>GstElement</type></link>   *callback,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data2,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data)</programlisting>
+<para>This action signal adds the filter like element after the <parameter>sibling</parameter>
+
+element in the bin.
+element in the bin.</para>
+<para>Same as <link linkend="gst-insert-bin-insert-after"><function>gst_insert_bin_insert_after()</function></link></para>
+<refsect3 id="GstInsertBin-insert-after.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sibling</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add <parameter>element</parameter>
+after</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para>the callback to call when the element has been added or not, or
+<link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data2</para></entry>
+<entry role="parameter_description"><para>The user data of the signal (ignored)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2><refsect2 id="GstInsertBin-insert-before" role="signal"><title>The <literal>“insert-before”</literal> signal</title>
+<indexterm zone="GstInsertBin-insert-before"><primary>GstInsertBin::insert-before</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstInsertBin"><type>GstInsertBin</type></link> *element,
+               <link linkend="GstElement"><type>GstElement</type></link>   *sibling,
+               <link linkend="GstElement"><type>GstElement</type></link>   *callback,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data2,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data)</programlisting>
+<para>This action signal adds the filter like element before the <parameter>sibling</parameter>
+
+element in the bin.</para>
+<para>Same as <link linkend="gst-insert-bin-insert-before"><function>gst_insert_bin_insert_before()</function></link></para>
+<refsect3 id="GstInsertBin-insert-before.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>sibling</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add <parameter>element</parameter>
+before</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para>the callback to call when the element has been added or not, or
+<link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data2</para></entry>
+<entry role="parameter_description"><para>The user data of the signal (ignored)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2><refsect2 id="GstInsertBin-prepend" role="signal"><title>The <literal>“prepend”</literal> signal</title>
+<indexterm zone="GstInsertBin-prepend"><primary>GstInsertBin::prepend</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstInsertBin"><type>GstInsertBin</type></link> *element,
+               <link linkend="GstElement"><type>GstElement</type></link>   *callback,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data2,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data)</programlisting>
+<para>This action signal adds the filter like element before any other element
+in the bin.</para>
+<para>Same as <link linkend="gst-insert-bin-prepend"><function>gst_insert_bin_prepend()</function></link></para>
+<refsect3 id="GstInsertBin-prepend.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to add</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para>the callback to call when the element has been added or not, or
+<link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data2</para></entry>
+<entry role="parameter_description"><para>The user data of the signal (ignored)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2><refsect2 id="GstInsertBin-remove" role="signal"><title>The <literal>“remove”</literal> signal</title>
+<indexterm zone="GstInsertBin-remove"><primary>GstInsertBin::remove</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstInsertBin"><type>GstInsertBin</type></link> *element,
+               <link linkend="GstElement"><type>GstElement</type></link>   *callback,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data2,
+               <link linkend="gpointer"><type>gpointer</type></link>      user_data)</programlisting>
+<para>This action signal removed the filter like element from the bin.</para>
+<para>Same as <link linkend="gst-insert-bin-remove"><function>gst_insert_bin_remove()</function></link></para>
+<refsect3 id="GstInsertBin-remove.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>element</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstElement"><type>GstElement</type></link> to remove</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para>the callback to call when the element has been removed or not,
+or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>The data to pass to the callback</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data2</para></entry>
+<entry role="parameter_description"><para>The user data of the signal (ignored)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

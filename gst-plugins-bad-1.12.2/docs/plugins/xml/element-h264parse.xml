@@ -1,0 +1,104 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-h264parse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-h264parse.top_of_page" role="top_of_page">h264parse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>h264parse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-h264parse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstH264Parse--split-packetized">split-packetized</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstH264Parse--access-unit">access-unit</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstH264ParseFormat"><type>GstH264ParseFormat</type></link></entry><entry role="property_name"><link linkend="GstH264Parse--output-format">output-format</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstH264Parse--config-interval">config-interval</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstH264Parse"/><refsect1 id="gst-plugins-bad-plugins-h264parse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstH264Parse-struct">GstH264Parse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h264parse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseParse">GstBaseParse</link>
+                    <phrase role="lineart">╰──</phrase> GstH264Parse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-h264parse.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-h264parse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h264parse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h264parse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstH264Parse-struct" role="struct">
+<title>struct GstH264Parse</title>
+<indexterm zone="GstH264Parse-struct"><primary>GstH264Parse</primary></indexterm>
+<programlisting language="C">struct GstH264Parse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-h264parse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstH264Parse--split-packetized" role="property"><title>The <literal>“split-packetized”</literal> property</title>
+<indexterm zone="GstH264Parse--split-packetized"><primary>GstH264Parse:split-packetized</primary></indexterm>
+<programlisting>  “split-packetized”         <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Split NAL units of packetized streams.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstH264Parse--access-unit" role="property"><title>The <literal>“access-unit”</literal> property</title>
+<indexterm zone="GstH264Parse--access-unit"><primary>GstH264Parse:access-unit</primary></indexterm>
+<programlisting>  “access-unit”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Output Acess Units rather than NALUs.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstH264Parse--output-format" role="property"><title>The <literal>“output-format”</literal> property</title>
+<indexterm zone="GstH264Parse--output-format"><primary>GstH264Parse:output-format</primary></indexterm>
+<programlisting>  “output-format”            <link linkend="GstH264ParseFormat"><type>GstH264ParseFormat</type></link></programlisting>
+<para>Output Format of stream (bytestream or otherwise).</para><para>Flags: Read / Write</para>
+<para>Default value: Input Format</para>
+</refsect2>
+<refsect2 id="GstH264Parse--config-interval" role="property"><title>The <literal>“config-interval”</literal> property</title>
+<indexterm zone="GstH264Parse--config-interval"><primary>GstH264Parse:config-interval</primary></indexterm>
+<programlisting>  “config-interval”          <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Send SPS and PPS Insertion Interval in seconds (sprop parameter sets will be multiplexed in the data stream when detected.) (0 = disabled, -1 = send with every IDR frame).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [G_MAXULONG,3600]</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

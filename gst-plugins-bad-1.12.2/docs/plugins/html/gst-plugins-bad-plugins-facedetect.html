@@ -132,10 +132,10 @@
 <a name="gst-plugins-bad-plugins-facedetect.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0GstVideoFilter.html#GstVideoFilter-struct">GstVideoFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> <a href="../gst-plugins-base-libs-1.0/GstVideoFilter.html#GstVideoFilter-struct">GstVideoFilter</a>
                         <span class="lineart">╰──</span> GstOpencvVideoFilter
                             <span class="lineart">╰──</span> GstFaceDetect
 </pre>
@@ -149,28 +149,12 @@ until the size is &lt;= GstFaceDetect::min-size-width or
 GstFaceDetect::min-size-height.</p>
 <div class="refsect2">
 <a name="id-1.2.36.7.4"></a><h3>Example launch line</h3>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> autovideosrc <span class="gtkdoc opt">!</span> decodebin <span class="gtkdoc opt">!</span> colorspace <span class="gtkdoc opt">!</span> facedetect <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> xvimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
- Detect and show faces
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> autovideosrc <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span>width<span class="gtkdoc opt">=</span><span class="number">320</span><span class="gtkdoc opt">,</span>height<span class="gtkdoc opt">=</span><span class="number">240</span> <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> facedetect min<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>width<span class="gtkdoc opt">=</span><span class="number">60</span> min<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">-</span>height<span class="gtkdoc opt">=</span><span class="number">60</span> <span class="gtkdoc opt">!</span> colorspace <span class="gtkdoc opt">!</span> xvimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
- Detect large faces on a smaller image
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 autovideosrc ! decodebin ! colorspace ! facedetect ! videoconvert ! xvimagesink
+</pre></div> Detect and show faces
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 autovideosrc ! video/x-raw,width=320,height=240 ! videoconvert ! facedetect min-size-width=60 min-size-height=60 ! colorspace ! xvimagesink
+</pre></div> Detect large faces on a smaller image
 
 </div>
 <div class="refsynopsisdiv">

@@ -1,0 +1,509 @@
+<?xml version="1.0"?>
+<!DOCTYPE informaltable PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+
+<informaltable pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<tbody>
+<row>
+<entry><link linkend="GInitiallyUnowned">GInitiallyUnowned</link></entry>
+<entry><link linkend="GObject">GObject</link></entry>
+<entry><link linkend="GstA2dpSink">GstA2dpSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAccurip">GstAccurip</link></entry>
+<entry><link linkend="GstAdaptiveDemux">GstAdaptiveDemux</link></entry>
+<entry><link linkend="GstAggregator">GstAggregator</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAiffMux">GstAiffMux</link></entry>
+<entry><link linkend="GstAiffParse">GstAiffParse</link></entry>
+<entry><link linkend="GstAsfMux">GstAsfMux</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAsfParse">GstAsfParse</link></entry>
+<entry><link linkend="GstAssRender">GstAssRender</link></entry>
+<entry><link linkend="GstAudioAggregator">GstAudioAggregator</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAudioBaseSink">GstAudioBaseSink</link></entry>
+<entry><link linkend="GstAudioBaseSrc">GstAudioBaseSrc</link></entry>
+<entry><link linkend="GstAudioChannelMix">GstAudioChannelMix</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAudioDecoder">GstAudioDecoder</link></entry>
+<entry><link linkend="GstAudioEncoder">GstAudioEncoder</link></entry>
+<entry><link linkend="GstAudioFilter">GstAudioFilter</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAudioInterleave">GstAudioInterleave</link></entry>
+<entry><link linkend="GstAudioMixMatrix">GstAudioMixMatrix</link></entry>
+<entry><link linkend="GstAudioMixer">GstAudioMixer</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAudioParse">GstAudioParse</link></entry>
+<entry><link linkend="GstAudioSegmentClip">GstAudioSegmentClip</link></entry>
+<entry><link linkend="GstAudioSink">GstAudioSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAudioSrc">GstAudioSrc</link></entry>
+<entry><link linkend="GstAudioVisualizer">GstAudioVisualizer</link></entry>
+<entry><link linkend="GstAutoConvert">GstAutoConvert</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAutoVideoConvert">GstAutoVideoConvert</link></entry>
+<entry><link linkend="GstAvdtpSink">GstAvdtpSink</link></entry>
+<entry><link linkend="GstAvdtpSrc">GstAvdtpSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstBPMDetect">GstBPMDetect</link></entry>
+<entry><link linkend="GstBaseCameraSrc">GstBaseCameraSrc</link></entry>
+<entry><link linkend="GstBaseParse">GstBaseParse</link></entry>
+</row>
+<row>
+<entry><link linkend="GstBaseSink">GstBaseSink</link></entry>
+<entry><link linkend="GstBaseSrc">GstBaseSrc</link></entry>
+<entry><link linkend="GstBaseTransform">GstBaseTransform</link></entry>
+</row>
+<row>
+<entry><link linkend="GstBayer2RGB">GstBayer2RGB</link></entry>
+<entry><link linkend="GstBin">GstBin</link></entry>
+<entry><link linkend="GstBs2b">GstBs2b</link></entry>
+</row>
+<row>
+<entry><link linkend="GstBulge">GstBulge</link></entry>
+<entry><link linkend="GstBurn">GstBurn</link></entry>
+<entry><link linkend="GstBz2dec">GstBz2dec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstBz2enc">GstBz2enc</link></entry>
+<entry><link linkend="GstCameraBin">GstCameraBin</link></entry>
+<entry><link linkend="GstChecksumSink">GstChecksumSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstChopMyData">GstChopMyData</link></entry>
+<entry><link linkend="GstChromaHold">GstChromaHold</link></entry>
+<entry><link linkend="GstChromaprint">GstChromaprint</link></entry>
+</row>
+<row>
+<entry><link linkend="GstChromium">GstChromium</link></entry>
+<entry><link linkend="GstCircle">GstCircle</link></entry>
+<entry><link linkend="GstCircleGeometricTransform">GstCircleGeometricTransform</link></entry>
+</row>
+<row>
+<entry><link linkend="GstColorEffects">GstColorEffects</link></entry>
+<entry><link linkend="GstCombDetect">GstCombDetect</link></entry>
+<entry><link linkend="GstCompare">GstCompare</link></entry>
+</row>
+<row>
+<entry><link linkend="GstCompositor">GstCompositor</link></entry>
+<entry><link linkend="GstCurlBaseSink">GstCurlBaseSink</link></entry>
+<entry><link linkend="GstCurlFileSink">GstCurlFileSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstCurlFtpSink">GstCurlFtpSink</link></entry>
+<entry><link linkend="GstCurlHttpSink">GstCurlHttpSink</link></entry>
+<entry><link linkend="GstCurlSmtpSink">GstCurlSmtpSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstCurlTlsSink">GstCurlTlsSink</link></entry>
+<entry><link linkend="GstCvDilate">GstCvDilate</link></entry>
+<entry><link linkend="GstCvDilateErode">GstCvDilateErode</link></entry>
+</row>
+<row>
+<entry><link linkend="GstCvEqualizeHist">GstCvEqualizeHist</link></entry>
+<entry><link linkend="GstCvErode">GstCvErode</link></entry>
+<entry><link linkend="GstCvLaplace">GstCvLaplace</link></entry>
+</row>
+<row>
+<entry><link linkend="GstCvSmooth">GstCvSmooth</link></entry>
+<entry><link linkend="GstCvSobel">GstCvSobel</link></entry>
+<entry><link linkend="GstDVBSubOverlay">GstDVBSubOverlay</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDVDSpu">GstDVDSpu</link></entry>
+<entry><link linkend="GstDashDemux">GstDashDemux</link></entry>
+<entry><link linkend="GstDebugSpy">GstDebugSpy</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDecklinkAudioSink">GstDecklinkAudioSink</link></entry>
+<entry><link linkend="GstDecklinkAudioSrc">GstDecklinkAudioSrc</link></entry>
+<entry><link linkend="GstDecklinkVideoSink">GstDecklinkVideoSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDecklinkVideoSrc">GstDecklinkVideoSrc</link></entry>
+<entry><link linkend="GstDfbVideoSink">GstDfbVideoSink</link></entry>
+<entry><link linkend="GstDiffuse">GstDiffuse</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDilate">GstDilate</link></entry>
+<entry><link linkend="GstDiracParse">GstDiracParse</link></entry>
+<entry><link linkend="GstDisparity">GstDisparity</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDodge">GstDodge</link></entry>
+<entry><link linkend="GstDtlsDec">GstDtlsDec</link></entry>
+<entry><link linkend="GstDtlsEnc">GstDtlsEnc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDtlsSrtpBin">GstDtlsSrtpBin</link></entry>
+<entry><link linkend="GstDtlsSrtpDec">GstDtlsSrtpDec</link></entry>
+<entry><link linkend="GstDtlsSrtpDemux">GstDtlsSrtpDemux</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDtlsSrtpEnc">GstDtlsSrtpEnc</link></entry>
+<entry><link linkend="GstDtmfDetect">GstDtmfDetect</link></entry>
+<entry><link linkend="GstDtsDec">GstDtsDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstDvbSrc">GstDvbSrc</link></entry>
+<entry><link linkend="GstEdgeDetect">GstEdgeDetect</link></entry>
+<entry><link linkend="GstElement">GstElement</link></entry>
+</row>
+<row>
+<entry><link linkend="GstErrorIgnore">GstErrorIgnore</link></entry>
+<entry><link linkend="GstExclusion">GstExclusion</link></entry>
+<entry><link linkend="GstFBDEVSink">GstFBDEVSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstFPSDisplaySink">GstFPSDisplaySink</link></entry>
+<entry><link linkend="GstFaac">GstFaac</link></entry>
+<entry><link linkend="GstFaad">GstFaad</link></entry>
+</row>
+<row>
+<entry><link linkend="GstFaceBlur">GstFaceBlur</link></entry>
+<entry><link linkend="GstFaceDetect">GstFaceDetect</link></entry>
+<entry><link linkend="GstFestival">GstFestival</link></entry>
+</row>
+<row>
+<entry><link linkend="GstFieldAnalysis">GstFieldAnalysis</link></entry>
+<entry><link linkend="GstFisheye">GstFisheye</link></entry>
+<entry><link linkend="GstFluidDec">GstFluidDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstFreeverb">GstFreeverb</link></entry>
+<entry><link linkend="GstGDPDepay">GstGDPDepay</link></entry>
+<entry><link linkend="GstGDPPay">GstGDPPay</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLBaseFilter">GstGLBaseFilter</link></entry>
+<entry><link linkend="GstGLBaseMixer">GstGLBaseMixer</link></entry>
+<entry><link linkend="GstGLColorBalance">GstGLColorBalance</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLColorConvertElement">GstGLColorConvertElement</link></entry>
+<entry><link linkend="GstGLColorscale">GstGLColorscale</link></entry>
+<entry><link linkend="GstGLDeinterlace">GstGLDeinterlace</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLDifferenceMatte">GstGLDifferenceMatte</link></entry>
+<entry><link linkend="GstGLDownloadElement">GstGLDownloadElement</link></entry>
+<entry><link linkend="GstGLEffects">GstGLEffects</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLEffectsGeneric">GstGLEffectsGeneric</link></entry>
+<entry><link linkend="GstGLFilter">GstGLFilter</link></entry>
+<entry><link linkend="GstGLFilterApp">GstGLFilterApp</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLFilterBin">GstGLFilterBin</link></entry>
+<entry><link linkend="GstGLFilterCube">GstGLFilterCube</link></entry>
+<entry><link linkend="GstGLFilterGlass">GstGLFilterGlass</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLFilterShader">GstGLFilterShader</link></entry>
+<entry><link linkend="GstGLImageSink">GstGLImageSink</link></entry>
+<entry><link linkend="GstGLImageSinkBin">GstGLImageSinkBin</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLMixer">GstGLMixer</link></entry>
+<entry><link linkend="GstGLMixerBin">GstGLMixerBin</link></entry>
+<entry><link linkend="GstGLMosaic">GstGLMosaic</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLOverlay">GstGLOverlay</link></entry>
+<entry><link linkend="GstGLSinkBin">GstGLSinkBin</link></entry>
+<entry><link linkend="GstGLSrcBin">GstGLSrcBin</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLStereoMix">GstGLStereoMix</link></entry>
+<entry><link linkend="GstGLStereoSplit">GstGLStereoSplit</link></entry>
+<entry><link linkend="GstGLTestSrc">GstGLTestSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLUploadElement">GstGLUploadElement</link></entry>
+<entry><link linkend="GstGLVideoMixer">GstGLVideoMixer</link></entry>
+<entry><link linkend="GstGLVideoMixerBin">GstGLVideoMixerBin</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLViewConvertElement">GstGLViewConvertElement</link></entry>
+<entry><link linkend="GstGSMDec">GstGSMDec</link></entry>
+<entry><link linkend="GstGSMEnc">GstGSMEnc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGaussianBlur">GstGaussianBlur</link></entry>
+<entry><link linkend="GstGeometricTransform">GstGeometricTransform</link></entry>
+<entry><link linkend="GstGmeDec">GstGmeDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGrabcut">GstGrabcut</link></entry>
+<entry><link linkend="GstGtkBaseSink">GstGtkBaseSink</link></entry>
+<entry><link linkend="GstGtkGLSink">GstGtkGLSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGtkSink">GstGtkSink</link></entry>
+<entry><link linkend="GstH263Parse">GstH263Parse</link></entry>
+<entry><link linkend="GstH264Parse">GstH264Parse</link></entry>
+</row>
+<row>
+<entry><link linkend="GstH265Parse">GstH265Parse</link></entry>
+<entry><link linkend="GstHLSDemux">GstHLSDemux</link></entry>
+<entry><link linkend="GstHanddetect">GstHanddetect</link></entry>
+</row>
+<row>
+<entry><link linkend="GstHlsSink">GstHlsSink</link></entry>
+<entry><link linkend="GstIRTSPParse">GstIRTSPParse</link></entry>
+<entry><link linkend="GstId3Mux">GstId3Mux</link></entry>
+</row>
+<row>
+<entry><link linkend="GstInterAudioSink">GstInterAudioSink</link></entry>
+<entry><link linkend="GstInterAudioSrc">GstInterAudioSrc</link></entry>
+<entry><link linkend="GstInterSubSink">GstInterSubSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstInterSubSrc">GstInterSubSrc</link></entry>
+<entry><link linkend="GstInterVideoSink">GstInterVideoSink</link></entry>
+<entry><link linkend="GstInterVideoSrc">GstInterVideoSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstInterlace">GstInterlace</link></entry>
+<entry><link linkend="GstIvfParse">GstIvfParse</link></entry>
+<entry><link linkend="GstIvtc">GstIvtc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstJP2kDecimator">GstJP2kDecimator</link></entry>
+<entry><link linkend="GstJPEG2000Parse">GstJPEG2000Parse</link></entry>
+<entry><link linkend="GstJifMux">GstJifMux</link></entry>
+</row>
+<row>
+<entry><link linkend="GstJpegParse">GstJpegParse</link></entry>
+<entry><link linkend="GstKMSSink">GstKMSSink</link></entry>
+<entry><link linkend="GstKaleidoscope">GstKaleidoscope</link></entry>
+</row>
+<row>
+<entry><link linkend="GstKateDec">GstKateDec</link></entry>
+<entry><link linkend="GstKateEnc">GstKateEnc</link></entry>
+<entry><link linkend="GstKateParse">GstKateParse</link></entry>
+</row>
+<row>
+<entry><link linkend="GstKateTag">GstKateTag</link></entry>
+<entry><link linkend="GstLiveAdder">GstLiveAdder</link></entry>
+<entry><link linkend="GstMMS">GstMMS</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMXFDemux">GstMXFDemux</link></entry>
+<entry><link linkend="GstMXFMux">GstMXFMux</link></entry>
+<entry><link linkend="GstMarble">GstMarble</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMidiParse">GstMidiParse</link></entry>
+<entry><link linkend="GstMirror">GstMirror</link></entry>
+<entry><link linkend="GstModPlug">GstModPlug</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMotioncells">GstMotioncells</link></entry>
+<entry><link linkend="GstMpeg2enc">GstMpeg2enc</link></entry>
+<entry><link linkend="GstMpeg4VParse">GstMpeg4VParse</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMpegPSDemux">GstMpegPSDemux</link></entry>
+<entry><link linkend="GstMpegvParse">GstMpegvParse</link></entry>
+<entry><link linkend="GstMplex">GstMplex</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMssDemux">GstMssDemux</link></entry>
+<entry><link linkend="GstNetSim">GstNetSim</link></entry>
+<entry><link linkend="GstOFA">GstOFA</link></entry>
+</row>
+<row>
+<entry><link linkend="GstObject">GstObject</link></entry>
+<entry><link linkend="GstOpenALSink">GstOpenALSink</link></entry>
+<entry><link linkend="GstOpenEXRDec">GstOpenEXRDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstOpenJPEGDec">GstOpenJPEGDec</link></entry>
+<entry><link linkend="GstOpenJPEGEnc">GstOpenJPEGEnc</link></entry>
+<entry><link linkend="GstOpenalSrc">GstOpenalSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstOpencvTextOverlay">GstOpencvTextOverlay</link></entry>
+<entry><link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link></entry>
+<entry><link linkend="GstOpusParse">GstOpusParse</link></entry>
+</row>
+<row>
+<entry><link linkend="GstPcapParse">GstPcapParse</link></entry>
+<entry><link linkend="GstPerspective">GstPerspective</link></entry>
+<entry><link linkend="GstPinch">GstPinch</link></entry>
+</row>
+<row>
+<entry><link linkend="GstPipeline">GstPipeline</link></entry>
+<entry><link linkend="GstPitch">GstPitch</link></entry>
+<entry><link linkend="GstPngParse">GstPngParse</link></entry>
+</row>
+<row>
+<entry><link linkend="GstPnmdec">GstPnmdec</link></entry>
+<entry><link linkend="GstPnmenc">GstPnmenc</link></entry>
+<entry><link linkend="GstPushSrc">GstPushSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstQtSink">GstQtSink</link></entry>
+<entry><link linkend="GstRGB2Bayer">GstRGB2Bayer</link></entry>
+<entry><link linkend="GstRTMPSink">GstRTMPSink</link></entry>
+</row>
+<row>
+<entry><link linkend="GstRTMPSrc">GstRTMPSrc</link></entry>
+<entry><link linkend="GstRTPBasePayload">GstRTPBasePayload</link></entry>
+<entry><link linkend="GstRemoveSilence">GstRemoveSilence</link></entry>
+</row>
+<row>
+<entry><link linkend="GstRetinex">GstRetinex</link></entry>
+<entry><link linkend="GstRfbSrc">GstRfbSrc</link></entry>
+<entry><link linkend="GstRotate">GstRotate</link></entry>
+</row>
+<row>
+<entry><link linkend="GstRsvgDec">GstRsvgDec</link></entry>
+<entry><link linkend="GstRsvgOverlay">GstRsvgOverlay</link></entry>
+<entry><link linkend="GstRtpAsfPay">GstRtpAsfPay</link></entry>
+</row>
+<row>
+<entry><link linkend="GstRtpOnvifParse">GstRtpOnvifParse</link></entry>
+<entry><link linkend="GstRtpOnvifTimestamp">GstRtpOnvifTimestamp</link></entry>
+<entry><link linkend="GstSDPDemux">GstSDPDemux</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSFDec">GstSFDec</link></entry>
+<entry><link linkend="GstSceneChange">GstSceneChange</link></entry>
+<entry><link linkend="GstSchroDec">GstSchroDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSchroEnc">GstSchroEnc</link></entry>
+<entry><link linkend="GstSdpSrc">GstSdpSrc</link></entry>
+<entry><link linkend="GstSegmentClip">GstSegmentClip</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSegmentation">GstSegmentation</link></entry>
+<entry><link linkend="GstShmSink">GstShmSink</link></entry>
+<entry><link linkend="GstShmSrc">GstShmSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSimpleVideoMark">GstSimpleVideoMark</link></entry>
+<entry><link linkend="GstSimpleVideoMarkDetect">GstSimpleVideoMarkDetect</link></entry>
+<entry><link linkend="GstSirenDec">GstSirenDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSirenEnc">GstSirenEnc</link></entry>
+<entry><link linkend="GstSkinDetect">GstSkinDetect</link></entry>
+<entry><link linkend="GstSmooth">GstSmooth</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSolarize">GstSolarize</link></entry>
+<entry><link linkend="GstSpaceScope">GstSpaceScope</link></entry>
+<entry><link linkend="GstSpanPlc">GstSpanPlc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSpectraScope">GstSpectraScope</link></entry>
+<entry><link linkend="GstSpeed">GstSpeed</link></entry>
+<entry><link linkend="GstSphere">GstSphere</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSquare">GstSquare</link></entry>
+<entry><link linkend="GstSrtEnc">GstSrtEnc</link></entry>
+<entry><link linkend="GstSrtpDec">GstSrtpDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSrtpEnc">GstSrtpEnc</link></entry>
+<entry><link linkend="GstStereo">GstStereo</link></entry>
+<entry><link linkend="GstStretch">GstStretch</link></entry>
+</row>
+<row>
+<entry><link linkend="GstSynaeScope">GstSynaeScope</link></entry>
+<entry><link linkend="GstTSDemux">GstTSDemux</link></entry>
+<entry><link linkend="GstTagMux">GstTagMux</link></entry>
+</row>
+<row>
+<entry><link linkend="GstTeletextDec">GstTeletextDec</link></entry>
+<entry><link linkend="GstTemplateMatch">GstTemplateMatch</link></entry>
+<entry><link linkend="GstToneGenerateSrc">GstToneGenerateSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstTtmlParse">GstTtmlParse</link></entry>
+<entry><link linkend="GstTtmlRender">GstTtmlRender</link></entry>
+<entry><link linkend="GstTunnel">GstTunnel</link></entry>
+</row>
+<row>
+<entry><link linkend="GstTwirl">GstTwirl</link></entry>
+<entry><link linkend="GstUvcH264MjpgDemux">GstUvcH264MjpgDemux</link></entry>
+<entry><link linkend="GstUvcH264Src">GstUvcH264Src</link></entry>
+</row>
+<row>
+<entry><link linkend="GstVC1Parse">GstVC1Parse</link></entry>
+<entry><link linkend="GstVCDSrc">GstVCDSrc</link></entry>
+<entry><link linkend="GstVMncDec">GstVMncDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstVideoAggregator">GstVideoAggregator</link></entry>
+<entry><link linkend="GstVideoAnalyse">GstVideoAnalyse</link></entry>
+<entry><link linkend="GstVideoDecoder">GstVideoDecoder</link></entry>
+</row>
+<row>
+<entry><link linkend="GstVideoDiff">GstVideoDiff</link></entry>
+<entry><link linkend="GstVideoEncoder">GstVideoEncoder</link></entry>
+<entry><link linkend="GstVideoFilter">GstVideoFilter</link></entry>
+</row>
+<row>
+<entry><link linkend="GstVideoFrameAudioLevel">GstVideoFrameAudioLevel</link></entry>
+<entry><link linkend="GstVideoParse">GstVideoParse</link></entry>
+<entry><link linkend="GstVideoSegmentClip">GstVideoSegmentClip</link></entry>
+</row>
+<row>
+<entry><link linkend="GstVideoSink">GstVideoSink</link></entry>
+<entry><link linkend="GstViewfinderBin">GstViewfinderBin</link></entry>
+<entry><link linkend="GstVoAacEnc">GstVoAacEnc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstVoAmrWbEnc">GstVoAmrWbEnc</link></entry>
+<entry><link linkend="GstWatchdog">GstWatchdog</link></entry>
+<entry><link linkend="GstWaterRipple">GstWaterRipple</link></entry>
+</row>
+<row>
+<entry><link linkend="GstWaveScope">GstWaveScope</link></entry>
+<entry><link linkend="GstWaylandSink">GstWaylandSink</link></entry>
+<entry><link linkend="GstWebPDec">GstWebPDec</link></entry>
+</row>
+<row>
+<entry><link linkend="GstWebpEnc">GstWebpEnc</link></entry>
+<entry><link linkend="GstWebrtcDsp">GstWebrtcDsp</link></entry>
+<entry><link linkend="GstWebrtcEchoProbe">GstWebrtcEchoProbe</link></entry>
+</row>
+<row>
+<entry><link linkend="GstWebvttEnc">GstWebvttEnc</link></entry>
+<entry><link linkend="GstWildmidi">GstWildmidi</link></entry>
+<entry><link linkend="GstWrapperCameraBinSrc">GstWrapperCameraBinSrc</link></entry>
+</row>
+<row>
+<entry><link linkend="GstX265Enc">GstX265Enc</link></entry>
+<entry><link linkend="GstY4mDec">GstY4mDec</link></entry>
+<entry><link linkend="GstYadif">GstYadif</link></entry>
+</row>
+<row>
+<entry><link linkend="GstZBar">GstZBar</link></entry>
+<entry><link linkend="GstZebraStripe">GstZebraStripe</link></entry>
+<entry><link linkend="MpegTSBase">MpegTSBase</link></entry>
+</row>
+</tbody></tgroup></informaltable>

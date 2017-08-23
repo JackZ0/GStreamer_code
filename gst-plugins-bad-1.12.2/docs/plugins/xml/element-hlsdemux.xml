@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-hlsdemux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-hlsdemux.top_of_page" role="top_of_page">hlsdemux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>hlsdemux</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-hlsdemux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstHLSDemux--bitrate-switch-tolerance">bitrate-switch-tolerance</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstHLSDemux--fragments-cache">fragments-cache</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstHLSDemux--bitrate-limit">bitrate-limit</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstHLSDemux--connection-speed">connection-speed</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstHLSDemux"/><refsect1 id="gst-plugins-bad-plugins-hlsdemux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstHLSDemux-struct">GstHLSDemux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-hlsdemux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstAdaptiveDemux">GstAdaptiveDemux</link>
+                        <phrase role="lineart">╰──</phrase> GstHLSDemux
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-hlsdemux.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstHLSDemux implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-hlsdemux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>HTTP Live Streaming demuxer element.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 souphttpsrc location=http://devimages.apple.com/iphone/samples/bipbop/gear4/prog_index.m3u8 ! hlsdemux ! decodebin ! videoconvert ! videoscale ! autovideosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-hlsdemux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-hlsdemux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-hlsdemux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstHLSDemux-struct" role="struct">
+<title>struct GstHLSDemux</title>
+<indexterm zone="GstHLSDemux-struct"><primary>GstHLSDemux</primary></indexterm>
+<programlisting language="C">struct GstHLSDemux;</programlisting>
+<para>Opaque <link linkend="GstHLSDemux"><type>GstHLSDemux</type></link> data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-hlsdemux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstHLSDemux--bitrate-switch-tolerance" role="property"><title>The <literal>“bitrate-switch-tolerance”</literal> property</title>
+<indexterm zone="GstHLSDemux--bitrate-switch-tolerance"><primary>GstHLSDemux:bitrate-switch-tolerance</primary></indexterm>
+<programlisting>  “bitrate-switch-tolerance” <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Tolerance with respect of the fragment duration to switch to a different bitrate if the client is too slow/fast.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.4</para>
+</refsect2>
+<refsect2 id="GstHLSDemux--fragments-cache" role="property"><title>The <literal>“fragments-cache”</literal> property</title>
+<indexterm zone="GstHLSDemux--fragments-cache"><primary>GstHLSDemux:fragments-cache</primary></indexterm>
+<programlisting>  “fragments-cache”          <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Number of fragments needed to be cached to start playing (DEPRECATED: Has no effect since 1.3.1).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstHLSDemux--bitrate-limit" role="property"><title>The <literal>“bitrate-limit”</literal> property</title>
+<indexterm zone="GstHLSDemux--bitrate-limit"><primary>GstHLSDemux:bitrate-limit</primary></indexterm>
+<programlisting>  “bitrate-limit”            <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Limit of the available bitrate to use when switching to alternates.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.8</para>
+</refsect2>
+<refsect2 id="GstHLSDemux--connection-speed" role="property"><title>The <literal>“connection-speed”</literal> property</title>
+<indexterm zone="GstHLSDemux--connection-speed"><primary>GstHLSDemux:connection-speed</primary></indexterm>
+<programlisting>  “connection-speed”         <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Network connection speed in kbps (0 = unknown).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 4294967</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

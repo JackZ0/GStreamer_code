@@ -1,0 +1,107 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-bs2b">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-bs2b.top_of_page" role="top_of_page">bs2b</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>bs2b</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-bs2b.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstBs2b--fcut">fcut</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstBs2b--feed">feed</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstBs2b"/><refsect1 id="gst-plugins-bad-plugins-bs2b.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstBs2b-struct">GstBs2b</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bs2b.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstAudioFilter">GstAudioFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstBs2b
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bs2b.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstBs2b implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-bs2b.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Improve headphone listening of stereo audio records using the bs2b library.
+It does so by mixing the left and right channel in a way that simulates
+a stereo speaker setup while using headphones.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 audiotestsrc ! "audio/x-raw,channel-mask=(bitmask)0x1" ! interleave name=i ! bs2b ! autoaudiosink audiotestsrc freq=330 ! "audio/x-raw,channel-mask=(bitmask)0x2" ! i.
+]]></programlisting></informalexample>
+<para> Play two independent sine test sources and crossfeed them.</para>
+</refsect3>
+
+<include href="element-bs2b-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bs2b.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bs2b.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstBs2b-struct" role="struct">
+<title>struct GstBs2b</title>
+<indexterm zone="GstBs2b-struct"><primary>GstBs2b</primary></indexterm>
+<programlisting language="C">struct GstBs2b;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bs2b.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstBs2b--fcut" role="property"><title>The <literal>“fcut”</literal> property</title>
+<indexterm zone="GstBs2b--fcut"><primary>GstBs2b:fcut</primary></indexterm>
+<programlisting>  “fcut”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Low-pass filter cut frequency (Hz).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [300,2000]</para>
+<para>Default value: 700</para>
+</refsect2>
+<refsect2 id="GstBs2b--feed" role="property"><title>The <literal>“feed”</literal> property</title>
+<indexterm zone="GstBs2b--feed"><primary>GstBs2b:feed</primary></indexterm>
+<programlisting>  “feed”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Feed Level (dB/10).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [10,150]</para>
+<para>Default value: 45</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

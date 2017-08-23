@@ -1,0 +1,113 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-webpenc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-webpenc.top_of_page" role="top_of_page">webpenc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>webpenc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-webpenc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebpEnc--lossless">lossless</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstWebpEncPreset"><type>GstWebpEncPreset</type></link></entry><entry role="property_name"><link linkend="GstWebpEnc--preset">preset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstWebpEnc--quality">quality</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstWebpEnc--speed">speed</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstWebpEnc"/><refsect1 id="gst-plugins-bad-plugins-webpenc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstWebpEnc-struct">GstWebpEnc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpenc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstVideoEncoder">GstVideoEncoder</link>
+                    <phrase role="lineart">╰──</phrase> GstWebpEnc
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpenc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstWebpEnc implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-webpenc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-webpenc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpenc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpenc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstWebpEnc-struct" role="struct">
+<title>struct GstWebpEnc</title>
+<indexterm zone="GstWebpEnc-struct"><primary>GstWebpEnc</primary></indexterm>
+<programlisting language="C">struct GstWebpEnc;</programlisting>
+<para>Opaque data structure.</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webpenc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstWebpEnc--lossless" role="property"><title>The <literal>“lossless”</literal> property</title>
+<indexterm zone="GstWebpEnc--lossless"><primary>GstWebpEnc:lossless</primary></indexterm>
+<programlisting>  “lossless”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable lossless encoding.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstWebpEnc--preset" role="property"><title>The <literal>“preset”</literal> property</title>
+<indexterm zone="GstWebpEnc--preset"><primary>GstWebpEnc:preset</primary></indexterm>
+<programlisting>  “preset”                   <link linkend="GstWebpEncPreset"><type>GstWebpEncPreset</type></link></programlisting>
+<para>Preset name for visual tuning.</para><para>Flags: Read / Write</para>
+<para>Default value: Outdoor photo, natural lighting</para>
+</refsect2>
+<refsect2 id="GstWebpEnc--quality" role="property"><title>The <literal>“quality”</literal> property</title>
+<indexterm zone="GstWebpEnc--quality"><primary>GstWebpEnc:quality</primary></indexterm>
+<programlisting>  “quality”                  <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>quality level, between 0 (smallest file) and 100 (biggest).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 90</para>
+</refsect2>
+<refsect2 id="GstWebpEnc--speed" role="property"><title>The <literal>“speed”</literal> property</title>
+<indexterm zone="GstWebpEnc--speed"><primary>GstWebpEnc:speed</primary></indexterm>
+<programlisting>  “speed”                    <link linkend="guint"><type>guint</type></link></programlisting>
+<para>quality/speed trade-off (0=fast, 6=slower-better).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &lt;= 6</para>
+<para>Default value: 4</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

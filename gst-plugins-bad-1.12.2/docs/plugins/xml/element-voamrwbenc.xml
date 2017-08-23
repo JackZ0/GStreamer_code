@@ -1,0 +1,103 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-voamrwbenc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-voamrwbenc.top_of_page" role="top_of_page">voamrwbenc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>voamrwbenc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstVoAmrWbEncBandMode"><type>GstVoAmrWbEncBandMode</type></link></entry><entry role="property_name"><link linkend="GstVoAmrWbEnc--band-mode">band-mode</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstVoAmrWbEnc"/><refsect1 id="gst-plugins-bad-plugins-voamrwbenc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVoAmrWbEnc-struct">GstVoAmrWbEnc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstAudioEncoder">GstAudioEncoder</link>
+                    <phrase role="lineart">╰──</phrase> GstVoAmrWbEnc
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstVoAmrWbEnc implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>AMR wideband encoder based on the</para>
+<ulink url="http://www.penguin.cz/~utx/amr">reference codec implementation</ulink>.
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch filesrc location=abc.wav ! wavparse ! audioresample ! audioconvert ! voamrwbenc ! filesink location=abc.amr
+]]></programlisting></informalexample>
+<para>
+Please note that the above stream misses the header, that is needed to play
+the stream.</para>
+</refsect3>
+
+<include href="element-voamrwbenc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstVoAmrWbEnc-struct" role="struct">
+<title>struct GstVoAmrWbEnc</title>
+<indexterm zone="GstVoAmrWbEnc-struct"><primary>GstVoAmrWbEnc</primary></indexterm>
+<programlisting language="C">struct GstVoAmrWbEnc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstVoAmrWbEnc--band-mode" role="property"><title>The <literal>“band-mode”</literal> property</title>
+<indexterm zone="GstVoAmrWbEnc--band-mode"><primary>GstVoAmrWbEnc:band-mode</primary></indexterm>
+<programlisting>  “band-mode”                <link linkend="GstVoAmrWbEncBandMode"><type>GstVoAmrWbEncBandMode</type></link></programlisting>
+<para>Encoding Band Mode (Kbps).</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: MR660</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-voamrwbenc.see-also">
+<title>See Also</title>
+<para><link linkend="GstAmrWbDec"><type>GstAmrWbDec</type></link>, <link linkend="GstAmrWbParse"><type>GstAmrWbParse</type></link></para>
+
+</refsect1>
+
+</refentry>

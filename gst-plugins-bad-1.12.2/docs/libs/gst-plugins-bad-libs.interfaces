@@ -1,0 +1,6 @@
+GstBin GstChildProxy
+GstPipeline GstChildProxy
+GstInsertBin GstChildProxy
+GstVideoAggregator GstChildProxy
+GstPlayerGMainContextSignalDispatcher GstPlayerSignalDispatcher
+GstPlayerVideoOverlayVideoRenderer GstPlayerVideoRenderer

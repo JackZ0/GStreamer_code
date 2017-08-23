@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<indexdiv id="api-index-1.6">
+<indexdiv><title>B</title>
+<indexentry><primaryie linkends="gst-buffer-add-gl-sync-meta"><link linkend="gst-buffer-add-gl-sync-meta">gst_buffer_add_gl_sync_meta</link>, function in <link linkend="gst-plugins-bad-libs-GstGLSyncMeta">GstGLSyncMeta</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="GstGLWindow-key-event"><link linkend="GstGLWindow-key-event">GstGLWindow::key-event</link>, object signal in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstGLWindow-mouse-event"><link linkend="GstGLWindow-mouse-event">GstGLWindow::mouse-event</link>, object signal in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-color-convert-set-caps"><link linkend="gst-gl-color-convert-set-caps">gst_gl_color_convert_set_caps</link>, function in <link linkend="GstGLColorConvert">GstGLColorConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-color-convert-transform-caps"><link linkend="gst-gl-color-convert-transform-caps">gst_gl_color_convert_transform_caps</link>, function in <link linkend="GstGLColorConvert">GstGLColorConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-can-share"><link linkend="gst-gl-context-can-share">gst_gl_context_can_share</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-destroy"><link linkend="gst-gl-context-destroy">gst_gl_context_destroy</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-fill-info"><link linkend="gst-gl-context-fill-info">gst_gl_context_fill_info</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-current"><link linkend="gst-gl-context-get-current">gst_gl_context_get_current</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-current-gl-api"><link linkend="gst-gl-context-get-current-gl-api">gst_gl_context_get_current_gl_api</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-current-gl-context"><link linkend="gst-gl-context-get-current-gl-context">gst_gl_context_get_current_gl_context</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-proc-address-with-platform"><link linkend="gst-gl-context-get-proc-address-with-platform">gst_gl_context_get_proc_address_with_platform</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-context-get-thread"><link linkend="gst-gl-context-get-thread">gst_gl_context_get_thread</link>, function in <link linkend="GstGLContext">GstGLContext</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-add-context"><link linkend="gst-gl-display-add-context">gst_gl_display_add_context</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-create-context"><link linkend="gst-gl-display-create-context">gst_gl_display_create_context</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-get-gl-context-for-thread"><link linkend="gst-gl-display-get-gl-context-for-thread">gst_gl_display_get_gl_context_for_thread</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-sync-meta-set-sync-point"><link linkend="gst-gl-sync-meta-set-sync-point">gst_gl_sync_meta_set_sync_point</link>, function in <link linkend="gst-plugins-bad-libs-GstGLSyncMeta">GstGLSyncMeta</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-sync-meta-wait"><link linkend="gst-gl-sync-meta-wait">gst_gl_sync_meta_wait</link>, function in <link linkend="gst-plugins-bad-libs-GstGLSyncMeta">GstGLSyncMeta</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-fixate-caps"><link linkend="gst-gl-view-convert-fixate-caps">gst_gl_view_convert_fixate_caps</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-get-output"><link linkend="gst-gl-view-convert-get-output">gst_gl_view_convert_get_output</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-new"><link linkend="gst-gl-view-convert-new">gst_gl_view_convert_new</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-perform"><link linkend="gst-gl-view-convert-perform">gst_gl_view_convert_perform</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-reset"><link linkend="gst-gl-view-convert-reset">gst_gl_view_convert_reset</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-set-caps"><link linkend="gst-gl-view-convert-set-caps">gst_gl_view_convert_set_caps</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-set-context"><link linkend="gst-gl-view-convert-set-context">gst_gl_view_convert_set_context</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-submit-input-buffer"><link linkend="gst-gl-view-convert-submit-input-buffer">gst_gl_view_convert_submit_input_buffer</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-view-convert-transform-caps"><link linkend="gst-gl-view-convert-transform-caps">gst_gl_view_convert_transform_caps</link>, function in <link linkend="GstGLViewConvert">GstGLViewConvert</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-get-surface-dimensions"><link linkend="gst-gl-window-get-surface-dimensions">gst_gl_window_get_surface_dimensions</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-set-preferred-size"><link linkend="gst-gl-window-set-preferred-size">gst_gl_window_set_preferred_size</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-window-show"><link linkend="gst-gl-window-show">gst_gl_window_show</link>, function in <link linkend="GstGLWindow">GstGLWindow</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>J</title>
+<indexentry><primaryie linkends="GstJpegEntropyCodingMode"><link linkend="GstJpegEntropyCodingMode">GstJpegEntropyCodingMode</link>, enum in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegFrameComponent"><link linkend="GstJpegFrameComponent">GstJpegFrameComponent</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegFrameHdr"><link linkend="GstJpegFrameHdr">GstJpegFrameHdr</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegHuffmanTable"><link linkend="GstJpegHuffmanTable">GstJpegHuffmanTable</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegHuffmanTables"><link linkend="GstJpegHuffmanTables">GstJpegHuffmanTables</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegProfile"><link linkend="GstJpegProfile">GstJpegProfile</link>, enum in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegQuantTable"><link linkend="GstJpegQuantTable">GstJpegQuantTable</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegScanComponent"><link linkend="GstJpegScanComponent">GstJpegScanComponent</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegScanHdr"><link linkend="GstJpegScanHdr">GstJpegScanHdr</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GstJpegSegment"><link linkend="GstJpegSegment">GstJpegSegment</link>, struct in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-jpeg-get-default-huffman-tables"><link linkend="gst-jpeg-get-default-huffman-tables">gst_jpeg_get_default_huffman_tables</link>, function in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-JPEG-MAX-FRAME-COMPONENTS:CAPS"><link linkend="GST-JPEG-MAX-FRAME-COMPONENTS:CAPS">GST_JPEG_MAX_FRAME_COMPONENTS</link>, macro in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-JPEG-MAX-QUANT-ELEMENTS:CAPS"><link linkend="GST-JPEG-MAX-QUANT-ELEMENTS:CAPS">GST_JPEG_MAX_QUANT_ELEMENTS</link>, macro in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="GST-JPEG-MAX-SCAN-COMPONENTS:CAPS"><link linkend="GST-JPEG-MAX-SCAN-COMPONENTS:CAPS">GST_JPEG_MAX_SCAN_COMPONENTS</link>, macro in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-jpeg-parse"><link linkend="gst-jpeg-parse">gst_jpeg_parse</link>, function in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-jpeg-segment-parse-frame-header"><link linkend="gst-jpeg-segment-parse-frame-header">gst_jpeg_segment_parse_frame_header</link>, function in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-jpeg-segment-parse-huffman-table"><link linkend="gst-jpeg-segment-parse-huffman-table">gst_jpeg_segment_parse_huffman_table</link>, function in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-jpeg-segment-parse-quantization-table"><link linkend="gst-jpeg-segment-parse-quantization-table">gst_jpeg_segment_parse_quantization_table</link>, function in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-jpeg-segment-parse-restart-interval"><link linkend="gst-jpeg-segment-parse-restart-interval">gst_jpeg_segment_parse_restart_interval</link>, function in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-jpeg-segment-parse-scan-header"><link linkend="gst-jpeg-segment-parse-scan-header">gst_jpeg_segment_parse_scan_header</link>, function in <link linkend="gst-plugins-bad-libs-jpegparser">jpegparser</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

@@ -30,7 +30,7 @@
 <div class="refnamediv"><table width="100%"><tr>
 <td valign="top">
 <h2><span class="refentrytitle"><a name="gst-plugins-bad-libs-GstInsertbin.top_of_page"></a>GstInsertbin</span></h2>
-<p>GstInsertbin — A <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBin.html#GstBin-struct"><span class="type">GstBin</span></a> to insertally link filter-like elements.</p>
+<p>GstInsertbin — A <a href="../gstreamer-1.0/GstBin.html#GstBin-struct"><span class="type">GstBin</span></a> to insertally link filter-like elements.</p>
 </td>
 <td class="gallery_image" valign="top" align="right"></td>
 </tr></table></div>
@@ -52,7 +52,7 @@
 </tr>
 <tr>
 <td class="function_type">
-<a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="returnvalue">GstElement</span></a> *
+<a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="returnvalue">GstElement</span></a> *
 </td>
 <td class="function_name">
 <a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#gst-insert-bin-new" title="gst_insert_bin_new ()">gst_insert_bin_new</a> <span class="c_punctuation">()</span>
@@ -161,9 +161,9 @@
 <a name="gst-plugins-bad-libs-GstInsertbin.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBin.html#GstBin-struct">GstBin</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstBin.html#GstBin-struct">GstBin</a>
                     <span class="lineart">╰──</span> GstInsertBin
 </pre>
 </div>
@@ -171,11 +171,11 @@
 <a name="gst-plugins-bad-libs-GstInsertbin.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
 <p>
 GstInsertBin implements
- <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
+ <a href="../gstreamer-1.0/GstChildProxy.html#GstChildProxy-struct">GstChildProxy</a>.</p>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-libs-GstInsertbin.description"></a><h2>Description</h2>
-<p>This element is a <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBin.html#GstBin-struct"><span class="type">GstBin</span></a> that has a single source and sink pad. It allows
+<p>This element is a <a href="../gstreamer-1.0/GstBin.html#GstBin-struct"><span class="type">GstBin</span></a> that has a single source and sink pad. It allows
 the user (the application) to easily add and remove filter-like element
 (that has a single source and sink pad), to the pipeline while it is running.
 It features a fully asynchronous API inspired by GLib's GAsyncResult based
@@ -192,7 +192,7 @@ this callback <a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstIn
 <a name="GstInsertBinCallback"></a><h3>GstInsertBinCallback ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 <span class="c_punctuation">(</span>*GstInsertBinCallback<span class="c_punctuation">)</span> (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *insertbin</code></em>,
-                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                         <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="type">gboolean</span></a> success</code></em>,
                          <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>This is the prototype of callbacks to be called when the operation completes.
@@ -214,7 +214,7 @@ operation is requested.</p>
 </tr>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>The <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> on which the operation was performed</p></td>
+<td class="parameter_description"><p>The <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> on which the operation was performed</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -234,7 +234,7 @@ operation is requested.</p>
 <hr>
 <div class="refsect2">
 <a name="gst-insert-bin-new"></a><h3>gst_insert_bin_new ()</h3>
-<pre class="programlisting"><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="returnvalue">GstElement</span></a> *
+<pre class="programlisting"><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="returnvalue">GstElement</span></a> *
 gst_insert_bin_new (<em class="parameter"><code>const <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gchar"><span class="type">gchar</span></a> *name</code></em>);</pre>
 <p>Creates a new <a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a></p>
 <div class="refsect3">
@@ -263,7 +263,7 @@ gst_insert_bin_new (<em class="parameter"><code>const <a href="/usr/share/gtk-do
 <a name="gst-insert-bin-append"></a><h3>gst_insert_bin_append ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gst_insert_bin_append (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *self</code></em>,
-                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                       <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
                        <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBinCallback" title="GstInsertBinCallback ()"><span class="type">GstInsertBinCallback</span></a> callback</code></em>,
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>This action signal adds the filter like element after any other element
@@ -280,7 +280,7 @@ in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -304,7 +304,7 @@ added or not, or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#
 <a name="gst-insert-bin-prepend"></a><h3>gst_insert_bin_prepend ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gst_insert_bin_prepend (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *self</code></em>,
-                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                        <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
                         <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBinCallback" title="GstInsertBinCallback ()"><span class="type">GstInsertBinCallback</span></a> callback</code></em>,
                         <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>This action signal adds the filter like element before any other element
@@ -321,7 +321,7 @@ in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -345,8 +345,8 @@ added or not, or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#
 <a name="gst-insert-bin-insert-after"></a><h3>gst_insert_bin_insert_after ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gst_insert_bin_insert_after (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *self</code></em>,
-                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
-                             <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *sibling</code></em>,
+                             <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                             <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *sibling</code></em>,
                              <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBinCallback" title="GstInsertBinCallback ()"><span class="type">GstInsertBinCallback</span></a> callback</code></em>,
                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>This action signal adds the filter like element after the <em class="parameter"><code>sibling</code></em>
@@ -364,12 +364,12 @@ element in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sibling</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
 after</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
@@ -394,8 +394,8 @@ added or not, or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#
 <a name="gst-insert-bin-insert-before"></a><h3>gst_insert_bin_insert_before ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gst_insert_bin_insert_before (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *self</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *sibling</code></em>,
+                              <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                              <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *sibling</code></em>,
                               <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBinCallback" title="GstInsertBinCallback ()"><span class="type">GstInsertBinCallback</span></a> callback</code></em>,
                               <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>This action signal adds the filter like element before the <em class="parameter"><code>sibling</code></em>
@@ -413,12 +413,12 @@ element in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sibling</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
 before</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
@@ -443,7 +443,7 @@ added or not, or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#
 <a name="gst-insert-bin-remove"></a><h3>gst_insert_bin_remove ()</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 gst_insert_bin_remove (<em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *self</code></em>,
-                       <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
+                       <em class="parameter"><code><a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> *element</code></em>,
                        <em class="parameter"><code><a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBinCallback" title="GstInsertBinCallback ()"><span class="type">GstInsertBinCallback</span></a> callback</code></em>,
                        <em class="parameter"><code><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a> user_data</code></em>);</pre>
 <p>This action signal removed the filter like element from the bin.</p>
@@ -459,7 +459,7 @@ gst_insert_bin_remove (<em class="parameter"><code><a class="link" href="gst-plu
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to remove</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to remove</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -502,7 +502,7 @@ removed or not, or <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.htm
 <a name="GstInsertBin-append"></a><h3>The <code class="literal">“append”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *element,
-               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
+               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data2,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
@@ -520,7 +520,7 @@ in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -554,8 +554,8 @@ in the bin.</p>
 <a name="GstInsertBin-insert-after"></a><h3>The <code class="literal">“insert-after”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *element,
-               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *sibling,
-               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
+               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *sibling,
+               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data2,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
@@ -575,12 +575,12 @@ element in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sibling</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
 after</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
@@ -615,8 +615,8 @@ after</p></td>
 <a name="GstInsertBin-insert-before"></a><h3>The <code class="literal">“insert-before”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *element,
-               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *sibling,
-               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
+               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *sibling,
+               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data2,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
@@ -635,12 +635,12 @@ element in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
 <td class="parameter_name"><p>sibling</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add <em class="parameter"><code>element</code></em>
 before</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
@@ -675,7 +675,7 @@ before</p></td>
 <a name="GstInsertBin-prepend"></a><h3>The <code class="literal">“prepend”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *element,
-               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
+               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data2,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
@@ -693,7 +693,7 @@ in the bin.</p>
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to add</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>
@@ -727,7 +727,7 @@ in the bin.</p>
 <a name="GstInsertBin-remove"></a><h3>The <code class="literal">“remove”</code> signal</h3>
 <pre class="programlisting"><span class="returnvalue">void</span>
 user_function (<a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstInsertBin"><span class="type">GstInsertBin</span></a> *element,
-               <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
+               <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a>   *callback,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data2,
                <a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gpointer"><span class="type">gpointer</span></a>      user_data)</pre>
@@ -744,7 +744,7 @@ user_function (<a class="link" href="gst-plugins-bad-libs-GstInsertbin.html#GstI
 <tbody>
 <tr>
 <td class="parameter_name"><p>element</p></td>
-<td class="parameter_description"><p>the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to remove</p></td>
+<td class="parameter_description"><p>the <a href="../gstreamer-1.0/GstElement.html#GstElement-struct"><span class="type">GstElement</span></a> to remove</p></td>
 <td class="parameter_annotations"> </td>
 </tr>
 <tr>

@@ -1,0 +1,141 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-dtlsdec">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-dtlsdec.top_of_page" role="top_of_page">dtlsdec</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dtlsdec</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDtlsDec--connection-id">connection-id</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstCaps"><type>GstCaps</type></link> *</entry><entry role="property_name"><link linkend="GstDtlsDec--decoder-key">decoder-key</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDtlsDec--peer-pem">peer-pem</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDtlsDec--pem">pem</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDtlsDec--srtp-auth">srtp-auth</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDtlsDec--srtp-cipher">srtp-cipher</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstDtlsDec-on-key-received">on-key-received</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDtlsDec"/><refsect1 id="gst-plugins-bad-plugins-dtlsdec.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDtlsDec-struct">GstDtlsDec</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstDtlsDec
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-dtlsdec-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDtlsDec-struct" role="struct">
+<title>struct GstDtlsDec</title>
+<indexterm zone="GstDtlsDec-struct"><primary>GstDtlsDec</primary></indexterm>
+<programlisting language="C">struct GstDtlsDec;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDtlsDec--connection-id" role="property"><title>The <literal>“connection-id”</literal> property</title>
+<indexterm zone="GstDtlsDec--connection-id"><primary>GstDtlsDec:connection-id</primary></indexterm>
+<programlisting>  “connection-id”            <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Every encoder/decoder pair should have the same, unique, connection-id.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstDtlsDec--decoder-key" role="property"><title>The <literal>“decoder-key”</literal> property</title>
+<indexterm zone="GstDtlsDec--decoder-key"><primary>GstDtlsDec:decoder-key</primary></indexterm>
+<programlisting>  “decoder-key”              <link linkend="GstCaps"><type>GstCaps</type></link> *</programlisting>
+<para>SRTP key that should be used by the decoder.</para><para>Flags: Read</para>
+</refsect2>
+<refsect2 id="GstDtlsDec--peer-pem" role="property"><title>The <literal>“peer-pem”</literal> property</title>
+<indexterm zone="GstDtlsDec--peer-pem"><primary>GstDtlsDec:peer-pem</primary></indexterm>
+<programlisting>  “peer-pem”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The X509 certificate received in the DTLS handshake, in PEM format.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstDtlsDec--pem" role="property"><title>The <literal>“pem”</literal> property</title>
+<indexterm zone="GstDtlsDec--pem"><primary>GstDtlsDec:pem</primary></indexterm>
+<programlisting>  “pem”                      <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>A string containing a X509 certificate and RSA private key in PEM format.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstDtlsDec--srtp-auth" role="property"><title>The <literal>“srtp-auth”</literal> property</title>
+<indexterm zone="GstDtlsDec--srtp-auth"><primary>GstDtlsDec:srtp-auth</primary></indexterm>
+<programlisting>  “srtp-auth”                <link linkend="guint"><type>guint</type></link></programlisting>
+<para>The SRTP authentication selected in the DTLS handshake. The value will be set to an GstDtlsSrtpAuth.</para><para>Flags: Read</para>
+<para>Allowed values: &lt;= 2</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDtlsDec--srtp-cipher" role="property"><title>The <literal>“srtp-cipher”</literal> property</title>
+<indexterm zone="GstDtlsDec--srtp-cipher"><primary>GstDtlsDec:srtp-cipher</primary></indexterm>
+<programlisting>  “srtp-cipher”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>The SRTP cipher selected in the DTLS handshake. The value will be set to an GstDtlsSrtpCipher.</para><para>Flags: Read</para>
+<para>Allowed values: &lt;= 1</para>
+<para>Default value: 0</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dtlsdec.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstDtlsDec-on-key-received" role="signal"><title>The <literal>“on-key-received”</literal> signal</title>
+<indexterm zone="GstDtlsDec-on-key-received"><primary>GstDtlsDec::on-key-received</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstDtlsDec"><type>GstDtlsDec</type></link> *gstdtlsdec,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

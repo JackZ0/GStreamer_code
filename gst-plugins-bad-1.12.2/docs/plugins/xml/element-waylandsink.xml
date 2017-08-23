@@ -1,0 +1,105 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-waylandsink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-waylandsink.top_of_page" role="top_of_page">waylandsink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>waylandsink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-waylandsink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstWaylandSink--wayland-display">wayland-display</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstWaylandSink--display">display</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstWaylandSink"/><refsect1 id="gst-plugins-bad-plugins-waylandsink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstWaylandSink-struct">GstWaylandSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waylandsink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoSink">GstVideoSink</link>
+                        <phrase role="lineart">╰──</phrase> GstWaylandSink
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waylandsink.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstWaylandSink implements
+ <link linkend="GstVideoOverlay">GstVideoOverlay</link> and  <link linkend="GstWaylandVideo">GstWaylandVideo</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-waylandsink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The waylandsink is creating its own window and render the decoded video frames to that.
+ Setup the Wayland environment as described in</para>
+<ulink url="http://wayland.freedesktop.org/building.html">Wayland</ulink> home page.
+<para> The current implementaion is based on weston compositor.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! waylandsink
+]]></programlisting></informalexample>
+<para> test the video rendering in wayland</para>
+</refsect3>
+
+<include href="element-waylandsink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waylandsink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waylandsink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstWaylandSink-struct" role="struct">
+<title>struct GstWaylandSink</title>
+<indexterm zone="GstWaylandSink-struct"><primary>GstWaylandSink</primary></indexterm>
+<programlisting language="C">struct GstWaylandSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-waylandsink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstWaylandSink--wayland-display" role="property"><title>The <literal>“wayland-display”</literal> property</title>
+<indexterm zone="GstWaylandSink--wayland-display"><primary>GstWaylandSink:wayland-display</primary></indexterm>
+<programlisting>  “wayland-display”          <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Wayland  Display handle created by the application .</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstWaylandSink--display" role="property"><title>The <literal>“display”</literal> property</title>
+<indexterm zone="GstWaylandSink--display"><primary>GstWaylandSink:display</primary></indexterm>
+<programlisting>  “display”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Wayland display name to connect to, if not supplied via the GstContext.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

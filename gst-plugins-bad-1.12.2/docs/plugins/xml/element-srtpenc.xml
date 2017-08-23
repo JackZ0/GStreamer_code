@@ -1,0 +1,243 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-srtpenc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-srtpenc.top_of_page" role="top_of_page">srtpenc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>srtpenc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstBuffer"><type>GstBuffer</type></link> *</entry><entry role="property_name"><link linkend="GstSrtpEnc--key">key</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSrtpEnc--random-key">random-key</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstSrtpAuthType"><type>GstSrtpAuthType</type></link></entry><entry role="property_name"><link linkend="GstSrtpEnc--rtcp-auth">rtcp-auth</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstSrtpCipherType"><type>GstSrtpCipherType</type></link></entry><entry role="property_name"><link linkend="GstSrtpEnc--rtcp-cipher">rtcp-cipher</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstSrtpAuthType"><type>GstSrtpAuthType</type></link></entry><entry role="property_name"><link linkend="GstSrtpEnc--rtp-auth">rtp-auth</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstSrtpCipherType"><type>GstSrtpCipherType</type></link></entry><entry role="property_name"><link linkend="GstSrtpEnc--rtp-cipher">rtp-cipher</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstSrtpEnc--replay-window-size">replay-window-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSrtpEnc--allow-repeat-tx">allow-repeat-tx</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstStructure"><type>GstStructure</type></link> *</entry><entry role="property_name"><link linkend="GstSrtpEnc--stats">stats</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstSrtpEnc-soft-limit">soft-limit</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="guint"><returnvalue>guint</returnvalue></link></entry><entry role="signal_name"><link linkend="GstSrtpEnc-get-rollover-counter">get-rollover-counter</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstSrtpEnc"/><refsect1 id="gst-plugins-bad-plugins-srtpenc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstSrtpEnc-struct">GstSrtpEnc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstSrtpEnc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>gstrtpenc acts as an encoder that adds security to RTP and RTCP
+packets in the form of encryption and authentication. It outs SRTP
+and SRTCP.</para>
+<para>An application can request multiple RTP and RTCP pads to protect,
+but every sink pad requested must receive packets from the same
+source (identical SSRC). If a packet received contains a different
+SSRC, a warning is emited and the valid SSRC is forced on the packet.</para>
+<para>This element uses libsrtp library. When receiving the first packet,
+the library is initialized with a new stream (based on the SSRC). It
+uses the default RTP and RTCP encryption and authentication mechanisms,
+unless the user has set the relevant properties first. It also uses
+a master key that MUST be set by property (key) at the beginning. The
+master key must be of a maximum length of 46 characters (14 characters
+for the salt plus the key). The encryption and authentication mecanisms
+available are :</para>
+<para>Encryption (properties rtp-cipher and rtcp-cipher)</para>
+<itemizedlist>
+<listitem><para>AES_ICM 256 bits (maximum security)</para></listitem>
+<listitem><para>AES_ICM 128 bits (default)</para></listitem>
+<listitem>
+<para>NULL</para>
+</listitem>
+</itemizedlist>
+<para>Authentication (properties rtp-auth and rtcp-auth)</para>
+<itemizedlist>
+<listitem><para>HMAC_SHA1 80 bits (default, maximum protection)</para></listitem>
+<listitem><para>HMAC_SHA1 32 bits</para></listitem>
+<listitem>
+<para>NULL</para>
+</listitem>
+</itemizedlist>
+<para>Note that for SRTP protection, authentication is mandatory (non-null)
+if encryption is used (non-null).</para>
+<para>When requested to create a sink pad, a linked source pad is created.
+Each packet received is first analysed (checked for valid SSRC) then
+its buffer is protected with libsrtp, then pushed on the source pad.
+If protection failed or the stream could not be created, the buffer
+is dropped and a warning is emitted. The packets pushed on the source
+pad are of type 'application/x-srtp' or 'application/x-srtcp'.</para>
+<para>When the maximum usage of the master key is reached, a soft-limit
+signal is sent to the user. The user must then set a new master key
+by property. If the hard limit is reached, a flag is set and every
+subsequent packet is dropped, until a new key is set and the stream
+has been updated.</para>
+<para>If a stream is to be shared between multiple clients it is also
+possible to request the internal SRTP rollover counter for a given
+SSRC. The rollover counter should be then transmitted and used by the
+clients to authenticate and decrypt the packets. Failing to do that
+the clients will start with a rollover counter of 0 which will
+probably be incorrect if the stream has been transmitted for a
+while to other clients.</para>
+
+<include href="element-srtpenc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstSrtpEnc-struct" role="struct">
+<title>struct GstSrtpEnc</title>
+<indexterm zone="GstSrtpEnc-struct"><primary>GstSrtpEnc</primary></indexterm>
+<programlisting language="C">struct GstSrtpEnc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstSrtpEnc--key" role="property"><title>The <literal>“key”</literal> property</title>
+<indexterm zone="GstSrtpEnc--key"><primary>GstSrtpEnc:key</primary></indexterm>
+<programlisting>  “key”                      <link linkend="GstBuffer"><type>GstBuffer</type></link> *</programlisting>
+<para>Master key (minimum of 30 and maximum of 46 bytes).</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--random-key" role="property"><title>The <literal>“random-key”</literal> property</title>
+<indexterm zone="GstSrtpEnc--random-key"><primary>GstSrtpEnc:random-key</primary></indexterm>
+<programlisting>  “random-key”               <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Generate a random key if TRUE.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--rtcp-auth" role="property"><title>The <literal>“rtcp-auth”</literal> property</title>
+<indexterm zone="GstSrtpEnc--rtcp-auth"><primary>GstSrtpEnc:rtcp-auth</primary></indexterm>
+<programlisting>  “rtcp-auth”                <link linkend="GstSrtpAuthType"><type>GstSrtpAuthType</type></link></programlisting>
+<para>RTCP Authentication.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_SRTP_AUTH_HMAC_SHA1_80</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--rtcp-cipher" role="property"><title>The <literal>“rtcp-cipher”</literal> property</title>
+<indexterm zone="GstSrtpEnc--rtcp-cipher"><primary>GstSrtpEnc:rtcp-cipher</primary></indexterm>
+<programlisting>  “rtcp-cipher”              <link linkend="GstSrtpCipherType"><type>GstSrtpCipherType</type></link></programlisting>
+<para>RTCP Cipher.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_SRTP_CIPHER_AES_128_ICM</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--rtp-auth" role="property"><title>The <literal>“rtp-auth”</literal> property</title>
+<indexterm zone="GstSrtpEnc--rtp-auth"><primary>GstSrtpEnc:rtp-auth</primary></indexterm>
+<programlisting>  “rtp-auth”                 <link linkend="GstSrtpAuthType"><type>GstSrtpAuthType</type></link></programlisting>
+<para>RTP Authentication.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_SRTP_AUTH_HMAC_SHA1_80</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--rtp-cipher" role="property"><title>The <literal>“rtp-cipher”</literal> property</title>
+<indexterm zone="GstSrtpEnc--rtp-cipher"><primary>GstSrtpEnc:rtp-cipher</primary></indexterm>
+<programlisting>  “rtp-cipher”               <link linkend="GstSrtpCipherType"><type>GstSrtpCipherType</type></link></programlisting>
+<para>RTP Cipher.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_SRTP_CIPHER_AES_128_ICM</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--replay-window-size" role="property"><title>The <literal>“replay-window-size”</literal> property</title>
+<indexterm zone="GstSrtpEnc--replay-window-size"><primary>GstSrtpEnc:replay-window-size</primary></indexterm>
+<programlisting>  “replay-window-size”       <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Size of the replay protection window.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [64,32768]</para>
+<para>Default value: 128</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--allow-repeat-tx" role="property"><title>The <literal>“allow-repeat-tx”</literal> property</title>
+<indexterm zone="GstSrtpEnc--allow-repeat-tx"><primary>GstSrtpEnc:allow-repeat-tx</primary></indexterm>
+<programlisting>  “allow-repeat-tx”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether retransmissions of packets with the same sequence number are allowed(Note that such repeated transmissions must have the same RTP payload, or a severe security weakness is introduced!).</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstSrtpEnc--stats" role="property"><title>The <literal>“stats”</literal> property</title>
+<indexterm zone="GstSrtpEnc--stats"><primary>GstSrtpEnc:stats</primary></indexterm>
+<programlisting>  “stats”                    <link linkend="GstStructure"><type>GstStructure</type></link> *</programlisting>
+<para>Various statistics.</para><para>Flags: Read</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstSrtpEnc-soft-limit" role="signal"><title>The <literal>“soft-limit”</literal> signal</title>
+<indexterm zone="GstSrtpEnc-soft-limit"><primary>GstSrtpEnc::soft-limit</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstSrtpEnc"><type>GstSrtpEnc</type></link> *gstsrtpenc,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Signal emited when the stream with <parameter>ssrc</parameter>
+ has reached the soft
+limit of utilisation of it's master encryption key. User should
+provide a new key by setting the <link linkend="GstSrtpEnc--key"><type>“key”</type></link> property.</para>
+<refsect3 id="GstSrtpEnc-soft-limit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstsrtpenc</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstSrtpEnc-get-rollover-counter" role="signal"><title>The <literal>“get-rollover-counter”</literal> signal</title>
+<indexterm zone="GstSrtpEnc-get-rollover-counter"><primary>GstSrtpEnc::get-rollover-counter</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+user_function (<link linkend="GstSrtpEnc"><type>GstSrtpEnc</type></link> *gstsrtpenc,
+               <link linkend="guint"><type>guint</type></link>       arg1,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpenc.see-also">
+<title>See Also</title>
+<para>srtpdec</para>
+
+</refsect1>
+
+</refentry>

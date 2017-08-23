@@ -1,0 +1,90 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-bz2enc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-bz2enc.top_of_page" role="top_of_page">bz2enc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>bz2enc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-bz2enc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstBz2enc--block-size">block-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstBz2enc--buffer-size">buffer-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstBz2enc"/><refsect1 id="gst-plugins-bad-plugins-bz2enc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstBz2enc-struct">GstBz2enc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bz2enc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstBz2enc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-bz2enc.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-bz2enc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bz2enc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bz2enc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstBz2enc-struct" role="struct">
+<title>GstBz2enc</title>
+<indexterm zone="GstBz2enc-struct"><primary>GstBz2enc</primary></indexterm>
+<programlisting language="C">typedef struct _GstBz2enc GstBz2enc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-bz2enc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstBz2enc--block-size" role="property"><title>The <literal>“block-size”</literal> property</title>
+<indexterm zone="GstBz2enc--block-size"><primary>GstBz2enc:block-size</primary></indexterm>
+<programlisting>  “block-size”               <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Block size.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,9]</para>
+<para>Default value: 6</para>
+</refsect2>
+<refsect2 id="GstBz2enc--buffer-size" role="property"><title>The <literal>“buffer-size”</literal> property</title>
+<indexterm zone="GstBz2enc--buffer-size"><primary>GstBz2enc:buffer-size</primary></indexterm>
+<programlisting>  “buffer-size”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Buffer size.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 1024</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

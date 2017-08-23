@@ -1,0 +1,172 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-modplug">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-modplug.top_of_page" role="top_of_page">modplug</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>modplug</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-modplug.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstModPlug--megabass">megabass</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstModPlug--megabass-amount">megabass-amount</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstModPlug--megabass-range">megabass-range</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstModPlug--noise-reduction">noise-reduction</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstModPlug--oversamp">oversamp</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstModPlug--reverb">reverb</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstModPlug--reverb-delay">reverb-delay</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstModPlug--reverb-depth">reverb-depth</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstModPlug--songname">songname</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstModPlug--surround">surround</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstModPlug--surround-delay">surround-delay</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstModPlug--surround-depth">surround-depth</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstModPlug"/><refsect1 id="gst-plugins-bad-plugins-modplug.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstModPlug-struct">GstModPlug</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-modplug.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstModPlug
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-modplug.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Modplug uses the <ulink url="http://modplug-xmms.sourceforge.net/">modplug</ulink>
+library to decode tracked music in the MOD/S3M/XM/IT and related formats.</para>
+<refsect2>
+<title>Example pipeline</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=1990s-nostalgia.xm ! modplug ! audioconvert ! alsasink
+]]></programlisting></informalexample> Play a FastTracker xm file.
+</refsect2>
+
+<include href="element-modplug-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-modplug.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-modplug.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstModPlug-struct" role="struct">
+<title>GstModPlug</title>
+<indexterm zone="GstModPlug-struct"><primary>GstModPlug</primary></indexterm>
+<programlisting language="C">typedef struct _GstModPlug GstModPlug;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-modplug.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstModPlug--megabass" role="property"><title>The <literal>“megabass”</literal> property</title>
+<indexterm zone="GstModPlug--megabass"><primary>GstModPlug:megabass</primary></indexterm>
+<programlisting>  “megabass”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Megabass.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstModPlug--megabass-amount" role="property"><title>The <literal>“megabass-amount”</literal> property</title>
+<indexterm zone="GstModPlug--megabass-amount"><primary>GstModPlug:megabass-amount</primary></indexterm>
+<programlisting>  “megabass-amount”          <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Megabass amount.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 40</para>
+</refsect2>
+<refsect2 id="GstModPlug--megabass-range" role="property"><title>The <literal>“megabass-range”</literal> property</title>
+<indexterm zone="GstModPlug--megabass-range"><primary>GstModPlug:megabass-range</primary></indexterm>
+<programlisting>  “megabass-range”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Megabass range.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 30</para>
+</refsect2>
+<refsect2 id="GstModPlug--noise-reduction" role="property"><title>The <literal>“noise-reduction”</literal> property</title>
+<indexterm zone="GstModPlug--noise-reduction"><primary>GstModPlug:noise-reduction</primary></indexterm>
+<programlisting>  “noise-reduction”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>noise reduction.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstModPlug--oversamp" role="property"><title>The <literal>“oversamp”</literal> property</title>
+<indexterm zone="GstModPlug--oversamp"><primary>GstModPlug:oversamp</primary></indexterm>
+<programlisting>  “oversamp”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>oversamp.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstModPlug--reverb" role="property"><title>The <literal>“reverb”</literal> property</title>
+<indexterm zone="GstModPlug--reverb"><primary>GstModPlug:reverb</primary></indexterm>
+<programlisting>  “reverb”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Reverb.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstModPlug--reverb-delay" role="property"><title>The <literal>“reverb-delay”</literal> property</title>
+<indexterm zone="GstModPlug--reverb-delay"><primary>GstModPlug:reverb-delay</primary></indexterm>
+<programlisting>  “reverb-delay”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Reverb delay.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,200]</para>
+<para>Default value: 100</para>
+</refsect2>
+<refsect2 id="GstModPlug--reverb-depth" role="property"><title>The <literal>“reverb-depth”</literal> property</title>
+<indexterm zone="GstModPlug--reverb-depth"><primary>GstModPlug:reverb-depth</primary></indexterm>
+<programlisting>  “reverb-depth”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Reverb depth.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 30</para>
+</refsect2>
+<refsect2 id="GstModPlug--songname" role="property"><title>The <literal>“songname”</literal> property</title>
+<indexterm zone="GstModPlug--songname"><primary>GstModPlug:songname</primary></indexterm>
+<programlisting>  “songname”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The song name.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstModPlug--surround" role="property"><title>The <literal>“surround”</literal> property</title>
+<indexterm zone="GstModPlug--surround"><primary>GstModPlug:surround</primary></indexterm>
+<programlisting>  “surround”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Surround.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstModPlug--surround-delay" role="property"><title>The <literal>“surround-delay”</literal> property</title>
+<indexterm zone="GstModPlug--surround-delay"><primary>GstModPlug:surround-delay</primary></indexterm>
+<programlisting>  “surround-delay”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Surround delay.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,40]</para>
+<para>Default value: 20</para>
+</refsect2>
+<refsect2 id="GstModPlug--surround-depth" role="property"><title>The <literal>“surround-depth”</literal> property</title>
+<indexterm zone="GstModPlug--surround-depth"><primary>GstModPlug:surround-depth</primary></indexterm>
+<programlisting>  “surround-depth”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Surround depth.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,100]</para>
+<para>Default value: 20</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

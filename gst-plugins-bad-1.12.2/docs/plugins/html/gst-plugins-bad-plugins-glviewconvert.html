@@ -43,27 +43,27 @@
 </colgroup>
 <tbody>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLViewConvert.html#GstGLStereoDownmix"><span class="type">GstGLStereoDownmix</span></a></td>
+<td class="property_type"><span class="type">GstGLStereoDownmix</span></td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-glviewconvert.html#GstGLViewConvertElement--downmix-mode" title="The “downmix-mode” property">downmix-mode</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></td>
+<td class="property_type"><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-glviewconvert.html#GstGLViewConvertElement--input-flags-override" title="The “input-flags-override” property">input-flags-override</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFramePacking"><span class="type">GstVideoMultiviewFramePacking</span></a></td>
+<td class="property_type"><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFramePacking"><span class="type">GstVideoMultiviewFramePacking</span></a></td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-glviewconvert.html#GstGLViewConvertElement--input-mode-override" title="The “input-mode-override” property">input-mode-override</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></td>
+<td class="property_type"><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-glviewconvert.html#GstGLViewConvertElement--output-flags-override" title="The “output-flags-override” property">output-flags-override</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
 <tr>
-<td class="property_type"><a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewMode"><span class="type">GstVideoMultiviewMode</span></a></td>
+<td class="property_type"><a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewMode"><span class="type">GstVideoMultiviewMode</span></a></td>
 <td class="property_name"><a class="link" href="gst-plugins-bad-plugins-glviewconvert.html#GstGLViewConvertElement--output-mode-override" title="The “output-mode-override” property">output-mode-override</a></td>
 <td class="property_flags">Read / Write</td>
 </tr>
@@ -87,11 +87,11 @@
 <a name="gst-plugins-bad-plugins-glviewconvert.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLBaseFilter.html#GstGLBaseFilter-struct">GstGLBaseFilter</a>
-                        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLFilter.html#GstGLFilter-struct">GstGLFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> GstGLBaseFilter
+                        <span class="lineart">╰──</span> GstGLFilter
                             <span class="lineart">╰──</span> GstGLViewConvertElement
 </pre>
 </div>
@@ -102,31 +102,14 @@
 input and output formats to process.</p>
 <div class="refsect3">
 <a name="id-1.2.86.7.4"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc <span class="gtkdoc opt">!</span> glupload <span class="gtkdoc opt">!</span> glviewconvert <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc ! glupload ! glviewconvert ! glimagesink
+</pre></div>
 <p> Simple placebo example demonstrating identity passthrough of mono video</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc pattern<span class="gtkdoc opt">=</span>checkers<span class="gtkdoc opt">-</span><span class="number">1</span> <span class="gtkdoc opt">!</span> glupload <span class="gtkdoc opt">!</span> \
-    glviewconvert input<span class="gtkdoc opt">-</span>mode<span class="gtkdoc opt">-</span>override<span class="gtkdoc opt">=</span>side<span class="gtkdoc opt">-</span>by<span class="gtkdoc opt">-</span>side <span class="gtkdoc opt">!</span> glimagesink <span class="gtkdoc opt">-</span>v</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc pattern=checkers-1 ! glupload ! \
+    glviewconvert input-mode-override=side-by-side ! glimagesink -v
+</pre></div>
 <p> Force re-interpretation of the input checkers pattern as a side-by-side stereoscopic
    image and display in glimagesink.
 FBO (Frame Buffer Object) and GLSL (OpenGL Shading Language) are required.</p>
@@ -236,7 +219,7 @@ Matthew Waters &lt;matthew@centricular.com&gt;</td>
 <a name="gst-plugins-bad-plugins-glviewconvert.property-details"></a><h2>Property Details</h2>
 <div class="refsect2">
 <a name="GstGLViewConvertElement--downmix-mode"></a><h3>The <code class="literal">“downmix-mode”</code> property</h3>
-<pre class="programlisting">  “downmix-mode”             <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLViewConvert.html#GstGLStereoDownmix"><span class="type">GstGLStereoDownmix</span></a></pre>
+<pre class="programlisting">  “downmix-mode”             <span class="type">GstGLStereoDownmix</span></pre>
 <p>Output anaglyph type to generate when downmixing to mono.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: Dubois optimised Green-Magenta anaglyph</p>
@@ -244,14 +227,14 @@ Matthew Waters &lt;matthew@centricular.com&gt;</td>
 <hr>
 <div class="refsect2">
 <a name="GstGLViewConvertElement--input-flags-override"></a><h3>The <code class="literal">“input-flags-override”</code> property</h3>
-<pre class="programlisting">  “input-flags-override”     <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></pre>
+<pre class="programlisting">  “input-flags-override”     <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></pre>
 <p>Override any input information about multiview layout flags.</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="GstGLViewConvertElement--input-mode-override"></a><h3>The <code class="literal">“input-mode-override”</code> property</h3>
-<pre class="programlisting">  “input-mode-override”      <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFramePacking"><span class="type">GstVideoMultiviewFramePacking</span></a></pre>
+<pre class="programlisting">  “input-mode-override”      <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFramePacking"><span class="type">GstVideoMultiviewFramePacking</span></a></pre>
 <p>Override any input information about multiview layout.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: GST_VIDEO_MULTIVIEW_FRAME_PACKING_NONE</p>
@@ -259,14 +242,14 @@ Matthew Waters &lt;matthew@centricular.com&gt;</td>
 <hr>
 <div class="refsect2">
 <a name="GstGLViewConvertElement--output-flags-override"></a><h3>The <code class="literal">“output-flags-override”</code> property</h3>
-<pre class="programlisting">  “output-flags-override”    <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></pre>
+<pre class="programlisting">  “output-flags-override”    <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewFlags"><span class="type">GstVideoMultiviewFlags</span></a></pre>
 <p>Override automatic negotiation for output multiview layout flags.</p>
 <p>Flags: Read / Write</p>
 </div>
 <hr>
 <div class="refsect2">
 <a name="GstGLViewConvertElement--output-mode-override"></a><h3>The <code class="literal">“output-mode-override”</code> property</h3>
-<pre class="programlisting">  “output-mode-override”     <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewMode"><span class="type">GstVideoMultiviewMode</span></a></pre>
+<pre class="programlisting">  “output-mode-override”     <a href="../gst-plugins-base-libs-1.0/gst-plugins-base-libs-GstVideoAlignment.html#GstVideoMultiviewMode"><span class="type">GstVideoMultiviewMode</span></a></pre>
 <p>Override automatic output mode selection for multiview layout.</p>
 <p>Flags: Read / Write</p>
 <p>Default value: GST_VIDEO_MULTIVIEW_MODE_NONE</p>

@@ -1,0 +1,101 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-assrender">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-assrender.top_of_page" role="top_of_page">assrender</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>assrender</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-assrender.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAssRender--embeddedfonts">embeddedfonts</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAssRender--enable">enable</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstAssRender--wait-text">wait-text</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstAssRender"/><refsect1 id="gst-plugins-bad-plugins-assrender.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstAssRender-struct">GstAssRender</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-assrender.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstAssRender
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-assrender.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Renders timestamped SSA/ASS subtitles on top of a video stream.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=/path/to/mkv ! matroskademux name=d ! queue ! mpegaudioparse ! mpg123audiodec ! audioconvert ! autoaudiosink  d. ! queue ! h264parse ! avdec_h264 ! videoconvert ! r.   d. ! queue ! "application/x-ass" ! assrender name=r ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> This pipeline demuxes a Matroska file with h.264 video, MP3 audio and embedded ASS subtitles and renders the subtitles on top of the video.</para>
+</refsect3>
+
+<include href="element-assrender-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-assrender.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-assrender.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstAssRender-struct" role="struct">
+<title>struct GstAssRender</title>
+<indexterm zone="GstAssRender-struct"><primary>GstAssRender</primary></indexterm>
+<programlisting language="C">struct GstAssRender;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-assrender.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstAssRender--embeddedfonts" role="property"><title>The <literal>“embeddedfonts”</literal> property</title>
+<indexterm zone="GstAssRender--embeddedfonts"><primary>GstAssRender:embeddedfonts</primary></indexterm>
+<programlisting>  “embeddedfonts”            <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Extract and use fonts embedded in the stream.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstAssRender--enable" role="property"><title>The <literal>“enable”</literal> property</title>
+<indexterm zone="GstAssRender--enable"><primary>GstAssRender:enable</primary></indexterm>
+<programlisting>  “enable”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable rendering of subtitles.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstAssRender--wait-text" role="property"><title>The <literal>“wait-text”</literal> property</title>
+<indexterm zone="GstAssRender--wait-text"><primary>GstAssRender:wait-text</primary></indexterm>
+<programlisting>  “wait-text”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether to wait for subtitles.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

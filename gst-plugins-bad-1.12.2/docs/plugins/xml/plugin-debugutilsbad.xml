@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-debugutilsbad">
+  <refmeta>
+    <refentrytitle>debugutilsbad</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>debugutilsbad</refname>
+    <refpurpose><anchor id="plugin-debugutilsbad"/>Collection of elements that may or may not be useful for debugging</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstdebugutilsbad.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.12.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>LGPL</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-checksumsink">checksumsink</link></term><listitem><simpara>Calculates a checksum for buffers</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-chopmydata">chopmydata</link></term><listitem><simpara>FIXME</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-compare">compare</link></term><listitem><simpara>Compares incoming buffers</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-debugspy">debugspy</link></term><listitem><simpara>DebugSpy provides information on buffers with bus messages</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-errorignore">errorignore</link></term><listitem><simpara>Pass through all packets but ignore some GstFlowReturn types</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-fpsdisplaysink">fpsdisplaysink</link></term><listitem><simpara>Shows the current frame-rate and drop-rate of the videosink as overlay or text on stdout</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-watchdog">watchdog</link></term><listitem><simpara>Watches for pauses in stream buffers</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

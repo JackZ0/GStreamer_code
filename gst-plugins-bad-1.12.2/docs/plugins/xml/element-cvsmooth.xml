@@ -1,0 +1,155 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-cvsmooth">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-cvsmooth.top_of_page" role="top_of_page">cvsmooth</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>cvsmooth</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-cvsmooth.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--param1">param1</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--param2">param2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--param3">param3</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--param4">param4</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstCvSmoothTypeType"><type>GstCvSmoothTypeType</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--type">type</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--color">color</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--height">height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--spatial">spatial</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstCvSmooth--width">width</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstCvSmooth"/><refsect1 id="gst-plugins-bad-plugins-cvsmooth.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstCvSmooth-struct">GstCvSmooth</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsmooth.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstCvSmooth
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-cvsmooth.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Smooths the image using thes cvSmooth OpenCV function.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! cvsmooth ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-cvsmooth-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsmooth.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsmooth.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstCvSmooth-struct" role="struct">
+<title>struct GstCvSmooth</title>
+<indexterm zone="GstCvSmooth-struct"><primary>GstCvSmooth</primary></indexterm>
+<programlisting language="C">struct GstCvSmooth;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-cvsmooth.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstCvSmooth--param1" role="property"><title>The <literal>“param1”</literal> property</title>
+<indexterm zone="GstCvSmooth--param1"><primary>GstCvSmooth:param1</primary></indexterm>
+<programlisting>  “param1”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The aperture width (Must be positive and odd).Check cvSmooth OpenCV docs: http://opencv.willowgarage.com/documentation/image_filtering.html#cvSmooth.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--param2" role="property"><title>The <literal>“param2”</literal> property</title>
+<indexterm zone="GstCvSmooth--param2"><primary>GstCvSmooth:param2</primary></indexterm>
+<programlisting>  “param2”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The aperture height, if zero, the width is used.(Must be positive and odd or zero, unuset in median and bilateral types). Check cvSmooth OpenCV docs: http://opencv.willowgarage.com/documentation/image_filtering.html#cvSmooth.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--param3" role="property"><title>The <literal>“param3”</literal> property</title>
+<indexterm zone="GstCvSmooth--param3"><primary>GstCvSmooth:param3</primary></indexterm>
+<programlisting>  “param3”                   <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>If type is gaussian, this means the standard deviation.If type is bilateral, this means the color-sigma. If zero, Default values are used.Check cvSmooth OpenCV docs: http://opencv.willowgarage.com/documentation/image_filtering.html#cvSmooth.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--param4" role="property"><title>The <literal>“param4”</literal> property</title>
+<indexterm zone="GstCvSmooth--param4"><primary>GstCvSmooth:param4</primary></indexterm>
+<programlisting>  “param4”                   <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Only used in bilateral type, means the spatial-sigma.Check cvSmooth OpenCV docs: http://opencv.willowgarage.com/documentation/image_filtering.html#cvSmooth.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--type" role="property"><title>The <literal>“type”</literal> property</title>
+<indexterm zone="GstCvSmooth--type"><primary>GstCvSmooth:type</primary></indexterm>
+<programlisting>  “type”                     <link linkend="GstCvSmoothTypeType"><type>GstCvSmoothTypeType</type></link></programlisting>
+<para>Smooth Type.</para><para>Flags: Read / Write</para>
+<para>Default value: CV Gaussian</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--color" role="property"><title>The <literal>“color”</literal> property</title>
+<indexterm zone="GstCvSmooth--color"><primary>GstCvSmooth:color</primary></indexterm>
+<programlisting>  “color”                    <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>If type is gaussian, this means the standard deviation.If type is bilateral, this means the color-sigma. If zero, Default values are used.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--height" role="property"><title>The <literal>“height”</literal> property</title>
+<indexterm zone="GstCvSmooth--height"><primary>GstCvSmooth:height</primary></indexterm>
+<programlisting>  “height”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The gaussian kernel height (must be positive and odd).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--spatial" role="property"><title>The <literal>“spatial”</literal> property</title>
+<indexterm zone="GstCvSmooth--spatial"><primary>GstCvSmooth:spatial</primary></indexterm>
+<programlisting>  “spatial”                  <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Only used in bilateral type, means the spatial-sigma.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstCvSmooth--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstCvSmooth--width"><primary>GstCvSmooth:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The gaussian kernel width (must be positive and odd).If type is median, this means the aperture linear size.Check OpenCV docs: http://docs.opencv.org/2.4/modules/imgproc/doc/filtering.htm.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 3</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstBaseCameraSrc">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstBaseCameraSrc.top_of_page">GstBaseCameraSrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstBaseCameraSrc</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstBaseCameraSrc.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BASE-CAMERA-SRC-CAST:CAPS">GST_BASE_CAMERA_SRC_CAST</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-base-camera-src-set-mode">gst_base_camera_src_set_mode</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-base-camera-src-setup-zoom">gst_base_camera_src_setup_zoom</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-base-camera-src-setup-preview">gst_base_camera_src_setup_preview</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-base-camera-src-finish-capture">gst_base_camera_src_finish_capture</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-base-camera-src-post-preview">gst_base_camera_src_post_preview</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstBaseCameraSrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BASE-CAMERA-SRC-VIEWFINDER-PAD-NAME:CAPS">GST_BASE_CAMERA_SRC_VIEWFINDER_PAD_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BASE-CAMERA-SRC-IMAGE-PAD-NAME:CAPS">GST_BASE_CAMERA_SRC_IMAGE_PAD_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BASE-CAMERA-SRC-VIDEO-PAD-NAME:CAPS">GST_BASE_CAMERA_SRC_VIDEO_PAD_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BASE-CAMERA-SRC-PREVIEW-MESSAGE-NAME:CAPS">GST_BASE_CAMERA_SRC_PREVIEW_MESSAGE_NAME</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstBaseCameraSrc">GstBaseCameraSrc</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstBaseCameraSrcClass">GstBaseCameraSrcClass</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="MIN-ZOOM:CAPS">MIN_ZOOM</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="MAX-ZOOM:CAPS">MAX_ZOOM</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="ZOOM-1X:CAPS">ZOOM_1X</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstBaseCameraSrc.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstBaseCameraSrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GST-BASE-CAMERA-SRC-CAST:CAPS" role="macro">
+<title>GST_BASE_CAMERA_SRC_CAST()</title>
+<indexterm zone="GST-BASE-CAMERA-SRC-CAST:CAPS"><primary>GST_BASE_CAMERA_SRC_CAST</primary></indexterm>
+<programlisting language="C">#define             GST_BASE_CAMERA_SRC_CAST(obj)</programlisting>
+</refsect2>
+<refsect2 id="gst-base-camera-src-set-mode" role="function">
+<title>gst_base_camera_src_set_mode&#160;()</title>
+<indexterm zone="gst-base-camera-src-set-mode"><primary>gst_base_camera_src_set_mode</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_base_camera_src_set_mode (<parameter><link linkend="GstBaseCameraSrc"><type>GstBaseCameraSrc</type></link> *self</parameter>,
+                              <parameter><link linkend="GstCameraBinMode"><type>GstCameraBinMode</type></link> mode</parameter>);</programlisting>
+<para>Set the chosen <link linkend="GstCameraBinMode"><type>GstCameraBinMode</type></link> capture mode.</para>
+<refsect3 id="gst-base-camera-src-set-mode.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>the camerasrc bin</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>mode</para></entry>
+<entry role="parameter_description"><para>the mode</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-base-camera-src-setup-zoom" role="function">
+<title>gst_base_camera_src_setup_zoom&#160;()</title>
+<indexterm zone="gst-base-camera-src-setup-zoom"><primary>gst_base_camera_src_setup_zoom</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_base_camera_src_setup_zoom (<parameter><link linkend="GstBaseCameraSrc"><type>GstBaseCameraSrc</type></link> *self</parameter>);</programlisting>
+<para>Apply zoom configured to camerabin to capture.</para>
+<refsect3 id="gst-base-camera-src-setup-zoom.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>camerasrc object</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-base-camera-src-setup-preview" role="function">
+<title>gst_base_camera_src_setup_preview&#160;()</title>
+<indexterm zone="gst-base-camera-src-setup-preview"><primary>gst_base_camera_src_setup_preview</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_base_camera_src_setup_preview (<parameter><link linkend="GstBaseCameraSrc"><type>GstBaseCameraSrc</type></link> *self</parameter>,
+                                   <parameter><link linkend="GstCaps"><type>GstCaps</type></link> *preview_caps</parameter>);</programlisting>
+<para>Apply preview caps to preview pipeline and to video source.</para>
+<refsect3 id="gst-base-camera-src-setup-preview.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>self</para></entry>
+<entry role="parameter_description"><para>camerasrc bin</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>preview_caps</para></entry>
+<entry role="parameter_description"><para>preview caps to set</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-base-camera-src-finish-capture" role="function">
+<title>gst_base_camera_src_finish_capture&#160;()</title>
+<indexterm zone="gst-base-camera-src-finish-capture"><primary>gst_base_camera_src_finish_capture</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_base_camera_src_finish_capture (<parameter><link linkend="GstBaseCameraSrc"><type>GstBaseCameraSrc</type></link> *self</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-base-camera-src-post-preview" role="function">
+<title>gst_base_camera_src_post_preview&#160;()</title>
+<indexterm zone="gst-base-camera-src-post-preview"><primary>gst_base_camera_src_post_preview</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_base_camera_src_post_preview (<parameter><link linkend="GstBaseCameraSrc"><type>GstBaseCameraSrc</type></link> *self</parameter>,
+                                  <parameter><link linkend="GstSample"><type>GstSample</type></link> *sample</parameter>);</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstBaseCameraSrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GST-BASE-CAMERA-SRC-VIEWFINDER-PAD-NAME:CAPS" role="macro">
+<title>GST_BASE_CAMERA_SRC_VIEWFINDER_PAD_NAME</title>
+<indexterm zone="GST-BASE-CAMERA-SRC-VIEWFINDER-PAD-NAME:CAPS"><primary>GST_BASE_CAMERA_SRC_VIEWFINDER_PAD_NAME</primary></indexterm>
+<programlisting language="C">#define GST_BASE_CAMERA_SRC_VIEWFINDER_PAD_NAME "vfsrc"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-BASE-CAMERA-SRC-IMAGE-PAD-NAME:CAPS" role="macro">
+<title>GST_BASE_CAMERA_SRC_IMAGE_PAD_NAME</title>
+<indexterm zone="GST-BASE-CAMERA-SRC-IMAGE-PAD-NAME:CAPS"><primary>GST_BASE_CAMERA_SRC_IMAGE_PAD_NAME</primary></indexterm>
+<programlisting language="C">#define GST_BASE_CAMERA_SRC_IMAGE_PAD_NAME "imgsrc"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-BASE-CAMERA-SRC-VIDEO-PAD-NAME:CAPS" role="macro">
+<title>GST_BASE_CAMERA_SRC_VIDEO_PAD_NAME</title>
+<indexterm zone="GST-BASE-CAMERA-SRC-VIDEO-PAD-NAME:CAPS"><primary>GST_BASE_CAMERA_SRC_VIDEO_PAD_NAME</primary></indexterm>
+<programlisting language="C">#define GST_BASE_CAMERA_SRC_VIDEO_PAD_NAME "vidsrc"
+</programlisting>
+</refsect2>
+<refsect2 id="GST-BASE-CAMERA-SRC-PREVIEW-MESSAGE-NAME:CAPS" role="macro">
+<title>GST_BASE_CAMERA_SRC_PREVIEW_MESSAGE_NAME</title>
+<indexterm zone="GST-BASE-CAMERA-SRC-PREVIEW-MESSAGE-NAME:CAPS"><primary>GST_BASE_CAMERA_SRC_PREVIEW_MESSAGE_NAME</primary></indexterm>
+<programlisting language="C">#define GST_BASE_CAMERA_SRC_PREVIEW_MESSAGE_NAME "preview-image"
+</programlisting>
+</refsect2>
+<refsect2 id="GstBaseCameraSrc" role="struct">
+<title>struct GstBaseCameraSrc</title>
+<indexterm zone="GstBaseCameraSrc"><primary>GstBaseCameraSrc</primary></indexterm>
+<programlisting language="C">struct GstBaseCameraSrc {
+  GstBin parent;
+
+  GstCameraBinMode mode;
+
+  gboolean auto_start;
+  gboolean capturing;
+  GMutex capturing_mutex;
+
+  /* Preview convert pipeline */
+  GstCaps *preview_caps;
+  gboolean post_preview;
+  GstElement *preview_filter;
+  GstCameraBinPreviewPipelineData *preview_pipeline;
+
+  /* Resolution of the buffers configured to camerabin */
+  gint width;
+  gint height;
+
+  gfloat zoom;
+  gfloat max_zoom;
+
+  gpointer _gst_reserved[GST_PADDING_LARGE];
+};
+</programlisting>
+</refsect2>
+<refsect2 id="GstBaseCameraSrcClass" role="struct">
+<title>struct GstBaseCameraSrcClass</title>
+<indexterm zone="GstBaseCameraSrcClass"><primary>GstBaseCameraSrcClass</primary></indexterm>
+<programlisting language="C">struct GstBaseCameraSrcClass {
+  GstBinClass parent;
+
+  /* Construct pipeline. (called in GST_STATE_CHANGE_NULL_TO_READY) Optional. */
+  gboolean    (*construct_pipeline)  (GstBaseCameraSrc *self);
+
+  /* (called in GST_STATE_CHANGE_READY_TO_PAUSED). Optional. */
+  gboolean    (*setup_pipeline)      (GstBaseCameraSrc *self);
+
+  /* Set the zoom. If set, called when changing 'zoom' property. Optional. */
+  void        (*set_zoom)            (GstBaseCameraSrc *self, gfloat zoom);
+
+  /* Set the mode. If set, called when changing 'mode' property. Optional. */
+  gboolean    (*set_mode)            (GstBaseCameraSrc *self,
+                                      GstCameraBinMode mode);
+
+  /* Set preview caps. If set, called called when setting new 'preview-caps'. Optional. */
+  gboolean    (*set_preview)         (GstBaseCameraSrc *self,
+                                      GstCaps *preview_caps);
+
+  /* Called by the handler for 'start-capture'. Mandatory. */
+  gboolean (*start_capture) (GstBaseCameraSrc * src);
+
+  /* Called by the handler for 'stop-capture'. Mandatory. */
+  void (*stop_capture) (GstBaseCameraSrc * src);
+
+  gpointer _gst_reserved[GST_PADDING_LARGE];
+};
+</programlisting>
+<refsect3 id="GstBaseCameraSrcClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstBinClass"><type>GstBinClass</type></link>&#160;<structfield id="GstBaseCameraSrcClass.parent">parent</structfield>;</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstBaseCameraSrcClass.construct-pipeline">construct_pipeline</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>construct pipeline</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstBaseCameraSrcClass.setup-pipeline">setup_pipeline</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>configure pipeline for the chosen settings</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstBaseCameraSrcClass.set-zoom">set_zoom</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>set the zoom</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstBaseCameraSrcClass.set-mode">set_mode</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>set the mode</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstBaseCameraSrcClass.set-preview">set_preview</structfield>&#160;()</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstBaseCameraSrcClass.start-capture">start_capture</structfield>&#160;()</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstBaseCameraSrcClass.stop-capture">stop_capture</structfield>&#160;()</para></entry>
+<entry /><entry />
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gpointer"><type>gpointer</type></link>&#160;<structfield id="GstBaseCameraSrcClass.-gst-reserved">_gst_reserved</structfield>[GST_PADDING_LARGE];</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="MIN-ZOOM:CAPS" role="macro">
+<title>MIN_ZOOM</title>
+<indexterm zone="MIN-ZOOM:CAPS"><primary>MIN_ZOOM</primary></indexterm>
+<programlisting language="C">#define MIN_ZOOM 1.0f
+</programlisting>
+</refsect2>
+<refsect2 id="MAX-ZOOM:CAPS" role="macro">
+<title>MAX_ZOOM</title>
+<indexterm zone="MAX-ZOOM:CAPS"><primary>MAX_ZOOM</primary></indexterm>
+<programlisting language="C">#define MAX_ZOOM 10.0f
+</programlisting>
+</refsect2>
+<refsect2 id="ZOOM-1X:CAPS" role="macro">
+<title>ZOOM_1X</title>
+<indexterm zone="ZOOM-1X:CAPS"><primary>ZOOM_1X</primary></indexterm>
+<programlisting language="C">#define ZOOM_1X MIN_ZOOM
+</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

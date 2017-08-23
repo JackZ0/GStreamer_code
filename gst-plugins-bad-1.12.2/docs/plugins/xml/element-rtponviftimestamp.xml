@@ -1,0 +1,95 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-rtponviftimestamp">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-rtponviftimestamp.top_of_page" role="top_of_page">rtponviftimestamp</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>rtponviftimestamp</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-rtponviftimestamp.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstRtpOnvifTimestamp--cseq">cseq</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstRtpOnvifTimestamp--ntp-offset">ntp-offset</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstRtpOnvifTimestamp--set-e-bit">set-e-bit</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstRtpOnvifTimestamp"/><refsect1 id="gst-plugins-bad-plugins-rtponviftimestamp.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstRtpOnvifTimestamp-struct">GstRtpOnvifTimestamp</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rtponviftimestamp.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstRtpOnvifTimestamp
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-rtponviftimestamp.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-rtponviftimestamp-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rtponviftimestamp.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rtponviftimestamp.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstRtpOnvifTimestamp-struct" role="struct">
+<title>struct GstRtpOnvifTimestamp</title>
+<indexterm zone="GstRtpOnvifTimestamp-struct"><primary>GstRtpOnvifTimestamp</primary></indexterm>
+<programlisting language="C">struct GstRtpOnvifTimestamp;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-rtponviftimestamp.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstRtpOnvifTimestamp--cseq" role="property"><title>The <literal>“cseq”</literal> property</title>
+<indexterm zone="GstRtpOnvifTimestamp--cseq"><primary>GstRtpOnvifTimestamp:cseq</primary></indexterm>
+<programlisting>  “cseq”                     <link linkend="guint"><type>guint</type></link></programlisting>
+<para>The RTSP CSeq which initiated the playback.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstRtpOnvifTimestamp--ntp-offset" role="property"><title>The <literal>“ntp-offset”</literal> property</title>
+<indexterm zone="GstRtpOnvifTimestamp--ntp-offset"><primary>GstRtpOnvifTimestamp:ntp-offset</primary></indexterm>
+<programlisting>  “ntp-offset”               <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Offset between the pipeline running time and the absolute UTC time, in nano-seconds since 1900 (-1 for automatic computation).</para><para>Flags: Read / Write</para>
+<para>Default value: 18446744073709551615</para>
+</refsect2>
+<refsect2 id="GstRtpOnvifTimestamp--set-e-bit" role="property"><title>The <literal>“set-e-bit”</literal> property</title>
+<indexterm zone="GstRtpOnvifTimestamp--set-e-bit"><primary>GstRtpOnvifTimestamp:set-e-bit</primary></indexterm>
+<programlisting>  “set-e-bit”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If the element should set the 'E' bit as defined in the ONVIF RTP extension. This increases latency by one packet.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,75 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glcolorscale">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glcolorscale.top_of_page" role="top_of_page">glcolorscale</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glcolorscale</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstGLColorscale"/><refsect1 id="gst-plugins-bad-plugins-glcolorscale.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLColorscale-struct">GstGLColorscale</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorscale.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstGLColorscale
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glcolorscale.description" role="desc">
+<title role="desc.title">Description</title>
+<para>video frame scaling and colorspace conversion.</para>
+<refsect3><title>Scaling and Color space conversion</title><para>Equivalent to glupload ! gldownload.</para>
+</refsect3>
+<refsect3><title>Examples</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! video/x-raw ! glcolorscale ! ximagesink
+]]></programlisting></informalexample>
+<para> A pipeline to test colorspace conversion.
+FBO is required.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! video/x-raw, width=640, height=480, format=AYUV ! glcolorscale ! \
+  video/x-raw, width=320, height=240, format=YV12 ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> A pipeline to test hardware scaling and colorspace conversion.
+FBO and GLSL are required.</para>
+</refsect3>
+
+<include href="element-glcolorscale-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorscale.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glcolorscale.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLColorscale-struct" role="struct">
+<title>struct GstGLColorscale</title>
+<indexterm zone="GstGLColorscale-struct"><primary>GstGLColorscale</primary></indexterm>
+<programlisting language="C">struct GstGLColorscale;</programlisting>
+</refsect2>
+
+</refsect1>
+
+</refentry>

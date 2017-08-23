@@ -97,11 +97,11 @@
 <a name="gst-plugins-bad-plugins-glfiltercube.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLBaseFilter.html#GstGLBaseFilter-struct">GstGLBaseFilter</a>
-                        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-bad-libs-1.0GstGLFilter.html#GstGLFilter-struct">GstGLFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> GstGLBaseFilter
+                        <span class="lineart">╰──</span> GstGLFilter
                             <span class="lineart">╰──</span> GstGLFilterCube
 </pre>
 </div>
@@ -110,43 +110,19 @@
 <p>The resize and redraw callbacks can be set from a client code.</p>
 <div class="refsect3">
 <a name="id-1.2.69.7.3"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v videotestsrc <span class="gtkdoc opt">!</span> glfiltercube <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v videotestsrc ! glfiltercube ! glimagesink
+</pre></div>
 <p> A pipeline to mpa textures on the 6 cube faces..
 FBO is required.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v videotestsrc <span class="gtkdoc opt">!</span> glfiltercube <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> width<span class="gtkdoc opt">=</span><span class="number">640</span><span class="gtkdoc opt">,</span> height<span class="gtkdoc opt">=</span><span class="number">480</span> <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v videotestsrc ! glfiltercube ! video/x-raw, width=640, height=480 ! glimagesink
+</pre></div>
 <p> Resize scene after drawing the cube.
 The scene size is greater than the input video size.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v videotestsrc <span class="gtkdoc opt">!</span> video<span class="gtkdoc opt">/</span>x<span class="gtkdoc opt">-</span>raw<span class="gtkdoc opt">,</span> width<span class="gtkdoc opt">=</span><span class="number">640</span><span class="gtkdoc opt">,</span> height<span class="gtkdoc opt">=</span><span class="number">480</span>  <span class="gtkdoc opt">!</span> glfiltercube <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v videotestsrc ! video/x-raw, width=640, height=480  ! glfiltercube ! glimagesink
+</pre></div>
 <p> Resize scene before drawing the cube.
 The scene size is greater than the input video size.</p>
 </div>

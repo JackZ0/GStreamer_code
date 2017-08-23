@@ -77,8 +77,8 @@
 <a name="gst-plugins-bad-plugins-assrender.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
                 <span class="lineart">╰──</span> GstAssRender
 </pre>
 </div>
@@ -87,17 +87,9 @@
 <p>Renders timestamped SSA/ASS subtitles on top of a video stream.</p>
 <div class="refsect3">
 <a name="id-1.2.5.7.3"></a><h4>Example launch line</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v filesrc location<span class="gtkdoc opt">=/</span>path<span class="gtkdoc opt">/</span>to<span class="gtkdoc opt">/</span>mkv <span class="gtkdoc opt">!</span> matroskademux name<span class="gtkdoc opt">=</span>d <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> mpegaudioparse <span class="gtkdoc opt">!</span> mpg123audiodec <span class="gtkdoc opt">!</span> audioconvert <span class="gtkdoc opt">!</span> autoaudiosink  d<span class="gtkdoc opt">. !</span> queue <span class="gtkdoc opt">!</span> h264parse <span class="gtkdoc opt">!</span> avdec_h264 <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> r<span class="gtkdoc opt">.</span>   d<span class="gtkdoc opt">. !</span> queue <span class="gtkdoc opt">!</span> <span class="string">&quot;application/x-ass&quot;</span> <span class="gtkdoc opt">!</span> assrender name<span class="gtkdoc opt">=</span>r <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> autovideosink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v filesrc location=/path/to/mkv ! matroskademux name=d ! queue ! mpegaudioparse ! mpg123audiodec ! audioconvert ! autoaudiosink  d. ! queue ! h264parse ! avdec_h264 ! videoconvert ! r.   d. ! queue ! "application/x-ass" ! assrender name=r ! videoconvert ! autovideosink
+</pre></div>
 <p> This pipeline demuxes a Matroska file with h.264 video, MP3 audio and embedded ASS subtitles and renders the subtitles on top of the video.</p>
 </div>
 <div class="refsynopsisdiv">

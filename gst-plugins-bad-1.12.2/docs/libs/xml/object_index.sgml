@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<!DOCTYPE informaltable PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<colspec colwidth="1*"/>
+<tbody>
+<row>
+<entry><link linkend="GBoxed">GBoxed</link></entry>
+<entry><link linkend="GEnum">GEnum</link></entry>
+<entry><link linkend="GInitiallyUnowned">GInitiallyUnowned</link></entry>
+</row>
+<row>
+<entry><link linkend="GInterface">GInterface</link></entry>
+<entry><link linkend="GObject">GObject</link></entry>
+<entry><link linkend="GstAggregator">GstAggregator</link></entry>
+</row>
+<row>
+<entry><link linkend="GstAggregatorPad">GstAggregatorPad</link></entry>
+<entry><link linkend="GstAllocator">GstAllocator</link></entry>
+<entry><link linkend="GstBaseTransform">GstBaseTransform</link></entry>
+</row>
+<row>
+<entry><link linkend="GstBin">GstBin</link></entry>
+<entry><link linkend="GstBufferPool">GstBufferPool</link></entry>
+<entry><link linkend="GstElement">GstElement</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLAllocationParams">GstGLAllocationParams</link></entry>
+<entry><link linkend="GstGLBaseFilter">GstGLBaseFilter</link></entry>
+<entry><link linkend="GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLBufferAllocationParams">GstGLBufferAllocationParams</link></entry>
+<entry><link linkend="GstGLBufferAllocator">GstGLBufferAllocator</link></entry>
+<entry><link linkend="GstGLBufferPool">GstGLBufferPool</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLColorConvert">GstGLColorConvert</link></entry>
+<entry><link linkend="GstGLContext">GstGLContext</link></entry>
+<entry><link linkend="GstGLDisplay">GstGLDisplay</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLFilter">GstGLFilter</link></entry>
+<entry><link linkend="GstGLFramebuffer">GstGLFramebuffer</link></entry>
+<entry><link linkend="GstGLMemoryAllocator">GstGLMemoryAllocator</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLMemoryPBOAllocator">GstGLMemoryPBOAllocator</link></entry>
+<entry><link linkend="GstGLRenderbufferAllocator">GstGLRenderbufferAllocator</link></entry>
+<entry><link linkend="GstGLSLStage">GstGLSLStage</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLShader">GstGLShader</link></entry>
+<entry><link linkend="GstGLStereoDownmix">GstGLStereoDownmix</link></entry>
+<entry><link linkend="GstGLUpload">GstGLUpload</link></entry>
+</row>
+<row>
+<entry><link linkend="GstGLVideoAllocationParams">GstGLVideoAllocationParams</link></entry>
+<entry><link linkend="GstGLViewConvert">GstGLViewConvert</link></entry>
+<entry><link linkend="GstGLWindow">GstGLWindow</link></entry>
+</row>
+<row>
+<entry><link linkend="GstInsertBin">GstInsertBin</link></entry>
+<entry><link linkend="GstMpegtsCableOuterFECScheme">GstMpegtsCableOuterFECScheme</link></entry>
+<entry><link linkend="GstMpegtsDVBCodeRate">GstMpegtsDVBCodeRate</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMpegtsDVBServiceType">GstMpegtsDVBServiceType</link></entry>
+<entry><link linkend="GstMpegtsDescriptor">GstMpegtsDescriptor</link></entry>
+<entry><link linkend="GstMpegtsDescriptorType">GstMpegtsDescriptorType</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMpegtsIso639AudioType">GstMpegtsIso639AudioType</link></entry>
+<entry><link linkend="GstMpegtsModulationType">GstMpegtsModulationType</link></entry>
+<entry><link linkend="GstMpegtsRunningStatus">GstMpegtsRunningStatus</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMpegtsSatellitePolarizationType">GstMpegtsSatellitePolarizationType</link></entry>
+<entry><link linkend="GstMpegtsSatelliteRolloff">GstMpegtsSatelliteRolloff</link></entry>
+<entry><link linkend="GstMpegtsSection">GstMpegtsSection</link></entry>
+</row>
+<row>
+<entry><link linkend="GstMpegtsSectionTableID">GstMpegtsSectionTableID</link></entry>
+<entry><link linkend="GstMpegtsSectionType">GstMpegtsSectionType</link></entry>
+<entry><link linkend="GstMpegtsStreamType">GstMpegtsStreamType</link></entry>
+</row>
+<row>
+<entry><link linkend="GstObject">GstObject</link></entry>
+<entry><link linkend="GstPad">GstPad</link></entry>
+<entry><link linkend="GstPlayer">GstPlayer</link></entry>
+</row>
+<row>
+<entry><link linkend="GstPlayerAudioInfo">GstPlayerAudioInfo</link></entry>
+<entry><link linkend="GstPlayerColorBalanceType">GstPlayerColorBalanceType</link></entry>
+<entry><link linkend="GstPlayerError">GstPlayerError</link></entry>
+</row>
+<row>
+<entry><link linkend="GstPlayerMediaInfo">GstPlayerMediaInfo</link></entry>
+<entry><link linkend="GstPlayerSignalDispatcher">GstPlayerSignalDispatcher</link></entry>
+<entry><link linkend="GstPlayerState">GstPlayerState</link></entry>
+</row>
+<row>
+<entry><link linkend="GstPlayerStreamInfo">GstPlayerStreamInfo</link></entry>
+<entry><link linkend="GstPlayerSubtitleInfo">GstPlayerSubtitleInfo</link></entry>
+<entry><link linkend="GstPlayerVideoInfo">GstPlayerVideoInfo</link></entry>
+</row>
+<row>
+<entry><link linkend="GstPlayerVideoOverlayVideoRenderer">GstPlayerVideoOverlayVideoRenderer</link></entry>
+<entry><link linkend="GstPlayerVideoRenderer">GstPlayerVideoRenderer</link></entry>
+<entry><link linkend="GstPlayerVisualization">GstPlayerVisualization</link></entry>
+</row>
+<row>
+<entry><link linkend="GstVideoAggregator">GstVideoAggregator</link></entry>
+<entry><link linkend="GstVideoAggregatorPad">GstVideoAggregatorPad</link></entry>
+</row>
+</tbody></tgroup></informaltable>

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE indexdiv PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<indexdiv id="api-index-1.12">
+<indexdiv><title>G</title>
+<indexentry><primaryie linkends="gst-gl-display-egl-from-gl-display"><link linkend="gst-gl-display-egl-from-gl-display">gst_gl_display_egl_from_gl_display</link>, function in <link linkend="gst-plugins-bad-libs-GstGLDisplayEGL">GstGLDisplayEGL</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-egl-get-from-native"><link linkend="gst-gl-display-egl-get-from-native">gst_gl_display_egl_get_from_native</link>, function in <link linkend="gst-plugins-bad-libs-GstGLDisplayEGL">GstGLDisplayEGL</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-find-window"><link linkend="gst-gl-display-find-window">gst_gl_display_find_window</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-display-remove-window"><link linkend="gst-gl-display-remove-window">gst_gl_display_remove_window</link>, function in <link linkend="GstGLDisplay">GstGLDisplay</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-memory-get-texture-format"><link linkend="gst-gl-memory-get-texture-format">gst_gl_memory_get_texture_format</link>, function in <link linkend="gst-plugins-bad-libs-GstGLMemory">GstGLMemory</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-gl-renderbuffer-get-format"><link linkend="gst-gl-renderbuffer-get-format">gst_gl_renderbuffer_get_format</link>, function in <link linkend="gst-plugins-bad-libs-GstGLRenderbuffer">GstGLRenderbuffer</link></primaryie></indexentry>
+</indexdiv>
+<indexdiv><title>P</title>
+<indexentry><primaryie linkends="gst-player-config-set-seek-accurate"><link linkend="gst-player-config-set-seek-accurate">gst_player_config_set_seek_accurate</link>, function in <link linkend="GstPlayer">GstPlayer</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-player-media-info-get-number-of-audio-streams"><link linkend="gst-player-media-info-get-number-of-audio-streams">gst_player_media_info_get_number_of_audio_streams</link>, function in <link linkend="GstPlayerMediaInfo">GstPlayerMediaInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-player-media-info-get-number-of-streams"><link linkend="gst-player-media-info-get-number-of-streams">gst_player_media_info_get_number_of_streams</link>, function in <link linkend="GstPlayerMediaInfo">GstPlayerMediaInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-player-media-info-get-number-of-subtitle-streams"><link linkend="gst-player-media-info-get-number-of-subtitle-streams">gst_player_media_info_get_number_of_subtitle_streams</link>, function in <link linkend="GstPlayerMediaInfo">GstPlayerMediaInfo</link></primaryie></indexentry>
+<indexentry><primaryie linkends="gst-player-media-info-get-number-of-video-streams"><link linkend="gst-player-media-info-get-number-of-video-streams">gst_player_media_info_get_number_of_video_streams</link>, function in <link linkend="GstPlayerMediaInfo">GstPlayerMediaInfo</link></primaryie></indexentry>
+</indexdiv>
+</indexdiv>

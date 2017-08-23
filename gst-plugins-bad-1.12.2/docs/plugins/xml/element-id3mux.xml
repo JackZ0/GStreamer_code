@@ -1,0 +1,127 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-id3mux">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-id3mux.top_of_page" role="top_of_page">id3mux</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>id3mux</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-id3mux.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstId3Mux--v2-version">v2-version</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstId3Mux--write-v1">write-v1</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstId3Mux--write-v2">write-v2</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstId3Mux"/><refsect1 id="gst-plugins-bad-plugins-id3mux.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstId3Mux-struct">GstId3Mux</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-id3mux.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstTagMux">GstTagMux</link>
+                    <phrase role="lineart">╰──</phrase> GstId3Mux
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-id3mux.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstId3Mux implements
+ <link linkend="GstTagSetter">GstTagSetter</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-id3mux.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element adds ID3v2 tags to the beginning of a stream, and ID3v1 tags
+to the end.</para>
+<para>It defaults to writing ID3 version 2.3.0 tags (since those are the most
+widely supported), but can optionally write version 2.4.0 tags.</para>
+<para>Applications can set the tags to write using the <link linkend="GstTagSetter"><type>GstTagSetter</type></link> interface.
+Tags sent by upstream elements will be picked up automatically (and merged
+according to the merge mode set via the tag setter interface).</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=foo.ogg ! decodebin ! audioconvert ! id3mux ! filesink location=foo.mp3
+]]></programlisting></informalexample>
+<para> A pipeline that transcodes a file from Ogg/Vorbis to mp3 format with
+ID3 tags that contain the same metadata as the the Ogg/Vorbis file.
+Make sure the Ogg/Vorbis file actually has comments to preserve.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -m filesrc location=foo.mp3 ! id3demux ! fakesink silent=TRUE
+]]></programlisting></informalexample>
+<para> Verify that tags have been written.</para>
+</refsect3>
+
+<include href="element-id3mux-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-id3mux.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-id3mux.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstId3Mux-struct" role="struct">
+<title>struct GstId3Mux</title>
+<indexterm zone="GstId3Mux-struct"><primary>GstId3Mux</primary></indexterm>
+<programlisting language="C">struct GstId3Mux;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-id3mux.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstId3Mux--v2-version" role="property"><title>The <literal>“v2-version”</literal> property</title>
+<indexterm zone="GstId3Mux--v2-version"><primary>GstId3Mux:v2-version</primary></indexterm>
+<programlisting>  “v2-version”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Set version (3 for id3v2.3, 4 for id3v2.4) of id3v2 tags.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [3,4]</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstId3Mux--write-v1" role="property"><title>The <literal>“write-v1”</literal> property</title>
+<indexterm zone="GstId3Mux--write-v1"><primary>GstId3Mux:write-v1</primary></indexterm>
+<programlisting>  “write-v1”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Write an id3v1 tag at the end of the file.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstId3Mux--write-v2" role="property"><title>The <literal>“write-v2”</literal> property</title>
+<indexterm zone="GstId3Mux--write-v2"><primary>GstId3Mux:write-v2</primary></indexterm>
+<programlisting>  “write-v2”                 <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Write an id3v2 tag at the start of the file.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-id3mux.see-also">
+<title>See Also</title>
+<para><link linkend="GstID3Demux"><type>GstID3Demux</type></link>, <link linkend="GstTagSetter"><type>GstTagSetter</type></link></para>
+
+</refsect1>
+
+</refentry>

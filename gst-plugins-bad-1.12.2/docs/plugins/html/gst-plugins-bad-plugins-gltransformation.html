@@ -49,53 +49,21 @@
 <p>Transforms video on the GPU.</p>
 <div class="refsect3">
 <a name="id-1.2.82.4.3"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> gltestsrc <span class="gtkdoc opt">!</span> gltransformation rotation<span class="gtkdoc opt">-</span>z<span class="gtkdoc opt">=</span><span class="number">45</span> <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 gltestsrc ! gltransformation rotation-z=45 ! glimagesink
+</pre></div>
 <p> A pipeline to rotate by 45 degrees</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> gltestsrc <span class="gtkdoc opt">!</span> gltransformation translation<span class="gtkdoc opt">-</span>x<span class="gtkdoc opt">=</span><span class="number">0.5</span> <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 gltestsrc ! gltransformation translation-x=0.5 ! glimagesink
+</pre></div>
 <p> Translate the video by 0.5</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> gltestsrc <span class="gtkdoc opt">!</span> gltransformation scale<span class="gtkdoc opt">-</span>y<span class="gtkdoc opt">=</span><span class="number">0.5</span> scale<span class="gtkdoc opt">-</span>x<span class="gtkdoc opt">=</span><span class="number">0.5</span> <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 gltestsrc ! gltransformation scale-y=0.5 scale-x=0.5 ! glimagesink
+</pre></div>
 <p> Resize the video by 0.5</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> gltestsrc <span class="gtkdoc opt">!</span> gltransformation rotation<span class="gtkdoc opt">-</span>x<span class="gtkdoc opt">=-</span><span class="number">45</span> ortho<span class="gtkdoc opt">=</span>True <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 gltestsrc ! gltransformation rotation-x=-45 ortho=True ! glimagesink
+</pre></div>
 <p> Rotate the video around the X-Axis by -45° with an orthographic projection</p>
 </div>
 </div>

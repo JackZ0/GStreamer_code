@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstGLFilter">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstGLFilter.top_of_page">GstGlFilter</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGlFilter</refname>
+<refpurpose>GstBaseTransform subclass for dealing with RGBA textures</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstGLFilter.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLFilterRenderFunc">*GstGLFilterRenderFunc</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-filter-render-to-target">gst_gl_filter_render_to_target</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-filter-render-to-target-with-shader">gst_gl_filter_render_to_target_with_shader</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-filter-filter-texture">gst_gl_filter_filter_texture</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-filter-draw-fullscreen-quad">gst_gl_filter_draw_fullscreen_quad</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLFilter.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLFilter-struct">GstGLFilter</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLFilterClass">GstGLFilterClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLFilter.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBaseFilter">GstGLBaseFilter</link>
+                        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLFilter
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstGLFilter.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="GstGLFilter"><type>GstGLFilter</type></link> helps to implement simple OpenGL filter elements taking a
+single input and producing a single output with a <link linkend="GstGLFramebuffer"><type>GstGLFramebuffer</type></link></para>
+
+</refsect1>
+<refsect1 id="GstGLFilter.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GstGLFilterRenderFunc" role="function" condition="since:1.10">
+<title>GstGLFilterRenderFunc&#160;()</title>
+<indexterm zone="GstGLFilterRenderFunc" role="1.10"><primary>GstGLFilterRenderFunc</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLFilterRenderFunc<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GstGLFilter"><type>GstGLFilter</type></link> *filter</parameter>,
+                          <parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *in_tex</parameter>,
+                          <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>);</programlisting>
+<refsect3 id="GstGLFilterRenderFunc.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>filter</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFIlter"><type>GstGLFIlter</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>in_tex</para></entry>
+<entry role="parameter_description"><para>the input <link linkend="GstGLMemory"><type>GstGLMemory</type></link> to render</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para>user data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLFilterRenderFunc.returns" role="returns">
+<title>Returns</title>
+<para> whether the render succeeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-filter-render-to-target" role="function" condition="since:1.10">
+<title>gst_gl_filter_render_to_target&#160;()</title>
+<indexterm zone="gst-gl-filter-render-to-target" role="1.10"><primary>gst_gl_filter_render_to_target</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_filter_render_to_target (<parameter><link linkend="GstGLFilter"><type>GstGLFilter</type></link> *filter</parameter>,
+                                <parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *input</parameter>,
+                                <parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *output</parameter>,
+                                <parameter><link linkend="GstGLFilterRenderFunc"><type>GstGLFilterRenderFunc</type></link> func</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>);</programlisting>
+<para>Transforms <parameter>input</parameter>
+ into <parameter>output</parameter>
+ using <parameter>func</parameter>
+ on through FBO.</para>
+<refsect3 id="gst-gl-filter-render-to-target.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>filter</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLFilter"><type>GstGLFilter</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>input</para></entry>
+<entry role="parameter_description"><para>the input texture</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>output</para></entry>
+<entry role="parameter_description"><para>the output texture</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>func</para></entry>
+<entry role="parameter_description"><para> the function to transform <parameter>input</parameter>
+into <parameter>output</parameter>
+. called with <parameter>data</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope call</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> the data associated with <parameter>func</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-filter-render-to-target.returns" role="returns">
+<title>Returns</title>
+<para> the return value of <parameter>func</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-filter-render-to-target-with-shader" role="function" condition="since:1.4">
+<title>gst_gl_filter_render_to_target_with_shader&#160;()</title>
+<indexterm zone="gst-gl-filter-render-to-target-with-shader" role="1.4"><primary>gst_gl_filter_render_to_target_with_shader</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_filter_render_to_target_with_shader
+                               (<parameter><link linkend="GstGLFilter"><type>GstGLFilter</type></link> *filter</parameter>,
+                                <parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *input</parameter>,
+                                <parameter><link linkend="GstGLMemory"><type>GstGLMemory</type></link> *output</parameter>,
+                                <parameter><link linkend="GstGLShader"><type>GstGLShader</type></link> *shader</parameter>);</programlisting>
+<para>Transforms <parameter>input</parameter>
+ into <parameter>output</parameter>
+ using <parameter>shader</parameter>
+ with a FBO.</para>
+<para>See also: <link linkend="gst-gl-filter-render-to-target"><function>gst_gl_filter_render_to_target()</function></link></para>
+<refsect3 id="gst-gl-filter-render-to-target-with-shader.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>filter</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLFilter"><type>GstGLFilter</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>input</para></entry>
+<entry role="parameter_description"><para>the input texture</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>output</para></entry>
+<entry role="parameter_description"><para>the output texture</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>shader</para></entry>
+<entry role="parameter_description"><para>the shader to use.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-filter-filter-texture" role="function" condition="since:1.4">
+<title>gst_gl_filter_filter_texture&#160;()</title>
+<indexterm zone="gst-gl-filter-filter-texture" role="1.4"><primary>gst_gl_filter_filter_texture</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_filter_filter_texture (<parameter><link linkend="GstGLFilter"><type>GstGLFilter</type></link> *filter</parameter>,
+                              <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *inbuf</parameter>,
+                              <parameter><link linkend="GstBuffer"><type>GstBuffer</type></link> *outbuf</parameter>);</programlisting>
+<para>Perform automatic upload if needed, call filter_texture vfunc and then an
+automatic download if needed.</para>
+<refsect3 id="gst-gl-filter-filter-texture.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>filter</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLFilter"><type>GstGLFilter</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>inbuf</para></entry>
+<entry role="parameter_description"><para>an input buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>outbuf</para></entry>
+<entry role="parameter_description"><para>an output buffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-filter-filter-texture.returns" role="returns">
+<title>Returns</title>
+<para> whether the transformation succeeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-filter-draw-fullscreen-quad" role="function" condition="since:1.10">
+<title>gst_gl_filter_draw_fullscreen_quad&#160;()</title>
+<indexterm zone="gst-gl-filter-draw-fullscreen-quad" role="1.10"><primary>gst_gl_filter_draw_fullscreen_quad</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_filter_draw_fullscreen_quad (<parameter><link linkend="GstGLFilter"><type>GstGLFilter</type></link> *filter</parameter>);</programlisting>
+<para>Render a fullscreen quad using the current GL state.  The only GL state this
+modifies is the necessary vertex/index buffers and, if necessary, a
+Vertex Array Object for drawing a fullscreen quad.  Framebuffer state,
+any shaders, viewport state, etc must be setup by the caller.</para>
+<refsect3 id="gst-gl-filter-draw-fullscreen-quad.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>filter</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLFilter"><type>GstGLFilter</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="GstGLFilter.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLFilter-struct" role="struct">
+<title>GstGLFilter</title>
+<indexterm zone="GstGLFilter-struct"><primary>GstGLFilter</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLFilter GstGLFilter;</programlisting>
+<refsect3 id="GstGLFilter.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstGLFilterClass" role="struct">
+<title>GstGLFilterClass</title>
+<indexterm zone="GstGLFilterClass"><primary>GstGLFilterClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLBaseFilterClass parent_class;
+
+  gboolean (*set_caps)          (GstGLFilter* filter, GstCaps* incaps, GstCaps* outcaps);
+  gboolean (*filter)            (GstGLFilter *filter, GstBuffer *inbuf, GstBuffer *outbuf);
+  gboolean (*filter_texture)    (GstGLFilter *filter, GstGLMemory *in_tex, GstGLMemory *out_tex);
+  gboolean (*init_fbo)          (GstGLFilter *filter);
+
+  GstCaps *(*transform_internal_caps) (GstGLFilter *filter,
+    GstPadDirection direction, GstCaps * caps, GstCaps * filter_caps);
+} GstGLFilterClass;
+</programlisting>
+<refsect3 id="GstGLFilterClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLFilterClass.set-caps">set_caps</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>mirror from <link linkend="GstBaseTransform"><type>GstBaseTransform</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLFilterClass.filter">filter</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>perform operations on the input and output buffers.  In general,
+you should avoid using this method if at all possible. One valid
+use-case for using this is keeping previous buffers for future calculations.
+Note: If <parameter>filter</parameter>
+exists, then <parameter>filter_texture</parameter>
+is not run</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLFilterClass.filter-texture">filter_texture</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>given <parameter>in_tex</parameter>
+, transform it into <parameter>out_tex</parameter>
+.  Not used
+if <parameter>filter</parameter>
+exists</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLFilterClass.init-fbo">init_fbo</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>perform initialization when the Framebuffer object is created</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLFilterClass.transform-internal-caps">transform_internal_caps</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Perform sub-class specific modifications of the
+caps to be processed between upload on input and before download for output.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLFilter.see-also">
+<title>See Also</title>
+<para><link linkend="GstBaseTransform"><type>GstBaseTransform</type></link>, <link linkend="GstGLContext"><type>GstGLContext</type></link>, <link linkend="GstGLFramebuffer"><type>GstGLFramebuffer</type></link></para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,222 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-fpsdisplaysink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-fpsdisplaysink.top_of_page" role="top_of_page">fpsdisplaysink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>fpsdisplaysink</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--sync">sync</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--text-overlay">text-overlay</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstElement"><type>GstElement</type></link> *</entry><entry role="property_name"><link linkend="GstFPSDisplaySink--video-sink">video-sink</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--fps-update-interval">fps-update-interval</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--max-fps">max-fps</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--min-fps">min-fps</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--signal-fps-measurements">signal-fps-measurements</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--frames-dropped">frames-dropped</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--frames-rendered">frames-rendered</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstFPSDisplaySink--last-message">last-message</link></entry><entry role="property_flags">Read</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstFPSDisplaySink--silent">silent</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstFPSDisplaySink-fps-measurements">fps-measurements</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstFPSDisplaySink"/><refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstFPSDisplaySink-struct">GstFPSDisplaySink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstFPSDisplaySink
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstFPSDisplaySink implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Can display the current and average framerate as a testoverlay or on stdout.</para>
+<refsect3><title>Example launch lines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! fpsdisplaysink
+gst-launch-1.0 videotestsrc ! fpsdisplaysink text-overlay=false
+gst-launch-1.0 filesrc location=video.avi ! decodebin name=d ! queue ! fpsdisplaysink d. ! queue ! fakesink sync=true
+gst-launch-1.0 playbin uri=file:///path/to/video.avi video-sink="fpsdisplaysink" audio-sink=fakesink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-fpsdisplaysink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFPSDisplaySink-struct" role="struct">
+<title>struct GstFPSDisplaySink</title>
+<indexterm zone="GstFPSDisplaySink-struct"><primary>GstFPSDisplaySink</primary></indexterm>
+<programlisting language="C">struct GstFPSDisplaySink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstFPSDisplaySink--sync" role="property"><title>The <literal>“sync”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--sync"><primary>GstFPSDisplaySink:sync</primary></indexterm>
+<programlisting>  “sync”                     <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Sync on the clock (if the internally used sink doesn't have this property it will be ignored.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--text-overlay" role="property"><title>The <literal>“text-overlay”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--text-overlay"><primary>GstFPSDisplaySink:text-overlay</primary></indexterm>
+<programlisting>  “text-overlay”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Whether to use text-overlay.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--video-sink" role="property"><title>The <literal>“video-sink”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--video-sink"><primary>GstFPSDisplaySink:video-sink</primary></indexterm>
+<programlisting>  “video-sink”               <link linkend="GstElement"><type>GstElement</type></link> *</programlisting>
+<para>Video sink to use (Must only be called on NULL state).</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--fps-update-interval" role="property"><title>The <literal>“fps-update-interval”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--fps-update-interval"><primary>GstFPSDisplaySink:fps-update-interval</primary></indexterm>
+<programlisting>  “fps-update-interval”      <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Time between consecutive frames per second measures and update  (in ms). Should be set on NULL state.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 500</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--max-fps" role="property"><title>The <literal>“max-fps”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--max-fps"><primary>GstFPSDisplaySink:max-fps</primary></indexterm>
+<programlisting>  “max-fps”                  <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Maximum fps rate measured. Reset when going from NULL to READY.-1 means no measurement has yet been done.</para><para>Flags: Read</para>
+<para>Allowed values: &gt;= -1</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--min-fps" role="property"><title>The <literal>“min-fps”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--min-fps"><primary>GstFPSDisplaySink:min-fps</primary></indexterm>
+<programlisting>  “min-fps”                  <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>Minimum fps rate measured. Reset when going from NULL to READY.-1 means no measurement has yet been done.</para><para>Flags: Read</para>
+<para>Allowed values: &gt;= -1</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--signal-fps-measurements" role="property"><title>The <literal>“signal-fps-measurements”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--signal-fps-measurements"><primary>GstFPSDisplaySink:signal-fps-measurements</primary></indexterm>
+<programlisting>  “signal-fps-measurements”  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>If the fps-measurements signal should be emited.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--frames-dropped" role="property"><title>The <literal>“frames-dropped”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--frames-dropped"><primary>GstFPSDisplaySink:frames-dropped</primary></indexterm>
+<programlisting>  “frames-dropped”           <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Number of frames dropped by the sink.</para><para>Flags: Read</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--frames-rendered" role="property"><title>The <literal>“frames-rendered”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--frames-rendered"><primary>GstFPSDisplaySink:frames-rendered</primary></indexterm>
+<programlisting>  “frames-rendered”          <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Number of frames rendered.</para><para>Flags: Read</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--last-message" role="property"><title>The <literal>“last-message”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--last-message"><primary>GstFPSDisplaySink:last-message</primary></indexterm>
+<programlisting>  “last-message”             <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The message describing current status.</para><para>Flags: Read</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstFPSDisplaySink--silent" role="property"><title>The <literal>“silent”</literal> property</title>
+<indexterm zone="GstFPSDisplaySink--silent"><primary>GstFPSDisplaySink:silent</primary></indexterm>
+<programlisting>  “silent”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Don't produce last_message events.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-fpsdisplaysink.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstFPSDisplaySink-fps-measurements" role="signal"><title>The <literal>“fps-measurements”</literal> signal</title>
+<indexterm zone="GstFPSDisplaySink-fps-measurements"><primary>GstFPSDisplaySink::fps-measurements</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstFPSDisplaySink"><type>GstFPSDisplaySink</type></link> *fpsdisplaysink,
+               <link linkend="gdouble"><type>gdouble</type></link>            fps,
+               <link linkend="gdouble"><type>gdouble</type></link>            droprate,
+               <link linkend="gdouble"><type>gdouble</type></link>            avgfps,
+               <link linkend="gpointer"><type>gpointer</type></link>           user_data)</programlisting>
+<para>Signals the application about the measured fps</para>
+<refsect3 id="GstFPSDisplaySink-fps-measurements.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>fpsdisplaysink</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstFPSDisplaySink"><type>GstFPSDisplaySink</type></link></para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>fps</para></entry>
+<entry role="parameter_description"><para>The current measured fps</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>droprate</para></entry>
+<entry role="parameter_description"><para>The rate at which buffers are being dropped</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>avgfps</para></entry>
+<entry role="parameter_description"><para>The average fps</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

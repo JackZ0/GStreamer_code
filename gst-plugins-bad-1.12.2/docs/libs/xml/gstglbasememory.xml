@@ -1,0 +1,909 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGlBaseMemory">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGlBaseMemory.top_of_page">GstGlBaseMemory</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGlBaseMemory</refname>
+<refpurpose>memory subclass for GL buffers</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGlBaseMemory.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLAllocationParamsCopyFunc">*GstGLAllocationParamsCopyFunc</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLAllocationParamsFreeFunc">*GstGLAllocationParamsFreeFunc</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-allocation-params-init">gst_gl_allocation_params_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLAllocationParams"><returnvalue>GstGLAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-allocation-params-copy">gst_gl_allocation_params_copy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-allocation-params-free">gst_gl_allocation_params_free</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-allocation-params-free-data">gst_gl_allocation_params_free_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-allocation-params-copy-data">gst_gl_allocation_params_copy_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-base-memory-init-once">gst_gl_base_memory_init_once</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-base-memory-init">gst_gl_base_memory_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-is-gl-base-memory">gst_is_gl_base_memory</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLBaseMemory"><returnvalue>GstGLBaseMemory</returnvalue></link>&#160;*
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLBaseMemoryAllocatorAllocFunction">*GstGLBaseMemoryAllocatorAllocFunction</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLBaseMemoryAllocatorCreateFunction">*GstGLBaseMemoryAllocatorCreateFunction</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLBaseMemoryAllocatorMapFunction">*GstGLBaseMemoryAllocatorMapFunction</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLBaseMemoryAllocatorUnmapFunction">*GstGLBaseMemoryAllocatorUnmapFunction</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLBaseMemory"><returnvalue>GstGLBaseMemory</returnvalue></link>&#160;*
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLBaseMemoryAllocatorCopyFunction">*GstGLBaseMemoryAllocatorCopyFunction</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLBaseMemoryAllocatorDestroyFunction">*GstGLBaseMemoryAllocatorDestroyFunction</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLBaseMemory"><returnvalue>GstGLBaseMemory</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-base-memory-alloc">gst_gl_base_memory_alloc</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-base-memory-alloc-data">gst_gl_base_memory_alloc_data</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-base-memory-memcpy">gst_gl_base_memory_memcpy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLBaseMemoryAllocator"/><anchor id="GstGLAllocationParams"/><refsect1 id="gst-plugins-bad-libs-GstGlBaseMemory.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBaseMemoryAllocator-struct">GstGLBaseMemoryAllocator</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBaseMemoryAllocatorClass">GstGLBaseMemoryAllocatorClass</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-BASE-MEMORY-ALLOCATOR-NAME:CAPS">GST_GL_BASE_MEMORY_ALLOCATOR_NAME</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-MAP-GL:CAPS">GST_MAP_GL</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLBaseMemoryError">GstGLBaseMemoryError</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-BASE-MEMORY-ERROR:CAPS">GST_GL_BASE_MEMORY_ERROR</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLBaseMemoryTransfer">GstGLBaseMemoryTransfer</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLAllocationParams-struct">GstGLAllocationParams</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-ALLOC:CAPS">GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_ALLOC</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-WRAP-SYSMEM:CAPS">GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_SYSMEM</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-WRAP-GPU-HANDLE:CAPS">GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_GPU_HANDLE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-USER:CAPS">GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_USER</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBaseMemory">GstGLBaseMemory</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGlBaseMemory.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GBoxed">GBoxed</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLAllocationParams
+    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAllocator">GstAllocator</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLBaseMemoryAllocator
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLBufferAllocator">GstGLBufferAllocator</link>
+                    <phrase role="lineart">&#9500;&#9472;&#9472;</phrase> <link linkend="GstGLMemoryAllocator">GstGLMemoryAllocator</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLRenderbufferAllocator">GstGLRenderbufferAllocator</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGlBaseMemory.description" role="desc">
+<title role="desc.title">Description</title>
+<para>GstGLBaseMemory is a <link linkend="GstMemory"><type>GstMemory</type></link> subclass providing the basis of support
+for the mapping of GL buffers.</para>
+<para>Data is uploaded or downloaded from the GPU as is necessary.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGlBaseMemory.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="GstGLAllocationParamsCopyFunc" role="function">
+<title>GstGLAllocationParamsCopyFunc&#160;()</title>
+<indexterm zone="GstGLAllocationParamsCopyFunc"><primary>GstGLAllocationParamsCopyFunc</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLAllocationParamsCopyFunc<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *src</parameter>,
+                                  <parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *dest</parameter>);</programlisting>
+<para>Copies the parameters from <parameter>src</parameter>
+ into <parameter>dest</parameter>
+.  The subclass must compose copy
+functions from the superclass.</para>
+<refsect3 id="GstGLAllocationParamsCopyFunc.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>src</para></entry>
+<entry role="parameter_description"><para>the source <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> to copy from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dest</para></entry>
+<entry role="parameter_description"><para>the source <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> to copy</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstGLAllocationParamsFreeFunc" role="function">
+<title>GstGLAllocationParamsFreeFunc&#160;()</title>
+<indexterm zone="GstGLAllocationParamsFreeFunc"><primary>GstGLAllocationParamsFreeFunc</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLAllocationParamsFreeFunc<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="gpointer"><type>gpointer</type></link> params</parameter>);</programlisting>
+<para>Free any dynamically allocated data.  The subclass must call the superclass'
+free.</para>
+<refsect3 id="GstGLAllocationParamsFreeFunc.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-allocation-params-init" role="function" condition="since:1.8">
+<title>gst_gl_allocation_params_init&#160;()</title>
+<indexterm zone="gst-gl-allocation-params-init" role="1.8"><primary>gst_gl_allocation_params_init</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_allocation_params_init (<parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *params</parameter>,
+                               <parameter><link linkend="gsize"><type>gsize</type></link> struct_size</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> alloc_flags</parameter>,
+                               <parameter><link linkend="GstGLAllocationParamsCopyFunc"><type>GstGLAllocationParamsCopyFunc</type></link> copy</parameter>,
+                               <parameter><link linkend="GstGLAllocationParamsFreeFunc"><type>GstGLAllocationParamsFreeFunc</type></link> free</parameter>,
+                               <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                               <parameter><link linkend="gsize"><type>gsize</type></link> alloc_size</parameter>,
+                               <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                               <parameter><link linkend="gpointer"><type>gpointer</type></link> wrapped_data</parameter>,
+                               <parameter><link linkend="gpointer"><type>gpointer</type></link> gl_handle</parameter>,
+                               <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                               <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<para><parameter>notify</parameter>
+ will be called once for each allocated memory using these <parameter>params</parameter>
+
+when freeing the memory.</para>
+<refsect3 id="gst-gl-allocation-params-init.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> to initialize</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>struct_size</para></entry>
+<entry role="parameter_description"><para>the struct size of the implementation</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_flags</para></entry>
+<entry role="parameter_description"><para>some alloc flags</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>copy</para></entry>
+<entry role="parameter_description"><para>a copy function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>free</para></entry>
+<entry role="parameter_description"><para>a free function</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstGLContext"><type>GstGLContext</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>alloc_size</para></entry>
+<entry role="parameter_description"><para>the number of bytes to allocate.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> to apply. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>wrapped_data</para></entry>
+<entry role="parameter_description"><para> a sysmem data pointer to initialize the allocation with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>gl_handle</para></entry>
+<entry role="parameter_description"><para> a GL handle to initialize the allocation with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer none</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-allocation-params-init.returns" role="returns">
+<title>Returns</title>
+<para> whether the paramaters could be initialized</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-allocation-params-copy" role="function" condition="since:1.8">
+<title>gst_gl_allocation_params_copy&#160;()</title>
+<indexterm zone="gst-gl-allocation-params-copy" role="1.8"><primary>gst_gl_allocation_params_copy</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLAllocationParams"><returnvalue>GstGLAllocationParams</returnvalue></link>&#160;*
+gst_gl_allocation_params_copy (<parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *src</parameter>);</programlisting>
+<refsect3 id="gst-gl-allocation-params-copy.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>src</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> to initialize</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-allocation-params-copy.returns" role="returns">
+<title>Returns</title>
+<para> a copy of the <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> specified by
+<parameter>src</parameter>
+or <link linkend="NULL:CAPS"><literal>NULL</literal></link> on failure. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-allocation-params-free" role="function" condition="since:1.8">
+<title>gst_gl_allocation_params_free&#160;()</title>
+<indexterm zone="gst-gl-allocation-params-free" role="1.8"><primary>gst_gl_allocation_params_free</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_allocation_params_free (<parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *params</parameter>);</programlisting>
+<para>Frees the <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> and all associated data.</para>
+<refsect3 id="gst-gl-allocation-params-free.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> to initialize</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-allocation-params-free-data" role="function" condition="since:1.8">
+<title>gst_gl_allocation_params_free_data&#160;()</title>
+<indexterm zone="gst-gl-allocation-params-free-data" role="1.8"><primary>gst_gl_allocation_params_free_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_allocation_params_free_data (<parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *params</parameter>);</programlisting>
+<para>Frees the dynamically allocated data in <parameter>params</parameter>
+.  Direct subclasses
+should call this function in their own overriden free function.</para>
+<refsect3 id="gst-gl-allocation-params-free-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>the source <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-allocation-params-copy-data" role="function" condition="since:1.8">
+<title>gst_gl_allocation_params_copy_data&#160;()</title>
+<indexterm zone="gst-gl-allocation-params-copy-data" role="1.8"><primary>gst_gl_allocation_params_copy_data</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_allocation_params_copy_data (<parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *src</parameter>,
+                                    <parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *dest</parameter>);</programlisting>
+<para>Copies the dynamically allocated data from <parameter>src</parameter>
+ to <parameter>dest</parameter>
+.  Direct subclasses
+should call this function in their own overriden copy function.</para>
+<refsect3 id="gst-gl-allocation-params-copy-data.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>src</para></entry>
+<entry role="parameter_description"><para>the source <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dest</para></entry>
+<entry role="parameter_description"><para>the destination <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-base-memory-init-once" role="function" condition="since:1.8">
+<title>gst_gl_base_memory_init_once&#160;()</title>
+<indexterm zone="gst-gl-base-memory-init-once" role="1.8"><primary>gst_gl_base_memory_init_once</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_base_memory_init_once (<parameter><type>void</type></parameter>);</programlisting>
+<para>Initializes the GL Base Memory allocator. It is safe to call this function
+multiple times.  This must be called before any other GstGLBaseMemory operation.</para>
+<para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-base-memory-init" role="function" condition="since:1.8">
+<title>gst_gl_base_memory_init&#160;()</title>
+<indexterm zone="gst-gl-base-memory-init" role="1.8"><primary>gst_gl_base_memory_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_base_memory_init (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *mem</parameter>,
+                         <parameter><link linkend="GstAllocator"><type>GstAllocator</type></link> *allocator</parameter>,
+                         <parameter><link linkend="GstMemory"><type>GstMemory</type></link> *parent</parameter>,
+                         <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                         <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *params</parameter>,
+                         <parameter><link linkend="gsize"><type>gsize</type></link> size</parameter>,
+                         <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                         <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<para>Initializes <parameter>mem</parameter>
+ with the required parameters</para>
+<refsect3 id="gst-gl-base-memory-init.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> to initialize</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>allocator</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstAllocator"><type>GstAllocator</type></link> to initialize with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>parent</para></entry>
+<entry role="parameter_description"><para> the parent <link linkend="GstMemory"><type>GstMemory</type></link> to initialize with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLContext"><type>GstGLContext</type></link> to initialize with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para> the <parameter>GstAllocationParams</parameter>
+to initialize with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the number of bytes to be allocated</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-is-gl-base-memory" role="function" condition="since:1.8">
+<title>gst_is_gl_base_memory&#160;()</title>
+<indexterm zone="gst-is-gl-base-memory" role="1.8"><primary>gst_is_gl_base_memory</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_is_gl_base_memory (<parameter><link linkend="GstMemory"><type>GstMemory</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-is-gl-base-memory.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMemory"><type>GstMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-is-gl-base-memory.returns" role="returns">
+<title>Returns</title>
+<para> whether the memory at <parameter>mem</parameter>
+is a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLBaseMemoryAllocatorAllocFunction" role="function" condition="since:1.8">
+<title>GstGLBaseMemoryAllocatorAllocFunction&#160;()</title>
+<indexterm zone="GstGLBaseMemoryAllocatorAllocFunction" role="1.8"><primary>GstGLBaseMemoryAllocatorAllocFunction</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLBaseMemory"><returnvalue>GstGLBaseMemory</returnvalue></link>&#160;*
+<phrase role="c_punctuation">(</phrase>*GstGLBaseMemoryAllocatorAllocFunction<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GstGLBaseMemoryAllocator"><type>GstGLBaseMemoryAllocator</type></link> *allocator</parameter>,
+                                <parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *params</parameter>);</programlisting>
+<para>Note: not called with a GL context current</para>
+<refsect3 id="GstGLBaseMemoryAllocatorAllocFunction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>allocator</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLBaseMemoryAllocator"><type>GstGLBaseMemoryAllocator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> to allocate the memory with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLBaseMemoryAllocatorAllocFunction.returns" role="returns">
+<title>Returns</title>
+<para> a newly allocated <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> from <parameter>allocator</parameter>
+and <parameter>params</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLBaseMemoryAllocatorCreateFunction" role="function" condition="since:1.8">
+<title>GstGLBaseMemoryAllocatorCreateFunction&#160;()</title>
+<indexterm zone="GstGLBaseMemoryAllocatorCreateFunction" role="1.8"><primary>GstGLBaseMemoryAllocatorCreateFunction</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLBaseMemoryAllocatorCreateFunction<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *mem</parameter>,
+                                <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>As this virtual method is called with an OpenGL context current, use this
+function to allocate and OpenGL resources needed for your application</para>
+<refsect3 id="GstGLBaseMemoryAllocatorCreateFunction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GError"><type>GError</type></link> to use on failure</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLBaseMemoryAllocatorCreateFunction.returns" role="returns">
+<title>Returns</title>
+<para> whether the creation succeeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLBaseMemoryAllocatorMapFunction" role="function" condition="since:1.8">
+<title>GstGLBaseMemoryAllocatorMapFunction&#160;()</title>
+<indexterm zone="GstGLBaseMemoryAllocatorMapFunction" role="1.8"><primary>GstGLBaseMemoryAllocatorMapFunction</primary></indexterm>
+<programlisting language="C"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLBaseMemoryAllocatorMapFunction<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *mem</parameter>,
+                                <parameter><link linkend="GstMapInfo"><type>GstMapInfo</type></link> *info</parameter>,
+                                <parameter><link linkend="gsize"><type>gsize</type></link> maxsize</parameter>);</programlisting>
+<para>Also see <link linkend="gst-memory-map"><function>gst_memory_map()</function></link>;</para>
+<refsect3 id="GstGLBaseMemoryAllocatorMapFunction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>info</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMapInfo"><type>GstMapInfo</type></link> to map with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>maxsize</para></entry>
+<entry role="parameter_description"><para>the size to map</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLBaseMemoryAllocatorMapFunction.returns" role="returns">
+<title>Returns</title>
+<para> the mapped pointer</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLBaseMemoryAllocatorUnmapFunction" role="function" condition="since:1.8">
+<title>GstGLBaseMemoryAllocatorUnmapFunction&#160;()</title>
+<indexterm zone="GstGLBaseMemoryAllocatorUnmapFunction" role="1.8"><primary>GstGLBaseMemoryAllocatorUnmapFunction</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLBaseMemoryAllocatorUnmapFunction<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *mem</parameter>,
+                                <parameter><link linkend="GstMapInfo"><type>GstMapInfo</type></link> *info</parameter>);</programlisting>
+<para>Also see <link linkend="gst-memory-unmap"><function>gst_memory_unmap()</function></link>;</para>
+<refsect3 id="GstGLBaseMemoryAllocatorUnmapFunction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>info</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMapInfo"><type>GstMapInfo</type></link> to map with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLBaseMemoryAllocatorCopyFunction" role="function" condition="since:1.8">
+<title>GstGLBaseMemoryAllocatorCopyFunction&#160;()</title>
+<indexterm zone="GstGLBaseMemoryAllocatorCopyFunction" role="1.8"><primary>GstGLBaseMemoryAllocatorCopyFunction</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLBaseMemory"><returnvalue>GstGLBaseMemory</returnvalue></link>&#160;*
+<phrase role="c_punctuation">(</phrase>*GstGLBaseMemoryAllocatorCopyFunction<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *mem</parameter>,
+                                <parameter><link linkend="gssize"><type>gssize</type></link> offset</parameter>,
+                                <parameter><link linkend="gssize"><type>gssize</type></link> size</parameter>);</programlisting>
+<para>Also see <link linkend="gst-memory-copy"><function>gst_memory_copy()</function></link>;</para>
+<refsect3 id="GstGLBaseMemoryAllocatorCopyFunction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>the offset to copy from</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the number of bytes to copy</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="GstGLBaseMemoryAllocatorCopyFunction.returns" role="returns">
+<title>Returns</title>
+<para> the newly copied <link linkend="GstGLMemory"><type>GstGLMemory</type></link> or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLBaseMemoryAllocatorDestroyFunction" role="function" condition="since:1.8">
+<title>GstGLBaseMemoryAllocatorDestroyFunction&#160;()</title>
+<indexterm zone="GstGLBaseMemoryAllocatorDestroyFunction" role="1.8"><primary>GstGLBaseMemoryAllocatorDestroyFunction</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLBaseMemoryAllocatorDestroyFunction<phrase role="c_punctuation">)</phrase>
+                               (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *mem</parameter>);</programlisting>
+<para>Destroy any resources allocated throughout the lifetime of <parameter>mem</parameter>
+</para>
+<refsect3 id="GstGLBaseMemoryAllocatorDestroyFunction.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-base-memory-alloc" role="function" condition="since:1.8">
+<title>gst_gl_base_memory_alloc&#160;()</title>
+<indexterm zone="gst-gl-base-memory-alloc" role="1.8"><primary>gst_gl_base_memory_alloc</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLBaseMemory"><returnvalue>GstGLBaseMemory</returnvalue></link>&#160;*
+gst_gl_base_memory_alloc (<parameter><link linkend="GstGLBaseMemoryAllocator"><type>GstGLBaseMemoryAllocator</type></link> *allocator</parameter>,
+                          <parameter><link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> *params</parameter>);</programlisting>
+<refsect3 id="gst-gl-base-memory-alloc.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>allocator</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLBaseMemoryAllocator"><type>GstGLBaseMemoryAllocator</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>params</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLAllocationParams"><type>GstGLAllocationParams</type></link> to allocate the memory with</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-base-memory-alloc.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> from <parameter>allocator</parameter>
+with the requested <parameter>params</parameter>
+.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-base-memory-alloc-data" role="function">
+<title>gst_gl_base_memory_alloc_data&#160;()</title>
+<indexterm zone="gst-gl-base-memory-alloc-data"><primary>gst_gl_base_memory_alloc_data</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_base_memory_alloc_data (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *gl_mem</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-base-memory-memcpy" role="function" condition="since:1.8">
+<title>gst_gl_base_memory_memcpy&#160;()</title>
+<indexterm zone="gst-gl-base-memory-memcpy" role="1.8"><primary>gst_gl_base_memory_memcpy</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_base_memory_memcpy (<parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *src</parameter>,
+                           <parameter><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> *dest</parameter>,
+                           <parameter><link linkend="gssize"><type>gssize</type></link> offset</parameter>,
+                           <parameter><link linkend="gssize"><type>gssize</type></link> size</parameter>);</programlisting>
+<refsect3 id="gst-gl-base-memory-memcpy.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>src</para></entry>
+<entry role="parameter_description"><para>the source <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>dest</para></entry>
+<entry role="parameter_description"><para>the destination <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>offset</para></entry>
+<entry role="parameter_description"><para>the offset to start at</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>size</para></entry>
+<entry role="parameter_description"><para>the number of bytes to copy</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-base-memory-memcpy.returns" role="returns">
+<title>Returns</title>
+<para> whether the copy suceeded.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGlBaseMemory.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLBaseMemoryAllocator-struct" role="struct">
+<title>GstGLBaseMemoryAllocator</title>
+<indexterm zone="GstGLBaseMemoryAllocator-struct" role="1.8"><primary>GstGLBaseMemoryAllocator</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLBaseMemoryAllocator GstGLBaseMemoryAllocator;</programlisting>
+<para>Opaque <link linkend="GstGLBaseMemoryAllocator"><type>GstGLBaseMemoryAllocator</type></link> struct</para>
+<para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GstGLBaseMemoryAllocatorClass" role="struct" condition="since:1.8">
+<title>GstGLBaseMemoryAllocatorClass</title>
+<indexterm zone="GstGLBaseMemoryAllocatorClass" role="1.8"><primary>GstGLBaseMemoryAllocatorClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstAllocatorClass parent_class;
+
+  GstGLBaseMemoryAllocatorAllocFunction         alloc;
+
+  GstGLBaseMemoryAllocatorCreateFunction        create;
+  GstGLBaseMemoryAllocatorMapFunction           map;
+  GstGLBaseMemoryAllocatorUnmapFunction         unmap;
+  GstGLBaseMemoryAllocatorCopyFunction          copy;
+  GstGLBaseMemoryAllocatorDestroyFunction       destroy;
+} GstGLBaseMemoryAllocatorClass;
+</programlisting>
+<refsect3 id="GstGLBaseMemoryAllocatorClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorAllocFunction"><type>GstGLBaseMemoryAllocatorAllocFunction</type></link>&#160;<structfield id="GstGLBaseMemoryAllocatorClass.alloc">alloc</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLBaseMemoryAllocatorAllocFunction"><type>GstGLBaseMemoryAllocatorAllocFunction</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorCreateFunction"><type>GstGLBaseMemoryAllocatorCreateFunction</type></link>&#160;<structfield id="GstGLBaseMemoryAllocatorClass.create">create</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLBaseMemoryAllocatorCreateFunction"><type>GstGLBaseMemoryAllocatorCreateFunction</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorMapFunction"><type>GstGLBaseMemoryAllocatorMapFunction</type></link>&#160;<structfield id="GstGLBaseMemoryAllocatorClass.map">map</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLBaseMemoryAllocatorMapFunction"><type>GstGLBaseMemoryAllocatorMapFunction</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorUnmapFunction"><type>GstGLBaseMemoryAllocatorUnmapFunction</type></link>&#160;<structfield id="GstGLBaseMemoryAllocatorClass.unmap">unmap</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLBaseMemoryAllocatorUnmapFunction"><type>GstGLBaseMemoryAllocatorUnmapFunction</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorCopyFunction"><type>GstGLBaseMemoryAllocatorCopyFunction</type></link>&#160;<structfield id="GstGLBaseMemoryAllocatorClass.copy">copy</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLBaseMemoryAllocatorCopyFunction"><type>GstGLBaseMemoryAllocatorCopyFunction</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLBaseMemoryAllocatorDestroyFunction"><type>GstGLBaseMemoryAllocatorDestroyFunction</type></link>&#160;<structfield id="GstGLBaseMemoryAllocatorClass.destroy">destroy</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLBaseMemoryAllocatorDestroyFunction"><type>GstGLBaseMemoryAllocatorDestroyFunction</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+<para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GST-GL-BASE-MEMORY-ALLOCATOR-NAME:CAPS" role="macro" condition="since:1.8">
+<title>GST_GL_BASE_MEMORY_ALLOCATOR_NAME</title>
+<indexterm zone="GST-GL-BASE-MEMORY-ALLOCATOR-NAME:CAPS" role="1.8"><primary>GST_GL_BASE_MEMORY_ALLOCATOR_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_BASE_MEMORY_ALLOCATOR_NAME   "GLBaseMemory"
+</programlisting>
+<para>The name of the GL buffer allocator</para>
+<para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GST-MAP-GL:CAPS" role="macro">
+<title>GST_MAP_GL</title>
+<indexterm zone="GST-MAP-GL:CAPS"><primary>GST_MAP_GL</primary></indexterm>
+<programlisting language="C">#define GST_MAP_GL (GST_MAP_FLAG_LAST &lt;&lt; 1)
+</programlisting>
+<para>Flag indicating that we should map the GL object instead of to system memory.</para>
+<para>Combining <link linkend="GST-MAP-GL:CAPS"><type>GST_MAP_GL</type></link> with <link linkend="GST-MAP-WRITE:CAPS"><type>GST_MAP_WRITE</type></link> has the same semantics as though
+you are writing to OpenGL. Conversely, combining <link linkend="GST-MAP-GL:CAPS"><type>GST_MAP_GL</type></link> with
+<link linkend="GST-MAP-READ:CAPS"><type>GST_MAP_READ</type></link> has the same semantics as though you are reading from OpenGL.</para>
+</refsect2>
+<refsect2 id="GstGLBaseMemoryError" role="enum">
+<title>enum GstGLBaseMemoryError</title>
+<indexterm zone="GstGLBaseMemoryError"><primary>GstGLBaseMemoryError</primary></indexterm>
+<refsect3 id="GstGLBaseMemoryError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-BASE-MEMORY-ERROR-FAILED:CAPS">GST_GL_BASE_MEMORY_ERROR_FAILED</para></entry>
+<entry role="enum_member_description"><para>generic faliure</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-BASE-MEMORY-ERROR-OLD-LIBS:CAPS">GST_GL_BASE_MEMORY_ERROR_OLD_LIBS</para></entry>
+<entry role="enum_member_description"><para>the implementation is too old and doesn't
+                                    implement enough features</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-BASE-MEMORY-ERROR-RESOURCE-UNAVAILABLE:CAPS">GST_GL_BASE_MEMORY_ERROR_RESOURCE_UNAVAILABLE</para></entry>
+<entry role="enum_member_description"><para>a resource could not be found</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GST-GL-BASE-MEMORY-ERROR:CAPS" role="macro">
+<title>GST_GL_BASE_MEMORY_ERROR</title>
+<indexterm zone="GST-GL-BASE-MEMORY-ERROR:CAPS"><primary>GST_GL_BASE_MEMORY_ERROR</primary></indexterm>
+<programlisting language="C">#define GST_GL_BASE_MEMORY_ERROR (gst_gl_base_memory_error_quark ())
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLBaseMemoryTransfer" role="enum">
+<title>enum GstGLBaseMemoryTransfer</title>
+<indexterm zone="GstGLBaseMemoryTransfer"><primary>GstGLBaseMemoryTransfer</primary></indexterm>
+<refsect3 id="GstGLBaseMemoryTransfer.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-BASE-MEMORY-TRANSFER-NEED-DOWNLOAD:CAPS">GST_GL_BASE_MEMORY_TRANSFER_NEED_DOWNLOAD</para></entry>
+<entry role="enum_member_description"><para>the texture needs downloading
+                                            to the data pointer</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-BASE-MEMORY-TRANSFER-NEED-UPLOAD:CAPS">GST_GL_BASE_MEMORY_TRANSFER_NEED_UPLOAD</para></entry>
+<entry role="enum_member_description"><para>the data pointer needs uploading
+                                            to the texture</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstGLAllocationParams-struct" role="struct">
+<title>struct GstGLAllocationParams</title>
+<indexterm zone="GstGLAllocationParams-struct"><primary>GstGLAllocationParams</primary></indexterm>
+<programlisting language="C">struct GstGLAllocationParams {
+  gsize                             struct_size;
+  GstGLAllocationParamsCopyFunc     copy;
+  GstGLAllocationParamsFreeFunc     free;
+
+  guint                             alloc_flags;
+  gsize                             alloc_size;
+  GstAllocationParams              *alloc_params;
+  GstGLContext                     *context;
+  GDestroyNotify                    notify;
+  gpointer                          user_data;
+
+  /* GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_SYSMEM only */
+  gpointer                          wrapped_data;
+  /* GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_GPU_HANDLE only */
+  gpointer                          gl_handle;
+};
+</programlisting>
+<refsect3 id="GstGLAllocationParams.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gsize"><type>gsize</type></link>&#160;<structfield id="GstGLAllocationParams-struct.struct-size">struct_size</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the size of the struct (including and subclass data)</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLAllocationParamsCopyFunc"><type>GstGLAllocationParamsCopyFunc</type></link>&#160;<structfield id="GstGLAllocationParams-struct.copy">copy</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLAllocationParamsCopyFunc"><type>GstGLAllocationParamsCopyFunc</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLAllocationParamsFreeFunc"><type>GstGLAllocationParamsFreeFunc</type></link>&#160;<structfield id="GstGLAllocationParams-struct.free">free</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLAllocationParamsFreeFunc"><type>GstGLAllocationParamsFreeFunc</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="guint"><type>guint</type></link>&#160;<structfield id="GstGLAllocationParams-struct.alloc-flags">alloc_flags</structfield>;</para></entry>
+<entry role="struct_member_description"><para>allocation flags</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gsize"><type>gsize</type></link>&#160;<structfield id="GstGLAllocationParams-struct.alloc-size">alloc_size</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the allocation size</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link>&#160;*<structfield id="GstGLAllocationParams-struct.alloc-params">alloc_params</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLContext"><type>GstGLContext</type></link>&#160;*<structfield id="GstGLAllocationParams-struct.context">context</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>&#160;<structfield id="GstGLAllocationParams-struct.notify">notify</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gpointer"><type>gpointer</type></link>&#160;<structfield id="GstGLAllocationParams-struct.user-data">user_data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>argument to call <parameter>notify</parameter>
+with</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gpointer"><type>gpointer</type></link>&#160;<structfield id="GstGLAllocationParams-struct.wrapped-data">wrapped_data</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the wrapped data pointer</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="gpointer"><type>gpointer</type></link>&#160;<structfield id="GstGLAllocationParams-struct.gl-handle">gl_handle</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the wrapped OpenGL handle</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-ALLOC:CAPS" role="macro">
+<title>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_ALLOC</title>
+<indexterm zone="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-ALLOC:CAPS"><primary>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_ALLOC</primary></indexterm>
+<programlisting language="C">#define GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_ALLOC (1 &lt;&lt; 0)
+</programlisting>
+</refsect2>
+<refsect2 id="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-WRAP-SYSMEM:CAPS" role="macro">
+<title>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_SYSMEM</title>
+<indexterm zone="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-WRAP-SYSMEM:CAPS"><primary>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_SYSMEM</primary></indexterm>
+<programlisting language="C">#define GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_SYSMEM (1 &lt;&lt; 1)
+</programlisting>
+</refsect2>
+<refsect2 id="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-WRAP-GPU-HANDLE:CAPS" role="macro">
+<title>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_GPU_HANDLE</title>
+<indexterm zone="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-WRAP-GPU-HANDLE:CAPS"><primary>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_GPU_HANDLE</primary></indexterm>
+<programlisting language="C">#define GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_WRAP_GPU_HANDLE (1 &lt;&lt; 2)
+</programlisting>
+</refsect2>
+<refsect2 id="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-USER:CAPS" role="macro">
+<title>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_USER</title>
+<indexterm zone="GST-GL-ALLOCATION-PARAMS-ALLOC-FLAG-USER:CAPS"><primary>GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_USER</primary></indexterm>
+<programlisting language="C">#define GST_GL_ALLOCATION_PARAMS_ALLOC_FLAG_USER (1 &lt;&lt; 16)
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLBaseMemory" role="struct">
+<title>GstGLBaseMemory</title>
+<indexterm zone="GstGLBaseMemory"><primary>GstGLBaseMemory</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstMemory             mem;
+
+  GstGLContext         *context;
+} GstGLBaseMemory;
+</programlisting>
+<para>Represents information about a GL memory object</para>
+<refsect3 id="GstGLBaseMemory.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstMemory"><type>GstMemory</type></link>&#160;<structfield id="GstGLBaseMemory.mem">mem</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the parent object</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLContext"><type>GstGLContext</type></link>&#160;*<structfield id="GstGLBaseMemory.context">context</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the <link linkend="GstGLContext"><type>GstGLContext</type></link> to use for GL operations</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGlBaseMemory.see-also">
+<title>See Also</title>
+<para><link linkend="GstMemory"><type>GstMemory</type></link>, <link linkend="GstAllocator"><type>GstAllocator</type></link></para>
+
+</refsect1>
+
+</refentry>

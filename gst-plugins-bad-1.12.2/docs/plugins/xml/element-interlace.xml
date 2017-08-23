@@ -1,0 +1,60 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-interlace">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-interlace.top_of_page" role="top_of_page">interlace</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>interlace</refname>
+<refpurpose/>
+</refnamediv>
+
+
+
+<refsect1 id="gst-plugins-bad-plugins-interlace.description" role="desc">
+<title role="desc.title">Description</title>
+<para>The interlace element takes a non-interlaced raw video stream as input,
+creates fields out of each frame, then combines fields into interlaced
+frames to output as an interlaced video stream. It can also produce
+telecined streams from progressive input.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc pattern=ball ! interlace ! xvimagesink
+]]></programlisting></informalexample>
+<para>
+This pipeline illustrates the combing effects caused by displaying
+two interlaced fields as one progressive frame.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=/path/to/file ! decodebin ! videorate !
+  videoscale ! video/x-raw,format=\(string\)I420,width=720,height=480,
+  framerate=60000/1001,pixel-aspect-ratio=11/10 !
+  interlace top-field-first=false ! autovideosink
+]]></programlisting></informalexample>
+<para>
+This pipeline converts a progressive video stream into an interlaced
+stream suitable for standard definition NTSC.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc pattern=ball ! video/x-raw,
+  format=\(string\)I420,width=720,height=480,framerate=24000/1001,
+  pixel-aspect-ratio=11/10 ! interlace !
+  autovideosink
+]]></programlisting></informalexample>
+<para>
+This pipeline converts a 24 frames per second progressive film stream into a
+30000/1001 2:3:2:3... pattern telecined stream suitable for displaying film
+content on NTSC.</para>
+</refsect3>
+
+<include href="element-interlace-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-interlace.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-interlace.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

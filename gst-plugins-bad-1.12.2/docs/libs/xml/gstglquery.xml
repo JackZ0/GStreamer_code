@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLQuery">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLQuery.top_of_page">GstGLQuery</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLQuery</refname>
+<refpurpose>OpenGL query abstraction</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLQuery.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-counter">gst_gl_query_counter</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-gl-query-counter-log">gst_gl_query_counter_log</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-gl-query-counter-log-valist">gst_gl_query_counter_log_valist</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-end">gst_gl_query_end</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-free">gst_gl_query_free</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-init">gst_gl_query_init</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLQuery"><returnvalue>GstGLQuery</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-query-new">gst_gl_query_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-result">gst_gl_query_result</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-start">gst_gl_query_start</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-gl-query-start-log">gst_gl_query_start_log</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="gst-gl-query-start-log-valist">gst_gl_query_start_log_valist</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-query-unset">gst_gl_query_unset</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLQuery.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLQueryType">GstGLQueryType</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLQuery.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A <link linkend="GstGLQuery"><type>GstGLQuery</type></link> represents and holds an OpenGL query object.  Various types of
+queries can be run or counters retrieved.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLQuery.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-query-counter" role="function" condition="since:1.10">
+<title>gst_gl_query_counter&#160;()</title>
+<indexterm zone="gst-gl-query-counter" role="1.10"><primary>gst_gl_query_counter</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_query_counter (<parameter><link linkend="GstGLQuery"><type>GstGLQuery</type></link> *query</parameter>);</programlisting>
+<para>Record the result of a counter</para>
+<refsect3 id="gst-gl-query-counter.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-query-counter-log" role="macro">
+<title>gst_gl_query_counter_log()</title>
+<indexterm zone="gst-gl-query-counter-log"><primary>gst_gl_query_counter_log</primary></indexterm>
+<programlisting language="C">#define             gst_gl_query_counter_log(query,cat,level,object,format,...)</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-query-counter-log-valist" role="macro">
+<title>gst_gl_query_counter_log_valist()</title>
+<indexterm zone="gst-gl-query-counter-log-valist"><primary>gst_gl_query_counter_log_valist</primary></indexterm>
+<programlisting language="C">#define             gst_gl_query_counter_log_valist(query,cat,level,object,format,varargs)</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-query-end" role="function" condition="since:1.10">
+<title>gst_gl_query_end&#160;()</title>
+<indexterm zone="gst-gl-query-end" role="1.10"><primary>gst_gl_query_end</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_query_end (<parameter><link linkend="GstGLQuery"><type>GstGLQuery</type></link> *query</parameter>);</programlisting>
+<para>End counting the query</para>
+<refsect3 id="gst-gl-query-end.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-query-free" role="function" condition="since:1.10">
+<title>gst_gl_query_free&#160;()</title>
+<indexterm zone="gst-gl-query-free" role="1.10"><primary>gst_gl_query_free</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_query_free (<parameter><link linkend="GstGLQuery"><type>GstGLQuery</type></link> *query</parameter>);</programlisting>
+<para>Frees a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para>
+<refsect3 id="gst-gl-query-free.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-query-init" role="function" condition="since:1.10">
+<title>gst_gl_query_init&#160;()</title>
+<indexterm zone="gst-gl-query-init" role="1.10"><primary>gst_gl_query_init</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_query_init (<parameter><link linkend="GstGLQuery"><type>GstGLQuery</type></link> *query</parameter>,
+                   <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                   <parameter><link linkend="GstGLQueryType"><type>GstGLQueryType</type></link> query_type</parameter>);</programlisting>
+<refsect3 id="gst-gl-query-init.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query_type</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLQueryType"><type>GstGLQueryType</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-query-new" role="function" condition="since:1.10">
+<title>gst_gl_query_new&#160;()</title>
+<indexterm zone="gst-gl-query-new" role="1.10"><primary>gst_gl_query_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLQuery"><returnvalue>GstGLQuery</returnvalue></link>&#160;*
+gst_gl_query_new (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                  <parameter><link linkend="GstGLQueryType"><type>GstGLQueryType</type></link> query_type</parameter>);</programlisting>
+<para>Free with <link linkend="gst-gl-query-free"><function>gst_gl_query_free()</function></link></para>
+
+<para><emphasis role="annotation">[<acronym>skip</acronym>]</emphasis></para><refsect3 id="gst-gl-query-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>query_type</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLQueryType"><type>GstGLQueryType</type></link> to create</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-query-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-query-result" role="function" condition="since:1.10">
+<title>gst_gl_query_result&#160;()</title>
+<indexterm zone="gst-gl-query-result" role="1.10"><primary>gst_gl_query_result</primary></indexterm>
+<programlisting language="C"><link linkend="guint64"><returnvalue>guint64</returnvalue></link>
+gst_gl_query_result (<parameter><link linkend="GstGLQuery"><type>GstGLQuery</type></link> *query</parameter>);</programlisting>
+<refsect3 id="gst-gl-query-result.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-query-result.returns" role="returns">
+<title>Returns</title>
+<para> the result of the query</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-query-start" role="function" condition="since:1.10">
+<title>gst_gl_query_start&#160;()</title>
+<indexterm zone="gst-gl-query-start" role="1.10"><primary>gst_gl_query_start</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_query_start (<parameter><link linkend="GstGLQuery"><type>GstGLQuery</type></link> *query</parameter>);</programlisting>
+<para>Start counting the query</para>
+<refsect3 id="gst-gl-query-start.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-query-start-log" role="macro">
+<title>gst_gl_query_start_log()</title>
+<indexterm zone="gst-gl-query-start-log"><primary>gst_gl_query_start_log</primary></indexterm>
+<programlisting language="C">#define             gst_gl_query_start_log(query,cat,level,object,format,...)</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-query-start-log-valist" role="macro">
+<title>gst_gl_query_start_log_valist()</title>
+<indexterm zone="gst-gl-query-start-log-valist"><primary>gst_gl_query_start_log_valist</primary></indexterm>
+<programlisting language="C">#define             gst_gl_query_start_log_valist(query,cat,level,object,format,varargs)</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-query-unset" role="function" condition="since:1.10">
+<title>gst_gl_query_unset&#160;()</title>
+<indexterm zone="gst-gl-query-unset" role="1.10"><primary>gst_gl_query_unset</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_query_unset (<parameter><link linkend="GstGLQuery"><type>GstGLQuery</type></link> *query</parameter>);</programlisting>
+<para>Free any dynamically allocated resources</para>
+<refsect3 id="gst-gl-query-unset.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>query</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLQuery"><type>GstGLQuery</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLQuery.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLQueryType" role="enum">
+<title>enum GstGLQueryType</title>
+<indexterm zone="GstGLQueryType"><primary>GstGLQueryType</primary></indexterm>
+<refsect3 id="GstGLQueryType.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-QUERY-NONE:CAPS">GST_GL_QUERY_NONE</para></entry>
+<entry role="enum_member_description"><para>no query</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-QUERY-TIME-ELAPSED:CAPS">GST_GL_QUERY_TIME_ELAPSED</para></entry>
+<entry role="enum_member_description"><para>query the time elapsed</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-QUERY-TIMESTAMP:CAPS">GST_GL_QUERY_TIMESTAMP</para></entry>
+<entry role="enum_member_description"><para>query the current time</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+
+</refentry>

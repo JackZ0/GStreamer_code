@@ -1,0 +1,313 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-srtpdec">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-srtpdec.top_of_page" role="top_of_page">srtpdec</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>srtpdec</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstSrtpDec--replay-window-size">replay-window-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstStructure"><type>GstStructure</type></link> *</entry><entry role="property_name"><link linkend="GstSrtpDec--stats">stats</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstSrtpDec-clear-keys">clear-keys</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+<row><entry role="signal_type"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstSrtpDec-hard-limit">hard-limit</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstSrtpDec-request-key">request-key</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstSrtpDec-soft-limit">soft-limit</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstSrtpDec-remove-key">remove-key</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstSrtpDec"/><refsect1 id="gst-plugins-bad-plugins-srtpdec.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstSrtpDec-struct">GstSrtpDec</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstSrtpDec
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.description" role="desc">
+<title role="desc.title">Description</title>
+<para>gstrtpdec acts as a decoder that removes security from SRTP and SRTCP
+packets (encryption and authentication) and out RTP and RTCP. It
+receives packet of type 'application/x-srtp' or 'application/x-srtcp'
+on its sink pad, and outs packets of type 'application/x-rtp' or
+'application/x-rtcp' on its source pad.</para>
+<para>For each packet received, it checks if the internal SSRC is in the list
+of streams already in use. If this is not the case, it sends a signal to
+the user to get the needed parameters to create a new stream : master
+key, encryption and authentication mecanisms for both RTP and RTCP. If
+the user can't provide those parameters, the buffer is dropped and a
+warning is emitted.</para>
+<para>This element uses libsrtp library. The encryption and authentication
+mecanisms available are :</para>
+<para>Encryption</para>
+<itemizedlist>
+<listitem><para>AES_ICM 256 bits (maximum security)</para></listitem>
+<listitem><para>AES_ICM 128 bits (default)</para></listitem>
+<listitem>
+<para>NULL</para>
+</listitem>
+</itemizedlist>
+<para>Authentication</para>
+<itemizedlist>
+<listitem><para>HMAC_SHA1 80 bits (default, maximum protection)</para></listitem>
+<listitem><para>HMAC_SHA1 32 bits</para></listitem>
+<listitem>
+<para>NULL</para>
+</listitem>
+</itemizedlist>
+<para>Note that for SRTP protection, authentication is mandatory (non-null)
+if encryption is used (non-null).</para>
+<para>Each packet received is first analysed (checked for valid SSRC) then
+its buffer is unprotected with libsrtp, then pushed on the source pad.
+If protection failed or the stream could not be created, the buffer
+is dropped and a warning is emitted.</para>
+<para>When the maximum usage of the master key is reached, a soft-limit
+signal is sent to the user, and new parameters (master key) are needed
+in return. If the hard limit is reached, a flag is set and every
+subsequent packet is dropped, until a new key is set and the stream
+has been updated.</para>
+<para>If a stream is to be shared between multiple clients the SRTP
+rollover counter for a given SSRC must be set in the caps &quot;roc&quot; field
+when the request-key signal is emitted by the decoder. The rollover
+counters should have been transmitted by a signaling protocol by some
+other means. If no rollover counter is provided by the user, 0 is
+used by default.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 udpsrc port=5004 caps='application/x-srtp, payload=(int)8, ssrc=(uint)1356955624, srtp-key=(buffer)012345678901234567890123456789012345678901234567890123456789, srtp-cipher=(string)aes-128-icm, srtp-auth=(string)hmac-sha1-80, srtcp-cipher=(string)aes-128-icm, srtcp-auth=(string)hmac-sha1-80' !  srtpdec ! rtppcmadepay ! alawdec ! pulsesink
+]]></programlisting></informalexample>
+<para> Receive PCMA SRTP packets through UDP using caps to specify
+master key and protection.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 audiotestsrc ! alawenc ! rtppcmapay ! 'application/x-rtp, payload=(int)8, ssrc=(uint)1356955624' ! srtpenc key="012345678901234567890123456789012345678901234567890123456789" ! udpsink port=5004
+]]></programlisting></informalexample>
+<para> Send PCMA SRTP packets through UDP, nothing how the SSRC is forced so
+that the receiver will recognize it.</para>
+</refsect3>
+
+<include href="element-srtpdec-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstSrtpDec-struct" role="struct">
+<title>struct GstSrtpDec</title>
+<indexterm zone="GstSrtpDec-struct"><primary>GstSrtpDec</primary></indexterm>
+<programlisting language="C">struct GstSrtpDec;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstSrtpDec--replay-window-size" role="property"><title>The <literal>“replay-window-size”</literal> property</title>
+<indexterm zone="GstSrtpDec--replay-window-size"><primary>GstSrtpDec:replay-window-size</primary></indexterm>
+<programlisting>  “replay-window-size”       <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Size of the replay protection window.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [64,32768]</para>
+<para>Default value: 128</para>
+</refsect2>
+<refsect2 id="GstSrtpDec--stats" role="property"><title>The <literal>“stats”</literal> property</title>
+<indexterm zone="GstSrtpDec--stats"><primary>GstSrtpDec:stats</primary></indexterm>
+<programlisting>  “stats”                    <link linkend="GstStructure"><type>GstStructure</type></link> *</programlisting>
+<para>Various statistics.</para><para>Flags: Read</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstSrtpDec-clear-keys" role="signal"><title>The <literal>“clear-keys”</literal> signal</title>
+<indexterm zone="GstSrtpDec-clear-keys"><primary>GstSrtpDec::clear-keys</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstSrtpDec"><type>GstSrtpDec</type></link> *gstsrtpdec,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Clear the internal list of streams</para>
+<refsect3 id="GstSrtpDec-clear-keys.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstsrtpdec</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2><refsect2 id="GstSrtpDec-hard-limit" role="signal"><title>The <literal>“hard-limit”</literal> signal</title>
+<indexterm zone="GstSrtpDec-hard-limit"><primary>GstSrtpDec::hard-limit</primary></indexterm>
+<programlisting language="C"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>*
+user_function (<link linkend="GstSrtpDec"><type>GstSrtpDec</type></link> *gstsrtpdec,
+               <link linkend="guint"><type>guint</type></link>       ssrc,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Signal emited when the stream with <parameter>ssrc</parameter>
+ has reached the
+hard limit of utilisation of it's master encryption key.
+User should provide a new key and new RTP and RTCP encryption
+ciphers and authentication, and return them wrapped in a
+GstCaps. If user could not provide those parameters or signal
+is not answered, the buffers of this stream will be dropped.</para>
+<refsect3 id="GstSrtpDec-hard-limit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstsrtpdec</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>ssrc</para></entry>
+<entry role="parameter_description"><para>The unique SSRC of the stream</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstSrtpDec-request-key" role="signal"><title>The <literal>“request-key”</literal> signal</title>
+<indexterm zone="GstSrtpDec-request-key"><primary>GstSrtpDec::request-key</primary></indexterm>
+<programlisting language="C"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>*
+user_function (<link linkend="GstSrtpDec"><type>GstSrtpDec</type></link> *gstsrtpdec,
+               <link linkend="guint"><type>guint</type></link>       ssrc,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Signal emited to get the parameters relevant to stream
+with <parameter>ssrc</parameter>
+. User should provide the key and the RTP and
+RTCP encryption ciphers and authentication, and return
+them wrapped in a GstCaps.</para>
+<refsect3 id="GstSrtpDec-request-key.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstsrtpdec</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>ssrc</para></entry>
+<entry role="parameter_description"><para>The unique SSRC of the stream</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstSrtpDec-soft-limit" role="signal"><title>The <literal>“soft-limit”</literal> signal</title>
+<indexterm zone="GstSrtpDec-soft-limit"><primary>GstSrtpDec::soft-limit</primary></indexterm>
+<programlisting language="C"><link linkend="GstCaps"><returnvalue>GstCaps</returnvalue></link>*
+user_function (<link linkend="GstSrtpDec"><type>GstSrtpDec</type></link> *gstsrtpdec,
+               <link linkend="guint"><type>guint</type></link>       ssrc,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Signal emited when the stream with <parameter>ssrc</parameter>
+ has reached the
+soft limit of utilisation of it's master encryption key.
+User should provide a new key and new RTP and RTCP encryption
+ciphers and authentication, and return them wrapped in a
+GstCaps.</para>
+<refsect3 id="GstSrtpDec-soft-limit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstsrtpdec</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>ssrc</para></entry>
+<entry role="parameter_description"><para>The unique SSRC of the stream</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstSrtpDec-remove-key" role="signal"><title>The <literal>“remove-key”</literal> signal</title>
+<indexterm zone="GstSrtpDec-remove-key"><primary>GstSrtpDec::remove-key</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstSrtpDec"><type>GstSrtpDec</type></link> *gstsrtpdec,
+               <link linkend="guint"><type>guint</type></link>       ssrc,
+               <link linkend="gpointer"><type>gpointer</type></link>    user_data)</programlisting>
+<para>Removes keys for a specific SSRC</para>
+<refsect3 id="GstSrtpDec-remove-key.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstsrtpdec</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><para>ssrc</para></entry>
+<entry role="parameter_description"><para>The SSRC for which to remove the key.</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-srtpdec.see-also">
+<title>See Also</title>
+<para>srtpenc</para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,239 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-webrtcdsp">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-webrtcdsp.top_of_page" role="top_of_page">webrtcdsp</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>webrtcdsp</refname>
+<refpurpose>Audio Filter using WebRTC Audio Processing library</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-webrtcdsp.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--echo-cancel">echo-cancel</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--experimental-agc">experimental-agc</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--extended-filter">extended-filter</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--gain-control">gain-control</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--high-pass-filter">high-pass-filter</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--noise-suppression">noise-suppression</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstWebrtcDsp--probe">probe</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstWebrtcEchoSuppressionLevel"><type>GstWebrtcEchoSuppressionLevel</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--echo-suppression-level">echo-suppression-level</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstWebrtcNoiseSuppressionLevel"><type>GstWebrtcNoiseSuppressionLevel</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--noise-suppression-level">noise-suppression-level</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--delay-agnostic">delay-agnostic</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--compression-gain-db">compression-gain-db</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstWebrtcGainControlMode"><type>GstWebrtcGainControlMode</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--gain-control-mode">gain-control-mode</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--limiter">limiter</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--startup-min-volume">startup-min-volume</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--target-level-dbfs">target-level-dbfs</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--voice-detection">voice-detection</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--voice-detection-frame-size-ms">voice-detection-frame-size-ms</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="GstWebrtcVoiceDetectionLikelihood"><type>GstWebrtcVoiceDetectionLikelihood</type></link></entry><entry role="property_name"><link linkend="GstWebrtcDsp--voice-detection-likelihood">voice-detection-likelihood</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstWebrtcDsp"/><refsect1 id="gst-plugins-bad-plugins-webrtcdsp.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstWebrtcDsp-struct">GstWebrtcDsp</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webrtcdsp.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstAudioFilter">GstAudioFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstWebrtcDsp
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-webrtcdsp.description" role="desc">
+<title role="desc.title">Description</title>
+<para>A voice enhancement filter based on WebRTC Audio Processing library. This
+library provides a whide variety of enhancement algorithms. This element
+tries to enable as much as possible. The currently enabled enhancements are
+High Pass Filter, Echo Canceller, Noise Suppression, Automatic Gain Control,
+and some extended filters.</para>
+<para>While webrtcdsp element can be used alone, there is an exception for the
+echo canceller. The audio canceller need to be aware of the far end streams
+that are played to loud speakers. For this, you must place a webrtcechoprobe
+element at that far end. Note that the sample rate must match between
+webrtcdsp and the webrtechoprobe. Though, the number of channels can differ.
+The probe is found by the DSP element using it's object name. By default,
+webrtcdsp looks for webrtcechoprobe0, which means it just work if you have
+a single probe and DSP.</para>
+<para>The probe can only be used within the same top level GstPipeline.
+Additonally, to simplify the code, the probe element must be created
+before the DSP sink pad is activated. It does not need to be in any
+particular state and does not even need to be added to the pipeline yet.</para>
+<refsect2><title>Example launch line</title><para>As a conveniance, the echo canceller can be tested using an echo loop. In
+this configuration, one would expect a single echo to be heard.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 pulsesrc ! webrtcdsp ! webrtcechoprobe ! pulsesink
+]]></programlisting></informalexample>
+<para/>
+<para>In real environment, you'll place the probe before the playback, but only
+process the far end streams. The DSP should be placed as close as possible
+to the audio capture. The following pipeline is astracted and does not
+represent a real pipeline.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 far-end-src ! audio/x-raw,rate=48000 ! webrtcechoprobe ! pulsesink \
+               pulsesrc ! audio/x-raw,rate=48000 ! webrtcdsp ! far-end-sink
+]]></programlisting></informalexample>
+<para/>
+</refsect2>
+
+<include href="element-webrtcdsp-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webrtcdsp.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webrtcdsp.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstWebrtcDsp-struct" role="struct">
+<title>GstWebrtcDsp</title>
+<indexterm zone="GstWebrtcDsp-struct"><primary>GstWebrtcDsp</primary></indexterm>
+<programlisting language="C">typedef struct _GstWebrtcDsp GstWebrtcDsp;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-webrtcdsp.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstWebrtcDsp--echo-cancel" role="property"><title>The <literal>“echo-cancel”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--echo-cancel"><primary>GstWebrtcDsp:echo-cancel</primary></indexterm>
+<programlisting>  “echo-cancel”              <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable echo canceller.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--experimental-agc" role="property"><title>The <literal>“experimental-agc”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--experimental-agc"><primary>GstWebrtcDsp:experimental-agc</primary></indexterm>
+<programlisting>  “experimental-agc”         <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable experimental automatic gain control.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--extended-filter" role="property"><title>The <literal>“extended-filter”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--extended-filter"><primary>GstWebrtcDsp:extended-filter</primary></indexterm>
+<programlisting>  “extended-filter”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable the extended filter.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--gain-control" role="property"><title>The <literal>“gain-control”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--gain-control"><primary>GstWebrtcDsp:gain-control</primary></indexterm>
+<programlisting>  “gain-control”             <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable automatic digital gain control.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--high-pass-filter" role="property"><title>The <literal>“high-pass-filter”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--high-pass-filter"><primary>GstWebrtcDsp:high-pass-filter</primary></indexterm>
+<programlisting>  “high-pass-filter”         <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable high pass filtering.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--noise-suppression" role="property"><title>The <literal>“noise-suppression”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--noise-suppression"><primary>GstWebrtcDsp:noise-suppression</primary></indexterm>
+<programlisting>  “noise-suppression”        <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable noise suppression.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--probe" role="property"><title>The <literal>“probe”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--probe"><primary>GstWebrtcDsp:probe</primary></indexterm>
+<programlisting>  “probe”                    <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>The name of the webrtcechoprobe element that record the audio being played through loud speakers. Must be set before PAUSED state.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: &quot;webrtcechoprobe0&quot;</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--echo-suppression-level" role="property"><title>The <literal>“echo-suppression-level”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--echo-suppression-level"><primary>GstWebrtcDsp:echo-suppression-level</primary></indexterm>
+<programlisting>  “echo-suppression-level”   <link linkend="GstWebrtcEchoSuppressionLevel"><type>GstWebrtcEchoSuppressionLevel</type></link></programlisting>
+<para>Controls the aggressiveness of the suppressor. A higher level trades off double-talk performance for increased echo suppression.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Moderate Suppression</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--noise-suppression-level" role="property"><title>The <literal>“noise-suppression-level”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--noise-suppression-level"><primary>GstWebrtcDsp:noise-suppression-level</primary></indexterm>
+<programlisting>  “noise-suppression-level”  <link linkend="GstWebrtcNoiseSuppressionLevel"><type>GstWebrtcNoiseSuppressionLevel</type></link></programlisting>
+<para>Controls the aggressiveness of the suppression. Increasing the level will reduce the noise level at the expense of a higher speech distortion.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Moderate Suppression</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--delay-agnostic" role="property"><title>The <literal>“delay-agnostic”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--delay-agnostic"><primary>GstWebrtcDsp:delay-agnostic</primary></indexterm>
+<programlisting>  “delay-agnostic”           <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable the delay agnostic mode.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--compression-gain-db" role="property"><title>The <literal>“compression-gain-db”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--compression-gain-db"><primary>GstWebrtcDsp:compression-gain-db</primary></indexterm>
+<programlisting>  “compression-gain-db”      <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the maximum |gain| the digital compression stage may apply, in dB.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,90]</para>
+<para>Default value: 9</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--gain-control-mode" role="property"><title>The <literal>“gain-control-mode”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--gain-control-mode"><primary>GstWebrtcDsp:gain-control-mode</primary></indexterm>
+<programlisting>  “gain-control-mode”        <link linkend="GstWebrtcGainControlMode"><type>GstWebrtcGainControlMode</type></link></programlisting>
+<para>Controls the mode of the compression stage.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Adaptive Digital</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--limiter" role="property"><title>The <literal>“limiter”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--limiter"><primary>GstWebrtcDsp:limiter</primary></indexterm>
+<programlisting>  “limiter”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, the compression stage will hard limit the signal to the target level. Otherwise, the signal will be compressed but not limited above the target level.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--startup-min-volume" role="property"><title>The <literal>“startup-min-volume”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--startup-min-volume"><primary>GstWebrtcDsp:startup-min-volume</primary></indexterm>
+<programlisting>  “startup-min-volume”       <link linkend="gint"><type>gint</type></link></programlisting>
+<para>At startup the experimental AGC moves the microphone volume up to |startup_min_volume| if the current microphone volume is set too low. No effect if experimental-agc isn't enabled.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [12,255]</para>
+<para>Default value: 12</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--target-level-dbfs" role="property"><title>The <literal>“target-level-dbfs”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--target-level-dbfs"><primary>GstWebrtcDsp:target-level-dbfs</primary></indexterm>
+<programlisting>  “target-level-dbfs”        <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the target peak |level| (or envelope) of the gain control in dBFS (decibels from digital full-scale).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,31]</para>
+<para>Default value: 3</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--voice-detection" role="property"><title>The <literal>“voice-detection”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--voice-detection"><primary>GstWebrtcDsp:voice-detection</primary></indexterm>
+<programlisting>  “voice-detection”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable or disable the voice activity detector.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--voice-detection-frame-size-ms" role="property"><title>The <literal>“voice-detection-frame-size-ms”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--voice-detection-frame-size-ms"><primary>GstWebrtcDsp:voice-detection-frame-size-ms</primary></indexterm>
+<programlisting>  “voice-detection-frame-size-ms” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Sets the |size| of the frames in ms on which the VAD will operate. Larger frames will improve detection accuracy, but reduce the frequency of updates.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [10,30]</para>
+<para>Default value: 10</para>
+</refsect2>
+<refsect2 id="GstWebrtcDsp--voice-detection-likelihood" role="property"><title>The <literal>“voice-detection-likelihood”</literal> property</title>
+<indexterm zone="GstWebrtcDsp--voice-detection-likelihood"><primary>GstWebrtcDsp:voice-detection-likelihood</primary></indexterm>
+<programlisting>  “voice-detection-likelihood” <link linkend="GstWebrtcVoiceDetectionLikelihood"><type>GstWebrtcVoiceDetectionLikelihood</type></link></programlisting>
+<para>Specifies the likelihood that a frame will be declared to contain voice.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: Low Likelihood</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

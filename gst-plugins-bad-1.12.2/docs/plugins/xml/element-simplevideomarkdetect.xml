@@ -1,0 +1,193 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-simplevideomarkdetect">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-simplevideomarkdetect.top_of_page" role="top_of_page">simplevideomarkdetect</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>simplevideomarkdetect</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--bottom-offset">bottom-offset</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--left-offset">left-offset</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--message">message</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--pattern-center">pattern-center</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--pattern-count">pattern-count</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--pattern-data-count">pattern-data-count</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--pattern-height">pattern-height</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gdouble"><type>gdouble</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--pattern-sensitivity">pattern-sensitivity</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstSimpleVideoMarkDetect--pattern-width">pattern-width</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstSimpleVideoMarkDetect"/><refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstSimpleVideoMarkDetect-struct">GstSimpleVideoMarkDetect</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstSimpleVideoMarkDetect
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This plugin detects <link linkend="GstSimpleVideoMarkDetect--pattern-count"><type>“pattern-count”</type></link> squares in the bottom left
+corner of the video frames. The squares have a width and height of
+respectively <link linkend="GstSimpleVideoMarkDetect--pattern-width"><type>“pattern-width”</type></link> and <link linkend="GstSimpleVideoMarkDetect--pattern-height"><type>“pattern-height”</type></link>.
+Even squares must be black and odd squares must be white.</para>
+<para>When the pattern has been found, <link linkend="GstSimpleVideoMarkDetect--pattern-data-count"><type>“pattern-data-count”</type></link> squares
+after the pattern squares are read as a bitarray. White squares represent a 1
+bit and black squares a 0 bit. The bitarray will will included in the element
+message that is posted (see below).</para>
+<para>After the pattern has been found and the data pattern has been read, an
+element message called <literal>GstSimpleVideoMarkDetect</literal> will
+be posted on the bus. If the pattern is no longer found in the frame, the
+same element message is posted with the have-pattern field set to <link linkend="FALSE:CAPS"><type>FALSE</type></link>.
+The message is only posted if the <link linkend="GstSimpleVideoMarkDetect--message"><type>“message”</type></link> property is <link linkend="TRUE:CAPS"><type>TRUE</type></link>.</para>
+<para>The message's structure contains these fields:</para>
+<itemizedlist>
+<listitem>
+<para><link linkend="gboolean"><type>gboolean</type></link><literal>have-pattern</literal>: if the pattern was found. This field will be set to <link linkend="TRUE:CAPS"><type>TRUE</type></link> for as long as
+the pattern was found in the frame and set to FALSE for the first frame
+that does not contain the pattern anymore.</para>
+</listitem>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>timestamp</literal>: the timestamp of the buffer that triggered the message.</para>
+</listitem>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>stream-time</literal>: the stream time of the buffer.</para>
+</listitem>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>running-time</literal>: the running_time of the buffer.</para>
+</listitem>
+<listitem>
+<para><link linkend="GstClockTime"><type>GstClockTime</type></link> <literal>duration</literal>: the duration of the buffer.</para>
+</listitem>
+<listitem>
+<para><link linkend="guint64"><type>guint64</type></link> <literal>data</literal>: the data-pattern found after the pattern or 0 when have-signal is <link linkend="FALSE:CAPS"><type>FALSE</type></link>.</para>
+</listitem>
+</itemizedlist>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! simplevideomarkdetect ! videoconvert ! ximagesink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-simplevideomarkdetect-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstSimpleVideoMarkDetect-struct" role="struct">
+<title>struct GstSimpleVideoMarkDetect</title>
+<indexterm zone="GstSimpleVideoMarkDetect-struct"><primary>GstSimpleVideoMarkDetect</primary></indexterm>
+<programlisting language="C">struct GstSimpleVideoMarkDetect;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstSimpleVideoMarkDetect--bottom-offset" role="property"><title>The <literal>“bottom-offset”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--bottom-offset"><primary>GstSimpleVideoMarkDetect:bottom-offset</primary></indexterm>
+<programlisting>  “bottom-offset”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The offset from the bottom border where the pattern starts.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--left-offset" role="property"><title>The <literal>“left-offset”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--left-offset"><primary>GstSimpleVideoMarkDetect:left-offset</primary></indexterm>
+<programlisting>  “left-offset”              <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The offset from the left border where the pattern starts.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--message" role="property"><title>The <literal>“message”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--message"><primary>GstSimpleVideoMarkDetect:message</primary></indexterm>
+<programlisting>  “message”                  <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Post detected data as bus messages.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--pattern-center" role="property"><title>The <literal>“pattern-center”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--pattern-center"><primary>GstSimpleVideoMarkDetect:pattern-center</primary></indexterm>
+<programlisting>  “pattern-center”           <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>The center of the black/white separation (0.0 = lowest, 1.0 highest).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.5</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--pattern-count" role="property"><title>The <literal>“pattern-count”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--pattern-count"><primary>GstSimpleVideoMarkDetect:pattern-count</primary></indexterm>
+<programlisting>  “pattern-count”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The number of pattern markers.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 4</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--pattern-data-count" role="property"><title>The <literal>“pattern-data-count”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--pattern-data-count"><primary>GstSimpleVideoMarkDetect:pattern-data-count</primary></indexterm>
+<programlisting>  “pattern-data-count”       <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The number of extra data pattern markers.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 5</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--pattern-height" role="property"><title>The <literal>“pattern-height”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--pattern-height"><primary>GstSimpleVideoMarkDetect:pattern-height</primary></indexterm>
+<programlisting>  “pattern-height”           <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The height of the pattern markers.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--pattern-sensitivity" role="property"><title>The <literal>“pattern-sensitivity”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--pattern-sensitivity"><primary>GstSimpleVideoMarkDetect:pattern-sensitivity</primary></indexterm>
+<programlisting>  “pattern-sensitivity”      <link linkend="gdouble"><type>gdouble</type></link></programlisting>
+<para>The sensitivity around the center for detecting the markers (0.0 = lowest, 1.0 highest).</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.3</para>
+</refsect2>
+<refsect2 id="GstSimpleVideoMarkDetect--pattern-width" role="property"><title>The <literal>“pattern-width”</literal> property</title>
+<indexterm zone="GstSimpleVideoMarkDetect--pattern-width"><primary>GstSimpleVideoMarkDetect:pattern-width</primary></indexterm>
+<programlisting>  “pattern-width”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The width of the pattern markers.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 4</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-simplevideomarkdetect.see-also">
+<title>See Also</title>
+<para><link linkend="GstVideoMark"><type>GstVideoMark</type></link></para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,990 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstGLContext">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstGLContext.top_of_page">GstGLContext</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLContext</refname>
+<refpurpose>OpenGL context abstraction</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstGLContext.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GQuark"><returnvalue>GQuark</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-error-quark">gst_gl_context_error_quark</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLContextThreadFunc">*GstGLContextThreadFunc</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-context-new">gst_gl_context_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-context-new-wrapped">gst_gl_context_new_wrapped</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-create">gst_gl_context_create</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-destroy">gst_gl_context_destroy</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-activate">gst_gl_context_activate</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-default-get-proc-address">gst_gl_context_default_get_proc_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-proc-address">gst_gl_context_get_proc_address</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-proc-address-with-platform">gst_gl_context_get_proc_address_with_platform</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLWindow"><returnvalue>GstGLWindow</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-window">gst_gl_context_get_window</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-set-window">gst_gl_context_set_window</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-thread-add">gst_gl_context_thread_add</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLDisplay"><returnvalue>GstGLDisplay</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-display">gst_gl_context_get_display</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLAPI"><returnvalue>GstGLAPI</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-gl-api">gst_gl_context_get_gl_api</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-gl-context">gst_gl_context_get_gl_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLPlatform"><returnvalue>GstGLPlatform</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-gl-platform">gst_gl_context_get_gl_platform</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-gl-platform-version">gst_gl_context_get_gl_platform_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-current-gl-context">gst_gl_context_get_current_gl_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLAPI"><returnvalue>GstGLAPI</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-current-gl-api">gst_gl_context_get_current_gl_api</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GThread"><returnvalue>GThread</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-thread">gst_gl_context_get_thread</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-can-share">gst_gl_context_can_share</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-is-shared">gst_gl_context_is_shared</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-set-shared-with">gst_gl_context_set_shared_with</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-check-feature">gst_gl_context_check_feature</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-check-gl-version">gst_gl_context_check_gl_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-gl-version">gst_gl_context_get_gl_version</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-context-fill-info">gst_gl_context_fill_info</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-context-get-current">gst_gl_context_get_current</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLContext.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-CONTEXT-ERROR:CAPS">GST_GL_CONTEXT_ERROR</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLContextError">GstGLContextError</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLContext-struct">GstGLContext</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLContext.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLContext
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstGLContext.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="GstGLContext"><type>GstGLContext</type></link> wraps an OpenGL context object in a uniform API.  As a result
+of the limitation on OpenGL context, this object is not thread safe unless
+specified and must only be activated in a single thread.</para>
+
+</refsect1>
+<refsect1 id="GstGLContext.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-context-error-quark" role="function">
+<title>gst_gl_context_error_quark&#160;()</title>
+<indexterm zone="gst-gl-context-error-quark"><primary>gst_gl_context_error_quark</primary></indexterm>
+<programlisting language="C"><link linkend="GQuark"><returnvalue>GQuark</returnvalue></link>
+gst_gl_context_error_quark (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="GstGLContextThreadFunc" role="function">
+<title>GstGLContextThreadFunc&#160;()</title>
+<indexterm zone="GstGLContextThreadFunc"><primary>GstGLContextThreadFunc</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLContextThreadFunc<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                           <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>);</programlisting>
+<para>Represents a function to run in the GL thread with <parameter>context</parameter>
+ and <parameter>data</parameter>
+</para>
+<refsect3 id="GstGLContextThreadFunc.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para>user data</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-context-new" role="function" condition="since:1.4">
+<title>gst_gl_context_new&#160;()</title>
+<indexterm zone="gst-gl-context-new" role="1.4"><primary>gst_gl_context_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+gst_gl_context_new (<parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>);</programlisting>
+<para>Create a new <link linkend="GstGLContext"><type>GstGLContext</type></link> with the specified <parameter>display</parameter>
+</para>
+<refsect3 id="gst-gl-context-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>display</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-new-wrapped" role="function" condition="since:1.4">
+<title>gst_gl_context_new_wrapped&#160;()</title>
+<indexterm zone="gst-gl-context-new-wrapped" role="1.4"><primary>gst_gl_context_new_wrapped</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+gst_gl_context_new_wrapped (<parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>,
+                            <parameter><link linkend="guintptr"><type>guintptr</type></link> handle</parameter>,
+                            <parameter><link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> context_type</parameter>,
+                            <parameter><link linkend="GstGLAPI"><type>GstGLAPI</type></link> available_apis</parameter>);</programlisting>
+<para>Wraps an existing OpenGL context into a <link linkend="GstGLContext"><type>GstGLContext</type></link>.</para>
+<para>Note: The caller is responsible for ensuring that the OpenGL context
+represented by <parameter>handle</parameter>
+ stays alive while the returned <link linkend="GstGLContext"><type>GstGLContext</type></link> is
+active.</para>
+<refsect3 id="gst-gl-context-new-wrapped.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>display</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>handle</para></entry>
+<entry role="parameter_description"><para>the OpenGL context to wrap</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>context_type</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> specifying the type of context in <parameter>handle</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>available_apis</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAPI"><type>GstGLAPI</type></link> containing the available OpenGL apis in <parameter>handle</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-new-wrapped.returns" role="returns">
+<title>Returns</title>
+<para> a <link linkend="GstGLContext"><type>GstGLContext</type></link> wrapping <parameter>handle</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-create" role="function" condition="since:1.4">
+<title>gst_gl_context_create&#160;()</title>
+<indexterm zone="gst-gl-context-create" role="1.4"><primary>gst_gl_context_create</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_create (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                       <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *other_context</parameter>,
+                       <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Creates an OpenGL context with the specified <parameter>other_context</parameter>
+ as a context
+to share shareable OpenGL objects with.  See the OpenGL specification for
+what is shared between OpenGL contexts.</para>
+<para>If an error occurs, and <parameter>error</parameter>
+ is not <link linkend="NULL:CAPS"><literal>NULL</literal></link>, then error will contain details
+of the error and <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> will be returned.</para>
+<para>Should only be called once.</para>
+<refsect3 id="gst-gl-context-create.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link>:</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>other_context</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstGLContext"><type>GstGLContext</type></link> to share OpenGL objects with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GError"><type>GError</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-create.returns" role="returns">
+<title>Returns</title>
+<para> whether the context could successfully be created</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-destroy" role="function" condition="since:1.6">
+<title>gst_gl_context_destroy&#160;()</title>
+<indexterm zone="gst-gl-context-destroy" role="1.6"><primary>gst_gl_context_destroy</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_context_destroy (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Destroys an OpenGL context.</para>
+<para>Should only be called after <link linkend="gst-gl-context-create"><function>gst_gl_context_create()</function></link> has been successfully
+called for this context.</para>
+<refsect3 id="gst-gl-context-destroy.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link>:</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-context-activate" role="function" condition="since:1.4">
+<title>gst_gl_context_activate&#160;()</title>
+<indexterm zone="gst-gl-context-activate" role="1.4"><primary>gst_gl_context_activate</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_activate (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                         <parameter><link linkend="gboolean"><type>gboolean</type></link> activate</parameter>);</programlisting>
+<para>(De)activate the OpenGL context represented by this <parameter>context</parameter>
+.</para>
+<para>In OpenGL terms, calls eglMakeCurrent or similar with this context and the
+currently set window.  See <link linkend="gst-gl-context-set-window"><function>gst_gl_context_set_window()</function></link> for details.</para>
+<refsect3 id="gst-gl-context-activate.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>activate</para></entry>
+<entry role="parameter_description"><para><link linkend="TRUE:CAPS"><literal>TRUE</literal></link> to activate, <link linkend="FALSE:CAPS"><literal>FALSE</literal></link> to deactivate</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-activate.returns" role="returns">
+<title>Returns</title>
+<para> Whether the activation succeeded</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-default-get-proc-address" role="function" condition="since:1.4">
+<title>gst_gl_context_default_get_proc_address&#160;()</title>
+<indexterm zone="gst-gl-context-default-get-proc-address" role="1.4"><primary>gst_gl_context_default_get_proc_address</primary></indexterm>
+<programlisting language="C"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+gst_gl_context_default_get_proc_address
+                               (<parameter><link linkend="GstGLAPI"><type>GstGLAPI</type></link> gl_api</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+<para>A default implementation of the various GetProcAddress functions that looks
+for <parameter>name</parameter>
+ in the OpenGL shared libraries or in the current process.</para>
+<para>See also: <link linkend="gst-gl-context-get-proc-address"><function>gst_gl_context_get_proc_address()</function></link></para>
+<refsect3 id="gst-gl-context-default-get-proc-address.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_api</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAPI"><type>GstGLAPI</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>then function to get the address of</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-default-get-proc-address.returns" role="returns">
+<title>Returns</title>
+<para> an address pointing to <parameter>name</parameter>
+or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-proc-address" role="function" condition="since:1.4">
+<title>gst_gl_context_get_proc_address&#160;()</title>
+<indexterm zone="gst-gl-context-get-proc-address" role="1.4"><primary>gst_gl_context_get_proc_address</primary></indexterm>
+<programlisting language="C"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+gst_gl_context_get_proc_address (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                 <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+<para>Get a function pointer to a specified opengl function, <parameter>name</parameter>
+.  If the the
+specific function does not exist, NULL is returned instead.</para>
+<para>Platform specfic functions (names starting 'egl', 'glX', 'wgl', etc) can also
+be retrieved using this method.</para>
+<para>Note: This function may return valid function pointers that may not be valid
+to call in <parameter>context</parameter>
+.  The caller is responsible for ensuring that the
+returned function is a valid function to call in <parameter>context</parameter>
+ by either checking
+the OpenGL API and version or for an appropriate OpenGL extension.</para>
+<para>Note: On success, you need to cast the returned function pointer to the
+correct type to be able to call it correctly.  On 32-bit Windows, this will
+include the <link linkend="GSTGLAPI:CAPS"><literal>GSTGLAPI</literal></link> identifier to use the correct calling convention.
+e.g. void (GSTGLAPI *PFN_glGetIntegerv) (GLenum name, GLint * ret)</para>
+<refsect3 id="gst-gl-context-get-proc-address.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>an opengl function name</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-proc-address.returns" role="returns">
+<title>Returns</title>
+<para> a function pointer or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-proc-address-with-platform" role="function" condition="since:1.6">
+<title>gst_gl_context_get_proc_address_with_platform&#160;()</title>
+<indexterm zone="gst-gl-context-get-proc-address-with-platform" role="1.6"><primary>gst_gl_context_get_proc_address_with_platform</primary></indexterm>
+<programlisting language="C"><link linkend="gpointer"><returnvalue>gpointer</returnvalue></link>
+gst_gl_context_get_proc_address_with_platform
+                               (<parameter><link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> context_type</parameter>,
+                                <parameter><link linkend="GstGLAPI"><type>GstGLAPI</type></link> gl_api</parameter>,
+                                <parameter>const <link linkend="gchar"><type>gchar</type></link> *name</parameter>);</programlisting>
+<para>Attempts to use the <parameter>context_type</parameter>
+ specific GetProcAddress implementations
+to retreive <parameter>name</parameter>
+.</para>
+<para>See also <link linkend="gst-gl-context-get-proc-address"><function>gst_gl_context_get_proc_address()</function></link>.</para>
+<refsect3 id="gst-gl-context-get-proc-address-with-platform.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context_type</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLPlatform"><type>GstGLPlatform</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>gl_api</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLAPI"><type>GstGLAPI</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>name</para></entry>
+<entry role="parameter_description"><para>the name of the function to retrieve</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-proc-address-with-platform.returns" role="returns">
+<title>Returns</title>
+<para> a function pointer for <parameter>name</parameter>
+, or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-window" role="function" condition="since:1.4">
+<title>gst_gl_context_get_window&#160;()</title>
+<indexterm zone="gst-gl-context-get-window" role="1.4"><primary>gst_gl_context_get_window</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLWindow"><returnvalue>GstGLWindow</returnvalue></link>&#160;*
+gst_gl_context_get_window (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<refsect3 id="gst-gl-context-get-window.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-window.returns" role="returns">
+<title>Returns</title>
+<para> the currently set window. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>][<acronym>nullable</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-set-window" role="function" condition="since:1.4">
+<title>gst_gl_context_set_window&#160;()</title>
+<indexterm zone="gst-gl-context-set-window" role="1.4"><primary>gst_gl_context_set_window</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_set_window (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                           <parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<para>Set's the current window on <parameter>context</parameter>
+ to <parameter>window</parameter>
+.  The window can only be
+changed before <link linkend="gst-gl-context-create"><function>gst_gl_context_create()</function></link> has been called and the <parameter>window</parameter>
+ is not
+already running.</para>
+<refsect3 id="gst-gl-context-set-window.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstGLWindow"><type>GstGLWindow</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-set-window.returns" role="returns">
+<title>Returns</title>
+<para> Whether the window was successfully updated</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-thread-add" role="function" condition="since:1.4">
+<title>gst_gl_context_thread_add&#160;()</title>
+<indexterm zone="gst-gl-context-thread-add" role="1.4"><primary>gst_gl_context_thread_add</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_context_thread_add (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                           <parameter><link linkend="GstGLContextThreadFunc"><type>GstGLContextThreadFunc</type></link> func</parameter>,
+                           <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>);</programlisting>
+<para>Execute <parameter>func</parameter>
+ in the OpenGL thread of <parameter>context</parameter>
+ with <parameter>data</parameter>
+</para>
+<para>MT-safe</para>
+<refsect3 id="gst-gl-context-thread-add.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>func</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GstGLContextThreadFunc"><type>GstGLContextThreadFunc</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope call</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>func</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-display" role="function" condition="since:1.4">
+<title>gst_gl_context_get_display&#160;()</title>
+<indexterm zone="gst-gl-context-get-display" role="1.4"><primary>gst_gl_context_get_display</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLDisplay"><returnvalue>GstGLDisplay</returnvalue></link>&#160;*
+gst_gl_context_get_display (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<refsect3 id="gst-gl-context-get-display.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link>:</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-display.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> associated with this <parameter>context</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-gl-api" role="function" condition="since:1.4">
+<title>gst_gl_context_get_gl_api&#160;()</title>
+<indexterm zone="gst-gl-context-get-gl-api" role="1.4"><primary>gst_gl_context_get_gl_api</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLAPI"><returnvalue>GstGLAPI</returnvalue></link>
+gst_gl_context_get_gl_api (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Get the currently enabled OpenGL api.</para>
+<para>The currently available API may be limited by the <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> in use and/or
+the <link linkend="GstGLWindow"><type>GstGLWindow</type></link> chosen.</para>
+<refsect3 id="gst-gl-context-get-gl-api.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-gl-api.returns" role="returns">
+<title>Returns</title>
+<para> the available OpenGL api</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-gl-context" role="function" condition="since:1.4">
+<title>gst_gl_context_get_gl_context&#160;()</title>
+<indexterm zone="gst-gl-context-get-gl-context" role="1.4"><primary>gst_gl_context_get_gl_context</primary></indexterm>
+<programlisting language="C"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+gst_gl_context_get_gl_context (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Gets the backing OpenGL context used by <parameter>context</parameter>
+.</para>
+<refsect3 id="gst-gl-context-get-gl-context.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link>:</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-gl-context.returns" role="returns">
+<title>Returns</title>
+<para> The platform specific backing OpenGL context</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-gl-platform" role="function" condition="since:1.4">
+<title>gst_gl_context_get_gl_platform&#160;()</title>
+<indexterm zone="gst-gl-context-get-gl-platform" role="1.4"><primary>gst_gl_context_get_gl_platform</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLPlatform"><returnvalue>GstGLPlatform</returnvalue></link>
+gst_gl_context_get_gl_platform (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<para>Gets the OpenGL platform that used by <parameter>context</parameter>
+.</para>
+<refsect3 id="gst-gl-context-get-gl-platform.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link>:</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-gl-platform.returns" role="returns">
+<title>Returns</title>
+<para> The platform specific backing OpenGL context</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-gl-platform-version" role="function">
+<title>gst_gl_context_get_gl_platform_version&#160;()</title>
+<indexterm zone="gst-gl-context-get-gl-platform-version"><primary>gst_gl_context_get_gl_platform_version</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_context_get_gl_platform_version
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *major</parameter>,
+                                <parameter><link linkend="gint"><type>gint</type></link> *minor</parameter>);</programlisting>
+<para>Get the version of the OpenGL platform (GLX, EGL, etc) used.  Only valid
+after a call to <link linkend="gst-gl-context-create-context"><function>gst_gl_context_create_context()</function></link>.</para>
+<refsect3 id="gst-gl-context-get-gl-platform-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>major</para></entry>
+<entry role="parameter_description"><para> return for the major version. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>minor</para></entry>
+<entry role="parameter_description"><para> return for the minor version. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-context-get-current-gl-context" role="function" condition="since:1.6">
+<title>gst_gl_context_get_current_gl_context&#160;()</title>
+<indexterm zone="gst-gl-context-get-current-gl-context" role="1.6"><primary>gst_gl_context_get_current_gl_context</primary></indexterm>
+<programlisting language="C"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+gst_gl_context_get_current_gl_context (<parameter><link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> context_type</parameter>);</programlisting>
+<refsect3 id="gst-gl-context-get-current-gl-context.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context_type</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> specifying the type of context to retrieve</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-current-gl-context.returns" role="returns">
+<title>Returns</title>
+<para> The OpenGL context handle current in the calling thread or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-current-gl-api" role="function" condition="since:1.6">
+<title>gst_gl_context_get_current_gl_api&#160;()</title>
+<indexterm zone="gst-gl-context-get-current-gl-api" role="1.6"><primary>gst_gl_context_get_current_gl_api</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLAPI"><returnvalue>GstGLAPI</returnvalue></link>
+gst_gl_context_get_current_gl_api (<parameter><link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> platform</parameter>,
+                                   <parameter><link linkend="guint"><type>guint</type></link> *major</parameter>,
+                                   <parameter><link linkend="guint"><type>guint</type></link> *minor</parameter>);</programlisting>
+<para>If an error occurs, <parameter>major</parameter>
+ and <parameter>minor</parameter>
+ are not modified and <link linkend="GST-GL-API-NONE:CAPS"><literal>GST_GL_API_NONE</literal></link> is
+returned.</para>
+<refsect3 id="gst-gl-context-get-current-gl-api.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>platform</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLPlatform"><type>GstGLPlatform</type></link> to retrieve the API for</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>major</para></entry>
+<entry role="parameter_description"><para> the major version. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>minor</para></entry>
+<entry role="parameter_description"><para> the minor version. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>][<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-current-gl-api.returns" role="returns">
+<title>Returns</title>
+<para> The version supported by the OpenGL context current in the calling
+thread or <link linkend="GST-GL-API-NONE:CAPS"><literal>GST_GL_API_NONE</literal></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-thread" role="function" condition="since:1.6">
+<title>gst_gl_context_get_thread&#160;()</title>
+<indexterm zone="gst-gl-context-get-thread" role="1.6"><primary>gst_gl_context_get_thread</primary></indexterm>
+<programlisting language="C"><link linkend="GThread"><returnvalue>GThread</returnvalue></link>&#160;*
+gst_gl_context_get_thread (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<refsect3 id="gst-gl-context-get-thread.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-get-thread.returns" role="returns">
+<title>Returns</title>
+<para> The <link linkend="GThread"><type>GThread</type></link>, <parameter>context</parameter>
+is current in or NULL. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-context-can-share" role="function" condition="since:1.6">
+<title>gst_gl_context_can_share&#160;()</title>
+<indexterm zone="gst-gl-context-can-share" role="1.6"><primary>gst_gl_context_can_share</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_can_share (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                          <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *other_context</parameter>);</programlisting>
+<para>Note: This will always fail for two wrapped <link linkend="GstGLContext"><type>GstGLContext</type></link>'s</para>
+<refsect3 id="gst-gl-context-can-share.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>other_context</para></entry>
+<entry role="parameter_description"><para>another <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-can-share.returns" role="returns">
+<title>Returns</title>
+<para> whether <parameter>context</parameter>
+and <parameter>other_context</parameter>
+are able to share OpenGL
+resources.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-context-is-shared" role="function" condition="since:1.8">
+<title>gst_gl_context_is_shared&#160;()</title>
+<indexterm zone="gst-gl-context-is-shared" role="1.8"><primary>gst_gl_context_is_shared</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_is_shared (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>);</programlisting>
+<refsect3 id="gst-gl-context-is-shared.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-is-shared.returns" role="returns">
+<title>Returns</title>
+<para> Whether the <link linkend="GstGLContext"><type>GstGLContext</type></link> has been shared with another <link linkend="GstGLContext"><type>GstGLContext</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-context-set-shared-with" role="function" condition="since:1.8">
+<title>gst_gl_context_set_shared_with&#160;()</title>
+<indexterm zone="gst-gl-context-set-shared-with" role="1.8"><primary>gst_gl_context_set_shared_with</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_context_set_shared_with (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *share</parameter>);</programlisting>
+<para>Will internally set <parameter>context</parameter>
+ as shared with <parameter>share</parameter>
+</para>
+<refsect3 id="gst-gl-context-set-shared-with.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a wrapped <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>share</para></entry>
+<entry role="parameter_description"><para>another <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="gst-gl-context-check-feature" role="function" condition="since:1.4">
+<title>gst_gl_context_check_feature&#160;()</title>
+<indexterm zone="gst-gl-context-check-feature" role="1.4"><primary>gst_gl_context_check_feature</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_check_feature (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                              <parameter>const <link linkend="gchar"><type>gchar</type></link> *feature</parameter>);</programlisting>
+<para>Check for an OpenGL <parameter>feature</parameter>
+ being supported.</para>
+<para>Note: Most features require that the context be created before it is
+possible to determine their existence and so will fail if that is not the
+case.</para>
+<refsect3 id="gst-gl-context-check-feature.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>feature</para></entry>
+<entry role="parameter_description"><para>a platform specific feature</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-check-feature.returns" role="returns">
+<title>Returns</title>
+<para> Whether <parameter>feature</parameter>
+is supported by <parameter>context</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-check-gl-version" role="function" condition="since:1.4">
+<title>gst_gl_context_check_gl_version&#160;()</title>
+<indexterm zone="gst-gl-context-check-gl-version" role="1.4"><primary>gst_gl_context_check_gl_version</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_check_gl_version (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                 <parameter><link linkend="GstGLAPI"><type>GstGLAPI</type></link> api</parameter>,
+                                 <parameter><link linkend="gint"><type>gint</type></link> maj</parameter>,
+                                 <parameter><link linkend="gint"><type>gint</type></link> min</parameter>);</programlisting>
+<refsect3 id="gst-gl-context-check-gl-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>api</para></entry>
+<entry role="parameter_description"><para>api type required</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>maj</para></entry>
+<entry role="parameter_description"><para>major version required</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>min</para></entry>
+<entry role="parameter_description"><para>minor version required</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-context-check-gl-version.returns" role="returns">
+<title>Returns</title>
+<para> whether OpenGL context implements the required api and specified
+version.</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-gl-version" role="function" condition="since:1.4">
+<title>gst_gl_context_get_gl_version&#160;()</title>
+<indexterm zone="gst-gl-context-get-gl-version" role="1.4"><primary>gst_gl_context_get_gl_version</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_context_get_gl_version (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> *maj</parameter>,
+                               <parameter><link linkend="gint"><type>gint</type></link> *min</parameter>);</programlisting>
+<para>Returns the OpenGL version implemented by <parameter>context</parameter>
+.  See
+<link linkend="gst-gl-context-get-gl-api"><function>gst_gl_context_get_gl_api()</function></link> for retreiving the OpenGL api implemented by
+<parameter>context</parameter>
+.</para>
+<refsect3 id="gst-gl-context-get-gl-version.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>maj</para></entry>
+<entry role="parameter_description"><para> resulting major version. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>min</para></entry>
+<entry role="parameter_description"><para> resulting minor version. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-context-fill-info" role="function" condition="since:1.6">
+<title>gst_gl_context_fill_info&#160;()</title>
+<indexterm zone="gst-gl-context-fill-info" role="1.6"><primary>gst_gl_context_fill_info</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_context_fill_info (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                          <parameter><link linkend="GError"><type>GError</type></link> **error</parameter>);</programlisting>
+<para>Fills <parameter>context</parameter>
+'s info (version, extensions, vtable, etc) from the GL
+context in the current thread.  Typically used with wrapped contexts to
+allow wrapped contexts to be used as regular <link linkend="GstGLContext"><type>GstGLContext</type></link>'s.</para>
+<refsect3 id="gst-gl-context-fill-info.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link>:</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>error</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GError"><type>GError</type></link> to fill on failure. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-context-get-current" role="function" condition="since:1.6">
+<title>gst_gl_context_get_current&#160;()</title>
+<indexterm zone="gst-gl-context-get-current" role="1.6"><primary>gst_gl_context_get_current</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+gst_gl_context_get_current (<parameter><type>void</type></parameter>);</programlisting>
+<para>See also <link linkend="gst-gl-context-activate"><function>gst_gl_context_activate()</function></link>.</para>
+<refsect3 id="gst-gl-context-get-current.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLContext"><type>GstGLContext</type></link> active in the current thread or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer none</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="GstGLContext.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GST-GL-CONTEXT-ERROR:CAPS" role="macro">
+<title>GST_GL_CONTEXT_ERROR</title>
+<indexterm zone="GST-GL-CONTEXT-ERROR:CAPS"><primary>GST_GL_CONTEXT_ERROR</primary></indexterm>
+<programlisting language="C">#define GST_GL_CONTEXT_ERROR (gst_gl_context_error_quark ())
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLContextError" role="enum">
+<title>enum GstGLContextError</title>
+<indexterm zone="GstGLContextError"><primary>GstGLContextError</primary></indexterm>
+<para>OpenGL context errors.</para>
+<refsect3 id="GstGLContextError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-CONTEXT-ERROR-FAILED:CAPS">GST_GL_CONTEXT_ERROR_FAILED</para></entry>
+<entry role="enum_member_description"><para>Failed for an unspecified reason</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-CONTEXT-ERROR-WRONG-CONFIG:CAPS">GST_GL_CONTEXT_ERROR_WRONG_CONFIG</para></entry>
+<entry role="enum_member_description"><para>The configuration requested is not correct</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-CONTEXT-ERROR-WRONG-API:CAPS">GST_GL_CONTEXT_ERROR_WRONG_API</para></entry>
+<entry role="enum_member_description"><para>The OpenGL API requested is not correct</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-CONTEXT-ERROR-OLD-LIBS:CAPS">GST_GL_CONTEXT_ERROR_OLD_LIBS</para></entry>
+<entry role="enum_member_description"><para>The OpenGL libraries are too old</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-CONTEXT-ERROR-CREATE-CONTEXT:CAPS">GST_GL_CONTEXT_ERROR_CREATE_CONTEXT</para></entry>
+<entry role="enum_member_description"><para>glXCreateContext (or similar) failed</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-CONTEXT-ERROR-RESOURCE-UNAVAILABLE:CAPS">GST_GL_CONTEXT_ERROR_RESOURCE_UNAVAILABLE</para></entry>
+<entry role="enum_member_description"><para>A resource is not available</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GstGLContext-struct" role="struct">
+<title>GstGLContext</title>
+<indexterm zone="GstGLContext-struct"><primary>GstGLContext</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLFuncs *gl_vtable;
+} GstGLContext;
+</programlisting>
+<para>Opaque <link linkend="GstGLContext"><type>GstGLContext</type></link> object</para>
+<refsect3 id="GstGLContext.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLFuncs"><type>GstGLFuncs</type></link>&#160;*<structfield id="GstGLContext-struct.gl-vtable">gl_vtable</structfield>;</para></entry>
+<entry role="struct_member_description"><para>a list of OpenGL function pointers</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLContext.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link>, <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para>
+
+</refsect1>
+
+</refentry>

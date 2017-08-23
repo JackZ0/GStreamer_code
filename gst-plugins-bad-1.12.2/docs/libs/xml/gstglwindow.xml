@@ -1,0 +1,880 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstGLWindow">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstGLWindow.top_of_page">GstGLWindow</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLWindow</refname>
+<refpurpose>window/surface abstraction</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstGLWindow.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GQuark"><returnvalue>GQuark</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-error-quark">gst_gl_window_error_quark</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLWindowResizeCB">*GstGLWindowResizeCB</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-WINDOW-RESIZE-CB:CAPS">GST_GL_WINDOW_RESIZE_CB</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><phrase role="c_punctuation">(</phrase><link linkend="GstGLWindowCB">*GstGLWindowCB</link><phrase role="c_punctuation">)</phrase>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-WINDOW-CB:CAPS">GST_GL_WINDOW_CB</link><phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLWindow"><returnvalue>GstGLWindow</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-window-new">gst_gl_window_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-draw">gst_gl_window_draw</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-quit">gst_gl_window_quit</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-run">gst_gl_window_run</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-window-get-context">gst_gl_window_get_context</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-get-display">gst_gl_window_get_display</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-send-message">gst_gl_window_send_message</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-send-message-async">gst_gl_window_send_message_async</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-set-close-callback">gst_gl_window_set_close_callback</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-set-draw-callback">gst_gl_window_set_draw_callback</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-set-resize-callback">gst_gl_window_set_resize_callback</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-set-window-handle">gst_gl_window_set_window_handle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-get-window-handle">gst_gl_window_get_window_handle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-set-preferred-size">gst_gl_window_set_preferred_size</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-show">gst_gl_window_show</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-get-surface-dimensions">gst_gl_window_get_surface_dimensions</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-handle-events">gst_gl_window_handle_events</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-queue-resize">gst_gl_window_queue_resize</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-resize">gst_gl_window_resize</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-window-set-render-rectangle">gst_gl_window_set_render_rectangle</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLWindow.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstGLWindow-key-event">key-event</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstGLWindow-mouse-event">mouse-event</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLWindow.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLWindowError">GstGLWindowError</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-WINDOW-ERROR:CAPS">GST_GL_WINDOW_ERROR</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLWindow-struct">GstGLWindow</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLWindowClass">GstGLWindowClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLWindow.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLWindow
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstGLWindow.description" role="desc">
+<title role="desc.title">Description</title>
+<para>GstGLWindow represents a window that elements can render into.  A window can
+either be a user visible window (onscreen) or hidden (offscreen).</para>
+
+</refsect1>
+<refsect1 id="GstGLWindow.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-window-error-quark" role="function">
+<title>gst_gl_window_error_quark&#160;()</title>
+<indexterm zone="gst-gl-window-error-quark"><primary>gst_gl_window_error_quark</primary></indexterm>
+<programlisting language="C"><link linkend="GQuark"><returnvalue>GQuark</returnvalue></link>
+gst_gl_window_error_quark (<parameter><type>void</type></parameter>);</programlisting>
+</refsect2>
+<refsect2 id="GstGLWindowResizeCB" role="function">
+<title>GstGLWindowResizeCB&#160;()</title>
+<indexterm zone="GstGLWindowResizeCB"><primary>GstGLWindowResizeCB</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLWindowResizeCB<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>,
+                        <parameter><link linkend="guint"><type>guint</type></link> width</parameter>,
+                        <parameter><link linkend="guint"><type>guint</type></link> height</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="GST-GL-WINDOW-RESIZE-CB:CAPS" role="macro">
+<title>GST_GL_WINDOW_RESIZE_CB()</title>
+<indexterm zone="GST-GL-WINDOW-RESIZE-CB:CAPS"><primary>GST_GL_WINDOW_RESIZE_CB</primary></indexterm>
+<programlisting language="C">#define&#160;GST_GL_WINDOW_RESIZE_CB(f)		 ((GstGLWindowResizeCB) (f))
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLWindowCB" role="function">
+<title>GstGLWindowCB&#160;()</title>
+<indexterm zone="GstGLWindowCB"><primary>GstGLWindowCB</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+<phrase role="c_punctuation">(</phrase>*GstGLWindowCB<phrase role="c_punctuation">)</phrase> (<parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="GST-GL-WINDOW-CB:CAPS" role="macro">
+<title>GST_GL_WINDOW_CB()</title>
+<indexterm zone="GST-GL-WINDOW-CB:CAPS"><primary>GST_GL_WINDOW_CB</primary></indexterm>
+<programlisting language="C">#define&#160;GST_GL_WINDOW_CB(f)			 ((GstGLWindowCB) (f))
+</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-window-new" role="function" condition="since:1.4">
+<title>gst_gl_window_new&#160;()</title>
+<indexterm zone="gst-gl-window-new" role="1.4"><primary>gst_gl_window_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLWindow"><returnvalue>GstGLWindow</returnvalue></link>&#160;*
+gst_gl_window_new (<parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>);</programlisting>
+<refsect3 id="gst-gl-window-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>display</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-window-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLWindow"><type>GstGLWindow</type></link> using <parameter>display</parameter>
+'s connection. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-draw" role="function" condition="since:1.4">
+<title>gst_gl_window_draw&#160;()</title>
+<indexterm zone="gst-gl-window-draw" role="1.4"><primary>gst_gl_window_draw</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_draw (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<para>Redraw the window contents.  Implementations should invoke the draw callback.</para>
+<refsect3 id="gst-gl-window-draw.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-quit" role="function" condition="since:1.4">
+<title>gst_gl_window_quit&#160;()</title>
+<indexterm zone="gst-gl-window-quit" role="1.4"><primary>gst_gl_window_quit</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_quit (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<para>Quit the runloop's execution.</para>
+<refsect3 id="gst-gl-window-quit.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-run" role="function" condition="since:1.4">
+<title>gst_gl_window_run&#160;()</title>
+<indexterm zone="gst-gl-window-run" role="1.4"><primary>gst_gl_window_run</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_run (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<para>Start the execution of the runloop.</para>
+<refsect3 id="gst-gl-window-run.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-get-context" role="function" condition="since:1.4">
+<title>gst_gl_window_get_context&#160;()</title>
+<indexterm zone="gst-gl-window-get-context" role="1.4"><primary>gst_gl_window_get_context</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLContext"><returnvalue>GstGLContext</returnvalue></link>&#160;*
+gst_gl_window_get_context (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<refsect3 id="gst-gl-window-get-context.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-window-get-context.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLContext"><type>GstGLContext</type></link> associated with this <parameter>window</parameter>
+. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-get-display" role="function" condition="since:1.4">
+<title>gst_gl_window_get_display&#160;()</title>
+<indexterm zone="gst-gl-window-get-display" role="1.4"><primary>gst_gl_window_get_display</primary></indexterm>
+<programlisting language="C"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+gst_gl_window_get_display (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<refsect3 id="gst-gl-window-get-display.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-window-get-display.returns" role="returns">
+<title>Returns</title>
+<para> the windowing system display handle for this <parameter>window</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-send-message" role="function" condition="since:1.4">
+<title>gst_gl_window_send_message&#160;()</title>
+<indexterm zone="gst-gl-window-send-message" role="1.4"><primary>gst_gl_window_send_message</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_send_message (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                            <parameter><link linkend="GstGLWindowCB"><type>GstGLWindowCB</type></link> callback</parameter>,
+                            <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>);</programlisting>
+<para>Invoke <parameter>callback</parameter>
+ with data on the window thread.  <parameter>callback</parameter>
+ is guarenteed to
+have executed when this function returns.</para>
+<refsect3 id="gst-gl-window-send-message.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> function to invoke. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> data to invoke <parameter>callback</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-send-message-async" role="function" condition="since:1.4">
+<title>gst_gl_window_send_message_async&#160;()</title>
+<indexterm zone="gst-gl-window-send-message-async" role="1.4"><primary>gst_gl_window_send_message_async</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_send_message_async (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                  <parameter><link linkend="GstGLWindowCB"><type>GstGLWindowCB</type></link> callback</parameter>,
+                                  <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>,
+                                  <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> destroy</parameter>);</programlisting>
+<para>Invoke <parameter>callback</parameter>
+ with <parameter>data</parameter>
+ on the window thread.  The callback may not
+have been executed when this function returns.</para>
+<refsect3 id="gst-gl-window-send-message-async.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> function to invoke. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope async</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> data to invoke <parameter>callback</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>destroy</para></entry>
+<entry role="parameter_description"><para>called when <parameter>data</parameter>
+is not needed anymore</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-set-close-callback" role="function" condition="since:1.4">
+<title>gst_gl_window_set_close_callback&#160;()</title>
+<indexterm zone="gst-gl-window-set-close-callback" role="1.4"><primary>gst_gl_window_set_close_callback</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_set_close_callback (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                  <parameter><link linkend="GstGLWindowCB"><type>GstGLWindowCB</type></link> callback</parameter>,
+                                  <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>,
+                                  <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> destroy_notify</parameter>);</programlisting>
+<para>Sets the callback called when the window is about to close.</para>
+<refsect3 id="gst-gl-window-set-close-callback.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> function to invoke. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope notified</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> data to invoke <parameter>callback</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>destroy_notify</para></entry>
+<entry role="parameter_description"><para>called when <parameter>data</parameter>
+is not needed any more</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-set-draw-callback" role="function" condition="since:1.4">
+<title>gst_gl_window_set_draw_callback&#160;()</title>
+<indexterm zone="gst-gl-window-set-draw-callback" role="1.4"><primary>gst_gl_window_set_draw_callback</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_set_draw_callback (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                 <parameter><link linkend="GstGLWindowCB"><type>GstGLWindowCB</type></link> callback</parameter>,
+                                 <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>,
+                                 <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> destroy_notify</parameter>);</programlisting>
+<para>Sets the draw callback called everytime <link linkend="gst-gl-window-draw"><function>gst_gl_window_draw()</function></link> is called</para>
+<refsect3 id="gst-gl-window-set-draw-callback.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> function to invoke. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope notified</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> data to invoke <parameter>callback</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>destroy_notify</para></entry>
+<entry role="parameter_description"><para>called when <parameter>data</parameter>
+is not needed any more</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-set-resize-callback" role="function" condition="since:1.4">
+<title>gst_gl_window_set_resize_callback&#160;()</title>
+<indexterm zone="gst-gl-window-set-resize-callback" role="1.4"><primary>gst_gl_window_set_resize_callback</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_set_resize_callback (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                   <parameter><link linkend="GstGLWindowResizeCB"><type>GstGLWindowResizeCB</type></link> callback</parameter>,
+                                   <parameter><link linkend="gpointer"><type>gpointer</type></link> data</parameter>,
+                                   <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> destroy_notify</parameter>);</programlisting>
+<para>Sets the resize callback called everytime a resize of the window occurs.</para>
+<refsect3 id="gst-gl-window-set-resize-callback.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>callback</para></entry>
+<entry role="parameter_description"><para> function to invoke. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>scope notified</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>data</para></entry>
+<entry role="parameter_description"><para> data to invoke <parameter>callback</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>closure</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>destroy_notify</para></entry>
+<entry role="parameter_description"><para>called when <parameter>data</parameter>
+is not needed any more</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-set-window-handle" role="function" condition="since:1.4">
+<title>gst_gl_window_set_window_handle&#160;()</title>
+<indexterm zone="gst-gl-window-set-window-handle" role="1.4"><primary>gst_gl_window_set_window_handle</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_set_window_handle (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                 <parameter><link linkend="guintptr"><type>guintptr</type></link> handle</parameter>);</programlisting>
+<para>Sets the window that this <parameter>window</parameter>
+ should render into.  Some implementations
+require this to be called with a valid handle before drawing can commence.</para>
+<refsect3 id="gst-gl-window-set-window-handle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>handle</para></entry>
+<entry role="parameter_description"><para>handle to the window</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-get-window-handle" role="function" condition="since:1.4">
+<title>gst_gl_window_get_window_handle&#160;()</title>
+<indexterm zone="gst-gl-window-get-window-handle" role="1.4"><primary>gst_gl_window_get_window_handle</primary></indexterm>
+<programlisting language="C"><link linkend="guintptr"><returnvalue>guintptr</returnvalue></link>
+gst_gl_window_get_window_handle (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<refsect3 id="gst-gl-window-get-window-handle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-window-get-window-handle.returns" role="returns">
+<title>Returns</title>
+<para> the window handle we are currently rendering into</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.4">1.4</link></para></refsect2>
+<refsect2 id="gst-gl-window-set-preferred-size" role="function" condition="since:1.6">
+<title>gst_gl_window_set_preferred_size&#160;()</title>
+<indexterm zone="gst-gl-window-set-preferred-size" role="1.6"><primary>gst_gl_window_set_preferred_size</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_set_preferred_size (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                  <parameter><link linkend="gint"><type>gint</type></link> width</parameter>,
+                                  <parameter><link linkend="gint"><type>gint</type></link> height</parameter>);</programlisting>
+<para>Set the preferred width and height of the window.  Implementations are free
+to ignore this information.</para>
+<refsect3 id="gst-gl-window-set-preferred-size.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>new preferred width</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>new preferred height</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-window-show" role="function" condition="since:1.6">
+<title>gst_gl_window_show&#160;()</title>
+<indexterm zone="gst-gl-window-show" role="1.6"><primary>gst_gl_window_show</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_show (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+<para>Present the window to the screen.</para>
+<refsect3 id="gst-gl-window-show.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-window-get-surface-dimensions" role="function" condition="since:1.6">
+<title>gst_gl_window_get_surface_dimensions&#160;()</title>
+<indexterm zone="gst-gl-window-get-surface-dimensions" role="1.6"><primary>gst_gl_window_get_surface_dimensions</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_get_surface_dimensions (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                      <parameter><link linkend="guint"><type>guint</type></link> *width</parameter>,
+                                      <parameter><link linkend="guint"><type>guint</type></link> *height</parameter>);</programlisting>
+<refsect3 id="gst-gl-window-get-surface-dimensions.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para> resulting surface width. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para> resulting surface height. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>out</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+<refsect2 id="gst-gl-window-handle-events" role="function">
+<title>gst_gl_window_handle_events&#160;()</title>
+<indexterm zone="gst-gl-window-handle-events"><primary>gst_gl_window_handle_events</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_handle_events (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                             <parameter><link linkend="gboolean"><type>gboolean</type></link> handle_events</parameter>);</programlisting>
+<para>Tell a <parameter>window</parameter>
+ that it should handle events from the window system. These
+events are forwarded upstream as navigation events. In some window systems
+events are not propagated in the window hierarchy if a client is listening
+for them. This method allows you to disable events handling completely
+from the <parameter>window</parameter>
+.</para>
+<refsect3 id="gst-gl-window-handle-events.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>handle_events</para></entry>
+<entry role="parameter_description"><para>a <link linkend="gboolean"><type>gboolean</type></link> indicating if events should be handled or not.</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-window-queue-resize" role="function">
+<title>gst_gl_window_queue_resize&#160;()</title>
+<indexterm zone="gst-gl-window-queue-resize"><primary>gst_gl_window_queue_resize</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_queue_resize (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-window-resize" role="function">
+<title>gst_gl_window_resize&#160;()</title>
+<indexterm zone="gst-gl-window-resize"><primary>gst_gl_window_resize</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_window_resize (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                      <parameter><link linkend="guint"><type>guint</type></link> width</parameter>,
+                      <parameter><link linkend="guint"><type>guint</type></link> height</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-window-set-render-rectangle" role="function">
+<title>gst_gl_window_set_render_rectangle&#160;()</title>
+<indexterm zone="gst-gl-window-set-render-rectangle"><primary>gst_gl_window_set_render_rectangle</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_gl_window_set_render_rectangle (<parameter><link linkend="GstGLWindow"><type>GstGLWindow</type></link> *window</parameter>,
+                                    <parameter><link linkend="gint"><type>gint</type></link> x</parameter>,
+                                    <parameter><link linkend="gint"><type>gint</type></link> y</parameter>,
+                                    <parameter><link linkend="gint"><type>gint</type></link> width</parameter>,
+                                    <parameter><link linkend="gint"><type>gint</type></link> height</parameter>);</programlisting>
+<para>Tell a <parameter>window</parameter>
+ that it should render into a specific region of the window
+according to the <link linkend="GstVideoOverlay"><type>GstVideoOverlay</type></link> interface.</para>
+<refsect3 id="gst-gl-window-set-render-rectangle.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>window</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>x</para></entry>
+<entry role="parameter_description"><para>x position</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>y</para></entry>
+<entry role="parameter_description"><para>y position</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>width</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>height</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-window-set-render-rectangle.returns" role="returns">
+<title>Returns</title>
+<para> whether the specified region could be set</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="GstGLWindow.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLWindowError" role="enum">
+<title>enum GstGLWindowError</title>
+<indexterm zone="GstGLWindowError"><primary>GstGLWindowError</primary></indexterm>
+<refsect3 id="GstGLWindowError.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-WINDOW-ERROR-FAILED:CAPS">GST_GL_WINDOW_ERROR_FAILED</para></entry>
+<entry role="enum_member_description"><para>failed for a unspecified reason</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-WINDOW-ERROR-OLD-LIBS:CAPS">GST_GL_WINDOW_ERROR_OLD_LIBS</para></entry>
+<entry role="enum_member_description"><para>the implementation is too old</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-WINDOW-ERROR-RESOURCE-UNAVAILABLE:CAPS">GST_GL_WINDOW_ERROR_RESOURCE_UNAVAILABLE</para></entry>
+<entry role="enum_member_description"><para>no such resource was found</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+<refsect2 id="GST-GL-WINDOW-ERROR:CAPS" role="macro">
+<title>GST_GL_WINDOW_ERROR</title>
+<indexterm zone="GST-GL-WINDOW-ERROR:CAPS"><primary>GST_GL_WINDOW_ERROR</primary></indexterm>
+<programlisting language="C">#define GST_GL_WINDOW_ERROR (gst_gl_window_error_quark ())
+</programlisting>
+</refsect2>
+<refsect2 id="GstGLWindow-struct" role="struct">
+<title>GstGLWindow</title>
+<indexterm zone="GstGLWindow-struct"><primary>GstGLWindow</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLWindow GstGLWindow;</programlisting>
+<para><link linkend="GstGLWindow"><type>GstGLWindow</type></link> is an opaque struct and should only be accessed through the
+provided api.</para>
+</refsect2>
+<refsect2 id="GstGLWindowClass" role="struct">
+<title>GstGLWindowClass</title>
+<indexterm zone="GstGLWindowClass"><primary>GstGLWindowClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstObjectClass parent_class;
+
+  guintptr (*get_display)        (GstGLWindow *window);
+  void     (*set_window_handle)  (GstGLWindow *window, guintptr handle);
+  guintptr (*get_window_handle)  (GstGLWindow *window);
+  void     (*draw)               (GstGLWindow *window);
+  void     (*run)                (GstGLWindow *window);
+  void     (*quit)               (GstGLWindow *window);
+  void     (*send_message)       (GstGLWindow *window, GstGLWindowCB callback, gpointer data);
+  void     (*send_message_async) (GstGLWindow *window, GstGLWindowCB callback, gpointer data, GDestroyNotify destroy);
+
+  gboolean (*open)               (GstGLWindow *window, GError **error);
+  void     (*close)              (GstGLWindow *window);
+  void     (*handle_events)      (GstGLWindow *window, gboolean handle_events);
+  void     (*set_preferred_size) (GstGLWindow *window, gint width, gint height);
+  void     (*show)               (GstGLWindow *window);
+  gboolean (*set_render_rectangle)(GstGLWindow *window, gint x, gint y, gint width, gint height);
+  void     (*queue_resize)       (GstGLWindow *window);
+} GstGLWindowClass;
+</programlisting>
+<refsect3 id="GstGLWindowClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.get-display">get_display</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Gets the current windowing system display connection</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.set-window-handle">set_window_handle</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Set a window handle to render into</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.get-window-handle">get_window_handle</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Gets the current window handle that this <link linkend="GstGLWindow"><type>GstGLWindow</type></link> is
+rendering into.  This may return a different value to
+what is passed into <parameter>set_window_handle</parameter>
+</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.draw">draw</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>redraw the window with the specified dimensions</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.run">run</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>run the mainloop</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.quit">quit</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>send a quit to the mainloop</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.send-message">send_message</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>invoke a function on the window thread.  Required to be reentrant.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.send-message-async">send_message_async</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>invoke a function on the window thread. <parameter>run</parameter>
+may or may
+not have been called.  Required to be reentrant.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.open">open</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>open the connection to the display</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.close">close</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>close the connection to the display</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.handle-events">handle_events</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>whether to handle 'extra' events from the windowing system.
+Basic events like surface moves and resizes are still valid
+things to listen for.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.set-preferred-size">set_preferred_size</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>request that the window change surface size.  The
+implementation is free to ignore this information.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.show">show</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>request that the window be shown to the user</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.set-render-rectangle">set_render_rectangle</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>request a rectangle to render into.  See <link linkend="GstVideoOverlay"><type>GstVideoOverlay</type></link></para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLWindowClass.queue-resize">queue_resize</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>request a resize to occur when possible</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLWindow.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLWindow-key-event" role="signal"><title>The <literal>“key-event”</literal> signal</title>
+<indexterm zone="GstGLWindow-key-event" role="1.6"><primary>GstGLWindow::key-event</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstGLWindow"><type>GstGLWindow</type></link> *object,
+               <link linkend="gchar"><type>gchar</type></link>       *id,
+               <link linkend="gchar"><type>gchar</type></link>       *key,
+               <link linkend="gpointer"><type>gpointer</type></link>     user_data)</programlisting>
+<para>Will be emitted when a key event is received by the GstGLwindow.</para>
+<refsect3 id="GstGLWindow-key-event.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>id</para></entry>
+<entry role="parameter_description"><para>the name of the event</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>key</para></entry>
+<entry role="parameter_description"><para>the id of the key pressed</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2><refsect2 id="GstGLWindow-mouse-event" role="signal"><title>The <literal>“mouse-event”</literal> signal</title>
+<indexterm zone="GstGLWindow-mouse-event" role="1.6"><primary>GstGLWindow::mouse-event</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstGLWindow"><type>GstGLWindow</type></link> *object,
+               <link linkend="gchar"><type>gchar</type></link>       *id,
+               <link linkend="gint"><type>gint</type></link>         button,
+               <link linkend="gdouble"><type>gdouble</type></link>      x,
+               <link linkend="gdouble"><type>gdouble</type></link>      y,
+               <link linkend="gpointer"><type>gpointer</type></link>     user_data)</programlisting>
+<para>Will be emitted when a mouse event is received by the GstGLwindow.</para>
+<refsect3 id="GstGLWindow-mouse-event.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>object</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLWindow"><type>GstGLWindow</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>id</para></entry>
+<entry role="parameter_description"><para>the name of the event</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>button</para></entry>
+<entry role="parameter_description"><para>the id of the button</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>x</para></entry>
+<entry role="parameter_description"><para>the x coordinate of the mouse event</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>y</para></entry>
+<entry role="parameter_description"><para>the y coordinate of the mouse event</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+<para role="since">Since: <link linkend="api-index-1.6">1.6</link></para></refsect2>
+</refsect1>
+<refsect1 id="GstGLWindow.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLContext"><type>GstGLContext</type></link>, <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link></para>
+
+</refsect1>
+
+</refentry>

@@ -1,0 +1,96 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-removesilence">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-removesilence.top_of_page" role="top_of_page">removesilence</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>removesilence</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-removesilence.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstRemoveSilence--hysteresis">hysteresis</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstRemoveSilence--remove">remove</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstRemoveSilence"/><refsect1 id="gst-plugins-bad-plugins-removesilence.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"/><entry role="function_name"><link linkend="GstRemoveSilence-struct">GstRemoveSilence</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-removesilence.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> GstRemoveSilence
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-removesilence.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Removes all silence periods from an audio stream, dropping silence buffers.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v -m filesrc location="audiofile" ! decodebin ! removesilence remove=true ! wavenc ! filesink location=without_audio.wav
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-removesilence-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-removesilence.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-removesilence.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstRemoveSilence-struct" role="struct">
+<title>GstRemoveSilence</title>
+<indexterm zone="GstRemoveSilence-struct"><primary>GstRemoveSilence</primary></indexterm>
+<programlisting language="C">typedef struct _GstRemoveSilence GstRemoveSilence;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-removesilence.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstRemoveSilence--hysteresis" role="property"><title>The <literal>“hysteresis”</literal> property</title>
+<indexterm zone="GstRemoveSilence--hysteresis"><primary>GstRemoveSilence:hysteresis</primary></indexterm>
+<programlisting>  “hysteresis”               <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Set the hysteresis (on samples) used on the internal VAD.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 1</para>
+<para>Default value: 480</para>
+</refsect2>
+<refsect2 id="GstRemoveSilence--remove" role="property"><title>The <literal>“remove”</literal> property</title>
+<indexterm zone="GstRemoveSilence--remove"><primary>GstRemoveSilence:remove</primary></indexterm>
+<programlisting>  “remove”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Set to true to remove silence from the stream, false otherwhise.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

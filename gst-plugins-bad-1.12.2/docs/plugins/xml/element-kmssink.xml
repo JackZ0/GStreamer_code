@@ -1,0 +1,113 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-kmssink">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-kmssink.top_of_page" role="top_of_page">kmssink</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>kmssink</refname>
+<refpurpose>A KMS/DRM based video sink</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-kmssink.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKMSSink--connector-id">connector-id</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstKMSSink--driver-name">driver-name</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstKMSSink--plane-id">plane-id</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstKMSSink--force-modesetting">force-modesetting</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstKMSSink"/><refsect1 id="gst-plugins-bad-plugins-kmssink.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstKMSSink-struct">GstKMSSink</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kmssink.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSink">GstBaseSink</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoSink">GstVideoSink</link>
+                        <phrase role="lineart">╰──</phrase> GstKMSSink
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-kmssink.description" role="desc">
+<title role="desc.title">Description</title>
+<para>kmssink is a simple video sink that renders video frames directly
+in a plane of a DRM device.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! kmssink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-kmssink-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kmssink.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kmssink.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstKMSSink-struct" role="struct">
+<title>struct GstKMSSink</title>
+<indexterm zone="GstKMSSink-struct"><primary>GstKMSSink</primary></indexterm>
+<programlisting language="C">struct GstKMSSink;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-kmssink.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstKMSSink--connector-id" role="property"><title>The <literal>“connector-id”</literal> property</title>
+<indexterm zone="GstKMSSink--connector-id"><primary>GstKMSSink:connector-id</primary></indexterm>
+<programlisting>  “connector-id”             <link linkend="gint"><type>gint</type></link></programlisting>
+<para>DRM connector id.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstKMSSink--driver-name" role="property"><title>The <literal>“driver-name”</literal> property</title>
+<indexterm zone="GstKMSSink--driver-name"><primary>GstKMSSink:driver-name</primary></indexterm>
+<programlisting>  “driver-name”              <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>DRM device driver name.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstKMSSink--plane-id" role="property"><title>The <literal>“plane-id”</literal> property</title>
+<indexterm zone="GstKMSSink--plane-id"><primary>GstKMSSink:plane-id</primary></indexterm>
+<programlisting>  “plane-id”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>DRM plane id.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: &gt;= G_MAXULONG</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstKMSSink--force-modesetting" role="property"><title>The <literal>“force-modesetting”</literal> property</title>
+<indexterm zone="GstKMSSink--force-modesetting"><primary>GstKMSSink:force-modesetting</primary></indexterm>
+<programlisting>  “force-modesetting”        <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>When enabled, the sink try to configure the display mode.</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

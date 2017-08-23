@@ -1,0 +1,427 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-OpenGL-Formats">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-OpenGL-Formats.top_of_page">GstGlFormat</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGlFormat</refname>
+<refpurpose>utilities for dealing with OpenGL formats</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Formats.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-format-type-n-bytes">gst_gl_format_type_n_bytes</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLFormat"><returnvalue>GstGLFormat</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-format-from-video-info">gst_gl_format_from_video_info</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-sized-gl-format-from-gl-format-type">gst_gl_sized_gl_format_from_gl_format_type</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-texture-target-from-string">gst_gl_texture_target_from_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-texture-target-to-string">gst_gl_texture_target_to_string</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-texture-target-to-gl">gst_gl_texture_target_to_gl</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-texture-target-from-gl">gst_gl_texture_target_from_gl</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-texture-target-to-buffer-pool-option">gst_gl_texture_target_to_buffer_pool_option</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Formats.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLTextureTarget">GstGLTextureTarget</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-TEXTURE-TARGET-2D-STR:CAPS">GST_GL_TEXTURE_TARGET_2D_STR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-TEXTURE-TARGET-RECTANGLE-STR:CAPS">GST_GL_TEXTURE_TARGET_RECTANGLE_STR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-TEXTURE-TARGET-EXTERNAL-OES-STR:CAPS">GST_GL_TEXTURE_TARGET_EXTERNAL_OES_STR</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-2D:CAPS">GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_2D</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-RECTANGLE:CAPS">GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_RECTANGLE</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-EXTERNAL-OES:CAPS">GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_EXTERNAL_OES</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstGLFormat">GstGLFormat</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Formats.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Some useful utilities for converting between various formats and OpenGL
+formats.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Formats.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-format-type-n-bytes" role="function">
+<title>gst_gl_format_type_n_bytes&#160;()</title>
+<indexterm zone="gst-gl-format-type-n-bytes"><primary>gst_gl_format_type_n_bytes</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_gl_format_type_n_bytes (<parameter><link linkend="guint"><type>guint</type></link> format</parameter>,
+                            <parameter><link linkend="guint"><type>guint</type></link> type</parameter>);</programlisting>
+<refsect3 id="gst-gl-format-type-n-bytes.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>the OpenGL format, <link linkend="GL-RGBA:CAPS"><literal>GL_RGBA</literal></link>, <link linkend="GL-LUMINANCE:CAPS"><literal>GL_LUMINANCE</literal></link>, etc</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>the OpenGL type, <link linkend="GL-UNSIGNED-BYTE:CAPS"><literal>GL_UNSIGNED_BYTE</literal></link>, <link linkend="GL-FLOAT:CAPS"><literal>GL_FLOAT</literal></link>, etc</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-format-type-n-bytes.returns" role="returns">
+<title>Returns</title>
+<para> the number of bytes the specified <parameter>format</parameter>
+, <parameter>type</parameter>
+combination takes
+per pixel</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-format-from-video-info" role="function">
+<title>gst_gl_format_from_video_info&#160;()</title>
+<indexterm zone="gst-gl-format-from-video-info"><primary>gst_gl_format_from_video_info</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLFormat"><returnvalue>GstGLFormat</returnvalue></link>
+gst_gl_format_from_video_info (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                               <parameter><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> *vinfo</parameter>,
+                               <parameter><link linkend="guint"><type>guint</type></link> plane</parameter>);</programlisting>
+<refsect3 id="gst-gl-format-from-video-info.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>vinfo</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>plane</para></entry>
+<entry role="parameter_description"><para>the plane number in <parameter>vinfo</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-format-from-video-info.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> necessary for holding the data in <parameter>plane</parameter>
+of <parameter>vinfo</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-sized-gl-format-from-gl-format-type" role="function">
+<title>gst_gl_sized_gl_format_from_gl_format_type&#160;()</title>
+<indexterm zone="gst-gl-sized-gl-format-from-gl-format-type"><primary>gst_gl_sized_gl_format_from_gl_format_type</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_gl_sized_gl_format_from_gl_format_type
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> format</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> type</parameter>);</programlisting>
+<refsect3 id="gst-gl-sized-gl-format-from-gl-format-type.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>format</para></entry>
+<entry role="parameter_description"><para>an OpenGL format, <link linkend="GL-RGBA:CAPS"><literal>GL_RGBA</literal></link>, <link linkend="GL-LUMINANCE:CAPS"><literal>GL_LUMINANCE</literal></link>, etc</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>an OpenGL type, <link linkend="GL-UNSIGNED-BYTE:CAPS"><literal>GL_UNSIGNED_BYTE</literal></link>, <link linkend="GL-FLOAT:CAPS"><literal>GL_FLOAT</literal></link>, etc</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-sized-gl-format-from-gl-format-type.returns" role="returns">
+<title>Returns</title>
+<para> the sized internal format specified by <parameter>format</parameter>
+and <parameter>type</parameter>
+that can
+be used in <parameter>context</parameter>
+</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-texture-target-from-string" role="function">
+<title>gst_gl_texture_target_from_string&#160;()</title>
+<indexterm zone="gst-gl-texture-target-from-string"><primary>gst_gl_texture_target_from_string</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+gst_gl_texture_target_from_string (<parameter>const <link linkend="gchar"><type>gchar</type></link> *str</parameter>);</programlisting>
+<refsect3 id="gst-gl-texture-target-from-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>str</para></entry>
+<entry role="parameter_description"><para>a string equivalant to one of the GST_GL_TEXTURE_TARGET_*_STR values</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-texture-target-from-string.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> represented by <parameter>str</parameter>
+or
+<link linkend="GST-GL-TEXTURE-TARGET-NONE:CAPS"><literal>GST_GL_TEXTURE_TARGET_NONE</literal></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-texture-target-to-string" role="function">
+<title>gst_gl_texture_target_to_string&#160;()</title>
+<indexterm zone="gst-gl-texture-target-to-string"><primary>gst_gl_texture_target_to_string</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_gl_texture_target_to_string (<parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>);</programlisting>
+<refsect3 id="gst-gl-texture-target-to-string.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-texture-target-to-string.returns" role="returns">
+<title>Returns</title>
+<para> the stringified version of <parameter>target</parameter>
+or <link linkend="NULL:CAPS"><literal>NULL</literal></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-texture-target-to-gl" role="function">
+<title>gst_gl_texture_target_to_gl&#160;()</title>
+<indexterm zone="gst-gl-texture-target-to-gl"><primary>gst_gl_texture_target_to_gl</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_gl_texture_target_to_gl (<parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>);</programlisting>
+<refsect3 id="gst-gl-texture-target-to-gl.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-texture-target-to-gl.returns" role="returns">
+<title>Returns</title>
+<para> the OpenGL value for binding the <parameter>target</parameter>
+with <link linkend="glBindTexture"><function>glBindTexture()</function></link> and
+similar functions or 0</para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-texture-target-from-gl" role="function">
+<title>gst_gl_texture_target_from_gl&#160;()</title>
+<indexterm zone="gst-gl-texture-target-from-gl"><primary>gst_gl_texture_target_from_gl</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLTextureTarget"><returnvalue>GstGLTextureTarget</returnvalue></link>
+gst_gl_texture_target_from_gl (<parameter><link linkend="guint"><type>guint</type></link> target</parameter>);</programlisting>
+<refsect3 id="gst-gl-texture-target-from-gl.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>an OpenGL texture binding target</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-texture-target-from-gl.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> that's equiavalant to <parameter>target</parameter>
+or
+<link linkend="GST-GL-TEXTURE-TARGET-NONE:CAPS"><literal>GST_GL_TEXTURE_TARGET_NONE</literal></link></para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-texture-target-to-buffer-pool-option" role="function">
+<title>gst_gl_texture_target_to_buffer_pool_option&#160;()</title>
+<indexterm zone="gst-gl-texture-target-to-buffer-pool-option"><primary>gst_gl_texture_target_to_buffer_pool_option</primary></indexterm>
+<programlisting language="C">const <link linkend="gchar"><returnvalue>gchar</returnvalue></link>&#160;*
+gst_gl_texture_target_to_buffer_pool_option
+                               (<parameter><link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link> target</parameter>);</programlisting>
+<refsect3 id="gst-gl-texture-target-to-buffer-pool-option.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>target</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLTextureTarget"><type>GstGLTextureTarget</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-texture-target-to-buffer-pool-option.returns" role="returns">
+<title>Returns</title>
+<para> a string representing the <parameter>GstBufferPoolOption</parameter>
+specified by <parameter>target</parameter>
+</para>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Formats.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLTextureTarget" role="enum" condition="since:1.8">
+<title>enum GstGLTextureTarget</title>
+<indexterm zone="GstGLTextureTarget" role="1.8"><primary>GstGLTextureTarget</primary></indexterm>
+<refsect3 id="GstGLTextureTarget.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEXTURE-TARGET-NONE:CAPS">GST_GL_TEXTURE_TARGET_NONE</para></entry>
+<entry role="enum_member_description"><para>no texture target</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEXTURE-TARGET-2D:CAPS">GST_GL_TEXTURE_TARGET_2D</para></entry>
+<entry role="enum_member_description"><para>2D texture target</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEXTURE-TARGET-RECTANGLE:CAPS">GST_GL_TEXTURE_TARGET_RECTANGLE</para></entry>
+<entry role="enum_member_description"><para>rectangle texture target</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-TEXTURE-TARGET-EXTERNAL-OES:CAPS">GST_GL_TEXTURE_TARGET_EXTERNAL_OES</para></entry>
+<entry role="enum_member_description"><para>external oes texture target</para>
+</entry>
+<entry role="enum_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3><para role="since">Since: <link linkend="api-index-1.8">1.8</link></para></refsect2>
+<refsect2 id="GST-GL-TEXTURE-TARGET-2D-STR:CAPS" role="macro">
+<title>GST_GL_TEXTURE_TARGET_2D_STR</title>
+<indexterm zone="GST-GL-TEXTURE-TARGET-2D-STR:CAPS"><primary>GST_GL_TEXTURE_TARGET_2D_STR</primary></indexterm>
+<programlisting language="C">#define GST_GL_TEXTURE_TARGET_2D_STR "2D"
+</programlisting>
+<para>String used for <link linkend="GST-GL-TEXTURE-TARGET-2D:CAPS"><literal>GST_GL_TEXTURE_TARGET_2D</literal></link> in things like caps values</para>
+</refsect2>
+<refsect2 id="GST-GL-TEXTURE-TARGET-RECTANGLE-STR:CAPS" role="macro">
+<title>GST_GL_TEXTURE_TARGET_RECTANGLE_STR</title>
+<indexterm zone="GST-GL-TEXTURE-TARGET-RECTANGLE-STR:CAPS"><primary>GST_GL_TEXTURE_TARGET_RECTANGLE_STR</primary></indexterm>
+<programlisting language="C">#define GST_GL_TEXTURE_TARGET_RECTANGLE_STR "rectangle"
+</programlisting>
+<para>String used for <link linkend="GST-GL-TEXTURE-TARGET-RECTANGLE:CAPS"><literal>GST_GL_TEXTURE_TARGET_RECTANGLE</literal></link> in things like caps values</para>
+</refsect2>
+<refsect2 id="GST-GL-TEXTURE-TARGET-EXTERNAL-OES-STR:CAPS" role="macro">
+<title>GST_GL_TEXTURE_TARGET_EXTERNAL_OES_STR</title>
+<indexterm zone="GST-GL-TEXTURE-TARGET-EXTERNAL-OES-STR:CAPS"><primary>GST_GL_TEXTURE_TARGET_EXTERNAL_OES_STR</primary></indexterm>
+<programlisting language="C">#define GST_GL_TEXTURE_TARGET_EXTERNAL_OES_STR "external-oes"
+</programlisting>
+<para>String used for <link linkend="GST-GL-TEXTURE-TARGET-EXTERNAL-OES:CAPS"><literal>GST_GL_TEXTURE_TARGET_EXTERNAL_OES</literal></link> in things like caps values</para>
+</refsect2>
+<refsect2 id="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-2D:CAPS" role="macro">
+<title>GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_2D</title>
+<indexterm zone="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-2D:CAPS"><primary>GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_2D</primary></indexterm>
+<programlisting language="C">#define GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_2D "GstBufferPoolOptionGLTextureTarget2D"
+</programlisting>
+<para>String used for <link linkend="GST-GL-TEXTURE-TARGET-2D:CAPS"><literal>GST_GL_TEXTURE_TARGET_2D</literal></link> as a <link linkend="GstBufferPool"><type>GstBufferPool</type></link> pool option</para>
+</refsect2>
+<refsect2 id="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-RECTANGLE:CAPS" role="macro">
+<title>GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_RECTANGLE</title>
+<indexterm zone="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-RECTANGLE:CAPS"><primary>GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_RECTANGLE</primary></indexterm>
+<programlisting language="C">#define GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_RECTANGLE "GstBufferPoolOptionGLTextureTargetRectangle"
+</programlisting>
+<para>String used for <link linkend="GST-GL-TEXTURE-TARGET-RECTANGLE:CAPS"><literal>GST_GL_TEXTURE_TARGET_RECTANGLE</literal></link> as a <link linkend="GstBufferPool"><type>GstBufferPool</type></link> pool option</para>
+</refsect2>
+<refsect2 id="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-EXTERNAL-OES:CAPS" role="macro">
+<title>GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_EXTERNAL_OES</title>
+<indexterm zone="GST-BUFFER-POOL-OPTION-GL-TEXTURE-TARGET-EXTERNAL-OES:CAPS"><primary>GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_EXTERNAL_OES</primary></indexterm>
+<programlisting language="C">#define GST_BUFFER_POOL_OPTION_GL_TEXTURE_TARGET_EXTERNAL_OES "GstBufferPoolOptionGLTextureTargetExternalOES"
+</programlisting>
+<para>String used for <link linkend="GST-GL-TEXTURE-TARGET-EXTERNAL-OES:CAPS"><literal>GST_GL_TEXTURE_TARGET_EXTERNAL_OES</literal></link> as a <link linkend="GstBufferPool"><type>GstBufferPool</type></link> pool option</para>
+</refsect2>
+<refsect2 id="GstGLFormat" role="enum">
+<title>enum GstGLFormat</title>
+<indexterm zone="GstGLFormat"><primary>GstGLFormat</primary></indexterm>
+<refsect3 id="GstGLFormat.members" role="enum_members">
+<title>Members</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-LUMINANCE:CAPS">GST_GL_LUMINANCE</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-ALPHA:CAPS">GST_GL_ALPHA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-LUMINANCE-ALPHA:CAPS">GST_GL_LUMINANCE_ALPHA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RED:CAPS">GST_GL_RED</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-R8:CAPS">GST_GL_R8</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RG:CAPS">GST_GL_RG</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RG8:CAPS">GST_GL_RG8</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RGB:CAPS">GST_GL_RGB</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RGB8:CAPS">GST_GL_RGB8</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RGB565:CAPS">GST_GL_RGB565</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RGBA:CAPS">GST_GL_RGBA</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-RGBA8:CAPS">GST_GL_RGBA8</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-DEPTH-COMPONENT16:CAPS">GST_GL_DEPTH_COMPONENT16</para></entry>
+<entry /><entry />
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-GL-DEPTH24-STENCIL8:CAPS">GST_GL_DEPTH24_STENCIL8</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-OpenGL-Formats.see-also">
+<title>See Also</title>
+<para><link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link>, <link linkend="GstGLMemory"><type>GstGLMemory</type></link>, <link linkend="GstGLFramebuffer"><type>GstGLFramebuffer</type></link>, <link linkend="GstGLBuffer"><type>GstGLBuffer</type></link></para>
+
+</refsect1>
+
+</refentry>

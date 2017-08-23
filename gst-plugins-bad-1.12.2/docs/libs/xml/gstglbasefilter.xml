@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstGLBaseFilter">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstGLBaseFilter.top_of_page">GstGLBaseFilter</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLBaseFilter</refname>
+<refpurpose><link linkend="GstBaseTransform"><type>GstBaseTransform</type></link> subclass for transforming OpenGL resources</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstGLBaseFilter.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstGLContext"><type>GstGLContext</type></link>&#160;*</entry><entry role="property_name"><link linkend="GstGLBaseFilter--context">context</link></entry><entry role="property_flags">Read</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLBaseFilter.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBaseFilter-struct">GstGLBaseFilter</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLBaseFilterClass">GstGLBaseFilterClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstGLBaseFilter.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLBaseFilter
+                        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLFilter">GstGLFilter</link>
+</screen>
+</refsect1>
+
+
+<refsect1 id="GstGLBaseFilter.description" role="desc">
+<title role="desc.title">Description</title>
+<para><link linkend="GstGLBaseFilter"><type>GstGLBaseFilter</type></link> handles the nitty gritty details of retrieving an OpenGL
+context.  It also provided some wrappers around <link linkend="GstBaseTransform"><type>GstBaseTransform</type></link>'s
+<link linkend="start"><function>start()</function></link>, <link linkend="stop"><function>stop()</function></link> and <link linkend="set-caps"><function>set_caps()</function></link> virtual methods that ensure an OpenGL context
+is available and current in the calling thread.</para>
+
+</refsect1>
+<refsect1 id="GstGLBaseFilter.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="GstGLBaseFilter.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLBaseFilter-struct" role="struct">
+<title>GstGLBaseFilter</title>
+<indexterm zone="GstGLBaseFilter-struct"><primary>GstGLBaseFilter</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLBaseFilter GstGLBaseFilter;</programlisting>
+<refsect3 id="GstGLBaseFilter.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstGLBaseFilterClass" role="struct">
+<title>GstGLBaseFilterClass</title>
+<indexterm zone="GstGLBaseFilterClass"><primary>GstGLBaseFilterClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstBaseTransformClass parent_class;
+  GstGLAPI supported_gl_api;
+
+  gboolean (*gl_start)          (GstGLBaseFilter *filter);
+  void     (*gl_stop)           (GstGLBaseFilter *filter);
+  gboolean (*gl_set_caps)       (GstGLBaseFilter *filter, GstCaps * incaps, GstCaps * outcaps);
+} GstGLBaseFilterClass;
+</programlisting>
+<refsect3 id="GstGLBaseFilterClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstGLAPI"><type>GstGLAPI</type></link>&#160;<structfield id="GstGLBaseFilterClass.supported-gl-api">supported_gl_api</structfield>;</para></entry>
+<entry role="struct_member_description"><para>the logical-OR of <link linkend="GstGLAPI"><type>GstGLAPI</type></link>'s supported by this element</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLBaseFilterClass.gl-start">gl_start</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>called in the GL thread to setup the element GL state.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLBaseFilterClass.gl-stop">gl_stop</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>called in the GL thread to setup the element GL state.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstGLBaseFilterClass.gl-set-caps">gl_set_caps</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>called in the GL thread when caps are set on <parameter>filter</parameter>
+.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLBaseFilter.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLBaseFilter--context" role="property"><title>The <literal>“context”</literal> property</title>
+<indexterm zone="GstGLBaseFilter--context"><primary>GstGLBaseFilter:context</primary></indexterm>
+<programlisting>  “context”                  <link linkend="GstGLContext"><type>GstGLContext</type></link>&#160;*</programlisting>
+<para>Get OpenGL context.</para><para>Flags: Read</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="GstGLBaseFilter.see-also">
+<title>See Also</title>
+<para><link linkend="GstBaseTransform"><type>GstBaseTransform</type></link></para>
+
+</refsect1>
+
+</refentry>

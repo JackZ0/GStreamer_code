@@ -1,0 +1,207 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-videoparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-videoparse.top_of_page" role="top_of_page">videoparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>videoparse</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-videoparse.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--alpha-mask">alpha-mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--blue-mask">blue-mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--bpp">bpp</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--depth">depth</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoParseEndianness"><type>GstVideoParseEndianness</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--endianness">endianness</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstVideoFormat"><type>GstVideoFormat</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--format">format</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFraction"><type>GstFraction</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--framerate">framerate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--green-mask">green-mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--height">height</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstFraction"><type>GstFraction</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--pixel-aspect-ratio">pixel-aspect-ratio</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--red-mask">red-mask</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--width">width</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--interlaced">interlaced</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--top-field-first">top-field-first</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstVideoParse--framesize">framesize</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstVideoParse--offsets">offsets</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstVideoParse--strides">strides</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstVideoParse"/><refsect1 id="gst-plugins-bad-plugins-videoparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVideoParse-struct">GstVideoParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstVideoParse
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoparse.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstVideoParse implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-videoparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Converts a byte stream into video frames.</para>
+<blockquote>
+<para>This element is deprecated. Use <link linkend="GstRawVideoParse"><type>GstRawVideoParse</type></link> instead.</para>
+</blockquote>
+
+<include href="element-videoparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstVideoParse-struct" role="struct">
+<title>struct GstVideoParse</title>
+<indexterm zone="GstVideoParse-struct"><primary>GstVideoParse</primary></indexterm>
+<programlisting language="C">struct GstVideoParse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-videoparse.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstVideoParse--alpha-mask" role="property"><title>The <literal>“alpha-mask”</literal> property</title>
+<indexterm zone="GstVideoParse--alpha-mask"><primary>GstVideoParse:alpha-mask</primary></indexterm>
+<programlisting>  “alpha-mask”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Alpha mask of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstVideoParse--blue-mask" role="property"><title>The <literal>“blue-mask”</literal> property</title>
+<indexterm zone="GstVideoParse--blue-mask"><primary>GstVideoParse:blue-mask</primary></indexterm>
+<programlisting>  “blue-mask”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Blue mask of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: 255</para>
+</refsect2>
+<refsect2 id="GstVideoParse--bpp" role="property"><title>The <literal>“bpp”</literal> property</title>
+<indexterm zone="GstVideoParse--bpp"><primary>GstVideoParse:bpp</primary></indexterm>
+<programlisting>  “bpp”                      <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Bits per pixel of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 24</para>
+</refsect2>
+<refsect2 id="GstVideoParse--depth" role="property"><title>The <literal>“depth”</literal> property</title>
+<indexterm zone="GstVideoParse--depth"><primary>GstVideoParse:depth</primary></indexterm>
+<programlisting>  “depth”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Depth of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 24</para>
+</refsect2>
+<refsect2 id="GstVideoParse--endianness" role="property"><title>The <literal>“endianness”</literal> property</title>
+<indexterm zone="GstVideoParse--endianness"><primary>GstVideoParse:endianness</primary></indexterm>
+<programlisting>  “endianness”               <link linkend="GstVideoParseEndianness"><type>GstVideoParseEndianness</type></link></programlisting>
+<para>Endianness of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: Little Endian</para>
+</refsect2>
+<refsect2 id="GstVideoParse--format" role="property"><title>The <literal>“format”</literal> property</title>
+<indexterm zone="GstVideoParse--format"><primary>GstVideoParse:format</primary></indexterm>
+<programlisting>  “format”                   <link linkend="GstVideoFormat"><type>GstVideoFormat</type></link></programlisting>
+<para>Format of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: GST_VIDEO_FORMAT_I420</para>
+</refsect2>
+<refsect2 id="GstVideoParse--framerate" role="property"><title>The <literal>“framerate”</literal> property</title>
+<indexterm zone="GstVideoParse--framerate"><primary>GstVideoParse:framerate</primary></indexterm>
+<programlisting>  “framerate”                <link linkend="GstFraction"><type>GstFraction</type></link></programlisting>
+<para>Frame rate of images in raw stream.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstVideoParse--green-mask" role="property"><title>The <literal>“green-mask”</literal> property</title>
+<indexterm zone="GstVideoParse--green-mask"><primary>GstVideoParse:green-mask</primary></indexterm>
+<programlisting>  “green-mask”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Green mask of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: 65280</para>
+</refsect2>
+<refsect2 id="GstVideoParse--height" role="property"><title>The <literal>“height”</literal> property</title>
+<indexterm zone="GstVideoParse--height"><primary>GstVideoParse:height</primary></indexterm>
+<programlisting>  “height”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Height of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 240</para>
+</refsect2>
+<refsect2 id="GstVideoParse--pixel-aspect-ratio" role="property"><title>The <literal>“pixel-aspect-ratio”</literal> property</title>
+<indexterm zone="GstVideoParse--pixel-aspect-ratio"><primary>GstVideoParse:pixel-aspect-ratio</primary></indexterm>
+<programlisting>  “pixel-aspect-ratio”       <link linkend="GstFraction"><type>GstFraction</type></link></programlisting>
+<para>Pixel aspect ratio of images in raw stream.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstVideoParse--red-mask" role="property"><title>The <literal>“red-mask”</literal> property</title>
+<indexterm zone="GstVideoParse--red-mask"><primary>GstVideoParse:red-mask</primary></indexterm>
+<programlisting>  “red-mask”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Red mask of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Default value: 16711680</para>
+</refsect2>
+<refsect2 id="GstVideoParse--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstVideoParse--width"><primary>GstVideoParse:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Width of images in raw stream.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 320</para>
+</refsect2>
+<refsect2 id="GstVideoParse--interlaced" role="property"><title>The <literal>“interlaced”</literal> property</title>
+<indexterm zone="GstVideoParse--interlaced"><primary>GstVideoParse:interlaced</primary></indexterm>
+<programlisting>  “interlaced”               <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>True if video is interlaced.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+<refsect2 id="GstVideoParse--top-field-first" role="property"><title>The <literal>“top-field-first”</literal> property</title>
+<indexterm zone="GstVideoParse--top-field-first"><primary>GstVideoParse:top-field-first</primary></indexterm>
+<programlisting>  “top-field-first”          <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>True if top field is earlier than bottom field.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstVideoParse--framesize" role="property"><title>The <literal>“framesize”</literal> property</title>
+<indexterm zone="GstVideoParse--framesize"><primary>GstVideoParse:framesize</primary></indexterm>
+<programlisting>  “framesize”                <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Size of an image in raw stream (0: default).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstVideoParse--offsets" role="property"><title>The <literal>“offsets”</literal> property</title>
+<indexterm zone="GstVideoParse--offsets"><primary>GstVideoParse:offsets</primary></indexterm>
+<programlisting>  “offsets”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Offset of each planes in bytes using string format: 'o0,o1,o2,o3'.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+<refsect2 id="GstVideoParse--strides" role="property"><title>The <literal>“strides”</literal> property</title>
+<indexterm zone="GstVideoParse--strides"><primary>GstVideoParse:strides</primary></indexterm>
+<programlisting>  “strides”                  <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Stride of each planes in bytes using string format: 's0,s1,s2,s3'.</para><para>Flags: Read / Write</para>
+<para>Default value: NULL</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

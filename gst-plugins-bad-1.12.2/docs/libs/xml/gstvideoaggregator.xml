@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="GstVideoAggregator">
+<refmeta>
+<refentrytitle role="top_of_page" id="GstVideoAggregator.top_of_page">GstVideoAggregator</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstVideoAggregator</refname>
+<refpurpose>Base class for video aggregators</refpurpose>
+</refnamediv>
+
+<refsect1 id="GstVideoAggregator.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVideoAggregator-struct">GstVideoAggregator</link></entry></row>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstVideoAggregatorClass">GstVideoAggregatorClass</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="GstVideoAggregator.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAggregator">GstAggregator</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstVideoAggregator
+</screen>
+</refsect1>
+<refsect1 id="GstVideoAggregator.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstVideoAggregator implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="GstVideoAggregator.description" role="desc">
+<title role="desc.title">Description</title>
+<para>VideoAggregator can accept AYUV, ARGB and BGRA video streams. For each of the requested
+sink pads it will compare the incoming geometry and framerate to define the
+output parameters. Indeed output video frames will have the geometry of the
+biggest incoming video stream and the framerate of the fastest incoming one.</para>
+<para>VideoAggregator will do colorspace conversion.</para>
+<para>Zorder for each input stream can be configured on the
+<link linkend="GstVideoAggregatorPad"><type>GstVideoAggregatorPad</type></link>.</para>
+
+</refsect1>
+<refsect1 id="GstVideoAggregator.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para />
+</refsect1>
+<refsect1 id="GstVideoAggregator.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstVideoAggregator-struct" role="struct">
+<title>struct GstVideoAggregator</title>
+<indexterm zone="GstVideoAggregator-struct"><primary>GstVideoAggregator</primary></indexterm>
+<programlisting language="C">struct GstVideoAggregator {
+  /* Output caps */
+  GstVideoInfo info;
+};
+</programlisting>
+<refsect3 id="GstVideoAggregator.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstVideoInfo"><type>GstVideoInfo</type></link>&#160;<structfield id="GstVideoAggregator-struct.info">info</structfield>;</para></entry>
+<entry role="struct_member_description"><para>The <link linkend="GstVideoInfo"><type>GstVideoInfo</type></link> representing the currently set
+srcpad caps.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+<refsect2 id="GstVideoAggregatorClass" role="struct">
+<title>struct GstVideoAggregatorClass</title>
+<indexterm zone="GstVideoAggregatorClass"><primary>GstVideoAggregatorClass</primary></indexterm>
+<programlisting language="C">struct GstVideoAggregatorClass {
+  GstCaps *          (*update_caps)               (GstVideoAggregator *  videoaggregator,
+                                                   GstCaps            *  caps,
+                                                   GstCaps            *  filter_caps);
+  GstCaps *          (*fixate_caps)               (GstVideoAggregator *  videoaggregator,
+                                                   GstCaps            *  caps);
+  GstFlowReturn      (*aggregate_frames)          (GstVideoAggregator *  videoaggregator,
+                                                   GstBuffer          *  outbuffer);
+  GstFlowReturn      (*get_output_buffer)         (GstVideoAggregator *  videoaggregator,
+                                                   GstBuffer          ** outbuffer);
+  gboolean           (*negotiated_caps)           (GstVideoAggregator *  videoaggregator,
+                                                   GstCaps            *  caps);
+  void               (*find_best_format)          (GstVideoAggregator *  vagg,
+                                                   GstCaps            *  downstream_caps,
+                                                   GstVideoInfo       *  best_info,
+                                                   gboolean           *  at_least_one_alpha);
+
+  GstCaps           *sink_non_alpha_caps;
+};
+</programlisting>
+<refsect3 id="GstVideoAggregatorClass.members" role="struct_members">
+<title>Members</title>
+<informaltable role="struct_members_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstVideoAggregatorClass.update-caps">update_caps</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Lets subclasses update the <link linkend="GstCaps"><type>GstCaps</type></link> representing
+the src pad caps before usage.  Return <link linkend="NULL:CAPS"><literal>NULL</literal></link> to indicate failure.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstVideoAggregatorClass.fixate-caps">fixate_caps</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Fixate and return the src pad caps provided.  The function takes
+ownership of <parameter>caps</parameter>
+and returns a fixated version of
+<parameter>caps</parameter>
+. <parameter>caps</parameter>
+is not guaranteed to be writable.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstVideoAggregatorClass.aggregate-frames">aggregate_frames</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Lets subclasses aggregate frames that are ready. Subclasses
+should iterate the GstElement.sinkpads and use the already
+mapped <link linkend="GstVideoFrame"><type>GstVideoFrame</type></link> from GstVideoAggregatorPad.aggregated_frame
+or directly use the <link linkend="GstBuffer"><type>GstBuffer</type></link> from GstVideoAggregatorPad.buffer
+if it needs to map the buffer in a special way. The result of the
+aggregation should land in <parameter>outbuffer</parameter>
+.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstVideoAggregatorClass.get-output-buffer">get_output_buffer</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Lets subclasses provide a <link linkend="GstBuffer"><type>GstBuffer</type></link> to be used as <parameter>outbuffer</parameter>
+of
+the <link linkend="aggregate-frames"><type>aggregate_frames</type></link> vmethod.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstVideoAggregatorClass.negotiated-caps">negotiated_caps</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Notifies subclasses what caps format has been negotiated</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><structfield id="GstVideoAggregatorClass.find-best-format">find_best_format</structfield>&#160;()</para></entry>
+<entry role="struct_member_description"><para>Optional.
+Lets subclasses decide of the best common format to use.</para></entry>
+<entry role="struct_member_annotations"></entry>
+</row>
+<row role="member"><entry role="struct_member_name"><para><link linkend="GstCaps"><type>GstCaps</type></link>&#160;*<structfield id="GstVideoAggregatorClass.sink-non-alpha-caps">sink_non_alpha_caps</structfield>;</para></entry>
+<entry /><entry />
+</row>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+
+</refentry>

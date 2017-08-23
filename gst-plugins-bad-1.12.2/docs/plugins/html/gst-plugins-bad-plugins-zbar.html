@@ -77,22 +77,22 @@
 <a name="gst-plugins-bad-plugins-zbar.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
-                    <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gst-plugins-base-libs-1.0GstVideoFilter.html#GstVideoFilter-struct">GstVideoFilter</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+                    <span class="lineart">╰──</span> <a href="../gst-plugins-base-libs-1.0/GstVideoFilter.html#GstVideoFilter-struct">GstVideoFilter</a>
                         <span class="lineart">╰──</span> GstZBar
 </pre>
 </div>
 <div class="refsect1">
 <a name="gst-plugins-bad-plugins-zbar.description"></a><h2>Description</h2>
 <p>Detect bar codes in the video streams and send them as element messages to
-the <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBus.html#GstBus-struct"><span class="type">GstBus</span></a> if .<a class="link" href="gst-plugins-bad-plugins-zbar.html#GstZBar--message" title="The “message” property"><span class="type">“message”</span></a> property is <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.
+the <a href="../gstreamer-1.0/GstBus.html#GstBus-struct"><span class="type">GstBus</span></a> if .<a class="link" href="gst-plugins-bad-plugins-zbar.html#GstZBar--message" title="The “message” property"><span class="type">“message”</span></a> property is <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>.
 If the .<a class="link" href="gst-plugins-bad-plugins-zbar.html#GstZBar--attach-frame" title="The “attach-frame” property"><span class="type">“attach-frame”</span></a> property is <a href="/usr/share/gtk-doc/html/glibglib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a>, the posted barcode message
 includes a sample of the frame where the barcode was detected (Since 1.6).</p>
 <p>The element generate messages named<code class="literal">barcode</code>. The structure containes these fields:</p>
 <div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; ">
-<li class="listitem"><p><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstClock.html#GstClockTime"><span class="type">GstClockTime</span></a> <code class="literal">timestamp</code>: the timestamp of the buffer that triggered the message.</p></li>
+<li class="listitem"><p><a href="../gstreamer-1.0/GstClock.html#GstClockTime"><span class="type">GstClockTime</span></a> <code class="literal">timestamp</code>: the timestamp of the buffer that triggered the message.</p></li>
 <li class="listitem"><p>gchar * <code class="literal">type</code>: the symbol type.</p></li>
 <li class="listitem"><p>gchar * <code class="literal">symbol</code>: the deteted bar code data.</p></li>
 <li class="listitem"><p>gint <code class="literal">quality</code>: an unscaled, relative quantity: larger values are better than smaller
@@ -102,29 +102,13 @@ the .<a class="link" href="gst-plugins-bad-plugins-zbar.html#GstZBar--attach-fra
 </ul></div>
 <div class="refsect3">
 <a name="id-1.2.130.7.5"></a><h4>Example launch lines</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>m v4l2src <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> zbar <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> xvimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -m v4l2src ! videoconvert ! zbar ! videoconvert ! xvimagesink
+</pre></div>
 <p> This pipeline will detect barcodes and send them as messages.</p>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>m v4l2src <span class="gtkdoc opt">!</span> tee name<span class="gtkdoc opt">=</span>t <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> videoconvert <span class="gtkdoc opt">!</span> zbar <span class="gtkdoc opt">!</span> fakesink t<span class="gtkdoc opt">. !</span> queue <span class="gtkdoc opt">!</span> xvimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -m v4l2src ! tee name=t ! queue ! videoconvert ! zbar ! fakesink t. ! queue ! xvimagesink
+</pre></div>
 <p> Same as above, but running the filter on a branch to keep the display in color</p>
 </div>
 <div class="refsynopsisdiv">

@@ -1,0 +1,104 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-dvbsuboverlay">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-dvbsuboverlay.top_of_page" role="top_of_page">dvbsuboverlay</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dvbsuboverlay</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-dvbsuboverlay.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstDVBSubOverlay--enable">enable</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDVBSubOverlay--max-page-timeout">max-page-timeout</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstDVBSubOverlay--force-end">force-end</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDVBSubOverlay"/><refsect1 id="gst-plugins-bad-plugins-dvbsuboverlay.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDVBSubOverlay-struct">GstDVBSubOverlay</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsuboverlay.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> GstDVBSubOverlay
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-dvbsuboverlay.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Renders DVB subtitles on top of a video stream.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=/path/to/ts ! mpegtsdemux name=d ! queue ! mpegaudioparse ! mpg123audiodec ! audioconvert ! autoaudiosink \
+    d. ! queue ! mpegvideoparse ! mpeg2dec ! videoconvert ! r. \
+    d. ! queue ! "subpicture/x-dvb" ! dvbsuboverlay name=r ! videoconvert ! autovideosink
+]]></programlisting></informalexample>
+<para> This pipeline demuxes a MPEG-TS file with MPEG2 video, MP3 audio and embedded DVB subtitles and renders the subtitles on top of the video.</para>
+</refsect3>
+
+<include href="element-dvbsuboverlay-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsuboverlay.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsuboverlay.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDVBSubOverlay-struct" role="struct">
+<title>struct GstDVBSubOverlay</title>
+<indexterm zone="GstDVBSubOverlay-struct"><primary>GstDVBSubOverlay</primary></indexterm>
+<programlisting language="C">struct GstDVBSubOverlay;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsuboverlay.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDVBSubOverlay--enable" role="property"><title>The <literal>“enable”</literal> property</title>
+<indexterm zone="GstDVBSubOverlay--enable"><primary>GstDVBSubOverlay:enable</primary></indexterm>
+<programlisting>  “enable”                   <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Enable rendering of subtitles.</para><para>Flags: Read / Write</para>
+<para>Default value: TRUE</para>
+</refsect2>
+<refsect2 id="GstDVBSubOverlay--max-page-timeout" role="property"><title>The <literal>“max-page-timeout”</literal> property</title>
+<indexterm zone="GstDVBSubOverlay--max-page-timeout"><primary>GstDVBSubOverlay:max-page-timeout</primary></indexterm>
+<programlisting>  “max-page-timeout”         <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Limit maximum display time of a subtitle page (0 - disabled, value in seconds).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDVBSubOverlay--force-end" role="property"><title>The <literal>“force-end”</literal> property</title>
+<indexterm zone="GstDVBSubOverlay--force-end"><primary>GstDVBSubOverlay:force-end</primary></indexterm>
+<programlisting>  “force-end”                <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>Assume PES-aligned subtitles and force end-of-display.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

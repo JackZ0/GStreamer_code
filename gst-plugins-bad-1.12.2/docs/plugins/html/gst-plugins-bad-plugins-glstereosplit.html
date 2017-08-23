@@ -49,8 +49,8 @@
 <a name="gst-plugins-bad-plugins-glstereosplit.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
                 <span class="lineart">╰──</span> GstGLStereoSplit
 </pre>
 </div>
@@ -59,17 +59,9 @@
 <p>Receive a stereoscopic video stream and split into left/right</p>
 <div class="refsect3">
 <a name="id-1.2.80.6.3"></a><h4>Examples</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> videotestsrc <span class="gtkdoc opt">!</span> glstereosplit name<span class="gtkdoc opt">=</span>s <span class="gtkdoc opt">!</span> queue <span class="gtkdoc opt">!</span> glimagesink s<span class="gtkdoc opt">. !</span> queue <span class="gtkdoc opt">!</span> glimagesink</pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 videotestsrc ! glstereosplit name=s ! queue ! glimagesink s. ! queue ! glimagesink
+</pre></div>
 <p>
 FBO (Frame Buffer Object) and GLSL (OpenGL Shading Language) are required.</p>
 </div>

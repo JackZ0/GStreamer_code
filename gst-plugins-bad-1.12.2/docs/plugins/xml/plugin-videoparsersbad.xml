@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN" "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd">
+<refentry id="gst-plugins-bad-plugins-plugin-videoparsersbad">
+  <refmeta>
+    <refentrytitle>videoparsersbad</refentrytitle>
+    <manvolnum>3</manvolnum>
+    <refmiscinfo>FIXME Library</refmiscinfo>
+  </refmeta>
+  <refnamediv>
+    <refname>videoparsersbad</refname>
+    <refpurpose><anchor id="plugin-videoparsersbad"/>videoparsers</refpurpose>
+  </refnamediv>
+  <refsect1>
+    <title>Plugin Information</title>
+    <variablelist>
+      <varlistentry>
+        <term>filename</term>
+        <listitem>
+          <simpara>libgstvideoparsersbad.so</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>version</term>
+        <listitem>
+          <simpara>1.12.2</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>run-time license</term>
+        <listitem>
+          <simpara>LGPL</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>package</term>
+        <listitem>
+          <simpara>GStreamer Bad Plug-ins source release</simpara>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>origin</term>
+        <listitem>
+          <simpara>Unknown package origin</simpara>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsect1>
+  <refsect1>
+    <title>Elements</title>
+    <variablelist>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-diracparse">diracparse</link></term><listitem><simpara>Parses Dirac streams</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-h263parse">h263parse</link></term><listitem><simpara>Parses H.263 streams</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-h264parse">h264parse</link></term><listitem><simpara>Parses H.264 streams</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-h265parse">h265parse</link></term><listitem><simpara>Parses H.265 streams</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-jpeg2000parse">jpeg2000parse</link></term><listitem><simpara>Parses JPEG 2000 files</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-mpeg4videoparse">mpeg4videoparse</link></term><listitem><simpara>Parses MPEG-4 Part 2 elementary video streams</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-mpegvideoparse">mpegvideoparse</link></term><listitem><simpara>Parses and frames MPEG-1 and MPEG-2 elementary video streams</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-pngparse">pngparse</link></term><listitem><simpara>Parses PNG files</simpara></listitem></varlistentry>
+    <varlistentry><term><link linkend="gst-plugins-bad-plugins-vc1parse">vc1parse</link></term><listitem><simpara>Parses VC1 streams</simpara></listitem></varlistentry>
+  </variablelist>
+  </refsect1>
+</refentry>

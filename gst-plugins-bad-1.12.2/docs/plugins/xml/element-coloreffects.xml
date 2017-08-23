@@ -1,0 +1,124 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-coloreffects">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-coloreffects.top_of_page" role="top_of_page">coloreffects</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>coloreffects</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-coloreffects.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstColorEffectsPreset"><type>GstColorEffectsPreset</type></link></entry><entry role="property_name"><link linkend="GstColorEffects--preset">preset</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstColorEffects"/><refsect1 id="gst-plugins-bad-plugins-coloreffects.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstColorEffects-struct">GstColorEffects</link></entry></row>
+<row><entry role="datatype_keyword">enum</entry><entry role="function_name"><link linkend="GstColorEffectsPreset">GstColorEffectsPreset</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-coloreffects.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> GstColorEffects
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-coloreffects.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Map colors of the video input to a lookup table</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v videotestsrc ! coloreffects preset=heat ! videoconvert !
+    autovideosink
+]]></programlisting></informalexample>
+<para> This pipeline shows the effect of coloreffects on a test stream.</para>
+</refsect3>
+
+<include href="element-coloreffects-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-coloreffects.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-coloreffects.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstColorEffects-struct" role="struct">
+<title>struct GstColorEffects</title>
+<indexterm zone="GstColorEffects-struct"><primary>GstColorEffects</primary></indexterm>
+<programlisting language="C">struct GstColorEffects;</programlisting>
+<para>Opaque datastructure.</para>
+</refsect2>
+<refsect2 id="GstColorEffectsPreset" role="enum">
+<title>enum GstColorEffectsPreset</title>
+<indexterm zone="GstColorEffectsPreset"><primary>GstColorEffectsPreset</primary></indexterm>
+<para>The lookup table to use to convert input colors</para>
+<refsect3 id="GstColorEffectsPreset.members" role="enum_members">
+<title>Members</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="3">
+<colspec colname="enum_members_name" colwidth="300px"/>
+<colspec colname="enum_members_description"/>
+<colspec colname="enum_members_annotations" colwidth="200px"/>
+<tbody>
+<row role="constant"><entry role="enum_member_name"><para id="GST-COLOR-EFFECTS-PRESET-NONE:CAPS">GST_COLOR_EFFECTS_PRESET_NONE</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-COLOR-EFFECTS-PRESET-HEAT:CAPS">GST_COLOR_EFFECTS_PRESET_HEAT</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-COLOR-EFFECTS-PRESET-SEPIA:CAPS">GST_COLOR_EFFECTS_PRESET_SEPIA</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-COLOR-EFFECTS-PRESET-XRAY:CAPS">GST_COLOR_EFFECTS_PRESET_XRAY</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-COLOR-EFFECTS-PRESET-XPRO:CAPS">GST_COLOR_EFFECTS_PRESET_XPRO</para></entry>
+<entry/><entry/>
+</row>
+<row role="constant"><entry role="enum_member_name"><para id="GST-COLOR-EFFECTS-PRESET-YELLOWBLUE:CAPS">GST_COLOR_EFFECTS_PRESET_YELLOWBLUE</para></entry>
+<entry/><entry/>
+</row>
+</tbody></tgroup></informaltable>
+</refsect3></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-coloreffects.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstColorEffects--preset" role="property"><title>The <literal>“preset”</literal> property</title>
+<indexterm zone="GstColorEffects--preset"><primary>GstColorEffects:preset</primary></indexterm>
+<programlisting>  “preset”                   <link linkend="GstColorEffectsPreset"><type>GstColorEffectsPreset</type></link></programlisting>
+<para>Color effect preset to use.</para><para>Flags: Read / Write</para>
+<para>Default value: Do nothing preset</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

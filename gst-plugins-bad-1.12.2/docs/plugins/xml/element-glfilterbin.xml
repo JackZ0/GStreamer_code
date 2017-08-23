@@ -1,0 +1,122 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glfilterbin">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glfilterbin.top_of_page" role="top_of_page">glfilterbin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glfilterbin</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstElement"><type>GstElement</type></link> *</entry><entry role="property_name"><link linkend="GstGLFilterBin--filter">filter</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstGLFilterBin-create-element">create-element</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLFilterBin"/><refsect1 id="gst-plugins-bad-plugins-glfilterbin.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLFilterBin-struct">GstGLFilterBin</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstGLFilterBin
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLFilterBin implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-glfilterbin-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLFilterBin-struct" role="struct">
+<title>struct GstGLFilterBin</title>
+<indexterm zone="GstGLFilterBin-struct"><primary>GstGLFilterBin</primary></indexterm>
+<programlisting language="C">struct GstGLFilterBin;</programlisting>
+<refsect3 id="GstGLFilterBin.members" role="struct_members">
+<title>Members</title>
+<informaltable frame="none" pgwide="1" role="struct_members_table">
+<tgroup cols="3">
+<colspec colname="struct_members_name" colwidth="300px"/>
+<colspec colname="struct_members_description"/>
+<colspec colname="struct_members_annotations" colwidth="200px"/>
+<tbody>
+</tbody></tgroup></informaltable>
+</refsect3>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLFilterBin--filter" role="property"><title>The <literal>“filter”</literal> property</title>
+<indexterm zone="GstGLFilterBin--filter"><primary>GstGLFilterBin:filter</primary></indexterm>
+<programlisting>  “filter”                   <link linkend="GstElement"><type>GstElement</type></link> *</programlisting>
+<para>The GL filter chain to use.</para><para>Flags: Read / Write</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glfilterbin.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLFilterBin-create-element" role="signal"><title>The <literal>“create-element”</literal> signal</title>
+<indexterm zone="GstGLFilterBin-create-element"><primary>GstGLFilterBin::create-element</primary></indexterm>
+<programlisting language="C"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*
+user_function (<link linkend="GstGLFilterBin"><type>GstGLFilterBin</type></link> *gstglfilterbin,
+               <link linkend="gpointer"><type>gpointer</type></link>        user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

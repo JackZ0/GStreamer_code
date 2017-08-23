@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLDisplayEGL">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLDisplayEGL.top_of_page">GstGLDisplayEGL</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLDisplayEGL</refname>
+<refpurpose></refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLDisplayEGL.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLDisplayEGL"><returnvalue>GstGLDisplayEGL</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-display-egl-new">gst_gl_display_egl_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLDisplayEGL"><returnvalue>GstGLDisplayEGL</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-display-egl-new-with-egl-display">gst_gl_display_egl_new_with_egl_display</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLDisplayEGL"><returnvalue>GstGLDisplayEGL</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-display-egl-from-gl-display">gst_gl_display_egl_from_gl_display</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="EGLDisplay"><returnvalue>EGLDisplay</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-display-egl-get-from-native">gst_gl_display_egl_get_from_native</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLDisplayEGL.description" role="desc">
+<title role="desc.title">Description</title>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLDisplayEGL.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-display-egl-new" role="function">
+<title>gst_gl_display_egl_new&#160;()</title>
+<indexterm zone="gst-gl-display-egl-new"><primary>gst_gl_display_egl_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLDisplayEGL"><returnvalue>GstGLDisplayEGL</returnvalue></link>&#160;*
+gst_gl_display_egl_new (<parameter><type>void</type></parameter>);</programlisting>
+<para>Create a new <link linkend="GstGLDisplayEGL"><type>GstGLDisplayEGL</type></link> using the default EGL_DEFAULT_DISPLAY.</para>
+<refsect3 id="gst-gl-display-egl-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLDisplayEGL"><type>GstGLDisplayEGL</type></link> or <link linkend="NULL:CAPS"><literal>NULL</literal></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3></refsect2>
+<refsect2 id="gst-gl-display-egl-new-with-egl-display" role="function">
+<title>gst_gl_display_egl_new_with_egl_display&#160;()</title>
+<indexterm zone="gst-gl-display-egl-new-with-egl-display"><primary>gst_gl_display_egl_new_with_egl_display</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLDisplayEGL"><returnvalue>GstGLDisplayEGL</returnvalue></link>&#160;*
+gst_gl_display_egl_new_with_egl_display
+                               (<parameter><link linkend="EGLDisplay"><type>EGLDisplay</type></link> display</parameter>);</programlisting>
+</refsect2>
+<refsect2 id="gst-gl-display-egl-from-gl-display" role="function" condition="since:1.12">
+<title>gst_gl_display_egl_from_gl_display&#160;()</title>
+<indexterm zone="gst-gl-display-egl-from-gl-display" role="1.12"><primary>gst_gl_display_egl_from_gl_display</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLDisplayEGL"><returnvalue>GstGLDisplayEGL</returnvalue></link>&#160;*
+gst_gl_display_egl_from_gl_display (<parameter><link linkend="GstGLDisplay"><type>GstGLDisplay</type></link> *display</parameter>);</programlisting>
+<para>Creates a EGL display connection from a native Display.</para>
+<para>This function will return the same value for multiple calls with the same
+<parameter>display</parameter>
+.</para>
+<refsect3 id="gst-gl-display-egl-from-gl-display.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>display</para></entry>
+<entry role="parameter_description"><para>an existing <link linkend="GstGLDisplay"><type>GstGLDisplay</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-display-egl-from-gl-display.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLDisplayEGL"><type>GstGLDisplayEGL</type></link>. </para>
+<para><emphasis role="annotation">[<acronym>transfer full</acronym>]</emphasis></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.12">1.12</link></para></refsect2>
+<refsect2 id="gst-gl-display-egl-get-from-native" role="function" condition="since:1.12">
+<title>gst_gl_display_egl_get_from_native&#160;()</title>
+<indexterm zone="gst-gl-display-egl-get-from-native" role="1.12"><primary>gst_gl_display_egl_get_from_native</primary></indexterm>
+<programlisting language="C"><link linkend="EGLDisplay"><returnvalue>EGLDisplay</returnvalue></link>
+gst_gl_display_egl_get_from_native (<parameter><link linkend="GstGLDisplayType"><type>GstGLDisplayType</type></link> type</parameter>,
+                                    <parameter><link linkend="guintptr"><type>guintptr</type></link> display</parameter>);</programlisting>
+<para>Attempts to create a new <link linkend="EGLDisplay"><type>EGLDisplay</type></link> from <parameter>display</parameter>
+.  If <parameter>type</parameter>
+ is
+<link linkend="GST-GL-DISPLAY-TYPE-ANY:CAPS"><literal>GST_GL_DISPLAY_TYPE_ANY</literal></link>, then <parameter>display</parameter>
+ must be 0.</para>
+<refsect3 id="gst-gl-display-egl-get-from-native.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>type</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLDisplayType"><type>GstGLDisplayType</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>display</para></entry>
+<entry role="parameter_description"><para>pointer to a display (or 0)</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-display-egl-get-from-native.returns" role="returns">
+<title>Returns</title>
+<para> A <link linkend="EGLDisplay"><type>EGLDisplay</type></link> or <link linkend="EGL-NO-DISPLAY:CAPS"><literal>EGL_NO_DISPLAY</literal></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.12">1.12</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLDisplayEGL.other_details" role="details">
+<title role="details.title">Types and Values</title>
+
+</refsect1>
+
+</refentry>

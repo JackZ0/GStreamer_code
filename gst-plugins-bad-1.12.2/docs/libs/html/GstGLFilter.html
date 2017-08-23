@@ -106,9 +106,9 @@
 <a name="GstGLFilter.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct">GstBaseTransform</a>
                     <span class="lineart">╰──</span> <a class="link" href="GstGLBaseFilter.html" title="GstGLBaseFilter">GstGLBaseFilter</a>
                         <span class="lineart">╰──</span> GstGLFilter
 </pre>
@@ -273,8 +273,8 @@ gst_gl_filter_render_to_target_with_shader
 <a name="gst-gl-filter-filter-texture"></a><h3>gst_gl_filter_filter_texture ()</h3>
 <pre class="programlisting"><a href="/usr/share/gtk-doc/html/glibglib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>
 gst_gl_filter_filter_texture (<em class="parameter"><code><a class="link" href="GstGLFilter.html" title="GstGlFilter"><span class="type">GstGLFilter</span></a> *filter</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBuffer.html#GstBuffer-struct"><span class="type">GstBuffer</span></a> *inbuf</code></em>,
-                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-1.0GstBuffer.html#GstBuffer-struct"><span class="type">GstBuffer</span></a> *outbuf</code></em>);</pre>
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstBuffer.html#GstBuffer"><span class="type">GstBuffer</span></a> *inbuf</code></em>,
+                              <em class="parameter"><code><a href="/usr/share/gtk-doc/html/gstreamer-0.10gstreamer-GstBuffer.html#GstBuffer"><span class="type">GstBuffer</span></a> *outbuf</code></em>);</pre>
 <p>Perform automatic upload if needed, call filter_texture vfunc and then an
 automatic download if needed.</p>
 <div class="refsect3">
@@ -380,7 +380,7 @@ any shaders, viewport state, etc must be setup by the caller.</p>
 <tbody>
 <tr>
 <td class="struct_member_name"><p><em class="structfield"><code><a name="GstGLFilterClass.set-caps"></a>set_caps</code></em> ()</p></td>
-<td class="struct_member_description"><p>mirror from <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct"><span class="type">GstBaseTransform</span></a></p></td>
+<td class="struct_member_description"><p>mirror from <a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct"><span class="type">GstBaseTransform</span></a></p></td>
 <td class="struct_member_annotations"> </td>
 </tr>
 <tr>
@@ -420,7 +420,7 @@ caps to be processed between upload on input and before download for output.</p>
 </div>
 <div class="refsect1">
 <a name="GstGLFilter.see-also"></a><h2>See Also</h2>
-<p><a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseTransform.html#GstBaseTransform-struct"><span class="type">GstBaseTransform</span></a>, <a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a>, <a class="link" href="GstGLFramebuffer.html" title="GstGLFramebuffer"><span class="type">GstGLFramebuffer</span></a></p>
+<p><a href="../gstreamer-libs-1.0/GstBaseTransform.html#GstBaseTransform-struct"><span class="type">GstBaseTransform</span></a>, <a class="link" href="GstGLContext.html" title="GstGLContext"><span class="type">GstGLContext</span></a>, <a class="link" href="GstGLFramebuffer.html" title="GstGLFramebuffer"><span class="type">GstGLFramebuffer</span></a></p>
 </div>
 </div>
 <div class="footer">

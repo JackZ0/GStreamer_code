@@ -1,0 +1,135 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-glmixerbin">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-glmixerbin.top_of_page" role="top_of_page">glmixerbin</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>glmixerbin</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gint64"><type>gint64</type></link></entry><entry role="property_name"><link linkend="GstGLMixerBin--latency">latency</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstElement"><type>GstElement</type></link> *</entry><entry role="property_name"><link linkend="GstGLMixerBin--mixer">mixer</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstGLMixerBin--start-time">start-time</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstGLMixerBinStartTimeSelection"><type>GstGLMixerBinStartTimeSelection</type></link></entry><entry role="property_name"><link linkend="GstGLMixerBin--start-time-selection">start-time-selection</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*</entry><entry role="signal_name"><link linkend="GstGLMixerBin-create-element">create-element</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLMixerBin"/><refsect1 id="gst-plugins-bad-plugins-glmixerbin.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstGLMixerBin-struct">GstGLMixerBin</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBin">GstBin</link>
+                    <phrase role="lineart">╰──</phrase> GstGLMixerBin
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstGLVideoMixerBin">GstGLVideoMixerBin</link>
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstGLMixerBin implements
+ <link linkend="GstChildProxy">GstChildProxy</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.description" role="desc">
+<title role="desc.title">Description</title>
+
+<include href="element-glmixerbin-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLMixerBin-struct" role="struct">
+<title>struct GstGLMixerBin</title>
+<indexterm zone="GstGLMixerBin-struct"><primary>GstGLMixerBin</primary></indexterm>
+<programlisting language="C">struct GstGLMixerBin;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstGLMixerBin--latency" role="property"><title>The <literal>“latency”</literal> property</title>
+<indexterm zone="GstGLMixerBin--latency"><primary>GstGLMixerBin:latency</primary></indexterm>
+<programlisting>  “latency”                  <link linkend="gint64"><type>gint64</type></link></programlisting>
+<para>Additional latency in live mode to allow upstream to take longer to produce buffers for the current position.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstGLMixerBin--mixer" role="property"><title>The <literal>“mixer”</literal> property</title>
+<indexterm zone="GstGLMixerBin--mixer"><primary>GstGLMixerBin:mixer</primary></indexterm>
+<programlisting>  “mixer”                    <link linkend="GstElement"><type>GstElement</type></link> *</programlisting>
+<para>The GL mixer chain to use.</para><para>Flags: Read / Write</para>
+</refsect2>
+<refsect2 id="GstGLMixerBin--start-time" role="property"><title>The <literal>“start-time”</literal> property</title>
+<indexterm zone="GstGLMixerBin--start-time"><primary>GstGLMixerBin:start-time</primary></indexterm>
+<programlisting>  “start-time”               <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Start time to use if start-time-selection=set.</para><para>Flags: Read / Write</para>
+<para>Default value: 18446744073709551615</para>
+</refsect2>
+<refsect2 id="GstGLMixerBin--start-time-selection" role="property"><title>The <literal>“start-time-selection”</literal> property</title>
+<indexterm zone="GstGLMixerBin--start-time-selection"><primary>GstGLMixerBin:start-time-selection</primary></indexterm>
+<programlisting>  “start-time-selection”     <link linkend="GstGLMixerBinStartTimeSelection"><type>GstGLMixerBinStartTimeSelection</type></link></programlisting>
+<para>Decides which start time is output.</para><para>Flags: Read / Write</para>
+<para>Default value: Start at 0 running time (default)</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-glmixerbin.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstGLMixerBin-create-element" role="signal"><title>The <literal>“create-element”</literal> signal</title>
+<indexterm zone="GstGLMixerBin-create-element"><primary>GstGLMixerBin::create-element</primary></indexterm>
+<programlisting language="C"><link linkend="GstElement"><returnvalue>GstElement</returnvalue></link>*
+user_function (<link linkend="GstGLMixerBin"><type>GstGLMixerBin</type></link> *gstglmixerbin,
+               <link linkend="gpointer"><type>gpointer</type></link>       user_data)</programlisting>
+<para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

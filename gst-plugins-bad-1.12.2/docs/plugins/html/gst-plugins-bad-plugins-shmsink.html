@@ -111,9 +111,9 @@
 <a name="gst-plugins-bad-plugins-shmsink.object-hierarchy"></a><h2>Object Hierarchy</h2>
 <pre class="screen">    <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GObject-struct">GObject</a>
     <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gobjectgobject-The-Base-Object-Type.html#GInitiallyUnowned">GInitiallyUnowned</a>
-        <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstObject.html#GstObject-struct">GstObject</a>
-            <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-1.0GstElement.html#GstElement-struct">GstElement</a>
-                <span class="lineart">╰──</span> <a href="/usr/share/gtk-doc/html/gstreamer-libs-1.0GstBaseSink.html#GstBaseSink-struct">GstBaseSink</a>
+        <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstObject.html#GstObject-struct">GstObject</a>
+            <span class="lineart">╰──</span> <a href="../gstreamer-1.0/GstElement.html#GstElement-struct">GstElement</a>
+                <span class="lineart">╰──</span> <a href="../gstreamer-libs-1.0/GstBaseSink.html#GstBaseSink-struct">GstBaseSink</a>
                     <span class="lineart">╰──</span> GstShmSink
 </pre>
 </div>
@@ -122,21 +122,11 @@
 <p>Send data over shared memory to the matching source.</p>
 <div class="refsect3">
 <a name="id-1.2.111.8.3"></a><h4>Example launch lines</h4>
-<div class="informalexample">
-  <table class="listing_frame" border="0" cellpadding="0" cellspacing="0">
-    <tbody>
-      <tr>
-        <td class="listing_lines" align="right"><pre>1
-2
-3</pre></td>
-        <td class="listing_code"><pre class="programlisting">gst<span class="gtkdoc opt">-</span>launch<span class="gtkdoc opt">-</span><span class="number">1.0</span> <span class="gtkdoc opt">-</span>v videotestsrc <span class="gtkdoc opt">!</span> <span class="string">&quot;video/x-raw, format=YUY2, color-matrix=sdtv, \</span>
-<span class="string">chroma-site=mpeg2, width=(int)320, height=(int)240, framerate=(fraction)30/1&quot;</span> \
-<span class="gtkdoc opt">!</span> shmsink socket<span class="gtkdoc opt">-</span>path<span class="gtkdoc opt">=/</span>tmp<span class="gtkdoc opt">/</span>blah shm<span class="gtkdoc opt">-</span>size<span class="gtkdoc opt">=</span><span class="number">2000000</span></pre></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+<div class="informalexample"><pre class="programlisting">
+gst-launch-1.0 -v videotestsrc ! "video/x-raw, format=YUY2, color-matrix=sdtv, \
+chroma-site=mpeg2, width=(int)320, height=(int)240, framerate=(fraction)30/1" \
+! shmsink socket-path=/tmp/blah shm-size=2000000
+</pre></div>
 <p> Send video to shm buffers.</p>
 </div>
 <div class="refsynopsisdiv">

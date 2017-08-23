@@ -1,0 +1,593 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-dvbsrc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-dvbsrc.top_of_page" role="top_of_page">dvbsrc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>dvbsrc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--bandwidth-hz">bandwidth-hz</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcBandwidth"><type>GstDvbSrcBandwidth</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--bandwidth">bandwidth</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--code-rate-hp">code-rate-hp</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--code-rate-lp">code-rate-lp</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchararray"><type>gchararray</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--device">device</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--diseqc-src">diseqc-src</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--freq">freq</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcGuard"><type>GstDvbSrcGuard</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--guard">guard</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcHierarchy"><type>GstDvbSrcHierarchy</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--hierarchy">hierarchy</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcInversion"><type>GstDvbSrcInversion</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--inversion">inversion</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--modulation">modulation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDvbSrc--pids">pids</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gchararray"><type>gchararray</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--pol">pol</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--srate">srate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcTransmission-Mode"><type>GstDvbSrcTransmission_Mode</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--trans-mode">trans-mode</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gpointer"><type>gpointer</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--tune">tune</link></entry><entry role="property_flags">Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--adapter">adapter</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--diseqc-source">diseqc-source</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--frequency">frequency</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--frontend">frontend</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gchar"><type>gchar</type></link> *</entry><entry role="property_name"><link linkend="GstDvbSrc--polarity">polarity</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--symbol-rate">symbol-rate</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--stats-reporting-interval">stats-reporting-interval</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--timeout">timeout</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--dvb-buffer-size">dvb-buffer-size</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcDelsys"><type>GstDvbSrcDelsys</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--delsys">delsys</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcPilot"><type>GstDvbSrcPilot</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--pilot">pilot</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcRolloff"><type>GstDvbSrcRolloff</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--rolloff">rolloff</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--stream-id">stream-id</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint64"><type>guint64</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--tuning-timeout">tuning-timeout</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layer-enabled">isdbt-layer-enabled</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layera-fec">isdbt-layera-fec</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layera-modulation">isdbt-layera-modulation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layera-segment-count">isdbt-layera-segment-count</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layera-time-interleaving">isdbt-layera-time-interleaving</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerb-fec">isdbt-layerb-fec</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerb-modulation">isdbt-layerb-modulation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerb-segment-count">isdbt-layerb-segment-count</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerb-time-interleaving">isdbt-layerb-time-interleaving</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerc-fec">isdbt-layerc-fec</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerc-modulation">isdbt-layerc-modulation</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerc-segment-count">isdbt-layerc-segment-count</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-layerc-time-interleaving">isdbt-layerc-time-interleaving</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-partial-reception">isdbt-partial-reception</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-sb-segment-count">isdbt-sb-segment-count</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-sb-segment-idx">isdbt-sb-segment-idx</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-sb-subchannel-id">isdbt-sb-subchannel-id</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--isdbt-sound-broadcasting">isdbt-sound-broadcasting</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--lnb-lof1">lnb-lof1</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--lnb-lof2">lnb-lof2</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="guint"><type>guint</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--lnb-slof">lnb-slof</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="GstDvbSrcInterleaving"><type>GstDvbSrcInterleaving</type></link></entry><entry role="property_name"><link linkend="GstDvbSrc--interleaving">interleaving</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.signals" role="signal_proto">
+<title role="signal_proto.title">Signals</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="signals_return" colwidth="150px"/>
+<colspec colname="signals_name" colwidth="300px"/>
+<colspec colname="signals_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstDvbSrc-tuning-done">tuning-done</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstDvbSrc-tuning-fail">tuning-fail</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstDvbSrc-tuning-start">tuning-start</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></entry></row>
+<row><entry role="signal_type"><link linkend="void"><returnvalue>void</returnvalue></link></entry><entry role="signal_name"><link linkend="GstDvbSrc-tune">tune</link></entry><entry role="signal_flags"><link linkend="G-SIGNAL-ACTION:CAPS">Action</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstDvbSrc"/><refsect1 id="gst-plugins-bad-plugins-dvbsrc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstDvbSrc-struct">GstDvbSrc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseSrc">GstBaseSrc</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstPushSrc">GstPushSrc</link>
+                        <phrase role="lineart">╰──</phrase> GstDvbSrc
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>dvbsrc can be used to capture media from DVB cards. Supported DTV
+broadcasting standards include DVB-T/C/S, ATSC, ISDB-T and DTMB.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 dvbsrc modulation="QAM 64" trans-mode=8k bandwidth=8 frequency=514000000 code-rate-lp=AUTO code-rate-hp=2/3 guard=4  hierarchy=0 ! mpegtsdemux name=demux ! queue max-size-buffers=0 max-size-time=0 ! mpegvideoparse ! mpegvideoparse ! mpeg2dec ! xvimagesink demux. ! queue max-size-buffers=0 max-size-time=0 ! mpegaudioparse ! mpg123audiodec ! audioconvert ! pulsesink
+]]></programlisting></informalexample>
+<para> Captures a full transport stream from DVB card 0 that is a DVB-T card at tuned frequency 514000000 Hz with other parameters as seen in the pipeline and renders the first TV program on the transport stream.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 dvbsrc modulation="QAM 64" trans-mode=8k bandwidth=8 frequency=514000000 code-rate-lp=AUTO code-rate-hp=2/3 guard=4  hierarchy=0 pids=100:256:257 ! mpegtsdemux name=demux ! queue max-size-buffers=0 max-size-time=0 ! mpegvideoparse ! mpeg2dec ! xvimagesink demux. ! queue max-size-buffers=0 max-size-time=0 ! mpegaudioparse ! mpg123audiodec ! audioconvert ! pulsesink
+]]></programlisting></informalexample>
+<para> Captures and renders a transport stream from DVB card 0 that is a DVB-T card for a program at tuned frequency 514000000 Hz with PMT PID 100 and elementary stream PIDs of 256, 257 with other parameters as seen in the pipeline.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 dvbsrc polarity="h" frequency=11302000 symbol-rate=27500 diseqc-source=0 pids=50:102:103 ! mpegtsdemux name=demux ! queue max-size-buffers=0 max-size-time=0 ! mpegvideoparse ! mpeg2dec ! xvimagesink demux. ! queue max-size-buffers=0 max-size-time=0 ! mpegaudioparse ! mpg123audiodec ! audioconvert ! pulsesink
+]]></programlisting></informalexample>
+<para> Captures and renders a transport stream from DVB card 0 that is a DVB-S card for a program at tuned frequency 11302000 kHz, symbol rate of 27500 kBd (kilo bauds) with PMT PID of 50 and elementary stream PIDs of 102 and 103.</para>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 dvbsrc frequency=515142857 guard=16 trans-mode="8k" isdbt-layer-enabled=7 isdbt-partial-reception=1 isdbt-layera-fec="2/3" isdbt-layera-modulation="QPSK" isdbt-layera-segment-count=1 isdbt-layera-time-interleaving=4 isdbt-layerb-fec="3/4" isdbt-layerb-modulation="qam-64" isdbt-layerb-segment-count=12 isdbt-layerb-time-interleaving=2 isdbt-layerc-fec="1/2" isdbt-layerc-modulation="qam-64" isdbt-layerc-segment-count=0 isdbt-layerc-time-interleaving=0 delsys="isdb-t" ! tsdemux ! "video/x-h264" ! h264parse ! queue ! avdec_h264 ! videoconvert ! queue ! autovideosink
+]]></programlisting></informalexample>
+<para> Captures and renders the video track of TV Paraíba HD (Globo affiliate) in Campina Grande, Brazil. This is an ISDB-T (Brazilian ISDB-Tb variant) broadcast.</para>
+<informalexample><programlisting><![CDATA[
+ gst-launch-1.0 dvbsrc frequency=503000000 delsys="atsc" modulation="8vsb" pids=48:49:52 ! decodebin name=dec dec. ! videoconvert ! autovideosink dec. ! audioconvert ! autoaudiosink
+]]></programlisting></informalexample>
+<para> Captures and renders KOFY-HD in San Jose, California. This is an ATSC broadcast, PMT ID 48, Audio/Video elementary stream PIDs 49 and 52 respectively.</para>
+</refsect3>
+
+<include href="element-dvbsrc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstDvbSrc-struct" role="struct">
+<title>struct GstDvbSrc</title>
+<indexterm zone="GstDvbSrc-struct"><primary>GstDvbSrc</primary></indexterm>
+<programlisting language="C">struct GstDvbSrc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstDvbSrc--bandwidth-hz" role="property"><title>The <literal>“bandwidth-hz”</literal> property</title>
+<indexterm zone="GstDvbSrc--bandwidth-hz"><primary>GstDvbSrc:bandwidth-hz</primary></indexterm>
+<programlisting>  “bandwidth-hz”             <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Channel bandwidth in Hz.</para><para>Flags: Read / Write</para>
+<para>Default value: 8000000</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--bandwidth" role="property"><title>The <literal>“bandwidth”</literal> property</title>
+<indexterm zone="GstDvbSrc--bandwidth"><primary>GstDvbSrc:bandwidth</primary></indexterm>
+<programlisting>  “bandwidth”                <link linkend="GstDvbSrcBandwidth"><type>GstDvbSrcBandwidth</type></link></programlisting>
+<para>(DVB-T) Bandwidth. Deprecated.</para><para>Flags: Read / Write</para>
+<para>Default value: 8</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--code-rate-hp" role="property"><title>The <literal>“code-rate-hp”</literal> property</title>
+<indexterm zone="GstDvbSrc--code-rate-hp"><primary>GstDvbSrc:code-rate-hp</primary></indexterm>
+<programlisting>  “code-rate-hp”             <link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></programlisting>
+<para>(DVB-T, DVB-S/S2 and DVB-C) High priority code rate.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--code-rate-lp" role="property"><title>The <literal>“code-rate-lp”</literal> property</title>
+<indexterm zone="GstDvbSrc--code-rate-lp"><primary>GstDvbSrc:code-rate-lp</primary></indexterm>
+<programlisting>  “code-rate-lp”             <link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></programlisting>
+<para>(DVB-T) Low priority code rate.</para><para>Flags: Read / Write</para>
+<para>Default value: 1/2</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--device" role="property"><title>The <literal>“device”</literal> property</title>
+<indexterm zone="GstDvbSrc--device"><primary>GstDvbSrc:device</primary></indexterm>
+<programlisting>  “device”                   <link linkend="gchararray"><type>gchararray</type></link></programlisting>
+<para>The device directory.</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;/dev/dvb/adapter0&quot;</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--diseqc-src" role="property"><title>The <literal>“diseqc-src”</literal> property</title>
+<indexterm zone="GstDvbSrc--diseqc-src"><primary>GstDvbSrc:diseqc-src</primary></indexterm>
+<programlisting>  “diseqc-src”               <link linkend="gint"><type>gint</type></link></programlisting>
+<para>DISEqC selected source (-1 disabled) (DVB-S).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [-1,7]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--freq" role="property"><title>The <literal>“freq”</literal> property</title>
+<indexterm zone="GstDvbSrc--freq"><primary>GstDvbSrc:freq</primary></indexterm>
+<programlisting>  “freq”                     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Frequency.</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--guard" role="property"><title>The <literal>“guard”</literal> property</title>
+<indexterm zone="GstDvbSrc--guard"><primary>GstDvbSrc:guard</primary></indexterm>
+<programlisting>  “guard”                    <link linkend="GstDvbSrcGuard"><type>GstDvbSrcGuard</type></link></programlisting>
+<para>(DVB-T) Guard Interval.</para><para>Flags: Read / Write</para>
+<para>Default value: 16</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--hierarchy" role="property"><title>The <literal>“hierarchy”</literal> property</title>
+<indexterm zone="GstDvbSrc--hierarchy"><primary>GstDvbSrc:hierarchy</primary></indexterm>
+<programlisting>  “hierarchy”                <link linkend="GstDvbSrcHierarchy"><type>GstDvbSrcHierarchy</type></link></programlisting>
+<para>(DVB-T) Hierarchy information.</para><para>Flags: Read / Write</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--inversion" role="property"><title>The <literal>“inversion”</literal> property</title>
+<indexterm zone="GstDvbSrc--inversion"><primary>GstDvbSrc:inversion</primary></indexterm>
+<programlisting>  “inversion”                <link linkend="GstDvbSrcInversion"><type>GstDvbSrcInversion</type></link></programlisting>
+<para>(DVB-T and DVB-C) Inversion information.</para><para>Flags: Read / Write</para>
+<para>Default value: ON</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--modulation" role="property"><title>The <literal>“modulation”</literal> property</title>
+<indexterm zone="GstDvbSrc--modulation"><primary>GstDvbSrc:modulation</primary></indexterm>
+<programlisting>  “modulation”               <link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></programlisting>
+<para>(DVB-T/T2/C/S2, TURBO and ATSC) Modulation type.</para><para>Flags: Read / Write</para>
+<para>Default value: QAM 16</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--pids" role="property"><title>The <literal>“pids”</literal> property</title>
+<indexterm zone="GstDvbSrc--pids"><primary>GstDvbSrc:pids</primary></indexterm>
+<programlisting>  “pids”                     <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>Colon-separated list of PIDs (eg. 110:120) to capture. ACT and CAT are automatically included but PMT should be added explicitly. Special value 8192 gets full MPEG-TS.</para><para>Flags: Write</para>
+<para>Default value: &quot;8192&quot;</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--pol" role="property"><title>The <literal>“pol”</literal> property</title>
+<indexterm zone="GstDvbSrc--pol"><primary>GstDvbSrc:pol</primary></indexterm>
+<programlisting>  “pol”                      <link linkend="gchararray"><type>gchararray</type></link></programlisting>
+<para>Polarity [vhHV] (DVB-S).</para><para>Flags: Read / Write</para>
+<para>Default value: &quot;h&quot;</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--srate" role="property"><title>The <literal>“srate”</literal> property</title>
+<indexterm zone="GstDvbSrc--srate"><primary>GstDvbSrc:srate</primary></indexterm>
+<programlisting>  “srate”                    <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Symbol Rate (DVB-S, DVB-C).</para><para>Flags: Read / Write</para>
+<para>Allowed values: &gt;= 0</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--trans-mode" role="property"><title>The <literal>“trans-mode”</literal> property</title>
+<indexterm zone="GstDvbSrc--trans-mode"><primary>GstDvbSrc:trans-mode</primary></indexterm>
+<programlisting>  “trans-mode”               <link linkend="GstDvbSrcTransmission-Mode"><type>GstDvbSrcTransmission_Mode</type></link></programlisting>
+<para>(DVB-T) Transmission mode.</para><para>Flags: Read / Write</para>
+<para>Default value: 8K</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--tune" role="property"><title>The <literal>“tune”</literal> property</title>
+<indexterm zone="GstDvbSrc--tune"><primary>GstDvbSrc:tune</primary></indexterm>
+<programlisting>  “tune”                     <link linkend="gpointer"><type>gpointer</type></link></programlisting>
+<para>Atomically tune to channel. (For Apps).</para><para>Flags: Write</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--adapter" role="property"><title>The <literal>“adapter”</literal> property</title>
+<indexterm zone="GstDvbSrc--adapter"><primary>GstDvbSrc:adapter</primary></indexterm>
+<programlisting>  “adapter”                  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The DVB adapter device number (eg. 0 for adapter0).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,16]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--diseqc-source" role="property"><title>The <literal>“diseqc-source”</literal> property</title>
+<indexterm zone="GstDvbSrc--diseqc-source"><primary>GstDvbSrc:diseqc-source</primary></indexterm>
+<programlisting>  “diseqc-source”            <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(DVB-S/S2) Selected DiSEqC source. Only needed if you have a DiSEqC switch. Otherwise leave at -1 (disabled).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,7]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--frequency" role="property"><title>The <literal>“frequency”</literal> property</title>
+<indexterm zone="GstDvbSrc--frequency"><primary>GstDvbSrc:frequency</primary></indexterm>
+<programlisting>  “frequency”                <link linkend="guint"><type>guint</type></link></programlisting>
+<para>Center frequency to tune into. Measured in kHz for the satellite distribution standars and Hz for all the rest.</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--frontend" role="property"><title>The <literal>“frontend”</literal> property</title>
+<indexterm zone="GstDvbSrc--frontend"><primary>GstDvbSrc:frontend</primary></indexterm>
+<programlisting>  “frontend”                 <link linkend="gint"><type>gint</type></link></programlisting>
+<para>The frontend device number (eg. 0 for frontend0).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,16]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--polarity" role="property"><title>The <literal>“polarity”</literal> property</title>
+<indexterm zone="GstDvbSrc--polarity"><primary>GstDvbSrc:polarity</primary></indexterm>
+<programlisting>  “polarity”                 <link linkend="gchar"><type>gchar</type></link> *</programlisting>
+<para>(DVB-S/S2) Polarity [vhHV] (eg. V for Vertical).</para><para>Flags: Read / Write / Construct</para>
+<para>Default value: &quot;H&quot;</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--symbol-rate" role="property"><title>The <literal>“symbol-rate”</literal> property</title>
+<indexterm zone="GstDvbSrc--symbol-rate"><primary>GstDvbSrc:symbol-rate</primary></indexterm>
+<programlisting>  “symbol-rate”              <link linkend="guint"><type>guint</type></link></programlisting>
+<para>(DVB-S/S2, DVB-C) Symbol rate in kBd (kilo bauds).</para><para>Flags: Read / Write</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--stats-reporting-interval" role="property"><title>The <literal>“stats-reporting-interval”</literal> property</title>
+<indexterm zone="GstDvbSrc--stats-reporting-interval"><primary>GstDvbSrc:stats-reporting-interval</primary></indexterm>
+<programlisting>  “stats-reporting-interval” <link linkend="guint"><type>guint</type></link></programlisting>
+<para>The number of reads before reporting frontend stats.</para><para>Flags: Read / Write</para>
+<para>Default value: 100</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--timeout" role="property"><title>The <literal>“timeout”</literal> property</title>
+<indexterm zone="GstDvbSrc--timeout"><primary>GstDvbSrc:timeout</primary></indexterm>
+<programlisting>  “timeout”                  <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Post a message after timeout microseconds (0 = disabled).</para><para>Flags: Read / Write</para>
+<para>Default value: 1000000</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--dvb-buffer-size" role="property"><title>The <literal>“dvb-buffer-size”</literal> property</title>
+<indexterm zone="GstDvbSrc--dvb-buffer-size"><primary>GstDvbSrc:dvb-buffer-size</primary></indexterm>
+<programlisting>  “dvb-buffer-size”          <link linkend="guint"><type>guint</type></link></programlisting>
+<para>The kernel buffer size used by the DVB api.</para><para>Flags: Read / Write</para>
+<para>Default value: 1925120</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--delsys" role="property"><title>The <literal>“delsys”</literal> property</title>
+<indexterm zone="GstDvbSrc--delsys"><primary>GstDvbSrc:delsys</primary></indexterm>
+<programlisting>  “delsys”                   <link linkend="GstDvbSrcDelsys"><type>GstDvbSrcDelsys</type></link></programlisting>
+<para>Delivery System.</para><para>Flags: Read / Write</para>
+<para>Default value: UNDEFINED</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--pilot" role="property"><title>The <literal>“pilot”</literal> property</title>
+<indexterm zone="GstDvbSrc--pilot"><primary>GstDvbSrc:pilot</primary></indexterm>
+<programlisting>  “pilot”                    <link linkend="GstDvbSrcPilot"><type>GstDvbSrcPilot</type></link></programlisting>
+<para>Pilot (DVB-S2).</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--rolloff" role="property"><title>The <literal>“rolloff”</literal> property</title>
+<indexterm zone="GstDvbSrc--rolloff"><primary>GstDvbSrc:rolloff</primary></indexterm>
+<programlisting>  “rolloff”                  <link linkend="GstDvbSrcRolloff"><type>GstDvbSrcRolloff</type></link></programlisting>
+<para>Rolloff (DVB-S2).</para><para>Flags: Read / Write</para>
+<para>Default value: auto</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--stream-id" role="property"><title>The <literal>“stream-id”</literal> property</title>
+<indexterm zone="GstDvbSrc--stream-id"><primary>GstDvbSrc:stream-id</primary></indexterm>
+<programlisting>  “stream-id”                <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(DVB-T2 and DVB-S2 max 255, ISDB max 65535) Stream ID (-1 = disabled).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,65535]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--tuning-timeout" role="property"><title>The <literal>“tuning-timeout”</literal> property</title>
+<indexterm zone="GstDvbSrc--tuning-timeout"><primary>GstDvbSrc:tuning-timeout</primary></indexterm>
+<programlisting>  “tuning-timeout”           <link linkend="guint64"><type>guint64</type></link></programlisting>
+<para>Milliseconds to wait before giving up tuning/locking on a signal.</para><para>Flags: Read / Write</para>
+<para>Default value: 10000000000</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layer-enabled" role="property"><title>The <literal>“isdbt-layer-enabled”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layer-enabled"><primary>GstDvbSrc:isdbt-layer-enabled</primary></indexterm>
+<programlisting>  “isdbt-layer-enabled”      <link linkend="guint"><type>guint</type></link></programlisting>
+<para>(ISDB-T) Layer Enabled (7 = All layers).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,7]</para>
+<para>Default value: 7</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layera-fec" role="property"><title>The <literal>“isdbt-layera-fec”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layera-fec"><primary>GstDvbSrc:isdbt-layera-fec</primary></indexterm>
+<programlisting>  “isdbt-layera-fec”         <link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></programlisting>
+<para>(ISDB-T) layer A Forward Error Correction.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layera-modulation" role="property"><title>The <literal>“isdbt-layera-modulation”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layera-modulation"><primary>GstDvbSrc:isdbt-layera-modulation</primary></indexterm>
+<programlisting>  “isdbt-layera-modulation”  <link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></programlisting>
+<para>(ISDB-T) Layer A modulation type.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layera-segment-count" role="property"><title>The <literal>“isdbt-layera-segment-count”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layera-segment-count"><primary>GstDvbSrc:isdbt-layera-segment-count</primary></indexterm>
+<programlisting>  “isdbt-layera-segment-count” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Layer A segment count (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,13]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layera-time-interleaving" role="property"><title>The <literal>“isdbt-layera-time-interleaving”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layera-time-interleaving"><primary>GstDvbSrc:isdbt-layera-time-interleaving</primary></indexterm>
+<programlisting>  “isdbt-layera-time-interleaving” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Layer A time interleaving (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,8]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerb-fec" role="property"><title>The <literal>“isdbt-layerb-fec”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerb-fec"><primary>GstDvbSrc:isdbt-layerb-fec</primary></indexterm>
+<programlisting>  “isdbt-layerb-fec”         <link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></programlisting>
+<para>(ISDB-T) layer B Forward Error Correction.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerb-modulation" role="property"><title>The <literal>“isdbt-layerb-modulation”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerb-modulation"><primary>GstDvbSrc:isdbt-layerb-modulation</primary></indexterm>
+<programlisting>  “isdbt-layerb-modulation”  <link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></programlisting>
+<para>(ISDB-T) Layer B modulation type.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerb-segment-count" role="property"><title>The <literal>“isdbt-layerb-segment-count”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerb-segment-count"><primary>GstDvbSrc:isdbt-layerb-segment-count</primary></indexterm>
+<programlisting>  “isdbt-layerb-segment-count” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Layer B segment count (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,13]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerb-time-interleaving" role="property"><title>The <literal>“isdbt-layerb-time-interleaving”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerb-time-interleaving"><primary>GstDvbSrc:isdbt-layerb-time-interleaving</primary></indexterm>
+<programlisting>  “isdbt-layerb-time-interleaving” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Layer B time interleaving (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,8]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerc-fec" role="property"><title>The <literal>“isdbt-layerc-fec”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerc-fec"><primary>GstDvbSrc:isdbt-layerc-fec</primary></indexterm>
+<programlisting>  “isdbt-layerc-fec”         <link linkend="GstDvbSrcCode-Rate"><type>GstDvbSrcCode_Rate</type></link></programlisting>
+<para>(ISDB-T) layer C Forward Error Correction.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerc-modulation" role="property"><title>The <literal>“isdbt-layerc-modulation”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerc-modulation"><primary>GstDvbSrc:isdbt-layerc-modulation</primary></indexterm>
+<programlisting>  “isdbt-layerc-modulation”  <link linkend="GstDvbSrcModulation"><type>GstDvbSrcModulation</type></link></programlisting>
+<para>(ISDB-T) Layer C modulation type.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerc-segment-count" role="property"><title>The <literal>“isdbt-layerc-segment-count”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerc-segment-count"><primary>GstDvbSrc:isdbt-layerc-segment-count</primary></indexterm>
+<programlisting>  “isdbt-layerc-segment-count” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Layer C segment count (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,13]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-layerc-time-interleaving" role="property"><title>The <literal>“isdbt-layerc-time-interleaving”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-layerc-time-interleaving"><primary>GstDvbSrc:isdbt-layerc-time-interleaving</primary></indexterm>
+<programlisting>  “isdbt-layerc-time-interleaving” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Layer C time interleaving (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,8]</para>
+<para>Default value: -1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-partial-reception" role="property"><title>The <literal>“isdbt-partial-reception”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-partial-reception"><primary>GstDvbSrc:isdbt-partial-reception</primary></indexterm>
+<programlisting>  “isdbt-partial-reception”  <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Partial Reception (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-sb-segment-count" role="property"><title>The <literal>“isdbt-sb-segment-count”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-sb-segment-count"><primary>GstDvbSrc:isdbt-sb-segment-count</primary></indexterm>
+<programlisting>  “isdbt-sb-segment-count”   <link linkend="guint"><type>guint</type></link></programlisting>
+<para>(ISDB-T) SB segment count.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,13]</para>
+<para>Default value: 1</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-sb-segment-idx" role="property"><title>The <literal>“isdbt-sb-segment-idx”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-sb-segment-idx"><primary>GstDvbSrc:isdbt-sb-segment-idx</primary></indexterm>
+<programlisting>  “isdbt-sb-segment-idx”     <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) SB segment IDX.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,12]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-sb-subchannel-id" role="property"><title>The <literal>“isdbt-sb-subchannel-id”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-sb-subchannel-id"><primary>GstDvbSrc:isdbt-sb-subchannel-id</primary></indexterm>
+<programlisting>  “isdbt-sb-subchannel-id”   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) SB Subchannel ID (-1 = AUTO).</para><para>Flags: Read / Write</para>
+<para>Allowed values: [G_MAXULONG,41]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--isdbt-sound-broadcasting" role="property"><title>The <literal>“isdbt-sound-broadcasting”</literal> property</title>
+<indexterm zone="GstDvbSrc--isdbt-sound-broadcasting"><primary>GstDvbSrc:isdbt-sound-broadcasting</primary></indexterm>
+<programlisting>  “isdbt-sound-broadcasting” <link linkend="gint"><type>gint</type></link></programlisting>
+<para>(ISDB-T) Sound Broadcasting.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--lnb-lof1" role="property"><title>The <literal>“lnb-lof1”</literal> property</title>
+<indexterm zone="GstDvbSrc--lnb-lof1"><primary>GstDvbSrc:lnb-lof1</primary></indexterm>
+<programlisting>  “lnb-lof1”                 <link linkend="guint"><type>guint</type></link></programlisting>
+<para>LNB's Local oscillator frequency used for low band reception (kHz).</para><para>Flags: Read / Write</para>
+<para>Default value: 9750000</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--lnb-lof2" role="property"><title>The <literal>“lnb-lof2”</literal> property</title>
+<indexterm zone="GstDvbSrc--lnb-lof2"><primary>GstDvbSrc:lnb-lof2</primary></indexterm>
+<programlisting>  “lnb-lof2”                 <link linkend="guint"><type>guint</type></link></programlisting>
+<para>LNB's Local oscillator frequency used for high band reception (kHz).</para><para>Flags: Read / Write</para>
+<para>Default value: 10600000</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--lnb-slof" role="property"><title>The <literal>“lnb-slof”</literal> property</title>
+<indexterm zone="GstDvbSrc--lnb-slof"><primary>GstDvbSrc:lnb-slof</primary></indexterm>
+<programlisting>  “lnb-slof”                 <link linkend="guint"><type>guint</type></link></programlisting>
+<para>LNB's Upper bound for low band reception (kHz).</para><para>Flags: Read / Write</para>
+<para>Default value: 11700000</para>
+</refsect2>
+<refsect2 id="GstDvbSrc--interleaving" role="property"><title>The <literal>“interleaving”</literal> property</title>
+<indexterm zone="GstDvbSrc--interleaving"><primary>GstDvbSrc:interleaving</primary></indexterm>
+<programlisting>  “interleaving”             <link linkend="GstDvbSrcInterleaving"><type>GstDvbSrcInterleaving</type></link></programlisting>
+<para>(DTMB) Interleaving type.</para><para>Flags: Read / Write</para>
+<para>Default value: AUTO</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-dvbsrc.signal-details" role="signals">
+<title role="signals.title">Signal Details</title>
+<refsect2 id="GstDvbSrc-tuning-done" role="signal"><title>The <literal>“tuning-done”</literal> signal</title>
+<indexterm zone="GstDvbSrc-tuning-done"><primary>GstDvbSrc::tuning-done</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstDvbSrc"><type>GstDvbSrc</type></link> *gstdvbsrc,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Signal emited when the tunner has successfully got a lock on a signal.</para>
+<refsect3 id="GstDvbSrc-tuning-done.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstdvbsrc</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstDvbSrc-tuning-fail" role="signal"><title>The <literal>“tuning-fail”</literal> signal</title>
+<indexterm zone="GstDvbSrc-tuning-fail"><primary>GstDvbSrc::tuning-fail</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstDvbSrc"><type>GstDvbSrc</type></link> *gstdvbsrc,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Signal emited when the tunner failed to get a lock on the
+signal.</para>
+<refsect3 id="GstDvbSrc-tuning-fail.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstdvbsrc</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstDvbSrc-tuning-start" role="signal"><title>The <literal>“tuning-start”</literal> signal</title>
+<indexterm zone="GstDvbSrc-tuning-start"><primary>GstDvbSrc::tuning-start</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstDvbSrc"><type>GstDvbSrc</type></link> *gstdvbsrc,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Signal emited when the element first attempts to tune the
+frontend tunner to a given frequency.</para>
+<refsect3 id="GstDvbSrc-tuning-start.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstdvbsrc</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-RUN-LAST:CAPS">Run Last</link></para>
+</refsect2><refsect2 id="GstDvbSrc-tune" role="signal"><title>The <literal>“tune”</literal> signal</title>
+<indexterm zone="GstDvbSrc-tune"><primary>GstDvbSrc::tune</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+user_function (<link linkend="GstDvbSrc"><type>GstDvbSrc</type></link> *gstdvbsrc,
+               <link linkend="gpointer"><type>gpointer</type></link>   user_data)</programlisting>
+<para>Signal emited from the application to the element, instructing it
+to tune.</para>
+<refsect3 id="GstDvbSrc-tune.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable frame="none" pgwide="1" role="parameters_table">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gstdvbsrc</para></entry>
+<entry role="parameter_description"><para>the element on which the signal is emitted</para></entry>
+<entry role="parameter_annotations"/></row>
+<row><entry role="parameter_name"><simpara>user_data</simpara></entry>
+<entry role="parameter_description"><simpara>user data set when the signal handler was connected.</simpara></entry>
+<entry role="parameter_annotations"/></row>
+</tbody></tgroup></informaltable>
+</refsect3><para>Flags: <link linkend="G-SIGNAL-ACTION:CAPS">Action</link></para>
+</refsect2>
+</refsect1>
+
+</refentry>

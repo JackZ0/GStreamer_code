@@ -1,0 +1,121 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-freeverb">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-freeverb.top_of_page" role="top_of_page">freeverb</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>freeverb</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-freeverb.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstFreeverb--damping">damping</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstFreeverb--level">level</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstFreeverb--room-size">room-size</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+<row><entry role="property_type"><link linkend="gfloat"><type>gfloat</type></link></entry><entry role="property_name"><link linkend="GstFreeverb--width">width</link></entry><entry role="property_flags">Read / Write / Construct</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstFreeverb"/><refsect1 id="gst-plugins-bad-plugins-freeverb.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstFreeverb-struct">GstFreeverb</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-freeverb.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> GstFreeverb
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-freeverb.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstFreeverb implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-freeverb.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Reverberation/room effect.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 audiotestsrc wave=saw ! freeverb ! autoaudiosink
+gst-launch-1.0 filesrc location="melo1.ogg" ! decodebin ! audioconvert ! freeverb ! autoaudiosink
+]]></programlisting></informalexample>
+<para/>
+</refsect3>
+
+<include href="element-freeverb-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-freeverb.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-freeverb.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstFreeverb-struct" role="struct">
+<title>struct GstFreeverb</title>
+<indexterm zone="GstFreeverb-struct"><primary>GstFreeverb</primary></indexterm>
+<programlisting language="C">struct GstFreeverb;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-freeverb.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstFreeverb--damping" role="property"><title>The <literal>“damping”</literal> property</title>
+<indexterm zone="GstFreeverb--damping"><primary>GstFreeverb:damping</primary></indexterm>
+<programlisting>  “damping”                  <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Damping of high frequencies.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.2</para>
+</refsect2>
+<refsect2 id="GstFreeverb--level" role="property"><title>The <literal>“level”</literal> property</title>
+<indexterm zone="GstFreeverb--level"><primary>GstFreeverb:level</primary></indexterm>
+<programlisting>  “level”                    <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>dry/wet level.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.5</para>
+</refsect2>
+<refsect2 id="GstFreeverb--room-size" role="property"><title>The <literal>“room-size”</literal> property</title>
+<indexterm zone="GstFreeverb--room-size"><primary>GstFreeverb:room-size</primary></indexterm>
+<programlisting>  “room-size”                <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Size of the simulated room.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 0.5</para>
+</refsect2>
+<refsect2 id="GstFreeverb--width" role="property"><title>The <literal>“width”</literal> property</title>
+<indexterm zone="GstFreeverb--width"><primary>GstFreeverb:width</primary></indexterm>
+<programlisting>  “width”                    <link linkend="gfloat"><type>gfloat</type></link></programlisting>
+<para>Stereo panorama width.</para><para>Flags: Read / Write / Construct</para>
+<para>Allowed values: [0,1]</para>
+<para>Default value: 1</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

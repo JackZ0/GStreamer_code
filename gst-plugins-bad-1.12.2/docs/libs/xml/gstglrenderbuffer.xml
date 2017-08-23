@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.1.2//EN"
+               "http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd" [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]>
+<refentry id="gst-plugins-bad-libs-GstGLRenderbuffer">
+<refmeta>
+<refentrytitle role="top_of_page" id="gst-plugins-bad-libs-GstGLRenderbuffer.top_of_page">GstGLRenderBuffer</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-LIBS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>GstGLRenderBuffer</refname>
+<refpurpose>memory subclass for GL renderbuffer objects</refpurpose>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-libs-GstGLRenderbuffer.functions" role="functions_proto">
+<title role="functions_proto.title">Functions</title>
+<informaltable pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="functions_return" colwidth="150px"/>
+<colspec colname="functions_name"/>
+<tbody>
+<row><entry role="function_type"><link linkend="GstGLRenderbufferAllocationParams"><returnvalue>GstGLRenderbufferAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-renderbuffer-allocation-params-new">gst_gl_renderbuffer_allocation_params_new</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLRenderbufferAllocationParams"><returnvalue>GstGLRenderbufferAllocationParams</returnvalue></link>&#160;*
+</entry><entry role="function_name"><link linkend="gst-gl-renderbuffer-allocation-params-new-wrapped">gst_gl_renderbuffer_allocation_params_new_wrapped</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-renderbuffer-get-height">gst_gl_renderbuffer_get_height</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-renderbuffer-get-id">gst_gl_renderbuffer_get_id</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="GstGLFormat"><returnvalue>GstGLFormat</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-renderbuffer-get-format">gst_gl_renderbuffer_get_format</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-renderbuffer-get-width">gst_gl_renderbuffer_get_width</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="void"><returnvalue>void</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-gl-renderbuffer-init-once">gst_gl_renderbuffer_init_once</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+<row><entry role="function_type"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+</entry><entry role="function_name"><link linkend="gst-is-gl-renderbuffer">gst_is_gl_renderbuffer</link>&#160;<phrase role="c_punctuation">()</phrase></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstGLRenderbufferAllocator"/><refsect1 id="gst-plugins-bad-libs-GstGLRenderbuffer.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable role="enum_members_table" pgwide="1" frame="none">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLRenderbufferAllocator-struct">GstGLRenderbufferAllocator</link></entry></row>
+<row><entry role="datatype_keyword"></entry><entry role="function_name"><link linkend="GstGLRenderbufferAllocatorClass">GstGLRenderbufferAllocatorClass</link></entry></row>
+<row><entry role="define_keyword">#define</entry><entry role="function_name"><link linkend="GST-GL-RENDERBUFFER-ALLOCATOR-NAME:CAPS">GST_GL_RENDERBUFFER_ALLOCATOR_NAME</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLRenderbuffer.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstAllocator">GstAllocator</link>
+                <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> <link linkend="GstGLBaseMemoryAllocator">GstGLBaseMemoryAllocator</link>
+                    <phrase role="lineart">&#9584;&#9472;&#9472;</phrase> GstGLRenderbufferAllocator
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-libs-GstGLRenderbuffer.description" role="desc">
+<title role="desc.title">Description</title>
+<para>GstGLRenderbuffer is a <link linkend="GstGLBaseMemory"><type>GstGLBaseMemory</type></link> subclass providing support for
+OpenGL renderbuffers.</para>
+<para><link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link> is created or wrapped through <link linkend="gst-gl-base-memory-alloc"><function>gst_gl_base_memory_alloc()</function></link>
+with <link linkend="GstGLRenderbufferAllocationParams"><type>GstGLRenderbufferAllocationParams</type></link>.</para>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLRenderbuffer.functions_details" role="details">
+<title role="details.title">Functions</title>
+<refsect2 id="gst-gl-renderbuffer-allocation-params-new" role="function" condition="since:1.10">
+<title>gst_gl_renderbuffer_allocation_params_new&#160;()</title>
+<indexterm zone="gst-gl-renderbuffer-allocation-params-new" role="1.10"><primary>gst_gl_renderbuffer_allocation_params_new</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLRenderbufferAllocationParams"><returnvalue>GstGLRenderbufferAllocationParams</returnvalue></link>&#160;*
+gst_gl_renderbuffer_allocation_params_new
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> renderbuffer_format</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> width</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> height</parameter>);</programlisting>
+<refsect3 id="gst-gl-renderbuffer-allocation-params-new.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for sysmem mappings of the texture. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>the width of the renderbuffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>the height of the renderbuffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>renderbuffer_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> for the created textures</para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-renderbuffer-allocation-params-new.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLRenderbufferAllocationParams"><type>GstGLRenderbufferAllocationParams</type></link> for allocating <link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link>'s</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-renderbuffer-allocation-params-new-wrapped" role="function" condition="since:1.10">
+<title>gst_gl_renderbuffer_allocation_params_new_wrapped&#160;()</title>
+<indexterm zone="gst-gl-renderbuffer-allocation-params-new-wrapped" role="1.10"><primary>gst_gl_renderbuffer_allocation_params_new_wrapped</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLRenderbufferAllocationParams"><returnvalue>GstGLRenderbufferAllocationParams</returnvalue></link>&#160;*
+gst_gl_renderbuffer_allocation_params_new_wrapped
+                               (<parameter><link linkend="GstGLContext"><type>GstGLContext</type></link> *context</parameter>,
+                                <parameter><link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> *alloc_params</parameter>,
+                                <parameter><link linkend="GstGLFormat"><type>GstGLFormat</type></link> renderbuffer_format</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> width</parameter>,
+                                <parameter><link linkend="guint"><type>guint</type></link> height</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> gl_handle</parameter>,
+                                <parameter><link linkend="gpointer"><type>gpointer</type></link> user_data</parameter>,
+                                <parameter><link linkend="GDestroyNotify"><type>GDestroyNotify</type></link> notify</parameter>);</programlisting>
+<refsect3 id="gst-gl-renderbuffer-allocation-params-new-wrapped.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>context</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLContext"><type>GstGLContext</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>alloc_params</para></entry>
+<entry role="parameter_description"><para> the <link linkend="GstAllocationParams"><type>GstAllocationParams</type></link> for <parameter>tex_id</parameter>
+. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>width</para></entry>
+<entry role="parameter_description"><para>the width of the renderbuffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>height</para></entry>
+<entry role="parameter_description"><para>the height of the renderbuffer</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>renderbuffer_format</para></entry>
+<entry role="parameter_description"><para>the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> for <parameter>tex_id</parameter>
+</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>gl_handle</para></entry>
+<entry role="parameter_description"><para>the GL handle to wrap</para></entry>
+<entry role="parameter_annotations"></entry></row>
+<row><entry role="parameter_name"><para>user_data</para></entry>
+<entry role="parameter_description"><para> user data to call <parameter>notify</parameter>
+with. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+<row><entry role="parameter_name"><para>notify</para></entry>
+<entry role="parameter_description"><para> a <link linkend="GDestroyNotify"><type>GDestroyNotify</type></link>. </para></entry>
+<entry role="parameter_annotations"><emphasis role="annotation">[<acronym>allow-none</acronym>]</emphasis></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-renderbuffer-allocation-params-new-wrapped.returns" role="returns">
+<title>Returns</title>
+<para> a new <link linkend="GstGLRenderbufferAllocationParams"><type>GstGLRenderbufferAllocationParams</type></link> for wrapping <parameter>gl_handle</parameter>
+as a
+renderbuffer</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-renderbuffer-get-height" role="function" condition="since:1.10">
+<title>gst_gl_renderbuffer_get_height&#160;()</title>
+<indexterm zone="gst-gl-renderbuffer-get-height" role="1.10"><primary>gst_gl_renderbuffer_get_height</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+gst_gl_renderbuffer_get_height (<parameter><link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-renderbuffer-get-height.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-renderbuffer-get-height.returns" role="returns">
+<title>Returns</title>
+<para> the configured height of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-renderbuffer-get-id" role="function" condition="since:1.10">
+<title>gst_gl_renderbuffer_get_id&#160;()</title>
+<indexterm zone="gst-gl-renderbuffer-get-id" role="1.10"><primary>gst_gl_renderbuffer_get_id</primary></indexterm>
+<programlisting language="C"><link linkend="guint"><returnvalue>guint</returnvalue></link>
+gst_gl_renderbuffer_get_id (<parameter><link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-renderbuffer-get-id.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-renderbuffer-get-id.returns" role="returns">
+<title>Returns</title>
+<para> the OpenGL renderbuffer handle of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-renderbuffer-get-format" role="function" condition="since:1.12">
+<title>gst_gl_renderbuffer_get_format&#160;()</title>
+<indexterm zone="gst-gl-renderbuffer-get-format" role="1.12"><primary>gst_gl_renderbuffer_get_format</primary></indexterm>
+<programlisting language="C"><link linkend="GstGLFormat"><returnvalue>GstGLFormat</returnvalue></link>
+gst_gl_renderbuffer_get_format (<parameter><link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-renderbuffer-get-format.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-renderbuffer-get-format.returns" role="returns">
+<title>Returns</title>
+<para> the <link linkend="GstGLFormat"><type>GstGLFormat</type></link> of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.12">1.12</link></para></refsect2>
+<refsect2 id="gst-gl-renderbuffer-get-width" role="function" condition="since:1.10">
+<title>gst_gl_renderbuffer_get_width&#160;()</title>
+<indexterm zone="gst-gl-renderbuffer-get-width" role="1.10"><primary>gst_gl_renderbuffer_get_width</primary></indexterm>
+<programlisting language="C"><link linkend="gint"><returnvalue>gint</returnvalue></link>
+gst_gl_renderbuffer_get_width (<parameter><link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link> *gl_mem</parameter>);</programlisting>
+<refsect3 id="gst-gl-renderbuffer-get-width.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>gl_mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-gl-renderbuffer-get-width.returns" role="returns">
+<title>Returns</title>
+<para> the configured width of <parameter>gl_mem</parameter>
+</para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-gl-renderbuffer-init-once" role="function" condition="since:1.10">
+<title>gst_gl_renderbuffer_init_once&#160;()</title>
+<indexterm zone="gst-gl-renderbuffer-init-once" role="1.10"><primary>gst_gl_renderbuffer_init_once</primary></indexterm>
+<programlisting language="C"><link linkend="void"><returnvalue>void</returnvalue></link>
+gst_gl_renderbuffer_init_once (<parameter><type>void</type></parameter>);</programlisting>
+<para>Initializes the GL Base Texture allocator. It is safe to call this function
+multiple times.  This must be called before any other GstGLRenderbuffer operation.</para>
+<para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+<refsect2 id="gst-is-gl-renderbuffer" role="function" condition="since:1.10">
+<title>gst_is_gl_renderbuffer&#160;()</title>
+<indexterm zone="gst-is-gl-renderbuffer" role="1.10"><primary>gst_is_gl_renderbuffer</primary></indexterm>
+<programlisting language="C"><link linkend="gboolean"><returnvalue>gboolean</returnvalue></link>
+gst_is_gl_renderbuffer (<parameter><link linkend="GstMemory"><type>GstMemory</type></link> *mem</parameter>);</programlisting>
+<refsect3 id="gst-is-gl-renderbuffer.parameters" role="parameters">
+<title>Parameters</title>
+<informaltable role="parameters_table" pgwide="1" frame="none">
+<tgroup cols="3">
+<colspec colname="parameters_name" colwidth="150px"/>
+<colspec colname="parameters_description"/>
+<colspec colname="parameters_annotations" colwidth="200px"/>
+<tbody>
+<row><entry role="parameter_name"><para>mem</para></entry>
+<entry role="parameter_description"><para>a <link linkend="GstMemory"><type>GstMemory</type></link></para></entry>
+<entry role="parameter_annotations"></entry></row>
+</tbody></tgroup></informaltable>
+</refsect3><refsect3 id="gst-is-gl-renderbuffer.returns" role="returns">
+<title>Returns</title>
+<para> whether the memory at <parameter>mem</parameter>
+is a <link linkend="GstGLRenderbuffer"><type>GstGLRenderbuffer</type></link></para>
+</refsect3><para role="since">Since: <link linkend="api-index-1.10">1.10</link></para></refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLRenderbuffer.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstGLRenderbufferAllocator-struct" role="struct">
+<title>GstGLRenderbufferAllocator</title>
+<indexterm zone="GstGLRenderbufferAllocator-struct"><primary>GstGLRenderbufferAllocator</primary></indexterm>
+<programlisting language="C">typedef struct _GstGLRenderbufferAllocator GstGLRenderbufferAllocator;</programlisting>
+<para>Opaque <link linkend="GstGLRenderbufferAllocator"><type>GstGLRenderbufferAllocator</type></link> struct</para>
+</refsect2>
+<refsect2 id="GstGLRenderbufferAllocatorClass" role="struct">
+<title>GstGLRenderbufferAllocatorClass</title>
+<indexterm zone="GstGLRenderbufferAllocatorClass"><primary>GstGLRenderbufferAllocatorClass</primary></indexterm>
+<programlisting language="C">typedef struct {
+  GstGLBaseMemoryAllocatorClass             parent_class;
+} GstGLRenderbufferAllocatorClass;
+</programlisting>
+<para>The <link linkend="GstGLRenderbufferAllocatorClass"><type>GstGLRenderbufferAllocatorClass</type></link> only contains private data</para>
+</refsect2>
+<refsect2 id="GST-GL-RENDERBUFFER-ALLOCATOR-NAME:CAPS" role="macro">
+<title>GST_GL_RENDERBUFFER_ALLOCATOR_NAME</title>
+<indexterm zone="GST-GL-RENDERBUFFER-ALLOCATOR-NAME:CAPS"><primary>GST_GL_RENDERBUFFER_ALLOCATOR_NAME</primary></indexterm>
+<programlisting language="C">#define GST_GL_RENDERBUFFER_ALLOCATOR_NAME   "GLRenderbuffer"
+</programlisting>
+<para>The name of the GL renderbuffer allocator</para>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-libs-GstGLRenderbuffer.see-also">
+<title>See Also</title>
+<para><link linkend="GstMemory"><type>GstMemory</type></link>, <link linkend="GstAllocator"><type>GstAllocator</type></link></para>
+
+</refsect1>
+
+</refentry>

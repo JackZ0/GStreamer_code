@@ -1,0 +1,69 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-opusparse">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-opusparse.top_of_page" role="top_of_page">opusparse</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>opusparse</refname>
+<refpurpose/>
+</refnamediv>
+
+<anchor id="GstOpusParse"/><refsect1 id="gst-plugins-bad-plugins-opusparse.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstOpusParse-struct">GstOpusParse</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opusparse.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseParse">GstBaseParse</link>
+                    <phrase role="lineart">╰──</phrase> GstOpusParse
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-opusparse.description" role="desc">
+<title role="desc.title">Description</title>
+<para>This element parses OPUS packets.</para>
+<refsect3><title>Example pipelines</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 -v filesrc location=opusdata ! opusparse ! opusdec ! audioconvert ! audioresample ! alsasink
+]]></programlisting></informalexample>
+<para> Decode and plays an unmuxed Opus file.</para>
+</refsect3>
+
+<include href="element-opusparse-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opusparse.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opusparse.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstOpusParse-struct" role="struct">
+<title>struct GstOpusParse</title>
+<indexterm zone="GstOpusParse-struct"><primary>GstOpusParse</primary></indexterm>
+<programlisting language="C">struct GstOpusParse;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-opusparse.see-also">
+<title>See Also</title>
+<para>opusenc, opusdec</para>
+
+</refsect1>
+
+</refentry>

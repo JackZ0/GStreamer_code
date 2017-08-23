@@ -1,0 +1,102 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-retinex">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-retinex.top_of_page" role="top_of_page">retinex</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>retinex</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-retinex.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="GstRetinexMethod"><type>GstRetinexMethod</type></link></entry><entry role="property_name"><link linkend="GstRetinex--method">method</link></entry><entry role="property_flags">Read / Write</entry></row>
+<row><entry role="property_type"><link linkend="gint"><type>gint</type></link></entry><entry role="property_name"><link linkend="GstRetinex--scales">scales</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstRetinex"/><refsect1 id="gst-plugins-bad-plugins-retinex.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstRetinex-struct">GstRetinex</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-retinex.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstBaseTransform">GstBaseTransform</link>
+                    <phrase role="lineart">╰──</phrase> <link linkend="GstVideoFilter">GstVideoFilter</link>
+                        <phrase role="lineart">╰──</phrase> <link linkend="GstOpencvVideoFilter">GstOpencvVideoFilter</link>
+                            <phrase role="lineart">╰──</phrase> GstRetinex
+</screen>
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-retinex.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Basic and multiscale retinex for colour image enhancement, see article:</para>
+<para>Rahman, Zia-ur, Daniel J. Jobson, and Glenn A. Woodell. &quot;Multi-scale retinex for
+color image enhancement.&quot; Image Processing, 1996. Proceedings., International
+Conference on. Vol. 3. IEEE, 1996.</para>
+<refsect2>
+<title>Example launch line</title>
+<informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc ! decodebin ! videoconvert ! retinex ! videoconvert ! xvimagesink
+]]></programlisting></informalexample>
+</refsect2>
+
+<include href="element-retinex-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-retinex.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-retinex.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstRetinex-struct" role="struct">
+<title>struct GstRetinex</title>
+<indexterm zone="GstRetinex-struct"><primary>GstRetinex</primary></indexterm>
+<programlisting language="C">struct GstRetinex;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-retinex.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstRetinex--method" role="property"><title>The <literal>“method”</literal> property</title>
+<indexterm zone="GstRetinex--method"><primary>GstRetinex:method</primary></indexterm>
+<programlisting>  “method”                   <link linkend="GstRetinexMethod"><type>GstRetinexMethod</type></link></programlisting>
+<para>Retinex method to use.</para><para>Flags: Read / Write</para>
+<para>Default value: Basic retinex restoration</para>
+</refsect2>
+<refsect2 id="GstRetinex--scales" role="property"><title>The <literal>“scales”</literal> property</title>
+<indexterm zone="GstRetinex--scales"><primary>GstRetinex:scales</primary></indexterm>
+<programlisting>  “scales”                   <link linkend="gint"><type>gint</type></link></programlisting>
+<para>Amount of gaussian filters (scales) used in multiscale retinex.</para><para>Flags: Read / Write</para>
+<para>Allowed values: [1,4]</para>
+<para>Default value: 3</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>

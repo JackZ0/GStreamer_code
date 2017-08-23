@@ -1,0 +1,97 @@
+<?xml version="1.0" ?><!DOCTYPE refentry  PUBLIC '-//OASIS//DTD DocBook XML V4.1.2//EN'  'http://www.oasis-open.org/docbook/xml/4.1.2/docbookx.dtd' [
+<!ENTITY % version-entities SYSTEM "version.entities">
+%version-entities;
+]><refentry id="gst-plugins-bad-plugins-pnmenc">
+<refmeta>
+<refentrytitle id="gst-plugins-bad-plugins-pnmenc.top_of_page" role="top_of_page">pnmenc</refentrytitle>
+<manvolnum>3</manvolnum>
+<refmiscinfo>GST-PLUGINS-BAD-PLUGINS Library</refmiscinfo>
+</refmeta>
+<refnamediv>
+<refname>pnmenc</refname>
+<refpurpose/>
+</refnamediv>
+
+<refsect1 id="gst-plugins-bad-plugins-pnmenc.properties" role="properties">
+<title role="properties.title">Properties</title>
+<informaltable frame="none">
+<tgroup cols="3">
+<colspec colname="properties_type" colwidth="150px"/>
+<colspec colname="properties_name" colwidth="300px"/>
+<colspec colname="properties_flags" colwidth="200px"/>
+<tbody>
+<row><entry role="property_type"><link linkend="gboolean"><type>gboolean</type></link></entry><entry role="property_name"><link linkend="GstPnmenc--ascii">ascii</link></entry><entry role="property_flags">Read / Write</entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<anchor id="GstPnmenc"/><refsect1 id="gst-plugins-bad-plugins-pnmenc.other" role="other_proto">
+<title role="other_proto.title">Types and Values</title>
+<informaltable frame="none" pgwide="1" role="enum_members_table">
+<tgroup cols="2">
+<colspec colname="name" colwidth="150px"/>
+<colspec colname="description"/>
+<tbody>
+<row><entry role="datatype_keyword">struct</entry><entry role="function_name"><link linkend="GstPnmenc-struct">GstPnmenc</link></entry></row>
+
+</tbody>
+</tgroup>
+</informaltable>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pnmenc.object-hierarchy" role="object_hierarchy">
+<title role="object_hierarchy.title">Object Hierarchy</title>
+<screen>    <link linkend="GObject">GObject</link>
+    <phrase role="lineart">╰──</phrase> <link linkend="GInitiallyUnowned">GInitiallyUnowned</link>
+        <phrase role="lineart">╰──</phrase> <link linkend="GstObject">GstObject</link>
+            <phrase role="lineart">╰──</phrase> <link linkend="GstElement">GstElement</link>
+                <phrase role="lineart">╰──</phrase> <link linkend="GstVideoEncoder">GstVideoEncoder</link>
+                    <phrase role="lineart">╰──</phrase> GstPnmenc
+</screen>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pnmenc.implemented-interfaces" role="impl_interfaces">
+<title role="impl_interfaces.title">Implemented Interfaces</title>
+<para>
+GstPnmenc implements
+ <link linkend="GstPreset">GstPreset</link>.</para>
+
+</refsect1>
+
+
+<refsect1 id="gst-plugins-bad-plugins-pnmenc.description" role="desc">
+<title role="desc.title">Description</title>
+<para>Encodes pnm images. This plugin supports both raw and ASCII encoding.
+To enable ASCII encoding, set the parameter ascii to TRUE. If you omit
+the parameter or set it to FALSE, the output will be raw encoded.</para>
+<refsect3><title>Example launch line</title><informalexample><programlisting><![CDATA[
+gst-launch-1.0 videotestsrc num_buffers=1 ! videoconvert ! "video/x-raw,format=GRAY8" ! pnmenc ascii=true ! filesink location=test.pnm
+]]></programlisting></informalexample>
+<para> The above pipeline writes a test pnm file (ASCII encoding).</para>
+</refsect3>
+
+<include href="element-pnmenc-details.xml" xmlns="http://www.w3.org/2003/XInclude"><fallback xmlns="http://www.w3.org/2003/XInclude"/></include></refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pnmenc.functions_details" role="details">
+<title role="details.title">Functions</title>
+<para/>
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pnmenc.other_details" role="details">
+<title role="details.title">Types and Values</title>
+<refsect2 id="GstPnmenc-struct" role="struct">
+<title>struct GstPnmenc</title>
+<indexterm zone="GstPnmenc-struct"><primary>GstPnmenc</primary></indexterm>
+<programlisting language="C">struct GstPnmenc;</programlisting>
+</refsect2>
+
+</refsect1>
+<refsect1 id="gst-plugins-bad-plugins-pnmenc.property-details" role="property_details">
+<title role="property_details.title">Property Details</title>
+<refsect2 id="GstPnmenc--ascii" role="property"><title>The <literal>“ascii”</literal> property</title>
+<indexterm zone="GstPnmenc--ascii"><primary>GstPnmenc:ascii</primary></indexterm>
+<programlisting>  “ascii”                    <link linkend="gboolean"><type>gboolean</type></link></programlisting>
+<para>The output will be ASCII encoded.</para><para>Flags: Read / Write</para>
+<para>Default value: FALSE</para>
+</refsect2>
+
+</refsect1>
+
+</refentry>
